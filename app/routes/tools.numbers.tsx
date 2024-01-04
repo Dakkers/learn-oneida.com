@@ -4,6 +4,9 @@ import { Separator } from "@/design/ui/separator";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 
+const WHISPER_CHAR = "̲";
+const WHISPER_REGEX = new RegExp(WHISPER_CHAR, 'g');
+
 export const meta: MetaFunction = () => {
   return [
     { title: "Numbers" },
@@ -20,7 +23,7 @@ export default function ToolsNumbers () {
       <h1>Numbers</h1>
 
       <p>
-        <strong>NOTE:</strong> This page is still under construction! Only numbers up to 9,999 are supported. Some of the accents may be wrong.
+        <strong>NOTE:</strong> This page is still under construction! Only numbers up to 9,999 are supported.
       </p>
 
       <Input onChange={(e) => {
@@ -57,12 +60,10 @@ function doTheTranslate (value: string) {
     [9, 'wá·tluʔ'],
     [10, 'oyé·li̲'],
     [20, 'tewáhsʌ'],
-    [30, 'niwáhsʌ'],
   ])
 
   const digit = val % 10;
   const digitWord = map.get(digit)
-
 
   if (val === 0) {
     return '???'
@@ -73,8 +74,12 @@ function doTheTranslate (value: string) {
   } else if ((val >= 21) && (val <= 29)) {
     return `${map.get(20)} ${digitWord}`
   } else if (val < 100) {
-    const whatever = Math.floor(val / 10);
-    return [unwhisperWord(map.get(whatever)), map.get(30), digitWord].join(' ')
+    const numTens = Math.floor(val / 10);
+    return [
+      unwhisperWord(map.get(numTens)),
+      `niwáhsʌ`,
+      digit === 0 ? '' : digitWord
+    ].join(' ')
   } else if (val < 10000) {
     const numHundreds = Math.floor(val / 100);
     const remainder = val % 100;
@@ -95,10 +100,9 @@ function whisperizeWord (word: string | undefined, shouldWhisper = true) {
 
   const vowels = ['a', 'e', 'i', 'o', 'u', 'ʌ'];
   const vowelsWhispered = ['a̲', 'e̲', 'i̲', 'o̲', 'u̲', 'ʌ̲'];
-  const reversedIndex = word.split('').reverse().findIndex((char) => vowels.includes(char) || vowelsWhispered.includes(char));
+  const reversedIndex = word.split('').reverse().findIndex((char) => vowels.includes(char) || char === WHISPER_CHAR);
   const index = word.length - reversedIndex - 1;
   const char = word.charAt(index);
-  console.log('blah', index, char)
 
   if (shouldWhisper) {
     if (vowelsWhispered.includes(char)) {
@@ -109,17 +113,10 @@ function whisperizeWord (word: string | undefined, shouldWhisper = true) {
     result[index] = vowelsWhispered[lookupIndex];
     return result.join('');
   } else {
-    if (vowels.includes(char)) {
-      return word;
-    }
-    const lookupIndex = vowelsWhispered.indexOf(char);
-    const result = word.split('');
-    result[index] = vowels[lookupIndex];
-    return result.join('');
+    return word.replace(WHISPER_REGEX, '');
   }
 }
 
 function unwhisperWord (word: string | undefined) {
-  return word;
-  // return whisperizeWord(word, false);
+  return whisperizeWord(word, false);
 }
