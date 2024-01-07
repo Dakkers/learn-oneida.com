@@ -1,0 +1,170 @@
+{
+  "translation": "{{pronoun}} {{refVerb}} wise",
+  "phrases": [
+    {
+      "pronoun": "i",
+      "phrase": "kattókhaʔ",
+      "breakdown": [
+        {
+          "text": "k",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "u",
+      "phrase": "sattókhaʔ",
+      "breakdown": [
+        {
+          "text": "s",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "m",
+      "phrase": "lattókhaʔ",
+      "breakdown": [
+        {
+          "text": "l",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "f",
+      "phrase": "yuttókhaʔ",
+      "breakdown": [
+        {
+          "text": "yu",
+          "type": "PR"
+        },
+        { "text": "ttókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "it",
+      "phrase": "wattókhaʔ",
+      "breakdown": [
+        {
+          "text": "w",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "uni",
+      "phrase": "tyattókhaʔ",
+      "breakdown": [
+        {
+          "text": "ty",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "soni",
+      "phrase": "yakyattókhaʔ",
+      "breakdown": [
+        {
+          "text": "yaky",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "u2",
+      "phrase": "tsyattókhaʔ",
+      "breakdown": [
+        {
+          "text": "tsy",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "2m",
+      "phrase": "hyattókhaʔ",
+      "breakdown": [
+        {
+          "text": "hy",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "2f",
+      "phrase": "kyattókhaʔ",
+      "breakdown": [
+        {
+          "text": "ky",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "us",
+      "phrase": "twattókhaʔ",
+      "breakdown": [
+        {
+          "text": "tw",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "theyni",
+      "phrase": "yakwattókhaʔ",
+      "breakdown": [
+        {
+          "text": "yakw",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "yall",
+      "phrase": "swattókhaʔ",
+      "breakdown": [
+        {
+          "text": "sw",
+          "type": "PR"
+        },
+        { "text": "attókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "ms",
+      "phrase": "luttókhaʔ",
+      "breakdown": [
+        {
+          "text": "lu",
+          "type": "PR"
+        },
+        { "text": "ttókhaʔ" }
+      ]
+    },
+    {
+      "pronoun": "fs",
+      "phrase": "kuttókhaʔ",
+      "breakdown": [
+        {
+          "text": "ku",
+          "type": "PR"
+        },
+        { "text": "ttókhaʔ" }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { Text } from "@/design/ui/text";
 import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
@@ -10,16 +11,18 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Learn-Oneida.com!</h1>
+      <Text as="h1" variant="headline">Welcome to Learn-Oneida.com!</Text>
+      <p>
+        <a className="text-blue-600 underline" href="/learn">Start learning from the curriculum!</a>
+      </p>
+
       <p>Try out one of the tools:</p>
       <ul>
         <li>
-          <a
-            href="/tools/numbers"
-            rel="noreferrer"
-          >
-            Number Translator
-          </a>
+          · <a className="text-blue-600 underline" href="/tools/numbers">Number Translator</a>
+        </li>
+        <li>
+          · <a className="text-blue-600 underline" href="/tools/paradigm">Paradigm Tester</a>
         </li>
       </ul>
     </div>
