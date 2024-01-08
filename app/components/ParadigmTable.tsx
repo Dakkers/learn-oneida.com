@@ -80,7 +80,10 @@ export function ParadigmTable({
       const value = values[key];
       const phraseObj = data.phrases.find((p) => p.pronoun === key);
       if (!!phraseObj) {
-        if (!value || sanitizePhrase(value) !== sanitizePhrase(phraseObj.phrase)) {
+        if (
+          !value ||
+          sanitizePhrase(value) !== sanitizePhrase(phraseObj.phrase)
+        ) {
           hasErrors = true;
           form.setError(key, {
             message: `Answer: ${phraseObj.phrase}`,
@@ -96,8 +99,8 @@ export function ParadigmTable({
     if (allowedPronouns.length === 0) {
       return data.phrases;
     }
-    return data.phrases.filter((p) => allowedPronouns.includes(p.pronoun))
-  }, [data.phrases, allowedPronouns])
+    return data.phrases.filter((p) => allowedPronouns.includes(p.pronoun));
+  }, [data.phrases, allowedPronouns]);
 
   return (
     <ParadigmTableContext.Provider
@@ -210,7 +213,12 @@ function TableRowWrapper({ row }: { row: Row }) {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input autoComplete='off' placeholder="Type here..." {...field} value={field.value ?? ''} />
+                    <Input
+                      autoComplete="off"
+                      placeholder="Type here..."
+                      {...field}
+                      value={field.value ?? ""}
+                    />
                   </FormControl>
 
                   <FormMessage />
@@ -242,7 +250,7 @@ function SettingsMenu({ toggleBreakdown, toggleColumn }) {
   if (!context) {
     throw new Error("Missing context");
   }
-  const { colVisibility, showBreakdown } = context;
+  const { colVisibility, isTesting, showBreakdown } = context;
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -264,9 +272,11 @@ function SettingsMenu({ toggleBreakdown, toggleColumn }) {
             ? "Hide Translation column"
             : "Show Translation column"}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => toggleBreakdown(!showBreakdown)}>
-          {showBreakdown ? "Hide text colors" : "Show text colors"}
-        </DropdownMenuItem>
+        {!isTesting && (
+          <DropdownMenuItem onClick={() => toggleBreakdown(!showBreakdown)}>
+            {showBreakdown ? "Hide text colors" : "Show text colors"}
+          </DropdownMenuItem>
+        )}
       </DropdownMenuContent>
     </DropdownMenu>
   );

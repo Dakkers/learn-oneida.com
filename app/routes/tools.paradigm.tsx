@@ -14,12 +14,17 @@ import dataAttokhaJson from "../data/attokha.json";
 import dataEhsaksJson from "../data/ehsak.json";
 import dataΛtoleJson from "../data/ʌtole.json";
 import dataIsHereJson from "../data/data-ese-is-here.json";
-import dataItluJson from '../data/itlu.json'
-import dataOtshyusJson from '../data/otshyus.json'
+import dataItluJson from "../data/itlu.json";
+import dataOtshyusJson from "../data/otshyus.json";
 import dataLikeRedJson from "../data/data-like-red.json";
 import { ParadigmTable } from "~/components/ParadigmTable";
-import { Pronoun, dualicPronouns, pluralPronouns, singlePronouns } from "~/utils";
-import sample from 'lodash/sample'
+import {
+  Pronoun,
+  dualicPronouns,
+  pluralPronouns,
+  singlePronouns,
+} from "~/utils";
+import sample from "lodash/sample";
 
 export const meta: MetaFunction = () => {
   return [
@@ -33,17 +38,17 @@ export const meta: MetaFunction = () => {
 
 export default function ToolsParadigm() {
   const dataToUse = {
-    "attokha": dataAttokhaJson,
+    attokha: dataAttokhaJson,
     "be-here": dataIsHereJson,
-    "ehsaks": dataEhsaksJson,
-    "i_tlu": dataItluJson,
+    ehsaks: dataEhsaksJson,
+    i_tlu: dataItluJson,
     "like-red": dataLikeRedJson,
-    "otshyus": dataOtshyusJson,
-    "ʌtole": dataΛtoleJson,
+    otshyus: dataOtshyusJson,
+    ʌtole: dataΛtoleJson,
   } as const;
 
   const translatorFns = {
-    "i_tlu": ({ pronoun }: { pronoun: Pronoun }) => ({
+    i_tlu: ({ pronoun }: { pronoun: Pronoun }) => ({
       verb: ["it", "m", "f"].includes(pronoun) ? "resides" : "reside",
     }),
     "like-red": ({ pronoun }: { pronoun: Pronoun }) => ({
@@ -54,7 +59,7 @@ export default function ToolsParadigm() {
   const [word, setWord] = React.useState<keyof typeof dataToUse>("like-red");
   const [paradigm, setParadigm] = React.useState("all");
   const [hasStarted, setHasStarted] = React.useState(false);
-  const [allowedPronouns, setAllowedPronouns] = React.useState<Pronoun[]>([])
+  const [allowedPronouns, setAllowedPronouns] = React.useState<Pronoun[]>([]);
 
   return (
     <div>
@@ -70,8 +75,8 @@ export default function ToolsParadigm() {
         <SelectWrapper
           label="Word"
           onChange={(value) => {
-            setWord(value)
-            setHasStarted(false)
+            setWord(value);
+            setHasStarted(false);
           }}
           options={[
             { label: "Be hard to please", value: "ʌtole" },
@@ -87,8 +92,8 @@ export default function ToolsParadigm() {
         <SelectWrapper
           label="Type"
           onChange={(value) => {
-            setParadigm(value)
-            setHasStarted(false)
+            setParadigm(value);
+            setHasStarted(false);
           }}
           options={[
             { label: "All", value: "all" },
@@ -104,19 +109,25 @@ export default function ToolsParadigm() {
           disabled={!word || hasStarted}
           onClick={() => {
             setAllowedPronouns(
-              paradigm === 'all' ? []
-              : paradigm === 'singles' ? singlePronouns
-              : paradigm === 'dualics' ? dualicPronouns
-              : paradigm === 'plurals' ? pluralPronouns
-              : paradigm === 'one' ? [
-                sample(singlePronouns),
-                sample(dualicPronouns),
-                sample(pluralPronouns)
-              ] as string[]
-              : []
-            )
-            setHasStarted(true)
-          }}>
+              paradigm === "all"
+                ? []
+                : paradigm === "singles"
+                ? singlePronouns
+                : paradigm === "dualics"
+                ? dualicPronouns
+                : paradigm === "plurals"
+                ? pluralPronouns
+                : paradigm === "one"
+                ? ([
+                    sample(singlePronouns),
+                    sample(dualicPronouns),
+                    sample(pluralPronouns),
+                  ] as string[])
+                : []
+            );
+            setHasStarted(true);
+          }}
+        >
           Start
         </Button>
       </Flex>
@@ -125,7 +136,7 @@ export default function ToolsParadigm() {
         <ParadigmTable
           allowedPronouns={allowedPronouns}
           columnVisibility={{
-            pronounEnglish: false
+            pronounEnglish: false,
           }}
           data={dataToUse[word]}
           isTesting

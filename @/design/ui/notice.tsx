@@ -1,12 +1,5 @@
 import { cn } from "@/lib/utils";
-
-type Intent =
-  | 'magic'
-  | 'negative'
-  | 'positive'
-  | 'primary'
-  | 'secondary'
-  | 'warning'
+import { Intent } from "./types";
 
 interface NoticeProps {
   children: React.ReactNode;

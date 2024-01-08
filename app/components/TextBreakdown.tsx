@@ -3,40 +3,71 @@ import { BreakdownType } from "~/utils";
 
 export function TextBreakdown({
   breakdown,
+  typeFallback,
 }: {
-  breakdown: Array<{
-    text: string;
-    type?: BreakdownType;
-  }>;
+  breakdown: Array<
+    | string
+    | {
+        text: string;
+        type?: BreakdownType;
+      }
+  >;
+  typeFallback?: BreakdownType;
 }) {
   return (
     <span>
       {breakdown.map((part, i) => {
+        if (typeof part === "string") {
+          return (
+            <InnerText key={i} type={typeFallback}>
+              {part}
+            </InnerText>
+          );
+        }
+
         const wsPrefix = part.text.trimStart() !== part.text;
         const wsSuffix = part.text.trimStart() !== part.text;
         return (
-          <span
-            className={cn(
-              part.type && BREAKDOWN_TYPE_COLOR_MAP[part.type],
-              "font-bold"
-            )}
-            key={i}
-          >
+          <InnerText key={i} type={part.type ?? typeFallback}>
             {wsPrefix ? "&nbsp" : ""}
             {part.text}
             {wsSuffix ? "&nbsp" : ""}
-          </span>
+          </InnerText>
         );
       })}
     </span>
   );
 }
 
-const BREAKDOWN_TYPE_COLOR_MAP: Record<BreakdownType, string> = {
+function InnerText({
+  children,
+  type,
+}: {
+  children: React.ReactNode;
+  type?: BreakdownType | BreakdownType[];
+}) {
+  return (
+    <span
+      className={cn(
+        Array.isArray(type)
+          ? (type ?? []).map((t) => BREAKDOWN_TYPE_MAP[t])
+          : type
+          ? BREAKDOWN_TYPE_MAP[type]
+          : undefined,
+        "font-bold"
+      )}
+    >
+      {children}
+    </span>
+  );
+}
+
+const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   RPL: "text-gray-400",
   PR: "text-red-600",
   PB: "text-blue-700",
   PP: "text-violet-600",
   PLB: "",
   PAST: "",
+  OP: "underline decoration-wavy",
 };

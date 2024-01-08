@@ -64,6 +64,11 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
+
+  sup {
+    font-size: 100%;
+    top: -0.15em;
+  }
 }
 
 @layer base {

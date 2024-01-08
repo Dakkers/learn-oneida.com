@@ -11,18 +11,28 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <Text as="h1" variant="headline">Welcome to Learn-Oneida.com!</Text>
+      <Text as="h1" variant="headline">
+        Welcome to Learn-Oneida.com!
+      </Text>
       <p>
-        <a className="text-blue-600 underline" href="/learn">Start learning from the curriculum!</a>
+        <a className="text-blue-600 underline" href="/learn">
+          Start learning from the curriculum!
+        </a>
       </p>
 
       <p>Try out one of the tools:</p>
       <ul>
         <li>
-          · <a className="text-blue-600 underline" href="/tools/numbers">Number Translator</a>
+          ·{" "}
+          <a className="text-blue-600 underline" href="/tools/numbers">
+            Number Translator
+          </a>
         </li>
         <li>
-          · <a className="text-blue-600 underline" href="/tools/paradigm">Paradigm Tester</a>
+          ·{" "}
+          <a className="text-blue-600 underline" href="/tools/paradigm">
+            Paradigm Tester
+          </a>
         </li>
       </ul>
     </div>

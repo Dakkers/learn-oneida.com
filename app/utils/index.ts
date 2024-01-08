@@ -15,27 +15,9 @@ export function formatTranslation(text: string, params) {
   return result;
 }
 
-export const singlePronouns = [
-  "i",
-  "u",
-  "m",
-  "f",
-  "it",
-]
-export const dualicPronouns = [
-  "uni",
-  "soni",
-  "u2",
-  "2m",
-  "2f",
-]
-export const pluralPronouns = [
-  "us",
-  "theyni",
-  "yall",
-  "ms",
-  "fs",
-]
+export const singlePronouns = ["i", "u", "m", "f", "it"];
+export const dualicPronouns = ["uni", "soni", "u2", "2m", "2f"];
+export const pluralPronouns = ["us", "theyni", "yall", "ms", "fs"];
 
 export const pronouns = [
   ...singlePronouns,
