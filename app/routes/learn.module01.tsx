@@ -14,7 +14,11 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, pronouns } from "~/utils";
 import redPronominalsJson from "../data/red-pronominals.json";
+import bluePronominalsJson from "../data/blue-pronominals.json";
+import purplePronominalsJson from "../data/purple-pronominals.json";
 import { TextBreakdown } from "~/components/TextBreakdown";
+import { List } from "@/design/ui/list";
+import { Box } from "@/design/ui/box";
 
 export const meta: MetaFunction = () => {
   return [
@@ -25,50 +29,53 @@ export const meta: MetaFunction = () => {
 
 export default function LearnModule01() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Module 1</h1>
+    <div>
+      <Text as="h1" variant="title">
+        Module 1
+      </Text>
 
-      <p className="mt-8 mb-4">
-        <strong>NOTE:</strong> This page is still under construction!
-      </p>
-
-      <Text>In this module, we&lsquo;ll cover the following:</Text>
-      <ul>
-        <li>
-          · Pronouns
-          <ul>
-            <li>· · Free-standing</li>
-            <li>· · Bound</li>
-          </ul>
-        </li>
-        <li>
-          · · Pronominals
-          <ul>
-            <li>· · Subjective (Red)</li>
-            <li>· · Objective (Blue)</li>
-            <li>· · The "Purples"</li>
-            <li>· · Possessive (Light Blue)</li>
-          </ul>
-        </li>
-        <li>
-          · Stress and Accents
-          <ul>
-            <li>· · Length</li>
-            <li>· · Short Stress</li>
-            <li>· · Long Stress</li>
-            <li>· · Whispered Endings</li>
-          </ul>
-        </li>
-        <li>· Glottal Stop</li>
-        <li>· The letter H</li>
-
-        <li>· Someone's name</li>
-        <li>· To know, to be in the know</li>
-      </ul>
-
-      <Separator />
+      <Box py={4}>
+        <Notice intent="warning">
+          <strong>NOTE:</strong> This page is still under construction!
+        </Notice>
+      </Box>
 
       <Flex direction="column" gap={4}>
+        <Text>In this module, we&lsquo;ll cover the following:</Text>
+        <List>
+          <List.Item>
+            Pronouns
+            <List>
+              <List.Item>Free-standing</List.Item>
+              <List.Item>Bound</List.Item>
+            </List>
+          </List.Item>
+          <List.Item>
+            Pronominals
+            <List>
+              <List.Item>Subjective (Red)</List.Item>
+              <List.Item>Objective (Blue)</List.Item>
+              <List.Item>The &quot;Purples&quot;</List.Item>
+              <List.Item>Possessive (Light Blue)</List.Item>
+            </List>
+          </List.Item>
+          <List.Item>
+            Stress and Accents
+            <List>
+              <List.Item>Length</List.Item>
+              <List.Item>Short Stress</List.Item>
+              <List.Item>Long Stress</List.Item>
+              <List.Item>Whispered Endings</List.Item>
+            </List>
+          </List.Item>
+          <List.Item>Glottal Stop</List.Item>
+          <List.Item>The letter H</List.Item>
+          <List.Item>Someone&lsquo;s name</List.Item>
+          <List.Item>To know, to be in the know</List.Item>
+        </List>
+
+        <Separator />
+
         <Text as="h2" variant="title">
           Pronouns
         </Text>
@@ -96,83 +103,128 @@ export default function LearnModule01() {
           Bound pronouns must be attached to a word. There are roughly 80 of
           these, which can be broken down into four groups:
         </Text>
-        <ul>
-          <li>· Subjective (Red)</li>
-          <li>· Objective (Blue)</li>
-          <li>· Possessive (Light Blue)</li>
-          <li>· "The Purples"</li>
-        </ul>
+        <List ordered>
+          <List.Item>Subjective (Red)</List.Item>
+          <List.Item>Objective (Blue)</List.Item>
+          <List.Item>Possessive (Light Blue)</List.Item>
+          <List.Item>&quot;The Purples&quot;</List.Item>
+        </List>
         <Text>
-          "The Purples" refers to a group of pronouns that do not have an
-          English counterpart.
+          &quot;The Purples&quot; refers to a group of pronouns that do not have
+          an English counterpart.
         </Text>
         <Notice intent="secondary">
           From here on, we will refer to pronouns as{" "}
-          <strong>pronominals</strong>, which is an abbreviation of "pronominal
-          prefix".
+          <strong>pronominals</strong>, which is an abbreviation of
+          &quot;pronominal prefix&quot;.
         </Notice>
+
         <Text as="h3" variant="label">
           Subjective (Red) Pronominals
         </Text>
         <Text>
           The table below displays the full list of subjective (red)
-          pronominals. Each column represents a different "stem", which is the
-          first letter in a root word. For example, the root word{" "}
-          <i>nuwehseʔ</i> ("to like") starts with the letter "N" which is a
-          consonant, so we use the "C-stem" column. The root word{" "}
-          <i>attokhaʔ</i> ("to be wise") starts with the letter "A", so we use
-          the "A-stem" column.
+          pronominals. Each column represents a different &quot;stem&quot;,
+          which is the first letter in a root word. For example, the root word{" "}
+          <i>nuwehseʔ</i> (&quot;to like&quot;) starts with the letter
+          &quot;N&quot; which is a consonant, so we use the &quot;C-stem&quot;
+          column. The root word <i>attokhaʔ</i> (&quot;to be wise&quot;) starts
+          with the letter &quot;A&quot;, so we use the &quot;A-stem&quot;
+          column.
         </Text>
         <Text>
-          Attaching "k" to the start of the root word <i>nuwehseʔ</i> results in{" "}
-          <i>knú·wehseʔ</i>
-          which means "I like it". Attaching "l" to the start of the root word{" "}
-          <i>attokhaʔ</i> gives us <i>lattókhaʔ</i> wich means "he is wise".
+          Attaching &quot;k&quot; to the start of the root word <i>nuwehseʔ</i>{" "}
+          results in <i>knú·wehseʔ</i> which means &quot;I like it&quot;.
+          Attaching &quot;l&quot; to the start of the root word <i>attokhaʔ</i>{" "}
+          gives us <i>lattókhaʔ</i> wich means &quot;he is wise&quot;.
         </Text>
         <Text>
           The small numbers in the table cells represent exceptions – Oneida is
           full of them!
         </Text>
-        <PronominalsTable data={redPronominalsJson} />
+        <PronominalsTable color="red" data={redPronominalsJson} />
+
+        <Text variant="label">Exception 1</Text>
         <Text>
-          The exceptions are:
-          <ol>
-            <li>
-              1. The vowel with a squiggly underline "overpowers" the leading
-              vowel of the root word. For example, the word for "she is wise" is{" "}
-              <i>yuttókhaʔ</i>. <code>yu</code> is the pronominal and the letter
-              U "overpowers" the letter A in the root word <i>attokhaʔ</i>.
-            </li>
-            <li>
-              2. The h is not written or pronounced when nothing is attached in
-              front of the pronominal. However, when anything is attached to the
-              front of the pronominal, the h is written and pronounced. Example:{" "}
-              <i>snú·wehseʔ</i> and <i>yah tehsnú·wehseʔ</i>.
-            </li>
-            <li>
-              3. The letter "e" only appears on root words that begin with a
-              double consonant
-            </li>
-            <li>
-              4. The ik prefix is attached to most (but not all) single syllable
-              roots. The i in ik is used only occasionally. The i disappears
-              when anything is attached in front of the prefix. Example:{" "}
-              <i>íkyʌheʔ</i> and <i>yah té·kyʌheʔ</i> .
-            </li>
-            <li>
-              5. The prefix <code>ts</code> is attached to all roots beginning
-              with y and i. The t disappears and is replaced by h when anything
-              is attached in front of the prefix. Example:
-              <i>tsyʌtelí</i> and <i>yah tehsyʌtelí</i>; <i>tsí·tluʔ</i> and{" "}
-              <i>yah tehsí·tluʔ</i>.
-            </li>
-            <li>
-              6. The prefix it is attached to all roots beginning with hs and
-              the i disappears when anything is attached in front of the prefix.
-              Example: <i>íthsaʔas</i> and <i>yah tethsáʔas</i>
-            </li>
-          </ol>
+          The vowel with a squiggly underline replaces the leading vowel of the
+          root word. For example, the word for &quot;she is wise&quot; is{" "}
+          <i>yuttókhaʔ</i>. <Letter>yu</Letter> is the pronominal and the letter
+          U &quot;overpowers&quot; the letter A in the root word <i>attokhaʔ</i>
+          .
         </Text>
+        <Text>
+          As an example, let's look at the A-stem column, where the root word is{" "}
+          <i>attokhaʔ</i>. The translation for "she is wise" without this
+          replacement rule would be <i>yuattokhaʔ</i>. <Letter>yua</Letter> is
+          not a sound in Oneida so we instead change it to <Letter>yu</Letter>.
+          Therefore the translation is <i>yuttókhaʔ</i>.
+        </Text>
+
+        <Text variant="label">Exception 2</Text>
+        <Text>
+          The <Letter>h</Letter> is not written or pronounced when nothing is
+          attached in front of the pronominal. However, when anything is
+          attached to the front of the pronominal, the <Letter>h</Letter> is
+          written and pronounced. Example: <i>snú·wehse̲ʔ</i> and{" "}
+          <i>yah tehsnú·wehse̲ʔ</i>.
+        </Text>
+
+        <Text variant="label">Exception 3</Text>
+        <Text>
+          The letter <Letter>e</Letter> only appears on root words that begin
+          with a double consonant.
+        </Text>
+        <Notice intent="warning">
+          Examples are needed for this exception.
+        </Notice>
+
+        <Text variant="label">Exception 4</Text>
+        <Text>
+          The <Letter>ik</Letter> prefix is attached to most (but not all)
+          single syllable roots. The <Letter>i</Letter> in <Letter>ik</Letter>{" "}
+          is used only occasionally. The <Letter>i</Letter> disappears when
+          anything is attached in front of the prefix. Example: <i>íkyʌheʔ</i>{" "}
+          and <i>yah té·kyʌheʔ</i>.
+        </Text>
+
+        <Text variant="label">Exception 5</Text>
+        <Text>
+          The prefix <code>ts</code> is attached to all roots beginning with{" "}
+          <Letter>y</Letter>
+          and <Letter>i</Letter>. The <Letter>t</Letter> disappears and is
+          replaced by <Letter>h</Letter> when anything is attached in front of
+          the prefix. Example:
+          <i>tsyʌtelíˍ</i> and <i>yah tehsyʌtelíˍ</i>; <i>tsí·tlu̲ʔ</i> and{" "}
+          <i>yah tehsí·tlu̲ʔ</i>.
+        </Text>
+
+        <Text variant="label">Exception 6</Text>
+        <Text>
+          The prefix <Letter>it</Letter> is attached to all roots beginning with{" "}
+          <Letter>hs</Letter> and the <Letter>i</Letter>
+          disappears when anything is attached in front of the prefix. Example:{" "}
+          <i>íthsaʔas</i> and <i>yah tethsáʔas</i>
+        </Text>
+
+        <Separator />
+
+        <Text as="h3" variant="label">
+          Objective (blue) Pronominals
+        </Text>
+        <Text>
+          The table below displays the full list of objective (blue)
+          pronominals.
+        </Text>
+        <PronominalsTable color="blue" data={bluePronominalsJson} />
+
+        <Text as="h3" variant="label">
+          Purple Pronominals
+        </Text>
+        <Text>
+          The table below displays the full list of purple pronominals. These do
+          not have an English counterpart.
+        </Text>
+        <PronominalsTable color="purple" data={purplePronominalsJson} />
       </Flex>
     </div>
   );
@@ -239,13 +291,16 @@ function FreestandingPronounsSection() {
   );
 }
 
-function PronominalsTable({ data = {} }) {
+function PronominalsTable({ color, data = {} }) {
   const stems = ["c", "a", "i", "e", "o"];
+  const isPurple = color === "purple";
+  const rowsToUse = isPurple ? data : pronouns;
+
   return (
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead></TableHead>
+          {!isPurple && <TableHead></TableHead>}
           <TableHead>EN</TableHead>
           <TableHead>C-stem</TableHead>
           <TableHead>A-stem</TableHead>
@@ -255,21 +310,31 @@ function PronominalsTable({ data = {} }) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {pronouns.map((pronoun) => (
-          <TableRow key={pronoun}>
-            <TableCell>{PRONOUN_MAP_ONEIDA[pronoun]}</TableCell>
-            <TableCell>{PRONOUN_MAP_EN[pronoun]}</TableCell>
+        {rowsToUse.map((row, i) => (
+          <TableRow key={i}>
+            {!isPurple && <TableCell>{PRONOUN_MAP_ONEIDA[row]}</TableCell>}
+            <TableCell>
+              {!isPurple ? (
+                PRONOUN_MAP_EN[row]
+              ) : Array.isArray(row.label) ? (
+                <>
+                  {row.label.map((label, j) => (
+                    <div key={j}>{label}</div>
+                  ))}
+                </>
+              ) : (
+                row.label
+              )}
+            </TableCell>
+
             {stems.map((stem) => {
-              const content = data[pronoun][stem] ?? data[pronoun].default;
+              const datum = isPurple ? row : data[row];
+              const content = datum[stem] ?? datum.default;
               return (
                 <TableCell key={stem}>
                   <Flex direction="column">
                     {content.map((prefixArr, i) => (
-                      <PronominalText
-                        entry={prefixArr}
-                        intent="negative"
-                        key={i}
-                      />
+                      <PronominalText entry={prefixArr} color={color} key={i} />
                     ))}
                   </Flex>
                 </TableCell>
@@ -282,7 +347,16 @@ function PronominalsTable({ data = {} }) {
   );
 }
 
-function PronominalText({ entry, intent }) {
+function PronominalText({ entry, color }) {
+  const intent =
+    color === "red"
+      ? "negative"
+      : color === "blue"
+      ? "primary"
+      : color === "purple"
+      ? "magic"
+      : "secondary";
+
   if (typeof entry === "string") {
     return (
       <Text contrast="mid" intent={intent}>
@@ -295,7 +369,20 @@ function PronominalText({ entry, intent }) {
       {entry.text}
     </Text>
   ) : (
-    <TextBreakdown breakdown={entry.breakdown} typeFallback="PR" />
+    <TextBreakdown
+      breakdown={entry.breakdown}
+      typeFallback={
+        color === "red"
+          ? "PR"
+          : color === "blue"
+          ? "PB"
+          : color === "purple"
+          ? "PP"
+          : color === "lightblue"
+          ? "PLB"
+          : undefined
+      }
+    />
   );
 
   return (
@@ -306,7 +393,7 @@ function PronominalText({ entry, intent }) {
   );
 }
 
-function Footnotes({ nums: _nums }) {
+function Footnotes({ nums: _nums }: { nums: string[] | string }) {
   const nums = (Array.isArray(_nums) ? _nums : [_nums]).map((n) => parseInt(n));
   nums.sort();
 
@@ -320,5 +407,13 @@ function Footnotes({ nums: _nums }) {
         </sup>
       ))}
     </Flex>
+  );
+}
+
+function Letter({ children }) {
+  return (
+    <code>
+      <strong>{children}</strong>
+    </code>
   );
 }
