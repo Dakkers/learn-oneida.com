@@ -27,7 +27,7 @@ export const pronouns = [
 
 export type Pronoun = (typeof pronouns)[number];
 
-export type BreakdownType = "RPL" | "PR" | "PB" | "PP" | "PLB" | "PAST";
+export type BreakdownType = "RPL" | "PR" | "PB" | "PP" | "PLB" | "PAST" | "OP";
 
 export const PRONOUN_MAP_ONEIDA: Record<Pronoun, string> = {
   i: "í",
@@ -63,6 +63,24 @@ export const PRONOUN_MAP_EN: Record<Pronoun, string> = {
   yall: "All of you",
   ms: "They (males)",
   fs: "They (females)",
+};
+
+export const PRONOUN_MAP_EN_OBJECTIVE: Record<Pronoun, string> = {
+  i: "Me",
+  u: "You",
+  m: "Him",
+  f: "Her",
+  it: "It",
+  uni: "You and I",
+  soni: "Someone and I",
+  u2: "You two",
+  "2m": "Two males",
+  "2f": "Two females",
+  us: "You all and I",
+  theyni: "Them and I",
+  yall: "All of you",
+  ms: "Them (males)",
+  fs: "Them (females)",
 };
 
 export const REF_VERB_MAP: Record<Pronoun, string> = {

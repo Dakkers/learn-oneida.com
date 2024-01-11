@@ -8,21 +8,37 @@ type Contrast =
   | 'low'
 
 type TypographyToken =
-  | 'body'
-  | 'headline'
+  | 'bodyL'
+  | 'bodyM'
+  | 'bodyS'
+  | 'headlineL'
+  | 'headlineM'
+  | 'headlineS'
   | 'footnote'
-  | 'label'
-  | 'title'
+  | 'labelL'
+  | 'labelM'
+  | 'labelS'
+  | 'titleL'
+  | 'titleM'
+  | 'titleS'
 
 const typographyClasses = {
-  body: 'text-base',
-  footnote: 'text-xs',
-  headline: 'text-2xl',
-  label: 'text-sm font-bold',
-  title: 'text-xl font-bold',
+  bodyL: 'text-xsBodyL md:text-mdBodyL',
+  bodyM: 'text-xsBodyM md:text-mdBodyM',
+  bodyS: 'text-xsBodyS md:text-mdBodyS',
+  footnote: 'text-xsFootnote md:text-mdFootnote',
+  headlineL: 'text-xsHeadlineL md:text-mdHeadlineL',
+  headlineM: 'text-xsHeadlineM md:text-mdHeadlineM',
+  headlineS: 'text-xsHeadlineS md:text-mdHeadlineS',
+  labelL: 'text-xsLabelL md:text-mdLabelL',
+  labelM: 'text-xsLabelM md:text-mdLabelM',
+  labelS: 'text-xsLabelS md:text-mdLabelS',
+  titleL: 'text-xsTitleL md:text-mdTitleL',
+  titleM: 'text-xsTitleM md:text-mdTitleM',
+  titleS: 'text-xsTitleS md:text-mdTitleS',
 } as const
 
-interface TextProps {
+export interface TextProps {
   as?: 'span' | 'div' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5'
   children: React.ReactNode;
   contrast?: Contrast
@@ -35,13 +51,16 @@ export function Text ({
   children,
   contrast = 'high',
   intent = 'secondary',
-  variant = 'body',
+  variant = 'bodyM',
 }: TextProps) {
+  if (Tag === 'h1') {
+    console.log(variant, typographyClasses[variant])
+  }
   return (
     <Tag
       className={cn(
+        typographyClasses[variant],
         textColorMap[contrast][intent],
-        typographyClasses[variant]
       )}
     >
       {children}

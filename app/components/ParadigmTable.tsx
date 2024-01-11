@@ -24,6 +24,7 @@ import {
   pronouns,
   REF_VERB_MAP,
   formatTranslation,
+  PRONOUN_MAP_EN_OBJECTIVE,
 } from "~/utils";
 import { TextBreakdown } from "./TextBreakdown";
 import {
@@ -50,7 +51,7 @@ export function ParadigmTable({
   allowedPronouns = [],
   columnVisibility = {},
   data,
-  isTesting,
+  isTesting = false,
   translationFn,
 }: {
   allowedPronouns: string[];
@@ -156,22 +157,26 @@ export function ParadigmTable({
               </TableHeader>
               <TableBody>
                 {rowsToShow.map((row, i) => (
-                  <TableRowWrapper key={i} row={row} />
+                  <TableRowWrapper key={i} row={row} typeFallback={data.type} />
                 ))}
               </TableBody>
             </Table>
 
-            {form.formState.submitCount > 0 && (
-              <Notice intent={isCorrect ? "positive" : "negative"}>
-                {isCorrect
-                  ? "Good job! You answered each prompt correctly."
-                  : "There were some mistakes with your answers. Scroll up to take a look."}
-              </Notice>
-            )}
+            {isTesting && (
+              <>
+                {form.formState.submitCount > 0 && (
+                  <Notice intent={isCorrect ? "positive" : "negative"}>
+                    {isCorrect
+                      ? "Good job! You answered each prompt correctly."
+                      : "There were some mistakes with your answers. Scroll up to take a look."}
+                  </Notice>
+                )}
 
-            <Flex justify="end">
-              <Button type="submit">Submit</Button>
-            </Flex>
+                <Flex justify="end">
+                  <Button type="submit">Submit</Button>
+                </Flex>
+              </>
+            )}
           </form>
         </Form>
       </div>
@@ -179,7 +184,13 @@ export function ParadigmTable({
   );
 }
 
-function TableRowWrapper({ row }: { row: Row }) {
+function TableRowWrapper({
+  row,
+  typeFallback,
+}: {
+  row: Row;
+  typeFallback?: BreakdownType;
+}) {
   const context = React.useContext(ParadigmTableContext);
   if (!context) {
     throw new Error("Missing context");
@@ -187,6 +198,7 @@ function TableRowWrapper({ row }: { row: Row }) {
   const { colVisibility, showBreakdown } = context;
   const translatedPhrase = formatTranslation(context.translation, {
     pronoun: PRONOUN_MAP_EN[row.pronoun],
+    pronounObjective: PRONOUN_MAP_EN_OBJECTIVE[row.pronoun],
     refVerb: REF_VERB_MAP[row.pronoun],
     ...(context.translationFn
       ? context.translationFn({ pronoun: row.pronoun })
@@ -231,7 +243,10 @@ function TableRowWrapper({ row }: { row: Row }) {
         <>
           <TableCell>
             {showBreakdown ? (
-              <TextBreakdown breakdown={row.breakdown} />
+              <TextBreakdown
+                breakdown={row.breakdown}
+                typeFallback={typeFallback}
+              />
             ) : (
               row.phrase
             )}
@@ -291,13 +306,17 @@ interface ColumnVisibility {
 interface Data {
   phrases: Row[];
   translation: string;
+  type?: BreakdownType;
 }
 
 interface Row {
-  breakdown: Array<{
-    text: string;
-    type?: BreakdownType;
-  }>;
+  breakdown: Array<
+    | string
+    | {
+        text: string;
+        type?: BreakdownType;
+      }
+  >;
   phrase: string;
   pronoun: Pronoun;
 }

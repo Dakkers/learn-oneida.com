@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   darkMode: ["class"],
   content: [
     './@/**/*.{ts,tsx}',
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
     './app/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
   prefix: "",
@@ -16,6 +17,82 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+    },
+    fontSize: {
+      // XS screen sizes
+      xsLabelS: ['0.625rem', {
+        fontWeight: '600'
+      }],
+      xsLabelM: ['0.75rem', {
+        fontWeight: '600'
+      }],
+      xsLabelL: ['0.875rem', {
+        fontWeight: '600'
+      }],
+      xsBodyS: ['0.75rem', {
+        fontWeight: '400'
+      }],
+      xsBodyM: ['0.875rem', {
+        fontWeight: '400'
+      }],
+      xsBodyL: ['1rem', {
+        fontWeight: '400'
+      }],
+      xsTitleS: ['1rem', {
+        fontWeight: '700'
+      }],
+      xsTitleM: ['1.125rem', {
+        fontWeight: '700'
+      }],
+      xsTitleL: ['1.25rem', {
+        fontWeight: '700'
+      }],
+      xsHeadlineS: ['1.5rem', {
+        fontWeight: '700'
+      }],
+      xsHeadlineM: ['1.75rem', {
+        fontWeight: '700'
+      }],
+      xsHeadlineL: ['2rem', {
+        fontWeight: '700'
+      }],
+      // MD screen sizes
+      mdLabelS: ['0.75rem', {
+        fontWeight: '600'
+      }],
+      mdLabelM: ['0.875rem', {
+        fontWeight: '600'
+      }],
+      mdLabelL: ['1rem', {
+        fontWeight: '600'
+      }],
+      mdBodyS: ['0.875rem', {
+        fontWeight: '400'
+      }],
+      mdBodyM: ['1rem', {
+        fontWeight: '400'
+      }],
+      mdBodyL: ['1.125rem', {
+        fontWeight: '400'
+      }],
+      mdTitleS: ['1.125rem', {
+        fontWeight: '700'
+      }],
+      mdTitleM: ['1.25rem', {
+        fontWeight: '700'
+      }],
+      mdTitleL: ['1.5rem', {
+        fontWeight: '700'
+      }],
+      mdHeadlineS: ['1.75rem', {
+        fontWeight: '700'
+      }],
+      mdHeadlineM: ['2rem', {
+        fontWeight: '700'
+      }],
+      mdHeadlineL: ['2.25rem', {
+        fontWeight: '700'
+      }],
     },
     extend: {
       colors: {
