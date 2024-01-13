@@ -1,4 +1,5 @@
-import { Text } from "@/design/ui/text";
+import { Text, TextProps } from "@/design/ui/text";
+import { cn } from "@/lib/utils";
 
 export type PronominalColor =
   | "red"
@@ -13,21 +14,21 @@ export type PronominalColor =
 export function Pronominal({
   color,
   children,
+  variant,
 }: {
-  color: PronominalColor;
+  color?: PronominalColor;
   children: React.ReactNode;
+  variant?: TextProps["variant"];
 }) {
-  const intent = ["red", "r"].includes(color)
-    ? "negative"
-    : ["blue", "b"].includes(color)
-    ? "primary"
-    : ["purple", "p"].includes(color)
-    ? "magic"
-    : "secondary";
+  const textColorClass = ["red", "r"].includes(color ?? "")
+    ? "text-red-500"
+    : ["blue", "b"].includes(color ?? "")
+    ? "text-blue-700"
+    : ["purple", "p"].includes(color ?? "")
+    ? "text-violet-700"
+    : ["lightblue", "lb"].includes(color ?? "")
+    ? "text-cyan-400"
+    : "text-gray-700";
 
-  return (
-    <Text as="span" contrast="mid" intent={intent}>
-      <strong>{children}</strong>
-    </Text>
-  );
+  return <span className={cn(textColorClass, "font-bold")}>{children}</span>;
 }

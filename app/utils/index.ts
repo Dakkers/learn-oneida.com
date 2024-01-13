@@ -103,3 +103,6 @@ export const REF_VERB_MAP: Record<Pronoun, string> = {
 
 export const isPlural = (pronoun: Pronoun) =>
   ["us", "theyni", "yall", "ms", "fs"].includes(pronoun);
+
+export const arrayify = (value: unknown) =>
+  Array.isArray(value) ? value : [value];

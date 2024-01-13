@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { BreakdownType } from "~/utils";
+import { BreakdownType, arrayify } from "~/utils";
 
 export function TextBreakdown({
   breakdown,
@@ -18,11 +18,7 @@ export function TextBreakdown({
     <span>
       {breakdown.map((part, i) => {
         if (typeof part === "string") {
-          return (
-            <InnerText key={i} type={typeFallback}>
-              {part}
-            </InnerText>
-          );
+          return <InnerText key={i}>{part}</InnerText>;
         }
 
         const wsPrefix = part.text.trimStart() !== part.text;
@@ -49,11 +45,9 @@ function InnerText({
   return (
     <span
       className={cn(
-        Array.isArray(type)
-          ? (type ?? []).map((t) => BREAKDOWN_TYPE_MAP[t])
-          : type
-          ? BREAKDOWN_TYPE_MAP[type]
-          : undefined,
+        arrayify(type ?? []).map((t) =>
+          t ? BREAKDOWN_TYPE_MAP[t] : undefined
+        ),
         "font-bold"
       )}
     >
@@ -63,11 +57,11 @@ function InnerText({
 }
 
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
-  RPL: "text-gray-400",
-  PR: "text-red-600",
-  PB: "text-blue-700",
-  PP: "text-violet-600",
-  PLB: "",
+  OP: "underline decoration-wavy decoration-black",
   PAST: "",
-  OP: "underline decoration-wavy",
+  PB: "text-blue-700",
+  PLB: "text-cyan-400",
+  PP: "text-violet-600",
+  PR: "text-red-600",
+  RPL: "text-gray-400",
 };

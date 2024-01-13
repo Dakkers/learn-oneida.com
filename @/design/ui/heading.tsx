@@ -1,25 +1,31 @@
 import React from 'react';
 import { InternalText, InternalTextProps } from './internalText';
 
-export interface TextProps extends Pick<InternalTextProps,
+export interface HeadingProps extends Pick<InternalTextProps,
   |'children'
   |'contrast'
   |'intent'
   |'variant'
 > {
-  as?: 'span' | 'div' | 'p'
+  level: 1 | 2 | 3 | 4 | 5;
 }
 
-export function Text ({
-  as: Tag = 'div',
+export function Heading ({
   children,
   contrast = 'high',
   intent = 'secondary',
+  level,
   variant = 'bodyM',
-}: TextProps) {
+}: HeadingProps) {
   return (
     <InternalText
-      as={Tag}
+      as={({
+        1: 'h1',
+        2: 'h2',
+        3: 'h3',
+        4: 'h4',
+        5: 'h5',
+      } as const)[level]}
       contrast={contrast}
       intent={intent}
       variant={variant}

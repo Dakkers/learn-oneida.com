@@ -6,12 +6,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/design/ui/table";
-import { Text, TextProps } from "@/design/ui/text";
+import { TextArray } from "../TextArray";
 
 const names = [
   ["Alʌt", "Aaron"],
   ["Á·kwilut", "Abraham"],
-  ["Tsi’twʌlu", "Albert"],
+  ["Tsiʔtwʌlu", "Albert"],
   ["Tshyalé", "Charlie"],
   ["Tá·wet", "David"],
   ["Tysáts", "George"],
@@ -60,15 +60,4 @@ export function EnglishNames() {
       </TableBody>
     </Table>
   );
-}
-
-function TextArray({ children, ...props }: TextProps) {
-  if (!Array.isArray(children)) {
-    return <Text {...props}>{children}</Text>;
-  }
-  return children.map((child, i) => (
-    <Text {...props} key={i}>
-      {child}
-    </Text>
-  ));
 }

@@ -14,21 +14,26 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import {
   PRONOUN_MAP_EN,
-  PRONOUN_MAP_EN_OBJECTIVE,
   PRONOUN_MAP_ONEIDA,
+  Pronoun,
+  arrayify,
   pronouns,
   singlePronouns,
 } from "~/utils";
 import redPronominalsJson from "../data/red-pronominals.json";
 import bluePronominalsJson from "../data/blue-pronominals.json";
 import purplePronominalsJson from "../data/purple-pronominals.json";
+import lightbluePronominalsJson from "../data/lightblue-pronominals.json";
 import yatsJson from "../data/yats.json";
+import anuhteJson from "../data/anuhte.json";
 import { TextBreakdown } from "~/components/TextBreakdown";
 import { List } from "@/design/ui/list";
 import { Box } from "@/design/ui/box";
 import { EnglishNames } from "~/components/language/EnglishNames";
 import { ParadigmTable } from "~/components/ParadigmTable";
-import { Pronominal } from "~/components/Pronominal";
+import { Pronominal, PronominalColor } from "~/components/Pronominal";
+import { PeopleResource } from "~/components/language/People";
+import { Heading } from "@/design/ui/heading";
 
 export const meta: MetaFunction = () => {
   return [
@@ -40,9 +45,9 @@ export const meta: MetaFunction = () => {
 export default function LearnModule01() {
   return (
     <div>
-      <Text as="h1" variant="headlineL">
-        Module 1sssssssssssssssssss
-      </Text>
+      <Heading level={1} variant="headlineL">
+        Module 1
+      </Heading>
 
       <Box py={4}>
         <Notice intent="warning">
@@ -80,8 +85,12 @@ export default function LearnModule01() {
           </List.Item>
           <List.Item>Glottal Stop</List.Item>
           <List.Item>The letter H</List.Item>
-          <List.Item>Someone&lsquo;s name</List.Item>
-          <List.Item>To know, to be in the know</List.Item>
+          <List.Item>
+            <i>yats</i>: to call someone by a name
+          </List.Item>
+          <List.Item>
+            <i>anúhteʔ</i>: to know, to be in the know
+          </List.Item>
           <List.Item>
             People
             <List>
@@ -96,9 +105,9 @@ export default function LearnModule01() {
 
         <Separator />
 
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           Pronouns
-        </Text>
+        </Heading>
         <Text>
           English gets by with just 21 pronouns that stand alone and are
           separate words:
@@ -109,17 +118,17 @@ export default function LearnModule01() {
           <strong>bound</strong>.
         </Text>
 
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           Standalone Pronouns
-        </Text>
+        </Heading>
         <Text>
-          Standalone pronouns are words you'll find that stand alone in a
+          Standalone pronouns are words you&lsquo;ll find that stand alone in a
           sentence. The standalone pronouns are:
         </Text>
         <FreestandingPronounsSection />
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           Bound Pronouns
-        </Text>
+        </Heading>
         <Text>
           Bound pronouns must be attached to a word. There are roughly 80 of
           these, which can be broken down into four groups:
@@ -134,15 +143,15 @@ export default function LearnModule01() {
           &quot;The Purples&quot; refers to a group of pronouns that do not have
           an English counterpart.
         </Text>
-        <Notice intent="secondary">
+        <Notice>
           From here on, we will refer to pronouns as{" "}
           <strong>pronominals</strong>, which is an abbreviation of
           &quot;pronominal prefix&quot;.
         </Notice>
 
-        <Text as="h3" variant="titleM">
+        <Heading level={3} variant="titleM">
           Subjective (Red) Pronominals
-        </Text>
+        </Heading>
         <Text>
           The table below displays the full list of subjective (red)
           pronominals. Each column represents a different &quot;stem&quot;,
@@ -168,17 +177,14 @@ export default function LearnModule01() {
         <Text variant="labelL">Exception 1</Text>
         <Text>
           The vowel with a squiggly underline replaces the leading vowel of the
-          root word. For example, the word for &quot;she is wise&quot; is{" "}
-          <i>yuttókhaʔ</i>. <Letter>yu</Letter> is the pronominal and the letter
-          U &quot;overpowers&quot; the letter A in the root word <i>attokhaʔ</i>
-          .
+          root word.
         </Text>
         <Text>
-          As an example, let's look at the A-stem column, where the root word is{" "}
-          <i>attokhaʔ</i>. The translation for "she is wise" without this
-          replacement rule would be <i>yuattokhaʔ</i>. <Letter>yua</Letter> is
-          not a sound in Oneida so we instead change it to <Letter>yu</Letter>.
-          Therefore the translation is <i>yuttókhaʔ</i>.
+          As an example, let&lsquo;s look at the A-stem column, where the root
+          word is <i>attokhaʔ</i>. The translation for &quot;she is wise&quot;
+          without this replacement rule would be <i>yuattokhaʔ</i>.{" "}
+          <Letter>yua</Letter> is not a sound in Oneida so we instead change it
+          to <Letter>yu</Letter>. Therefore the translation is <i>yuttókhaʔ</i>.
         </Text>
 
         <Text variant="labelL">Exception 2</Text>
@@ -229,32 +235,48 @@ export default function LearnModule01() {
 
         <Separator />
 
-        <Text as="h3" variant="titleM">
+        <Heading level={3} variant="titleM">
           Objective (blue) Pronominals
-        </Text>
+        </Heading>
         <Text>
           The table below displays the full list of objective (blue)
           pronominals.
         </Text>
         <PronominalsTable color="blue" data={bluePronominalsJson} />
 
-        <Text as="h3" variant="titleM">
+        <Heading level={3} variant="titleM">
           Purple Pronominals
-        </Text>
+        </Heading>
         <Text>
           The table below displays the full list of purple pronominals. These do
           not have an English counterpart.
         </Text>
         <PronominalsTable color="purple" data={purplePronominalsJson} />
 
-        <Text as="h3" variant="titleM">
+        <Heading level={3} variant="titleM">
           Possessive (light blue) Pronominals
-        </Text>
-        <Text>(Not yet available)</Text>
+        </Heading>
+        <PronominalsTable
+          allowedPronouns={[
+            "i",
+            "u",
+            "m",
+            "f",
+            "it",
+            "uni",
+            "u2",
+            "us",
+            "yall",
+            "ms",
+            "fs",
+          ]}
+          color="lightblue"
+          data={lightbluePronominalsJson}
+        />
 
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           Stress and Accents
-        </Text>
+        </Heading>
         <Text>
           Stress is the term we use to describe the way we emphasize one part of
           a word when we say it aloud. An accent is the mark we place over the
@@ -263,9 +285,9 @@ export default function LearnModule01() {
           write accent marks over consonants. There are two kinds of stress:
         </Text>
 
-        <Text as="h3" variant="titleM">
+        <Heading level={3} variant="titleM">
           Short stress
-        </Text>
+        </Heading>
         <Text>
           <strong>Short stress</strong> is indicated by an upstress mark &nbsp;
           <Letter> ́</Letter>&nbsp; over the vowel being stressed. Vowels with
@@ -276,9 +298,9 @@ export default function LearnModule01() {
           Examples: <i>kátsheʔ</i>, <i>kákhwaʔ</i>, <i>kítkit</i>, <i>ohʌtú</i>,{" "}
           <i>ohutsyakú</i>, <i>olihwiyó</i>, <i>ohwístaʔ</i>, <i>áhtaʔ</i>.
         </Text>
-        <Text as="h3" variant="titleM">
+        <Heading level={3} variant="titleM">
           Long stress
-        </Text>
+        </Heading>
         <Text>
           <strong>Long stress</strong> is indicated by an upstress mark &nbsp;
           <Letter> ́</Letter>&nbsp; over the vowel followed by a middle dot{" "}
@@ -291,9 +313,9 @@ export default function LearnModule01() {
           <i>nahté·shuʔ</i>, <i>kekhsá·</i>, <i>niʔí·</i>.
         </Text>
 
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           Length
-        </Text>
+        </Heading>
         <Text>
           <strong>Length</strong> is indicated by a middle dot{" "}
           <Letter>·</Letter> or a colon <Letter>:</Letter>. Vowels are
@@ -324,9 +346,9 @@ export default function LearnModule01() {
           <i>Shakonú·wehseʔ kʌ né· akaulhá·</i>
         </Text>
 
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           Where stress occurs
-        </Text>
+        </Heading>
         <Text>
           There are two rules regarding stress:
           <List ordered>
@@ -345,9 +367,9 @@ export default function LearnModule01() {
           many exceptions to this!
         </Text>
 
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           Glottal Stops
-        </Text>
+        </Heading>
         <Text>
           A common feature of Onʌyoteʔa·ká· is the GLOTTAL STOP indicated in
           writing by an apostrophe (<Letter>&lsquo;</Letter>) or the symbol{" "}
@@ -366,9 +388,9 @@ export default function LearnModule01() {
           wakyo·té·, ká·khaleʔ, laksá·, kanutó·tsliʔ.
         </Text>
 
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           The letter H
-        </Text>
+        </Heading>
         <Text>
           An important feature of Onʌyoteʔa·ká· is the letter H, which works the
           same way as it does in English, with breath coming out of a
@@ -387,9 +409,9 @@ export default function LearnModule01() {
           It seems to be a matter of personal preference.
         </Text>
 
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           Whispered Endings
-        </Text>
+        </Heading>
         <Text>
           This is a very unique feature of Onʌyoteʔa·ká where the last syllable
           of a word is actually whispered. This occurs only on words that are
@@ -417,63 +439,71 @@ export default function LearnModule01() {
           For example, <i>úska</i> is fully pronounced in prepausal form.
         </Text>
 
-        <Text as="h2" variant="headlineS">
-          Calling someone by a name
-        </Text>
+        <Heading level={2} variant="headlineS">
+          Learn: my name is...
+        </Heading>
         <Text>
-          Let's learn our first phrase!{" "}
+          Let&lsquo;s learn our first phrase!{" "}
           <strong>
             Bob ni· <Pronominal color="p">yuk</Pronominal>yáts
           </strong>{" "}
-          translates to "Bob is my name". It actually more literally translates
-          to "They call me Bob". Notice the purple text in the phrase,{" "}
-          <Letter>yuk</Letter>. This is from our Purple Pronominals table.{" "}
-          <Letter>yats</Letter> is the root word and because it begins with a
-          consonant, we can look for "yuk" in the table under the C-stem column
-          to find that it corresponds to "They → me".
+          translates to &quot;Bob is my name&quot;. It actually more literally
+          translates to &quot;They call me Bob&quot;. Notice the purple text in
+          the phrase, <Letter>yuk</Letter>. This is from our Purple Pronominals
+          table. <Letter>yats</Letter> is the root word and because it begins
+          with a consonant, we can look for &quot;yuk&quot; in the table under
+          the C-stem column to find that it corresponds to &quot;They →
+          me&quot;.
         </Text>
         <Text>
-          <Letter>yats</Letter> is an example of a word that "uses purple
-          pronominals". Different root words in Oneida use different color
-          pronominals. Some words, such as <i>nú·wehseʔ</i>, support different
-          color pronominals. Different colors can change the meaning of a root
-          word. We'll learn more about this in module 2.
+          <Letter>yats</Letter> is an example of a word that &quot;uses purple
+          pronominals&quot;. Different root words in Oneida use different color
+          pronominals. Some words, such as <i>nú·wehseʔ</i>, can use multiple
+          different color pronominals. Different colors can change the meaning
+          of a root word. We&lsquo;ll learn more about this in module 2.
         </Text>
         <Text>
           A paradigm table for <Letter>yats</Letter> looks like this:
         </Text>
         <ParadigmTable
           allowedPronouns={[...singlePronouns, "ms", "fs"]}
-          data={yatsJson}
           columnVisibility={{
             pronounEnglish: false,
             pronounOneida: false,
           }}
+          data={yatsJson}
+        />
+        <Notice intent="primary">
+          In this curriculum, the word &quot;paradigm&quot; refers to a list of
+          conjugations for a given root word. When you get a grasp of the
+          different pronominals, you will be able to recall paradigms much more
+          easily.
+        </Notice>
+
+        <Heading level={2} variant="headlineS">
+          Learn: to know, to be in the know
+        </Heading>
+        <Text>
+          Let&lsquo;s learn another phrase! The root word is{" "}
+          <Letter>anuhteʔ</Letter> and it uses blue pronominals. It means
+          &quot;to know something&quot;. Here&lsquo;s the paradigm table:
+        </Text>
+        <ParadigmTable
+          columnVisibility={{
+            pronounEnglish: false,
+            pronounOneida: false,
+          }}
+          data={anuhteJson}
+          translationFn={({ pronoun }) => ({
+            verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
+          })}
         />
 
-        <Text as="h2" variant="headlineS">
-          People
-        </Text>
-        <Text as="h3" variant="titleM">
-          Children
-        </Text>
-        <Text>(Not yet available)</Text>
-        <Text as="h3" variant="titleM">
-          Adults
-        </Text>
-        <Text>(Not yet available)</Text>
-        <Text as="h3" variant="titleM">
-          Older people
-        </Text>
-        <Text>(Not yet available)</Text>
-        <Text as="h3" variant="titleM">
-          Adolescents
-        </Text>
-        <Text>(Not yet available)</Text>
+        <PeopleResource />
 
-        <Text as="h2" variant="headlineS">
+        <Heading level={2} variant="headlineS">
           English Names
-        </Text>
+        </Heading>
         <EnglishNames />
       </Flex>
     </div>
@@ -541,10 +571,17 @@ function FreestandingPronounsSection() {
   );
 }
 
-function PronominalsTable({ color, data = {} }) {
+function PronominalsTable({
+  allowedPronouns,
+  color,
+  data = {},
+}: {
+  allowedPronouns?: Pronoun[];
+  color: PronominalColor;
+}) {
   const stems = ["c", "a", "i", "e", "o"];
   const isPurple = color === "purple";
-  const rowsToUse = isPurple ? data : pronouns;
+  const rowsToUse = isPurple ? data : allowedPronouns ?? pronouns;
 
   return (
     <Table>
@@ -564,17 +601,11 @@ function PronominalsTable({ color, data = {} }) {
           <TableRow key={i}>
             {!isPurple && <TableCell>{PRONOUN_MAP_ONEIDA[row]}</TableCell>}
             <TableCell>
-              {!isPurple ? (
-                PRONOUN_MAP_EN[row]
-              ) : Array.isArray(row.label) ? (
-                <>
-                  {row.label.map((label, j) => (
+              {!isPurple
+                ? PRONOUN_MAP_EN[row]
+                : arrayify(row.label).map((label, j) => (
                     <div key={j}>{label}</div>
                   ))}
-                </>
-              ) : (
-                row.label
-              )}
             </TableCell>
 
             {stems.map((stem) => {
@@ -585,8 +616,8 @@ function PronominalsTable({ color, data = {} }) {
                   <Flex direction="column">
                     {content.map((prefixArr, i) => (
                       <PronominalTableText
-                        entry={prefixArr}
                         color={color}
+                        entry={prefixArr}
                         key={i}
                       />
                     ))}
@@ -605,22 +636,36 @@ function PronominalTableText({ entry, color }) {
   if (typeof entry === "string") {
     return <Pronominal color={color}>{entry}</Pronominal>;
   }
+
+  const typeFallback =
+    color === "red"
+      ? "PR"
+      : color === "blue"
+      ? "PB"
+      : color === "purple"
+      ? "PP"
+      : color === "lightblue"
+      ? "PLB"
+      : undefined;
+
   const textContent = !entry.breakdown ? (
     <Pronominal color={color}>{entry.text}</Pronominal>
   ) : (
     <TextBreakdown
-      breakdown={entry.breakdown}
-      typeFallback={
-        color === "red"
-          ? "PR"
-          : color === "blue"
-          ? "PB"
-          : color === "purple"
-          ? "PP"
-          : color === "lightblue"
-          ? "PLB"
-          : undefined
-      }
+      breakdown={entry.breakdown.map((b) => {
+        if (typeof b === "string") {
+          return {
+            text: b,
+            type: typeFallback,
+          };
+        }
+        const type = arrayify(b.type ?? []);
+        return {
+          ...b,
+          type: type.includes("RPL") ? type : [...type, typeFallback],
+        };
+      })}
+      typeFallback={typeFallback}
     />
   );
 
@@ -633,7 +678,7 @@ function PronominalTableText({ entry, color }) {
 }
 
 function Footnotes({ nums: _nums }: { nums: string[] | string }) {
-  const nums = (Array.isArray(_nums) ? _nums : [_nums]).map((n) => parseInt(n));
+  const nums = arrayify(_nums).map((n) => parseInt(n));
   nums.sort();
 
   return (
@@ -649,7 +694,7 @@ function Footnotes({ nums: _nums }: { nums: string[] | string }) {
   );
 }
 
-function Letter({ children }) {
+function Letter({ children }: { children: React.ReactNode }) {
   return (
     <code>
       <strong>{children}</strong>

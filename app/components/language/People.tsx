@@ -1,0 +1,171 @@
+import { TableWrapper, TableWrapperProps } from "@/design/ui/tableWrapper";
+import { TextBreakdown } from "../TextBreakdown";
+import { TextArray } from "../TextArray";
+import { Heading } from "@/design/ui/heading";
+import { Text } from "@/design/ui/text";
+
+const basicColumns: TableWrapperProps["columns"] = [
+  {
+    accessorKey: "en",
+    cell: (value) => <TextArray>{value}</TextArray>,
+    header: "English",
+  },
+  {
+    accessorKey: "breakdown",
+    cell: (value) => <TextBreakdown breakdown={value} typeFallback="PR" />,
+    header: "Translation",
+  },
+];
+
+export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
+  return (
+    <>
+      <Heading level={baseLevel} variant="headlineS">
+        People
+      </Heading>
+      <Text>
+        It is important to understand that the translations for two or more
+        people are not literal. <i>tehniská·</i> is not the literal translation
+        for "2 boys" – that is <i>tehniyáhse tehniská·</i>. You can learn more
+        about this in the "Counting" resource which is part of module 3.
+      </Text>
+
+      <Heading level={baseLevel + 1} variant="titleM">
+        Children
+      </Heading>
+      <TableWrapper columns={basicColumns} data={dataChildren} />
+
+      <Heading level={baseLevel + 1} variant="titleM">
+        Adolescents
+      </Heading>
+      <TableWrapper columns={basicColumns} data={dataAdolescents} />
+
+      <Heading level={baseLevel + 1} variant="titleM">
+        Adults
+      </Heading>
+      <TableWrapper columns={basicColumns} data={dataAdults} />
+
+      <Heading level={baseLevel + 1} variant="titleM">
+        Older people
+      </Heading>
+      <Text>
+        <strong>Note</strong>: These words do not mean "old people", "seniors",
+        "elders", etc. They mean people that are older than the speaker. Thus,{" "}
+        <strong>
+          these words are not commonly used in this context (as nouns)
+        </strong>
+        . Instead, they are used as verbs. You can learn more about this in the
+        "Age" resource which is part of module 2.
+      </Text>
+      <TableWrapper columns={basicColumns} data={dataOlderPeople} />
+    </>
+  );
+}
+
+const dataChildren = [
+  {
+    en: "Boy",
+    breakdown: [{ text: "lo" }, "ksá·"],
+  },
+  {
+    en: ["Boys (2)", "Boy and girl"],
+    breakdown: ["te", { text: "hni" }, "ksá·"],
+  },
+  {
+    en: ["Boys (3+)", "Mix of boys and girls"],
+    breakdown: [{ text: "lati" }, "ksaʔshúha"],
+  },
+  {
+    en: "Girl",
+    breakdown: [{ text: "ke" }, "ksá·"],
+  },
+  {
+    en: "Girls (2)",
+    breakdown: ["te", { text: "kni" }, "ksá·"],
+  },
+  {
+    en: ["Girls (3+)"],
+    breakdown: [{ text: "kuti" }, "ksaʔshúha"],
+  },
+];
+
+const dataAdolescents = [
+  {
+    en: "Young man",
+    breakdown: [{ text: "la" }, "nikʌtlúha"],
+  },
+  {
+    en: ["Young men (2)"],
+    breakdown: ["te", { text: "hni" }, "nikʌtlúha"],
+  },
+  {
+    en: ["Young men (3+)"],
+    breakdown: [{ text: "lati" }, "nikʌtluʔokúha"],
+  },
+  {
+    en: "Young woman",
+    breakdown: [{ text: "ye" }, "yaʔtaséha"],
+  },
+  {
+    en: "Young women (2)",
+    breakdown: ["te", { text: "kni" }, "yaʔtaséha"],
+  },
+  {
+    en: ["Young women (3+)"],
+    breakdown: [{ text: "kuti" }, "yaʔtaseʔokúha"],
+  },
+];
+
+const dataAdults = [
+  {
+    en: "Man",
+    breakdown: [{ text: "l" }, "u·kwé·"],
+  },
+  {
+    en: ["Men (2)", "Man and woman"],
+    breakdown: ["te", { text: "hn" }, "u·kwé·"],
+  },
+  {
+    en: ["Men (3+)", "Mix of men and women"],
+    breakdown: [{ text: "lʌn" }, "u·kwé·"],
+  },
+  {
+    en: "Woman",
+    breakdown: [{ text: "yak" }, "u·kwé·"],
+  },
+  {
+    en: "Women (2)",
+    breakdown: ["te", { text: "kn" }, "u·kwé·"],
+  },
+  {
+    en: ["Women (3+)"],
+    breakdown: [{ text: "kun" }, "u·kwé·"],
+  },
+];
+
+const dataOlderPeople = [
+  {
+    en: "Older man",
+    breakdown: [{ text: "lo" }, "kstʌ́ha"],
+  },
+  {
+    en: ["Older men (2)", "Older man and older woman"],
+    breakdown: [{ text: "loti" }, "kstʌ́ha"],
+  },
+  {
+    en: ["Older men (3+)", "Mix of older men and older women"],
+    breakdown: [{ text: "loti" }, "kstʌhokúha"],
+  },
+  {
+    en: "Older woman",
+    breakdown: [{ text: "ako", type: "PLB" }, "kstʌ́ha"],
+  },
+  {
+    en: "Older women (2)",
+    breakdown: [{ text: "yoti", type: "PB" }, "kstʌ́ha"],
+  },
+  {
+    en: ["Older women (3+)"],
+    breakdown: [{ text: "yoti", type: "PB" }, "kstʌhokúha"],
+  },
+];
