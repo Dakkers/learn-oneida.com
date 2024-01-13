@@ -1,3 +1,6 @@
+import { Flex } from "@/design/ui/flex";
+import { Heading } from "@/design/ui/heading";
+import { List } from "@/design/ui/list";
 import { Text } from "@/design/ui/text";
 import type { MetaFunction } from "@remix-run/node";
 
@@ -10,31 +13,28 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <Text as="h1" variant="headline">
+    <Flex direction="column" gap={4}>
+      <Heading level={1} variant="headlineL">
         Welcome to Learn-Oneida.com!
-      </Text>
-      <p>
-        <a className="text-blue-600 underline" href="/learn">
-          Start learning from the curriculum!
-        </a>
-      </p>
+      </Heading>
 
-      <p>Try out one of the tools:</p>
-      <ul>
-        <li>
-          ·{" "}
+      <a className="text-blue-600 underline" href="/learn">
+        Start learning from the curriculum!
+      </a>
+
+      <Text>Try out one of the tools:</Text>
+      <List>
+        <List.Item>
           <a className="text-blue-600 underline" href="/tools/numbers">
             Number Translator
           </a>
-        </li>
-        <li>
-          ·{" "}
+        </List.Item>
+        <List.Item>
           <a className="text-blue-600 underline" href="/tools/paradigm">
             Paradigm Tester
           </a>
-        </li>
-      </ul>
-    </div>
+        </List.Item>
+      </List>
+    </Flex>
   );
 }

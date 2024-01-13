@@ -1,3 +1,5 @@
+import { Heading } from "@/design/ui/heading";
+import { List } from "@/design/ui/list";
 import { Text } from "@/design/ui/text";
 import type { MetaFunction } from "@remix-run/node";
 
@@ -13,24 +15,23 @@ export default function Learn() {
 
   return (
     <div>
-      <Text as="h1" variant="headline">
+      <Heading level={1} variant="headlineL">
         Learn
-      </Text>
+      </Heading>
 
       <p>Start learning from the curriculum:</p>
-      <ul>
+      <List>
         {modules.map((m) => (
-          <li key={m}>
-            · &nbsp;
+          <List.Item key={m}>
             <a
               className="underline text-blue-600"
               href={`/learn/module${m.toString().padStart(2, "0")}`}
             >
               Module {m}
             </a>
-          </li>
+          </List.Item>
         ))}
-      </ul>
+      </List>
     </div>
   );
 }

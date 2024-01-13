@@ -1,3 +1,5 @@
+import { Heading } from "@/design/ui/heading";
+import { List } from "@/design/ui/list";
 import { Text } from "@/design/ui/text";
 import type { MetaFunction } from "@remix-run/node";
 
@@ -22,21 +24,20 @@ export default function Tools() {
 
   return (
     <div>
-      <Text as="h1" variant="headline">
+      <Heading level={1} variant="headlineL">
         Tools
-      </Text>
+      </Heading>
 
-      <p>Check out some tools:</p>
-      <ul>
+      <Text>Check out some tools:</Text>
+      <List>
         {tools.map((t, i) => (
-          <li key={i}>
-            · &nbsp;
+          <List.Item key={i}>
             <a className="underline text-blue-600" href={`/tools${t.href}`}>
               {t.label}
             </a>
-          </li>
+          </List.Item>
         ))}
-      </ul>
+      </List>
     </div>
   );
 }
