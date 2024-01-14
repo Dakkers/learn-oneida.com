@@ -1,3 +1,8 @@
+const fs = require('fs');
+const path = require('path');
+
+const PATH_PARTICLE_LIST = path.join(__dirname, '..', 'app', 'components', 'language', 'particleList.ts')
+
 module.exports = function (plop) {
   plop.setGenerator("particle", {
     description: "Particle generator",
@@ -8,24 +13,12 @@ module.exports = function (plop) {
 
     actions: [
       function customAction(data) {
-        console.log(
-          "\n\n",
-          JSON.stringify(
-            {
-              key: data.key,
-              oneida: formatOneida(data.oneida),
-              en: data.english,
-              examples: [
-                {
-                  oneida: data.example_0_oneida,
-                  english: data.example_0_english,
-                },
-              ],
-            },
-            null,
-            2
-          )
-        );
+        updateParticleListFile(data, {
+          0: [{
+            oneida: formatOneida(data.example_0_oneida),
+            en: formatEnglish(data.example_0_en),
+          }]
+        });
       },
     ],
   });
@@ -43,30 +36,18 @@ module.exports = function (plop) {
           if (key.startsWith("example_")) {
             const [num, lang] = key.split("_").slice(1);
             const obj = num in examples ? examples[num] : {};
-            obj[lang] = lang === "oneida" ? formatOneida(data[key]) : data[key];
+            obj[lang] = lang === "oneida" ? formatOneida(data[key]) : formatEnglish(data[key]);
             examples[num] = obj;
           }
         }
-
-        console.log(
-          "\n\n",
-          JSON.stringify(
-            {
-              key: data.key,
-              oneida: formatOneida(data.oneida),
-              en: data.english,
-              examples: Object.values(examples),
-            },
-            null,
-            2
-          )
-        );
+        updateParticleListFile(data, examples);
       },
     ],
   });
 };
 
 const formatOneida = (x) => x.replaceAll("’", "ʔ");
+const formatEnglish = (x) => x.replaceAll("’", "'");
 
 async function getParticlePrompts(inquirer, isMultiple = false) {
   const promptQueue = [
@@ -110,7 +91,7 @@ async function getParticlePrompts(inquirer, isMultiple = false) {
         });
         promptQueue.push({
           type: "input",
-          name: `example_${i}_english`,
+          name: `example_${i}_en`,
           message: `Example ${i + 1} English`,
         });
       }
@@ -118,4 +99,22 @@ async function getParticlePrompts(inquirer, isMultiple = false) {
     allAnswers = { ...allAnswers, ...nextAnswer };
   }
   return allAnswers;
+}
+
+function updateParticleListFile (data, examples) {
+  const MARKER = '// PLOP:ADD_PARTICLE'
+  let particleListFileContent = fs.readFileSync(PATH_PARTICLE_LIST, 'utf8')
+  particleListFileContent = particleListFileContent.replace(MARKER, `\n  , ${
+    JSON.stringify(
+      {
+        key: data.key,
+        oneida: formatOneida(data.oneida),
+        en: formatEnglish(data.english),
+        examples: Array.isArray(examples) ? examples : Object.values(examples),
+      },
+      null,
+      2
+    )
+  }\n  ${MARKER}`)
+  fs.writeFileSync(PATH_PARTICLE_LIST, particleListFileContent)
 }

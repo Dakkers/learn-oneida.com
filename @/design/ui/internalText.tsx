@@ -42,6 +42,7 @@ export interface InternalTextProps {
   as?: 'span' | 'div' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5'
   children: React.ReactNode;
   contrast?: Contrast
+  id?: string;
   intent?: Intent;
   variant?: TypographyToken;
 }
@@ -50,6 +51,7 @@ export function InternalText ({
   as: Tag = 'div',
   children,
   contrast = 'high',
+  id,
   intent = 'secondary',
   variant = 'bodyM',
 }: InternalTextProps) {
@@ -59,6 +61,7 @@ export function InternalText ({
         typographyClasses[variant],
         textColorMap[contrast][intent],
       )}
+      id={id}
     >
       {children}
     </Tag>

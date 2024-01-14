@@ -1,3 +1,4 @@
+import { TextArray } from "@/utils/TextArray";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./table";
 
 type Row = Record<string, unknown>
@@ -43,3 +44,5 @@ export function TableWrapper ({
     </Table>
   );
 }
+
+TableWrapper.textArrayCell = (value) => <TextArray>{value}</TextArray>

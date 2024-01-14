@@ -4,6 +4,7 @@ import { InternalText, InternalTextProps } from './internalText';
 export interface HeadingProps extends Pick<InternalTextProps,
   |'children'
   |'contrast'
+  |'id'
   |'intent'
   |'variant'
 > {
@@ -13,6 +14,7 @@ export interface HeadingProps extends Pick<InternalTextProps,
 export function Heading ({
   children,
   contrast = 'high',
+  id,
   intent = 'secondary',
   level,
   variant = 'bodyM',
@@ -27,6 +29,7 @@ export function Heading ({
         5: 'h5',
       } as const)[level]}
       contrast={contrast}
+      id={id}
       intent={intent}
       variant={variant}
     >

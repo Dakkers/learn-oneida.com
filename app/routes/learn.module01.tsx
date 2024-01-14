@@ -34,6 +34,9 @@ import { ParadigmTable } from "~/components/ParadigmTable";
 import { Pronominal, PronominalColor } from "~/components/Pronominal";
 import { PeopleResource } from "~/components/language/People";
 import { Heading } from "@/design/ui/heading";
+import { ParticlesTable } from "~/components/language/ParticlesTable";
+import { Link } from "@/design/ui/link";
+import { TableOfContents as TOC } from "~/components/TableOfContents";
 
 export const meta: MetaFunction = () => {
   return [
@@ -48,64 +51,82 @@ export default function LearnModule01() {
       <Heading level={1} variant="headlineL">
         Module 1
       </Heading>
-
       <Box py={4}>
         <Notice intent="warning">
           <strong>NOTE:</strong> This page is still under construction!
         </Notice>
       </Box>
-
+      where pronouns pronouns whispered yats anuhte particles english
       <Flex direction="column" gap={4}>
         <Text>In this module, we&lsquo;ll cover the following:</Text>
-        <List>
-          <List.Item>
-            Pronouns
-            <List>
-              <List.Item>Free-standing</List.Item>
-              <List.Item>Bound</List.Item>
-            </List>
-          </List.Item>
-          <List.Item>
-            Pronominals
-            <List>
-              <List.Item>Subjective (Red)</List.Item>
-              <List.Item>Objective (Blue)</List.Item>
-              <List.Item>The &quot;Purples&quot;</List.Item>
-              <List.Item>Possessive (Light Blue)</List.Item>
-            </List>
-          </List.Item>
-          <List.Item>
-            Stress and Accents
-            <List>
-              <List.Item>Length</List.Item>
-              <List.Item>Short Stress</List.Item>
-              <List.Item>Long Stress</List.Item>
-              <List.Item>Whispered Endings</List.Item>
-            </List>
-          </List.Item>
-          <List.Item>Glottal Stop</List.Item>
-          <List.Item>The letter H</List.Item>
-          <List.Item>
-            <i>yats</i>: to call someone by a name
-          </List.Item>
-          <List.Item>
-            <i>anúhteʔ</i>: to know, to be in the know
-          </List.Item>
-          <List.Item>
-            People
-            <List>
-              <List.Item>Children</List.Item>
-              <List.Item>Adults</List.Item>
-              <List.Item>Older People</List.Item>
-              <List.Item>Adolescents</List.Item>
-            </List>
-          </List.Item>
-          <List.Item>English names</List.Item>
-        </List>
+
+        <TOC>
+          <TOC.Item label="Pronouns" value="pronouns">
+            <TOC.Section>
+              <TOC.Item label="Free-standing" value="standalone-pronouns" />
+              <TOC.Item label="Bound" value="bound-pronouns" />
+            </TOC.Section>
+          </TOC.Item>
+
+          <TOC.Item label="Pronominals" value="pronominals">
+            <TOC.Section>
+              <TOC.Item label="Subjective (Red)" value="red-pronominals" />
+              <TOC.Item label="Objective (Blue)" value="blue-pronominals" />
+              <TOC.Item label='"The Purples"' value="purple-pronominals" />
+              <TOC.Item
+                label="Possessive (Light Blue)"
+                value="lightblue-pronominals"
+              />
+            </TOC.Section>
+          </TOC.Item>
+
+          <TOC.Item label="Stress and Accents" value="stress">
+            <TOC.Section>
+              <TOC.Item label="Short stress" value="short-stress" />
+              <TOC.Item label="Long stress" value="long-stress" />
+              <TOC.Item label="Length" value="length" />
+              <TOC.Item label="Where stress occurs" value="where-stress" />
+            </TOC.Section>
+          </TOC.Item>
+
+          <TOC.Item label="Glottal stops" value="glottal" />
+          <TOC.Item label="The letter H" value="letter-h" />
+          <TOC.Item
+            label={
+              <>
+                <i>yats</i>: to call someone by a name
+              </>
+            }
+            value="yats"
+          />
+          <TOC.Item
+            label={
+              <>
+                <i>anúhteʔ</i>: to know, to be in the know
+              </>
+            }
+            value="anuhte"
+          />
+          <TOC.Item label="Particles" value="particles" />
+
+          <TOC.Item label="People" value="people-resource">
+            <TOC.Section>
+              <TOC.Item label="Children" value="people-resource-children" />
+              <TOC.Item
+                label="Adolescents"
+                value="people-resource-adolescents"
+              />
+              <TOC.Item label="Adults" value="people-resource-adults" />
+              <TOC.Item label="Older people" value="people-resource-older" />
+            </TOC.Section>
+          </TOC.Item>
+
+          <TOC.Item label="English names" value="english-names" />
+        </TOC>
 
         <Separator />
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="pronouns" level={2} variant="headlineS">
           Pronouns
         </Heading>
         <Text>
@@ -118,7 +139,7 @@ export default function LearnModule01() {
           <strong>bound</strong>.
         </Text>
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="standalone-pronouns" level={3} variant="titleM">
           Standalone Pronouns
         </Heading>
         <Text>
@@ -126,7 +147,7 @@ export default function LearnModule01() {
           sentence. The standalone pronouns are:
         </Text>
         <FreestandingPronounsSection />
-        <Heading level={2} variant="headlineS">
+        <Heading id="bound-pronouns" level={3} variant="titleM">
           Bound Pronouns
         </Heading>
         <Text>
@@ -143,13 +164,17 @@ export default function LearnModule01() {
           &quot;The Purples&quot; refers to a group of pronouns that do not have
           an English counterpart.
         </Text>
+
+        <Heading id="pronominals" level={2} variant="headlineS">
+          Pronominals
+        </Heading>
         <Notice>
           From here on, we will refer to pronouns as{" "}
           <strong>pronominals</strong>, which is an abbreviation of
           &quot;pronominal prefix&quot;.
         </Notice>
 
-        <Heading level={3} variant="titleM">
+        <Heading id="red-pronominals" level={3} variant="titleM">
           Subjective (Red) Pronominals
         </Heading>
         <Text>
@@ -235,7 +260,7 @@ export default function LearnModule01() {
 
         <Separator />
 
-        <Heading level={3} variant="titleM">
+        <Heading id="blue-pronominals" level={3} variant="titleM">
           Objective (blue) Pronominals
         </Heading>
         <Text>
@@ -244,7 +269,7 @@ export default function LearnModule01() {
         </Text>
         <PronominalsTable color="blue" data={bluePronominalsJson} />
 
-        <Heading level={3} variant="titleM">
+        <Heading id="purple-pronominals" level={3} variant="titleM">
           Purple Pronominals
         </Heading>
         <Text>
@@ -253,7 +278,7 @@ export default function LearnModule01() {
         </Text>
         <PronominalsTable color="purple" data={purplePronominalsJson} />
 
-        <Heading level={3} variant="titleM">
+        <Heading id="lightblue-pronominals" level={3} variant="titleM">
           Possessive (light blue) Pronominals
         </Heading>
         <PronominalsTable
@@ -274,7 +299,7 @@ export default function LearnModule01() {
           data={lightbluePronominalsJson}
         />
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="stress" level={2} variant="headlineS">
           Stress and Accents
         </Heading>
         <Text>
@@ -285,7 +310,7 @@ export default function LearnModule01() {
           write accent marks over consonants. There are two kinds of stress:
         </Text>
 
-        <Heading level={3} variant="titleM">
+        <Heading id="short-stress" level={3} variant="titleM">
           Short stress
         </Heading>
         <Text>
@@ -298,7 +323,7 @@ export default function LearnModule01() {
           Examples: <i>kátsheʔ</i>, <i>kákhwaʔ</i>, <i>kítkit</i>, <i>ohʌtú</i>,{" "}
           <i>ohutsyakú</i>, <i>olihwiyó</i>, <i>ohwístaʔ</i>, <i>áhtaʔ</i>.
         </Text>
-        <Heading level={3} variant="titleM">
+        <Heading id="long-stress" level={3} variant="titleM">
           Long stress
         </Heading>
         <Text>
@@ -313,7 +338,7 @@ export default function LearnModule01() {
           <i>nahté·shuʔ</i>, <i>kekhsá·</i>, <i>niʔí·</i>.
         </Text>
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="length" level={3} variant="titleM">
           Length
         </Heading>
         <Text>
@@ -346,7 +371,7 @@ export default function LearnModule01() {
           <i>Shakonú·wehseʔ kʌ né· akaulhá·</i>
         </Text>
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="where-stress" level={3} variant="titleM">
           Where stress occurs
         </Heading>
         <Text>
@@ -367,7 +392,7 @@ export default function LearnModule01() {
           many exceptions to this!
         </Text>
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="glottal" level={2} variant="headlineS">
           Glottal Stops
         </Heading>
         <Text>
@@ -388,7 +413,7 @@ export default function LearnModule01() {
           wakyo·té·, ká·khaleʔ, laksá·, kanutó·tsliʔ.
         </Text>
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="letter-h" level={2} variant="headlineS">
           The letter H
         </Heading>
         <Text>
@@ -409,7 +434,7 @@ export default function LearnModule01() {
           It seems to be a matter of personal preference.
         </Text>
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="whispered" level={2} variant="headlineS">
           Whispered Endings
         </Heading>
         <Text>
@@ -439,7 +464,7 @@ export default function LearnModule01() {
           For example, <i>úska</i> is fully pronounced in prepausal form.
         </Text>
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="yats" level={2} variant="headlineS">
           Learn: my name is...
         </Heading>
         <Text>
@@ -480,7 +505,7 @@ export default function LearnModule01() {
           easily.
         </Notice>
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="anuhte" level={2} variant="headlineS">
           Learn: to know, to be in the know
         </Heading>
         <Text>
@@ -499,9 +524,18 @@ export default function LearnModule01() {
           })}
         />
 
+        <Heading id="particles" level={2} variant="headlineS">
+          Particles
+        </Heading>
+        <Text>
+          In this curriculum, particles refer to words that are common in
+          dialogue.
+        </Text>
+        <ParticlesTable group="module01" />
+
         <PeopleResource />
 
-        <Heading level={2} variant="headlineS">
+        <Heading id="english-names" level={2} variant="headlineS">
           English Names
         </Heading>
         <EnglishNames />

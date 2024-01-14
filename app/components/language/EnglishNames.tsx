@@ -1,63 +1,47 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/design/ui/table";
-import { TextArray } from "../TextArray";
+import { TableWrapper, TableWrapperProps } from "@/design/ui/tableWrapper";
 
 const names = [
-  ["Alʌt", "Aaron"],
-  ["Á·kwilut", "Abraham"],
-  ["Tsiʔtwʌlu", "Albert"],
-  ["Tshyalé", "Charlie"],
-  ["Tá·wet", "David"],
-  ["Tysáts", "George"],
-  ["Tshéle", "Jerry"],
-  ["Sawatís", "John"],
-  ["Kénniha", "Kenny"],
-  ["Mathyu", "Matthew"],
-  ["Niklas", "Nicholas"],
-  ["Kwítel", "Peter"],
-  ["Litsyet", "Richard"],
-  ["Tu·wís", "Thomas"],
-  ["Wílo", "William"],
-  ["Klistí·n", ["Christine", "Kristin"]],
-  ["Tsiló·s", "Delores"],
-  [["Aliskwet", "Alísakwet"], "Elizabeth"],
-  ["Katlí·n", "Katherine"],
-  [["Kwáklit", "Kowáklit"], "Margret"],
-  ["Mahtih", "Martha"],
-  ["Wá·li", "Mary"],
-  ["Ní·ki", ["Nellie", "Amelia"]],
-  ["Lá·kel", "Rachel"],
-  ["Sá·l", "Sara"],
-  ["Só·s", "Susan"],
+  { oneida: "Alʌt", en: "Aaron" },
+  { oneida: "Á·kwilut", en: "Abraham" },
+  { oneida: "Tsiʔtwʌlu", en: "Albert" },
+  { oneida: "Tshyalé", en: "Charlie" },
+  { oneida: "Tá·wet", en: "David" },
+  { oneida: "Tysáts", en: "George" },
+  { oneida: "Tshéle", en: "Jerry" },
+  { oneida: "Sawatís", en: "John" },
+  { oneida: "Kénniha", en: "Kenny" },
+  { oneida: "Mathyu", en: "Matthew" },
+  { oneida: "Niklas", en: "Nicholas" },
+  { oneida: "Kwítel", en: "Peter" },
+  { oneida: "Litsyet", en: "Richard" },
+  { oneida: "Tu·wís", en: "Thomas" },
+  { oneida: "Wílo", en: "William" },
+  { oneida: "Klistí·n", en: ["Christine", "Kristin"] },
+  { oneida: "Tsiló·s", en: "Delores" },
+  { oneida: ["Aliskwet", "Alísakwet"], en: "Elizabeth" },
+  { oneida: "Katlí·n", en: "Katherine" },
+  { oneida: ["Kwáklit", "Kowáklit"], en: "Margret" },
+  { oneida: "Mahtih", en: "Martha" },
+  { oneida: "Wá·li", en: "Mary" },
+  { oneida: "Ní·ki", en: ["Nellie", "Amelia"] },
+  { oneida: "Lá·kel", en: "Rachel" },
+  { oneida: "Sá·l", en: "Sara" },
+  { oneida: "Só·s", en: "Susan" },
 ] as const;
 
+const basicColumns: TableWrapperProps["columns"] = [
+  {
+    accessorKey: "en",
+    cell: TableWrapper.textArrayCell,
+    header: "English",
+  },
+  {
+    accessorKey: "oneida",
+    cell: TableWrapper.textArrayCell,
+    header: "Oneida",
+  },
+];
+
 export function EnglishNames() {
-  return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>English</TableHead>
-          <TableHead>Oneida</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {names.map((row, i) => (
-          <TableRow key={i}>
-            <TableCell>
-              <TextArray>{row[1]}</TextArray>
-            </TableCell>
-            <TableCell>
-              <TextArray>{row[0]}</TextArray>
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-  );
+  return <TableWrapper columns={basicColumns} data={names} />;
 }

@@ -1,13 +1,12 @@
 import { TableWrapper, TableWrapperProps } from "@/design/ui/tableWrapper";
 import { TextBreakdown } from "../TextBreakdown";
-import { TextArray } from "../TextArray";
 import { Heading } from "@/design/ui/heading";
 import { Text } from "@/design/ui/text";
 
 const basicColumns: TableWrapperProps["columns"] = [
   {
     accessorKey: "en",
-    cell: (value) => <TextArray>{value}</TextArray>,
+    cell: TableWrapper.textArrayCell,
     header: "English",
   },
   {
@@ -20,7 +19,7 @@ const basicColumns: TableWrapperProps["columns"] = [
 export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
   return (
     <>
-      <Heading level={baseLevel} variant="headlineS">
+      <Heading id="people-resource" level={baseLevel} variant="headlineS">
         People
       </Heading>
       <Text>
@@ -30,22 +29,38 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
         about this in the "Counting" resource which is part of module 3.
       </Text>
 
-      <Heading level={baseLevel + 1} variant="titleM">
+      <Heading
+        id="people-resource-children"
+        level={baseLevel + 1}
+        variant="titleM"
+      >
         Children
       </Heading>
       <TableWrapper columns={basicColumns} data={dataChildren} />
 
-      <Heading level={baseLevel + 1} variant="titleM">
+      <Heading
+        id="people-resource-adolescents"
+        level={baseLevel + 1}
+        variant="titleM"
+      >
         Adolescents
       </Heading>
       <TableWrapper columns={basicColumns} data={dataAdolescents} />
 
-      <Heading level={baseLevel + 1} variant="titleM">
+      <Heading
+        id="people-resource-adults"
+        level={baseLevel + 1}
+        variant="titleM"
+      >
         Adults
       </Heading>
       <TableWrapper columns={basicColumns} data={dataAdults} />
 
-      <Heading level={baseLevel + 1} variant="titleM">
+      <Heading
+        id="people-resource-older"
+        level={baseLevel + 1}
+        variant="titleM"
+      >
         Older people
       </Heading>
       <Text>
