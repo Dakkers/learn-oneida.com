@@ -56,7 +56,6 @@ export default function LearnModule01() {
           <strong>NOTE:</strong> This page is still under construction!
         </Notice>
       </Box>
-      where pronouns pronouns whispered yats anuhte particles english
       <Flex direction="column" gap={4}>
         <Text>In this module, we&lsquo;ll cover the following:</Text>
 
