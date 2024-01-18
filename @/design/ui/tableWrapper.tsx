@@ -1,5 +1,6 @@
 import { TextArray } from "@/utils/TextArray";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./table";
+import { BreakdownType, TextBreakdown } from "~/components/TextBreakdown";
 
 type Row = Record<string, unknown>
 
@@ -46,3 +47,33 @@ export function TableWrapper ({
 }
 
 TableWrapper.textArrayCell = (value) => <TextArray>{value}</TextArray>
+
+const EnglishCol =
+  {
+    accessorKey: "en",
+    cell: TableWrapper.textArrayCell,
+    header: "English",
+  }
+
+const createOneidaCol = (typeFallback: BreakdownType) => ({
+  accessorKey: "breakdown",
+  cell: (value) => <TextBreakdown breakdown={value} typeFallback={typeFallback} />,
+  header: "Translation",
+})
+
+const columnsParadigmRed: TableWrapperProps["columns"] = [
+  EnglishCol,
+  createOneidaCol('PR')
+];
+const columnsParadigmBlue: TableWrapperProps["columns"] = [
+  EnglishCol,
+  createOneidaCol('PB')
+];
+const columnsParadigmPurple: TableWrapperProps["columns"] = [
+  EnglishCol,
+  createOneidaCol('PP')
+];
+
+TableWrapper.columnsParadigmRed = columnsParadigmRed;
+TableWrapper.columnsParadigmBlue = columnsParadigmBlue;
+TableWrapper.columnsParadigmPurple = columnsParadigmPurple;

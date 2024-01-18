@@ -145,8 +145,11 @@
   },
   {
     "label": [
-      "You all and I → him",
+      "You and I → her",
+      "You all and I → her",
+      "You and I → someone",
       "You all and I → someone",
+      "You and I → them",
       "You all and I → them"
     ],
     "default": ["yethiy"],
@@ -166,7 +169,7 @@
     "a": ["sky"]
   },
   {
-    "label": ["You two → him", "Him → you two"],
+    "label": ["You two → him", "He → you two"],
     "default": [
       {
         "excp": "2",
@@ -231,7 +234,7 @@
   },
   {
     "default": ["hetsw"],
-    "label": ["All of you → him", "Him → all of you"],
+    "label": ["All of you → him", "He → all of you"],
     "c": ["hetswa"],
     "i": [
       {

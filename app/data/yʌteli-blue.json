@@ -1,0 +1,81 @@
+{
+  "translation": "{{pronoun}} {{verb}} it",
+  "type": "PB",
+  "phrases": [
+    {
+      "pronoun": "i",
+      "phrase": "wak",
+      "breakdown": [{ "text": "wak" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "u",
+      "phrase": "sayʌtelí",
+      "breakdown": [{ "text": "sa" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "m",
+      "phrase": "loyʌtelí",
+      "breakdown": [{ "text": "lo" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "f",
+      "phrase": "yakoyʌtelí",
+      "breakdown": [{ "text": "yako" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "it",
+      "phrase": "yoyʌtelí",
+      "breakdown": [{ "text": "yo" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "uni",
+      "phrase": "yukniyʌtelí",
+      "breakdown": [{ "text": "yukni" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "soni",
+      "phrase": "yukniyʌtelí",
+      "breakdown": [{ "text": "yukni" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "u2",
+      "phrase": "sniyʌtelí",
+      "breakdown": [{ "text": "sni" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "2m",
+      "phrase": "lotiyʌtelí",
+      "breakdown": [{ "text": "loti" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "2f",
+      "phrase": "yotiyʌtelí",
+      "breakdown": [{ "text": "yoti" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "us",
+      "phrase": "yukwayʌtelí",
+      "breakdown": [{ "text": "yukwa" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "theyni",
+      "phrase": "yukwayʌtelí",
+      "breakdown": [{ "text": "yukwa" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "yall",
+      "phrase": "swayʌtelí",
+      "breakdown": [{ "text": "swa" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "ms",
+      "phrase": "lotiyʌtelí",
+      "breakdown": [{ "text": "loti" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "fs",
+      "phrase": "yotiyʌtelí",
+      "breakdown": [{ "text": "yoti" }, "yʌtelí"]
+    }
+  ]
+}

@@ -17,7 +17,6 @@ import {
 import { Settings } from "lucide-react";
 import React from "react";
 import {
-  BreakdownType,
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
   Pronoun,
@@ -26,7 +25,7 @@ import {
   formatTranslation,
   PRONOUN_MAP_EN_OBJECTIVE,
 } from "~/utils";
-import { TextBreakdown } from "./TextBreakdown";
+import { BreakdownType, TextBreakdown } from "./TextBreakdown";
 import {
   Form,
   FormControl,

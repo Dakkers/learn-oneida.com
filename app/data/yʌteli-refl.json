@@ -1,0 +1,142 @@
+{
+  "translation": "{{pronoun}} {{verb}} {{reflexive}}",
+  "type": "PR",
+  "phrases": [
+    {
+      "pronoun": "i",
+      "phrase": "katatyʌtelí",
+      "breakdown": [
+        { "text": "k" },
+        { "text": "atat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "u",
+      "phrase": "satatyʌtelí",
+      "breakdown": [
+        { "text": "s" },
+        { "text": "atat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "m",
+      "phrase": "latatyʌtelí",
+      "breakdown": [
+        { "text": "l" },
+        { "text": "atat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "f",
+      "phrase": "yutatyʌtelí",
+      "breakdown": [
+        { "text": "yu" },
+        { "text": "tat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "it",
+      "phrase": "watatyʌtelí",
+      "breakdown": [
+        { "text": "w" },
+        { "text": "atat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "uni",
+      "phrase": "tyatatyʌtelí",
+      "breakdown": [
+        { "text": "ty" },
+        { "text": "atat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "soni",
+      "phrase": "tsyatatyʌtelí",
+      "breakdown": [
+        { "text": "tsy" },
+        { "text": "atat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "u2",
+      "phrase": "yakyatatyʌtelí",
+      "breakdown": [
+        { "text": "yakya" },
+        { "text": "tat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "2m",
+      "phrase": "hyatatyʌtelí",
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "y" },
+        { "text": "atat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "2f",
+      "phrase": "kniyʌtelí",
+      "breakdown": [
+        { "text": "ky" },
+        { "text": "atat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "us",
+      "phrase": "twatatyʌtelí",
+      "breakdown": [
+        { "text": "twa" },
+        { "text": "tat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "theyni",
+      "phrase": "yakwatatyʌtelí",
+      "breakdown": [
+        { "text": "yakwa" },
+        { "text": "tat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "yall",
+      "phrase": "swatatyʌtelí",
+      "breakdown": [
+        { "text": "swa" },
+        { "text": "tat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "ms",
+      "phrase": "lutatyʌtelí",
+      "breakdown": [
+        { "text": "lu" },
+        { "text": "tat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "pronoun": "fs",
+      "phrase": "kutatyʌtelí",
+      "breakdown": [
+        { "text": "ku" },
+        { "text": "tat", "type": "REFL" },
+        "yʌtelí"
+      ]
+    }
+  ]
+}

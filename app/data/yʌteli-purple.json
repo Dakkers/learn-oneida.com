@@ -1,0 +1,80 @@
+{
+  "translation": "{{subject}} {{verb}} {{object}}",
+  "type": "PP",
+  "phrases": [
+    {
+      "key": "i_you",
+      "phrase": "kuyʌtelí",
+      "breakdown": [{ "text": "ku" }, "yʌtelí"]
+    },
+    {
+      "key": "i_him",
+      "phrase": "liyʌtelí",
+      "breakdown": [{ "text": "li" }, "yʌtelí"]
+    },
+    {
+      "key": "i_her",
+      "phrase": "kheyʌtelí",
+      "breakdown": [{ "text": "khe" }, "yʌtelí"]
+    },
+    {
+      "key": "you_me",
+      "phrase": "skyʌtelí",
+      "breakdown": [{ "text": "sk" }, "yʌtelí"]
+    },
+    {
+      "key": "you_him",
+      "phrase": "etshyʌtelí",
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "etsh" },
+        "yʌtelí"
+      ]
+    },
+    {
+      "key": "you_her",
+      "phrase": "sheyʌtelí",
+      "breakdown": [{ "text": "she" }, "yʌtelí"]
+    },
+    {
+      "key": "he_me",
+      "phrase": "lakyʌtelí",
+      "breakdown": [{ "text": "lak" }, "yʌtelí"]
+    },
+    {
+      "key": "he_you",
+      "phrase": "yayʌtelí",
+      "breakdown": [{ "text": "ya" }, "yʌtelí"]
+    },
+    {
+      "key": "he_him",
+      "phrase": "loyʌtelí",
+      "breakdown": [{ "text": "lo" }, "yʌtelí"]
+    },
+    {
+      "key": "he_her",
+      "phrase": "shakoyʌtelí",
+      "breakdown": [{ "text": "shako" }, "yʌtelí"]
+    },
+    {
+      "key": "she_me",
+      "phrase": "yukyʌtelí",
+      "breakdown": [{ "text": "yuk" }, "yʌtelí"]
+    },
+    {
+      "key": "she_you",
+      "phrase": "yesayʌtelí",
+      "breakdown": [{ "text": "yesa" }, "yʌtelí"]
+    },
+    {
+      "key": "she_him",
+      "phrase": "luwayʌtelí",
+      "breakdown": [{ "text": "luwa" }, "yʌtelí"]
+    },
+    {
+      "key": "she_her",
+      "phrase": "yutatyʌtelí",
+      "breakdown": [{ "text": "yutat" }, "yʌtelí"]
+    }
+  ]
+}

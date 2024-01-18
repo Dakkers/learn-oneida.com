@@ -1,0 +1,81 @@
+{
+  "translation": "{{pronoun}} {{verb}} it",
+  "type": "PR",
+  "phrases": [
+    {
+      "pronoun": "i",
+      "phrase": "kyʌtelí",
+      "breakdown": [{ "text": "k" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "u",
+      "phrase": "tsyʌtelí",
+      "breakdown": [{ "text": "ts" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "m",
+      "phrase": "layʌtelí",
+      "breakdown": [{ "text": "la" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "f",
+      "phrase": "yeyʌtelí",
+      "breakdown": [{ "text": "ye" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "it",
+      "phrase": "kayʌtelí",
+      "breakdown": [{ "text": "ka" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "uni",
+      "phrase": "tniyʌtelí",
+      "breakdown": [{ "text": "tni" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "soni",
+      "phrase": "yakniyʌtelí",
+      "breakdown": [{ "text": "yakni" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "u2",
+      "phrase": "sniyʌtelí",
+      "breakdown": [{ "text": "sni" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "2m",
+      "phrase": "hniyʌtelí",
+      "breakdown": [{ "text": "h", "type": "RPL" }, { "text": "ni" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "2f",
+      "phrase": "kniyʌtelí",
+      "breakdown": [{ "text": "kni" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "us",
+      "phrase": "twayʌtelí",
+      "breakdown": [{ "text": "twa" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "theyni",
+      "phrase": "yakwayʌtelí",
+      "breakdown": [{ "text": "yakwa" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "yall",
+      "phrase": "swayʌtelí",
+      "breakdown": [{ "text": "swa" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "ms",
+      "phrase": "latiyʌtelí",
+      "breakdown": [{ "text": "lati" }, "yʌtelí"]
+    },
+    {
+      "pronoun": "fs",
+      "phrase": "kutiyʌtelí",
+      "breakdown": [{ "text": "kuti" }, "yʌtelí"]
+    }
+  ]
+}

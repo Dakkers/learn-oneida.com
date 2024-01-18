@@ -16,7 +16,7 @@ import dataΛtoleJson from "../data/ʌtole.json";
 import dataIsHereJson from "../data/data-ese-is-here.json";
 import dataItluJson from "../data/itlu.json";
 import dataOtshyusJson from "../data/otshyus.json";
-import dataLikeRedJson from "../data/data-like-red.json";
+import dataLikeRedJson from "../data/nuwehse-red.json";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import {
   Pronoun,

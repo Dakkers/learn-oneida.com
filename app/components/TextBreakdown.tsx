@@ -1,5 +1,17 @@
 import { cn } from "@/lib/utils";
-import { BreakdownType, arrayify } from "~/utils";
+import { arrayify } from "~/utils";
+
+export type BreakdownType =
+  | "FUT"
+  | "OP"
+  | "PAST"
+  | "PB"
+  | "PLB"
+  | "PP"
+  | "PR"
+  | "RECP"
+  | "REFL"
+  | "RPL"
 
 export function TextBreakdown({
   breakdown,
@@ -57,11 +69,14 @@ function InnerText({
 }
 
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
+  FUT: 'text-emerald-400',
   OP: "underline decoration-wavy decoration-black",
-  PAST: "",
-  PB: "text-blue-700",
+  PAST: "text-green-700",
+  PB: "text-blue-600",
   PLB: "text-cyan-400",
-  PP: "text-violet-600",
+  PP: "text-violet-500",
   PR: "text-red-600",
   RPL: "text-gray-400",
+  RECP: "text-green-700",
+  REFL: "text-green-700",
 };

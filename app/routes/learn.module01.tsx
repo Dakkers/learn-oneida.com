@@ -35,8 +35,8 @@ import { Pronominal, PronominalColor } from "~/components/Pronominal";
 import { PeopleResource } from "~/components/language/People";
 import { Heading } from "@/design/ui/heading";
 import { ParticlesTable } from "~/components/language/ParticlesTable";
-import { Link } from "@/design/ui/link";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
+import { Letter } from "~/components/Letter";
 
 export const meta: MetaFunction = () => {
   return [
@@ -319,7 +319,7 @@ export default function LearnModule01() {
           voice. The vowel is the same length as other vowels in the word.
         </Text>
         <Text>
-          Examples: <i>kátsheʔ</i>, <i>kákhwaʔ</i>, <i>kítkit</i>, <i>ohʌtú</i>,{" "}
+          Examples: <i>kátsheʔ</i>, <i>kákhwa̲ʔ</i>, <i>kítkit</i>, <i>ohʌtú</i>,{" "}
           <i>ohutsyakú</i>, <i>olihwiyó</i>, <i>ohwístaʔ</i>, <i>áhtaʔ</i>.
         </Text>
         <Heading id="long-stress" level={3} variant="titleM">
@@ -428,7 +428,7 @@ export default function LearnModule01() {
           In Onʌyoteʔa·ká· we write all the Hs that follow Ks and Ts. Example:{" "}
           <i>khenú·wehseʔ</i> and <i>thikʌ́</i>. We also write most of the Hs
           that occur after a vowel and before a consonant. Examples:{" "}
-          <i>yehyatúkhwaʔ</i>, <i>onikwʌ́htalaʔ</i>, <i>kanúhsaʔ</i>. Not all of
+          <i>yehyatúkhwa̲ʔ</i>, <i>onikwʌ́htalaʔ</i>, <i>kanúhsaʔ</i>. Not all of
           the Hs that are spoken in a word get written by all speakers, however.
           It seems to be a matter of personal preference.
         </Text>
@@ -724,13 +724,5 @@ function Footnotes({ nums: _nums }: { nums: string[] | string }) {
         </sup>
       ))}
     </Flex>
-  );
-}
-
-function Letter({ children }: { children: React.ReactNode }) {
-  return (
-    <code>
-      <strong>{children}</strong>
-    </code>
   );
 }
