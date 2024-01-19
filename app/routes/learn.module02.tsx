@@ -37,11 +37,17 @@ import grandfatherJson from "../data/family/grandfather.json";
 import fatherJson from "../data/family/father.json";
 import uncleJson from "../data/family/uncle.json";
 import olderBrotherJson from "../data/family/brother-older.json";
-import nephewJson from "../data/family/nephew.json";
+import cousinJson from "../data/family/cousin.json";
+import greatGrandsonJson from "../data/family/great-grandson.json";
+import friendJson from "../data/family/friend.json";
+import familyJson from "../data/family/family.json";
 import sonJson from "../data/family/son.json";
 import grandsonJson from "../data/family/grandson.json";
 import youngerBrotherJson from "../data/family/brother-younger.json";
-import greatGrandsonJson from "../data/family/great-grandson.json";
+import nephewJson from "../data/family/nephew.json";
+import siblingsJson from "../data/family/siblings.json";
+import relatedJson from "../data/family/related.json";
+import siblingsSameSexJson from "../data/family/siblingsSameSex.json";
 
 import { TableWrapper } from "@/design/ui/tableWrapper";
 import {
@@ -191,9 +197,8 @@ function ReflexiveSection() {
       </Text>
       <Text>
         The trickiness comes from the interesting behaviour that arises from
-        adding <Letter>atat</Letter>
-        to the root word. Adding this prefix "changes" the root word to use an
-        A-stem.
+        adding <Letter>atat</Letter> to the root word. Adding this prefix
+        "changes" the root word to use an A-stem.
       </Text>
       <VerbsTable
         color="red"
@@ -227,13 +232,12 @@ function ReciprocalSection() {
       <Text>
         To translate this sentence into Oneida, let&lsquo;s first take the root
         word for &quot;to like&quot;, <i>nuwehseʔ</i>, and apply the reflexive
-        prefix:
-        <i>atatnuwehseʔ</i>. This is now an A-stem word so we can look at the
-        red pronominals table to find the corresponding prefix for &quot;Someone
-        and I&quot;, which is <Letter>yaky</Letter>. So far we have{" "}
-        <i>yakyatatnú·wehseʔ</i>, but if you look in the previous section, this
-        means &quot;Someone and I like ourselves&quot;. To make it reciprocal,
-        we add <Letter>te</Letter> at the beginning.
+        prefix: <i>atatnuwehseʔ</i>. This is now an A-stem word so we can look
+        at the red pronominals table to find the corresponding prefix for
+        &quot;Someone and I&quot;, which is <Letter>yaky</Letter>. So far we
+        have <i>yakyatatnú·wehseʔ</i>, but if you look in the previous section,
+        this means &quot;Someone and I like ourselves&quot;. To make it
+        reciprocal, we add <Letter>te</Letter> at the beginning.
       </Text>
       <Text>
         So the result is: <i>teyakyatatnú·wehseʔ</i>.
@@ -328,15 +332,15 @@ function VerbsTable({
   return <TableWrapper columns={columns} data={rows} />;
 }
 
-function CommandsSection () {
+function CommandsSection() {
   return (
     <>
       <Heading id="commands" level={2} variant="headlineS">
         Commands
       </Heading>
       <Text>
-        Here we introduce commands, which have different pronominals in some cases.
-        The two commands are:
+        Here we introduce commands, which have different pronominals in some
+        cases. The two commands are:
       </Text>
       <List>
         <List.Item>
@@ -349,72 +353,49 @@ function CommandsSection () {
       <Heading id="commands-tell" level={3} variant="titleM">
         <i>hlo·li̲’̲·</i>: to tell someone
       </Heading>
-      <CommandsTable
-        data={hloliData}
-        verb='tell'
-      />
+      <CommandsTable data={hloliData} verb="tell" />
       <Heading id="commands-ask" level={3} variant="titleM">
         <i>liwanu·túse̲</i>: to ask someone
       </Heading>
-      <CommandsTable
-        data={liwanutuseData}
-        verb='ask'
-      />
+      <CommandsTable data={liwanutuseData} verb="ask" />
     </>
-  )
+  );
 }
 
-function NegatedCommandsSection () {
+function NegatedCommandsSection() {
   return (
     <>
       <Heading id="commands" level={2} variant="headlineS">
         Negated Commands
       </Heading>
       <Text>
-        We can negate the commands learned above too. Notice
-        that some of the pronominals are different.
+        We can negate the commands learned above too. Notice that some of the
+        pronominals are different.
       </Text>
       <Heading id="commands-tell-negated" level={3} variant="titleM">
-        <i>Takʌ ...hlo·li̲’̲·</i>: don't tell someone
+        <i>Takʌ ...hlo·li̲’̲·</i>: don&lsquo;t tell someone
       </Heading>
-      <CommandsTable
-        data={hloliNegatedData}
-        negated
-        verb='tell'
-      />
+      <CommandsTable data={hloliNegatedData} negated verb="tell" />
       <Heading id="commands-ask-negated" level={3} variant="titleM">
-        <i>Takʌ ...liwanu·túse̲</i>: don't ask someone
+        <i>Takʌ ...liwanu·túse̲</i>: don&lsquo;t ask someone
       </Heading>
-      <CommandsTable
-        data={liwanutuseNegatedData}
-        negated
-        verb='ask'
-      />
+      <CommandsTable data={liwanutuseNegatedData} negated verb="ask" />
     </>
-  )
+  );
 }
 
-function CommandsTable ({
-  data,
-  negated = false,
-  verb
-}) {
-  const keys = [
-    'you_me',
-    'you_us_exclusive',
-    'you_her',
-    'you_him',
-  ] as const;
-  const negativeText = negated ? 'Don\'t' : ''
+function CommandsTable({ data, negated = false, verb }) {
+  const keys = ["you_me", "you_us_exclusive", "you_her", "you_him"] as const;
+  const negativeText = negated ? "Don't" : "";
   const en = {
-    'you_me': [`${negativeText} (you) ${verb} me`],
-    'you_us_exclusive': [
+    you_me: [`${negativeText} (you) ${verb} me`],
+    you_us_exclusive: [
       `${negativeText} you ${verb} all of us`,
       `${negativeText} all of you ${verb} me`,
       `${negativeText} all of you ${verb} all of us`,
     ],
-    'you_her': [`${negativeText} (you) ${verb} her`],
-    'you_him': [`${negativeText} (you) ${verb} him`],
+    you_her: [`${negativeText} (you) ${verb} her`],
+    you_him: [`${negativeText} (you) ${verb} him`],
   };
   return (
     <TableWrapper
@@ -424,10 +405,10 @@ function CommandsTable ({
         en: en[key],
       }))}
     />
-  )
+  );
 }
 
-function RelativesFamilySection () {
+function RelativesFamilySection() {
   return (
     <>
       <Heading id="family-members" level={2} variant="headlineS">
@@ -436,55 +417,138 @@ function RelativesFamilySection () {
       <Heading id="female-relatives-older" level={3} variant="titleM">
         Older Female Relatives
       </Heading>
-      <RelativesTable datasets={[
-        { data: motherJson, en: 'mother', oneida: 'nulha' },
-        { data: auntJson, en: 'aunt', oneida: 'nulha' },
-        { data: grandmotherJson, en: 'grandmother', oneida: 'hsotha' },
-        { data: olderSisterJson, en: 'older sister', oneida: 'ʔkʌha' },
-      ]}/>
+      <RelativesTable
+        datasets={[
+          { data: motherJson, en: "mother", oneida: "nulha" },
+          { data: auntJson, en: "aunt", oneida: "nulha" },
+          { data: grandmotherJson, en: "grandmother", oneida: "hsotha" },
+          { data: olderSisterJson, en: "older sister", oneida: "ʔkʌha" },
+        ]}
+      />
 
       <Heading id="female-relatives-younger" level={3} variant="titleM">
         Younger Female Relatives
       </Heading>
-      <RelativesTable datasets={[
-        { data: daughterJson, en: 'daughter', oneida: 'yʌha' },
-        { data: nieceJson, en: 'niece', oneida: 'uhwatʌha' },
-        { data: granddaughterJson, en: 'granddaughter', oneida: 'atleha' },
-        { data: youngerSisterJson, en: 'younger sister', oneida: 'ʔkʌha' },
-        { data: greatGranddaughterJson, en: 'great-granddaughter', oneida: 'atleʔslʌtuheʔ' },
-      ]}/>
+      <RelativesTable
+        datasets={[
+          { data: daughterJson, en: "daughter", oneida: "yʌha" },
+          { data: nieceJson, en: "niece", oneida: "uhwatʌha" },
+          { data: granddaughterJson, en: "granddaughter", oneida: "atleha" },
+          { data: youngerSisterJson, en: "younger sister", oneida: "ʔkʌha" },
+          {
+            data: greatGranddaughterJson,
+            en: "great-granddaughter",
+            oneida: "atleʔslʌtuheʔ",
+          },
+        ]}
+      />
       <Heading id="male-relatives-older" level={3} variant="titleM">
         Older Male Relatives
       </Heading>
-      <RelativesTable datasets={[
-        { data: fatherJson, en: 'father', oneida: 'ʔniha' },
-        { data: uncleJson, en: 'uncle', oneida: 'nulha' },
-        { data: grandfatherJson, en: 'grandfather', oneida: 'hsotha' },
-        { data: olderBrotherJson, en: 'older brother', oneida: 'ʔkʌha' },
-      ]}/>
+      <RelativesTable
+        datasets={[
+          { data: fatherJson, en: "father", oneida: "ʔniha" },
+          { data: uncleJson, en: "uncle", oneida: "nulha" },
+          { data: grandfatherJson, en: "grandfather", oneida: "hsotha" },
+          { data: olderBrotherJson, en: "older brother", oneida: "ʔkʌha" },
+        ]}
+      />
       <Heading id="male-relatives-younger" level={3} variant="titleM">
         Younger Male Relatives
       </Heading>
-      <RelativesTable datasets={[
-        { data: sonJson, en: 'son', oneida: 'yʌha' },
-        { data: nephewJson, en: 'nephew', oneida: 'uhwatʌha' },
-        { data: grandsonJson, en: 'grandson', oneida: 'atleha' },
-        { data: youngerBrotherJson, en: 'younger brother', oneida: 'ʔkʌha' },
-        { data: greatGrandsonJson, en: 'great-grandson', oneida: 'atleʔslʌtuheʔ' },
-      ]}/>
+      <RelativesTable
+        datasets={[
+          { data: sonJson, en: "son", oneida: "yʌha" },
+          { data: nephewJson, en: "nephew", oneida: "uhwatʌha" },
+          { data: grandsonJson, en: "grandson", oneida: "atleha" },
+          { data: youngerBrotherJson, en: "younger brother", oneida: "ʔkʌha" },
+          {
+            data: greatGrandsonJson,
+            en: "great-grandson",
+            oneida: "atleʔslʌtuheʔ",
+          },
+        ]}
+      />
+
+      <Heading id="cousins" level={3} variant="titleM">
+        Cousins & Friends
+      </Heading>
+      <RelativesTable
+        datasets={[
+          { data: cousinJson, en: "cousin", oneida: "alaʔse" },
+          { data: friendJson, en: "friend", oneida: "atʌlo" },
+        ]}
+        pronouns={["soni", "u2", "2m", "2f", "us", "yall"]}
+      />
+
+      <Heading id="family" level={3} variant="titleM">
+        Family
+      </Heading>
+      <RelativesTable
+        datasets={[{ data: familyJson, en: "family", oneida: "hwa·tsíleʔ" }]}
+        pronouns={[
+          "i",
+          "u",
+          "m",
+          "f",
+          "it",
+          "uni",
+          "u2",
+          "us",
+          "yall",
+          "ms",
+          "fs",
+        ]}
+      />
+
+      <Heading id="family" level={3} variant="titleM">
+        Siblings, Related
+      </Heading>
+      <RelativesTable
+        datasets={[
+          { data: siblingsJson, en: "siblings", oneida: "ekʌha" },
+          { data: relatedJson, en: "related", oneida: "atatnuhkweʔ" },
+          {
+            data: siblingsSameSexJson,
+            en: "siblings of the same sex",
+            oneida: "te…atahnu·téleʔ",
+          },
+        ]}
+        pronouns={[
+          "uni",
+          "soni",
+          "u2",
+          "2m",
+          "2f",
+          "us",
+          "theyni",
+          "yall",
+          "ms",
+          "fs",
+        ]}
+      />
     </>
-  )
+  );
 }
 
-function RelativesTable ({
-  datasets
+function RelativesTable({
+  datasets,
+  pronouns = ["i", "u", "m", "f", "us", "yall"],
+}: {
+  datasets: any[];
+  pronouns?: Pronoun[];
 }) {
-  const relativePronouns: Pronoun[] = ['i', 'u', 'm', 'f', 'us', 'yall']
   return (
     <TableWrapper
       columns={datasets.map((ds) => ({
         accessorKey: ds.en,
-        cell: (value) => <TextBreakdown breakdown={value} typeFallback={ds.data.type} />,
+        cell: (value) => (
+          <TextBreakdown
+            breakdown={value}
+            prefix={ds.data.prefix}
+            typeFallback={ds.data.type}
+          />
+        ),
         header: (
           <>
             <Text>{ds.en}</Text>
@@ -492,32 +556,32 @@ function RelativesTable ({
               <strong>{ds.oneida}</strong>
             </Text>
           </>
-        )
+        ),
       }))}
-      data={relativePronouns.map((pronoun) => {
-        const result = { pronoun }
+      data={pronouns.map((pronoun) => {
+        const result = { pronoun };
         for (const ds of datasets) {
-          result[ds.en] = ds.data.phrases.find((p) => p.pronoun === pronoun).breakdown;
+          result[ds.en] = ds.data.phrases.find(
+            (p) => p.pronoun === pronoun
+          ).breakdown;
         }
         return result;
       })}
     />
-  )
+  );
 }
 
 const getBreakdown = (data, key) =>
   data.phrases.find((p) => p.key === key || p.pronoun === key)?.breakdown;
 
-function magicalThing (data) {
+function magicalThing(data) {
   const result = _.cloneDeep(data);
   for (const phrase of result.phrases) {
     const breakdown = phrase.breakdown;
-    if (breakdown[0].type === 'RPL') {
+    if (breakdown[0].type === "RPL") {
       breakdown.splice(0, 1);
     }
-    breakdown.unshift(
-      { "text": "te", "type": "RECP" },
-    )
+    breakdown.unshift({ text: "te", type: "RECP" });
   }
   return result;
 }

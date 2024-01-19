@@ -20,7 +20,11 @@
     {
       "key": "you_him",
       "phrase": "etshlo·li̲´·",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "ets" }, "hlo·li̲´"]
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "ets" },
+        "hlo·li̲´"
+      ]
     }
   ]
 }

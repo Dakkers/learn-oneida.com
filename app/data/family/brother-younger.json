@@ -10,7 +10,7 @@
     {
       "pronoun": "u",
       "phrase": "hetshʔkʌ́ha̲",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "etsh" }, "ʔkʌ́ha̲"]
+      "breakdown": [{ "text": "h", "type": "RPL" }, { "text": "etsh" }, "ʔkʌ́ha̲"]
     },
     {
       "pronoun": "m",
@@ -25,12 +25,16 @@
     {
       "pronoun": "us",
       "phrase": "etniʔkʌ́ha̲",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "etni" }, "ʔkʌ́ha̲"]
+      "breakdown": [{ "text": "h", "type": "RPL" }, { "text": "etni" }, "ʔkʌ́ha̲"]
     },
     {
       "pronoun": "yall",
       "phrase": "hetsniʔkʌ́ha̲",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "etsni" }, "ʔkʌ́ha̲"]
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "etsni" },
+        "ʔkʌ́ha̲"
+      ]
     }
   ]
 }

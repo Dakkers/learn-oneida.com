@@ -20,7 +20,7 @@
     {
       "pronoun": "f",
       "phrase": "akonulhá·",
-      "breakdown": [{ "text": "ako","type":"PLB" }, "nulhá·"]
+      "breakdown": [{ "text": "ako", "type": "PLB" }, "nulhá·"]
     },
     {
       "pronoun": "us",
@@ -30,7 +30,11 @@
     {
       "pronoun": "yall",
       "phrase": "hetswanulhá·",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "etswa" }, "nulhá·"]
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "etswa" },
+        "nulhá·"
+      ]
     }
   ]
 }

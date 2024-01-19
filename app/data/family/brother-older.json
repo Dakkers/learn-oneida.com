@@ -20,7 +20,7 @@
     {
       "pronoun": "f",
       "phrase": "akoʔkʌ́ha̲",
-      "breakdown": [{ "text": "ako","type":"PLB" }, "ʔkʌ́ha̲"]
+      "breakdown": [{ "text": "ako", "type": "PLB" }, "ʔkʌ́ha̲"]
     },
     {
       "pronoun": "us",
@@ -30,7 +30,11 @@
     {
       "pronoun": "yall",
       "phrase": "hetswaʔkʌ́ha̲",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "etswa" }, "ʔkʌ́ha̲"]
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "etswa" },
+        "ʔkʌ́ha̲"
+      ]
     }
   ]
 }

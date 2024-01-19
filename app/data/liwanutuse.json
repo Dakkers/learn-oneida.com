@@ -20,7 +20,11 @@
     {
       "key": "you_him",
       "phrase": "etsliʔwanu·túse̲·",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "ets" }, "liʔwanu·túse̲"]
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "ets" },
+        "liʔwanu·túse̲"
+      ]
     }
   ]
 }

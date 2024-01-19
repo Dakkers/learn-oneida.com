@@ -5,77 +5,77 @@
     {
       "pronoun": "i",
       "phrase": "wak",
-      "breakdown": [{ "text": "wak" }, "yʌtelí"]
+      "breakdown": [{ "text": "wak" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "u",
-      "phrase": "sayʌtelí",
-      "breakdown": [{ "text": "sa" }, "yʌtelí"]
+      "phrase": "sayʌtelíˍ",
+      "breakdown": [{ "text": "sa" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "m",
-      "phrase": "loyʌtelí",
-      "breakdown": [{ "text": "lo" }, "yʌtelí"]
+      "phrase": "loyʌtelíˍ",
+      "breakdown": [{ "text": "lo" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "f",
-      "phrase": "yakoyʌtelí",
-      "breakdown": [{ "text": "yako" }, "yʌtelí"]
+      "phrase": "yakoyʌtelíˍ",
+      "breakdown": [{ "text": "yako" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "it",
-      "phrase": "yoyʌtelí",
-      "breakdown": [{ "text": "yo" }, "yʌtelí"]
+      "phrase": "yoyʌtelíˍ",
+      "breakdown": [{ "text": "yo" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "uni",
-      "phrase": "yukniyʌtelí",
-      "breakdown": [{ "text": "yukni" }, "yʌtelí"]
+      "phrase": "yukniyʌtelíˍ",
+      "breakdown": [{ "text": "yukni" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "soni",
-      "phrase": "yukniyʌtelí",
-      "breakdown": [{ "text": "yukni" }, "yʌtelí"]
+      "phrase": "yukniyʌtelíˍ",
+      "breakdown": [{ "text": "yukni" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "u2",
-      "phrase": "sniyʌtelí",
-      "breakdown": [{ "text": "sni" }, "yʌtelí"]
+      "phrase": "sniyʌtelíˍ",
+      "breakdown": [{ "text": "sni" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "2m",
-      "phrase": "lotiyʌtelí",
-      "breakdown": [{ "text": "loti" }, "yʌtelí"]
+      "phrase": "lotiyʌtelíˍ",
+      "breakdown": [{ "text": "loti" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "2f",
-      "phrase": "yotiyʌtelí",
-      "breakdown": [{ "text": "yoti" }, "yʌtelí"]
+      "phrase": "yotiyʌtelíˍ",
+      "breakdown": [{ "text": "yoti" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "us",
-      "phrase": "yukwayʌtelí",
-      "breakdown": [{ "text": "yukwa" }, "yʌtelí"]
+      "phrase": "yukwayʌtelíˍ",
+      "breakdown": [{ "text": "yukwa" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "theyni",
-      "phrase": "yukwayʌtelí",
-      "breakdown": [{ "text": "yukwa" }, "yʌtelí"]
+      "phrase": "yukwayʌtelíˍ",
+      "breakdown": [{ "text": "yukwa" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "yall",
-      "phrase": "swayʌtelí",
-      "breakdown": [{ "text": "swa" }, "yʌtelí"]
+      "phrase": "swayʌtelíˍ",
+      "breakdown": [{ "text": "swa" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "ms",
-      "phrase": "lotiyʌtelí",
-      "breakdown": [{ "text": "loti" }, "yʌtelí"]
+      "phrase": "lotiyʌtelíˍ",
+      "breakdown": [{ "text": "loti" }, "yʌtelíˍ"]
     },
     {
       "pronoun": "fs",
-      "phrase": "yotiyʌtelí",
-      "breakdown": [{ "text": "yoti" }, "yʌtelí"]
+      "phrase": "yotiyʌtelíˍ",
+      "breakdown": [{ "text": "yoti" }, "yʌtelíˍ"]
     }
   ]
 }

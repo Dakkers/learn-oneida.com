@@ -3,8 +3,8 @@
     {
       "breakdown": [
         "Tákʌʔ ",
-        {"text": "ʌ","type": "FUT"},
-        {"text": "sk"},
+        { "text": "ʌ", "type": "FUT" },
+        { "text": "sk" },
         "hlo·li̲´"
       ],
       "key": "you_me",
@@ -13,8 +13,8 @@
     {
       "breakdown": [
         "Tákʌʔ ",
-        {"text": "ʌ","type": "FUT"},
-        {"text": "skwa"},
+        { "text": "ʌ", "type": "FUT" },
+        { "text": "skwa" },
         "hlo·li̲´"
       ],
       "key": "you_us_exclusive",
@@ -23,8 +23,8 @@
     {
       "breakdown": [
         "Tákʌʔ ",
-        {"text": "ʌ","type": "FUT"},
-        {"text": "she"},
+        { "text": "ʌ", "type": "FUT" },
+        { "text": "she" },
         "hlo·li̲´"
       ],
       "key": "you_her",
@@ -33,8 +33,8 @@
     {
       "breakdown": [
         "Tákʌʔ ",
-        {"text": "ʌ","type": "FUT"},
-        {"text": "hets"},
+        { "text": "ʌ", "type": "FUT" },
+        { "text": "hets" },
         "hlo·li̲´"
       ],
       "key": "you_him",

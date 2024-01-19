@@ -11,21 +11,36 @@ export type BreakdownType =
   | "PR"
   | "RECP"
   | "REFL"
-  | "RPL"
+  | "RPL";
+
+type BreakdownArray = Array<
+  | string
+  | {
+      text: string;
+      type?: BreakdownType;
+    }
+>;
 
 export function TextBreakdown({
-  breakdown,
+  breakdown: _breakdown,
+  prefix,
   typeFallback,
 }: {
-  breakdown: Array<
-    | string
-    | {
-        text: string;
-        type?: BreakdownType;
-      }
-  >;
+  breakdown: BreakdownArray;
+  prefix?: BreakdownType;
   typeFallback?: BreakdownType;
 }) {
+  const breakdown = (
+    prefix === "RECP"
+      ? ([
+          {
+            text: "te",
+            type: "RECP",
+          },
+        ] as BreakdownArray)
+      : []
+  ).concat(_breakdown);
+
   return (
     <span>
       {breakdown.map((part, i) => {
@@ -69,7 +84,7 @@ function InnerText({
 }
 
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
-  FUT: 'text-emerald-400',
+  FUT: "text-emerald-400",
   OP: "underline decoration-wavy decoration-black",
   PAST: "text-green-700",
   PB: "text-blue-600",

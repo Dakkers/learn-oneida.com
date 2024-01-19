@@ -1,11 +1,11 @@
 {
-  "translation": "{{pronounPossessive}} cousin",
-  "type": "PLB",
+  "translation": "{{pronoun}} are cousins",
+  "type": "PB",
   "phrases": [
     {
       "pronoun": "soni",
       "phrase": "ukyalá·seʔ",
-      "breakdown": [{ "text": "yuk" }, "alá·seʔ"]
+      "breakdown": [{ "text": "uk" }, "alá·seʔ"]
     },
     {
       "pronoun": "u2",

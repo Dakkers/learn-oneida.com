@@ -10,7 +10,11 @@
     {
       "pronoun": "u",
       "phrase": "hetshatléha̲",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "etsh" }, "atléha̲"]
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "etsh" },
+        "atléha̲"
+      ]
     },
     {
       "pronoun": "m",
@@ -25,12 +29,20 @@
     {
       "pronoun": "us",
       "phrase": "hethyatléha̲",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "ethy" }, "atléha̲"]
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "ethy" },
+        "atléha̲"
+      ]
     },
     {
       "pronoun": "yall",
       "phrase": "hetshyatléha̲",
-      "breakdown": [{"text":"h","type":"RPL"},{ "text": "etshy" }, "atléha̲"]
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "etshy" },
+        "atléha̲"
+      ]
     }
   ]
 }
