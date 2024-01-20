@@ -1,0 +1,32 @@
+{
+  "translation": "{{pronounPossessive}} siblings",
+  "type": "PR",
+  "prefix": "RECP",
+  "phrases": [
+    {
+      "pronoun": "i",
+      "phrase": "yakwatahnuteleʔshú·ha",
+      "breakdown": [{ "text": "yakw" }, "atahnuteleʔshú·ha"]
+    },
+    {
+      "pronoun": "u",
+      "phrase": "swatahnuteleʔshú·ha",
+      "breakdown": [{ "text": "sw" }, "atahnuteleʔshú·ha"]
+    },
+    {
+      "pronoun": "m",
+      "phrase": "huatahnuteleʔshú·ha",
+      "breakdown": [{ "text": "hu" }, "atahnuteleʔshú·ha"]
+    },
+    {
+      "pronoun": "f",
+      "phrase": "huatahnuteleʔshú·ha",
+      "breakdown": [{ "text": "hu" }, "atahnuteleʔshú·ha"]
+    },
+    {
+      "pronoun": "she_her",
+      "phrase": "kuatahnuteleʔshú·ha",
+      "breakdown": [{ "text": "ku" }, "atahnuteleʔshú·ha"]
+    }
+  ]
+}

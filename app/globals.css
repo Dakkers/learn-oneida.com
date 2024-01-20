@@ -75,7 +75,15 @@
   * {
     @apply border-border;
   }
+  html {
+    font-family: '"NotoSans"';
+  }
   body {
     @apply bg-background text-foreground;
+  }
+
+  @font-face {
+    font-family: '"NotoSans"';
+    src: url('/fonts/NotoSans-Regular.ttf') format('truetype');
   }
 }

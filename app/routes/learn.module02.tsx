@@ -23,38 +23,18 @@ import liwanutuseData from "../data/liwanutuse.json";
 import hloliData from "../data/hloli.json";
 import hloliNegatedData from "../data/hloli-negated.json";
 import liwanutuseNegatedData from "../data/liwanutuse-negated.json";
-
-import nieceJson from "../data/family/niece.json";
-import grandmotherJson from "../data/family/grandmother.json";
-import motherJson from "../data/family/mother.json";
-import auntJson from "../data/family/aunt.json";
-import daughterJson from "../data/family/daughter.json";
-import granddaughterJson from "../data/family/granddaughter.json";
-import youngerSisterJson from "../data/family/sister-younger.json";
-import olderSisterJson from "../data/family/sister-older.json";
-import greatGranddaughterJson from "../data/family/great-granddaughter.json";
-import grandfatherJson from "../data/family/grandfather.json";
-import fatherJson from "../data/family/father.json";
-import uncleJson from "../data/family/uncle.json";
-import olderBrotherJson from "../data/family/brother-older.json";
-import cousinJson from "../data/family/cousin.json";
-import greatGrandsonJson from "../data/family/great-grandson.json";
-import friendJson from "../data/family/friend.json";
-import familyJson from "../data/family/family.json";
-import sonJson from "../data/family/son.json";
-import grandsonJson from "../data/family/grandson.json";
-import youngerBrotherJson from "../data/family/brother-younger.json";
-import nephewJson from "../data/family/nephew.json";
-import siblingsJson from "../data/family/siblings.json";
-import relatedJson from "../data/family/related.json";
-import siblingsSameSexJson from "../data/family/siblingsSameSex.json";
+import unheJson from '../data/unhe.json'
+import iheyuJson from '../data/iheyu.json'
+import atukohtuJson from '../data/atukohtu.json'
+import kstʌhaJson from '../data/kstʌha.json'
+import kʌʔni_yʌhaJson from '../data/kʌʔni_yʌha.json'
+import ohsliyakuJson from '../data/ohsliyaku.json'
 
 import { TableWrapper } from "@/design/ui/tableWrapper";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_EN_OBJECTIVE,
   PURPLES_MAP,
-  Pronoun,
   pronouns,
 } from "~/utils";
 import { BreakdownType, TextBreakdown } from "~/components/TextBreakdown";
@@ -62,6 +42,8 @@ import { PronominalColor } from "~/components/Pronominal";
 import { List } from "@/design/ui/list";
 import { Letter } from "~/components/Letter";
 import _ from "lodash";
+import { FamilyResource } from "~/components/resources/Family";
+import { ParadigmTable } from "~/components/ParadigmTable";
 
 export const meta: MetaFunction = () => {
   return [
@@ -109,7 +91,16 @@ export default function LearnModule02() {
         <CommandsSection />
         <NegatedCommandsSection />
 
-        <RelativesFamilySection />
+        <FamilyResource />
+
+        <AliveDeadSection />
+        <PassedOnSection />
+        <DeceasedRelativesSection />
+
+        <NumbersSection />
+
+        <YoungOldSection />
+        <AgeSection />
       </Flex>
     </div>
   );
@@ -185,20 +176,16 @@ function ReflexiveSection() {
       <Heading id="new-verbs" level={2} variant="headlineS">
         Reflexive
       </Heading>
-      <Notice intent="negative">
-        <strong>NOTE:</strong> The author of this website is unsure of the
-        terminology of this section and will be updating it accordingly.
-      </Notice>
       <Text>
         We can add an additional prefix to a root word to make the root word
-        apply to oneself. For example, <i>knú·wehseʔ</i> means "I like it".
+        apply to oneself. For example, <i>knú·wehseʔ</i> means &quot;I like it&quot;.
         Adding the prefix <Letter>atat</Letter> before the root word and after
-        the pronominal will translate to "I like myself": <i>katatnú·wehseʔ</i>.
+        the pronominal will translate to &quot;I like myself&quot;: <i>katatnú·wehseʔ</i>.
       </Text>
       <Text>
         The trickiness comes from the interesting behaviour that arises from
         adding <Letter>atat</Letter> to the root word. Adding this prefix
-        "changes" the root word to use an A-stem.
+        &quot;changes&quot; the root word to use an A-stem.
       </Text>
       <VerbsTable
         color="red"
@@ -219,10 +206,6 @@ function ReciprocalSection() {
       <Heading id="new-verbs" level={2} variant="headlineS">
         Reciprocal
       </Heading>
-      <Notice intent="negative">
-        <strong>NOTE:</strong> The author of this website is unsure of the
-        terminology of this section and will be updating it accordingly.
-      </Notice>
       <Text>
         We can go even further and add yet another prefix to a root word to make
         the root word apply between two subjects &quot;in each direction&quot;.
@@ -408,167 +391,257 @@ function CommandsTable({ data, negated = false, verb }) {
   );
 }
 
-function RelativesFamilySection() {
+function AliveDeadSection () {
   return (
     <>
-      <Heading id="family-members" level={2} variant="headlineS">
-        Family Members
+      <Heading id="alive-dead" level={2} variant="headlineS">
+        Learn: to be alive, to be dead
       </Heading>
-      <Heading id="female-relatives-older" level={3} variant="titleM">
-        Older Female Relatives
-      </Heading>
-      <RelativesTable
-        datasets={[
-          { data: motherJson, en: "mother", oneida: "nulha" },
-          { data: auntJson, en: "aunt", oneida: "nulha" },
-          { data: grandmotherJson, en: "grandmother", oneida: "hsotha" },
-          { data: olderSisterJson, en: "older sister", oneida: "ʔkʌha" },
-        ]}
+      <List>
+        <List.Item>
+          <i>unhe</i>: (to be) alive
+        </List.Item>
+        <List.Item>
+          <i>iheyu</i> / <i>ʌheyu</i>: (to be) dead, has died
+        </List.Item>
+      </List>
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={unheJson}
       />
-
-      <Heading id="female-relatives-younger" level={3} variant="titleM">
-        Younger Female Relatives
-      </Heading>
-      <RelativesTable
-        datasets={[
-          { data: daughterJson, en: "daughter", oneida: "yʌha" },
-          { data: nieceJson, en: "niece", oneida: "uhwatʌha" },
-          { data: granddaughterJson, en: "granddaughter", oneida: "atleha" },
-          { data: youngerSisterJson, en: "younger sister", oneida: "ʔkʌha" },
-          {
-            data: greatGranddaughterJson,
-            en: "great-granddaughter",
-            oneida: "atleʔslʌtuheʔ",
-          },
-        ]}
-      />
-      <Heading id="male-relatives-older" level={3} variant="titleM">
-        Older Male Relatives
-      </Heading>
-      <RelativesTable
-        datasets={[
-          { data: fatherJson, en: "father", oneida: "ʔniha" },
-          { data: uncleJson, en: "uncle", oneida: "nulha" },
-          { data: grandfatherJson, en: "grandfather", oneida: "hsotha" },
-          { data: olderBrotherJson, en: "older brother", oneida: "ʔkʌha" },
-        ]}
-      />
-      <Heading id="male-relatives-younger" level={3} variant="titleM">
-        Younger Male Relatives
-      </Heading>
-      <RelativesTable
-        datasets={[
-          { data: sonJson, en: "son", oneida: "yʌha" },
-          { data: nephewJson, en: "nephew", oneida: "uhwatʌha" },
-          { data: grandsonJson, en: "grandson", oneida: "atleha" },
-          { data: youngerBrotherJson, en: "younger brother", oneida: "ʔkʌha" },
-          {
-            data: greatGrandsonJson,
-            en: "great-grandson",
-            oneida: "atleʔslʌtuheʔ",
-          },
-        ]}
-      />
-
-      <Heading id="cousins" level={3} variant="titleM">
-        Cousins & Friends
-      </Heading>
-      <RelativesTable
-        datasets={[
-          { data: cousinJson, en: "cousin", oneida: "alaʔse" },
-          { data: friendJson, en: "friend", oneida: "atʌlo" },
-        ]}
-        pronouns={["soni", "u2", "2m", "2f", "us", "yall"]}
-      />
-
-      <Heading id="family" level={3} variant="titleM">
-        Family
-      </Heading>
-      <RelativesTable
-        datasets={[{ data: familyJson, en: "family", oneida: "hwa·tsíleʔ" }]}
-        pronouns={[
-          "i",
-          "u",
-          "m",
-          "f",
-          "it",
-          "uni",
-          "u2",
-          "us",
-          "yall",
-          "ms",
-          "fs",
-        ]}
-      />
-
-      <Heading id="family" level={3} variant="titleM">
-        Siblings, Related
-      </Heading>
-      <RelativesTable
-        datasets={[
-          { data: siblingsJson, en: "siblings", oneida: "ekʌha" },
-          { data: relatedJson, en: "related", oneida: "atatnuhkweʔ" },
-          {
-            data: siblingsSameSexJson,
-            en: "siblings of the same sex",
-            oneida: "te…atahnu·téleʔ",
-          },
-        ]}
-        pronouns={[
-          "uni",
-          "soni",
-          "u2",
-          "2m",
-          "2f",
-          "us",
-          "theyni",
-          "yall",
-          "ms",
-          "fs",
-        ]}
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={iheyuJson}
       />
     </>
-  );
+  )
 }
 
-function RelativesTable({
-  datasets,
-  pronouns = ["i", "u", "m", "f", "us", "yall"],
-}: {
-  datasets: any[];
-  pronouns?: Pronoun[];
-}) {
+function PassedOnSection () {
   return (
-    <TableWrapper
-      columns={datasets.map((ds) => ({
-        accessorKey: ds.en,
-        cell: (value) => (
-          <TextBreakdown
-            breakdown={value}
-            prefix={ds.data.prefix}
-            typeFallback={ds.data.type}
-          />
-        ),
-        header: (
-          <>
-            <Text>{ds.en}</Text>
-            <Text>
-              <strong>{ds.oneida}</strong>
-            </Text>
-          </>
-        ),
-      }))}
-      data={pronouns.map((pronoun) => {
-        const result = { pronoun };
-        for (const ds of datasets) {
-          result[ds.en] = ds.data.phrases.find(
-            (p) => p.pronoun === pronoun
-          ).breakdown;
-        }
-        return result;
-      })}
-    />
-  );
+    <>
+      <Heading id="passed-on" level={2} variant="headlineS">
+        Learn: to have passed on
+      </Heading>
+      <Text><i>atukohtu</i>: (to have) passed on</Text>
+      <ParadigmTable
+        allowedPronouns={['m', 'f', 'it', 'ms', 'fs']}
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={atukohtuJson}
+      />
+    </>
+  )
+}
+
+function DeceasedRelativesSection () {
+  const data = [
+    { on: "aknulhaʔkʌ́", en: "my late mother" },
+    { on: "lakeʔnikʌ́", en: "my late father" },
+    { on: "aksotkʌ́", en: "my late grandmother" },
+    { on: "laksotkʌ́", en: "my late grandfather" },
+    { on: "yuknulhaʔkʌ́", en: "my late aunt" },
+    { on: "laknulhaʔkʌ́", en: "my late uncle" },
+    { on: "yukeʔkʌ́haʔkʌ́", en: "my late older sister" },
+    { on: "lakeʔkʌhaʔkʌ́", en: "my late older brother" },
+    { on: "kheʔkʌhaʔkʌ́", en: "my late younger sister(s)" },
+    { on: "liʔkʌhaʔkʌ́", en: "my late younger brother" },
+    { on: "kheyuhwatʌʔkʌ́", en: "my late niece(s) & nephew(s)" },
+    { on: "liyuhwatʌʔkʌ́", en: "my late nephew" },
+    { on: "kheyʌhaʔkʌ́", en: "my late daughter" },
+    { on: "liyʌhaʔkʌ́", en: "my late son" },
+    { on: "kheyatlehaʔkʌ́", en: "my late granddaughter(s) / grandchildren" },
+    { on: "liyatlehaʔkʌ́", en: "my late grandson" },
+    { on: "ukyalaʔsehaʔkʌ́", en: "my late cousin" },
+    { on: "ukyatʌloʔkʌ́", en: "my late friend" },
+  ]
+
+  return (
+    <>
+      <Heading id="alive-dead" level={2} variant="headlineS">
+        Deceased Family Members
+      </Heading>
+      <Text>
+        In Oneida, talking about those who have passed on requires care.
+        An additional suffix is either added on to the end of a word or
+        replaces the last syllable of a word. The rules are:
+      </Text>
+      <List>
+        <List.Item><i>nulhá·</i> becomes <i>nulhaʔkʌ́</i></List.Item>
+        <List.Item><i>níha</i> becomes <i>nikʌ́</i></List.Item>
+        <List.Item><i>sótha</i> becomes <i>sotkʌ́</i></List.Item>
+        <List.Item><i>kʌ́ha</i> becomes <i>kʌhaʔkʌ́</i></List.Item>
+        <List.Item><i>yʌ́ha</i> becomes <i>yʌhaʔkʌ́</i></List.Item>
+        <List.Item><i>uhwatʌ́ha</i> becomes <i>uhwatʌʔkʌ́</i></List.Item>
+        <List.Item><i>atléha</i> becomes <i>atlehaʔkʌ́</i></List.Item>
+        <List.Item><i>alaʔséha</i> becomes <i>alaʔsehaʔkʌ́</i></List.Item>
+        <List.Item><i>atʌ·ló·</i> becomes <i>atʌloʔkʌ́</i></List.Item>
+      </List>
+      <Text>
+        Notice that, in many cases, accents, stresses, and lengths move places.
+      </Text>
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishOneida}
+        data={data}
+      />
+    </>
+  )
+}
+
+function YoungOldSection () {
+  return (
+    <>
+      <Heading id="young-old" level={2} variant="headlineS">
+        Learn: to be old, to be young
+      </Heading>
+      <List>
+        <List.Item>
+          <strong>kstʌha</strong>: (to be) old
+        </List.Item>
+        <List.Item>
+          <strong>kʌʔ nit...yʌha</strong>: (to be) young
+        </List.Item>
+      </List>
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={kstʌhaJson}
+      />
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={kʌʔni_yʌhaJson}
+      />
+      <Notice intent='warning'>
+        Take note of the letter &quot;i&quot; in between the &quot;nit&quot; and the pronominal for the
+        phrases &quot;You are young&quot;, &quot;You two are young&quot;, and &quot;All of you are young&quot;.
+      </Notice>
+    </>
+  )
+}
+
+function NumbersSection () {
+  const data = [
+    { en: '1', on: 'úska' },
+    { en: '2', on: ['tékni','tékeni̲'] },
+    { en: '3', on: 'áhsʌ̲' },
+    { en: '4', on: 'kayé' },
+    { en: '5', on: 'wisk' },
+    { en: '6', on: 'yá·yak' },
+    { en: '7', on: 'tsyá·tak' },
+    { en: '8', on: 'tékluʔ' },
+    { en: '9', on: 'wá·tluʔ' },
+    { en: '10', on: 'oyé·li̲' },
+    { en: '11', on: 'úska yawʌ·lé' },
+    { en: '12', on: 'tékni yawʌ·lé' },
+    { en: '13', on: 'áhsʌ yawʌ·lé' },
+    { en: '14', on: 'kayé yawʌ·lé' },
+    { en: '15', on: 'wisk yawʌ·lé' },
+    { en: '16', on: 'yá·yak yawʌ·lé' },
+    { en: '17', on: 'tsyá·tak yawʌ·lé' },
+    { en: '18', on: 'tékluʔ yawʌ·lé' },
+    { en: '19', on: 'wá·tluʔ yawʌ·lé' },
+    { en: '20', on: 'tewáhsʌ' },
+    { en: '21', on: 'tewáhsʌ úska' },
+    { en: '22', on: 'tewáhsʌ tékni' },
+    { en: '30', on: 'áhsʌ niwáhsʌ' },
+    { en: '40', on: 'kayé niwáhsʌ' },
+    { en: '50', on: 'wisk niwáhsʌ' },
+    { en: '60', on: 'yá·yak niwáhsʌ' },
+    { en: '70', on: 'tsyá·tak niwáhsʌ' },
+    { en: '80', on: 'tékluʔ niwáhsʌ' },
+    { en: '90', on: 'wá·tluʔ niwáhsʌ' },
+    { en: '99', on: 'wá·tluʔ niwáhsʌ wá·tluʔ' },
+    { en: '100', on: 'úska tewʌʔnyáweluʔ' },
+    { en: '101', on: 'úska tewʌʔnyáweluʔ úska' },
+    { en: '110', on: 'úska tewʌʔnyáweluʔ oyé·li' },
+    { en: '111', on: 'úska tewʌʔnyáweluʔ úska yawʌ·lé' },
+    { en: '120', on: 'úska tewʌʔnyáweluʔ tewáhsʌ' },
+    { en: '130', on: 'úska tewʌʔnyáweluʔ áhsʌ niwáhsʌ' },
+    { en: '140', on: 'úska tewʌʔnyáweluʔ kayé niwáhsʌ' },
+    { en: '150', on: 'úska tewʌʔnyáweluʔ wisk niwáhsʌ' },
+    { en: '160', on: 'úska tewʌʔnyáweluʔ yá·yak niwáhsʌ' },
+    { en: '170', on: 'úska tewʌʔnyáweluʔ tsyá·tak niwáhsʌ' },
+    { en: '180', on: 'úska tewʌʔnyáweluʔ tékluʔ niwáhsʌ' },
+    { en: '190', on: 'úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ' },
+    { en: '199', on: 'úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ' },
+    { en: '200', on: 'tékni tewʌʔnyáweluʔ' },
+    { en: '201', on: 'tékni tewʌʔnyáweluʔ úska' },
+    { en: '300', on: 'áhsʌ tewʌʔnyáweluʔ' },
+    { en: '400', on: 'kayé tewʌʔnyáweluʔ' },
+    { en: '500', on: 'wisk tewʌʔnyáweluʔ' },
+    { en: '600', on: 'yá·yak tewʌʔnyáweluʔ' },
+    { en: '700', on: 'tsya·ták tewʌʔnyáweluʔ' },
+    { en: '800', on: 'tékluʔ tewʌʔnyáweluʔ' },
+    { en: '900', on: 'wá·tluʔ tewʌʔnyáweluʔ' },
+    { en: '999', on: 'wá·tluʔ tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ' },
+    { en: '1000', on: 'oyé·li tewʌʔnyáweluʔ' },
+    { en: '1001', on: 'oyé·li tewʌʔnyáweluʔ úska' },
+    { en: '1111', on: 'úska yawʌ·lé tewʌʔnyáweluʔ úska yawʌ·lé' },
+    { en: '1200', on: 'tékni yawʌ·lé tewʌʔnyáweluʔ' },
+    { en: '1300', on: 'áhsʌ yawʌ·lé tewʌʔnyáweluʔ' },
+    { en: '1999', on: 'wá·tlu yawʌ·lé tewʌʔnyáweluʔ wá·tlu  niwáhsʌ wá·tlu' },
+    { en: '2000', on: 'tewáhsʌ tewʌʔnyáweluʔ' },
+  ]
+
+  return (
+    <>
+      <Heading id="numbers" level={2} variant="headlineS">
+        Numbers
+      </Heading>
+      <Text>
+        Counting in Oneida can be tricky. It is essential to first learn the numbers from 1 to 10.
+        Then you can use the following rules:
+      </Text>
+      <List>
+        <List.Item>11 - 19: the second digit comes first, followed by <i>yawa·lé·</i></List.Item>
+        <List.Item>21 - 29: <i>tewahsʌ</i> then the second digit</List.Item>
+        <List.Item>30 - 99: the first digit, <i>niwáhsʌ</i>, then the second digit</List.Item>
+        <List.Item>100 - 9999: the number of 100s, <i>tewʌʔnyáweluʔ</i>, then follow the rule above for the last 2 digits</List.Item>
+      </List>
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishOneida}
+        data={data}
+      />
+    </>
+  )
+}
+
+function AgeSection () {
+  return (
+    <>
+      <Heading id="age" level={2} variant="headlineS">
+        Learn: (to be) an age
+      </Heading>
+      <Text>
+        In Oneida, the more literal translation to say &quot;I am X years old&quot; is
+        &quot;I have crossed X winters&quot;.
+      </Text>
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={ohsliyakuJson}
+      />
+      <Text>
+        As a more concerete example, the Oneida translation for &quot;I am 35 years old&quot; is
+        &quot;35 naʔ tewakohsliyá·ku̲&quot;.
+      </Text>
+    </>
+  )
 }
 
 const getBreakdown = (data, key) =>

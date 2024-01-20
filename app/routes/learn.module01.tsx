@@ -29,12 +29,12 @@ import anuhteJson from "../data/anuhte.json";
 import { TextBreakdown } from "~/components/TextBreakdown";
 import { List } from "@/design/ui/list";
 import { Box } from "@/design/ui/box";
-import { EnglishNames } from "~/components/language/EnglishNames";
+import { EnglishNames } from "~/components/resources/EnglishNames";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { Pronominal, PronominalColor } from "~/components/Pronominal";
-import { PeopleResource } from "~/components/language/People";
+import { PeopleResource } from "~/components/resources/People";
 import { Heading } from "@/design/ui/heading";
-import { ParticlesTable } from "~/components/language/ParticlesTable";
+import { ParticlesTable } from "~/components/resources/ParticlesTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Letter } from "~/components/Letter";
 

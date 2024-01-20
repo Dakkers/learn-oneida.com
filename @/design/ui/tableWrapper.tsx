@@ -73,7 +73,16 @@ const columnsParadigmPurple: TableWrapperProps["columns"] = [
   EnglishCol,
   createOneidaCol('PP')
 ];
+const columnsEnglishOneida: TableWrapperProps["columns"] = [
+  EnglishCol,
+  {
+    accessorKey: "on",
+    cell:  TableWrapper.textArrayCell,
+    header: "Translation",
+}
+];
 
 TableWrapper.columnsParadigmRed = columnsParadigmRed;
 TableWrapper.columnsParadigmBlue = columnsParadigmBlue;
 TableWrapper.columnsParadigmPurple = columnsParadigmPurple;
+TableWrapper.columnsEnglishOneida = columnsEnglishOneida;

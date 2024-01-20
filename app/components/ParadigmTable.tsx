@@ -24,6 +24,7 @@ import {
   REF_VERB_MAP,
   formatTranslation,
   PRONOUN_MAP_EN_OBJECTIVE,
+  REF_VERB_PASTTENSE_MAP,
 } from "~/utils";
 import { BreakdownType, TextBreakdown } from "./TextBreakdown";
 import {
@@ -53,7 +54,7 @@ export function ParadigmTable({
   isTesting = false,
   translationFn,
 }: {
-  allowedPronouns: string[];
+  allowedPronouns?: Pronoun[];
   columnVisibility?: Partial<ColumnVisibility>;
   data: Data;
   isTesting?: boolean;
@@ -199,6 +200,7 @@ function TableRowWrapper({
     pronoun: PRONOUN_MAP_EN[row.pronoun],
     pronounObjective: PRONOUN_MAP_EN_OBJECTIVE[row.pronoun],
     refVerb: REF_VERB_MAP[row.pronoun],
+    refVerbPast: REF_VERB_PASTTENSE_MAP[row.pronoun],
     ...(context.translationFn
       ? context.translationFn({ pronoun: row.pronoun })
       : {}),
