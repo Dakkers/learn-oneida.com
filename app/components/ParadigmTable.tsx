@@ -3,9 +3,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/design/ui/dropdown-menu";
-import { Flex } from "@/design/ui/flex";
-import { Input } from "@/design/ui/input";
+} from "@/design/primitives/dropdown-menu";
+import { Flex } from "@/design/components/flex";
+import { Input } from "@/design/primitives/input";
 import {
   Table,
   TableBody,
@@ -13,7 +13,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/design/ui/table";
+} from "@/design/primitives/table";
 import { Settings } from "lucide-react";
 import React from "react";
 import {
@@ -33,12 +33,12 @@ import {
   FormField,
   FormItem,
   FormMessage,
-} from "@/design/ui/form";
+} from "@/design/primitives/form";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/design/ui/button";
-import { Notice } from "@/design/ui/notice";
+import { Button } from "@/design/primitives/button";
+import { Notice } from "@/design/primitives/notice";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()]))

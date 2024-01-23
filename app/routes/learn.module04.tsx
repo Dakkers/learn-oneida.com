@@ -1,14 +1,14 @@
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import dataLolJson from "../data/data-ese-is-here.json";
-import { Text } from "@/design/ui/text";
+import { Text } from "@/design/components/text";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/design/ui/accordion";
+} from "@/design/primitives/accordion";
 
 export const meta: MetaFunction = () => {
   return [
@@ -25,7 +25,7 @@ export default function LearnModule04() {
       </Text>
 
       <p className="mt-8 mb-4">
-        <strong>NOTE:</strong> This page is still under construction!
+        <b>NOTE:</b> This page is still under construction!
       </p>
 
       <Text>

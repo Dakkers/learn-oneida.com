@@ -1,4 +1,4 @@
-import { Text, TextProps } from "../design/ui/text";
+import { Text, TextProps } from "../design/components/text";
 
 export function TextArray({ children, ...props }: TextProps) {
   if (!Array.isArray(children)) {

@@ -1,4 +1,4 @@
-import { Text, TextProps } from "@/design/ui/text";
+import { Text, TextProps } from "@/design/components/text";
 import { cn } from "@/lib/utils";
 
 export type PronominalColor =

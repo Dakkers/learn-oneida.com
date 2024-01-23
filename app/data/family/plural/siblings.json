@@ -15,18 +15,18 @@
     },
     {
       "pronoun": "m",
-      "phrase": "huatahnuteleʔshú·ha",
-      "breakdown": [{ "text": "hu" }, "atahnuteleʔshú·ha"]
+      "phrase": "hutahnuteleʔshú·ha",
+      "breakdown": [{ "text": "hu" }, "tahnuteleʔshú·ha"]
     },
     {
       "pronoun": "f",
-      "phrase": "huatahnuteleʔshú·ha",
-      "breakdown": [{ "text": "hu" }, "atahnuteleʔshú·ha"]
+      "phrase": "hutahnuteleʔshú·ha",
+      "breakdown": [{ "text": "hu" }, "tahnuteleʔshú·ha"]
     },
     {
       "pronoun": "she_her",
-      "phrase": "kuatahnuteleʔshú·ha",
-      "breakdown": [{ "text": "ku" }, "atahnuteleʔshú·ha"]
+      "phrase": "kutahnuteleʔshú·ha",
+      "breakdown": [{ "text": "ku" }, "tahnuteleʔshú·ha"]
     }
   ]
 }

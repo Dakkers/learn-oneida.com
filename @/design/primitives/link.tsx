@@ -6,13 +6,10 @@ export interface LinkProps {
   href: string;
 }
 
-export function Link ({
-  children,
-  href,
-}: LinkProps) {
+export function Link({ children, href }: LinkProps) {
   return (
     <RemixLink className="text-blue-600 underline" to={href}>
       {children}
     </RemixLink>
-  )
+  );
 }

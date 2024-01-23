@@ -1,4 +1,7 @@
-import { TableWrapper, TableWrapperProps } from "@/design/ui/tableWrapper";
+import {
+  TableWrapper,
+  TableWrapperProps,
+} from "@/design/primitives/tableWrapper";
 
 const names = [
   { oneida: "Alʌt", en: "Aaron" },

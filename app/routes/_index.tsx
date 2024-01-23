@@ -1,7 +1,7 @@
-import { Flex } from "@/design/ui/flex";
-import { Heading } from "@/design/ui/heading";
-import { List } from "@/design/ui/list";
-import { Text } from "@/design/ui/text";
+import { Flex } from "@/design/components/flex";
+import { Heading } from "@/design/primitives/heading";
+import { List } from "@/design/primitives/list";
+import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {

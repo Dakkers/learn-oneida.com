@@ -1,8 +1,11 @@
-import { TableWrapper, TableWrapperProps } from "@/design/ui/tableWrapper";
+import {
+  TableWrapper,
+  TableWrapperProps,
+} from "@/design/primitives/tableWrapper";
 import { particleList } from "./particleList";
 import React from "react";
-import { Flex } from "@/design/ui/flex";
-import { Text } from "@/design/ui/text";
+import { Flex } from "@/design/components/flex";
+import { Text } from "@/design/components/text";
 
 type ParticlesGroup = "module01";
 
@@ -28,7 +31,7 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
             {(examples ?? []).map((ex, i) => (
               <Flex direction="column" gap={0} key={i}>
                 <Text>
-                  <strong>{ex.oneida}</strong>
+                  <b>{ex.oneida}</b>
                 </Text>
                 <Text>{ex.en}</Text>
               </Flex>

@@ -1,13 +1,6 @@
-import { Button } from "@/design/ui/button";
-import { Flex } from "@/design/ui/flex";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/design/ui/select";
-import { Text } from "@/design/ui/text";
+import { Button } from "@/design/primitives/button";
+import { Flex } from "@/design/components/flex";
+import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
 import React, { useId } from "react";
 import dataAttokhaJson from "../data/attokha.json";
@@ -25,6 +18,7 @@ import {
   singlePronouns,
 } from "~/utils";
 import sample from "lodash/sample";
+import { Heading } from "@/design/primitives/heading";
 
 export const meta: MetaFunction = () => {
   return [
@@ -63,12 +57,12 @@ export default function ToolsParadigm() {
 
   return (
     <div>
-      <Text as="h1" variant="title">
+      <Heading level={1} variant="headlineL">
         Paradigm Tester
-      </Text>
+      </Heading>
 
       <p className="mt-8 mb-4">
-        <strong>NOTE:</strong> This page is still under construction!
+        <b>NOTE:</b> This page is still under construction!
       </p>
 
       <Flex align="end" gap={2}>

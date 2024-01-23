@@ -1,6 +1,6 @@
-import { Flex } from "@/design/ui/flex";
-import { Notice } from "@/design/ui/notice";
-import { Separator } from "@/design/ui/separator";
+import { Flex } from "@/design/components/flex";
+import { Notice } from "@/design/primitives/notice";
+import { Separator } from "@/design/primitives/separator";
 import {
   Table,
   TableBody,
@@ -8,8 +8,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/design/ui/table";
-import { Text } from "@/design/ui/text";
+} from "@/design/primitives/table";
+import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import {
@@ -27,13 +27,13 @@ import lightbluePronominalsJson from "../data/lightblue-pronominals.json";
 import yatsJson from "../data/yats.json";
 import anuhteJson from "../data/anuhte.json";
 import { TextBreakdown } from "~/components/TextBreakdown";
-import { List } from "@/design/ui/list";
-import { Box } from "@/design/ui/box";
+import { List } from "@/design/primitives/list";
+import { Box } from "@/design/primitives/box";
 import { EnglishNames } from "~/components/resources/EnglishNames";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { Pronominal, PronominalColor } from "~/components/Pronominal";
 import { PeopleResource } from "~/components/resources/People";
-import { Heading } from "@/design/ui/heading";
+import { Heading } from "@/design/primitives/heading";
 import { ParticlesTable } from "~/components/resources/ParticlesTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Letter } from "~/components/Letter";
@@ -53,7 +53,7 @@ export default function LearnModule01() {
       </Heading>
       <Box py={4}>
         <Notice intent="warning">
-          <strong>NOTE:</strong> This page is still under construction!
+          <b>NOTE:</b> This page is still under construction!
         </Notice>
       </Box>
       <Flex direction="column" gap={4}>
@@ -90,22 +90,9 @@ export default function LearnModule01() {
 
           <TOC.Item label="Glottal stops" value="glottal" />
           <TOC.Item label="The letter H" value="letter-h" />
-          <TOC.Item
-            label={
-              <>
-                <i>yats</i>: to call someone by a name
-              </>
-            }
-            value="yats"
-          />
-          <TOC.Item
-            label={
-              <>
-                <i>anúhteʔ</i>: to know, to be in the know
-              </>
-            }
-            value="anuhte"
-          />
+          <TOC.Item.Phrase label='to call someone by a name' word='yats' value='yats' />
+          <TOC.Item.Phrase label='to know, to be in the know' word='anúhteʔ' value='anúhte' />
+
           <TOC.Item label="Particles" value="particles" />
 
           <TOC.Item label="People" value="people-resource">
@@ -134,8 +121,8 @@ export default function LearnModule01() {
         </Text>
         <EnglishPronounsTable />
         <Text>
-          Oneida has two kinds of pronouns: <strong>standalone</strong> and{" "}
-          <strong>bound</strong>.
+          Oneida has two kinds of pronouns: <b>standalone</b> and{" "}
+          <b>bound</b>.
         </Text>
 
         <Heading id="standalone-pronouns" level={3} variant="titleM">
@@ -169,7 +156,7 @@ export default function LearnModule01() {
         </Heading>
         <Notice>
           From here on, we will refer to pronouns as{" "}
-          <strong>pronominals</strong>, which is an abbreviation of
+          <b>pronominals</b>, which is an abbreviation of
           &quot;pronominal prefix&quot;.
         </Notice>
 
@@ -180,17 +167,17 @@ export default function LearnModule01() {
           The table below displays the full list of subjective (red)
           pronominals. Each column represents a different &quot;stem&quot;,
           which is the first letter in a root word. For example, the root word{" "}
-          <i>nuwehseʔ</i> (&quot;to like&quot;) starts with the letter
+          <b>nuwehseʔ</b> (&quot;to like&quot;) starts with the letter
           &quot;N&quot; which is a consonant, so we use the &quot;C-stem&quot;
-          column. The root word <i>attokhaʔ</i> (&quot;to be wise&quot;) starts
+          column. The root word <b>attokhaʔ</b> (&quot;to be wise&quot;) starts
           with the letter &quot;A&quot;, so we use the &quot;A-stem&quot;
           column.
         </Text>
         <Text>
-          Attaching &quot;k&quot; to the start of the root word <i>nuwehseʔ</i>{" "}
-          results in <i>knú·wehseʔ</i> which means &quot;I like it&quot;.
-          Attaching &quot;l&quot; to the start of the root word <i>attokhaʔ</i>{" "}
-          gives us <i>lattókhaʔ</i> wich means &quot;he is wise&quot;.
+          Attaching &quot;k&quot; to the start of the root word <b>nuwehseʔ</b>{" "}
+          results in <b>knú·wehseʔ</b> which means &quot;I like it&quot;.
+          Attaching &quot;l&quot; to the start of the root word <b>attokhaʔ</b>{" "}
+          gives us <b>lattókhaʔ</b> wich means &quot;he is wise&quot;.
         </Text>
         <Text>
           The small numbers in the table cells represent exceptions – Oneida is
@@ -205,10 +192,10 @@ export default function LearnModule01() {
         </Text>
         <Text>
           As an example, let&lsquo;s look at the A-stem column, where the root
-          word is <i>attokhaʔ</i>. The translation for &quot;she is wise&quot;
-          without this replacement rule would be <i>yuattokhaʔ</i>.{" "}
+          word is <b>attokhaʔ</b>. The translation for &quot;she is wise&quot;
+          without this replacement rule would be <b>yuattokhaʔ</b>.{" "}
           <Letter>yua</Letter> is not a sound in Oneida so we instead change it
-          to <Letter>yu</Letter>. Therefore the translation is <i>yuttókhaʔ</i>.
+          to <Letter>yu</Letter>. Therefore the translation is <b>yuttókhaʔ</b>.
         </Text>
 
         <Text variant="labelL">Exception 2</Text>
@@ -216,8 +203,8 @@ export default function LearnModule01() {
           The <Letter>h</Letter> is not written or pronounced when nothing is
           attached in front of the pronominal. However, when anything is
           attached to the front of the pronominal, the <Letter>h</Letter> is
-          written and pronounced. Example: <i>snú·wehse̲ʔ</i> and{" "}
-          <i>yah tehsnú·wehse̲ʔ</i>.
+          written and pronounced. Example: <b>snú·wehse̲ʔ</b> and{" "}
+          <b>yah tehsnú·wehse̲ʔ</b>.
         </Text>
 
         <Text variant="labelL">Exception 3</Text>
@@ -234,8 +221,8 @@ export default function LearnModule01() {
           The <Letter>ik</Letter> prefix is attached to most (but not all)
           single syllable roots. The <Letter>i</Letter> in <Letter>ik</Letter>{" "}
           is used only occasionally. The <Letter>i</Letter> disappears when
-          anything is attached in front of the prefix. Example: <i>íkyʌheʔ</i>{" "}
-          and <i>yah té·kyʌheʔ</i>.
+          anything is attached in front of the prefix. Example: <b>íkyʌheʔ</b>{" "}
+          and <b>yah té·kyʌheʔ</b>.
         </Text>
 
         <Text variant="labelL">Exception 5</Text>
@@ -245,8 +232,8 @@ export default function LearnModule01() {
           and <Letter>i</Letter>. The <Letter>t</Letter> disappears and is
           replaced by <Letter>h</Letter> when anything is attached in front of
           the prefix. Example:
-          <i>tsyʌtelíˍ</i> and <i>yah tehsyʌtelíˍ</i>; <i>tsí·tlu̲ʔ</i> and{" "}
-          <i>yah tehsí·tlu̲ʔ</i>.
+          <b>tsyʌtelíˍ</b> and <b>yah tehsyʌtelíˍ</b>; <b>tsí·tlu̲ʔ</b> and{" "}
+          <b>yah tehsí·tlu̲ʔ</b>.
         </Text>
 
         <Text variant="labelL">Exception 6</Text>
@@ -254,7 +241,7 @@ export default function LearnModule01() {
           The prefix <Letter>it</Letter> is attached to all roots beginning with{" "}
           <Letter>hs</Letter> and the <Letter>i</Letter>
           disappears when anything is attached in front of the prefix. Example:{" "}
-          <i>íthsaʔas</i> and <i>yah tethsáʔas</i>
+          <b>íthsaʔas</b> and <b>yah tethsáʔas</b>
         </Text>
 
         <Separator />
@@ -313,35 +300,35 @@ export default function LearnModule01() {
           Short stress
         </Heading>
         <Text>
-          <strong>Short stress</strong> is indicated by an upstress mark &nbsp;
+          <b>Short stress</b> is indicated by an upstress mark &nbsp;
           <Letter> ́</Letter>&nbsp; over the vowel being stressed. Vowels with
           short stress are pronounced slightly louder and with a rising tone of
           voice. The vowel is the same length as other vowels in the word.
         </Text>
         <Text>
-          Examples: <i>kátsheʔ</i>, <i>kákhwa̲ʔ</i>, <i>kítkit</i>, <i>ohʌtú</i>,{" "}
-          <i>ohutsyakú</i>, <i>olihwiyó</i>, <i>ohwístaʔ</i>, <i>áhtaʔ</i>.
+          Examples: <b>kátsheʔ</b>, <b>kákhwa̲ʔ</b>, <b>kítkit</b>, <b>ohʌtú</b>,{" "}
+          <b>ohutsyakú</b>, <b>olihwiyó</b>, <b>ohwístaʔ</b>, <b>áhtaʔ</b>.
         </Text>
         <Heading id="long-stress" level={3} variant="titleM">
           Long stress
         </Heading>
         <Text>
-          <strong>Long stress</strong> is indicated by an upstress mark &nbsp;
+          <b>Long stress</b> is indicated by an upstress mark &nbsp;
           <Letter> ́</Letter>&nbsp; over the vowel followed by a middle dot{" "}
           <Letter>·</Letter> or a colon <Letter>:</Letter>. Vowels with a long
           stress are pronounced slightly louder and noticeably longer than other
           vowels in the same word.
         </Text>
         <Text>
-          Examples: <i>owi·lá·</i>, <i>onú·ta</i>, <i>ola·ná·</i>,{" "}
-          <i>nahté·shuʔ</i>, <i>kekhsá·</i>, <i>niʔí·</i>.
+          Examples: <b>owi·lá·</b>, <b>onú·ta</b>, <b>ola·ná·</b>,{" "}
+          <b>nahté·shuʔ</b>, <b>kekhsá·</b>, <b>niʔí·</b>.
         </Text>
 
         <Heading id="length" level={3} variant="titleM">
           Length
         </Heading>
         <Text>
-          <strong>Length</strong> is indicated by a middle dot{" "}
+          <b>Length</b> is indicated by a middle dot{" "}
           <Letter>·</Letter> or a colon <Letter>:</Letter>. Vowels are
           noticeably longer than other vowels in the same word.
         </Text>
@@ -367,7 +354,7 @@ export default function LearnModule01() {
           raise their inflection to change a statement into a question, as in:
           “He likes her.” versus “He likes her?”. Onʌyoteʔa·ká· speakers should
           not raise their inflection when asking questions, as in:{" "}
-          <i>Shakonú·wehseʔ kʌ né· akaulhá·</i>
+          <b>Shakonú·wehseʔ kʌ né· akaulhá·</b>
         </Text>
 
         <Heading id="where-stress" level={3} variant="titleM">
@@ -387,7 +374,7 @@ export default function LearnModule01() {
         </Text>
         <Text>
           The most frequent placement for stress is on the second-to-last
-          syllable of a word, for example <i>niwáhsʌ</i>. However, there are
+          syllable of a word, for example <b>niwáhsʌ</b>. However, there are
           many exceptions to this!
         </Text>
 
@@ -426,9 +413,9 @@ export default function LearnModule01() {
         </Text>
         <Text>
           In Onʌyoteʔa·ká· we write all the Hs that follow Ks and Ts. Example:{" "}
-          <i>khenú·wehseʔ</i> and <i>thikʌ́</i>. We also write most of the Hs
+          <b>khenú·wehseʔ</b> and <b>thikʌ́</b>. We also write most of the Hs
           that occur after a vowel and before a consonant. Examples:{" "}
-          <i>yehyatúkhwa̲ʔ</i>, <i>onikwʌ́htalaʔ</i>, <i>kanúhsaʔ</i>. Not all of
+          <b>yehyatúkhwa̲ʔ</b>, <b>onikwʌ́htalaʔ</b>, <b>kanúhsaʔ</b>. Not all of
           the Hs that are spoken in a word get written by all speakers, however.
           It seems to be a matter of personal preference.
         </Text>
@@ -442,7 +429,7 @@ export default function LearnModule01() {
           prepausal (but it doesn&lsquo;t always occur on prepausal words). A
           prepausal word is a word that occurs at the end of a sentence or is
           the only word in a sentence. This is written using an underline under
-          the vowel that is whispered, for example <i>áhsʌ̲</i>.
+          the vowel that is whispered, for example <b>áhsʌ̲</b>.
         </Text>
         <Text>
           The alternative to prepausal is medial. You may see the abbreviations
@@ -451,16 +438,16 @@ export default function LearnModule01() {
         <Text>
           A word that is in prepausal form may have its stress placed on a
           different syllable than its corresponding medial form. For example:{" "}
-          <i>kahyatuhslí né· thíkʌ̲</i> &nbsp; vs. &nbsp;{" "}
-          <i>hʌ, kahyatúhsehli̲</i>.
+          <b>kahyatuhslí né· thíkʌ̲</b> &nbsp; vs. &nbsp;{" "}
+          <b>hʌ, kahyatúhsehli̲</b>.
         </Text>
         <Text>
           In this curriculum all words are given in medial form unless they
           appear prepausal in the dialogue examples. As with the Hs, beginning
           students must listen closely to pick up the pronunciation to know when
           to use it effectively{" "}
-          <strong>as not all prepausal words have whispered endings</strong>.
-          For example, <i>úska</i> is fully pronounced in prepausal form.
+          <b>as not all prepausal words have whispered endings</b>.
+          For example, <b>úska</b> is fully pronounced in prepausal form.
         </Text>
 
         <Heading id="yats" level={2} variant="headlineS">
@@ -468,9 +455,9 @@ export default function LearnModule01() {
         </Heading>
         <Text>
           Let&lsquo;s learn our first phrase!{" "}
-          <strong>
+          <b>
             Bob ni· <Pronominal color="p">yuk</Pronominal>yáts
-          </strong>{" "}
+          </b>{" "}
           translates to &quot;Bob is my name&quot;. It actually more literally
           translates to &quot;They call me Bob&quot;. Notice the purple text in
           the phrase, <Letter>yuk</Letter>. This is from our Purple Pronominals
@@ -482,7 +469,7 @@ export default function LearnModule01() {
         <Text>
           <Letter>yats</Letter> is an example of a word that &quot;uses purple
           pronominals&quot;. Different root words in Oneida use different color
-          pronominals. Some words, such as <i>nú·wehseʔ</i>, can use multiple
+          pronominals. Some words, such as <b>nú·wehseʔ</b>, can use multiple
           different color pronominals. Different colors can change the meaning
           of a root word. We&lsquo;ll learn more about this in module 2.
         </Text>

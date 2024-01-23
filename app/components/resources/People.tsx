@@ -1,7 +1,10 @@
-import { TableWrapper, TableWrapperProps } from "@/design/ui/tableWrapper";
+import {
+  TableWrapper,
+  TableWrapperProps,
+} from "@/design/primitives/tableWrapper";
 import { TextBreakdown } from "../TextBreakdown";
-import { Heading } from "@/design/ui/heading";
-import { Text } from "@/design/ui/text";
+import { Heading } from "@/design/primitives/heading";
+import { Text } from "@/design/components/text";
 
 const basicColumns: TableWrapperProps["columns"] = [
   {
@@ -64,11 +67,11 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
         Older people
       </Heading>
       <Text>
-        <strong>Note</strong>: These words do not mean "old people", "seniors",
+        <b>Note</b>: These words do not mean "old people", "seniors",
         "elders", etc. They mean people that are older than the speaker. Thus,{" "}
-        <strong>
+        <b>
           these words are not commonly used in this context (as nouns)
-        </strong>
+        </b>
         . Instead, they are used as verbs. You can learn more about this in the
         "Age" resource which is part of module 2.
       </Text>

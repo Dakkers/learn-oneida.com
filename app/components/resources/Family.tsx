@@ -1,5 +1,3 @@
-
-
 import motherJson from "../../data/family/mother.json";
 import grandmotherJson from "../../data/family/grandmother.json";
 import auntJson from "../../data/family/aunt.json";
@@ -34,28 +32,31 @@ import childrenJson from "../../data/family/plural/children.json";
 import grandparentsJson from "../../data/family/plural/grandparents.json";
 import grandchildrenJson from "../../data/family/plural/grandchildren.json";
 
-import olderSiblingsJson from '../../data/family/plural/siblings-older.json'
-import youngerSiblingsJson from '../../data/family/plural/siblings-younger.json'
-import unclesAuntsJson from '../../data/family/plural/uncles-aunts.json'
-import niblingsJson from '../../data/family/plural/niblings.json'
+import olderSiblingsJson from "../../data/family/plural/siblings-older.json";
+import youngerSiblingsJson from "../../data/family/plural/siblings-younger.json";
+import unclesAuntsJson from "../../data/family/plural/uncles-aunts.json";
+import niblingsJson from "../../data/family/plural/niblings.json";
 
-import siblingsJson from '../../data/family/plural/siblings.json'
-import cousinsJson from '../../data/family/plural/cousins.json'
-import friendsJson from '../../data/family/plural/friends.json'
+import siblingsJson from "../../data/family/plural/siblings.json";
+import cousinsJson from "../../data/family/plural/cousins.json";
+import friendsJson from "../../data/family/plural/friends.json";
 
-import { Heading } from "@/design/ui/heading";
-import { TableWrapper } from "@/design/ui/tableWrapper";
-import { Text } from "@/design/ui/text";
+import { Heading } from "@/design/primitives/heading";
+import { TableWrapper } from "@/design/primitives/tableWrapper";
+import { Text } from "@/design/components/text";
 import { TextBreakdown } from "../TextBreakdown";
-import { Pronoun } from "~/utils";
+import { PRONOUN_MAP_EN_POSSESSIVE, Pronoun } from "~/utils";
+import { TableOfContents as TOC } from "../TableOfContents";
 
-export function FamilyResource () {
+export function FamilyResource({ level = 1 }: {
+  level: 1 | 2;
+}) {
   return (
     <>
-      <Heading id="family-members" level={2} variant="headlineS">
+      <Heading id="family-members" level={level} variant="headlineS">
         Family Members
       </Heading>
-      <Heading id="female-relatives-older" level={3} variant="titleM">
+      <Heading id="female-relatives-older" level={level + 1} variant="titleM">
         Older Female Relatives
       </Heading>
       <RelativesTable
@@ -67,7 +68,7 @@ export function FamilyResource () {
         ]}
       />
 
-      <Heading id="female-relatives-younger" level={3} variant="titleM">
+      <Heading id="female-relatives-younger" level={level + 1} variant="titleM">
         Younger Female Relatives
       </Heading>
       <RelativesTable
@@ -83,7 +84,7 @@ export function FamilyResource () {
           },
         ]}
       />
-      <Heading id="male-relatives-older" level={3} variant="titleM">
+      <Heading id="male-relatives-older" level={level + 1} variant="titleM">
         Older Male Relatives
       </Heading>
       <RelativesTable
@@ -94,7 +95,7 @@ export function FamilyResource () {
           { data: olderBrotherJson, en: "older brother", oneida: "ʔkʌha" },
         ]}
       />
-      <Heading id="male-relatives-younger" level={3} variant="titleM">
+      <Heading id="male-relatives-younger" level={level + 1} variant="titleM">
         Younger Male Relatives
       </Heading>
       <RelativesTable
@@ -111,7 +112,7 @@ export function FamilyResource () {
         ]}
       />
 
-      <Heading id="cousins" level={3} variant="titleM">
+      <Heading id="cousins" level={level + 1} variant="titleM">
         Cousins & Friends
       </Heading>
       <RelativesTable
@@ -122,7 +123,7 @@ export function FamilyResource () {
         pronouns={["soni", "u2", "2m", "2f", "us", "yall"]}
       />
 
-      <Heading id="family" level={3} variant="titleM">
+      <Heading id="family" level={level + 1} variant="titleM">
         Family
       </Heading>
       <RelativesTable
@@ -142,7 +143,7 @@ export function FamilyResource () {
         ]}
       />
 
-      <Heading id="family" level={3} variant="titleM">
+      <Heading id="siblings" level={level + 1} variant="titleM">
         Siblings, Related
       </Heading>
       <RelativesTable
@@ -169,23 +170,43 @@ export function FamilyResource () {
         ]}
       />
 
-      <Heading id="multiple-family-members" level={3} variant="titleM">
+      <Heading id="multiple-family-members" level={level + 1} variant="titleM">
         Multiple Family Members
       </Heading>
       <RelativesTable
         datasets={[
           { data: parentsJson, en: "parents", oneida: "yʌha" },
-          { data: childrenJson, en: "children", oneida: "yʌʔokhua" },
+          { data: childrenJson, en: "children", oneida: "yʌʔokuha" },
           { data: grandparentsJson, en: "grandparents", oneida: "hsotha" },
-          { data: grandchildrenJson, en: "grandchildren", oneida: "atleʔokuha" },
+          {
+            data: grandchildrenJson,
+            en: "grandchildren",
+            oneida: "atleʔokuha",
+          },
         ]}
       />
       <RelativesTable
         datasets={[
-          { data: olderSiblingsJson, en: "older siblings", oneida: "ʔkʌʔokuha" },
-          { data: youngerSiblingsJson, en: "younger siblings", oneida: "ʔkʌʔokuha" },
-          { data: unclesAuntsJson, en: "uncles & aunts", oneida: "nulha·shuha" },
-          { data: niblingsJson, en: "nephews & nieces", oneida: "uhwatʌʔokuha" },
+          {
+            data: olderSiblingsJson,
+            en: "older siblings",
+            oneida: "ʔkʌʔokuha",
+          },
+          {
+            data: youngerSiblingsJson,
+            en: "younger siblings",
+            oneida: "ʔkʌʔokuha",
+          },
+          {
+            data: unclesAuntsJson,
+            en: "uncles & aunts",
+            oneida: "nulha·shuha",
+          },
+          {
+            data: niblingsJson,
+            en: "nephews & nieces",
+            oneida: "uhwatʌʔokuha",
+          },
         ]}
       />
       <RelativesTable
@@ -194,7 +215,7 @@ export function FamilyResource () {
           { data: cousinsJson, en: "cousins", oneida: "ʔkʌʔokuha" },
           { data: friendsJson, en: "friends", oneida: "nulha·shuha" },
         ]}
-        pronouns = {["i", "u", "m", "f", "she_her"]}
+        pronouns={["i", "u", "m", "f", "she_her"]}
       />
     </>
   );
@@ -209,24 +230,33 @@ function RelativesTable({
 }) {
   return (
     <TableWrapper
-      columns={datasets.map((ds) => ({
-        accessorKey: ds.en,
-        cell: (value) => (
-          <TextBreakdown
-            breakdown={value}
-            prefix={ds.data.prefix}
-            typeFallback={ds.data.type}
-          />
-        ),
-        header: (
-          <>
-            <Text>{ds.en}</Text>
-            <Text>
-              <strong>{ds.oneida}</strong>
-            </Text>
-          </>
-        ),
-      }))}
+      columns={[
+        {
+          accessorKey: "pronoun",
+          cell: (value) => (
+            <Text>{PRONOUN_MAP_EN_POSSESSIVE[value]}</Text>
+          ),
+          header: "Pronoun (en)",
+        },
+        ...datasets.map((ds) => ({
+          accessorKey: ds.en,
+          cell: (value) => (
+            <TextBreakdown
+              breakdown={value}
+              prefix={ds.data.prefix}
+              typeFallback={ds.data.type}
+            />
+          ),
+          header: (
+            <>
+              <Text>{ds.en}</Text>
+              <Text>
+                <b>{ds.oneida}</b>
+              </Text>
+            </>
+          ),
+        }))
+      ]}
       data={pronouns.map((pronoun) => {
         const result = { pronoun };
         for (const ds of datasets) {
@@ -238,4 +268,19 @@ function RelativesTable({
       })}
     />
   );
+}
+
+export function FamilyTableOfContentItems () {
+  return (
+    <>
+      <TOC.Item label='Female relatives (older)' value="female-relatives-older" />
+      <TOC.Item label='Female relatives (younger)' value="female-relatives-younger" />
+      <TOC.Item label='Male relatives (older)' value="male-relatives-older" />
+      <TOC.Item label='Male relatives (younger)' value="male-relatives-younger" />
+      <TOC.Item label='Cousins & friends' value="cousins" />
+      <TOC.Item label='Family' value="family" />
+      <TOC.Item label='Siblings' value="siblings" />
+      <TOC.Item label='Multiple family members' value="multiple-family-members" />
+    </>
+  )
 }

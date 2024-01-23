@@ -1,5 +1,5 @@
-import { Link } from "@/design/ui/link";
-import { List } from "@/design/ui/list";
+import { Link } from "@/design/primitives/link";
+import { List } from "@/design/primitives/list";
 import React from "react";
 
 interface TableOfContentsProps {
@@ -46,7 +46,7 @@ TableOfContentsItem.Phrase = function TocItemPhrase({ label, word, value }) {
     <TableOfContentsItem
       label={
         <>
-          <i>{word}</i>: {label}
+          <b>{word}</b> — {label}
         </>
       }
       value={value}
