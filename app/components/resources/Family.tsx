@@ -48,9 +48,7 @@ import { TextBreakdown } from "../TextBreakdown";
 import { PRONOUN_MAP_EN_POSSESSIVE, Pronoun } from "~/utils";
 import { TableOfContents as TOC } from "../TableOfContents";
 
-export function FamilyResource({ level = 1 }: {
-  level: 1 | 2;
-}) {
+export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
   return (
     <>
       <Heading id="family-members" level={level} variant="headlineS">
@@ -233,9 +231,7 @@ function RelativesTable({
       columns={[
         {
           accessorKey: "pronoun",
-          cell: (value) => (
-            <Text>{PRONOUN_MAP_EN_POSSESSIVE[value]}</Text>
-          ),
+          cell: (value) => <Text>{PRONOUN_MAP_EN_POSSESSIVE[value]}</Text>,
           header: "Pronoun (en)",
         },
         ...datasets.map((ds) => ({
@@ -255,7 +251,7 @@ function RelativesTable({
               </Text>
             </>
           ),
-        }))
+        })),
       ]}
       data={pronouns.map((pronoun) => {
         const result = { pronoun };
@@ -270,17 +266,29 @@ function RelativesTable({
   );
 }
 
-export function FamilyTableOfContentItems () {
+export function FamilyTableOfContentItems() {
   return (
     <>
-      <TOC.Item label='Female relatives (older)' value="female-relatives-older" />
-      <TOC.Item label='Female relatives (younger)' value="female-relatives-younger" />
-      <TOC.Item label='Male relatives (older)' value="male-relatives-older" />
-      <TOC.Item label='Male relatives (younger)' value="male-relatives-younger" />
-      <TOC.Item label='Cousins & friends' value="cousins" />
-      <TOC.Item label='Family' value="family" />
-      <TOC.Item label='Siblings' value="siblings" />
-      <TOC.Item label='Multiple family members' value="multiple-family-members" />
+      <TOC.Item
+        label="Female relatives (older)"
+        value="female-relatives-older"
+      />
+      <TOC.Item
+        label="Female relatives (younger)"
+        value="female-relatives-younger"
+      />
+      <TOC.Item label="Male relatives (older)" value="male-relatives-older" />
+      <TOC.Item
+        label="Male relatives (younger)"
+        value="male-relatives-younger"
+      />
+      <TOC.Item label="Cousins & friends" value="cousins" />
+      <TOC.Item label="Family" value="family" />
+      <TOC.Item label="Siblings" value="siblings" />
+      <TOC.Item
+        label="Multiple family members"
+        value="multiple-family-members"
+      />
     </>
-  )
+  );
 }

@@ -90,8 +90,16 @@ export default function LearnModule01() {
 
           <TOC.Item label="Glottal stops" value="glottal" />
           <TOC.Item label="The letter H" value="letter-h" />
-          <TOC.Item.Phrase label='to call someone by a name' word='yats' value='yats' />
-          <TOC.Item.Phrase label='to know, to be in the know' word='anúhteʔ' value='anúhte' />
+          <TOC.Item.Phrase
+            label="to call someone by a name"
+            word="yats"
+            value="yats"
+          />
+          <TOC.Item.Phrase
+            label="to know, to be in the know"
+            word="anúhteʔ"
+            value="anúhte"
+          />
 
           <TOC.Item label="Particles" value="particles" />
 
@@ -121,8 +129,7 @@ export default function LearnModule01() {
         </Text>
         <EnglishPronounsTable />
         <Text>
-          Oneida has two kinds of pronouns: <b>standalone</b> and{" "}
-          <b>bound</b>.
+          Oneida has two kinds of pronouns: <b>standalone</b> and <b>bound</b>.
         </Text>
 
         <Heading id="standalone-pronouns" level={3} variant="titleM">
@@ -155,9 +162,8 @@ export default function LearnModule01() {
           Pronominals
         </Heading>
         <Notice>
-          From here on, we will refer to pronouns as{" "}
-          <b>pronominals</b>, which is an abbreviation of
-          &quot;pronominal prefix&quot;.
+          From here on, we will refer to pronouns as <b>pronominals</b>, which
+          is an abbreviation of &quot;pronominal prefix&quot;.
         </Notice>
 
         <Heading id="red-pronominals" level={3} variant="titleM">
@@ -328,9 +334,9 @@ export default function LearnModule01() {
           Length
         </Heading>
         <Text>
-          <b>Length</b> is indicated by a middle dot{" "}
-          <Letter>·</Letter> or a colon <Letter>:</Letter>. Vowels are
-          noticeably longer than other vowels in the same word.
+          <b>Length</b> is indicated by a middle dot <Letter>·</Letter> or a
+          colon <Letter>:</Letter>. Vowels are noticeably longer than other
+          vowels in the same word.
         </Text>
         <Text>
           Although people from the southern U.S. use long vowels in their
@@ -446,8 +452,8 @@ export default function LearnModule01() {
           appear prepausal in the dialogue examples. As with the Hs, beginning
           students must listen closely to pick up the pronunciation to know when
           to use it effectively{" "}
-          <b>as not all prepausal words have whispered endings</b>.
-          For example, <b>úska</b> is fully pronounced in prepausal form.
+          <b>as not all prepausal words have whispered endings</b>. For example,{" "}
+          <b>úska</b> is fully pronounced in prepausal form.
         </Text>
 
         <Heading id="yats" level={2} variant="headlineS">

@@ -1,6 +1,6 @@
 import { unwhisperWord } from "./words";
 
-export function translateNumber (value: string): string {
+export function translateNumber(value: string): string {
   if (!value) {
     return "";
   }

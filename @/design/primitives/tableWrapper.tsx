@@ -50,7 +50,11 @@ export function TableWrapper({ columns, data }: TableWrapperProps) {
 }
 
 TableWrapper.textArrayCell = (value) => <TextArray>{value}</TextArray>;
-TableWrapper.textArrayCellBold = (value) => <TextArray><b>{value}</b></TextArray>;
+TableWrapper.textArrayCellBold = (value) => (
+  <TextArray>
+    <b>{value}</b>
+  </TextArray>
+);
 
 const EnglishCol = {
   accessorKey: "en",
@@ -66,22 +70,18 @@ const createOneidaCol = (typeFallback: BreakdownType) => ({
   header: "Translation",
 });
 
-const pronounColumns: TableWrapperProps['columns'] = [
+const pronounColumns: TableWrapperProps["columns"] = [
   {
     accessorKey: "pronoun",
-    cell: (value) => (
-      <Text>{PRONOUN_MAP_EN[value]}</Text>
-    ),
+    cell: (value) => <Text>{PRONOUN_MAP_EN[value]}</Text>,
     header: "Pronoun (en)",
   },
   {
     accessorKey: "pronoun",
-    cell: (value) => (
-      <Text>{PRONOUN_MAP_ONEIDA[value]}</Text>
-    ),
+    cell: (value) => <Text>{PRONOUN_MAP_ONEIDA[value]}</Text>,
     header: "Pronoun (one)",
   },
-]
+];
 
 const columnsParadigmRed: TableWrapperProps["columns"] = [
   EnglishCol,

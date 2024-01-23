@@ -9,7 +9,7 @@ import {
   SelectValue,
 } from "@/design/primitives/select";
 
-export function Select ({
+export function Select({
   label,
   onChange,
   options,

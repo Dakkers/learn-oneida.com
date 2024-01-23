@@ -65,7 +65,11 @@ export default function ToolsClock() {
 
           <Flex direction="column" gap={2}>
             <Text>&nbsp;</Text>
-            <Button onClick={() => setTranslatedValue(doTheTranslate(hour, minute, period))}>
+            <Button
+              onClick={() =>
+                setTranslatedValue(doTheTranslate(hour, minute, period))
+              }
+            >
               Translate
             </Button>
           </Flex>
@@ -84,30 +88,29 @@ export default function ToolsClock() {
   );
 }
 
-function doTheTranslate(
-  hour: string,
-  minute: string,
-  period: string
-) {
-  if (hour === '12' && minute === '00') {
-    return period === 'AM' ? ['ahsútha'] : ['ʌtí'];
+function doTheTranslate(hour: string, minute: string, period: string) {
+  if (hour === "12" && minute === "00") {
+    return period === "AM" ? ["ahsútha"] : ["ʌtí"];
   }
   const minutesVal = parseInt(minute);
 
-  const hourPart = `${translateNumber(hour)} niyohwistá·e`
-  const minutePart = minutesVal === 0 ? '' : `${translateNumber(minute)} nikahí·kalat yotukóhtu`
-  const periodPart = period === 'AM' ? "astéhtsiʔ" : "yotukóhtu ʌ́ti"
+  const hourPart = `${translateNumber(hour)} niyohwistá·e`;
+  const minutePart =
+    minutesVal === 0 ? "" : `${translateNumber(minute)} nikahí·kalat yotukóhtu`;
+  const periodPart = period === "AM" ? "astéhtsiʔ" : "yotukóhtu ʌ́ti";
 
-  const result = [
-    `${minutePart} ${hourPart} ${periodPart}`
-  ];
+  const result = [`${minutePart} ${hourPart} ${periodPart}`];
 
   if (minutesVal >= 30) {
     const minutesDiff = 60 - minutesVal;
-    const hourPart = `${translateNumber((parseInt(hour) + 1).toString())} niyohwistá·e`
-    const minutePart = `${translateNumber(minutesDiff.toString())} nikahí·kalat tyono·lúhe`
-    const periodPart = period === 'AM' ? "astéhtsiʔ" : "yotukóhtu ʌ́ti"
-    result.push(`${minutePart} ${hourPart} ${periodPart}`)
+    const hourPart = `${translateNumber(
+      (parseInt(hour) + 1).toString()
+    )} niyohwistá·e`;
+    const minutePart = `${translateNumber(
+      minutesDiff.toString()
+    )} nikahí·kalat tyono·lúhe`;
+    const periodPart = period === "AM" ? "astéhtsiʔ" : "yotukóhtu ʌ́ti";
+    result.push(`${minutePart} ${hourPart} ${periodPart}`);
   }
 
   return result.map((v) => unwhisperWord(v).trim());

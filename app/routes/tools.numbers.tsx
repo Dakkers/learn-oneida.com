@@ -27,8 +27,8 @@ export default function ToolsNumbers() {
       </Text>
 
       <p className="mt-8 mb-4">
-        <b>NOTE:</b> This page is still under construction! Only
-        numbers up to 9,999 are supported.
+        <b>NOTE:</b> This page is still under construction! Only numbers up to
+        9,999 are supported.
       </p>
 
       <Flex direction="column" gap={2}>

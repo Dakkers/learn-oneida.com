@@ -3,7 +3,7 @@ const WHISPER_REGEX = new RegExp(WHISPER_CHAR, "g");
 
 export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
   if (!word) {
-    return '';
+    return "";
   }
 
   const vowels = ["a", "e", "i", "o", "u", "ʌ"];

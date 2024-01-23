@@ -67,12 +67,10 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
         Older people
       </Heading>
       <Text>
-        <b>Note</b>: These words do not mean "old people", "seniors",
-        "elders", etc. They mean people that are older than the speaker. Thus,{" "}
-        <b>
-          these words are not commonly used in this context (as nouns)
-        </b>
-        . Instead, they are used as verbs. You can learn more about this in the
+        <b>Note</b>: These words do not mean "old people", "seniors", "elders",
+        etc. They mean people that are older than the speaker. Thus,{" "}
+        <b>these words are not commonly used in this context (as nouns)</b>.
+        Instead, they are used as verbs. You can learn more about this in the
         "Age" resource which is part of module 2.
       </Text>
       <TableWrapper columns={basicColumns} data={dataOlderPeople} />

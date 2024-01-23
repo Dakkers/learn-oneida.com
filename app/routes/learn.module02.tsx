@@ -42,7 +42,10 @@ import { PronominalColor } from "~/components/Pronominal";
 import { List } from "@/design/primitives/list";
 import { Letter } from "~/components/Letter";
 import _ from "lodash";
-import { FamilyResource, FamilyTableOfContentItems } from "~/components/resources/Family";
+import {
+  FamilyResource,
+  FamilyTableOfContentItems,
+} from "~/components/resources/Family";
 import { ParadigmTable } from "~/components/ParadigmTable";
 
 export const meta: MetaFunction = () => {
@@ -81,44 +84,61 @@ export default function LearnModule02() {
               <TOC.Item label="Purple pronominals" value="new-verbs-purple" />
             </TOC.Section>
           </TOC.Item>
-          <TOC.Item label='Reflexive' value='reflexive' />
-          <TOC.Item label='Reciprocal' value='reciprocal' />
+          <TOC.Item label="Reflexive" value="reflexive" />
+          <TOC.Item label="Reciprocal" value="reciprocal" />
 
-          <TOC.Item
-            label='Commands'
-            value="commands"
-          >
+          <TOC.Item label="Commands" value="commands">
             <TOC.Section>
               <TOC.Item label="Tell" value="commands-tell" />
               <TOC.Item label="Ask" value="commands-ask" />
             </TOC.Section>
           </TOC.Item>
-          <TOC.Item
-            label='Negated Commands'
-            value="negated-commands"
-          >
+          <TOC.Item label="Negated Commands" value="negated-commands">
             <TOC.Section>
               <TOC.Item label="Don't tell" value="negated-commands-tell" />
               <TOC.Item label="Don't ask" value="negated-commands-ask" />
             </TOC.Section>
           </TOC.Item>
 
-          <TOC.Item label='Family members' value='family'>
+          <TOC.Item label="Family members" value="family">
             <TOC.Section>
               <FamilyTableOfContentItems />
             </TOC.Section>
           </TOC.Item>
 
-          <TOC.Item.Phrase label='(to be) alive' word='unheʔ' value='verb-alive' />
-          <TOC.Item.Phrase label='(to be) dead' word='iheyu' value='verb-dead' />
-          <TOC.Item.Phrase label='(to have) passed on' word='atukohtu' value='verb-passed-on' />
+          <TOC.Item.Phrase
+            label="(to be) alive"
+            word="unheʔ"
+            value="verb-alive"
+          />
+          <TOC.Item.Phrase
+            label="(to be) dead"
+            word="iheyu"
+            value="verb-dead"
+          />
+          <TOC.Item.Phrase
+            label="(to have) passed on"
+            word="atukohtu"
+            value="verb-passed-on"
+          />
 
-          <TOC.Item label='Deceased Family Members' value='deceased-relatives' />
-          <TOC.Item label='Numbers' value='numbers' />
+          <TOC.Item
+            label="Deceased Family Members"
+            value="deceased-relatives"
+          />
+          <TOC.Item label="Numbers" value="numbers" />
 
-          <TOC.Item.Phrase label='(to be) old' word='kstʌha' value='verb-old' />
-          <TOC.Item.Phrase label='(to be) young' word='kʌʔ nit...yʌha' value='verb-young' />
-          <TOC.Item.Phrase label='(to be) an age' word='naʔ te...ohsliyá·ku̲' value='verb-age' />
+          <TOC.Item.Phrase label="(to be) old" word="kstʌha" value="verb-old" />
+          <TOC.Item.Phrase
+            label="(to be) young"
+            word="kʌʔ nit...yʌha"
+            value="verb-young"
+          />
+          <TOC.Item.Phrase
+            label="(to be) an age"
+            word="naʔ te...ohsliyá·ku̲"
+            value="verb-age"
+          />
         </TOC>
 
         <VerbsSection />
@@ -150,21 +170,21 @@ function VerbsSection() {
       <Heading id="new-verbs" level={2} variant="headlineS">
         New verbs
       </Heading>
-        <Text>Below are the paradigms for three new verbs:</Text>
-        <List>
-          <List.Item>
-            <b>nuwehseʔ</b> — to like
-          </List.Item>
-          <List.Item>
-            <b>yʌteli</b> — to know, to be familiar with
-          </List.Item>
-          <List.Item>
-            <b>nolukhwaʔ</b> — to love
-          </List.Item>
-        </List>
-        <Text>
-          All of these begin with a consonant so they use C-stem pronominals.
-        </Text>
+      <Text>Below are the paradigms for three new verbs:</Text>
+      <List>
+        <List.Item>
+          <b>nuwehseʔ</b> — to like
+        </List.Item>
+        <List.Item>
+          <b>yʌteli</b> — to know, to be familiar with
+        </List.Item>
+        <List.Item>
+          <b>nolukhwaʔ</b> — to love
+        </List.Item>
+      </List>
+      <Text>
+        All of these begin with a consonant so they use C-stem pronominals.
+      </Text>
 
       <Heading id="new-verbs-red" level={3} variant="titleM">
         Red pronominals
@@ -434,7 +454,10 @@ function AliveDeadSection() {
       <Heading id="verb-alive" level={2} variant="headlineS">
         unheʔ: (to be) alive
       </Heading>
-      <Text>Below is the paradigm table for <b>unheʔ</b>. It is a U-stem root word and uses red pronominals.</Text>
+      <Text>
+        Below is the paradigm table for <b>unheʔ</b>. It is a U-stem root word
+        and uses red pronominals.
+      </Text>
       <ParadigmTable
         columnVisibility={{
           pronounEnglish: false,
@@ -445,7 +468,10 @@ function AliveDeadSection() {
       <Heading id="verb-dead" level={2} variant="headlineS">
         iheyu: (to be) dead / (to have) died
       </Heading>
-      <Text>Below is the paradigm table for <b>iheyu</b>. It is an I-stem root word and uses blue pronominals.</Text>
+      <Text>
+        Below is the paradigm table for <b>iheyu</b>. It is an I-stem root word
+        and uses blue pronominals.
+      </Text>
       <ParadigmTable
         columnVisibility={{
           pronounEnglish: false,
@@ -463,7 +489,10 @@ function PassedOnSection() {
       <Heading id="verb-passed-on" level={2} variant="headlineS">
         atukohtu: to have passed on
       </Heading>
-      <Text>Below is the paradigm table for <b>atukohtu</b>. It is an A-stem root word and uses blue pronominals.</Text>
+      <Text>
+        Below is the paradigm table for <b>atukohtu</b>. It is an A-stem root
+        word and uses blue pronominals.
+      </Text>
       <ParadigmTable
         allowedPronouns={["m", "f", "it", "ms", "fs"]}
         columnVisibility={{
@@ -551,7 +580,10 @@ function YoungOldSection() {
       <Heading id="verb-old" level={2} variant="headlineS">
         kstʌha: (to be) old
       </Heading>
-      <Text>Below is the paradigm table for <b>kstʌha</b>. It is a C-stem root word and uses blue pronominals.</Text>
+      <Text>
+        Below is the paradigm table for <b>kstʌha</b>. It is a C-stem root word
+        and uses blue pronominals.
+      </Text>
       <ParadigmTable
         columnVisibility={{
           pronounEnglish: false,
@@ -563,8 +595,15 @@ function YoungOldSection() {
       <Heading id="verb-young" level={2} variant="headlineS">
         kʌʔ nit...yʌha: (to be) young
       </Heading>
-      <Text>Below is the paradigm table for <b>kʌʔ nit...yʌha</b>. It is a C-stem root word and uses blue pronominals.</Text>
-      <Text>This one is different from the words discussed so far. The author is unsure of why there the <Letter>nit</Letter> occurs before the pronominal.</Text>
+      <Text>
+        Below is the paradigm table for <b>kʌʔ nit...yʌha</b>. It is a C-stem
+        root word and uses blue pronominals.
+      </Text>
+      <Text>
+        This one is different from the words discussed so far. The author is
+        unsure of why there the <Letter>nit</Letter> occurs before the
+        pronominal.
+      </Text>
       <ParadigmTable
         columnVisibility={{
           pronounEnglish: false,
@@ -682,8 +721,8 @@ function AgeSection() {
       </Heading>
       <Text>
         In Oneida, the more literal translation to say &quot;I am X years
-        old&quot; is &quot;I have crossed X winters&quot;. The root word is
-        has an O-stem and uses blue pronominals.
+        old&quot; is &quot;I have crossed X winters&quot;. The root word is has
+        an O-stem and uses blue pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
