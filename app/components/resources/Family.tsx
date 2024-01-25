@@ -47,6 +47,7 @@ import { Text } from "@/design/components/text";
 import { TextBreakdown } from "../TextBreakdown";
 import { PRONOUN_MAP_EN_POSSESSIVE, Pronoun } from "~/utils";
 import { TableOfContents as TOC } from "../TableOfContents";
+import { Letter } from "../Letter";
 
 export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
   return (
@@ -54,6 +55,38 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
       <Heading id="family-members" level={level} variant="headlineS">
         Family Members
       </Heading>
+      <Text>
+        In Oneida, pronominals are used to designate family relations. For
+        example, the root word <b>ʔkʌha</b> is used for both brother and sister,
+        but the pronominals give the context so a listener knows which one it
+        is. Similarly, <b>nulha</b> is the root word for mother, aunt, and
+        uncle, but the pronominals give context.
+      </Text>
+      <Text>
+        Most of the time, purple pronominals are used. When the relative is
+        older, you must use the pronominal that corresponds to "relative" →
+        "person". When the relative is younger, use the "person" → "relative"
+        pronominal.
+      </Text>
+      <Text>
+        As a more concrete example, if I wanted to say "my uncle", I would start
+        with the root word <b>nulha</b>. My uncle is a male, and is older than
+        me, so I would then look up the pronominal corresponding to "him → me"
+        which is <Letter>lak</Letter>. Thus, the translation is <b>laknulhá·</b>
+        .
+      </Text>
+      <Text>
+        Similarly, to say "your niece", start with the root word "uhwatʌha".
+        Look up the pronominal corresponding to "you → her" (because your niece
+        is younger than you) and attach it to the root word. The result is{" "}
+        <b>sheyuhwatʌha</b>.
+      </Text>
+      <Text>
+        <strong>Note</strong>: the term "older" is misleading as it doesn't
+        exactly mean "age", but it is more to do with "seniority" in the
+        bloodline. Even if your uncle is actually younger than you, you would
+        still use the pronominal for "he → you".
+      </Text>
       <Heading id="female-relatives-older" level={level + 1} variant="titleM">
         Older Female Relatives
       </Heading>

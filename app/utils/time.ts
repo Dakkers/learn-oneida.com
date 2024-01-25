@@ -1,19 +1,19 @@
 import { translateNumber } from "./numbers";
 import { unwhisperWord } from "./words";
 
-const MIDNIGHT = "ahsútha"
-const BEFORE = "tyono·lúhe"
-const AFTER = "yotukóhtu"
-const MINUTES = "nikahí·kalat"
-const MORNING = "astéhtsiʔ"
-const NOON = "ʌ́ti"
-const HOUR = "niyohwistá·e"
+const MIDNIGHT = "ahsútha";
+const BEFORE = "tyono·lúhe";
+const AFTER = "yotukóhtu";
+const MINUTES = "nikahí·kalat";
+const MORNING = "astéhtsiʔ";
+const NOON = "ʌ́ti";
+const HOUR = "niyohwistá·e";
 
 export function doTheTranslate(hour: number, minute: number): string[] {
   if (hour === 0 && minute === 0) {
-    return [MIDNIGHT]
+    return [MIDNIGHT];
   } else if (hour === 12 && minute === 0) {
-    return ['ʌ́tyʌ ni·káleʔ', 'ʌ́ti']
+    return ["ʌ́tyʌ ni·káleʔ", "ʌ́ti"];
   }
 
   const result = [];
@@ -25,25 +25,25 @@ export function doTheTranslate(hour: number, minute: number): string[] {
     const effectiveHour = h % 24;
 
     const minutesText = (
-        ((effectiveMinutes !== 0) ? ([
-        translateNumber(effectiveMinutes.toString()),
-        MINUTES,
-        useBeforeHour ? BEFORE : AFTER,
-      ]) : []).join(' ')
-    ).trim();
+      effectiveMinutes !== 0
+        ? [
+            translateNumber(effectiveMinutes.toString()),
+            MINUTES,
+            useBeforeHour ? BEFORE : AFTER,
+          ]
+        : []
+    )
+      .join(" ")
+      .trim();
 
     const subresult = [minutesText];
 
     if (effectiveHour === 0) {
       subresult.push(MIDNIGHT);
     } else if (effectiveHour < 12) {
-      subresult.push(
-        translateNumber(effectiveHour.toString()),
-        HOUR,
-        MORNING
-      );
-    } else if (effectiveHour === 12)  {
-      subresult.push(NOON)
+      subresult.push(translateNumber(effectiveHour.toString()), HOUR, MORNING);
+    } else if (effectiveHour === 12) {
+      subresult.push(NOON);
     } else {
       subresult.push(
         translateNumber((effectiveHour % 12).toString()),
@@ -52,7 +52,7 @@ export function doTheTranslate(hour: number, minute: number): string[] {
         NOON
       );
     }
-    result.push(unwhisperWord(subresult.join(' ')).trim());
+    result.push(unwhisperWord(subresult.join(" ")).trim());
   }
 
   return result;

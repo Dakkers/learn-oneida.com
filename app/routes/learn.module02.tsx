@@ -100,7 +100,7 @@ export default function LearnModule02() {
             </TOC.Section>
           </TOC.Item>
 
-          <TOC.Item label="Family members" value="family">
+          <TOC.Item label="Family members" value="family-members">
             <TOC.Section>
               <FamilyTableOfContentItems />
             </TOC.Section>
