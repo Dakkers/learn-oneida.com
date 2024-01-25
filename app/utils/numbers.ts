@@ -11,7 +11,7 @@ export function translateNumber(value: string): string {
     [2, "tékni"],
     [3, "áhsʌ̲"],
     [4, "kayé"],
-    [5, "wisk"],
+    [5, "wísk"],
     [6, "yá·yak"],
     [7, "tsyá·tak"],
     [8, "tékluʔ"],
@@ -28,7 +28,7 @@ export function translateNumber(value: string): string {
   } else if (map.has(val)) {
     return map.get(val) ?? "";
   } else if (val >= 11 && val <= 19) {
-    return `${unwhisperWord(digitWord)} yawʌ·lé`;
+    return `${unwhisperWord(digitWord)} yawʌ·lé·`;
   } else if (val >= 21 && val <= 29) {
     return `${map.get(20)} ${digitWord}`;
   } else if (val < 100) {

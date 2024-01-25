@@ -34,6 +34,11 @@ export default function Index() {
             Paradigm Tester
           </a>
         </List.Item>
+        <List.Item>
+          <a className="text-blue-600 underline" href="/tools/clock">
+            Clock Time
+          </a>
+        </List.Item>
       </List>
     </Flex>
   );

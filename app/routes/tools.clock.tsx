@@ -1,16 +1,14 @@
 import { Button } from "@/design/primitives/button";
 import { Flex } from "@/design/components/flex";
 import { Heading } from "@/design/primitives/heading";
-import { Input } from "@/design/primitives/input";
 import { Select } from "@/design/components/select";
 import { Separator } from "@/design/primitives/separator";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import _ from "lodash";
 import { Text } from "@/design/components/text";
-import { translateNumber } from "~/utils/numbers";
 import { List } from "@/design/primitives/list";
-import { unwhisperWord } from "~/utils/words";
+import { doTheTranslate } from "~/utils/time";
 
 export const meta: MetaFunction = () => {
   return [
@@ -26,7 +24,7 @@ export default function ToolsClock() {
   const [hour, setHour] = React.useState<string>("12");
   const [minute, setMinute] = React.useState<string>("00");
   const [period, setPeriod] = React.useState<string>("AM");
-  const [translatedValue, setTranslatedValue] = React.useState([]);
+  const [translatedValue, setTranslatedValue] = React.useState<string[]>([]);
 
   return (
     <div>
@@ -67,7 +65,10 @@ export default function ToolsClock() {
             <Text>&nbsp;</Text>
             <Button
               onClick={() =>
-                setTranslatedValue(doTheTranslate(hour, minute, period))
+                setTranslatedValue(doTheTranslate(
+                  (parseInt(hour) % 12) + (period === 'AM' ? 0 : 12),
+                  parseInt(minute)
+                ))
               }
             >
               Translate
@@ -86,32 +87,4 @@ export default function ToolsClock() {
       </Flex>
     </div>
   );
-}
-
-function doTheTranslate(hour: string, minute: string, period: string) {
-  if (hour === "12" && minute === "00") {
-    return period === "AM" ? ["ahsútha"] : ["ʌtí"];
-  }
-  const minutesVal = parseInt(minute);
-
-  const hourPart = `${translateNumber(hour)} niyohwistá·e`;
-  const minutePart =
-    minutesVal === 0 ? "" : `${translateNumber(minute)} nikahí·kalat yotukóhtu`;
-  const periodPart = period === "AM" ? "astéhtsiʔ" : "yotukóhtu ʌ́ti";
-
-  const result = [`${minutePart} ${hourPart} ${periodPart}`];
-
-  if (minutesVal >= 30) {
-    const minutesDiff = 60 - minutesVal;
-    const hourPart = `${translateNumber(
-      (parseInt(hour) + 1).toString()
-    )} niyohwistá·e`;
-    const minutePart = `${translateNumber(
-      minutesDiff.toString()
-    )} nikahí·kalat tyono·lúhe`;
-    const periodPart = period === "AM" ? "astéhtsiʔ" : "yotukóhtu ʌ́ti";
-    result.push(`${minutePart} ${hourPart} ${periodPart}`);
-  }
-
-  return result.map((v) => unwhisperWord(v).trim());
 }
