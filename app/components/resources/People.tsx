@@ -6,19 +6,6 @@ import { TextBreakdown } from "../TextBreakdown";
 import { Heading } from "@/design/primitives/heading";
 import { Text } from "@/design/components/text";
 
-const basicColumns: TableWrapperProps["columns"] = [
-  {
-    accessorKey: "en",
-    cell: TableWrapper.textArrayCell,
-    header: "English",
-  },
-  {
-    accessorKey: "breakdown",
-    cell: (value) => <TextBreakdown breakdown={value} typeFallback="PR" />,
-    header: "Translation",
-  },
-];
-
 export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
   return (
     <>
@@ -39,7 +26,10 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
       >
         Children
       </Heading>
-      <TableWrapper columns={basicColumns} data={dataChildren} />
+      <TableWrapper
+        columns={TableWrapper.columnsParadigmRed}
+        data={dataChildren}
+      />
 
       <Heading
         id="people-resource-adolescents"
@@ -48,7 +38,10 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
       >
         Adolescents
       </Heading>
-      <TableWrapper columns={basicColumns} data={dataAdolescents} />
+      <TableWrapper
+        columns={TableWrapper.columnsParadigmRed}
+        data={dataAdolescents}
+      />
 
       <Heading
         id="people-resource-adults"
@@ -57,7 +50,10 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
       >
         Adults
       </Heading>
-      <TableWrapper columns={basicColumns} data={dataAdults} />
+      <TableWrapper
+        columns={TableWrapper.columnsParadigmRed}
+        data={dataAdults}
+      />
 
       <Heading
         id="people-resource-older"
@@ -73,7 +69,10 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
         Instead, they are used as verbs. You can learn more about this in the
         "Age" resource which is part of module 2.
       </Text>
-      <TableWrapper columns={basicColumns} data={dataOlderPeople} />
+      <TableWrapper
+        columns={TableWrapper.columnsParadigmBlue}
+        data={dataOlderPeople}
+      />
     </>
   );
 }
@@ -81,7 +80,7 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
 const dataChildren = [
   {
     en: "Boy",
-    breakdown: [{ text: "lo" }, "ksá·"],
+    breakdown: [{ text: "la" }, "ksá·"],
   },
   {
     en: ["Boys (2)", "Boy and girl"],
@@ -93,7 +92,7 @@ const dataChildren = [
   },
   {
     en: "Girl",
-    breakdown: [{ text: "ke" }, "ksá·"],
+    breakdown: [{ text: "ye" }, "ksá·"],
   },
   {
     en: "Girls (2)",
@@ -178,10 +177,10 @@ const dataOlderPeople = [
   },
   {
     en: "Older women (2)",
-    breakdown: [{ text: "yoti", type: "PB" }, "kstʌ́ha"],
+    breakdown: [{ text: "yoti" }, "kstʌ́ha"],
   },
   {
     en: ["Older women (3+)"],
-    breakdown: [{ text: "yoti", type: "PB" }, "kstʌhokúha"],
+    breakdown: [{ text: "yoti" }, "kstʌhokúha"],
   },
 ];

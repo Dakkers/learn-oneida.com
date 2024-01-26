@@ -452,7 +452,7 @@ function AliveDeadSection() {
   return (
     <>
       <Heading id="verb-alive" level={2} variant="headlineS">
-        unheʔ: (to be) alive
+        unheʔ — (to be) alive
       </Heading>
       <Text>
         Below is the paradigm table for <b>unheʔ</b>. It is a U-stem root word
@@ -466,7 +466,7 @@ function AliveDeadSection() {
         data={unheJson}
       />
       <Heading id="verb-dead" level={2} variant="headlineS">
-        iheyu: (to be) dead / (to have) died
+        iheyu — (to be) dead / (to have) died
       </Heading>
       <Text>
         Below is the paradigm table for <b>iheyu</b>. It is an I-stem root word
@@ -487,7 +487,7 @@ function PassedOnSection() {
   return (
     <>
       <Heading id="verb-passed-on" level={2} variant="headlineS">
-        atukohtu: to have passed on
+        atukohtu — to have passed on
       </Heading>
       <Text>
         Below is the paradigm table for <b>atukohtu</b>. It is an A-stem root
@@ -578,7 +578,7 @@ function YoungOldSection() {
   return (
     <>
       <Heading id="verb-old" level={2} variant="headlineS">
-        kstʌha: (to be) old
+        kstʌha — (to be) old
       </Heading>
       <Text>
         Below is the paradigm table for <b>kstʌha</b>. It is a C-stem root word
@@ -593,7 +593,7 @@ function YoungOldSection() {
       />
 
       <Heading id="verb-young" level={2} variant="headlineS">
-        kʌʔ nit...yʌha: (to be) young
+        kʌʔ nit...yʌha — (to be) young
       </Heading>
       <Text>
         Below is the paradigm table for <b>kʌʔ nit...yʌha</b>. It is a C-stem

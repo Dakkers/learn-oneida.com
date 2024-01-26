@@ -8,8 +8,9 @@ import {
   TableRow,
 } from "./table";
 import { BreakdownType, TextBreakdown } from "~/components/TextBreakdown";
-import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA } from "~/utils";
+import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, arrayify } from "~/utils";
 import { Text } from "../components/text";
+import { Flex } from "../components/flex";
 
 type Row = Record<string, unknown>;
 
@@ -35,8 +36,8 @@ export function TableWrapper({ columns, data }: TableWrapperProps) {
       <TableBody>
         {data.map((row, i) => (
           <TableRow key={i}>
-            {columns.map((c) => (
-              <TableCell>
+            {columns.map((c, j) => (
+              <TableCell key={`${i}-${j}`}>
                 {c.cell
                   ? c.cell(row[c.accessorKey], row)
                   : (row[c.accessorKey] as React.ReactNode)}
@@ -49,12 +50,8 @@ export function TableWrapper({ columns, data }: TableWrapperProps) {
   );
 }
 
-TableWrapper.textArrayCell = (value) => <TextArray>{value}</TextArray>;
-TableWrapper.textArrayCellBold = (value) => (
-  <TextArray>
-    <b>{value}</b>
-  </TextArray>
-);
+TableWrapper.textArrayCell = (value) =>  <Flex direction="column"><TextArray>{value}</TextArray></Flex>
+TableWrapper.textArrayCellBold = (value) =>  <Flex direction="column"><TextArray bold>{value}</TextArray></Flex>
 
 const EnglishCol = {
   accessorKey: "en",

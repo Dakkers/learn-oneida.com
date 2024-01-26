@@ -21,7 +21,7 @@ const names = [
   { oneida: "Wílo", en: "William" },
   { oneida: "Klistí·n", en: ["Christine", "Kristin"] },
   { oneida: "Tsiló·s", en: "Delores" },
-  { oneida: ["Aliskwet", "Alísakwet"], en: "Elizabeth" },
+  { oneida: ["Aliskwe", "Alísakwe"], en: "Elizabeth" },
   { oneida: "Katlí·n", en: "Katherine" },
   { oneida: ["Kwáklit", "Kowáklit"], en: "Margret" },
   { oneida: "Mahtih", en: "Martha" },

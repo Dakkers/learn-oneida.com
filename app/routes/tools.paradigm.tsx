@@ -19,6 +19,7 @@ import {
 } from "~/utils";
 import sample from "lodash/sample";
 import { Heading } from "@/design/primitives/heading";
+import { Select } from "@/design/components/select";
 
 export const meta: MetaFunction = () => {
   return [
@@ -66,7 +67,7 @@ export default function ToolsParadigm() {
       </p>
 
       <Flex align="end" gap={2}>
-        <SelectWrapper
+        <Select
           label="Word"
           onChange={(value) => {
             setWord(value);
@@ -83,7 +84,7 @@ export default function ToolsParadigm() {
           value={word}
         />
 
-        <SelectWrapper
+        <Select
           label="Type"
           onChange={(value) => {
             setParadigm(value);
@@ -138,28 +139,5 @@ export default function ToolsParadigm() {
         />
       )}
     </div>
-  );
-}
-
-function SelectWrapper({ label, onChange, options, value }) {
-  const id = useId();
-
-  return (
-    <Flex direction="column" gap={2}>
-      {label && <Text variant="label">{label}</Text>}
-
-      <Select onValueChange={onChange} value={value}>
-        <SelectTrigger className="w-[180px]" id={id}>
-          <SelectValue placeholder="Select..." />
-        </SelectTrigger>
-        <SelectContent>
-          {options.map((opt) => (
-            <SelectItem key={opt.value} value={opt.value}>
-              {opt.label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-    </Flex>
   );
 }

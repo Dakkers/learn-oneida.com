@@ -98,4 +98,4 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   RPL: "text-gray-400",
   RECP: "text-green-700",
   REFL: "text-green-700",
-};
+} as const;

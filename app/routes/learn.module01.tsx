@@ -457,7 +457,7 @@ export default function LearnModule01() {
         </Text>
 
         <Heading id="yats" level={2} variant="headlineS">
-          Learn: my name is...
+          yats — my name is...
         </Heading>
         <Text>
           Let&lsquo;s learn our first phrase!{" "}
@@ -498,7 +498,7 @@ export default function LearnModule01() {
         </Notice>
 
         <Heading id="anuhte" level={2} variant="headlineS">
-          Learn: to know, to be in the know
+          anuhte — to know, to be in the know
         </Heading>
         <Text>
           Let&lsquo;s learn another phrase! The root word is{" "}
