@@ -1,14 +1,15 @@
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/primitives/heading";
-import { TableWrapper } from "@/design/primitives/tableWrapper";
+import { Heading } from "@/design/components/heading";
+import { TableWrapper } from "@/design/components/tableWrapper";
+
+export const DATA_CARDINAL_DIRECTIONS = [
+  { en: "In the North", on: "otholé·ke", key: "north" },
+  { en: "In the East", on: "tsiʔ tkaké·tohse̲ʔ", key: "east" },
+  { en: "In the South", on: ["ʌ́tyʌ", "ʌtí nukwá·"], key: "south" },
+  { en: "In the West", on: "tsiʔ tetwatshʌ́thos", key: "west" },
+];
 
 export function CardinalDirectionsResource({ level = 1 }) {
-  const directions = [
-    { en: "In the North", on: "otholé·ke" },
-    { en: "In the East", on: "tsiʔ tkaké·tohse̲ʔ" },
-    { en: "In the South", on: ["ʌ́tyʌ", "ʌtí nukwá·"] },
-    { en: "In the West", on: "tsiʔ tetwatshʌ́thos" },
-  ];
   return (
     <Flex direction="column" gap={4}>
       <Heading id="cardinal-directions" level={level} variant="headlineL">
@@ -16,7 +17,7 @@ export function CardinalDirectionsResource({ level = 1 }) {
       </Heading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
-        data={directions}
+        data={DATA_CARDINAL_DIRECTIONS}
       />
     </Flex>
   );

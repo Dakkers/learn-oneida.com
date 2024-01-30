@@ -1,7 +1,7 @@
 import {
   TableWrapper,
   TableWrapperProps,
-} from "@/design/primitives/tableWrapper";
+} from "@/design/components/tableWrapper";
 import { particleList } from "./particleList";
 import React from "react";
 import { Flex } from "@/design/components/flex";

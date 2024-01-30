@@ -1,7 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
-import { Box } from "@/design/primitives/box";
-import { Heading } from "@/design/primitives/heading";
+import { Box } from "@/design/components/box";
+import { Heading } from "@/design/components/heading";
 import { Notice } from "@/design/primitives/notice";
 import type { MetaFunction } from "@remix-run/node";
 import { TableOfContents as TOC } from "~/components/TableOfContents";

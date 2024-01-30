@@ -1,9 +1,9 @@
 import {
   TableWrapper,
   TableWrapperProps,
-} from "@/design/primitives/tableWrapper";
+} from "@/design/components/tableWrapper";
 import { TextBreakdown } from "../TextBreakdown";
-import { Heading } from "@/design/primitives/heading";
+import { Heading } from "@/design/components/heading";
 import { Text } from "@/design/components/text";
 
 export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {

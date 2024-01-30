@@ -6,20 +6,19 @@ import { Flex } from "@/design/components/flex";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Resources" },
-    { name: "description", content: "Resources provided by this website" },
+    { title: "Practice" },
+    {
+      name: "description",
+      content: "Improve your Oneida skills with tools provided by this website",
+    },
   ];
 };
 
 export default function Resources() {
-  const resources = [
+  const items = [
     {
       href: "/cardinal-directions",
       label: "Cardinal Directions",
-    },
-    {
-      href: "/counting-time",
-      label: "Counting lengths of time",
     },
     {
       href: "/days-of-the-week",
@@ -33,23 +32,21 @@ export default function Resources() {
       href: "/seasons",
       label: "Seasons",
     },
-    {
-      href: "/times-of-day",
-      label: "Times of day",
-    },
   ];
 
   return (
     <Flex direction="column" gap={4}>
       <Heading level={1} variant="headlineL">
-        Resources
+        Practice
       </Heading>
 
-      <Text>Check out some resources:</Text>
+      <Text>
+        Improve your Oneida skills with features provided by this website!
+      </Text>
       <List>
-        {resources.map((t, i) => (
+        {items.map((t, i) => (
           <List.Item key={i}>
-            <a className="underline text-blue-600" href={`/resources${t.href}`}>
+            <a className="underline text-blue-600" href={`/practice${t.href}`}>
               {t.label}
             </a>
           </List.Item>

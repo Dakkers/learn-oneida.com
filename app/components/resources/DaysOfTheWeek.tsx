@@ -1,17 +1,18 @@
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/primitives/heading";
-import { TableWrapper } from "@/design/primitives/tableWrapper";
+import { Heading } from "@/design/components/heading";
+import { TableWrapper } from "@/design/components/tableWrapper";
+
+export const DATA_DAYS_OF_WEEK = [
+  { en: "Sunday", on: "Yautatokʌ́htu", key: "sun" },
+  { en: "Monday", on: "Yautʌtá·u", key: "mon" },
+  { en: "Tuesday", on: "Tekníhatut", key: "tue" },
+  { en: "Wednesday", on: "Ahsʌ́hatut", key: "wed" },
+  { en: "Thursday", on: "Kayelíhatut", key: "thu" },
+  { en: "Friday", on: "Wískhatut", key: "fri" },
+  { en: "Saturday", on: "Ʌtáktaʔ", key: "sat" },
+];
 
 export function DaysOfTheWeekResource({ level = 1 }) {
-  const days = [
-    { en: "Sunday", on: "Yautatokʌ́htu" },
-    { en: "Monday", on: "Yautʌtá·u" },
-    { en: "Tuesday", on: "Tekníhatut" },
-    { en: "Wednesday", on: "Ahsʌ́hatut" },
-    { en: "Thursday", on: "Kayelíhatut" },
-    { en: "Friday", on: "Wískhatut" },
-    { en: "Saturday", on: "Ʌtáktaʔ" },
-  ];
   const daysSpecific = [
     { en: "on Sunday", on: "Yautatokʌhtu·neʔ" },
     { en: "on Monday", on: "Yautʌtaʔú·neʔ" },
@@ -37,7 +38,10 @@ export function DaysOfTheWeekResource({ level = 1 }) {
       <Heading id="days" level={level} variant="headlineL">
         Days of the week
       </Heading>
-      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={days} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishOneida}
+        data={DATA_DAYS_OF_WEEK}
+      />
 
       <Heading id="days-on" level={level + 1} variant="headlineS">
         On a specific day

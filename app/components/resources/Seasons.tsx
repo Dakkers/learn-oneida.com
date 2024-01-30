@@ -1,18 +1,19 @@
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/primitives/heading";
-import { TableWrapper } from "@/design/primitives/tableWrapper";
+import { Heading } from "@/design/components/heading";
+import { TableWrapper } from "@/design/components/tableWrapper";
+
+export const DATA_SEASONS = [
+  { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
+  { en: "Summer", on: "kwaʔkʌnhé·ke", key: "summer" },
+  { en: "Autumn", on: "kanʌná·ke", key: "fall" },
+  { en: "Winter", on: "kohslá·ke", key: "winter" },
+];
 
 export function SeasonsResource({ level = 1 }) {
-  const seasons = [
-    { en: "Spring", on: ["kukwi·té·", "kukwité·ne"] },
-    { en: "Summer", on: "kwaʔkʌnhé·ke" },
-    { en: "Fall / Autumn", on: "kanʌná·ke" },
-    { en: "Winter", on: "kohslá·ke" },
-  ];
   const seasonsDuring = [
     { en: "During the spring", on: "tsiʔ nikukwite·seʔ" },
     { en: "During the summer", on: "tsiʔ niwaʔkʌ́nhes" },
-    { en: "During the fall / autumn", on: "tshiʔtkanʌná·ke" },
+    { en: "During the autumn", on: "tshiʔtkanʌná·ke" },
     { en: "During the winter", on: "tsiʔ niwakóhsles" },
   ];
   const otherPhrases = [
@@ -30,7 +31,7 @@ export function SeasonsResource({ level = 1 }) {
       </Heading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
-        data={seasons}
+        data={DATA_SEASONS}
       />
       <Heading id="seasons-during" level={level + 1} variant="headlineS">
         During a season

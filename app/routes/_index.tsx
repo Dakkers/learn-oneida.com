@@ -1,5 +1,5 @@
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/primitives/heading";
+import { Heading } from "@/design/components/heading";
 import { List } from "@/design/primitives/list";
 import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";

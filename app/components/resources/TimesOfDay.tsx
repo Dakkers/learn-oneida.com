@@ -1,7 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
-import { Heading } from "@/design/primitives/heading";
-import { TableWrapper } from "@/design/primitives/tableWrapper";
+import { Heading } from "@/design/components/heading";
+import { TableWrapper } from "@/design/components/tableWrapper";
 
 export function TimesOfDayResource({ level = 1 }) {
   const dayPhʌases = [

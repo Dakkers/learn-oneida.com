@@ -5,6 +5,7 @@ import { Separator } from "@/design/primitives/separator";
 import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
+import { Heading } from "@/design/components/heading";
 
 export const meta: MetaFunction = () => {
   return [
@@ -22,9 +23,9 @@ export default function ToolsNumbers() {
 
   return (
     <div>
-      <Text as="h1" variant="title">
+      <Heading level={1} variant="headlineL">
         Numbers
-      </Text>
+      </Heading>
 
       <p className="mt-8 mb-4">
         <b>NOTE:</b> This page is still under construction! Only numbers up to

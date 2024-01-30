@@ -1,6 +1,6 @@
 import { Button } from "@/design/primitives/button";
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/primitives/heading";
+import { Heading } from "@/design/components/heading";
 import { Select } from "@/design/components/select";
 import { Separator } from "@/design/primitives/separator";
 import type { MetaFunction } from "@remix-run/node";

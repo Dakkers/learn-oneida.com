@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { SpacingToken } from "./types";
+import { SpacingToken } from "../primitives/types";
 
 type PaddingToken = Exclude<SpacingToken, "1px" | "2px">;
 

@@ -1,7 +1,7 @@
 import {
   TableWrapper,
   TableWrapperProps,
-} from "@/design/primitives/tableWrapper";
+} from "@/design/components/tableWrapper";
 
 const names = [
   { oneida: "Alʌt", en: "Aaron" },

@@ -41,8 +41,8 @@ import siblingsJson from "../../data/family/plural/siblings.json";
 import cousinsJson from "../../data/family/plural/cousins.json";
 import friendsJson from "../../data/family/plural/friends.json";
 
-import { Heading } from "@/design/primitives/heading";
-import { TableWrapper } from "@/design/primitives/tableWrapper";
+import { Heading } from "@/design/components/heading";
+import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
 import { TextBreakdown } from "../TextBreakdown";
 import { PRONOUN_MAP_EN_POSSESSIVE, Pronoun } from "~/utils";

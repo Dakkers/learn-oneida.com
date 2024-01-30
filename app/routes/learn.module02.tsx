@@ -1,6 +1,6 @@
-import { Box } from "@/design/primitives/box";
+import { Box } from "@/design/components/box";
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/primitives/heading";
+import { Heading } from "@/design/components/heading";
 import { Notice } from "@/design/primitives/notice";
 import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
@@ -30,7 +30,7 @@ import kstʌhaJson from "../data/kstʌha.json";
 import kʌʔni_yʌhaJson from "../data/kʌʔni_yʌha.json";
 import ohsliyakuJson from "../data/ohsliyaku.json";
 
-import { TableWrapper } from "@/design/primitives/tableWrapper";
+import { TableWrapper } from "@/design/components/tableWrapper";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_EN_OBJECTIVE,

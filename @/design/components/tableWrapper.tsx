@@ -6,11 +6,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./table";
+} from "../primitives/table";
 import { BreakdownType, TextBreakdown } from "~/components/TextBreakdown";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, arrayify } from "~/utils";
-import { Text } from "../components/text";
-import { Flex } from "../components/flex";
+import { Text } from "./text";
+import { Flex } from "./flex";
 
 type Row = Record<string, unknown>;
 

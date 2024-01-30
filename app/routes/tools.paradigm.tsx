@@ -18,7 +18,7 @@ import {
   singlePronouns,
 } from "~/utils";
 import sample from "lodash/sample";
-import { Heading } from "@/design/primitives/heading";
+import { Heading } from "@/design/components/heading";
 import { Select } from "@/design/components/select";
 
 export const meta: MetaFunction = () => {
