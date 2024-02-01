@@ -19,7 +19,7 @@ interface FlexProps {
   children: React.ReactNode;
   direction?: "row" | "column";
   gap?: Gap;
-  height?: 'fill';
+  height?: "fill";
   justify?: JustifyContent;
   wrap?: boolean;
 }
@@ -41,9 +41,9 @@ export function Flex({
         align && alignItemsMap[align],
         direction === "column" ? "flex-col" : "flex-row",
         gap && gapMap.get(gap),
-        height === 'fill' ? 'h-full' : undefined,
+        height === "fill" ? "h-full" : undefined,
         justify && justifyContentMap[justify],
-        wrap && 'flex-wrap'
+        wrap && "flex-wrap"
       )}
     >
       {children}

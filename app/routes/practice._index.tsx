@@ -29,6 +29,10 @@ export default function Resources() {
       label: "Months of the year",
     },
     {
+      href: "/places",
+      label: "Places in the community",
+    },
+    {
       href: "/seasons",
       label: "Seasons",
     },

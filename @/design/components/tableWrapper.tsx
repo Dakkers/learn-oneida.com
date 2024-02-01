@@ -50,8 +50,16 @@ export function TableWrapper({ columns, data }: TableWrapperProps) {
   );
 }
 
-TableWrapper.textArrayCell = (value) =>  <Flex direction="column"><TextArray>{value}</TextArray></Flex>
-TableWrapper.textArrayCellBold = (value) =>  <Flex direction="column"><TextArray bold>{value}</TextArray></Flex>
+TableWrapper.textArrayCell = (value) => (
+  <Flex direction="column">
+    <TextArray>{value}</TextArray>
+  </Flex>
+);
+TableWrapper.textArrayCellBold = (value) => (
+  <Flex direction="column">
+    <TextArray bold>{value}</TextArray>
+  </Flex>
+);
 
 const EnglishCol = {
   accessorKey: "en",

@@ -16,7 +16,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function ToolsSeasons() {
+export default function PracticeSeasons() {
   return (
     <Flex direction="column" gap={4}>
       <Heading level={1} variant="headlineL">
