@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const PATH_PARTICLE_LIST = path.join(__dirname, '..', 'app', 'components', 'language', 'particleList.ts')
+const PATH_PARTICLE_LIST = path.join(__dirname, '..', 'app', 'components', 'resources', 'particleList.ts')
 
 module.exports = function (plop) {
   plop.setGenerator("particle", {

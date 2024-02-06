@@ -10,6 +10,7 @@ import { TextBreakdown } from "~/components/TextBreakdown";
 import { SectionHeading } from "~/components/SectionHeading";
 import { GoodPeopleBadPeopleResource } from "~/components/resources/GoodPeopleBadPeople";
 import { RepetitiveFeatureResource } from "~/components/resources/RepetitiveFeature";
+import { ParticlesTable } from "~/components/resources/ParticlesTable";
 
 export const meta: MetaFunction = () => {
   return [
@@ -21,9 +22,7 @@ export const meta: MetaFunction = () => {
 export default function LearnModule03() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <SectionHeading level={1}>
-        Module 3
-      </SectionHeading>
+      <SectionHeading level={1}>Module 3</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
           <b>NOTE:</b> This page is still under construction!
@@ -92,6 +91,11 @@ export default function LearnModule03() {
         <GoodPeopleBadPeopleResource />
 
         <HavingConjugations />
+
+        <SectionHeading id="particles" level={2}>
+          Particles
+        </SectionHeading>
+        <ParticlesTable group="module03" />
       </Flex>
     </div>
   );
@@ -499,102 +503,114 @@ function PastTenseWhen() {
   return <TableWrapper columns={pastTenseColumns} data={data} />;
 }
 
-function HavingConjugations () {
+function HavingConjugations() {
   return (
     <>
-      <SectionHeading id='having-conjugations' level={2}>
+      <SectionHeading id="having-conjugations" level={2}>
         &quot;Having&quot; Conjugations
       </SectionHeading>
-      <Text>
-        Below is an introduction into more conjugations in Oneida.
-      </Text>
+      <Text>Below is an introduction into more conjugations in Oneida.</Text>
       <SectionHeading level={3}>
         &quot;Having&quot; a person or animal
       </SectionHeading>
       <TableWrapper
-        columns={createColsLol(['pronominal', 'noun root', 'joiner', 'verb root'])}
+        columns={createColsLol([
+          "pronominal",
+          "noun root",
+          "joiner",
+          "verb root",
+        ])}
         data={[
           {
-            col0: [{ text: 'wak', type: 'PB' }, { text: 'e', type: 'EP' }],
-            col1: ['ksaʔt'],
-            col2: [{ text: 'a', type: 'JOIN' }],
-            col3: [{ text: 'yʌ', type: 'REP' }],
+            col0: [
+              { text: "wak", type: "PB" },
+              { text: "e", type: "EP" },
+            ],
+            col1: ["ksaʔt"],
+            col2: [{ text: "a", type: "JOIN" }],
+            col3: [{ text: "yʌ", type: "REP" }],
+            result: (row) => (
+              <>
+                <TextBreakdown
+                  breakdown={[...row.col0, "ksá·t", ...row.col2, ...row.col3]}
+                />
+                <span>(I have a child)</span>
+              </>
+            ),
+          },
+          {
+            col0: [{ text: "wak", type: "PB" }],
+            col1: ["wil"],
+            col2: [{ text: "a", type: "JOIN" }],
+            col3: [{ text: "yʌ", type: "REP" }],
             result: (row) => (
               <>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
-                    'ksá·t',
+                    ...row.col1,
                     ...row.col2,
-                    ...row.col3,
-                  ]}
+                    "·",
+                  ].concat([{ text: "yʌ́·", type: "REP" }])}
                 />
-                <span>
-                  (I have a child)
-                </span>
+                <span>(I have a baby)</span>
               </>
-            )
+            ),
           },
           {
-            col0: [{ text: 'wak', type: 'PB' }],
-            col1: ['wil'],
-            col2: [{ text: 'a', type: 'JOIN' }],
-            col3: [{ text: 'yʌ', type: 'REP' }],
+            col0: [{ text: "wak", type: "PB" }],
+            col1: ["naskw"],
+            col2: [{ text: "a", type: "JOIN" }],
+            col3: [{ text: "yʌ", type: "REP" }],
             result: (row) => (
               <>
                 <TextBreakdown
-                  breakdown={[...row.col0, ...row.col1, ...row.col2, '·'].concat([{ text: 'yʌ́·', type: 'REP' }])}
+                  breakdown={[...row.col0, "náskw", ...row.col2].concat([
+                    { text: "yʌʔ", type: "REP" },
+                  ])}
                 />
-                <span>
-                  (I have a baby)
-                </span>
+                <span>(I have an animal)</span>
               </>
-            )
+            ),
           },
           {
-            col0: [{ text: 'wak', type: 'PB' }],
-            col1: ['naskw'],
-            col2: [{ text: 'a', type: 'JOIN' }],
-            col3: [{ text: 'yʌ', type: 'REP' }],
+            col0: [{ text: "wak", type: "PB" }],
+            col1: ["nikʌhtluʔtsl"],
+            col2: [{ text: "a", type: "JOIN" }],
+            col3: [{ text: "yʌ", type: "REP" }],
             result: (row) => (
               <>
                 <TextBreakdown
-                  breakdown={[...row.col0, 'náskw', ...row.col2].concat([{ text: 'yʌʔ', type: 'REP' }])}
-                />
-                <span>
-                  (I have an animal)
-                </span>
-              </>
-            )
-          },
-          {
-            col0: [{ text: 'wak', type: 'PB' }],
-            col1: ['nikʌhtluʔtsl'],
-            col2: [{ text: 'a', type: 'JOIN' }],
-            col3: [{ text: 'yʌ', type: 'REP' }],
-            result: (row) => (
-              <>
-                <TextBreakdown
-                  breakdown={[...row.col0, ...row.col1, ...row.col2, '·'].concat([{ text: 'yʌ́·', type: 'REP' }])}
+                  breakdown={[
+                    ...row.col0,
+                    ...row.col1,
+                    ...row.col2,
+                    "·",
+                  ].concat([{ text: "yʌ́·", type: "REP" }])}
                 />
                 <span>(I have a boyfriend)</span>
               </>
-            )
+            ),
           },
           {
-            col0: [{ text: 'wak', type: 'PB' }],
-            col1: ['yaʔtaseʔtsl'],
-            col2: [{ text: 'a', type: 'JOIN' }],
-            col3: [{ text: 'yʌ', type: 'REP' }],
+            col0: [{ text: "wak", type: "PB" }],
+            col1: ["yaʔtaseʔtsl"],
+            col2: [{ text: "a", type: "JOIN" }],
+            col3: [{ text: "yʌ", type: "REP" }],
             result: (row) => (
               <>
                 <TextBreakdown
-                  breakdown={[...row.col0, 'yaʔtase·tsl', ...row.col2, '·'].concat([{ text: 'yʌ́·', type: 'REP' }])}
+                  breakdown={[
+                    ...row.col0,
+                    "yaʔtase·tsl",
+                    ...row.col2,
+                    "·",
+                  ].concat([{ text: "yʌ́·", type: "REP" }])}
                 />
                 <span>(I have a girlfriend)</span>
               </>
-            )
-          }
+            ),
+          },
         ]}
       />
 
@@ -602,33 +618,41 @@ function HavingConjugations () {
         &quot;Having&quot; a person or animal in the past
       </SectionHeading>
       <TableWrapper
-        columns={createColsLol(['pronominal', 'noun root', 'joiner', 'verb root', 'joiner', 'past tense'])}
+        columns={createColsLol([
+          "pronominal",
+          "noun root",
+          "joiner",
+          "verb root",
+          "joiner",
+          "past tense",
+        ])}
         data={[
           {
-            col0: [{ text: 'wak', type: 'PB' }, { text: 'e', type: 'EP' }],
-            col1: ['naskw'],
-            col2: [{ text: 'a', type: 'JOIN' }],
-            col3: [{ text: 'yʌʔt', type: 'REP' }],
-            col4: [{ text: 'a', type: 'JOIN' }],
-            col5: [{text:'hkweʔ', type:'PAST'}],
+            col0: [
+              { text: "wak", type: "PB" },
+              { text: "e", type: "EP" },
+            ],
+            col1: ["naskw"],
+            col2: [{ text: "a", type: "JOIN" }],
+            col3: [{ text: "yʌʔt", type: "REP" }],
+            col4: [{ text: "a", type: "JOIN" }],
+            col5: [{ text: "hkweʔ", type: "PAST" }],
             result: (row) => (
               <>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
-                    'ksá·t',
+                    "ksá·t",
                     ...row.col2,
                     ...row.col3,
                     ...row.col4,
                     ...row.col5,
                   ]}
                 />
-                <span>
-                  (I used to have an animal)
-                </span>
+                <span>(I used to have an animal)</span>
               </>
-            )
-          }
+            ),
+          },
         ]}
       />
 
@@ -636,22 +660,24 @@ function HavingConjugations () {
         &quot;Having&quot; a good animal
       </SectionHeading>
       <TableWrapper
-        columns={createColsLol(['pronominal', 'noun root', 'verb root'])}
+        columns={createColsLol(["pronominal", "noun root", "verb root"])}
         data={[
           {
-            col0: [{ text: 'wak', type: 'PB' }],
-            col1: ['naskw'],
-            col2: [{ text: 'iyo', type: 'REP' }],
+            col0: [{ text: "wak", type: "PB" }],
+            col1: ["naskw"],
+            col2: [{ text: "iyo", type: "REP" }],
             result: (row) => (
               <>
                 <TextBreakdown
-                  breakdown={[...row.col0, ...row.col1, { text: 'i·yó', type: 'REP' }]}
+                  breakdown={[
+                    ...row.col0,
+                    ...row.col1,
+                    { text: "i·yó", type: "REP" },
+                  ]}
                 />
-                <span>
-                  (I have a good animal)
-                </span>
+                <span>(I have a good animal)</span>
               </>
-            )
+            ),
           },
         ]}
       />
@@ -660,44 +686,57 @@ function HavingConjugations () {
         &quot;Having&quot; an animal in the past
       </SectionHeading>
       <TableWrapper
-        columns={createColsLol(['pronominal', 'noun root', 'verb root', 'past tense'])}
+        columns={createColsLol([
+          "pronominal",
+          "noun root",
+          "verb root",
+          "past tense",
+        ])}
         data={[
           {
-            col0: [{ text: 'wak', type: 'PB' }],
-            col1: ['naskw'],
-            col2: [{ text: 'iyo', type: 'REP' }],
-            col3: [{ text: 'hne', type: 'PAST' }],
+            col0: [{ text: "wak", type: "PB" }],
+            col1: ["naskw"],
+            col2: [{ text: "iyo", type: "REP" }],
+            col3: [{ text: "hne", type: "PAST" }],
             result: (row) => (
               <>
                 <TextBreakdown
-                  breakdown={[...row.col0, ...row.col1, ...row.col2, '·', 'hné·']}
+                  breakdown={[
+                    ...row.col0,
+                    ...row.col1,
+                    ...row.col2,
+                    "·",
+                    "hné·",
+                  ]}
                 />
-                <span>
-                  (I used to have a good animal)
-                </span>
+                <span>(I used to have a good animal)</span>
               </>
-            )
+            ),
           },
           {
-            col0: [{ text: 'wak', type: 'PB' }],
-            col1: ['naskw'],
-            col2: [{ text: 'aksʌ', type: 'REP' }],
-            col3: [{ text: 'hne', type: 'PAST' }],
+            col0: [{ text: "wak", type: "PB" }],
+            col1: ["naskw"],
+            col2: [{ text: "aksʌ", type: "REP" }],
+            col3: [{ text: "hne", type: "PAST" }],
             result: (row) => (
               <>
                 <TextBreakdown
-                  breakdown={[...row.col0, ...row.col1, ...row.col2, '·', 'hné·']}
+                  breakdown={[
+                    ...row.col0,
+                    ...row.col1,
+                    ...row.col2,
+                    "·",
+                    "hné·",
+                  ]}
                 />
-                <span>
-                  (I used to have a bad animal)
-                </span>
+                <span>(I used to have a bad animal)</span>
               </>
-            )
+            ),
           },
         ]}
       />
     </>
-  )
+  );
 }
 
 const createColsLol = (cols) => {
@@ -705,34 +744,28 @@ const createColsLol = (cols) => {
   for (let i = 0; i < cols.length; i++) {
     result.push({
       accessorKey: `col${i}`,
-      cell: (value) => (
-        <TextBreakdown breakdown={value} />
-      ),
+      cell: (value) => <TextBreakdown breakdown={value} />,
       header: cols[i],
-    })
-    if (i !== (cols.length - 1)) {
+    });
+    if (i !== cols.length - 1) {
       result.push({
         accessorKey: `plus-${i}`,
-        cell: () => '+',
-        header: '+',
-      })
+        cell: () => "+",
+        header: "+",
+      });
     } else {
       result.push({
         accessorKey: `equals`,
-        cell: () => '=',
-        header: '=',
-      })
+        cell: () => "=",
+        header: "=",
+      });
     }
   }
   result.push({
     accessorKey: `result`,
-    cell: (renderer, row) => (
-      <Flex gap={2}>
-        {renderer(row)}
-      </Flex>
-    ),
-    header: 'Result',
-  })
+    cell: (renderer, row) => <Flex gap={2}>{renderer(row)}</Flex>,
+    header: "Result",
+  });
 
   return result;
-}
+};

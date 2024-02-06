@@ -2,14 +2,13 @@ import { Flex } from "@/design/components/flex";
 import { Heading } from "@/design/components/heading";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
-import { ParadigmData, ParadigmTable, createParadigmData } from "../ParadigmTable";
+import {
+  ParadigmData,
+  ParadigmTable,
+  createParadigmData,
+} from "../ParadigmTable";
 
-const allowedPronouns = [
-  'i',
-  'u',
-  'm',
-  'f',
-]
+const allowedPronouns = ["i", "u", "m", "f"];
 
 const NATIONS_LIST = [
   {
@@ -92,24 +91,27 @@ const NATIONS_LIST = [
   },
 ];
 
-const dataNations = createParadigmData({
-  phrases: [
-    {
-      breakdown: [`Onʌyoteʔa·ká· ni`, { text: 'wak' }, 'uhutsyó·tʌ̲ʔ']
-    },
-    {
-      breakdown: [`Onʌyoteʔa·ká· ni`, { text: 's' }, 'uhutsyó·tʌ̲ʔ']
-    },
-    {
-      breakdown: [`Onʌyoteʔa·ká· ni`, { text: 'ha' }, 'uhutsyó·tʌ̲ʔ']
-    },
-    {
-      breakdown: [`Onʌyoteʔa·ká· ni`, { text: 'yaka' }, 'uhutsyó·tʌ̲ʔ']
-    },
-  ],
-  translation: "{{pronoun}} {{refVerb}} an Oneida",
-  type: 'PB',
-}, allowedPronouns);
+const dataNations = createParadigmData(
+  {
+    phrases: [
+      {
+        breakdown: [`Onʌyoteʔa·ká· ni`, { text: "wak" }, "uhutsyó·tʌ̲ʔ"],
+      },
+      {
+        breakdown: [`Onʌyoteʔa·ká· ni`, { text: "s" }, "uhutsyó·tʌ̲ʔ"],
+      },
+      {
+        breakdown: [`Onʌyoteʔa·ká· ni`, { text: "ha" }, "uhutsyó·tʌ̲ʔ"],
+      },
+      {
+        breakdown: [`Onʌyoteʔa·ká· ni`, { text: "yaka" }, "uhutsyó·tʌ̲ʔ"],
+      },
+    ],
+    translation: "{{pronoun}} {{refVerb}} an Oneida",
+    type: "PB",
+  },
+  allowedPronouns
+);
 
 export function NationsResource({ level = 1 }) {
   return (
@@ -118,8 +120,8 @@ export function NationsResource({ level = 1 }) {
         Nations
       </Heading>
       <Text>
-        Below is a list of nations and nationalities. These include nations part of the Haudenosaunee
-        confederacy and others outside.
+        Below is a list of nations and nationalities. These include nations part
+        of the Haudenosaunee confederacy and others outside.
       </Text>
       <TableWrapper
         columns={[
@@ -131,13 +133,8 @@ export function NationsResource({ level = 1 }) {
         ]}
         data={NATIONS_LIST}
       />
-      <Text>
-        Here are a couple examples that you can use in sentences:
-      </Text>
-      <ParadigmTable
-        allowedPronouns={allowedPronouns}
-        data={dataNations}
-      />
+      <Text>Here are a couple examples that you can use in sentences:</Text>
+      <ParadigmTable allowedPronouns={allowedPronouns} data={dataNations} />
     </Flex>
   );
 }

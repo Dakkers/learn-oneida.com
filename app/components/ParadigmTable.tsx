@@ -369,11 +369,18 @@ function sanitizePhrase(value: string) {
   ].reduce((result, fn) => fn(result), value);
 }
 
-export function createParadigmData (data: any, allowedPronouns?: Pronoun[]): ParadigmData {
+export function createParadigmData(
+  data: any,
+  allowedPronouns?: Pronoun[]
+): ParadigmData {
   const result = _.cloneDeep(data);
   for (let i = 0; i < result.phrases.length; i++) {
     const element = result.phrases[i];
-    element.phrase = element.breakdown.map((part: string | Record<string, string>) => typeof part === 'string' ? part : part.text).join('');
+    element.phrase = element.breakdown
+      .map((part: string | Record<string, string>) =>
+        typeof part === "string" ? part : part.text
+      )
+      .join("");
     if (allowedPronouns) {
       element.pronoun = allowedPronouns[i];
     }

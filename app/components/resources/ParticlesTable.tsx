@@ -7,7 +7,7 @@ import React from "react";
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
 
-type ParticlesGroup = "module01";
+type ParticlesGroup = "module01" | "module03";
 
 interface ParticlesTableProps {
   group?: ParticlesGroup;
@@ -75,7 +75,6 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "who",
         "someone",
         "certainly",
-        "something",
         "something_else",
         "more",
         "more_than",
@@ -85,7 +84,6 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "i_dunno",
         "true",
         "if",
-        "or",
         "tsi",
         "what_it_is",
         "isnt_it",
@@ -95,6 +93,24 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "nothing",
         "not_true",
         "no_way",
+      ],
+      module03: [
+        "again",
+        "and_then",
+        "before",
+        "because",
+        "length_of_time",
+        "short_length_of_time",
+        "now",
+        "never",
+        "thanks_much",
+        "how_is_it_going",
+        "together",
+        "different",
+        "so",
+        "until",
+        "acknowledgement",
+        "maybe",
       ],
     };
     return particleList.filter((p) => mapping[group].includes(p.key));

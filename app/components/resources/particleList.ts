@@ -73,17 +73,6 @@ export const particleList = [
     ],
   },
   {
-    key: "or",
-    oneida: "tá·thuniʔ",
-    en: "or",
-    examples: [
-      {
-        oneida: "Náhteʔ luwa·yáts né·n laulhá·, Tu·wís tá·thuniʔ Sawatis",
-        en: "What's his name, Thomas or John?",
-      },
-    ],
-  },
-  {
     key: "question_indicator",
     oneida: "kʌ",
     en: "Used to indicate a question",
@@ -113,17 +102,6 @@ export const particleList = [
       {
         oneida: "Knú·wehseʔ tsiʔ náhteʔ snú·wehse̲ʔ",
         en: "I like what (it is that) you like.",
-      },
-    ],
-  },
-  {
-    key: "something",
-    oneida: "nahte ok",
-    en: "something",
-    examples: [
-      {
-        oneida: "Náhteʔ ok knú·wehse̲",
-        en: "I like something.",
       },
     ],
   },
@@ -469,12 +447,10 @@ export const particleList = [
     oneida: "yah úhkaʔ",
     en: "no one, nobody",
     examples: [
-      [
-        {
-          oneida: "Yah úhkaʔ tehuwanú·wehseʔ thikʌ́ lanikʌhtlúha",
-          en: "No one likes that young man.",
-        },
-      ],
+      {
+        oneida: "Yah úhkaʔ tehuwanú·wehseʔ thikʌ́ lanikʌhtlúha",
+        en: "No one likes that young man.",
+      },
     ],
   },
 
@@ -506,6 +482,199 @@ export const particleList = [
     oneida: "Ta·im",
     en: "no way (slang)",
     examples: [],
+  },
+  {
+    key: "again",
+    oneida: "á·leʔ",
+    en: "again",
+    examples: [
+      {
+        oneida: "Tsyutatwʌni·yó á·leʔ",
+        en: "She's single again.",
+      },
+    ],
+  },
+
+  {
+    key: "and_then",
+    oneida: "kháleʔ nʌ́",
+    en: "and then",
+    examples: [
+      {
+        oneida:
+          "Yakonaskwayʌ·táhkweʔ takóhs khaleʔ nʌ́ yakonaskwayʌ·táhkweʔ é·lhal",
+        en: "She had a cat and then she had a dog.",
+      },
+    ],
+  },
+
+  {
+    key: "before",
+    oneida: "kaló· tsiʔ niyo·lé·",
+    en: "before",
+    examples: [
+      {
+        oneida:
+          "Yakonaskwayʌ·táhkweʔ takóhs kaló· tsiʔ niyo·lé· yakonaskwayʌ·táhkweʔ é·lhal",
+        en: "She had a cat before she had a dog.",
+      },
+    ],
+  },
+
+  {
+    key: "because",
+    oneida: "né· tsiʔ",
+    en: "because",
+    examples: [
+      {
+        oneida: "Yáh tehotinya·kú né· tsiʔ yáh thaʔtehyatatnolúkhwaʔ",
+        en: "They're not married because they don't love one another.",
+      },
+    ],
+  },
+
+  {
+    key: "length_of_time",
+    oneida: "tsiʔ náheʔ",
+    en: "(a length of time)",
+    examples: [
+      {
+        oneida: "Tewáhsʌ niyohslaké tsiʔ náheʔ wakenyakú",
+        en: "I've been married for twenty years.",
+      },
+    ],
+  },
+
+  {
+    key: "short_length_of_time",
+    oneida: "kʌʔ naheʔ",
+    en: "a short length of time",
+    examples: [
+      {
+        oneida: "Kʌʔ náheʔ yakonyakú·neʔ",
+        en: "She was married for just a short time.",
+      },
+    ],
+  },
+
+  {
+    key: "now",
+    oneida: "nuʔú·waʔ",
+    en: "now / today",
+    examples: [
+      {
+        oneida: "Tehonatekháhsyu nuʔú·waʔ",
+        en: "They're separated now.",
+      },
+    ],
+  },
+
+  {
+    key: "never",
+    oneida: "yah newʌ·tú",
+    en: "never, impossible",
+    examples: [
+      {
+        oneida: "Yáh né· newʌ·tú tesanyakú",
+        en: "You've never been married.",
+      },
+    ],
+  },
+
+  {
+    key: "thanks_much",
+    oneida: "yawʌʔkó·",
+    en: "Thank you",
+    examples: [
+      {
+        oneida: "Yawʌʔkó· tsiʔ wesake·tóteʔ",
+        en: "Thanks for coming.",
+      },
+    ],
+  },
+
+  {
+    key: "how_is_it_going",
+    oneida: "Oh niyotuháti",
+    en: "How is it going?",
+    examples: [
+      {
+        oneida: "Oh niyotuháti neʔn sahsótha",
+        en: "How's your grandmother doing?",
+      },
+    ],
+  },
+
+  {
+    key: "together",
+    oneida: "oskánhe",
+    en: "together, together with",
+    examples: [
+      {
+        oneida: "Oskánhe lotiwila·yʌ́· neʔn Sawatis kháleʔ Ní·ki",
+        en: "John and Nellie have children together.",
+      },
+    ],
+  },
+
+  {
+    key: "different",
+    oneida: "tekyattíhʌ",
+    en: "different, two things are different",
+    examples: [
+      {
+        oneida: "Tekyattíhʌ né· tekniyáhse takós",
+        en: "The two cats are different.",
+      },
+    ],
+  },
+
+  {
+    key: "so",
+    oneida: "tsiʔ ni-",
+    en: "so",
+    examples: [
+      {
+        oneida: "Tsiʔ nithoyʌ́ né· thikʌ́ lú·kwe",
+        en: "That man is so young.",
+      },
+    ],
+  },
+
+  {
+    key: "until",
+    oneida: "tsiʔ niyo·lé·",
+    en: "until, before",
+    examples: [
+      {
+        oneida: "Yáh úhkaʔ teyakonya·kú kaló· tsiʔ niyo·lé· né·n Sawatis",
+        en: "She wasn't married to anyone before John.",
+      },
+    ],
+  },
+
+  {
+    key: "acknowledgement",
+    oneida: "yo",
+    en: "(an acknowledgement)",
+    examples: [
+      {
+        oneida: "-",
+        en: "-",
+      },
+    ],
+  },
+
+  {
+    key: "maybe",
+    oneida: "ta·t nuʔuwa",
+    en: "maybe, possibly",
+    examples: [
+      {
+        oneida: "-",
+        en: "-",
+      },
+    ],
   },
   // PLOP:ADD_PARTICLE
 ];

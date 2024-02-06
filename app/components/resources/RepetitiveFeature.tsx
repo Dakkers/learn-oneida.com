@@ -6,7 +6,7 @@ import { TableWrapper } from "@/design/components/tableWrapper";
 import { TextBreakdown } from "../TextBreakdown";
 import { Flex } from "@/design/components/flex";
 
-export function RepetitiveFeatureResource () {
+export function RepetitiveFeatureResource() {
   const data = [
     {
       en: ["It is single", "It is single again"],
@@ -140,12 +140,14 @@ export function RepetitiveFeatureResource () {
 
   return (
     <Flex direction="column" gap={4}>
-      <SectionHeading id='repetitive-s' level={2}>The Repetitive Conjugation</SectionHeading>
+      <SectionHeading id="repetitive-s" level={2}>
+        The Repetitive Conjugation
+      </SectionHeading>
       <Text>
-        In Oneida, a pre-pronominal prefix is used to indicate something &quot;being
-        the case again&quot; and also &quot;not being the case anymore&quot;. Below are a
-        number of examples. The prefix that is added is dependent on the letter
-        that it comes before. The rules are:
+        In Oneida, a pre-pronominal prefix is used to indicate something
+        &quot;being the case again&quot; and also &quot;not being the case
+        anymore&quot;. Below are a number of examples. The prefix that is added
+        is dependent on the letter that it comes before. The rules are:
       </Text>
       <List>
         <List.Item>
@@ -163,17 +165,25 @@ export function RepetitiveFeatureResource () {
         </List.Item>
       </List>
 
-      <TableWrapper columns={[
-        TableWrapper.englishColumn,
-        {
-          accessorKey: "one",
-          cell: (value, row) =>
-            value.map((v, i) => (
-              <TextBreakdown as="div" breakdown={v} key={i} typeFallback={row.type} />
-            )),
-          header: "Translation",
-        },
-        ]} data={data} />
+      <TableWrapper
+        columns={[
+          TableWrapper.englishColumn,
+          {
+            accessorKey: "one",
+            cell: (value, row) =>
+              value.map((v, i) => (
+                <TextBreakdown
+                  as="div"
+                  breakdown={v}
+                  key={i}
+                  typeFallback={row.type}
+                />
+              )),
+            header: "Translation",
+          },
+        ]}
+        data={data}
+      />
     </Flex>
   );
 }
