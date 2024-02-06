@@ -39,6 +39,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/design/primitives/button";
 import { Notice } from "@/design/components/notice";
+import _ from "lodash";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()]))
@@ -56,7 +57,7 @@ export function ParadigmTable({
 }: {
   allowedPronouns?: Pronoun[];
   columnVisibility?: Partial<ColumnVisibility>;
-  data: Data;
+  data: ParadigmData;
   isTesting?: boolean;
   translationKeys?: Record<string, string>;
   translationFn?: ParadigmTableContextProps["translationFn"];
@@ -304,7 +305,7 @@ interface ColumnVisibility {
   translation: boolean;
 }
 
-interface Data {
+export interface ParadigmData {
   phrases: Row[];
   translation: string;
   type?: BreakdownType;
@@ -366,4 +367,16 @@ function sanitizePhrase(value: string) {
     removeGlottalStop,
     removeLongStress,
   ].reduce((result, fn) => fn(result), value);
+}
+
+export function createParadigmData (data: any, allowedPronouns?: Pronoun[]): ParadigmData {
+  const result = _.cloneDeep(data);
+  for (let i = 0; i < result.phrases.length; i++) {
+    const element = result.phrases[i];
+    element.phrase = element.breakdown.map((part: string | Record<string, string>) => typeof part === 'string' ? part : part.text).join('');
+    if (allowedPronouns) {
+      element.pronoun = allowedPronouns[i];
+    }
+  }
+  return result;
 }

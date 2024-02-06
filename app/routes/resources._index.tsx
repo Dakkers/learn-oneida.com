@@ -26,6 +26,10 @@ export default function Resources() {
       label: "Counting people",
     },
     {
+      href: "/clans",
+      label: "Clans",
+    },
+    {
       href: "/days-of-the-week",
       label: "Days of the week",
     },
@@ -40,6 +44,10 @@ export default function Resources() {
     {
       href: "/months",
       label: "Months of the year",
+    },
+    {
+      href: "/nations",
+      label: "Nations",
     },
     {
       href: "/relationships",
