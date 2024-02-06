@@ -13,12 +13,10 @@ module.exports = function (plop) {
 
     actions: [
       function customAction(data) {
-        updateParticleListFile(data, {
-          0: [{
-            oneida: formatOneida(data.example_0_oneida),
-            en: formatEnglish(data.example_0_en),
-          }]
-        });
+        updateParticleListFile(data, [{
+          oneida: formatOneida(data.example_0_oneida),
+          en: formatEnglish(data.example_0_en),
+        }]);
       },
     ],
   });
@@ -102,9 +100,10 @@ async function getParticlePrompts(inquirer, isMultiple = false) {
 }
 
 function updateParticleListFile (data, examples) {
+  console.log('updateParticleListFile()', data, examples)
   const MARKER = '// PLOP:ADD_PARTICLE'
   let particleListFileContent = fs.readFileSync(PATH_PARTICLE_LIST, 'utf8')
-  particleListFileContent = particleListFileContent.replace(MARKER, `\n  , ${
+  particleListFileContent = particleListFileContent.replace(MARKER, `\n ${
     JSON.stringify(
       {
         key: data.key,
@@ -115,6 +114,6 @@ function updateParticleListFile (data, examples) {
       null,
       2
     )
-  }\n  ${MARKER}`)
+  },\n${MARKER}`)
   fs.writeFileSync(PATH_PARTICLE_LIST, particleListFileContent)
 }

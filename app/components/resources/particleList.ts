@@ -658,10 +658,6 @@ export const particleList = [
     oneida: "yo",
     en: "(an acknowledgement)",
     examples: [
-      {
-        oneida: "-",
-        en: "-",
-      },
     ],
   },
 
@@ -670,10 +666,6 @@ export const particleList = [
     oneida: "ta·t nuʔuwa",
     en: "maybe, possibly",
     examples: [
-      {
-        oneida: "-",
-        en: "-",
-      },
     ],
   },
   // PLOP:ADD_PARTICLE
