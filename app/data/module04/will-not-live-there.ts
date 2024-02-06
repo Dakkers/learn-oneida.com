@@ -3,127 +3,127 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} might be at home",
+    translation: "{{pronoun}} will not live there",
     type: "PR",
     phrases: [
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
           { text: "k" },
-          "iʔtlu·t",
-          "ákeʔ",
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
           { text: "hs" },
-          "iʔtlu·t",
-          "ákeʔ",
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
-          { text: "hʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "ha" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
-          { text: "ye" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "yé" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
-          { text: "kʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "ka" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "ute", type: "IFUT" },
-          { text: "tn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "tni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
-          { text: "yakn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "yakni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "ute", type: "IFUT" },
-          { text: "sn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "sni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
-          { text: "hn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "hni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
-          { text: "kn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "kni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "ute", type: "IFUT" },
-          { text: "twʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "twa" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
-          { text: "yakwʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "yakwa" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "ute", type: "IFUT" },
-          { text: "swʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "swa" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
-          { text: "hat" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "hati" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
+          "yah th",
           { text: "uta", type: "IFUT" },
-          { text: "kut" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "kuti" },
+          "náklekeʔ",
         ],
       },
     ],

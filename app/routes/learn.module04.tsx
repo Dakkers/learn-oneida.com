@@ -21,6 +21,18 @@ import dataMightBeAtHome from "../data/module04/might-be-at-home";
 import dataIsNotAtHome from "../data/module04/is-not-at-home";
 import dataWasNotAtHome from "../data/module04/was-not-at-home";
 import dataWillNotBeAtHome from "../data/module04/will-not-be-at-home";
+import dataLivesThere from "../data/module04/lives-there";
+import dataUsedToLiveThere from "../data/module04/used-to-live-there";
+import dataWillLiveThere from "../data/module04/will-live-there";
+import dataMightLiveThere from "../data/module04/might-live-there";
+import dataDoesntLiveThere from "../data/module04/doesnt-live-there";
+import dataDidntUsedToLiveThere from "../data/module04/didnt-used-to-live-there";
+import dataWillNotLiveThere from "../data/module04/will-not-live-there";
+import dataWant from "../data/module04/want";
+import dataDontWant from "../data/module04/dont-want";
+import dataUsedToWant from "../data/module04/used-to-want";
+import dataDidntUsedToWant from "../data/module04/didnt-used-to-want";
+import dataThought from "../data/module04/thought";
 
 import { Text } from "@/design/components/text";
 import { ParadigmTable } from "~/components/ParadigmTable";
@@ -324,13 +336,27 @@ export default function LearnModule04() {
       <ParadigmTable data={dataWasNotAtHome} />
 
       <Text>
-        Note: in the above two tables, there are two phrases that
-        are peculiar: <b>yáh teʔtehsí·tluʔ</b> and <b>yáh teʔtehsiʔtlu·táhkweʔ</b>.{" "}
-        It is fairly uncommon to see <Letter>te</Letter> followed by another{" "}
+        Note: in the above two tables, there are two phrases that are peculiar:{" "}
+        <b>yáh teʔtehsí·tluʔ</b> and <b>yáh teʔtehsiʔtlu·táhkweʔ</b>. It is
+        fairly uncommon to see <Letter>te</Letter> followed by another{" "}
         <Letter>te</Letter>.
       </Text>
 
       <ParadigmTable data={dataWillNotBeAtHome} />
+
+      <ParadigmTable data={dataLivesThere} />
+      <ParadigmTable data={dataUsedToLiveThere} />
+      <ParadigmTable data={dataWillLiveThere} />
+      <ParadigmTable data={dataMightLiveThere} />
+      <ParadigmTable data={dataDoesntLiveThere} />
+      <ParadigmTable data={dataDidntUsedToLiveThere} />
+      <ParadigmTable data={dataWillNotLiveThere} />
+
+      <ParadigmTable data={dataWant} />
+      <ParadigmTable data={dataDontWant} />
+      <ParadigmTable data={dataUsedToWant} />
+      <ParadigmTable data={dataDidntUsedToWant} />
+      <ParadigmTable data={dataThought} />
     </Flex>
   );
 }

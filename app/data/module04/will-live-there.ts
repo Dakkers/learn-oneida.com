@@ -3,16 +3,15 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} will be at home",
+    translation: "{{pronoun}} will live there",
     type: "PR",
     phrases: [
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
-          "t",
+          "te",
           { text: "k" },
-          "iʔtlu·t",
-          "ákeʔ",
+          "náklekeʔ",
         ],
       },
       {
@@ -20,125 +19,111 @@ export default createParadigmData(
           { text: "ʌ", type: "FUT" },
           "te",
           { text: "hs" },
-          "iʔtlu·t",
-          "ákeʔ",
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "t",
-          { text: "hʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "ha" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "t",
-          { text: "ye" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "yé" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "t",
-          { text: "kʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "ka" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "ti",
-          { text: "tn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "tni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "t",
-          { text: "yakn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "yakni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "ti",
-          { text: "sn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "sni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "t",
-          { text: "hn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "hni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "t",
-          { text: "kn" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "kni" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "ti",
-          { text: "twʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "twa" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "t",
-          { text: "yakwʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "yakwa" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "ti",
-          { text: "swʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
+          { text: "swa" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "t",
-          { text: "hat" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "hati" },
+          "náklekeʔ",
         ],
       },
       {
         breakdown: [
           { text: "ʌ", type: "FUT" },
           "t",
-          { text: "kut" },
-          "iʔtlu·t",
-          "ákeʔ",
+          { text: "kuti" },
+          "náklekeʔ",
         ],
       },
     ],

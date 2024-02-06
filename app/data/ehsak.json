@@ -1,170 +1,81 @@
 {
   "translation": "{{pronoun}} {{refVerb}} looking for it",
+  "type": "PR",
   "phrases": [
     {
       "pronoun": "i",
       "phrase": "kéhsaks",
-      "breakdown": [
-        {
-          "text": "k",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "k" }, "éhsaks"]
     },
     {
       "pronoun": "u",
       "phrase": "séhsaks",
-      "breakdown": [
-        {
-          "text": "s",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "s" }, "éhsaks"]
     },
     {
       "pronoun": "m",
       "phrase": "léhsaks",
-      "breakdown": [
-        {
-          "text": "l",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "l" }, "éhsaks"]
     },
     {
       "pronoun": "f",
       "phrase": "yakéhsaks",
-      "breakdown": [
-        {
-          "text": "yak",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "yak" }, "éhsaks"]
     },
     {
       "pronoun": "it",
       "phrase": "wéhsaks",
-      "breakdown": [
-        {
-          "text": "w",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "w" }, "éhsaks"]
     },
     {
       "pronoun": "uni",
       "phrase": "tnéhsaks",
-      "breakdown": [
-        {
-          "text": "tn",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "tn" }, "éhsaks"]
     },
     {
       "pronoun": "soni",
       "phrase": "yaknéhsaks",
-      "breakdown": [
-        {
-          "text": "yakn",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "yakn" }, "éhsaks"]
     },
     {
       "pronoun": "u2",
       "phrase": "snéhsaks",
-      "breakdown": [
-        {
-          "text": "sn",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "sn" }, "éhsaks"]
     },
     {
       "pronoun": "2m",
       "phrase": "néhsaks",
-      "breakdown": [
-        {
-          "text": "n",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "n" }, "éhsaks"]
     },
     {
       "pronoun": "2f",
       "phrase": "knéhsaks",
-      "breakdown": [
-        {
-          "text": "kn",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "kn" }, "éhsaks"]
     },
     {
       "pronoun": "us",
       "phrase": "twéhsaks",
-      "breakdown": [
-        {
-          "text": "tw",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "tw" }, "éhsaks"]
     },
     {
       "pronoun": "theyni",
       "phrase": "yakwéhsaks",
-      "breakdown": [
-        {
-          "text": "yakw",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "yakw" }, "éhsaks"]
     },
     {
       "pronoun": "yall",
       "phrase": "swéhsaks",
-      "breakdown": [
-        {
-          "text": "sw",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "sw" }, "éhsaks"]
     },
     {
       "pronoun": "ms",
       "phrase": "lʌnéhsaks",
-      "breakdown": [
-        {
-          "text": "lʌn",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "lʌn" }, "éhsaks"]
     },
     {
       "pronoun": "fs",
       "phrase": "kunéhsaks",
-      "breakdown": [
-        {
-          "text": "kun",
-          "type": "PR"
-        },
-        { "text": "éhsaks" }
-      ]
+      "breakdown": [{ "text": "kun" }, "éhsaks"]
     }
   ]
 }

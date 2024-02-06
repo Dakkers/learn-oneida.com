@@ -12,7 +12,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "k" },
           "iʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -21,7 +21,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "hs" },
           "iʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -30,7 +30,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "hʌ" },
           "ʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -39,7 +39,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "ye" },
           "ʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -48,7 +48,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "kʌ" },
           "ʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -57,7 +57,7 @@ export default createParadigmData(
           { text: "ute", type: "IFUT" },
           { text: "tn" },
           "iʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -66,7 +66,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "yakn" },
           "iʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -75,7 +75,7 @@ export default createParadigmData(
           { text: "ute", type: "IFUT" },
           { text: "sn" },
           "iʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -84,7 +84,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "hn" },
           "iʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -93,7 +93,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "kn" },
           "iʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -102,7 +102,7 @@ export default createParadigmData(
           { text: "ute", type: "IFUT" },
           { text: "twʌ" },
           "ʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -111,7 +111,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "yakwʌ" },
           "ʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -120,7 +120,7 @@ export default createParadigmData(
           { text: "ute", type: "IFUT" },
           { text: "swʌ" },
           "ʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -129,7 +129,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "hat" },
           "iʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
       {
@@ -138,7 +138,7 @@ export default createParadigmData(
           { text: "uta", type: "IFUT" },
           { text: "kut" },
           "iʔtlu·t",
-          'ákeʔ',
+          "ákeʔ",
         ],
       },
     ],
