@@ -38,7 +38,7 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/design/primitives/button";
-import { Notice } from "@/design/primitives/notice";
+import { Notice } from "@/design/components/notice";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()]))

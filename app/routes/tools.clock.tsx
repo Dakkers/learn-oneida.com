@@ -7,7 +7,7 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import _ from "lodash";
 import { Text } from "@/design/components/text";
-import { List } from "@/design/primitives/list";
+import { List } from "@/design/components/list";
 import { doTheTranslate } from "~/utils/time";
 
 export const meta: MetaFunction = () => {

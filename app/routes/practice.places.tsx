@@ -38,7 +38,7 @@ import TownImg from "../../public/images/places/town.jpg";
 import { Button } from "@/design/primitives/button";
 import { Box } from "@/design/components/box";
 import _ from "lodash";
-import { Notice } from "@/design/primitives/notice";
+import { Notice } from "@/design/components/notice";
 import { arrayify } from "~/utils";
 
 export const meta: MetaFunction = () => {
@@ -253,11 +253,12 @@ function TheGame({ onFinish }) {
             <Notice intent={isCorrect ? "positive" : "negative"}>
               {isCorrect ? (
                 <>
-                  Correct! You selected <b>{currentItem.on}</b>
+                  Correct! You selected <b>{arrayify(currentItem.on)[0]}</b>
                 </>
               ) : (
                 <>
-                  Incorrect ☹️ The correct answer is <b>{currentItem.on}</b>
+                  Incorrect ☹️ The correct answer is{" "}
+                  <b>{arrayify(currentItem.on)[0]}</b>
                 </>
               )}
             </Notice>

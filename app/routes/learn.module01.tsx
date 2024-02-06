@@ -1,5 +1,5 @@
 import { Flex } from "@/design/components/flex";
-import { Notice } from "@/design/primitives/notice";
+import { Notice } from "@/design/components/notice";
 import { Separator } from "@/design/primitives/separator";
 import {
   Table,
@@ -27,7 +27,7 @@ import lightbluePronominalsJson from "../data/lightblue-pronominals.json";
 import yatsJson from "../data/yats.json";
 import anuhteJson from "../data/anuhte.json";
 import { TextBreakdown } from "~/components/TextBreakdown";
-import { List } from "@/design/primitives/list";
+import { List } from "@/design/components/list";
 import { Box } from "@/design/components/box";
 import { EnglishNames } from "~/components/resources/EnglishNames";
 import { ParadigmTable } from "~/components/ParadigmTable";

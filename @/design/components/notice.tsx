@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Intent } from "./types";
+import { Intent } from "../primitives/types";
 
 interface NoticeProps {
   children: React.ReactNode;

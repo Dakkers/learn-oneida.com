@@ -1,7 +1,7 @@
 import { Box } from "@/design/components/box";
 import { Flex } from "@/design/components/flex";
 import { Heading } from "@/design/components/heading";
-import { Notice } from "@/design/primitives/notice";
+import { Notice } from "@/design/components/notice";
 import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
@@ -39,7 +39,7 @@ import {
 } from "~/utils";
 import { BreakdownType, TextBreakdown } from "~/components/TextBreakdown";
 import { PronominalColor } from "~/components/Pronominal";
-import { List } from "@/design/primitives/list";
+import { List } from "@/design/components/list";
 import { Letter } from "~/components/Letter";
 import _ from "lodash";
 import {

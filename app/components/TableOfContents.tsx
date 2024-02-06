@@ -1,5 +1,5 @@
 import { Link } from "@/design/primitives/link";
-import { List } from "@/design/primitives/list";
+import { List } from "@/design/components/list";
 import React from "react";
 
 interface TableOfContentsProps {

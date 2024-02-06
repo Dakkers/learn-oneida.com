@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "../primitives/table";
-import { BreakdownType, TextBreakdown } from "~/components/TextBreakdown";
+import { BreakdownType, TextBreakdown, TextBreakdownSuffix } from "~/components/TextBreakdown";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, arrayify } from "~/utils";
 import { Text } from "./text";
 import { Flex } from "./flex";
@@ -67,12 +67,12 @@ const EnglishCol = {
   header: "English",
 };
 
-const createOneidaCol = (typeFallback: BreakdownType) => ({
-  accessorKey: "breakdown",
+const createOneidaCol = (typeFallback: BreakdownType, options = {}) => ({
+  accessorKey: options.accessorKey ?? "breakdown",
   cell: (value) => (
     <TextBreakdown breakdown={value} typeFallback={typeFallback} />
   ),
-  header: "Translation",
+  header: options.header ?? "Translation",
 });
 
 const pronounColumns: TableWrapperProps["columns"] = [
@@ -108,9 +108,54 @@ const columnsEnglishOneida: TableWrapperProps["columns"] = [
     header: "Translation",
   },
 ];
+const columnsEnglishBreakdown: TableWrapperProps["columns"] = [
+  EnglishCol,
+  {
+    accessorKey: "breakdown",
+    cell: (value) => (
+      <TextBreakdown breakdown={value} />
+    ),
+    header: "Translation",
+  },
+];
+
+interface CreatePastTenseColumnsOptions {
+  headerNow?: string;
+  headerPast?: string;
+  suffix?: TextBreakdownSuffix;
+}
+
+const createPastTenseColumns = (
+  typeFallback: BreakdownType,
+  opts: CreatePastTenseColumnsOptions = {}
+) => [
+    ...TableWrapper.columnsPronouns,
+    {
+      accessorKey: "breakdown",
+      cell: (value) => (
+        <TextBreakdown breakdown={value} typeFallback={typeFallback} />
+      ),
+      header: opts?.headerNow ?? "Now",
+    },
+    {
+      accessorKey: "breakdownPast",
+      cell: (value) => (
+        <TextBreakdown
+          breakdown={value}
+          suffix={opts.suffix}
+          typeFallback={typeFallback}
+        />
+      ),
+      header: opts?.headerPast ?? "Used to be",
+    },
+  ];
 
 TableWrapper.columnsParadigmRed = columnsParadigmRed;
 TableWrapper.columnsParadigmBlue = columnsParadigmBlue;
 TableWrapper.columnsParadigmPurple = columnsParadigmPurple;
 TableWrapper.columnsEnglishOneida = columnsEnglishOneida;
+TableWrapper.columnsEnglishBreakdown = columnsEnglishBreakdown;
 TableWrapper.columnsPronouns = pronounColumns;
+TableWrapper.createTextBreakdownColumn = createOneidaCol;
+TableWrapper.englishColumn = EnglishCol;
+TableWrapper.createPastTenseColumns = createPastTenseColumns;
