@@ -25,8 +25,13 @@ import {
   formatTranslation,
   PRONOUN_MAP_EN_OBJECTIVE,
   REF_VERB_PASTTENSE_MAP,
+  REF_VERB_PASTTENSE_ALT_MAP,
 } from "~/utils";
-import { BreakdownType, TextBreakdown } from "./TextBreakdown";
+import {
+  BreakdownType,
+  TextBreakdown,
+  TextBreakdownSuffix,
+} from "./TextBreakdown";
 import {
   Form,
   FormControl,
@@ -158,7 +163,12 @@ export function ParadigmTable({
               </TableHeader>
               <TableBody>
                 {rowsToShow.map((row, i) => (
-                  <TableRowWrapper key={i} row={row} typeFallback={data.type} />
+                  <TableRowWrapper
+                    key={i}
+                    row={row}
+                    suffix={data.suffix}
+                    typeFallback={data.type}
+                  />
                 ))}
               </TableBody>
             </Table>
@@ -187,9 +197,11 @@ export function ParadigmTable({
 
 function TableRowWrapper({
   row,
+  suffix,
   typeFallback,
 }: {
   row: Row;
+  suffix?: TextBreakdownSuffix;
   typeFallback?: BreakdownType;
 }) {
   const context = React.useContext(ParadigmTableContext);
@@ -202,6 +214,7 @@ function TableRowWrapper({
     pronounObjective: PRONOUN_MAP_EN_OBJECTIVE[row.pronoun],
     refVerb: REF_VERB_MAP[row.pronoun],
     refVerbPast: REF_VERB_PASTTENSE_MAP[row.pronoun],
+    refVerbPastAlt: REF_VERB_PASTTENSE_ALT_MAP[row.pronoun],
     ...(context.translationFn
       ? context.translationFn({ pronoun: row.pronoun })
       : {}),
@@ -247,6 +260,7 @@ function TableRowWrapper({
             {showBreakdown ? (
               <TextBreakdown
                 breakdown={row.breakdown}
+                suffix={suffix}
                 typeFallback={typeFallback}
               />
             ) : (
@@ -307,6 +321,7 @@ interface ColumnVisibility {
 
 export interface ParadigmData {
   phrases: Row[];
+  suffix?: TextBreakdownSuffix;
   translation: string;
   type?: BreakdownType;
 }

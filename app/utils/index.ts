@@ -135,6 +135,24 @@ export const REF_VERB_PASTTENSE_MAP: Record<Pronoun, string> = {
   fs: "have",
 };
 
+export const REF_VERB_PASTTENSE_ALT_MAP: Record<Pronoun, string> = {
+  i: "was",
+  u: "were",
+  m: "was",
+  f: "was",
+  it: "was",
+  uni: "were",
+  soni: "were",
+  u2: "were",
+  "2m": "were",
+  "2f": "were",
+  us: "were",
+  theyni: "were",
+  yall: "were",
+  ms: "were",
+  fs: "were",
+};
+
 export const PURPLES_MAP = {
   i_you: "I → you",
   i_him: "I → him",

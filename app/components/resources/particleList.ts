@@ -657,16 +657,14 @@ export const particleList = [
     key: "acknowledgement",
     oneida: "yo",
     en: "(an acknowledgement)",
-    examples: [
-    ],
+    examples: [],
   },
 
   {
     key: "maybe",
     oneida: "ta·t nuʔuwa",
     en: "maybe, possibly",
-    examples: [
-    ],
+    examples: [],
   },
   // PLOP:ADD_PARTICLE
 ];

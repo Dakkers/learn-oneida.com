@@ -4,6 +4,7 @@ import { arrayify } from "~/utils";
 export type BreakdownType =
   | "EP"
   | "FUT"
+  | "IFUT"
   | "JOIN"
   | "OP"
   | "PAST"
@@ -105,6 +106,7 @@ function InnerText({
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   EP: "text-gray-400",
   FUT: "text-emerald-400",
+  IFUT: "text-emerald-400",
   JOIN: "text-gray-400",
   OP: "underline decoration-wavy decoration-black",
   PAST: "text-orange-500",

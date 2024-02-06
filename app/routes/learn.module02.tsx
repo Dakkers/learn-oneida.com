@@ -47,6 +47,7 @@ import {
   FamilyTableOfContentItems,
 } from "~/components/resources/Family";
 import { ParadigmTable } from "~/components/ParadigmTable";
+import { SectionHeading } from "~/components/SectionHeading";
 
 export const meta: MetaFunction = () => {
   return [
@@ -58,9 +59,7 @@ export const meta: MetaFunction = () => {
 export default function LearnModule02() {
   return (
     <div>
-      <Heading level={1} variant="headlineL">
-        Module 2
-      </Heading>
+      <SectionHeading level={1}>Module 2</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
           <b>NOTE:</b> This page is still under construction!
