@@ -14,6 +14,14 @@ export const meta: MetaFunction = () => {
 export default function Resources() {
   const resources = [
     {
+      href: "/around-the-house",
+      label: "Around the house",
+    },
+    {
+      href: "/at-someones-place",
+      label: "At someone's place",
+    },
+    {
       href: "/cardinal-directions",
       label: "Cardinal Directions",
     },
@@ -26,8 +34,16 @@ export default function Resources() {
       label: "Counting people",
     },
     {
+      href: "/cities",
+      label: "Cities",
+    },
+    {
       href: "/clans",
       label: "Clans",
+    },
+    {
+      href: "/countries",
+      label: "Countries",
     },
     {
       href: "/days-of-the-week",
@@ -50,12 +66,20 @@ export default function Resources() {
       label: "Nations",
     },
     {
+      href: "/places-in-the-community",
+      label: "Places in the community",
+    },
+    {
       href: "/relationships",
       label: "Relationships",
     },
     {
       href: "/repetitive-conjugation",
       label: "Repetitive Conjugation",
+    },
+    {
+      href: "/roads",
+      label: "Roads",
     },
     {
       href: "/seasons",

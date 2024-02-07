@@ -1,12 +1,11 @@
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/components/heading";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
 import {
-  ParadigmData,
   ParadigmTable,
   createParadigmData,
 } from "../ParadigmTable";
+import { SectionHeading } from "../SectionHeading";
 
 const allowedPronouns = ["i", "u", "m", "f"];
 
@@ -116,9 +115,9 @@ const dataNations = createParadigmData(
 export function NationsResource({ level = 1 }) {
   return (
     <Flex direction="column" gap={4}>
-      <Heading id="months" level={level} variant="headlineL">
+      <SectionHeading id="nations" level={level}>
         Nations
-      </Heading>
+      </SectionHeading>
       <Text>
         Below is a list of nations and nationalities. These include nations part
         of the Haudenosaunee confederacy and others outside.
