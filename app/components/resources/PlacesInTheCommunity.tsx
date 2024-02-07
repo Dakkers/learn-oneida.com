@@ -110,7 +110,7 @@ export function PlacesInTheCommunityResource({ level = 1 }) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="places-in-community" level={level}>
-        Plaes in the community
+        Places in the community
       </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}

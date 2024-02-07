@@ -4,7 +4,7 @@ import { PlacesInTheCommunityResource } from "~/components/resources/PlacesInThe
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "PlacesInTheCommunity" },
+    { title: "Places in the community" },
     {
       name: "description",
       content: "Places in the community in Oneida",
