@@ -1,22 +1,17 @@
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/components/heading";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { PRONOUN_MAP_ONEIDA } from "~/utils";
-import {
-  BreakdownType,
-  TextBreakdown,
-  TextBreakdownSuffix,
-} from "../TextBreakdown";
+import { TextBreakdown } from "../TextBreakdown";
 import { Text } from "@/design/components/text";
+import { SectionHeading } from "../SectionHeading";
 
 const HNE = { text: "hné·", type: "PAST" };
 
 export function RelationshipsResource({ level = 1 }) {
   return (
     <Flex direction="column" gap={4}>
-      <Heading id="relationships" level={level} variant="headlineL">
+      <SectionHeading id="relationships" level={level}>
         Relationships
-      </Heading>
+      </SectionHeading>
       <MarriedTable level={level} />
       <InARelationshipTable level={level} />
       <SeparatedTable level={level} />
@@ -57,9 +52,9 @@ function MarriedTable({ level }) {
 
   return (
     <>
-      <Heading id="married" level={level + 1} variant="headlineS">
+      <SectionHeading id="married" level={level + 1}>
         Married
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={createColumns("PB", { suffix: "hne" })}
         data={rows}
@@ -100,9 +95,9 @@ function InARelationshipTable({ level }) {
 
   return (
     <>
-      <Heading id="in-a-relationship" level={level + 1} variant="headlineS">
+      <SectionHeading id="in-a-relationship" level={level + 1}>
         In a relationship
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={createColumns("PR", { suffix: "kwe" })}
         data={rows}
@@ -128,9 +123,9 @@ function SeparatedTable({ level }) {
 
   return (
     <>
-      <Heading id="separated" level={level + 1} variant="headlineS">
+      <SectionHeading id="separated" level={level + 1}>
         Separated and Reconciled
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={createColumns("PB", {
           headerNow: "Separated",
@@ -158,9 +153,9 @@ function EngagedTable({ level }) {
 
   return (
     <>
-      <Heading id="engaged" level={level + 1} variant="headlineS">
+      <SectionHeading id="engaged" level={level + 1}>
         Engaged
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={createColumns("PB", { suffix: "hkwe" })}
         data={rows}
@@ -185,9 +180,9 @@ function SingleTable({ level }) {
 
   return (
     <>
-      <Heading id="single" level={level + 1} variant="headlineS">
+      <SectionHeading id="single" level={level + 1}>
         Single
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={createColumns("PR", { suffix: "hne" })}
         data={rows}
@@ -212,9 +207,9 @@ function OldManWomanTable({ level }) {
 
   return (
     <>
-      <Heading id="oldman-oldwoman" level={level + 1} variant="headlineS">
+      <SectionHeading id="oldman-oldwoman" level={level + 1}>
         Old Man / Old Woman
-      </Heading>
+      </SectionHeading>
       <Text>
         This is a colloquial term similar to its English translation, e.g. "my
         old lady is a real battleaxe!"
@@ -253,9 +248,9 @@ function SpouseTable({ level }) {
 
   return (
     <>
-      <Heading id="spouse" level={level + 1} variant="headlineS">
+      <SectionHeading id="spouse" level={level + 1}>
         Spouse
-      </Heading>
+      </SectionHeading>
       <Text>
         <b>lo·né·</b> is used to describe someone else's spouse, it is not used
         for "my spouse" or "your spouse".
@@ -295,9 +290,9 @@ function BoyfriendGirlfriendTable({ level }) {
 
   return (
     <>
-      <Heading id="boyfriend-girlfriend" level={level + 1} variant="headlineS">
+      <SectionHeading id="boyfriend-girlfriend" level={level + 1}>
         Boyfriend / Girlfriend
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={[
           ...TableWrapper.columnsPronouns,

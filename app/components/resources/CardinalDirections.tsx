@@ -1,6 +1,6 @@
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/components/heading";
 import { TableWrapper } from "@/design/components/tableWrapper";
+import { SectionHeading } from "../SectionHeading";
 
 export const DATA_CARDINAL_DIRECTIONS = [
   { en: "In the North", on: "otholé·ke", key: "north" },
@@ -12,9 +12,9 @@ export const DATA_CARDINAL_DIRECTIONS = [
 export function CardinalDirectionsResource({ level = 1 }) {
   return (
     <Flex direction="column" gap={4}>
-      <Heading id="cardinal-directions" level={level} variant="headlineL">
+      <SectionHeading id="cardinal-directions" level={level}>
         Cardinal Directions
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={DATA_CARDINAL_DIRECTIONS}

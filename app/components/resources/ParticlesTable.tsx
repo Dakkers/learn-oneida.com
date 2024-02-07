@@ -7,7 +7,7 @@ import React from "react";
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
 
-type ParticlesGroup = "module01" | "module03";
+type ParticlesGroup = "module01" | "module03" | "module04";
 
 interface ParticlesTableProps {
   group?: ParticlesGroup;
@@ -111,6 +111,25 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "until",
         "acknowledgement",
         "maybe",
+      ],
+      module04: [
+        "all_over",
+        "all_over_town",
+        "wherever",
+        "elsewhere",
+        "here",
+        "nowhere",
+        "somewhere",
+        "there",
+        "when",
+        "when_2",
+        "when_3",
+        "where_2",
+        "where_3",
+        "hopefully",
+        "it_is_important",
+        "must",
+        "necessary",
       ],
     };
     return particleList.filter((p) => mapping[group].includes(p.key));

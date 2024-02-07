@@ -1,67 +1,48 @@
-import {
-  TableWrapper,
-  TableWrapperProps,
-} from "@/design/components/tableWrapper";
-import { TextBreakdown } from "../TextBreakdown";
-import { Heading } from "@/design/components/heading";
+import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
+import { SectionHeading } from "../SectionHeading";
 
 export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
   return (
     <>
-      <Heading id="people-resource" level={baseLevel} variant="headlineS">
+      <SectionHeading id="people-resource" level={baseLevel}>
         People
-      </Heading>
+      </SectionHeading>
       <Text>
         It is important to understand that the translations for two or more
         people are not literal. <i>tehniská·</i> is not the literal translation
-        for "2 boys" – that is <i>tehniyáhse tehniská·</i>. You can learn more
-        about this in the "Counting" resource which is part of module 3.
+        for &quot;2 boys&quot; – that is <i>tehniyáhse tehniská·</i>. You can
+        learn more about this in the &quot;Counting&quot; resource which is part
+        of module 3.
       </Text>
 
-      <Heading
-        id="people-resource-children"
-        level={baseLevel + 1}
-        variant="titleM"
-      >
+      <SectionHeading id="people-resource-children" level={baseLevel + 1}>
         Children
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsParadigmRed}
         data={dataChildren}
       />
 
-      <Heading
-        id="people-resource-adolescents"
-        level={baseLevel + 1}
-        variant="titleM"
-      >
+      <SectionHeading id="people-resource-adolescents" level={baseLevel + 1}>
         Adolescents
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsParadigmRed}
         data={dataAdolescents}
       />
 
-      <Heading
-        id="people-resource-adults"
-        level={baseLevel + 1}
-        variant="titleM"
-      >
+      <SectionHeading id="people-resource-adults" level={baseLevel + 1}>
         Adults
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsParadigmRed}
         data={dataAdults}
       />
 
-      <Heading
-        id="people-resource-older"
-        level={baseLevel + 1}
-        variant="titleM"
-      >
+      <SectionHeading id="people-resource-older" level={baseLevel + 1}>
         Older people
-      </Heading>
+      </SectionHeading>
       <Text>
         <b>Note</b>: These words do not mean "old people", "seniors", "elders",
         etc. They mean people that are older than the speaker. Thus,{" "}

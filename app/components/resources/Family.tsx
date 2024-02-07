@@ -41,20 +41,20 @@ import siblingsJson from "../../data/family/plural/siblings.json";
 import cousinsJson from "../../data/family/plural/cousins.json";
 import friendsJson from "../../data/family/plural/friends.json";
 
-import { Heading } from "@/design/components/heading";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
 import { TextBreakdown } from "../TextBreakdown";
 import { PRONOUN_MAP_EN_POSSESSIVE, Pronoun } from "~/utils";
 import { TableOfContents as TOC } from "../TableOfContents";
 import { Letter } from "../Letter";
+import { SectionHeading } from "../SectionHeading";
 
 export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
   return (
     <>
-      <Heading id="family-members" level={level} variant="headlineS">
+      <SectionHeading id="family-members" level={level}>
         Family Members
-      </Heading>
+      </SectionHeading>
       <Text>
         In Oneida, pronominals are used to designate family relations. For
         example, the root word <b>ʔkʌha</b> is used for both brother and sister,
@@ -87,9 +87,9 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         bloodline. Even if your uncle is actually younger than you, you would
         still use the pronominal for "he → you".
       </Text>
-      <Heading id="female-relatives-older" level={level + 1} variant="titleM">
+      <SectionHeading id="female-relatives-older" level={level + 1}>
         Older Female Relatives
-      </Heading>
+      </SectionHeading>
       <RelativesTable
         datasets={[
           { data: motherJson, en: "mother", oneida: "nulha" },
@@ -99,9 +99,9 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         ]}
       />
 
-      <Heading id="female-relatives-younger" level={level + 1} variant="titleM">
+      <SectionHeading id="female-relatives-younger" level={level + 1}>
         Younger Female Relatives
-      </Heading>
+      </SectionHeading>
       <RelativesTable
         datasets={[
           { data: daughterJson, en: "daughter", oneida: "yʌha" },
@@ -115,9 +115,9 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
           },
         ]}
       />
-      <Heading id="male-relatives-older" level={level + 1} variant="titleM">
+      <SectionHeading id="male-relatives-older" level={level + 1}>
         Older Male Relatives
-      </Heading>
+      </SectionHeading>
       <RelativesTable
         datasets={[
           { data: fatherJson, en: "father", oneida: "ʔniha" },
@@ -126,9 +126,9 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
           { data: olderBrotherJson, en: "older brother", oneida: "ʔkʌha" },
         ]}
       />
-      <Heading id="male-relatives-younger" level={level + 1} variant="titleM">
+      <SectionHeading id="male-relatives-younger" level={level + 1}>
         Younger Male Relatives
-      </Heading>
+      </SectionHeading>
       <RelativesTable
         datasets={[
           { data: sonJson, en: "son", oneida: "yʌha" },
@@ -143,9 +143,9 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         ]}
       />
 
-      <Heading id="cousins" level={level + 1} variant="titleM">
+      <SectionHeading id="cousins" level={level + 1}>
         Cousins & Friends
-      </Heading>
+      </SectionHeading>
       <RelativesTable
         datasets={[
           { data: cousinJson, en: "cousin", oneida: "alaʔse" },
@@ -154,9 +154,9 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         pronouns={["soni", "u2", "2m", "2f", "us", "yall"]}
       />
 
-      <Heading id="family" level={level + 1} variant="titleM">
+      <SectionHeading id="family" level={level + 1}>
         Family
-      </Heading>
+      </SectionHeading>
       <RelativesTable
         datasets={[{ data: familyJson, en: "family", oneida: "hwa·tsíleʔ" }]}
         pronouns={[
@@ -174,9 +174,9 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         ]}
       />
 
-      <Heading id="siblings" level={level + 1} variant="titleM">
+      <SectionHeading id="siblings" level={level + 1}>
         Siblings, Related
-      </Heading>
+      </SectionHeading>
       <RelativesTable
         datasets={[
           { data: siblingJson, en: "siblings", oneida: "ekʌha" },
@@ -201,9 +201,9 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         ]}
       />
 
-      <Heading id="multiple-family-members" level={level + 1} variant="titleM">
+      <SectionHeading id="multiple-family-members" level={level + 1}>
         Multiple Family Members
-      </Heading>
+      </SectionHeading>
       <RelativesTable
         datasets={[
           { data: parentsJson, en: "parents", oneida: "yʌha" },

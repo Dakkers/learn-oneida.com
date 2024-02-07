@@ -1,9 +1,9 @@
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
-import { Heading } from "@/design/components/heading";
 import { TableWrapper } from "@/design/components/tableWrapper";
+import { SectionHeading } from "../SectionHeading";
 
-export function TimesOfDayResource({ level = 1 }) {
+export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
   const dayPhʌases = [
     { en: "day", on: "awʌhnísla̲ʔ̲" },
     { en: "all day", on: "kwʌʔtátiʔ" },
@@ -122,121 +122,113 @@ export function TimesOfDayResource({ level = 1 }) {
 
   return (
     <Flex direction="column" gap={4}>
-      <Heading id="times-of-day" level={level} variant="headlineL">
+      <SectionHeading id="times-of-day" level={level}>
         Times of day
-      </Heading>
+      </SectionHeading>
       <Text>
         Below is a bunch of phrases related to what time of day it is (not a
         specific clock time).
       </Text>
 
-      <Heading id="times-of-day-times" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-times" level={level + 1}>
         Times
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={timePhrases}
       />
 
-      <Heading id="times-of-day-daytime" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-daytime" level={level + 1}>
         Day, daytime
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={dayPhʌases}
       />
 
-      <Heading id="times-of-day-morning" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-morning" level={level + 1}>
         Morning
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={morningPhrases}
       />
 
-      <Heading
-        id="times-of-day-afternoon"
-        level={level + 1}
-        variant="headlineS"
-      >
+      <SectionHeading id="times-of-day-afternoon" level={level + 1}>
         Afternoon
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={afternoonPhrases}
       />
 
-      <Heading id="times-of-day-evening" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-evening" level={level + 1}>
         Evening
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={eveningPhrases}
       />
 
-      <Heading id="times-of-day-night" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-night" level={level + 1}>
         Night
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={nightPhrases}
       />
 
-      <Heading id="times-of-day-tomorrow" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-tomorrow" level={level + 1}>
         Tomorrow
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={tomorrowPhrases}
       />
 
-      <Heading
-        id="times-of-day-yesterday"
-        level={level + 1}
-        variant="headlineS"
-      >
+      <SectionHeading id="times-of-day-yesterday" level={level + 1}>
         Yesterday
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={yesterdayPhrases}
       />
 
-      <Heading id="times-of-day-week" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-week" level={level + 1}>
         Week
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={weekPhrases}
       />
 
-      <Heading id="times-of-day-weekend" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-weekend" level={level + 1}>
         Weekend
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={weekendPhrases}
       />
 
-      <Heading id="times-of-day-month" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-month" level={level + 1}>
         Months
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={monthPhrases}
       />
 
-      <Heading id="times-of-day-year" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-year" level={level + 1}>
         Years
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={yearPhrases}
       />
 
-      <Heading id="times-of-day-other" level={level + 1} variant="headlineS">
+      <SectionHeading id="times-of-day-other" level={level + 1}>
         Other Phrases
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={otherPhrases}

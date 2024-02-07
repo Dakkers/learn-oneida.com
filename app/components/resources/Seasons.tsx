@@ -1,6 +1,6 @@
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/components/heading";
 import { TableWrapper } from "@/design/components/tableWrapper";
+import { SectionHeading } from "../SectionHeading";
 
 export const DATA_SEASONS = [
   { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
@@ -26,23 +26,23 @@ export function SeasonsResource({ level = 1 }) {
 
   return (
     <Flex direction="column" gap={4}>
-      <Heading id="seasons" level={level} variant="headlineL">
+      <SectionHeading id="seasons" level={level}>
         Seasons
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={DATA_SEASONS}
       />
-      <Heading id="seasons-during" level={level + 1} variant="headlineS">
+      <SectionHeading id="seasons-during" level={level + 1}>
         During a season
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={seasonsDuring}
       />
-      <Heading id="seasons-other" level={level + 1} variant="headlineS">
+      <SectionHeading id="seasons-other" level={level + 1}>
         Other phrases
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={otherPhrases}

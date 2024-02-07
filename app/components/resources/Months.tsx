@@ -1,6 +1,6 @@
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/components/heading";
 import { TableWrapper } from "@/design/components/tableWrapper";
+import { SectionHeading } from "../SectionHeading";
 
 export const DATA_MONTHS = [
   {
@@ -74,9 +74,9 @@ export function MonthsResource({ level = 1 }) {
 
   return (
     <Flex direction="column" gap={4}>
-      <Heading id="months" level={level} variant="headlineL">
+      <SectionHeading id="months" level={level}>
         Months
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={[
           ...TableWrapper.columnsEnglishOneida,
@@ -88,17 +88,17 @@ export function MonthsResource({ level = 1 }) {
         data={DATA_MONTHS}
       />
 
-      <Heading id="months-last" level={level + 1} variant="headlineS">
+      <SectionHeading id="months-last" level={level + 1}>
         Last month
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={monthsLast}
       />
 
-      <Heading id="months-next" level={level + 1} variant="headlineS">
+      <SectionHeading id="months-next" level={level + 1}>
         Next month
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={monthsNext}

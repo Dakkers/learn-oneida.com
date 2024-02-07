@@ -35,7 +35,7 @@ import dataDidntUsedToWant from "../data/module04/didnt-used-to-want";
 import dataThought from "../data/module04/thought";
 
 import { Text } from "@/design/components/text";
-import { ParadigmTable } from "~/components/ParadigmTable";
+import { ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
 import {
   Accordion,
   AccordionContent,
@@ -48,12 +48,28 @@ import { SectionHeading } from "~/components/SectionHeading";
 import { Box } from "@/design/components/box";
 import { Notice } from "@/design/components/notice";
 import { Letter } from "~/components/Letter";
+import { TimesOfDayResource } from "~/components/resources/TimesOfDay";
+import { DaysOfTheWeekResource } from "~/components/resources/DaysOfTheWeek";
+import { MonthsResource } from "~/components/resources/Months";
+import { CountingTimeResource } from "~/components/resources/CountingTime";
+import { RoadsResource } from "~/components/resources/Roads";
+import { CitiesResource } from "~/components/resources/Cities";
+import { CountriesResource } from "~/components/resources/Countries";
+import { AroundTheHouseResource } from "~/components/resources/AroundTheHouse";
+import { AtSomeonesPlaceResource } from "~/components/resources/AtSomeonesPlace";
+import { PlacesInTheCommunityResource } from "~/components/resources/PlacesInTheCommunity";
+import { ParticlesTable } from "~/components/resources/ParticlesTable";
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Module 4" },
     { name: "description", content: "Module 4 of the Oneida curriculum" },
   ];
+};
+
+const columnVisibility = {
+  pronounEnglish: false,
+  pronounOneida: false,
 };
 
 export default function LearnModule04() {
@@ -94,37 +110,7 @@ export default function LearnModule04() {
           </TOC.Section>
         </TOC.Item>
 
-        <TOC.Item label="Being there" value="being-there">
-          <TOC.Section>
-            <TOC.Item label="Someone is there" value="someone-is-there" />
-            <TOC.Item label="Someone was there" value="someone-was-there" />
-            <TOC.Item
-              label="Someone will be there"
-              value="someone-will-be-there"
-            />
-            <TOC.Item
-              label="Someone would/might be there"
-              value="someone-might-be-there"
-            />
-            <TOC.Item
-              label="Someone is not there"
-              value="someone-is-not-there"
-            />
-            <TOC.Item
-              label="Someone was not there"
-              value="someone-was-not-there"
-            />
-            <TOC.Item
-              label="Someone will not be there"
-              value="someone-will-not-be-there"
-            />
-          </TOC.Section>
-        </TOC.Item>
-
-        <TOC.Item
-          label="Being there (temporarily)"
-          value="being-there-temporarily"
-        >
+        <TOC.Item label="Being there (temporarily)" value="being-there-temp">
           <TOC.Section>
             <TOC.Item label="Someone is there" value="someone-is-there-temp" />
             <TOC.Item
@@ -154,7 +140,7 @@ export default function LearnModule04() {
           </TOC.Section>
         </TOC.Item>
 
-        <TOC.Item label="Being there (usually)" value="being-there-usually">
+        {/* <TOC.Item label="Being there (usually)" value="being-there-usually">
           <TOC.Section>
             <TOC.Item
               label="Someone is there"
@@ -185,7 +171,7 @@ export default function LearnModule04() {
               value="someone-will-not-be-there-usually"
             />
           </TOC.Section>
-        </TOC.Item>
+        </TOC.Item> */}
 
         <TOC.Item
           label="Residing at an address / being home"
@@ -193,17 +179,14 @@ export default function LearnModule04() {
         >
           <TOC.Section>
             <TOC.Item label="Someone is at home" value="someone-is-at-home" />
-            <TOC.Item
-              label="Someone used to be at home"
-              value="someone-used-to-be-at-home"
-            />
+            <TOC.Item label="Someone was at home" value="someone-was-at-home" />
             <TOC.Item
               label="Someone will be at home"
               value="someone-will-be-at-home"
             />
             <TOC.Item
               label="Someone would/might be at home"
-              value="someone-would-might-be-at-home"
+              value="someone-might-be-at-home"
             />
             <TOC.Item
               label="Someone is not at home"
@@ -220,7 +203,7 @@ export default function LearnModule04() {
           </TOC.Section>
         </TOC.Item>
 
-        <TOC.Item label="Living in an area" value="living">
+        <TOC.Item label="Living in an area" value="living-there">
           <TOC.Section>
             <TOC.Item label="Someone lives there" value="someone-lives-there" />
             <TOC.Item
@@ -233,7 +216,7 @@ export default function LearnModule04() {
             />
             <TOC.Item
               label="Someone would/might live there"
-              value="someone-would-might-live-there"
+              value="someone-might-live-there"
             />
             <TOC.Item
               label="Someone doesn't live there"
@@ -258,105 +241,229 @@ export default function LearnModule04() {
             <TOC.Item label="Didn't used to want" value="didnt-used-to-want" />
           </TOC.Section>
         </TOC.Item>
+
+        <TOC.Item label="Times of day" value="times-of-day" />
+        <TOC.Item label="Days of the week" value="days-of-the-week" />
+        <TOC.Item label="Months of the year" value="months" />
+        <TOC.Item label="Clock time" value="clock-time" />
+        <TOC.Item label="Counting time" value="counting-time" />
+        <TOC.Item label="Phone number" value="phone-number">
+          <TOC.Section>
+            <TOC.Item label="Someone's house" value="phone-house" />
+            <TOC.Item
+              label="Someone's place of work"
+              value="phone-place-of-work"
+            />
+          </TOC.Section>
+        </TOC.Item>
+        <TOC.Item label="Roads" value="roads" />
+        <TOC.Item label="Cities" value="cities" />
+        <TOC.Item label="Countries" value="countries" />
+        <TOC.Item label="Around the house" value="around-the-house" />
+        <TOC.Item label="At someone's place" value="at-someones-place" />
+        <TOC.Item label="Places in the community" value="places-in-community" />
+        <TOC.Item label="Particles" value="particles" />
       </TOC>
 
+      <SectionHeading level={2}>Someone Being Here</SectionHeading>
       <Text>
-        In this module, we&lsquo;ll cover the following:
-        <ul>
-          <li>Times of day</li>
-          <li>Times of year</li>
-          <li>Days of the week</li>
-          <li>Months of the year</li>
-          <li>Clock time (what time it is)</li>
-          <li>Time durations</li>
-          <li>Phone number</li>
-          <li>Someone&lsquo;s house</li>
-          <li>Someone&lsquo;s place of work</li>
-          <li>Roads of Oneida Nation</li>
-          <li>Cities</li>
-          <li>Countries</li>
-          <li>In the house</li>
-          <li>At someone&lsquo;s place</li>
-          <li>Places in the community</li>
-          <li>Coming from a place</li>
-        </ul>
+        Below is a number of paradigm tables for "someone being here".
       </Text>
 
-      {/* <Accordion type="single" collapsible>
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Someone is here</AccordionTrigger>
-          <AccordionContent>
-            <ParadigmTable
-              columnVisibility={{
-                pronounEnglish: false,
-                pronounOneida: false,
-              }}
-              data={dataIsHere}
-            />
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion> */}
+      <AccordionWrapper
+        sections={[
+          ["someone-is-here", "Someone is here", dataIsHere],
+          ["someone-was-here", "Someone was here", dataWasHere],
+          ["someone-will-be-here", "Someone will be here", dataWillBeHere],
+          ["someone-might-be-here", "Someone might be here", dataMightBeHere],
+          ["someone-is-not-here", "Someone is not here", dataIsNotHere],
+          ["someone-was-not-here", "Someone was not here", dataWasNotHere],
+          [
+            "someone-will-not-be-here",
+            "Someone will not be here",
+            dataWillNotBeHere,
+          ],
+        ]}
+      />
 
-      <ParadigmTable data={dataWasHere} />
+      <SectionHeading id="being-there-temp" level={2}>
+        Someone Being There (temporarily)
+      </SectionHeading>
+      <Text>
+        Below is a number of paradigm tables for "someone being <b>there</b>{" "}
+        (temporarily)".
+      </Text>
 
-      <ParadigmTable data={dataWillBeHere} />
+      <AccordionWrapper
+        sections={[
+          ["someone-is-there-temp", "Someone is there", dataIsThere],
+          ["someone-was-there-temp", "Someone was there", dataWasThere],
+          [
+            "someone-will-be-there-temp",
+            "Someone will be there",
+            dataWillBeThere,
+          ],
+          [
+            "someone-might-be-there-temp",
+            "Someone might be there",
+            dataMightBeThere,
+          ],
+          ["someone-is-not-there-temp", "Someone is not there", dataIsNotThere],
+          [
+            "someone-was-not-there-temp",
+            "Someone was not there",
+            dataWasNotThere,
+          ],
+          [
+            "someone-will-not-be-there-temp",
+            "Someone will not be there",
+            dataWillNotBeThere,
+          ],
+        ]}
+      />
 
-      <ParadigmTable data={dataMightBeHere} />
+      <SectionHeading id="being-home" level={2}>
+        Someone Being At Home / Someone Residing There
+      </SectionHeading>
+      <Text>
+        Below is a number of paradigm tables for "someone being at home" or
+        "someone residing there".
+      </Text>
 
-      <ParadigmTable data={dataIsNotHere} />
-
-      <ParadigmTable data={dataWasNotHere} />
-
-      <ParadigmTable data={dataWillNotBeHere} />
-
-      <ParadigmTable data={dataIsThere} />
-
-      <ParadigmTable data={dataWasThere} />
-
-      <ParadigmTable data={dataWillBeThere} />
-
-      <ParadigmTable data={dataMightBeThere} />
-
-      <ParadigmTable data={dataIsNotThere} />
-
-      <ParadigmTable data={dataWasNotThere} />
-
-      <ParadigmTable data={dataWillNotBeThere} />
-
-      <ParadigmTable data={dataIsAtHome} />
-
-      <ParadigmTable data={dataWasAtHome} />
-
-      <ParadigmTable data={dataWillBeAtHome} />
-
-      <ParadigmTable data={dataMightBeAtHome} />
-
-      <ParadigmTable data={dataIsNotAtHome} />
-
-      <ParadigmTable data={dataWasNotAtHome} />
+      <AccordionWrapper
+        sections={[
+          ["someone-is-at-home", "Someone is at home", dataIsAtHome],
+          ["someone-was-at-home", "Someone was at home", dataWasAtHome],
+          [
+            "someone-will-be-at-home",
+            "Someone will be at home",
+            dataWillBeAtHome,
+          ],
+          [
+            "someone-might-be-at-home",
+            "Someone might be at home",
+            dataMightBeAtHome,
+          ],
+          ["someone-is-not-at-home", "Someone is not at home", dataIsNotAtHome],
+          [
+            "someone-was-not-at-home",
+            "Someone was not at home",
+            dataWasNotAtHome,
+          ],
+          [
+            "someone-will-not-be-at-home",
+            "Someone will not be at home",
+            dataWillNotBeAtHome,
+          ],
+        ]}
+      />
 
       <Text>
-        Note: in the above two tables, there are two phrases that are peculiar:{" "}
+        Note: in the tables above, there are two phrases that are peculiar:{" "}
         <b>yáh teʔtehsí·tluʔ</b> and <b>yáh teʔtehsiʔtlu·táhkweʔ</b>. It is
         fairly uncommon to see <Letter>te</Letter> followed by another{" "}
         <Letter>te</Letter>.
       </Text>
 
-      <ParadigmTable data={dataWillNotBeAtHome} />
+      <SectionHeading id="living-there" level={2}>
+        Someone Living There
+      </SectionHeading>
+      <Text>
+        Below is a number of paradigm tables for "someone living in an area".
+      </Text>
 
-      <ParadigmTable data={dataLivesThere} />
-      <ParadigmTable data={dataUsedToLiveThere} />
-      <ParadigmTable data={dataWillLiveThere} />
-      <ParadigmTable data={dataMightLiveThere} />
-      <ParadigmTable data={dataDoesntLiveThere} />
-      <ParadigmTable data={dataDidntUsedToLiveThere} />
-      <ParadigmTable data={dataWillNotLiveThere} />
+      <AccordionWrapper
+        sections={[
+          ["someone-lives-there", "Someone lives there", dataLivesThere],
+          [
+            "someone-used-to-live-there",
+            "Someone used to live there",
+            dataUsedToLiveThere,
+          ],
+          [
+            "someone-will-live-there",
+            "Someone will live there",
+            dataWillLiveThere,
+          ],
+          [
+            "someone-might-live-there",
+            "Someone might live there",
+            dataMightLiveThere,
+          ],
+          [
+            "someone-doesnt-live-there",
+            "Someone doesnt live there",
+            dataDoesntLiveThere,
+          ],
+          [
+            "someone-didnt-used-to-live-there",
+            "Someone didn't used to live there",
+            dataDidntUsedToLiveThere,
+          ],
+          [
+            "someone-will-not-live-there",
+            "Someone will not live there",
+            dataWillNotLiveThere,
+          ],
+        ]}
+      />
 
-      <ParadigmTable data={dataWant} />
-      <ParadigmTable data={dataDontWant} />
-      <ParadigmTable data={dataUsedToWant} />
-      <ParadigmTable data={dataDidntUsedToWant} />
-      <ParadigmTable data={dataThought} />
+      <SectionHeading level={2}>Wanted / Thought</SectionHeading>
+
+      <AccordionWrapper
+        sections={[
+          ["want", "Someone wants", dataWant],
+          ["dont-want", "Someone doesn't want", dataDontWant],
+          ["used-to-want", "Someone used to want", dataUsedToWant],
+          [
+            "didnt-used-to-want",
+            "Someone didn't used to want",
+            dataDidntUsedToWant,
+          ],
+          ["thought", "Someone thought", dataThought],
+        ]}
+      />
+
+      <TimesOfDayResource level={2} />
+
+      <DaysOfTheWeekResource level={2} />
+
+      <MonthsResource level={2} />
+
+      <CountingTimeResource level={2} />
+
+      <RoadsResource level={2} />
+
+      <CitiesResource level={2} />
+
+      <CountriesResource level={2} />
+
+      <AroundTheHouseResource level={2} />
+
+      <AtSomeonesPlaceResource level={2} />
+
+      <PlacesInTheCommunityResource level={2} />
+
+      <ParticlesTable group="module04" />
     </Flex>
+  );
+}
+
+function AccordionWrapper({
+  sections,
+}: {
+  sections: Array<[string, string, ParadigmData]>;
+}) {
+  return (
+    <Accordion type="multiple">
+      {sections.map(([id, title, data]) => (
+        <AccordionItem id={id} key={id} value={id}>
+          <AccordionTrigger>{title}</AccordionTrigger>
+          <AccordionContent>
+            <ParadigmTable columnVisibility={columnVisibility} data={data} />
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
   );
 }

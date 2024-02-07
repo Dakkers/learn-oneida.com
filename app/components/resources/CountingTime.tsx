@@ -1,7 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
-import { Heading } from "@/design/components/heading";
 import { TableWrapper } from "@/design/components/tableWrapper";
+import { SectionHeading } from "../SectionHeading";
 
 export function CountingTimeResource({ level = 1 }) {
   const firstTable = [
@@ -50,9 +50,9 @@ export function CountingTimeResource({ level = 1 }) {
 
   return (
     <Flex direction="column" gap={4}>
-      <Heading id="lengths-of-time" level={level} variant="headlineL">
+      <SectionHeading id="counting-time" level={level}>
         Counting Lengths of Time
-      </Heading>
+      </SectionHeading>
       <TableWrapper
         columns={[
           { accessorKey: "num", header: "" },
