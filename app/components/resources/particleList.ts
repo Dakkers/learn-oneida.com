@@ -666,5 +666,210 @@ export const particleList = [
     en: "maybe, possibly",
     examples: [],
   },
+
+  {
+    key: "all_over",
+    oneida: "kwáh ok tsyoʔk nú·",
+    en: "all over",
+    examples: [
+      {
+        oneida: "Kwáh ok tsyoʔk nú· yehé·lehskwe kwaʔshu·té·",
+        en: "He was all over last night.",
+      },
+    ],
+  },
+
+  {
+    key: "all_over_town",
+    oneida: "kwáh ok tsyoʔk nú· kanatá·ke",
+    en: "all over town",
+    examples: [
+      {
+        oneida: "Kwáh ok tsyoʔk nú· kanatá·ke yehé·lehskwe kwaʔshu·té·",
+        en: "He was all over town last night.",
+      },
+    ],
+  },
+
+  {
+    key: "wherever",
+    oneida: "áti kwáh tsyoʔk nú·",
+    en: "anyplace, wherever",
+    examples: [
+      {
+        oneida:
+          "Áti kwáh tsyoʔk nú· nʌhsé·shekeʔ, tho kyu ní· nú· sʌ́· tho yʌké·shekeʔ",
+        en: "Wherever you're going to be, I will be there too.",
+      },
+    ],
+  },
+
+  {
+    key: "elsewhere",
+    oneida: "ákteʔ nú·",
+    en: "elsewhere",
+    examples: [
+      {
+        oneida: "Ákte nú· yehé·lehseʔ",
+        en: "He's somewhere else.",
+      },
+    ],
+  },
+
+  {
+    key: "here",
+    oneida: "kʌ́·tho",
+    en: "here",
+    examples: [
+      {
+        oneida: "Kʌ́·tho kʌ́ í·lehseʔ",
+        en: "Is he here?",
+      },
+    ],
+  },
+
+  {
+    key: "nowhere",
+    oneida: "yáh kánikeʔ",
+    en: "no place / nowhere",
+    examples: [
+      {
+        oneida: "Yáh kánikʌ thyeyáknehskweʔ kwaʔshu·té·",
+        en: "S.o. & I were not anywhere last night. (We didn't go anywhere.)",
+      },
+    ],
+  },
+
+  {
+    key: "somewhere",
+    oneida: "kátshaʔ ok nú·",
+    en: "somewhere",
+    examples: [
+      {
+        oneida: "Kátshaʔ ok nú· Ostohlonú·ke yʌhlé·shekeʔ swʌ·tát",
+        en: "He will be somewhere in the United States next week.",
+      },
+    ],
+  },
+
+  {
+    key: "there",
+    oneida: "thó",
+    en: "there",
+    examples: [
+      {
+        oneida: "Thó kʌ́ yehélehseʔ tsiʔ thoyo·té·",
+        en: "Is he at work?",
+      },
+    ],
+  },
+
+  {
+    key: "when",
+    oneida: "Kánke",
+    en: "when?",
+    examples: [
+      {
+        oneida: "Kánke thó yʌhsé·shekeʔ",
+        en: "When will you be there?",
+      },
+    ],
+  },
+
+  {
+    key: "when_2",
+    oneida: "tshi-",
+    en: "when",
+    examples: [
+      {
+        oneida: "Kanaʔtsyohalé·ke· teknáklehkweʔ tshikeksá·",
+        en: "I used to live in Ottawa when I was a kid.",
+      },
+    ],
+  },
+
+  {
+    key: "when_3",
+    oneida: "nʌ",
+    en: "when",
+    examples: [
+      {
+        oneida: "Thó yʌké·shekeʔ nʌ thó yʌhsé·shekeʔ",
+        en: "I will be there when you get there.",
+      },
+    ],
+  },
+
+  {
+    key: "where_2",
+    oneida: "tsha nú· / tsiʔ nú· / thó nú·",
+    en: "where",
+    examples: [
+      {
+        oneida: "Yáh tewakanúhteʔ tsha nú· ní·lehseʔ",
+        en: "I don't know where he is.",
+      },
+    ],
+  },
+
+  {
+    key: "where_3",
+    oneida: "tshaʔ nú· / kátshaʔ nú·",
+    en: "where?",
+    examples: [
+      {
+        oneida: "Kátshaʔ nú· ní·lehseʔ né·n Tshyalé",
+        en: "Where is Charlie?",
+      },
+    ],
+  },
+
+  {
+    key: "hopefully",
+    oneida: "aya·wʌ́·s kwi",
+    en: "hopefully",
+    examples: [
+      {
+        oneida: "Aya·wʌ́·s kwi Hawaiʔi yʌké·shekeʔ yʌswʌ́·tat",
+        en: "Hopefully, I will be in Hawai'i next week.",
+      },
+    ],
+  },
+
+  {
+    key: "it_is_important",
+    oneida: "yolihowanʌ́",
+    en: "it is important",
+    examples: [
+      {
+        oneida: "Yolihowa·nʌ́ tsiʔ nok ʌwa·tú· kʌ́·tho ayʌ́·shekeʔ",
+        en: "It's important that someone has to be here.",
+      },
+    ],
+  },
+
+  {
+    key: "must",
+    oneida: "nok ʌwa·tú·",
+    en: "(it is a) must, have to",
+    examples: [
+      {
+        oneida: "Nok ʌwa·tú· thó yʌké·shekeʔ ʌyólhʌneʔ",
+        en: "I have to be there tomorrow.",
+      },
+    ],
+  },
+
+  {
+    key: "necessary",
+    oneida: "teyotuhutsyúhu",
+    en: "(it is) necessary, need to",
+    examples: [
+      {
+        oneida: "Yáh thaʔteyotuhutsyúhu thó yayʌ́·shekeʔ tsiʔ ʌyó·kalahwe̲ʔ",
+        en: "She doesn't need to be there this evening.",
+      },
+    ],
+  },
   // PLOP:ADD_PARTICLE
 ];

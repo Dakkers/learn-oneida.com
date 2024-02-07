@@ -32,13 +32,8 @@ export function RoadsResource({ level = 1 }) {
       <SectionHeading id="roads" level={level}>
         Roads
       </SectionHeading>
-      <Text>
-        These are roads in the Oneida of the Thames community.
-      </Text>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
-        data={LIST}
-      />
+      <Text>These are roads in the Oneida of the Thames community.</Text>
+      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={LIST} />
     </Flex>
   );
 }

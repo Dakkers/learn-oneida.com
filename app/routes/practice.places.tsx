@@ -52,16 +52,19 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-const DATA = DATA_PLACES_IN_COMMUNITY.filter((datum) => ![
-  'band_office',
-  'community_centre',
-  'health_centre',
-  'longhouse',
-  'drivein',
-  'political_office',
-  'radio_station',
-  'reserve',
-].includes(datum.key))
+const DATA = DATA_PLACES_IN_COMMUNITY.filter(
+  (datum) =>
+    ![
+      "band_office",
+      "community_centre",
+      "health_centre",
+      "longhouse",
+      "drivein",
+      "political_office",
+      "radio_station",
+      "reserve",
+    ].includes(datum.key)
+);
 
 const IMAGE_MAP = {
   ball_park: BallParkImg,

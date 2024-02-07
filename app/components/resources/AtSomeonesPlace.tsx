@@ -25,10 +25,7 @@ export function AtSomeonesPlaceResource({ level = 1 }) {
       <SectionHeading id="at-someones-place" level={level}>
         At someone's place
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
-        data={LIST}
-      />
+      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={LIST} />
     </Flex>
   );
 }

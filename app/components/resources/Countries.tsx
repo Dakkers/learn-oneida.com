@@ -4,13 +4,13 @@ import { Text } from "@/design/components/text";
 import { SectionHeading } from "../SectionHeading";
 
 const LIST = [
-  ['Canada', 'Kolahkowánhne̲'],
-  ['United States of America', 'Ostʌhlonú·ke'],
-  ['Europe', 'Ohutsyakayú·ke̲'],
-  ['China, Japan, Korea', 'Tehatikahlatí·luté·ke'],
-  ['North America (Turtle Island)', 'Anowalé·ke'],
-  ['The whole world', 'Ohutsyakwekú'],
-].map(([ en, on]) => ({ en, on }));
+  ["Canada", "Kolahkowánhne̲"],
+  ["United States of America", "Ostʌhlonú·ke"],
+  ["Europe", "Ohutsyakayú·ke̲"],
+  ["China, Japan, Korea", "Tehatikahlatí·luté·ke"],
+  ["North America (Turtle Island)", "Anowalé·ke"],
+  ["The whole world", "Ohutsyakwekú"],
+].map(([en, on]) => ({ en, on }));
 
 export function CountriesResource({ level = 1 }) {
   return (
@@ -18,13 +18,8 @@ export function CountriesResource({ level = 1 }) {
       <SectionHeading id="countries" level={level}>
         Countries
       </SectionHeading>
-      <Text>
-        Some continents and other words are also included.
-      </Text>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
-        data={LIST}
-      />
+      <Text>Some continents and other words are also included.</Text>
+      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={LIST} />
     </Flex>
   );
 }

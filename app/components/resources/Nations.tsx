@@ -1,10 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
-import {
-  ParadigmTable,
-  createParadigmData,
-} from "../ParadigmTable";
+import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 import { SectionHeading } from "../SectionHeading";
 
 const allowedPronouns = ["i", "u", "m", "f"];

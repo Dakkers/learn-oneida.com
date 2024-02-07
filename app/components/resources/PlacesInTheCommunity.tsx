@@ -4,7 +4,11 @@ import { SectionHeading } from "../SectionHeading";
 
 export const DATA_PLACES_IN_COMMUNITY = [
   { key: "ball_park", en: "at the ball park", on: "tsiʔ tehuttsihkwaʔéktaʔ" },
-  { key: 'band_office', en: 'at the band office', on: 'tsiʔ thatihashʌtákhwaʔ'},
+  {
+    key: "band_office",
+    en: "at the band office",
+    on: "tsiʔ thatihashʌtákhwaʔ",
+  },
   { key: "bank", en: "at the bank", on: "tsiʔ tyehwistayʌtákhwaʔ" },
   { key: "bar", en: "at the bar", on: "tsiʔ thatihnekila·thaʔ" },
   { key: "bridge", en: "at the bridge", on: "twaskó·huʔ" },
@@ -25,7 +29,11 @@ export const DATA_PLACES_IN_COMMUNITY = [
   },
   { key: "cemetery", en: "at the cemetery", on: "tsiʔ thuwatiyaʔtataʔastha" },
   { key: "church", en: "at the church", on: "tsiʔ tyutlʌnayʌtákhwaʔ" },
-  { key: 'community_centre', en: 'community centre', on: 'tsiʔ thutyaʔtaló·loks'},
+  {
+    key: "community_centre",
+    en: "community centre",
+    on: "tsiʔ thutyaʔtaló·loks",
+  },
   {
     key: "dentist",
     en: "at the dentist's office",
@@ -49,7 +57,11 @@ export const DATA_PLACES_IN_COMMUNITY = [
     en: "at the gas station",
     on: "tsiʔ tyutye nahní·nuheʔ",
   },
-  { key: 'health_centre', en: 'at the health centre', on: 'tsiʔ thuwatitsyʌtákhwa'},
+  {
+    key: "health_centre",
+    en: "at the health centre",
+    on: "tsiʔ thuwatitsyʌtákhwa",
+  },
   { key: "hospital", en: "at the hospital", on: "tsiʔ te yutate shnyé·thaʔ" },
   { key: "hotel", en: "at the hotel", on: "tsiʔ teyetástaʔ" },
   { key: "jail", en: "at the jail", on: "tsiʔ tyutatenhotú·khwaʔ" },
@@ -58,9 +70,9 @@ export const DATA_PLACES_IN_COMMUNITY = [
     en: "at the library",
     on: ["tsiʔ tyewʌnahnótakhwaʔ", "tsiʔ thatihyatuslayʌtakhwaʔ"],
   },
-  { key: 'longhouse', en: 'at the longhouse', on: 'kanuhséhsneʔ'},
+  { key: "longhouse", en: "at the longhouse", on: "kanuhséhsneʔ" },
   { key: "mall", en: "at the mall", on: "tsiʔ tyutʌhninuheʔkó·" },
-  { key: 'drivein', en: 'at the drive in', on: 'tsiʔ twatasatálhaʔ' },
+  { key: "drivein", en: "at the drive in", on: "tsiʔ twatasatálhaʔ" },
   {
     key: "movie_theatre",
     en: "at the movie theatre",
@@ -76,14 +88,18 @@ export const DATA_PLACES_IN_COMMUNITY = [
     en: "at the police station",
     on: "shakotiyé·nahsne̲ʔ",
   },
-  { key: 'political_office', en: 'at the political office', on: 'tsiʔ tethatilihutá·kwas'},
+  {
+    key: "political_office",
+    en: "at the political office",
+    on: "tsiʔ tethatilihutá·kwas",
+  },
   {
     key: "post_office",
     en: "at the post office",
     on: "tsiʔ tyehyatuhslayʌtakhwaʔ",
   },
-  { key: 'radio_station', en: 'at the radio station', on: 'tsiʔ thutlʌnóthaʔ'},
-  { key: 'reserve', en: 'on the reserve', on: 'ukwehuwé·ne'},
+  { key: "radio_station", en: "at the radio station", on: "tsiʔ thutlʌnóthaʔ" },
+  { key: "reserve", en: "on the reserve", on: "ukwehuwé·ne" },
   { key: "restaurant", en: "at the restaurant", on: "tsiʔ tyutekhunyá·thaʔ" },
   { key: "school", en: "at the school", on: "tsiʔ tyutatlihunyʌní·thaʔ" },
   { key: "store", en: "at the store", on: "tsiʔ tyutʌhní·nuheʔ" },

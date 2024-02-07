@@ -4,18 +4,18 @@ import { Text } from "@/design/components/text";
 import { SectionHeading } from "../SectionHeading";
 
 const CITIES_LIST = [
-  ['Chippewa / Muncey', 'Twakʌnhá·ke·'],
-  ['London', 'Kanatá·ke'],
-  ['New York City', 'Kanunolú·ke'],
-  ['Niagara Falls', 'Tsiʔ tetwaʔsʌ́thaʔ'],
-  ['Oneida, NY', ['Tsiʔtkanaʔalóhaleʔ','Tkanaʔlohaleʔ']],
-  ['Oneida, WI', 'Taluʔkowane'],
-  ['Ottawa', 'Kanatsyohalé·ke·'],
-  ['Six Nations Grand River Territory', 'Oshwe·kʌ́'],
-  ['St. Thomas', 'Tsiʔ tkanatáheleʔ'],
-  ['Strathroy', 'Ohkwalihné·'],
-  ['Toronto', 'Tsiʔ tkaluto'],
-  ['Washington, D.C.', ['Kanatakalyáhsneʔ','Lanatakalyashnekeʔ']],
+  ["Chippewa / Muncey", "Twakʌnhá·ke·"],
+  ["London", "Kanatá·ke"],
+  ["New York City", "Kanunolú·ke"],
+  ["Niagara Falls", "Tsiʔ tetwaʔsʌ́thaʔ"],
+  ["Oneida, NY", ["Tsiʔtkanaʔalóhaleʔ", "Tkanaʔlohaleʔ"]],
+  ["Oneida, WI", "Taluʔkowane"],
+  ["Ottawa", "Kanatsyohalé·ke·"],
+  ["Six Nations Grand River Territory", "Oshwe·kʌ́"],
+  ["St. Thomas", "Tsiʔ tkanatáheleʔ"],
+  ["Strathroy", "Ohkwalihné·"],
+  ["Toronto", "Tsiʔ tkaluto"],
+  ["Washington, D.C.", ["Kanatakalyáhsneʔ", "Lanatakalyashnekeʔ"]],
 ].map(([en, on]) => ({ en, on }));
 
 export function CitiesResource({ level = 1 }) {
