@@ -84,8 +84,6 @@ export default function LearnModule04() {
       </Box>
 
       <TOC>
-        <TOC.Item label="Repetitive feature" value="repetitive-s" />
-
         <TOC.Item label="Being here" value="being-here">
           <TOC.Section>
             <TOC.Item label="Someone is here" value="someone-is-here" />
@@ -220,30 +218,34 @@ export default function LearnModule04() {
             />
             <TOC.Item
               label="Someone doesn't live there"
-              value="someone-does-not-live-there"
+              value="someone-doesnt-live-there"
             />
             <TOC.Item
               label="Someone didn't used to live there"
               value="someone-didnt-used-to-live-there"
             />
             <TOC.Item
-              label="Someone will not be live there"
-              value="someone-will-not-be-live-there"
+              label="Someone will not live there"
+              value="someone-will-not-live-there"
             />
           </TOC.Section>
         </TOC.Item>
 
-        <TOC.Item label="Want something to happen" value="want">
+        <TOC.Item label="Want something to happen" value="want-thought">
           <TOC.Section>
-            <TOC.Item label="Want" value="want" />
-            <TOC.Item label="Don't want" value="dont-want" />
-            <TOC.Item label="Wanted" value="wanted" />
-            <TOC.Item label="Didn't used to want" value="didnt-used-to-want" />
+            <TOC.Item label="Want" value="someone-wants" />
+            <TOC.Item label="Doesn't want" value="someone-doesnt-want" />
+            <TOC.Item label="Used to want" value="someone-used-to-want" />
+            <TOC.Item
+              label="Didn't used to want"
+              value="someone-didnt-used-to-want"
+            />
+            <TOC.Item label="Thought" value="someone-thought" />
           </TOC.Section>
         </TOC.Item>
 
         <TOC.Item label="Times of day" value="times-of-day" />
-        <TOC.Item label="Days of the week" value="days-of-the-week" />
+        <TOC.Item label="Days of the week" value="days-of-week" />
         <TOC.Item label="Months of the year" value="months" />
         <TOC.Item label="Clock time" value="clock-time" />
         <TOC.Item label="Counting time" value="counting-time" />
@@ -265,7 +267,9 @@ export default function LearnModule04() {
         <TOC.Item label="Particles" value="particles" />
       </TOC>
 
-      <SectionHeading level={2}>Someone Being Here</SectionHeading>
+      <SectionHeading id="being-here" level={2}>
+        Someone Being Here
+      </SectionHeading>
       <Text>
         Below is a number of paradigm tables for "someone being here".
       </Text>
@@ -408,19 +412,21 @@ export default function LearnModule04() {
         ]}
       />
 
-      <SectionHeading level={2}>Wanted / Thought</SectionHeading>
+      <SectionHeading id="want-thought" level={2}>
+        Wanted / Thought
+      </SectionHeading>
 
       <AccordionWrapper
         sections={[
-          ["want", "Someone wants", dataWant],
-          ["dont-want", "Someone doesn't want", dataDontWant],
-          ["used-to-want", "Someone used to want", dataUsedToWant],
+          ["someone-wants", "Someone wants", dataWant],
+          ["someone-doesnt-want", "Someone doesn't want", dataDontWant],
+          ["someone-used-to-want", "Someone used to want", dataUsedToWant],
           [
-            "didnt-used-to-want",
+            "someone-didnt-used-to-want",
             "Someone didn't used to want",
             dataDidntUsedToWant,
           ],
-          ["thought", "Someone thought", dataThought],
+          ["someone-thought", "Someone thought", dataThought],
         ]}
       />
 
@@ -444,6 +450,9 @@ export default function LearnModule04() {
 
       <PlacesInTheCommunityResource level={2} />
 
+      <SectionHeading id="particles" level={2}>
+        Particles
+      </SectionHeading>
       <ParticlesTable group="module04" />
     </Flex>
   );

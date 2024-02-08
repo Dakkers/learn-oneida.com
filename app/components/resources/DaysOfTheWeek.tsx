@@ -12,7 +12,7 @@ export const DATA_DAYS_OF_WEEK = [
   { en: "Saturday", on: "Ʌtáktaʔ", key: "sat" },
 ];
 
-export function DaysOfTheWeekResource({ level = 1 }) {
+export function DaysOfTheWeekResource({ level = 1 }: { level?: 1 | 2 }) {
   const daysSpecific = [
     { en: "on Sunday", on: "Yautatokʌhtu·neʔ" },
     { en: "on Monday", on: "Yautʌtaʔú·neʔ" },
@@ -35,7 +35,7 @@ export function DaysOfTheWeekResource({ level = 1 }) {
 
   return (
     <Flex direction="column" gap={4}>
-      <SectionHeading id="days" level={level}>
+      <SectionHeading id="days-of-week" level={level}>
         Days of the week
       </SectionHeading>
       <TableWrapper

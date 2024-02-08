@@ -11,6 +11,8 @@ import { SectionHeading } from "~/components/SectionHeading";
 import { GoodPeopleBadPeopleResource } from "~/components/resources/GoodPeopleBadPeople";
 import { RepetitiveFeatureResource } from "~/components/resources/RepetitiveFeature";
 import { ParticlesTable } from "~/components/resources/ParticlesTable";
+import { CountingPeopleResource } from "~/components/resources/CountingPeople";
+import { DomesticatedAnimalsResource } from "~/components/resources/DomesticatedAnimals";
 
 export const meta: MetaFunction = () => {
   return [
@@ -21,83 +23,85 @@ export const meta: MetaFunction = () => {
 
 export default function LearnModule03() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <Flex direction="column" gap={4}>
       <SectionHeading level={1}>Module 3</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
           <b>NOTE:</b> This page is still under construction!
         </Notice>
       </Box>
-      <Flex direction="column" gap={4}>
-        <Text>In this module, we&lsquo;ll cover the following:</Text>
+      <Text>In this module, we&lsquo;ll cover the following:</Text>
 
-        <TOC>
-          <TOC.Item label="Past Tense" value="past-tense">
-            <TOC.Section>
-              <TOC.Item
-                label="Introduction to Past Tense"
-                value="past-tense-intro"
-              />
-              <TOC.Item
-                label="Something used to be the case"
-                value="used-to-be"
-              />
-              <TOC.Item label="When something was the case" value="when" />
-            </TOC.Section>
-          </TOC.Item>
+      <TOC>
+        <TOC.Item label="Past Tense" value="past-tense">
+          <TOC.Section>
+            <TOC.Item
+              label="Introduction to Past Tense"
+              value="past-tense-intro"
+            />
+            <TOC.Item
+              label="Something used to be the case"
+              value="used-to-be"
+            />
+            <TOC.Item label="When something was the case" value="when" />
+          </TOC.Section>
+        </TOC.Item>
 
-          <TOC.Item label="Repetitive feature" value="repetitive-s" />
+        <TOC.Item label="Repetitive feature" value="repetitive-s" />
 
-          <TOC.Item label="Relationships" value="relationships">
-            <TOC.Section>
-              <TOC.Item label="Married" value="married" />
-              <TOC.Item label="In a Relationship" value="in-a-relationship" />
-              <TOC.Item label="Separated" value="separated" />
-              <TOC.Item label="Engaged" value="engaged" />
-              <TOC.Item label="Single" value="single" />
-              <TOC.Item label="Old Man / Old Woman" value="old-man-old-woman" />
-              <TOC.Item label="Spouse" value="spouse" />
-              <TOC.Item
-                label="Girlfriend / Boyfriend"
-                value="girlfriend-boyfriend"
-              />
-            </TOC.Section>
-          </TOC.Item>
+        <TOC.Item label="Relationships" value="relationships">
+          <TOC.Section>
+            <TOC.Item label="Married" value="married" />
+            <TOC.Item label="In a Relationship" value="in-a-relationship" />
+            <TOC.Item label="Separated" value="separated" />
+            <TOC.Item label="Engaged" value="engaged" />
+            <TOC.Item label="Single" value="single" />
+            <TOC.Item label="Old Man / Old Woman" value="old-man-old-woman" />
+            <TOC.Item label="Spouse" value="spouse" />
+            <TOC.Item
+              label="Girlfriend / Boyfriend"
+              value="girlfriend-boyfriend"
+            />
+          </TOC.Section>
+        </TOC.Item>
 
-          <TOC.Item label="Good and Bad Conjugations" value="good-bad">
-            <TOC.Section>
-              <TOC.Item label="Good People" value="good-people" />
-              <TOC.Item label="Bad People" value="bad-people" />
-              <TOC.Item label="Good Kids" value="good-kids" />
-              <TOC.Item label="Bad Kids" value="bad-kids" />
-            </TOC.Section>
-          </TOC.Item>
-          <TOC.Item label="Counting people" value="counting-people" />
-          <TOC.Item label="Counting animals" value="counting-animals" />
-          <TOC.Item label="Domestic animals" value="domestic-animals" />
-          <TOC.Item
-            label="Having a person or animal"
-            value="having-conjugations"
-          />
-          <TOC.Item label="Clans" value="clans" />
-          <TOC.Item label="Nations" value="nations" />
-          <TOC.Item label="Particles" value="particles" />
-        </TOC>
+        <TOC.Item label="Good and Bad Conjugations" value="good-bad">
+          <TOC.Section>
+            <TOC.Item label="Good People" value="good-people" />
+            <TOC.Item label="Bad People" value="bad-people" />
+            <TOC.Item label="Good Kids" value="good-kids" />
+            <TOC.Item label="Bad Kids" value="bad-kids" />
+          </TOC.Section>
+        </TOC.Item>
+        <TOC.Item label="Counting people" value="counting-people" />
+        <TOC.Item label="Counting animals" value="counting-animals" />
+        <TOC.Item label="Domestic animals" value="domestic-animals" />
+        <TOC.Item
+          label="Having a person or animal"
+          value="having-conjugations"
+        />
+        <TOC.Item label="Clans" value="clans" />
+        <TOC.Item label="Nations" value="nations" />
+        <TOC.Item label="Particles" value="particles" />
+      </TOC>
 
-        <PastTenseSection />
+      <PastTenseSection />
 
-        <RepetitiveFeatureResource />
+      <RepetitiveFeatureResource level={2} />
 
-        <GoodPeopleBadPeopleResource />
+      <GoodPeopleBadPeopleResource level={2} />
 
-        <HavingConjugations />
+      <CountingPeopleResource level={2} />
 
-        <SectionHeading id="particles" level={2}>
-          Particles
-        </SectionHeading>
-        <ParticlesTable group="module03" />
-      </Flex>
-    </div>
+      <DomesticatedAnimalsResource level={2} />
+
+      <HavingConjugations />
+
+      <SectionHeading id="particles" level={2}>
+        Particles
+      </SectionHeading>
+      <ParticlesTable group="module03" />
+    </Flex>
   );
 }
 

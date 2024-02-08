@@ -1,12 +1,3 @@
-// const listThingy = [
-//   {
-//     pronoun: "I",
-//     present: "am",
-//     past: "was",
-//   },
-//   {},
-// ];
-
 export function formatTranslation(text: string, params) {
   let result = text;
   for (const key in params) {
@@ -24,6 +15,18 @@ export const pronouns = [
   ...dualicPronouns,
   ...pluralPronouns,
 ] as const;
+
+/** These are pronouns for blue pronominals. Because there are duplicates in the blue set,
+ * we this is a smaller set than the full pronouns list. */
+export const pronounsBlue = [
+  ...singlePronouns,
+  "uni",
+  "u2",
+  "2m",
+  "2f",
+  "us",
+  "yall",
+];
 
 export type Pronoun = (typeof pronouns)[number];
 
@@ -170,8 +173,7 @@ export const PURPLES_MAP = {
   she_her: "She → her",
 };
 
-export const isPlural = (pronoun: Pronoun) =>
-  ["us", "theyni", "yall", "ms", "fs"].includes(pronoun);
+export const isPlural = (pronoun: Pronoun) => pluralPronouns.includes(pronoun);
 
 export const arrayify = (value: unknown) =>
   Array.isArray(value) ? value : [value];

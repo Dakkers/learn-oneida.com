@@ -1,6 +1,5 @@
 import { Box } from "@/design/components/box";
 import { Flex } from "@/design/components/flex";
-import { Heading } from "@/design/components/heading";
 import { Notice } from "@/design/components/notice";
 import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
@@ -58,117 +57,108 @@ export const meta: MetaFunction = () => {
 
 export default function LearnModule02() {
   return (
-    <div>
+    <Flex direction="column" gap={4}>
       <SectionHeading level={1}>Module 2</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
           <b>NOTE:</b> This page is still under construction!
         </Notice>
       </Box>
-      <Flex direction="column" gap={4}>
-        <Text>In this module, we&lsquo;ll cover the following:</Text>
+      <Text>In this module, we&lsquo;ll cover the following:</Text>
 
-        <TOC>
-          <TOC.Item
-            label={
-              <>
-                New verbs: <b>nuwehseʔ, yʌteli, nolukhwaʔ</b>
-              </>
-            }
-            value="new-verbs"
-          >
-            <TOC.Section>
-              <TOC.Item label="Red pronominals" value="new-verbs-red" />
-              <TOC.Item label="Blue pronominals" value="new-verbs-blue" />
-              <TOC.Item label="Purple pronominals" value="new-verbs-purple" />
-            </TOC.Section>
-          </TOC.Item>
-          <TOC.Item label="Reflexive" value="reflexive" />
-          <TOC.Item label="Reciprocal" value="reciprocal" />
+      <TOC>
+        <TOC.Item
+          label={
+            <>
+              New verbs: <b>nuwehseʔ, yʌteli, nolukhwaʔ</b>
+            </>
+          }
+          value="new-verbs"
+        >
+          <TOC.Section>
+            <TOC.Item label="Red pronominals" value="new-verbs-red" />
+            <TOC.Item label="Blue pronominals" value="new-verbs-blue" />
+            <TOC.Item label="Purple pronominals" value="new-verbs-purple" />
+          </TOC.Section>
+        </TOC.Item>
+        <TOC.Item label="Reflexive" value="reflexive" />
+        <TOC.Item label="Reciprocal" value="reciprocal" />
 
-          <TOC.Item label="Commands" value="commands">
-            <TOC.Section>
-              <TOC.Item label="Tell" value="commands-tell" />
-              <TOC.Item label="Ask" value="commands-ask" />
-            </TOC.Section>
-          </TOC.Item>
-          <TOC.Item label="Negated Commands" value="negated-commands">
-            <TOC.Section>
-              <TOC.Item label="Don't tell" value="negated-commands-tell" />
-              <TOC.Item label="Don't ask" value="negated-commands-ask" />
-            </TOC.Section>
-          </TOC.Item>
+        <TOC.Item label="Commands" value="commands">
+          <TOC.Section>
+            <TOC.Item label="Tell" value="commands-tell" />
+            <TOC.Item label="Ask" value="commands-ask" />
+          </TOC.Section>
+        </TOC.Item>
+        <TOC.Item label="Negated Commands" value="negated-commands">
+          <TOC.Section>
+            <TOC.Item label="Don't tell" value="negated-commands-tell" />
+            <TOC.Item label="Don't ask" value="negated-commands-ask" />
+          </TOC.Section>
+        </TOC.Item>
 
-          <TOC.Item label="Family members" value="family-members">
-            <TOC.Section>
-              <FamilyTableOfContentItems />
-            </TOC.Section>
-          </TOC.Item>
+        <TOC.Item label="Family members" value="family-members">
+          <TOC.Section>
+            <FamilyTableOfContentItems />
+          </TOC.Section>
+        </TOC.Item>
 
-          <TOC.Item.Phrase
-            label="(to be) alive"
-            word="unheʔ"
-            value="verb-alive"
-          />
-          <TOC.Item.Phrase
-            label="(to be) dead"
-            word="iheyu"
-            value="verb-dead"
-          />
-          <TOC.Item.Phrase
-            label="(to have) passed on"
-            word="atukohtu"
-            value="verb-passed-on"
-          />
+        <TOC.Item.Phrase
+          label="(to be) alive"
+          word="unheʔ"
+          value="verb-alive"
+        />
+        <TOC.Item.Phrase label="(to be) dead" word="iheyu" value="verb-dead" />
+        <TOC.Item.Phrase
+          label="(to have) passed on"
+          word="atukohtu"
+          value="verb-passed-on"
+        />
 
-          <TOC.Item
-            label="Deceased Family Members"
-            value="deceased-relatives"
-          />
-          <TOC.Item label="Numbers" value="numbers" />
+        <TOC.Item label="Deceased Family Members" value="deceased-relatives" />
+        <TOC.Item label="Numbers" value="numbers" />
 
-          <TOC.Item.Phrase label="(to be) old" word="kstʌha" value="verb-old" />
-          <TOC.Item.Phrase
-            label="(to be) young"
-            word="kʌʔ nit...yʌha"
-            value="verb-young"
-          />
-          <TOC.Item.Phrase
-            label="(to be) an age"
-            word="naʔ te...ohsliyá·ku̲"
-            value="verb-age"
-          />
-        </TOC>
+        <TOC.Item.Phrase label="(to be) old" word="kstʌha" value="verb-old" />
+        <TOC.Item.Phrase
+          label="(to be) young"
+          word="kʌʔ nit...yʌha"
+          value="verb-young"
+        />
+        <TOC.Item.Phrase
+          label="(to be) an age"
+          word="naʔ te...ohsliyá·ku̲"
+          value="verb-age"
+        />
+      </TOC>
 
-        <VerbsSection />
+      <VerbsSection />
 
-        <ReflexiveSection />
-        <ReciprocalSection />
+      <ReflexiveSection />
+      <ReciprocalSection />
 
-        <CommandsSection />
-        <NegatedCommandsSection />
+      <CommandsSection />
+      <NegatedCommandsSection />
 
-        <FamilyResource level={2} />
+      <FamilyResource level={2} />
 
-        <AliveDeadSection />
-        <PassedOnSection />
-        <DeceasedRelativesSection />
+      <AliveDeadSection />
+      <PassedOnSection />
+      <DeceasedRelativesSection />
 
-        <NumbersSection />
+      <NumbersSection />
 
-        <YoungOldSection />
-        <AgeSection />
-      </Flex>
-    </div>
+      <YoungOldSection />
+      <AgeSection />
+    </Flex>
   );
 }
 
 function VerbsSection() {
   return (
     <>
-      <Heading id="new-verbs" level={2} variant="headlineS">
+      <SectionHeading id="new-verbs" level={2}>
         New verbs
-      </Heading>
+      </SectionHeading>
       <Text>Below are the paradigms for three new verbs:</Text>
       <List>
         <List.Item>
@@ -185,9 +175,9 @@ function VerbsSection() {
         All of these begin with a consonant so they use C-stem pronominals.
       </Text>
 
-      <Heading id="new-verbs-red" level={3} variant="titleM">
+      <SectionHeading id="new-verbs-red" level={3}>
         Red pronominals
-      </Heading>
+      </SectionHeading>
       <VerbsTable
         color="red"
         enData={PRONOUN_MAP_EN}
@@ -197,9 +187,9 @@ function VerbsSection() {
         likeData={nuwehseRed}
         loveData={nolukhwaRed}
       />
-      <Heading id="new-verbs-blue" level={3} variant="titleM">
+      <SectionHeading id="new-verbs-blue" level={3}>
         Blue pronominals
-      </Heading>
+      </SectionHeading>
       <VerbsTable
         color="blue"
         enData={PRONOUN_MAP_EN_OBJECTIVE}
@@ -209,9 +199,9 @@ function VerbsSection() {
         likeData={nuwehseBlue}
         loveData={nolukhwaBlue}
       />
-      <Heading id="new-verbs-purple" level={3} variant="titleM">
+      <SectionHeading id="new-verbs-purple" level={3}>
         Purple pronominals
-      </Heading>
+      </SectionHeading>
       <VerbsTable
         color="purple"
         enData={PURPLES_MAP}
@@ -228,9 +218,9 @@ function VerbsSection() {
 function ReflexiveSection() {
   return (
     <>
-      <Heading id="reflexive" level={2} variant="headlineS">
+      <SectionHeading id="reflexive" level={2}>
         Reflexive
-      </Heading>
+      </SectionHeading>
       <Text>
         We can add an additional prefix to a root word to make the root word
         apply to oneself. For example, <b>knú·wehse̲ʔ</b> means &quot;I like
@@ -259,9 +249,9 @@ function ReflexiveSection() {
 function ReciprocalSection() {
   return (
     <>
-      <Heading id="reciprocal" level={2} variant="headlineS">
+      <SectionHeading id="reciprocal" level={2}>
         Reciprocal
-      </Heading>
+      </SectionHeading>
       <Text>
         We can go even further and add yet another prefix to a root word to make
         the root word apply between two subjects &quot;in each direction&quot;.
@@ -374,9 +364,9 @@ function VerbsTable({
 function CommandsSection() {
   return (
     <>
-      <Heading id="commands" level={2} variant="headlineS">
+      <SectionHeading id="commands" level={2}>
         Commands
-      </Heading>
+      </SectionHeading>
       <Text>
         Here we introduce commands, which have different pronominals in some
         cases. The two commands are:
@@ -389,13 +379,13 @@ function CommandsSection() {
           <b>liwanu·túse̲</b> — to ask someone
         </List.Item>
       </List>
-      <Heading id="commands-tell" level={3} variant="titleM">
+      <SectionHeading id="commands-tell" level={3}>
         <b>hlo·li̲’̲·</b> — to tell someone
-      </Heading>
+      </SectionHeading>
       <CommandsTable data={hloliData} verb="tell" />
-      <Heading id="commands-ask" level={3} variant="titleM">
+      <SectionHeading id="commands-ask" level={3}>
         <i>liwanu·túse̲</i> — to ask someone
-      </Heading>
+      </SectionHeading>
       <CommandsTable data={liwanutuseData} verb="ask" />
     </>
   );
@@ -404,20 +394,20 @@ function CommandsSection() {
 function NegatedCommandsSection() {
   return (
     <>
-      <Heading id="negated-commands" level={2} variant="headlineS">
+      <SectionHeading id="negated-commands" level={2}>
         Negated Commands
-      </Heading>
+      </SectionHeading>
       <Text>
         We can negate the commands learned above too. Notice that some of the
         pronominals are different.
       </Text>
-      <Heading id="negated-commands-tell" level={3} variant="titleM">
+      <SectionHeading id="negated-commands-tell" level={3}>
         <b>Takʌ ...hlo·li̲’̲·</b> — don&lsquo;t tell someone
-      </Heading>
+      </SectionHeading>
       <CommandsTable data={hloliNegatedData} negated verb="tell" />
-      <Heading id="negated-commands-ask" level={3} variant="titleM">
+      <SectionHeading id="negated-commands-ask" level={3}>
         <b>Takʌ ...liwanu·túse̲</b> — don&lsquo;t ask someone
-      </Heading>
+      </SectionHeading>
       <CommandsTable data={liwanutuseNegatedData} negated verb="ask" />
     </>
   );
@@ -450,9 +440,9 @@ function CommandsTable({ data, negated = false, verb }) {
 function AliveDeadSection() {
   return (
     <>
-      <Heading id="verb-alive" level={2} variant="headlineS">
+      <SectionHeading id="verb-alive" level={2}>
         unheʔ — (to be) alive
-      </Heading>
+      </SectionHeading>
       <Text>
         Below is the paradigm table for <b>unheʔ</b>. It is a U-stem root word
         and uses red pronominals.
@@ -464,9 +454,9 @@ function AliveDeadSection() {
         }}
         data={unheJson}
       />
-      <Heading id="verb-dead" level={2} variant="headlineS">
+      <SectionHeading id="verb-dead" level={2}>
         iheyu — (to be) dead / (to have) died
-      </Heading>
+      </SectionHeading>
       <Text>
         Below is the paradigm table for <b>iheyu</b>. It is an I-stem root word
         and uses blue pronominals.
@@ -485,9 +475,9 @@ function AliveDeadSection() {
 function PassedOnSection() {
   return (
     <>
-      <Heading id="verb-passed-on" level={2} variant="headlineS">
+      <SectionHeading id="verb-passed-on" level={2}>
         atukohtu — to have passed on
-      </Heading>
+      </SectionHeading>
       <Text>
         Below is the paradigm table for <b>atukohtu</b>. It is an A-stem root
         word and uses blue pronominals.
@@ -528,9 +518,9 @@ function DeceasedRelativesSection() {
 
   return (
     <>
-      <Heading id="deceased-relatives" level={2} variant="headlineS">
+      <SectionHeading id="deceased-relatives" level={2}>
         Deceased Family Members
-      </Heading>
+      </SectionHeading>
       <Text>
         In Oneida, talking about those who have passed on requires care. An
         additional suffix is either added on to the end of a word or replaces
@@ -576,9 +566,9 @@ function DeceasedRelativesSection() {
 function YoungOldSection() {
   return (
     <>
-      <Heading id="verb-old" level={2} variant="headlineS">
+      <SectionHeading id="verb-old" level={2}>
         kstʌha — (to be) old
-      </Heading>
+      </SectionHeading>
       <Text>
         Below is the paradigm table for <b>kstʌha</b>. It is a C-stem root word
         and uses blue pronominals.
@@ -591,9 +581,9 @@ function YoungOldSection() {
         data={kstʌhaJson}
       />
 
-      <Heading id="verb-young" level={2} variant="headlineS">
+      <SectionHeading id="verb-young" level={2}>
         kʌʔ nit...yʌha — (to be) young
-      </Heading>
+      </SectionHeading>
       <Text>
         Below is the paradigm table for <b>kʌʔ nit...yʌha</b>. It is a C-stem
         root word and uses blue pronominals.
@@ -685,9 +675,9 @@ function NumbersSection() {
 
   return (
     <>
-      <Heading id="numbers" level={2} variant="headlineS">
+      <SectionHeading id="numbers" level={2}>
         Numbers
-      </Heading>
+      </SectionHeading>
       <Text>
         Counting in Oneida can be tricky. It is essential to first learn the
         numbers from 1 to 10. Then you can use the following rules:
@@ -715,9 +705,9 @@ function NumbersSection() {
 function AgeSection() {
   return (
     <>
-      <Heading id="age" level={2} variant="headlineS">
+      <SectionHeading id="age" level={2}>
         naʔ te...ohsliyá·ku̲ — (to be) an age
-      </Heading>
+      </SectionHeading>
       <Text>
         In Oneida, the more literal translation to say &quot;I am X years
         old&quot; is &quot;I have crossed X winters&quot;. The root word is has

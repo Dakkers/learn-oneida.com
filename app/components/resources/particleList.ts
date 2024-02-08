@@ -122,7 +122,7 @@ export const particleList = [
     en: "but",
     examples: [
       {
-        oneida: "Laknú·wehseʔ niʔí· nók tsiʔ yah né· tehinú·wehseʔ",
+        oneida: "Laknú·wehseʔ niʔí· nók tsiʔ yah né· tehinú·wehse̲ʔ",
         en: "He likes me but I don't like him.",
       },
     ],
@@ -133,7 +133,7 @@ export const particleList = [
     en: "and",
     examples: [
       {
-        oneida: "Lokhstʌ́ha kháleʔ né·n laksá· ninú·wehseʔ",
+        oneida: "Lokhstʌ́ha kháleʔ né·n laksá· ninú·wehse̲ʔ",
         en: "The old man and the boy like it.",
       },
     ],
@@ -144,7 +144,7 @@ export const particleList = [
     en: "also, too, as well as, either",
     examples: [
       {
-        oneida: "Yeyaʔtaséha ó·ni yesanú·wehseʔ",
+        oneida: "Yeyaʔtaséha ó·ni yesanú·wehse̲ʔ",
         en: "The young woman also likes you.",
       },
     ],
@@ -199,7 +199,7 @@ export const particleList = [
     en: "just, only",
     examples: [
       {
-        oneida: "Tá·wet ok linúwehseʔ",
+        oneida: "Tá·wet ok linúwehse̲ʔ",
         en: "I only like David.",
       },
     ],
@@ -238,7 +238,7 @@ export const particleList = [
     en: "someone, somebody",
     examples: [
       {
-        oneida: "Úhkaʔ ok náhteʔ luwanú·wehseʔ",
+        oneida: "Úhkaʔ ok náhteʔ luwanú·wehse̲ʔ",
         en: "Someone likes him.",
       },
     ],
@@ -286,7 +286,7 @@ export const particleList = [
     en: "more",
     examples: [
       {
-        oneida: "Sʌ́haʔ kʌ yenú·wehseʔ né· kaʔi· kʌ",
+        oneida: "Sʌ́haʔ kʌ yenú·wehseʔ né· kaʔi· kʌ̲",
         en: "Does she like this more?",
       },
     ],
@@ -322,7 +322,7 @@ export const particleList = [
     en: "another one, yet another",
     examples: [
       {
-        oneida: "Shekú oyá· yakukwé yesanú·wehseʔ",
+        oneida: "Shekú oyá· yakukwé yesanú·wehse̲ʔ",
         en: "Yet another woman likes you.",
       },
     ],
@@ -334,7 +334,7 @@ export const particleList = [
     en: "that, that one, that thing",
     examples: [
       {
-        oneida: "Swanú·wehseʔ kʌ́ thí·k´ʌ́",
+        oneida: "Swanú·wehseʔ kʌ́ thí·kʔʌ́ˍ",
         en: "Do you all like that?",
       },
     ],
@@ -353,7 +353,7 @@ export const particleList = [
     en: "true, it is true",
     examples: [
       {
-        oneida: "To·kʌ́skeʔ kʌ́ tsiʔ yah teʔsknúwehseʔ",
+        oneida: "To·kʌ́skeʔ kʌ́ tsiʔ yah teʔsknúwehse̲ʔ",
         en: "Is it true that you don't like me?",
       },
     ],
@@ -389,7 +389,7 @@ export const particleList = [
     en: "that, there, when, to, at",
     examples: [
       {
-        oneida: "Sanúhteʔ kʌ́ tsiʔ yah teʔyesanú·wehseʔ",
+        oneida: "Sanúhteʔ kʌ́ tsiʔ yah teʔyesanú·wehse̲ʔ",
         en: "Do you know that she doesn't like you?",
       },
       {
@@ -405,7 +405,7 @@ export const particleList = [
     en: "what (it is)",
     examples: [
       {
-        oneida: "Yah teʔwakanúhteʔ tsiʔ náhteʔ snú·wehseʔ",
+        oneida: "Yah teʔwakanúhteʔ tsiʔ náhteʔ snú·wehse̲ʔ",
         en: "I don't know what you like.",
       },
     ],
@@ -635,7 +635,7 @@ export const particleList = [
     en: "so",
     examples: [
       {
-        oneida: "Tsiʔ nithoyʌ́ né· thikʌ́ lú·kwe",
+        oneida: "Tsiʔ nithoyʌ́ né· thikʌ́ lú·kwe̲",
         en: "That man is so young.",
       },
     ],
@@ -673,7 +673,7 @@ export const particleList = [
     en: "all over",
     examples: [
       {
-        oneida: "Kwáh ok tsyoʔk nú· yehé·lehskwe kwaʔshu·té·",
+        oneida: "Kwáh ok tsyoʔk nú· yehé·lehskwe kwaʔshu·téˍ·",
         en: "He was all over last night.",
       },
     ],
@@ -685,7 +685,7 @@ export const particleList = [
     en: "all over town",
     examples: [
       {
-        oneida: "Kwáh ok tsyoʔk nú· kanatá·ke yehé·lehskwe kwaʔshu·té·",
+        oneida: "Kwáh ok tsyoʔk nú· kanatá·ke yehé·lehskwe kwaʔshu·téˍ·",
         en: "He was all over town last night.",
       },
     ],
@@ -698,7 +698,7 @@ export const particleList = [
     examples: [
       {
         oneida:
-          "Áti kwáh tsyoʔk nú· nʌhsé·shekeʔ, tho kyu ní· nú· sʌ́· tho yʌké·shekeʔ",
+          "Áti kwáh tsyoʔk nú· nʌhsé·shekeʔ, tho kyu ní· nú· sʌ́· tho yʌké·sheke̲ʔ",
         en: "Wherever you're going to be, I will be there too.",
       },
     ],
@@ -710,7 +710,7 @@ export const particleList = [
     en: "elsewhere",
     examples: [
       {
-        oneida: "Ákte nú· yehé·lehseʔ",
+        oneida: "Ákte nú· yehé·lehse̲ʔ",
         en: "He's somewhere else.",
       },
     ],
@@ -722,7 +722,7 @@ export const particleList = [
     en: "here",
     examples: [
       {
-        oneida: "Kʌ́·tho kʌ́ í·lehseʔ",
+        oneida: "Kʌ́·tho kʌ́ í·lehse̲ʔ",
         en: "Is he here?",
       },
     ],
@@ -734,7 +734,7 @@ export const particleList = [
     en: "no place / nowhere",
     examples: [
       {
-        oneida: "Yáh kánikʌ thyeyáknehskweʔ kwaʔshu·té·",
+        oneida: "Yáh kánikʌ thyeyáknehskweʔ kwaʔshu·téˍ·",
         en: "S.o. & I were not anywhere last night. (We didn't go anywhere.)",
       },
     ],
@@ -758,7 +758,7 @@ export const particleList = [
     en: "there",
     examples: [
       {
-        oneida: "Thó kʌ́ yehélehseʔ tsiʔ thoyo·té·",
+        oneida: "Thó kʌ́ yehélehseʔ tsiʔ thoyo·téˍ·",
         en: "Is he at work?",
       },
     ],
@@ -770,7 +770,7 @@ export const particleList = [
     en: "when?",
     examples: [
       {
-        oneida: "Kánke thó yʌhsé·shekeʔ",
+        oneida: "Kánke thó yʌhsé·sheke̲ʔ",
         en: "When will you be there?",
       },
     ],
@@ -794,7 +794,7 @@ export const particleList = [
     en: "when",
     examples: [
       {
-        oneida: "Thó yʌké·shekeʔ nʌ thó yʌhsé·shekeʔ",
+        oneida: "Thó yʌké·shekeʔ nʌ thó yʌhsé·sheke̲ʔ",
         en: "I will be there when you get there.",
       },
     ],
@@ -806,7 +806,7 @@ export const particleList = [
     en: "where",
     examples: [
       {
-        oneida: "Yáh tewakanúhteʔ tsha nú· ní·lehseʔ",
+        oneida: "Yáh tewakanúhteʔ tsha nú· ní·lehse̲ʔ",
         en: "I don't know where he is.",
       },
     ],
@@ -842,7 +842,7 @@ export const particleList = [
     en: "it is important",
     examples: [
       {
-        oneida: "Yolihowa·nʌ́ tsiʔ nok ʌwa·tú· kʌ́·tho ayʌ́·shekeʔ",
+        oneida: "Yolihowa·nʌ́ tsiʔ nok ʌwa·tú· kʌ́·tho ayʌ́·sheke̲ʔ",
         en: "It's important that someone has to be here.",
       },
     ],
@@ -854,7 +854,7 @@ export const particleList = [
     en: "(it is a) must, have to",
     examples: [
       {
-        oneida: "Nok ʌwa·tú· thó yʌké·shekeʔ ʌyólhʌneʔ",
+        oneida: "Nok ʌwa·tú· thó yʌké·shekeʔ ʌyólhʌne̲ʔ",
         en: "I have to be there tomorrow.",
       },
     ],
@@ -868,6 +868,78 @@ export const particleList = [
       {
         oneida: "Yáh thaʔteyotuhutsyúhu thó yayʌ́·shekeʔ tsiʔ ʌyó·kalahwe̲ʔ",
         en: "She doesn't need to be there this evening.",
+      },
+    ],
+  },
+
+  {
+    key: "how_many_things",
+    oneida: "Tó· ni·kú",
+    en: "How many things / objects?",
+    examples: [
+      {
+        oneida: "Tó· ni·kú snú·wehseʔ thi·kʌ́ˍ",
+        en: "How many of those do you like?",
+      },
+    ],
+  },
+
+  {
+    key: "how_many_of_us_inclusive",
+    oneida: "Tó· nitwatí",
+    en: "How many of us? (all of you & I)",
+    examples: [
+      {
+        oneida: "Tó· nitwatí kʌ́·tho ítwehseʔ nuʔú·wa̲ʔ",
+        en: "How many of us are here now?",
+      },
+    ],
+  },
+
+  {
+    key: "how_many_of_us_exclusive",
+    oneida: "Tó· niyakwatí",
+    en: "How many of us? (they & I, not you)",
+    examples: [
+      {
+        oneida: "Sanúhte kʌ́ tó· niyakwatí tyakwʌʔtlu·táhkweʔ thé·tʌ̲",
+        en: "Do you know how many of us were (at) home yesterday?",
+      },
+    ],
+  },
+
+  {
+    key: "how_many_of_yall",
+    oneida: "Tó· niswatí",
+    en: "How many of you all? (all of you)",
+    examples: [
+      {
+        oneida: "Tó· níswatí yáh kʌʔ thaeswé·sheke̲ʔ",
+        en: "How many of you won't be here?",
+      },
+    ],
+  },
+
+  {
+    key: "how_many_of_them_males",
+    oneida: "Tó· nihatí",
+    en: "How many of them? (males, males and females)",
+    examples: [
+      {
+        oneida: "Tó· nihatí né· swalaʔsé·shuha Ostuhlonú·ke thatinakéhle̲ʔ",
+        en: "How many of your cousins live in the States?",
+      },
+    ],
+  },
+
+  {
+    key: "how_many_of_them_females",
+    oneida: "Tó· nikutí",
+    en: "How many of them? (females)",
+    examples: [
+      {
+        oneida: "Tó· nikutí thikʌ́ otikstʌhokúha swatátnuhkwe̲ʔ",
+        en: "How many of those old ladies are you related to?",
       },
     ],
   },

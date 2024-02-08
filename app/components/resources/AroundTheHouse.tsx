@@ -20,10 +20,10 @@ const LIST = [
   ["yard, in the back", "onakʌ tyohutsyote"],
 ].map(([en, on]) => ({ en, on }));
 
-export function AroundTheHouseResource({ level = 1 }) {
+export function AroundTheHouseResource({ level = 1 }: { level?: 1 | 2 }) {
   return (
     <Flex direction="column" gap={4}>
-      <SectionHeading id="countries" level={level}>
+      <SectionHeading id="around-the-house" level={level}>
         Around the house
       </SectionHeading>
       <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={LIST} />

@@ -4,7 +4,7 @@ import { SectionHeading } from "../SectionHeading";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { List } from "@/design/components/list";
 
-export function DomesticatedAnimalsResource({ level = 1 }) {
+export function DomesticatedAnimalsResource({ level = 1 }: { level?: 1 | 2 }) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="domesticated-animals" level={level}>

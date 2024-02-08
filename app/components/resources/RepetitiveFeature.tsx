@@ -6,7 +6,7 @@ import { TableWrapper } from "@/design/components/tableWrapper";
 import { TextBreakdown } from "../TextBreakdown";
 import { Flex } from "@/design/components/flex";
 
-export function RepetitiveFeatureResource() {
+export function RepetitiveFeatureResource({ level = 1 }: { level?: 1 | 2 }) {
   const data = [
     {
       en: ["It is single", "It is single again"],
@@ -140,7 +140,7 @@ export function RepetitiveFeatureResource() {
 
   return (
     <Flex direction="column" gap={4}>
-      <SectionHeading id="repetitive-s" level={2}>
+      <SectionHeading id="repetitive-s" level={level}>
         The Repetitive Conjugation
       </SectionHeading>
       <Text>

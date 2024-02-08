@@ -130,6 +130,12 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "it_is_important",
         "must",
         "necessary",
+        "how_many_things",
+        "how_many_of_us_inclusive",
+        "how_many_of_us_exclusive",
+        "how_many_of_yall",
+        "how_many_of_them_males",
+        "how_many_of_them_females",
       ],
     };
     return particleList.filter((p) => mapping[group].includes(p.key));

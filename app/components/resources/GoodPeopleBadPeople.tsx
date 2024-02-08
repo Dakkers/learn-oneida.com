@@ -3,7 +3,7 @@ import { SectionHeading } from "../SectionHeading";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Flex } from "@/design/components/flex";
 
-export function GoodPeopleBadPeopleResource() {
+export function GoodPeopleBadPeopleResource({ level = 1 }: { level?: 1 | 2 }) {
   const goodPeopleData = [
     [
       [{ text: "k" }, "ukweʔtiyó"],
@@ -95,27 +95,27 @@ export function GoodPeopleBadPeopleResource() {
 
   return (
     <Flex direction="column" gap={4}>
-      <SectionHeading level={2}>Good and Bad People</SectionHeading>
+      <SectionHeading level={level}>Good and Bad People</SectionHeading>
       <Text>
         Here, two more conjugations are introduced. <b>iyo</b> makes the entity
         "good" and <b>aksʌ</b> other makes the "bad".
       </Text>
-      <SectionHeading level={3}>Good People</SectionHeading>
+      <SectionHeading level={level + 1}>Good People</SectionHeading>
       <TableWrapper
         columns={TableWrapper.createPastTenseColumns("PR")}
         data={goodPeopleData}
       />
-      <SectionHeading level={3}>Bad People</SectionHeading>
+      <SectionHeading level={level + 1}>Bad People</SectionHeading>
       <TableWrapper
         columns={TableWrapper.createPastTenseColumns("PR")}
         data={badPeopleData}
       />
-      <SectionHeading level={3}>Good Kids</SectionHeading>
+      <SectionHeading level={level + 1}>Good Kids</SectionHeading>
       <TableWrapper
         columns={TableWrapper.createPastTenseColumns("PR")}
         data={goodKidsData}
       />
-      <SectionHeading level={3}>Bad Kids</SectionHeading>
+      <SectionHeading level={level + 1}>Bad Kids</SectionHeading>
       <TableWrapper
         columns={TableWrapper.createPastTenseColumns("PR")}
         data={badKidsData}

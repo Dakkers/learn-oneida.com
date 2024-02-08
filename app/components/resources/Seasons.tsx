@@ -1,6 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { SectionHeading } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
 export const DATA_SEASONS = [
   { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
@@ -9,7 +10,7 @@ export const DATA_SEASONS = [
   { en: "Winter", on: "kohslá·ke", key: "winter" },
 ];
 
-export function SeasonsResource({ level = 1 }) {
+export function SeasonsResource({ level = 1 }: ResourceProps) {
   const seasonsDuring = [
     { en: "During the spring", on: "tsiʔ nikukwite·seʔ" },
     { en: "During the summer", on: "tsiʔ niwaʔkʌ́nhes" },

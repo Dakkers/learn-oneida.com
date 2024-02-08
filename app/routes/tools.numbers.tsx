@@ -2,10 +2,10 @@ import { Button } from "@/design/primitives/button";
 import { Flex } from "@/design/components/flex";
 import { Input } from "@/design/primitives/input";
 import { Separator } from "@/design/primitives/separator";
-import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
+import { translateNumber } from "~/utils/numbers";
 
 export const meta: MetaFunction = () => {
   return [
@@ -44,7 +44,7 @@ export default function ToolsNumbers() {
             type="number"
             value={value}
           />
-          <Button onClick={() => setTranslatedValue(doTheTranslate(value))}>
+          <Button onClick={() => setTranslatedValue(translateNumber(value))}>
             Translate
           </Button>
         </Flex>

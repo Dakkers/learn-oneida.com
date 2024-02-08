@@ -2,6 +2,7 @@ import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { SectionHeading } from "../SectionHeading";
 import { Text } from "@/design/components/text";
+import { ResourceProps } from "./utils";
 
 const LIST = [
   ["Townline Road", "Kanata·yʌ́· Yoha·té·"],
@@ -26,7 +27,7 @@ const LIST = [
   ["Intersection", "tetyohahá·sleʔ / teyohahá·seleʔ"],
 ].map(([en, on]) => ({ en, on }));
 
-export function RoadsResource({ level = 1 }) {
+export function RoadsResource({ level = 1 }: ResourceProps) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="roads" level={level}>

@@ -26,6 +26,7 @@ import {
   PRONOUN_MAP_EN_OBJECTIVE,
   REF_VERB_PASTTENSE_MAP,
   REF_VERB_PASTTENSE_ALT_MAP,
+  PRONOUN_MAP_EN_POSSESSIVE,
 } from "~/utils";
 import {
   BreakdownType,
@@ -212,6 +213,7 @@ function TableRowWrapper({
   const translatedPhrase = formatTranslation(context.translation, {
     pronoun: PRONOUN_MAP_EN[row.pronoun],
     pronounObjective: PRONOUN_MAP_EN_OBJECTIVE[row.pronoun],
+    pronounPossessive: PRONOUN_MAP_EN_POSSESSIVE[row.pronoun],
     refVerb: REF_VERB_MAP[row.pronoun],
     refVerbPast: REF_VERB_PASTTENSE_MAP[row.pronoun],
     refVerbPastAlt: REF_VERB_PASTTENSE_ALT_MAP[row.pronoun],
