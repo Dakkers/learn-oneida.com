@@ -24,11 +24,19 @@ export function DaysOfTheWeekResource({ level = 1 }: { level?: 1 | 2 }) {
   ];
   const daysLast = [
     { en: "last Sunday", on: "tshawʌtatokʌ́htu" },
+    { en: "last Monday", on: "tshawʌtʌ·táneʔ" },
+    { en: "last Tuesday", on: "tshaʔtekníhatuht" },
+    { en: "last Wednesday", on: "tshiwahsʌ́hatuht" },
+    { en: "last Thursday", on: "tshikayelíhatuht" },
     { en: "last Friday", on: "tshiwískhatut" },
     { en: "last Saturday", on: "tshiwʌtáktaʔ" },
   ];
   const daysNext = [
     { en: "next Sunday", on: "yʌswʌtatokʌ́htu" },
+    { en: "next Monday", on: "oyá· yʌswʌtʌ·táneʔ" },
+    { en: "next Tuesday", on: "oyá· nyaʔteskníhatuht" },
+    { en: "next Wednesday", on: "oyá· nyaʔteswahsʌ́hatuht" },
+    { en: "next Thursday", on: "oyá· nyaʔteskayelíhatuht" },
     { en: "next Friday", on: "oyá· yʌswískhatut" },
     { en: "next Saturday", on: "oyá· yʌswʌtáktaʔ" },
   ];

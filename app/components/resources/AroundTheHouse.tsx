@@ -11,13 +11,13 @@ const LIST = [
   ["entrance, in the", "tsiʔ tyutawyaʔtákhwaʔ"],
   ["garage, in the", "tsiʔ tyuteʔslehtayʌtákhwaʔ "],
   ["kitchen, in the", "tsiʔ tyekhunyá·thaʔ"],
-  ["living room, in the", "tsiʔ tyutyʌtá·khwaʔ "],
-  ["stairs", "yelathʌstá·khwaʔ"],
   ["laundry room, in the", "tsiʔ tyenohalenyutá·khwaʔ "],
+  ["living room, in the", "tsiʔ tyutyʌtá·khwaʔ "],
   ["outside", "átsteʔ"],
+  ["stairs", "yelathʌstá·khwaʔ"],
   ["yard, in the", "tewatʌʔʌlá·lu·heʔ"],
-  ["yard, in the front ", "ohʌtu tyohuysyote"],
   ["yard, in the back", "onakʌ tyohutsyote"],
+  ["yard, in the front ", "ohʌtu tyohuysyote"],
 ].map(([en, on]) => ({ en, on }));
 
 export function AroundTheHouseResource({ level = 1 }: { level?: 1 | 2 }) {

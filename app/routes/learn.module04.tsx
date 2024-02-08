@@ -59,6 +59,8 @@ import { AroundTheHouseResource } from "~/components/resources/AroundTheHouse";
 import { AtSomeonesPlaceResource } from "~/components/resources/AtSomeonesPlace";
 import { PlacesInTheCommunityResource } from "~/components/resources/PlacesInTheCommunity";
 import { ParticlesTable } from "~/components/resources/ParticlesTable";
+import { PhoneNumbersResource } from "~/components/resources/PhoneNumbers";
+import { ClockTimeResource } from "~/components/resources/ClockTime";
 
 export const meta: MetaFunction = () => {
   return [
@@ -249,12 +251,12 @@ export default function LearnModule04() {
         <TOC.Item label="Months of the year" value="months" />
         <TOC.Item label="Clock time" value="clock-time" />
         <TOC.Item label="Counting time" value="counting-time" />
-        <TOC.Item label="Phone number" value="phone-number">
+        <TOC.Item label="Phone numbers" value="phone-numbers">
           <TOC.Section>
-            <TOC.Item label="Someone's house" value="phone-house" />
+            <TOC.Item label="Someone's house" value="at-someones-house" />
             <TOC.Item
               label="Someone's place of work"
-              value="phone-place-of-work"
+              value="at-someones-work"
             />
           </TOC.Section>
         </TOC.Item>
@@ -273,7 +275,6 @@ export default function LearnModule04() {
       <Text>
         Below is a number of paradigm tables for "someone being here".
       </Text>
-
       <AccordionWrapper
         sections={[
           ["someone-is-here", "Someone is here", dataIsHere],
@@ -297,7 +298,6 @@ export default function LearnModule04() {
         Below is a number of paradigm tables for "someone being <b>there</b>{" "}
         (temporarily)".
       </Text>
-
       <AccordionWrapper
         sections={[
           ["someone-is-there-temp", "Someone is there", dataIsThere],
@@ -333,7 +333,6 @@ export default function LearnModule04() {
         Below is a number of paradigm tables for "someone being at home" or
         "someone residing there".
       </Text>
-
       <AccordionWrapper
         sections={[
           ["someone-is-at-home", "Someone is at home", dataIsAtHome],
@@ -361,7 +360,6 @@ export default function LearnModule04() {
           ],
         ]}
       />
-
       <Text>
         Note: in the tables above, there are two phrases that are peculiar:{" "}
         <b>yáh teʔtehsí·tluʔ</b> and <b>yáh teʔtehsiʔtlu·táhkweʔ</b>. It is
@@ -375,7 +373,6 @@ export default function LearnModule04() {
       <Text>
         Below is a number of paradigm tables for "someone living in an area".
       </Text>
-
       <AccordionWrapper
         sections={[
           ["someone-lives-there", "Someone lives there", dataLivesThere],
@@ -415,7 +412,6 @@ export default function LearnModule04() {
       <SectionHeading id="want-thought" level={2}>
         Wanted / Thought
       </SectionHeading>
-
       <AccordionWrapper
         sections={[
           ["someone-wants", "Someone wants", dataWant],
@@ -436,7 +432,11 @@ export default function LearnModule04() {
 
       <MonthsResource level={2} />
 
+      <ClockTimeResource level={2} />
+
       <CountingTimeResource level={2} />
+
+      <PhoneNumbersResource level={2} />
 
       <RoadsResource level={2} />
 

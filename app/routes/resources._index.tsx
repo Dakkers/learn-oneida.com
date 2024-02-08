@@ -26,20 +26,24 @@ export default function Resources() {
       label: "Cardinal Directions",
     },
     {
-      href: "/counting-time",
-      label: "Counting lengths of time",
-    },
-    {
-      href: "/counting-people",
-      label: "Counting people",
-    },
-    {
       href: "/cities",
       label: "Cities",
     },
     {
       href: "/clans",
       label: "Clans",
+    },
+    {
+      href: "/clock-time",
+      label: "Clock time",
+    },
+    {
+      href: "/counting-time",
+      label: "Counting lengths of time",
+    },
+    {
+      href: "/counting-people",
+      label: "Counting people",
     },
     {
       href: "/countries",

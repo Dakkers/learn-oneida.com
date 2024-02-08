@@ -49,52 +49,46 @@ const dataAtSomeonesOwnWork = createParadigmData(
 );
 
 const examplesList = [
+  ["A telephone", ["teyethalákhwaʔ", "yutwʌnataʔástaʔ"]],
   [
-    ["A telephone", ["teyethalákhwaʔ", "yutwʌnataʔástaʔ"]],
-    [
-      "What's your phone number?",
-      "Náhteʔ niwashe·tás né· isé· sawʌ́ teyethalákhwa̲ʔ",
-    ],
-    [
-      "My phone number is 445-1234.",
-      "445-1234 niwashe·tás tsiʔ teyethalákhwa̲ʔ",
-    ],
-    [
-      "What's the phone number where you work?",
-      "Tó· niwashe·tás né· teyethalákhwaʔ tsiʔ nú· tisayoʔtʌ́staʔ",
-    ],
-    [
-      "My phone number at work is 765-1234.",
-      "765-1234 niwashe·tás tsiʔ twakyo·té·ˍ",
-    ],
-    [
-      "What's the phone number where you live?",
-      "Tó· niwashe·tás né· teyethalákhwaʔ isé· sawʌ́ tsiʔ tisatʌtíˍ",
-    ],
-    [
-      "The phone number where I live is 445-1234.",
-      "445-1234 teyethalákhwaʔ niwashe·tás tsiʔ twakatʌtíˍ",
-    ],
-    [
-      "What's the phone number at your house?",
-      "Tó· niwashe·tás teyethalákhwaʔ tsiʔ tisanúhsote̲ʔ",
-    ],
-    [
-      "The phone number at my house is 445-1234.",
-      "445-1234 niwashe·tás tsiʔ twaknúhsote̲ʔ",
-    ],
-    [
-      "What's your address (at your house)?",
-      "Tó· niwashe·tás tsiʔ tisanúhsote̲ʔ",
-    ],
-    [
-      "I live at 1234 Oneida Road.",
-      "1234 niwashe·tás Onʌyoteʔa·ká· yoha·té· tsiʔ tkí·tlu̲ʔ",
-    ],
+    "What's your phone number?",
+    "Náhteʔ niwashe·tás né· isé· sawʌ́ teyethalákhwa̲ʔ",
+  ],
+  ["My phone number is 445-1234.", "445-1234 niwashe·tás tsiʔ teyethalákhwa̲ʔ"],
+  [
+    "What's the phone number where you work?",
+    "Tó· niwashe·tás né· teyethalákhwaʔ tsiʔ nú· tisayoʔtʌ́staʔ",
+  ],
+  [
+    "My phone number at work is 765-1234.",
+    "765-1234 niwashe·tás tsiʔ twakyo·té·ˍ",
+  ],
+  [
+    "What's the phone number where you live?",
+    "Tó· niwashe·tás né· teyethalákhwaʔ isé· sawʌ́ tsiʔ tisatʌtíˍ",
+  ],
+  [
+    "The phone number where I live is 445-1234.",
+    "445-1234 teyethalákhwaʔ niwashe·tás tsiʔ twakatʌtíˍ",
+  ],
+  [
+    "What's the phone number at your house?",
+    "Tó· niwashe·tás teyethalákhwaʔ tsiʔ tisanúhsote̲ʔ",
+  ],
+  [
+    "The phone number at my house is 445-1234.",
+    "445-1234 niwashe·tás tsiʔ twaknúhsote̲ʔ",
+  ],
+  ["What's your address (at your house)?", "Tó· niwashe·tás tsiʔ tisanúhsote̲ʔ"],
+  [
+    "I live at 1234 Oneida Road.",
+    "1234 niwashe·tás Onʌyoteʔa·ká· yoha·té· tsiʔ tkí·tlu̲ʔ",
   ],
 ].map(([en, on]) => ({ en, on }));
 
-export function RoadsResource({ level = 1 }: ResourceProps) {
+console.log(examplesList);
+
+export function PhoneNumbersResource({ level = 1 }: ResourceProps) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="phone-numbers" level={level}>
@@ -108,19 +102,22 @@ export function RoadsResource({ level = 1 }: ResourceProps) {
       </Text>
 
       <SectionHeading id="at-someones-house" level={level + 1}>
-        <ParadigmTable data={dataAtSomeonesOwnHouse} />
+        At Someone's House
       </SectionHeading>
+      <ParadigmTable data={dataAtSomeonesOwnHouse} />
 
       <SectionHeading id="at-someones-work" level={level + 1}>
-        <ParadigmTable data={dataAtSomeonesOwnWork} />
+        At Someone's Work
       </SectionHeading>
+      <ParadigmTable data={dataAtSomeonesOwnWork} />
 
       <SectionHeading id="phone-number-examples" level={level + 1}>
-        <TableWrapper
-          columns={TableWrapper.columnsEnglishOneida}
-          data={examplesList}
-        />
+        Examples
       </SectionHeading>
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishOneida}
+        data={examplesList}
+      />
     </Flex>
   );
 }
