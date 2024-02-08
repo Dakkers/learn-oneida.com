@@ -3,6 +3,7 @@ import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 import { SectionHeading } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
 const allowedPronouns = ["i", "u", "m", "f"];
 
@@ -109,7 +110,7 @@ const dataNations = createParadigmData(
   allowedPronouns
 );
 
-export function NationsResource({ level = 1 }) {
+export function NationsResource({ level = 1 }: ResourceProps) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="nations" level={level}>

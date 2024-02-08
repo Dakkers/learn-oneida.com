@@ -3,10 +3,9 @@ import { TableWrapper } from "@/design/components/tableWrapper";
 import { TextBreakdown } from "../TextBreakdown";
 import { Text } from "@/design/components/text";
 import { SectionHeading } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
-const HNE = { text: "hné·", type: "PAST" };
-
-export function RelationshipsResource({ level = 1 }) {
+export function RelationshipsResource({ level = 1 }: ResourceProps) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="relationships" level={level}>
@@ -207,7 +206,7 @@ function OldManWomanTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="oldman-oldwoman" level={level + 1}>
+      <SectionHeading id="old-man-old-woman" level={level + 1}>
         Old Man / Old Woman
       </SectionHeading>
       <Text>
@@ -290,25 +289,25 @@ function BoyfriendGirlfriendTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="boyfriend-girlfriend" level={level + 1}>
-        Boyfriend / Girlfriend
+      <SectionHeading id="girlfriend-boyfriend" level={level + 1}>
+        Girlfriend / Boyfriend
       </SectionHeading>
       <TableWrapper
         columns={[
           ...TableWrapper.columnsPronouns,
           {
-            accessorKey: "oldMan",
+            accessorKey: "boyfriend",
             cell: (value) => (
               <TextBreakdown breakdown={value} typeFallback="PLB" />
             ),
-            header: "Old man",
+            header: "Boyfriend",
           },
           {
-            accessorKey: "oldWoman",
+            accessorKey: "girlfriend",
             cell: (value) => (
               <TextBreakdown breakdown={value} typeFallback="PLB" />
             ),
-            header: "Old woman",
+            header: "Girlfriend",
           },
         ]}
         data={rows}
