@@ -943,5 +943,213 @@ export const particleList = [
       },
     ],
   },
+
+  {
+    key: "everyone",
+    oneida: "akwekú",
+    en: "everyone, everything",
+    examples: [
+      {
+        oneida: "Akwekú knú·wehseʔ",
+        en: "I like everything.",
+      },
+    ],
+  },
+
+  {
+    key: "all_of_us",
+    oneida: "twakwekú",
+    en: "you all and I",
+    examples: [
+      {
+        oneida: "Twakwekú yethiyʌtelí",
+        en: "We all know her.",
+      },
+    ],
+  },
+
+  {
+    key: "they_and_i",
+    oneida: "yakwakwekú",
+    en: "they and I",
+    examples: [
+      {
+        oneida: "Yakwakwekú yakwanú·wehseʔ",
+        en: "They all & I like it.",
+      },
+    ],
+  },
+
+  {
+    key: "all_yall",
+    oneida: "swakwekú",
+    en: "all of you",
+    examples: [
+      {
+        oneida: "Swakwekú swanú·wehseʔ",
+        en: "You all like it.",
+      },
+    ],
+  },
+
+  {
+    key: "them_males",
+    oneida: "latikwekú",
+    en: "all of them (males, males/females)",
+    examples: [
+      {
+        oneida: "Latikwekú yuknú·wehseʔ",
+        en: "They Ms all like me.",
+      },
+    ],
+  },
+
+  {
+    key: "them_females",
+    oneida: "kutikwekú",
+    en: "all of them (females)",
+    examples: [
+      {
+        oneida: "Kutikwekú kutinú·wehse",
+        en: "They Fs all like it.",
+      },
+    ],
+  },
+
+  {
+    key: "that_2",
+    oneida: "tho",
+    en: "that, there, that thing",
+    examples: [
+      {
+        oneida: "Tho ní· knú·wehseʔ",
+        en: "That's what I like.",
+      },
+      {
+        oneida: "Yáh tho tehokhstʌ ha",
+        en: "He's not that old.",
+      },
+    ],
+  },
+
+  {
+    key: "anything",
+    oneida: "átiʔ náhteʔ",
+    en: "anything, whatever",
+    examples: [
+      {
+        oneida: "Áti náhteʔ ni·sé· snú·wehseʔ, né· ú·ni knú·wehseʔ",
+        en: "Whatever you like, I also like.",
+      },
+    ],
+  },
+
+  {
+    key: "anyone",
+    oneida: "áti úhkaʔ",
+    en: "anyone, anybody, whoever",
+    examples: [
+      {
+        oneida: "Khenú·wehseʔ kwáh áti úhkaʔ isé· shenú·wehseʔ",
+        en: "I like whoever you like.",
+      },
+    ],
+  },
+
+  {
+    key: "more_than",
+    oneida: "íhsi nú·",
+    en: "on the other side (of something), more than",
+    examples: [
+      {
+        oneida: "Íhsi nú· oyé·li naʔtehaohsliyá·ku",
+        en: "He's more than ten years old.",
+      },
+    ],
+  },
+
+  {
+    key: "less_than",
+    oneida: "kaló",
+    en: "on this side (of something), less than",
+    examples: [
+      {
+        oneida: "Kaló né· oyé·li naʔtehaohsliyá·ku",
+        en: "He's less than ten years old.",
+      },
+    ],
+  },
+
+  {
+    key: "just_only",
+    oneida: "né· ok",
+    en: "just / only",
+    examples: [
+      {
+        oneida: "Né· ok oyé·li naʔtehaohsliyá·ku",
+        en: "He's just ten years old.",
+      },
+    ],
+  },
+
+  {
+    key: "it_is_the_same",
+    oneida: "né· tshá·kat",
+    en: "it is the same, they are the same",
+    examples: [
+      {
+        oneida: "Né· kʌ tshá·kat kaʔikʌ",
+        en: "Are these (things) the same?",
+      },
+    ],
+  },
+
+  {
+    key: "it_is_different",
+    oneida: "tekyattíhʌ",
+    en: "it is different, it is uneven",
+    examples: [
+      {
+        oneida: "Tekyattihʌ tsiʔ ní·yot thikʌ̲",
+        en: "They are different than that.",
+      },
+    ],
+  },
+
+  {
+    key: "both",
+    oneida: "tetsyalú",
+    en: "both, either, neither",
+    examples: [
+      {
+        oneida: "Tetsyalú ni· knú·wehseʔ kaʔi·kʌ",
+        en: "I like both of these.",
+      },
+    ],
+  },
+
+  {
+    key: "almost",
+    oneida: "thóha",
+    en: "almost",
+    examples: [
+      {
+        oneida: "Thóha oyé·li naʔtehaohsliyá·ku",
+        en: "He's almost ten years old.",
+      },
+    ],
+  },
+
+  {
+    key: "how_many",
+    oneida: "tó· ni",
+    en: "How many/much?",
+    examples: [
+      {
+        oneida: "Tó· nisahwístayʌʔ",
+        en: "How much money do you have?",
+      },
+    ],
+  },
   // PLOP:ADD_PARTICLE
 ];

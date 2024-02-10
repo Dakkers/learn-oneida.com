@@ -47,6 +47,7 @@ import {
 } from "~/components/resources/Family";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "~/components/SectionHeading";
+import { ParticlesTable } from "~/components/resources/ParticlesTable";
 
 export const meta: MetaFunction = () => {
   return [
@@ -149,6 +150,11 @@ export default function LearnModule02() {
 
       <YoungOldSection />
       <AgeSection />
+
+      <SectionHeading id="particles" level={2}>
+        Particles
+      </SectionHeading>
+      <ParticlesTable group="module02" />
     </Flex>
   );
 }

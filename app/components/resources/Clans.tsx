@@ -38,7 +38,9 @@ const dataWolves = magicThing({
 export function ClansResource({ level = 1 }: { level?: 1 | 2 }) {
   return (
     <Flex direction="column" gap={4}>
-      <SectionHeading id='clans' level={level}>Clans</SectionHeading>
+      <SectionHeading id="clans" level={level}>
+        Clans
+      </SectionHeading>
       <Text>
         Here, you can learn about clan animals and how to say someone is from a
         clan. The clans in Oneida are: bear, turtle, and wolf.

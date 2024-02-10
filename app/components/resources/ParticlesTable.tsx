@@ -7,7 +7,7 @@ import React from "react";
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
 
-type ParticlesGroup = "module01" | "module03" | "module04";
+type ParticlesGroup = "module01" | "module02" | "module03" | "module04";
 
 interface ParticlesTableProps {
   group?: ParticlesGroup;
@@ -93,6 +93,25 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "nothing",
         "not_true",
         "no_way",
+      ],
+      module02: [
+        "everyone",
+        "all_of_us",
+        "they_and_i",
+        "all_yall",
+        "them_males",
+        "them_females",
+        "that_2",
+        "anything",
+        "anyone",
+        "more_than",
+        "less_than",
+        "just_only",
+        "it_is_the_same",
+        "it_is_different",
+        "both",
+        "almost",
+        "how_many",
       ],
       module03: [
         "again",
