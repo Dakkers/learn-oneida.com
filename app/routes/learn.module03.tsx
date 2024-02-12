@@ -16,6 +16,8 @@ import { DomesticatedAnimalsResource } from "~/components/resources/Domesticated
 import { RelationshipsResource } from "~/components/resources/Relationships";
 import { ClansResource } from "~/components/resources/Clans";
 import { NationsResource } from "~/components/resources/Nations";
+import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
+import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 
 export const meta: MetaFunction = () => {
   return [
@@ -86,6 +88,8 @@ export default function LearnModule03() {
         <TOC.Item label="Clans" value="clans" />
         <TOC.Item label="Nations" value="nations" />
         <TOC.Item label="Particles" value="particles" />
+        <TOC.Item label="Dialogue" value="dialogue" />
+        <TOC.Item label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <PastTenseSection />
@@ -110,6 +114,9 @@ export default function LearnModule03() {
         Particles
       </SectionHeading>
       <ParticlesTable group="module03" />
+
+      <DialogueSection />
+      <TranslationExercisesSection group="module03" />
     </Flex>
   );
 }
@@ -782,3 +789,79 @@ const createColsLol = (cols) => {
 
   return result;
 };
+
+function DialogueSection() {
+  const part2: DialogueTableData = [
+    ["To·kʌ́skeʔ kʌ sanyákheʔ", ["ʌ́·, to·kʌ́skeʔ", "Tu·wís yukninyákheʔ"]],
+    [
+      ["Tu·wís kʌ́", "Lotinyakú né· So·s"],
+      "Lotinyakú·neʔ nok tsiʔ tehonatekháhsyu nuʔú·waʔ",
+    ],
+    [
+      "Tó· nahe tshatehonatekháhsyu",
+      "Yáh tewahu·níseʔ nok tsiʔ latatwʌni·yó nuʔú·waʔ",
+    ],
+    [
+      "Yáh kʌ́ tehotinyaku·né· kaló· tsiʔ niyo·lé· waʔhotinyakeʔ So·s",
+      [
+        "Kʌʔ ok naheʔ",
+        "Katlí·n né·n lotinyakú·neʔ kháleʔ yáh só·tsiʔ teyakukweʔtiyó",
+      ],
+    ],
+    [
+      ["Ok né·n Tu·wís", "Yáh só·tsiʔ tehlukweʔtiyó né·n laulhá·"],
+      [
+        "Latatwʌni·yó· kháleʔ laknolúkhwa̲ʔ",
+        "Ok né·n niʔisé·",
+        "Yáh teʔsanyákuʔ",
+      ],
+    ],
+    [
+      "ʌ́· kháleʔ yáh teʔyukninyákheʔ úhkaʔ náhteʔ ok né·n tshaʔteyukniʔtaló·tʌ̲ʔ",
+      ["Tsiʔ nihsekhsá·", "Yukninyákheʔ kháleʔ yáh niʔisé·"],
+    ],
+    [
+      "Etshlihwanu·tú·seʔ tó· nihotikhsá·tayʌʔ oskánhe né·n oyá· yakúkwe",
+      "Yáh tehokhsá·tayʌʔ",
+    ],
+    ["Yáh e·só· tehetshyʌtelí, wahíˍ", "Wakanúhteʔ tsiʔ laknolúkhwa̲ʔ"],
+    [
+      [
+        "Yáh kʌ́ teʔsanúhteʔ tsiʔ áhsʌ nikutí kunukwé· lotinyakú·neʔ",
+        "Kháleʔ oyé·li nihokhsá·tayʌʔ",
+      ],
+      ["Yáh to·kʌ́skeʔ té·kʌ", "Ne ok tewáhsʌ úskah niyohslaké nitho·yʌ́·"],
+    ],
+    [
+      "Sanúhteʔ kʌ́ tsiʔ nihatikhsaʔtáksʌs ne shakoyoʔokúha̲",
+      ["Yáh teʔsukweʔtiyó niʔiséˍ", "Tho wakanúhte̲ʔ"],
+    ],
+    [
+      "Yaweluhátiʔ tsiʔ yah teshakoyʌtelí né·n shakoyoʔokúha, yáh tehuwanú·wehseʔ",
+      [
+        "Yaweluhátiʔ tó· nihokhsá·tayʌʔ, yáh úhkaʔ teʔsukwé·tayʌʔ ne·n yesanolúkhwaʔ",
+        "Né· ok tewáhsʌ nikutí takós sanáhskwayʌʔ kháleʔ yáh teʔyesanú·wehseʔ",
+      ],
+    ],
+    [
+      "Sanúhteʔ kʌ́ tsiʔ yáh tehonúhteʔ oh náhteʔ tethsʌná·sleʔ",
+      "Sʌ́haʔ e·só· takhló·li̲",
+    ],
+  ];
+
+  return (
+    <>
+      <SectionHeading id="dialogue" level={2}>
+        Dialogue
+      </SectionHeading>
+      <SectionHeading id="dialogue-ex1" level={3}>
+        Example 1
+      </SectionHeading>
+      <Text>(Not yet available)</Text>
+      <SectionHeading id="dialogue-ex2" level={3}>
+        Example 2
+      </SectionHeading>
+      <DialogueTable data={part2} />
+    </>
+  );
+}

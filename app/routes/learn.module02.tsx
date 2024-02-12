@@ -147,6 +147,7 @@ export default function LearnModule02() {
           value="things-that-are-the-same"
         />
         <TOC.Item label="Being Different" value="being-different" />
+        <TOC.Item label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <VerbsSection />

@@ -90,7 +90,65 @@ const englishToOneidaModule02 = [
   ["40", "Do my parents and your parents know one another?"],
 ];
 
-type Group = "module01" | "module02";
+const oneidaToEnglishModule03 = [
+  ["1", "Lotikhsá·tayʌ’ kʌ́ né· akwekú sheyo’okúha̲"],
+  ["2", "Sukwé·tayʌ’ kʌ́́ ukha ok yesanolukhwa’"],
+  ["3", "Yah só·tsi’ tehlukwe’tiyó né·n etshuhwatʌ́ha̲"],
+  ["4", "Úhka’ náhte’ sninyakú"],
+  ["5", "Tekniyáhse kʌ yakokhsá·tayʌ’ né· shekhstʌ́ha yutate’kʌ́ha̲"],
+  ["6", "Né· kʌ́ thikʌ́ lanikʌhtlúha né·n Wá·li akonikʌhtlú·tsli’"],
+  ["7", "Tó· náhe’ onʌ tsha’tehonatekháhsyu né·n Só·s luwayʌ́ha̲"],
+  ["8", "Yáh tha’tehyatatnú·wehse’ nok tsi’ shekú ihnehse"],
+  ["9", "Skayá·tat tá·thuní tekniyáhse síksik yakonáskwayʌ"],
+  ["10", "Shekú yutatwʌni·yó· né· aolíwa’ tsi’ yáh te’yakukwe’tiyó"],
+  ["11", "Yáh úhka’ náhte’ tehonanúhte’ tsi’ Onuta’keha·ká· nisuhutsyó·tʌ’"],
+  ["12", "Tehnitsyalú kʌ́ lotikwáho né·n yesayʌ́ha"],
+  ["13", "Kutikwekú kʌ́ kutatwʌni·yó· né· kutiya’tase’shúha̲"],
+  [
+    "14",
+    "Yáh úhka’ náhte’ sʌ́ha’ luwanolukhwa thikʌ́ lanikʌhtlúha tsi’ ni·yót ni’í·",
+  ],
+  ["15", "Sʌ́ha’ wahu·níse’ yuknináskwayʌ’ tsi’ ni·yót yuknikhsá·tayʌ’"],
+  ["16", "E·so kʌ́ hyanolúkhwa’ né· etshekstʌ́há"],
+  ["17", "Akwekú luwatinú·wehse’ né· lotinyáhtʌ"],
+  ["18", "Akwekú lotikhsá·tayʌ’ né· ukwatʌló·shuha, yáh ni’isé·"],
+];
+
+const englishToOneidaModule03 = [
+  ["19", "Is it true that you and your significant other are separated?"],
+  [
+    "20",
+    "Those young men are not good people, that's why they are still not married",
+  ],
+  ["21", "How many horses does the old man have?"],
+  ["22", "Didn't you and your old man used to have a dog?"],
+  ["23", "Both his parents are of the Bear Clan."],
+  ["24", "I don't know anyone who is Cree."],
+  ["25", "My wife and I aren't married but we have ten kids."],
+  ["26", "My cousin's wife and I used to hate each other."],
+  ["27", "How many kids does your older sister have?"],
+  ["28", "How long have Thomas's parents been married?"],
+  ["29", "My cousin Peter used to have three cows and one horse."],
+  [
+    "30",
+    "My husband and I used to love one another very much, not so much now.",
+  ],
+  ["31", "Does your cousin Peter have more kids than you?"],
+  ["32", "Have you two been separated for a long time?"],
+  [
+    "33",
+    "The Oneida Homemakers are good people, the Oneida Choir and I love them a lot.",
+  ],
+  ["34", "Do you and your old lady love one another?"],
+  ["35", "Peter hates it that we are not in a relationship now."],
+  ["36", "Amelia and her husband have six girls."],
+  ["37", "She used to have two lambs."],
+  ["38", "They were engaged. They're married now."],
+  ["39", "All of my friends are still single."],
+  ["40", "My nephew is a rotten kid but I don't hate him."],
+];
+
+type Group = "module01" | "module02" | "module03";
 
 function TranslationExerciseTable({
   data,
@@ -125,11 +183,14 @@ export function TranslationExercises({ group }: { group?: Group }) {
         ...englishToOneidaModule01,
         ...oneidaToEnglishModule02,
         ...englishToOneidaModule02,
+        ...oneidaToEnglishModule03,
+        ...englishToOneidaModule03,
       ].map((value, index) => [(index + 1).toString(), value[1]]);
     }
     const mapping: Record<Group, string[][]> = {
       module01: [...oneidaToEnglishModule01, ...englishToOneidaModule01],
       module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
+      module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
     };
     return mapping[group];
   }, [group]);
