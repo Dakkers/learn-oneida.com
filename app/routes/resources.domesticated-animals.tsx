@@ -4,7 +4,7 @@ import { DomesticatedAnimalsResource } from "~/components/resources/Domesticated
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Domesticated animals" },
+    { title: "Domesticated Animals" },
     {
       name: "description",
       content: "Domesticated animals in Oneida",

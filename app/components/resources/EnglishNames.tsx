@@ -1,4 +1,7 @@
+import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
+import { SectionHeading } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
 const names = [
   { on: "Alʌt", en: "Aaron" },
@@ -29,8 +32,13 @@ const names = [
   { on: "Só·s", en: "Susan" },
 ] as const;
 
-export function EnglishNames() {
+export function EnglishNamesResource({ level = 1 }: ResourceProps) {
   return (
-    <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={names} />
+    <Flex direction="column" gap={4}>
+      <SectionHeading id="english-names" level={level}>
+        English Names
+      </SectionHeading>
+      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={names} />
+    </Flex>
   );
 }

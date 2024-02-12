@@ -12,6 +12,14 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Resources() {
+  const resourcesLinguistics = [
+    ["/glottal-stop", "Glottal Stop"],
+    ["/pronominals", "Pronominals"],
+    ["/repetitive-conjugation", "Repetitive Conjugation"],
+    ["/stress", "Stress and Accents"],
+    ["/letter-h", "The Letter H"],
+    ["/whispered-endings", "Whispered Endings"],
+  ];
   const resources = [
     {
       href: "/around-the-house",
@@ -58,6 +66,10 @@ export default function Resources() {
       label: "Domesticated animals",
     },
     {
+      href: "/english-names",
+      label: "English Names",
+    },
+    {
       href: "/good-people-bad-people",
       label: "Good people and bad people",
     },
@@ -76,10 +88,6 @@ export default function Resources() {
     {
       href: "/relationships",
       label: "Relationships",
-    },
-    {
-      href: "/repetitive-conjugation",
-      label: "Repetitive Conjugation",
     },
     {
       href: "/roads",
@@ -101,16 +109,33 @@ export default function Resources() {
         Resources
       </Heading>
 
-      <Text>Check out some resources:</Text>
-      <List>
-        {resources.map((t, i) => (
+      <Text>Resources regarding the linguistics side of things:</Text>
+      <LinksList links={resourcesLinguistics} />
+
+      <Text>Other resources:</Text>
+      <LinksList links={resources} />
+    </Flex>
+  );
+}
+
+function LinksList({
+  links,
+}: {
+  links: Array<string[]> | Array<{ href: string; label: string }>;
+}) {
+  return (
+    <List>
+      {links.map((t, i) => {
+        const href = Array.isArray(t) ? t[0] : t.href;
+        const label = Array.isArray(t) ? t[1] : t.label;
+        return (
           <List.Item key={i}>
-            <a className="underline text-blue-600" href={`/resources${t.href}`}>
-              {t.label}
+            <a className="underline text-blue-600" href={`/resources${href}`}>
+              {label}
             </a>
           </List.Item>
-        ))}
-      </List>
-    </Flex>
+        );
+      })}
+    </List>
   );
 }
