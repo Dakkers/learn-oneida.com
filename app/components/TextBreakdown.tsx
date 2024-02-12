@@ -15,7 +15,8 @@ export type BreakdownType =
   | "RECP"
   | "REFL"
   | "REP"
-  | "RPL";
+  | "RPL"
+  | "SRFL";
 
 type BreakdownArray = Array<
   | string
@@ -118,6 +119,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   REFL: "text-green-700",
   REP: "text-yellow-600",
   RPL: "text-gray-400",
+  SRFL: "text-green-700",
 } as const;
 
 function getSuffixArr(suffix: TextBreakdownSuffix | undefined) {

@@ -1,7 +1,4 @@
-import {
-  TableWrapper,
-  TableWrapperProps,
-} from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/design/components/tableWrapper";
 import { particleList } from "./particleList";
 import React from "react";
 import { Flex } from "@/design/components/flex";

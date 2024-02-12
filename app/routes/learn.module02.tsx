@@ -48,6 +48,12 @@ import {
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "~/components/SectionHeading";
 import { ParticlesTable } from "~/components/resources/ParticlesTable";
+import { LastNamesResource } from "~/components/resources/LastNames";
+import { AboutSomeoneResource } from "~/components/resources/AboutSomeone";
+import { SimilarInAppearanceResource } from "~/components/resources/SimilarInAppearance";
+import { BeingDifferentResource } from "~/components/resources/BeingDifferent";
+import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
+import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 
 export const meta: MetaFunction = () => {
   return [
@@ -130,6 +136,17 @@ export default function LearnModule02() {
           word="naʔ te...ohsliyá·ku̲"
           value="verb-age"
         />
+
+        <TOC.Item label="Particles" value="particles" />
+        <TOC.Item label="Dialogue" value="dialogue" />
+        <TOC.Item label="Last Names" value="last-names" />
+        <TOC.Item label="About Someone or Something" value="about-someone" />
+        <TOC.Item label="Similar in Appearance" value="similar-in-appearance" />
+        <TOC.Item
+          label="Things That Are The Same"
+          value="things-that-are-the-same"
+        />
+        <TOC.Item label="Being Different" value="being-different" />
       </TOC>
 
       <VerbsSection />
@@ -155,6 +172,15 @@ export default function LearnModule02() {
         Particles
       </SectionHeading>
       <ParticlesTable group="module02" />
+
+      <DialogueSection />
+      <LastNamesResource level={2} />
+      <AboutSomeoneResource level={2} />
+      <SimilarInAppearanceResource level={2} />
+      <ThingsThatAreTheSameSection />
+      <BeingDifferentResource level={2} />
+
+      <TranslationExercisesSection group="module02" />
     </Flex>
   );
 }
@@ -730,6 +756,133 @@ function AgeSection() {
         As a more concerete example, the Oneida translation for &quot;I am 35
         years old&quot; is <b>35 naʔ tewakohsliyá·ku̲</b>.
       </Text>
+    </>
+  );
+}
+
+function DialogueSection() {
+  const part1: DialogueTableData = [
+    [
+      "Tó· naʔtehaohsliyá·ku neʔn yaʔníha̲",
+      "Thó ha wisk niwáhsʌ naʔtehaohsliyá·ku lakeʔníha̲",
+    ],
+    ["To·kʌ́skeʔ kʌ́ tho naʔtehaohsliyá·ku̲", "ʌ́·, tho naʔtehaohsliyá·ku̲"],
+    [
+      "Úhkaʔ náhteʔ sheyʌtelí né·n sʌ́haʔ kʌʔnityako·yʌ́·",
+      [
+        "Sʌ́haʔ kʌʔnitho·yʌ́· loʔniha̲",
+        "Íhsi nú· né· téklu niwáhsʌ naʔtehaohsliyá·ku̲",
+      ],
+    ],
+    [
+      "Tetsitsyatyelʌ́ kʌ́ neʔn yahsó tha",
+      [
+        "Tah. Yah thaʔtetsyakyatyelʌ́ˍ",
+        "Íhsi né· wisk niwáhsʌ niyohslaké sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó t niʔí·",
+      ],
+    ],
+    [
+      "Shakoyʌtelí kʌ́ akhwa·tsíle̲",
+      "Táh, né· ok laulhá laohwa·tsíleʔ shakoyʌtelíˍ",
+    ],
+  ];
+  const part2: DialogueTableData = [
+    [
+      [
+        "Úhkaʔ náhteʔ sʌ́haʔ kʌʔnityakoyʌhaʔné· yesayʌʔokuha̲",
+        "Yaʔníha kʌ́ katʌ sanulhá·",
+      ],
+      "Lakeʔníha sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót neʔn aknulhá·",
+    ],
+    ["Tó· nikú sʌ́haʔ lokstʌ́ha̲ʔ", "Tewáhsʌ niyohslaké sʌ́haʔ lokstʌ́ha̲ʔ"],
+    ["E·só· sʌ́haʔ lokstʌ́ha̲, wáhi̲", "ʌ́·"],
+  ];
+  const part3: DialogueTableData = [
+    [
+      "Sʌ́haʔ kʌ́ akokstʌ́haʔ né· ukyalaséha Kowáklit tsiʔ ni·yó t neʔn tsyalá·séʔ Tu·wís",
+      "Tah. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó ht né· tsyalá·seʔ Kowáklit",
+    ],
+    [
+      "Kayé kʌ́ niwáhsʌ naʔtehaohsliyá·ku̲",
+      ["Tah. Yah tho tehokstʌ́ha̲ʔ", "Áhsʌ ok niwáhsʌ wá·tlu naʔtehaohsliyá·ku̲"],
+    ],
+    [
+      "Sanú hteʔ kʌ́ tó· naʔteyakaohsliyá·ku né· ukyalasé Kowáklit",
+      "Tah. Yah tewakánuhteʔ, uhkaʔ náhteʔ né· akonulhá·",
+    ],
+    [
+      "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
+      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔiséˍ·",
+    ],
+    [
+      "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yó t niʔí·",
+      "Yah yeksá· té·kʌ, wáhi̲",
+    ],
+    ["To·kʌ́skeʔ kʌ́", "ʌ́·"],
+  ];
+
+  return (
+    <>
+      <SectionHeading id="dialogue" level={2}>
+        Dialogue
+      </SectionHeading>
+      <Text>Here is some dialogue using terminology from module 1 and 2.</Text>
+      <SectionHeading id="dialogue-ex1" level={3}>
+        Example 1
+      </SectionHeading>
+      <DialogueTable data={part1} />
+      <SectionHeading id="dialogue-ex2" level={3}>
+        Example 2
+      </SectionHeading>
+      <DialogueTable data={part2} />
+      <SectionHeading id="dialogue-ex3" level={3}>
+        Example 3
+      </SectionHeading>
+      <DialogueTable data={part3} />
+    </>
+  );
+}
+
+function ThingsThatAreTheSameSection() {
+  const data = [
+    ["They are the same", "Né· tshá·kat"],
+    ["Are they the same?", "Né· kʌ tshá·kat"],
+    ["They are not the same", "yah né· tshá·kat té·kʌ"],
+    ["Someone and I are the same age", "tshaʔteyuknohsliyá·ku"],
+    ["You two are the same age", "tshaʔ tesnohsliyá·ku"],
+    ["We are all the same age", "tshaʔ teyukyohsliyá·ku"],
+    ["You all are the same age", "tshaʔ tetsyohsliyá·ku"],
+    ["They Ms are the same age", "tshaʔ tehonohsliyá·ku"],
+    ["They Fs are the same age", "tshaʔ teyonohsliyá·ku"],
+    ["You and I have the same last name", "tshaʔ teyót tsiʔ tetnihsʌná·se·leʔ"],
+    [
+      "Someone and I have the same last name",
+      "tshaʔ teyót tsiʔ teʔyaknihsʌná·se·leʔ",
+    ],
+    ["You two have the same last name", "tshaʔ teyót tsiʔ tehsnihsʌná·se·leʔ"],
+    ["Two males have the same last name", "tshaʔteyót tsiʔ tehnihsʌná·se·leʔ"],
+    [
+      "Two females have the same last name",
+      "tshaʔ teyót tsiʔ teknihsʌná·se·leʔ",
+    ],
+    ["We all have the same last name", "tshaʔ teyót tsiʔ tetwahsʌná·se·leʔ"],
+    [
+      "They and l have the same last name",
+      "tshaʔ teyót tsiʔ teyakwahsʌná·se·leʔ",
+    ],
+    ["You all have the same last name", "tshaʔ teyót tsiʔ tehswahsʌná·se·leʔ"],
+    ["They Ms have the same last name", "tshaʔ teyót tsiʔ tehatihsʌná·se·leʔ"],
+    ["They Fs have the same last name", "tshaʔ teyót tsiʔ tekutihsʌná·se·leʔ"],
+  ];
+  return (
+    <>
+      <SectionHeading id="things-that-are-the-same" level={2}>
+        Things that are the same
+      </SectionHeading>
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishOneida}
+        data={data.map(TableWrapper.mapEnglishOneida)}
+      />
     </>
   );
 }

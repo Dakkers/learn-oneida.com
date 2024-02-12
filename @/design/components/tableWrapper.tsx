@@ -24,15 +24,19 @@ export interface TableWrapperProps {
 }
 
 export function TableWrapper({ columns, data }: TableWrapperProps) {
+  const hasHeader = !!columns.find((col) => !!col.header)
+
   return (
     <Table>
-      <TableHeader>
-        <TableRow>
-          {columns.map((c) => (
-            <TableHead key={c.accessorKey}>{c.header}</TableHead>
-          ))}
-        </TableRow>
-      </TableHeader>
+      {hasHeader && (
+        <TableHeader>
+          <TableRow>
+            {columns.map((c) => (
+              <TableHead key={c.accessorKey}>{c.header}</TableHead>
+            ))}
+          </TableRow>
+        </TableHeader>
+      )}
       <TableBody>
         {data.map((row, i) => (
           <TableRow key={i}>
@@ -159,3 +163,7 @@ TableWrapper.columnsPronouns = pronounColumns;
 TableWrapper.createTextBreakdownColumn = createOneidaCol;
 TableWrapper.englishColumn = EnglishCol;
 TableWrapper.createPastTenseColumns = createPastTenseColumns;
+
+type MapperArgs = string|string[];
+TableWrapper.mapLeftRight = ([left, right]: MapperArgs[]) => ({ left, right })
+TableWrapper.mapEnglishOneida = ([en, on]: MapperArgs[]) => ({ en, on })

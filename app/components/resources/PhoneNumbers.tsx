@@ -86,8 +86,6 @@ const examplesList = [
   ],
 ].map(([en, on]) => ({ en, on }));
 
-console.log(examplesList);
-
 export function PhoneNumbersResource({ level = 1 }: ResourceProps) {
   return (
     <Flex direction="column" gap={4}>
