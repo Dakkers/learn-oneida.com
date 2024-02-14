@@ -71,7 +71,7 @@ const EnglishCol = {
   header: "English",
 };
 
-const createOneidaCol = (typeFallback: BreakdownType, options = {}) => ({
+const createOneidaCol = (typeFallback?: BreakdownType, options = {}) => ({
   accessorKey: options.accessorKey ?? "breakdown",
   cell: (value) => (
     <TextBreakdown breakdown={value} typeFallback={typeFallback} />

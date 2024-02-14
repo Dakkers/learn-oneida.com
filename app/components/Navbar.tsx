@@ -13,7 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/design/primitives/navigation-menu";
 
-const moduleNumbers = new Array(4).fill(0).map((_, i) => (i + 1).toString());
+const moduleNumbers = new Array(5).fill(0).map((_, i) => (i + 1).toString());
 
 const toolsItems: { title: string; href: string; description: string }[] = [
   {

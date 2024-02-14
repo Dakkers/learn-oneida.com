@@ -26,7 +26,15 @@ type BreakdownArray = Array<
     }
 >;
 
-export type TextBreakdownSuffix = "hne" | "kwe" | "hkwe";
+export type TextBreakdownSuffix =
+  | "hne"
+  | "kwe"
+  | "hkwe"
+  | "hake"
+  | "heke"
+  | "hak"
+  | "ake"
+  | "áke";
 
 export function TextBreakdown({
   as: Tag = "span",
@@ -41,16 +49,7 @@ export function TextBreakdown({
   suffix?: TextBreakdownSuffix;
   typeFallback?: BreakdownType;
 }) {
-  const breakdown = (
-    prefix === "RECP"
-      ? ([
-          {
-            text: "te",
-            type: "RECP",
-          },
-        ] as BreakdownArray)
-      : []
-  )
+  const breakdown = getPrefixArr(prefix)
     .concat(_breakdown)
     .concat(getSuffixArr(suffix));
 
@@ -133,9 +132,34 @@ function getSuffixArr(suffix: TextBreakdownSuffix | undefined) {
       ? "kweʔ"
       : suffix === "hkwe"
       ? "hkweʔ"
+      : suffix === "hake"
+      ? "hakeʔ"
+      : suffix === "heke"
+      ? "hekeʔ"
+      : suffix === "hak"
+      ? "hakʔ"
+      : suffix === "ake"
+      ? "akeʔ"
+      : suffix === "áke"
+      ? "ákeʔ"
       : undefined;
+
   if (!text) {
     return [];
   }
   return [{ text, type: "PAST" }] as const;
+}
+
+function getPrefixArr(prefix: BreakdownType | undefined): BreakdownArray {
+  if (!prefix) {
+    return [];
+  } else if (prefix === "RECP") {
+    return [{ text: "te", type: "RECP" }];
+  } else if (prefix === "FUT") {
+    return [{ text: "ʌ", type: "FUT" }];
+  } else if (prefix === "IFUT") {
+    return [{ text: "a", type: "IFUT" }];
+  } else {
+    return [];
+  }
 }
