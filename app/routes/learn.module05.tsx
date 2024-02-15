@@ -29,6 +29,7 @@ import { TextBreakdown } from "~/components/TextBreakdown";
 import _ from "lodash";
 import iheyuData from "~/data/iheyu.json";
 import smallData from "~/data/module05/kʌʔ_ni-a";
+import { HeightWeightResource } from "~/components/resources/Weight";
 
 export const meta: MetaFunction = () => {
   return [
@@ -79,7 +80,7 @@ export default function LearnModule05() {
           value="negating-stative-verbs"
         />
 
-        <TOC.Item label="Weight" value="weight" />
+        <TOC.Item label="Height and Weight" value="height-weight" />
         <TOC.Item label="Stative Descriptions" value="stative-descriptions" />
       </TOC>
 
@@ -104,6 +105,8 @@ export default function LearnModule05() {
       <OtherStativeVerbs />
       <IrregularStativeVerbsSection />
       <NegatingStativeVerbsSection />
+
+      <HeightWeightResource level={2} />
     </Flex>
   );
 }
