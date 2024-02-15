@@ -68,13 +68,16 @@ export function TextBreakdown({
           );
         }
 
-        const wsPrefix = part.text.trimStart() !== part.text;
-        const wsSuffix = part.text.trimStart() !== part.text;
+        const text = Array.isArray(part) ? part[0] : part.text;
+        const type = Array.isArray(part) ? part[1] : part.type;
+
+        const hasLeadingWhitespace = text.trimStart() !== text;
+        const hasTrailingWhitespace = text.trimStart() !== text;
         return (
-          <InnerText key={i} type={part.type ?? typeFallback}>
-            {wsPrefix ? "&nbsp" : ""}
-            {part.text}
-            {wsSuffix ? "&nbsp" : ""}
+          <InnerText key={i} type={type ?? typeFallback}>
+            {hasLeadingWhitespace ? "&nbsp" : ""}
+            {text}
+            {hasTrailingWhitespace ? "&nbsp" : ""}
           </InnerText>
         );
       })}

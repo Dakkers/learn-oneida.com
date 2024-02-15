@@ -1,6 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
-import dataIsHere from "../data/data-ese-is-here.json";
 import dataWasHere from "../data/module04/was-here";
 import dataWillBeHere from "../data/module04/will-be-here";
 import dataMightBeHere from "../data/module04/might-be-here";
@@ -28,6 +27,8 @@ import {
 } from "~/data/module05";
 import { TextBreakdown } from "~/components/TextBreakdown";
 import _ from "lodash";
+import iheyuData from "~/data/iheyu.json";
+import smallData from "~/data/module05/kʌʔ_ni-a";
 
 export const meta: MetaFunction = () => {
   return [
@@ -67,6 +68,19 @@ export default function LearnModule05() {
         <TOC.Item label="Verbs — Body" value="verbs-body" />
         <TOC.Item label="Verbs — Physical" value="verbs-physical" />
         <TOC.Item label="Verbs — Misc" value="verbs-misc" />
+
+        <TOC.Item label="Other Stative Verbs" value="other-stative-verbs" />
+        <TOC.Item
+          label="Irregular Stative Verbs"
+          value="irregular-stative-verbs"
+        />
+        <TOC.Item
+          label="Negating Stative Verbs"
+          value="negating-stative-verbs"
+        />
+
+        <TOC.Item label="Weight" value="weight" />
+        <TOC.Item label="Stative Descriptions" value="stative-descriptions" />
       </TOC>
 
       <SectionHeading id="stative-verbs" level={2}>
@@ -76,6 +90,7 @@ export default function LearnModule05() {
       <SectionHeading id="how-stative-verbs-are-constructed" level={3}>
         How Stative Verbs Are Constructed
       </SectionHeading>
+      <Text>Not yet available.</Text>
 
       <StativeVerbExamples />
 
@@ -85,6 +100,10 @@ export default function LearnModule05() {
       <VerbSection data={bodyTenseData} title="Body" />
       <VerbSection data={physicalTenseData} title="Physical" />
       <VerbSection data={miscTenseData} title="Misc" />
+
+      <OtherStativeVerbs />
+      <IrregularStativeVerbsSection />
+      <NegatingStativeVerbsSection />
     </Flex>
   );
 }
@@ -427,6 +446,7 @@ const PAST_TENSE_ENDINGS = [
   "hne·",
   "hné·",
   "hné",
+  "hnéʔ",
   "ke",
   "kweʔ",
   "né·",
@@ -461,4 +481,265 @@ function createBreakdownHelper(stuff: string[], type: number) {
     }
   }
   return result;
+}
+
+function OtherStativeVerbs() {
+  const data = [
+    {
+      en: "bad / poor condition",
+      breakdown: [["w", "PR"], "ahétkʌʔ"],
+      breakdownPast: [["w", "PR"], "ahétkʌ́·", { text: "ne·", type: "PAST" }],
+    },
+
+    {
+      en: "be lonesome",
+      breakdown: [{ text: "yaw" }, "ʌtúnyaʔt"],
+      breakdownPast: [
+        { text: "yaw" },
+        "ʌtunyaʔt",
+        { text: "ú·ne", type: "PAST" },
+      ],
+    },
+
+    {
+      en: "depressing, sad, troubled",
+      breakdown: ["te", ["yo"], "ʔnikuhlyá·ku"],
+      breakdownPast: ["te", ["yo"], "ʔnikuhlyaʔk", ["ú·neʔ", "PAST"]],
+    },
+    {
+      en: "be pitiful",
+      breakdown: [["yo"], "tʌ·láht"],
+      breakdownPast: [["yo"], "tʌlat", ["hné·", "PAST"]],
+    },
+    {
+      en: "sad, low spirits",
+      breakdown: ["t", ["yo"], "ʔnikuhlʌ́·u"],
+      breakdownPast: ["t", ["yo"], "ʔnikuhlʌ", ["u·ne", "PAST"]],
+    },
+    {
+      en: "ashamed, embarrassed",
+      breakdown: [["yo"], "téhat"],
+      breakdownPast: [["yo"], "tehát", ["kwe", "PAST"]],
+    },
+    {
+      en: "straighten out, mediate",
+      breakdown: ["t", ["yo"], "lihwakwalíhsyu"],
+      breakdownPast: ["t", ["yo"], "lihwakwalihsyú", ["hneʔ", "PAST"]],
+    },
+    {
+      en: "it is good",
+      breakdown: [["yo"], "yánleʔ"],
+      breakdownPast: [["yo"], "yanlé", ["hkweʔ", "PAST"]],
+    },
+    {
+      en: "funny, be amusing",
+      breakdown: [["yo"], "ste·líst"],
+      breakdownPast: [["yo"], "stelist", ["ú·neʔ", "PAST"]],
+    },
+    {
+      en: "a cause for happiness",
+      breakdown: [["yo"], "tshanúnyaʔt"],
+      breakdownPast: [["yo"], "tshanunyá·t", ["a", "EP"], ["hkwe", "PAST"]],
+    },
+    {
+      en: "pleasant, enjoyable",
+      breakdown: [["ya"], "uʔwéskwaʔt"],
+      breakdownPast: [["ya"], "uʔweskwaʔt", ["ú·neʔ", "PAST"]],
+    },
+    {
+      en: "amusing, entertaining",
+      breakdown: [["yo"], "ʔnikuhlólyaʔt"],
+      breakdownPast: [["yo"], "ʔnikuhlolyá·t", ["a", "EP"], ["hkwe", "PAST"]],
+    },
+    {
+      en: "interesting, pull the mind",
+      breakdown: ["t", ["yo"], "ʔnikuhlati·lúteʔ"],
+      breakdownPast: ["t", ["yo"], "ʔnikuhlatilute", ["hkweʔ", "PAST"]],
+    },
+    {
+      en: "satisfying",
+      breakdown: ["t", ["yo"], "ʔnikuhliyó"],
+      breakdownPast: ["t", ["yo"], "ʔnikuhliyo", ["hné·", "PAST"]],
+    },
+    {
+      en: "amazing, surprising, awesome",
+      breakdown: [["yo"], "nehlákwaʔt"],
+      breakdownPast: [["yo"], "nehlakwa·t", ["á", "EP"], ["hkwe", "PAST"]],
+    },
+    {
+      en: "awful, mess(e.g.the weather)",
+      breakdown: ["te", ["yo"], "tanú·yanit"],
+      breakdownPast: [
+        "te",
+        ["yo"],
+        "tanuyani·t",
+        ["á", "EP"],
+        ["hkweʔ", "PAST"],
+      ],
+    },
+    {
+      en: "dangerous, hazardous",
+      breakdown: ["te", ["yo"], "telyʌ́·talu"],
+      breakdownPast: ["te", ["yo"], "telyatalu", ["hné·", "PAST"]],
+    },
+    {
+      en: "difficult",
+      breakdown: [["w", "PR"], "ʌto·lé·"],
+      breakdownPast: [["w", "PR"], "ʌtolé", ["hkweʔ", "PAST"]],
+    },
+    {
+      en: "disgraceful",
+      breakdown: [["yo"], "kʌ́·lat"],
+      breakdownPast: [["yo"], "kʌla·t", ["á", "EP"], ["hkweʔ", "PAST"]],
+    },
+    {
+      en: "maddening, upsetting",
+      breakdown: [["yo"], "naʔkúnyaʔt"],
+      breakdownPast: [["yo"], "naʔkunyaʔt", ["ú·neʔ", "PAST"]],
+    },
+    {
+      en: "poor",
+      breakdown: [["yo"], "·tʌ́t"],
+      breakdownPast: [["yo"], "·tʌht", ["ú·neʔ", "PAST"]],
+    },
+    {
+      en: "dead tired, weary, exhausted",
+      breakdown: ["teyohwishʌhe·yát"],
+      breakdownPast: ["teyohwishʌheyu·t", ["á", "EP"], ["hkweʔ", "PAST"]],
+    },
+    {
+      en: "bothersome",
+      breakdown: [["yo"], "yoʔta·tíheʔ"],
+      breakdownPast: [["yo"], "yoʔta·tihá", ["hkweʔ", "PAST"]],
+    },
+    {
+      en: "cheap, available, willing",
+      breakdown: [["w", "PR"], "atyesʌ́"],
+      breakdownPast: [["w", "PR"], "atyesʌ́", ["·neʔ", "PAST"]],
+    },
+    {
+      en: "probably, it seems",
+      breakdown: ["wé·ne"],
+      breakdownPast: ["we·né", ["hkweʔ", "PAST"]],
+    },
+  ];
+
+  return (
+    <>
+      <SectionHeading id="other-stative-verbs" level={2}>
+        Other Stative Verbs
+      </SectionHeading>
+      <TableWrapper
+        columns={[
+          TableWrapper.englishColumn,
+          TableWrapper.createTextBreakdownColumn("PB", { header: "It is..." }),
+          TableWrapper.createTextBreakdownColumn("PB", {
+            accessorKey: "breakdownPast",
+            header: "It used to be...",
+          }),
+        ]}
+        data={data}
+      />
+    </>
+  );
+}
+
+function IrregularStativeVerbsSection() {
+  return (
+    <>
+      <SectionHeading id="irregular-stative-verbs" level={2}>
+        Irregular Stative Verbs
+      </SectionHeading>
+      <SectionHeading id="irregular-died" level={2}>
+        -iheyu-
+      </SectionHeading>
+      <ParadigmTable data={iheyuData} />
+      <SectionHeading id="irregular-small" level={2}>
+        -kʌ- ni-a
+      </SectionHeading>
+      <ParadigmTable data={smallData} />
+    </>
+  );
+}
+
+function NegatingStativeVerbsSection() {
+  const data = [
+    [
+      {
+        on: ["wak", "atshanuní"],
+        en: "I am happy",
+      },
+      {
+        on: ["yah teʔ", "wak", "atshanuní"],
+        en: "I am not happy",
+      },
+    ],
+    [
+      {
+        on: ["wak", "atshanuni·", "hné·"],
+        en: "I was happy",
+      },
+      {
+        on: ["yah teʔ", "wak", "atshanuni·", "hné·"],
+        en: "I was not happy",
+      },
+    ],
+    [
+      {
+        on: ["ʌ", "wak", "atshanuní", "hakeʔ"],
+        en: "I will be happy",
+      },
+      {
+        on: ["yah th", "a", "·ukw", "atshanuní", "hakeʔ"],
+        en: "I would not be happy",
+      },
+    ],
+    [
+      {
+        on: ["a", "·ukw", "atshanuní", "hakeʔ"],
+        en: "I would be happy",
+      },
+      {
+        on: ["yah th", "a", "·ukw", "atshanuní", "hakeʔ"],
+        en: "I would not be happy",
+      },
+    ],
+    [
+      {
+        on: ["s", "atshanuní", "hak"],
+        en: "You be happy!",
+      },
+      {
+        on: ["Tákʌʔ ", "ʌ", "s", "atshanuní", "hak"],
+        en: "Don't you be happy!",
+      },
+    ],
+  ];
+
+  return (
+    <>
+      <SectionHeading id="negating-stative-verbs" level={2}>
+        Negating Stative Verbs
+      </SectionHeading>
+
+      <TableWrapper
+        columns={[
+          {
+            accessorKey: "left",
+            cell: (value) => <TheCell typeFallback="PB" value={value} />,
+            header: "",
+          },
+          {
+            accessorKey: "right",
+            cell: (value) => <TheCell typeFallback="PB" value={value} />,
+            header: "",
+          },
+        ]}
+        data={data.map(([left, right]) => ({
+          left: createBreakdown(left, 0),
+          right: createBreakdown(right, 1),
+        }))}
+      />
+    </>
+  );
 }
