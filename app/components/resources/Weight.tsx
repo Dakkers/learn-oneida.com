@@ -58,7 +58,7 @@ const dataExamples = [
     "Tékni tewʌʔnyáwelu nikakú·tslakeʔ niwakyaʔtákstehkwe̲ʔ",
   ],
   [
-    "Who weighs more ? You or John?",
+    "Who weighs more? You or John?",
     ["Úhkaʔ náhteʔ sʌ́haʔ yakoyaʔtáksteʔ", "Isé· kʌ́ katʌ́ Sawátis"],
   ],
   [

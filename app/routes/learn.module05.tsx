@@ -30,6 +30,8 @@ import _ from "lodash";
 import iheyuData from "~/data/iheyu.json";
 import smallData from "~/data/module05/kʌʔ_ni-a";
 import { HeightWeightResource } from "~/components/resources/Weight";
+import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
+import { ParticlesTable } from "~/components/resources/ParticlesTable";
 
 export const meta: MetaFunction = () => {
   return [
@@ -82,6 +84,9 @@ export default function LearnModule05() {
 
         <TOC.Item label="Height and Weight" value="height-weight" />
         <TOC.Item label="Stative Descriptions" value="stative-descriptions" />
+
+        <TOC.Item label="Particles" value="particles" />
+        <TOC.Item label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <SectionHeading id="stative-verbs" level={2}>
@@ -107,6 +112,11 @@ export default function LearnModule05() {
       <NegatingStativeVerbsSection />
 
       <HeightWeightResource level={2} />
+      <SectionHeading id="particles" level={2}>
+        Particles
+      </SectionHeading>
+      <ParticlesTable group="module05" />
+      <TranslationExercisesSection group="module05" />
     </Flex>
   );
 }

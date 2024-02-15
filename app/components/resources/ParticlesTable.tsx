@@ -4,7 +4,12 @@ import React from "react";
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
 
-type ParticlesGroup = "module01" | "module02" | "module03" | "module04";
+type ParticlesGroup =
+  | "module01"
+  | "module02"
+  | "module03"
+  | "module04"
+  | "module05";
 
 interface ParticlesTableProps {
   group?: ParticlesGroup;
@@ -15,6 +20,7 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
     () => [
       {
         accessorKey: "oneida",
+        cell: TableWrapper.textArrayCellBold,
         header: "Oneida",
       },
       {
@@ -153,8 +159,21 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "how_many_of_them_males",
         "how_many_of_them_females",
       ],
+      module05: [
+        "why",
+        "because",
+        "forever",
+        "long_time",
+        "such_a_long_time",
+        "short_length_of_time",
+        "how_long_of_a_time",
+        "ago",
+        "until",
+        "sometimes",
+        "in_a_while",
+      ],
     };
-    return particleList.filter((p) => mapping[group].includes(p.key));
+    return mapping[group].map((key) => particleList.find((p) => p.key === key));
   }, [group]);
 
   return <TableWrapper columns={columns} data={data} />;

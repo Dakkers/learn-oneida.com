@@ -91,27 +91,27 @@ const englishToOneidaModule02 = [
 ];
 
 const oneidaToEnglishModule03 = [
-  ["1", "Lotikhsá·tayʌ’ kʌ́ né· akwekú sheyo’okúha̲"],
-  ["2", "Sukwé·tayʌ’ kʌ́́ ukha ok yesanolukhwa’"],
-  ["3", "Yah só·tsi’ tehlukwe’tiyó né·n etshuhwatʌ́ha̲"],
-  ["4", "Úhka’ náhte’ sninyakú"],
-  ["5", "Tekniyáhse kʌ yakokhsá·tayʌ’ né· shekhstʌ́ha yutate’kʌ́ha̲"],
-  ["6", "Né· kʌ́ thikʌ́ lanikʌhtlúha né·n Wá·li akonikʌhtlú·tsli’"],
-  ["7", "Tó· náhe’ onʌ tsha’tehonatekháhsyu né·n Só·s luwayʌ́ha̲"],
-  ["8", "Yáh tha’tehyatatnú·wehse’ nok tsi’ shekú ihnehse"],
+  ["1", "Lotikhsá·tayʌʔ kʌ́ né· akwekú sheyoʔokúha̲"],
+  ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwaʔ"],
+  ["3", "Yah só·tsiʔ tehlukweʔtiyó né·n etshuhwatʌ́ha̲"],
+  ["4", "Úhkaʔ náhteʔ sninyakú"],
+  ["5", "Tekniyáhse kʌ yakokhsá·tayʌʔ né· shekhstʌ́ha yutateʔkʌ́ha̲"],
+  ["6", "Né· kʌ́ thikʌ́ lanikʌhtlúha né·n Wá·li akonikʌhtlú·tsliʔ"],
+  ["7", "Tó· náheʔ onʌ tshaʔtehonatekháhsyu né·n Só·s luwayʌ́ha̲"],
+  ["8", "Yáh thaʔtehyatatnú·wehseʔ nok tsiʔ shekú ihnehse"],
   ["9", "Skayá·tat tá·thuní tekniyáhse síksik yakonáskwayʌ"],
-  ["10", "Shekú yutatwʌni·yó· né· aolíwa’ tsi’ yáh te’yakukwe’tiyó"],
-  ["11", "Yáh úhka’ náhte’ tehonanúhte’ tsi’ Onuta’keha·ká· nisuhutsyó·tʌ’"],
+  ["10", "Shekú yutatwʌni·yó· né· aolíwaʔ tsiʔ yáh teʔyakukweʔtiyó"],
+  ["11", "Yáh úhkaʔ náhteʔ tehonanúhteʔ tsiʔ Onutaʔkeha·ká· nisuhutsyó·tʌʔ"],
   ["12", "Tehnitsyalú kʌ́ lotikwáho né·n yesayʌ́ha"],
-  ["13", "Kutikwekú kʌ́ kutatwʌni·yó· né· kutiya’tase’shúha̲"],
+  ["13", "Kutikwekú kʌ́ kutatwʌni·yó· né· kutiyaʔtaseʔshúha̲"],
   [
     "14",
-    "Yáh úhka’ náhte’ sʌ́ha’ luwanolukhwa thikʌ́ lanikʌhtlúha tsi’ ni·yót ni’í·",
+    "Yáh úhkaʔ náhteʔ sʌ́haʔ luwanolukhwa thikʌ́ lanikʌhtlúha tsiʔ ni·yót niʔí·",
   ],
-  ["15", "Sʌ́ha’ wahu·níse’ yuknináskwayʌ’ tsi’ ni·yót yuknikhsá·tayʌ’"],
-  ["16", "E·so kʌ́ hyanolúkhwa’ né· etshekstʌ́há"],
-  ["17", "Akwekú luwatinú·wehse’ né· lotinyáhtʌ"],
-  ["18", "Akwekú lotikhsá·tayʌ’ né· ukwatʌló·shuha, yáh ni’isé·"],
+  ["15", "Sʌ́haʔ wahu·níseʔ yuknináskwayʌʔ tsiʔ ni·yót yuknikhsá·tayʌʔ"],
+  ["16", "E·so kʌ́ hyanolúkhwaʔ né· etshekstʌ́há"],
+  ["17", "Akwekú luwatinú·wehseʔ né· lotinyáhtʌ"],
+  ["18", "Akwekú lotikhsá·tayʌʔ né· ukwatʌló·shuha, yáh niʔisé·"],
 ];
 
 const englishToOneidaModule03 = [
@@ -148,7 +148,40 @@ const englishToOneidaModule03 = [
   ["40", "My nephew is a rotten kid but I don't hate him."],
 ];
 
-type Group = "module01" | "module02" | "module03";
+const oneidaToEnglishModule05 = [
+  ["1", "Teyukwaʔnikú·lhaleʔ né· tsiʔ shekú yáh teʔyakoyé·ʔu"],
+  ["2", "Sʌ́haʔ aukyeshúhakeʔ tá·t a·ukwatlaʔswiyóhakeʔ"],
+  ["3", "Yáh teʔyohste·líst tsiʔ nihoti·wʌ́"],
+  ["4", "Yáh tewakatshanuní tá·t yáh teʔsatekhu·niheʔ"],
+  ["5", "Yonaʔkunyáht né· tsiʔ oʔslu·ní· ok tho thotiyo·té·"],
+  ["6", "Yakonyaʔtáthʌs ne tsiʔ só·tsiʔ wahu·níseʔ yakóthaleʔ"],
+  ["7", "E·só· sʌ́haʔ yakoyaʔtákstehkweʔ tsí ni·yóht kheʔkʌ·ha̲"],
+  ["8", "Yakoslʌ́htalahse né· tsiʔ yutuhkályaʔks"],
+  ["9", "Loʔnikuhlowanʌ́ nok tsiʔ ostúha tehanahalawʌ́lyeheʔ"],
+  ["10", "Yáh teʔwakatshanú·ni né·tsiʔ nihʌnʌtó·le̲ʔ"],
+  ["11", "Yakotsiʔyóha kháleʔ yáh teʔ yakotaʔkalité·"],
+  ["12", "Yáh kʌ́ teʔsanehlákwas tsiʔ tehonatekháshyu"],
+  ["13", "Lotiʔnikuhlákhsʌseʔ né·n Kwi·tel luwayʌ́ha né· tsiʔ yáh tehonyakú̲"],
+];
+const englishToOneidaModule05 = [
+  ["1", "It's better to be rich than poor."],
+  ["2", "Are you angry because you are short?"],
+  ["3", "He always used to be drunk when he was single."],
+  ["4", "They aren't working because they are too lazy."],
+  ["5", "I would be happier if she was still alive."],
+  ["6", "He's always tired because he's too heavy."],
+  ["7", "It's surprising that none of them are ready."],
+  ["8", "He's depressed because he is always sick."],
+  ["9", "It's surprising how tall you are."],
+  ["10", "They (females) are shy but they are not lonely."],
+  ["11", "It's tiring for me to be waiting all day."],
+  [
+    "12",
+    "He used to have the same kind of body as Brad Pitt when he was young.",
+  ],
+];
+
+type Group = "module01" | "module02" | "module03" | "module05";
 
 function TranslationExerciseTable({
   data,
@@ -185,12 +218,15 @@ export function TranslationExercises({ group }: { group?: Group }) {
         ...englishToOneidaModule02,
         ...oneidaToEnglishModule03,
         ...englishToOneidaModule03,
+        ...oneidaToEnglishModule05,
+        ...englishToOneidaModule05,
       ].map((value, index) => [(index + 1).toString(), value[1]]);
     }
     const mapping: Record<Group, string[][]> = {
       module01: [...oneidaToEnglishModule01, ...englishToOneidaModule01],
       module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
       module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
+      module05: [...oneidaToEnglishModule05, ...englishToOneidaModule05],
     };
     return mapping[group];
   }, [group]);

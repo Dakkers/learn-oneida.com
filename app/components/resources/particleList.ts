@@ -1151,5 +1151,68 @@ export const particleList = [
       },
     ],
   },
+
+  {
+    key: "why",
+    oneida: "náhteʔ aolí·waʔ (tsiʔ)",
+    en: "why?",
+    examples: [],
+  },
+
+  {
+    key: "forever",
+    oneida: "(kwah) tsi nyʌhʌ́·weʔ",
+    en: "forever",
+    examples: [],
+  },
+
+  {
+    key: "long_time",
+    oneida: "wahu·níseʔ",
+    en: "a long time",
+    examples: [],
+  },
+
+  {
+    key: "such_a_long_time",
+    oneida: "tsiʔ niwahu·níseʔ",
+    en: "it was such a long time",
+    examples: [],
+  },
+
+  {
+    key: "how_long_of_a_time",
+    oneida: "tó· náheʔ",
+    en: "How long of a time?",
+    examples: [],
+  },
+
+  {
+    key: "long_time_ago",
+    oneida: "wahuniseʔkʌ́",
+    en: "a long time ago",
+    examples: [],
+  },
+
+  {
+    key: "ago",
+    oneida: "tsiʔ náheʔ",
+    en: "ago",
+    examples: [],
+  },
+
+  {
+    key: "sometimes",
+    oneida: "swatyelʌ́",
+    en: "sometimes",
+    examples: [],
+  },
+
+  {
+    key: "in_a_while",
+    oneida: "atsyók",
+    en: "in a while, after a while",
+    examples: [],
+  },
   // PLOP:ADD_PARTICLE
 ];
