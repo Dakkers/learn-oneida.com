@@ -108,7 +108,7 @@ export const DATA_PLACES_IN_COMMUNITY: Array<{
   { key: "school", en: "at the school", on: "tsiʔ tyutatlihunyʌní·thaʔ" },
   { key: "store", en: "at the store", on: "tsiʔ tyutʌhní·nuheʔ" },
   { key: "town", en: "in town", on: "kanatá·ke" },
-]
+];
 
 export function PlacesInTheCommunityResource({ level = 1 }) {
   return (

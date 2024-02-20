@@ -3,21 +3,7 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
 import { DATA_MONTHS } from "~/components/resources/Months";
-import {
-  AxeIcon,
-  BeanIcon,
-  CandyCaneIcon,
-  CloudRainIcon,
-  DrumstickIcon,
-  Flower2Icon,
-  HeartIcon,
-  LeafIcon,
-  Snowflake,
-  SunIcon,
-  Wand2Icon,
-  WheatIcon,
-} from "lucide-react";
-import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
+import { QuizPage } from "~/components/practice/QuizPage";
 
 export const meta: MetaFunction = () => {
   return [
@@ -36,36 +22,7 @@ export default function PracticeMonths() {
         Months
       </Heading>
 
-      <MatchingGamePage
-        data={DATA_MONTHS}
-        getIcon={(key) =>
-          key === "jan"
-            ? Snowflake
-            : key === "feb"
-            ? HeartIcon
-            : key === "mar"
-            ? AxeIcon
-            : key === "apr"
-            ? CloudRainIcon
-            : key === "may"
-            ? Flower2Icon
-            : key === "jun"
-            ? SunIcon
-            : key === "jul"
-            ? BeanIcon
-            : key === "aug"
-            ? WheatIcon
-            : key === "sep"
-            ? LeafIcon
-            : key === "oct"
-            ? Wand2Icon
-            : key === "nov"
-            ? DrumstickIcon
-            : key === "dec"
-            ? CandyCaneIcon
-            : undefined
-        }
-      />
+      <QuizPage data={DATA_MONTHS} />
     </Flex>
   );
 }

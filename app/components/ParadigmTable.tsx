@@ -91,7 +91,8 @@ export function ParadigmTable({
       if (!!phraseObj) {
         if (
           !value ||
-          sanitizeIrregularCharacters(value) !== sanitizeIrregularCharacters(phraseObj.phrase)
+          sanitizeIrregularCharacters(value) !==
+            sanitizeIrregularCharacters(phraseObj.phrase)
         ) {
           hasErrors = true;
           form.setError(key, {
