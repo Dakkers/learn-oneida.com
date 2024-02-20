@@ -2,52 +2,26 @@ import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
-import { DATA_SEASONS } from "~/components/resources/Seasons";
-import { Flower2Icon, LeafIcon, SnowflakeIcon, SunIcon } from "lucide-react";
-import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
-
-import BallParkImg from "../../public/images/places/ball_park.jpg";
-import BankImg from "../../public/images/places/bank.jpg";
-import BarImg from "../../public/images/places/bar.jpg";
-import BridgeImg from "../../public/images/places/bridge.jpg";
-import CasinoImg from "../../public/images/places/casino.jpg";
-import CarRepairImg from "../../public/images/places/car_repair.jpg";
-import CarWashImg from "../../public/images/places/car_wash.jpg";
-import CemeteryImg from "../../public/images/places/cemetery.jpg";
-import ChurchImg from "../../public/images/places/church.jpg";
-import DentistImg from "../../public/images/places/dentist.jpg";
-import DoctorImg from "../../public/images/places/doctor.jpg";
-import DumpImg from "../../public/images/places/dump.jpg";
-import FairgroundsImg from "../../public/images/places/fairground.jpg";
-import FireStationImg from "../../public/images/places/fire_station.jpg";
-import FitnessCentreImg from "../../public/images/places/gym.jpg";
-import GasStationImg from "../../public/images/places/gas_station.jpg";
-import HospitalImg from "../../public/images/places/hospital.jpg";
-import HotelImg from "../../public/images/places/hotel.jpg";
-import JailImg from "../../public/images/places/jail.jpg";
-import LibraryImg from "../../public/images/places/library.jpg";
-import MallImg from "../../public/images/places/mall.jpg";
-import MovieTheatreImg from "../../public/images/places/movie_theater.jpg";
-import PlaygroundImg from "../../public/images/places/playground.jpg";
-import PoliceStationImg from "../../public/images/places/police_station.jpg";
-import PostOfficeImg from "../../public/images/places/post_office.jpg";
-import RestaurantImg from "../../public/images/places/restaurant.jpg";
-import SchoolImg from "../../public/images/places/school.jpg";
-import StoreImg from "../../public/images/places/store.jpg";
-import TownImg from "../../public/images/places/town.jpg";
 import { Button } from "@/design/primitives/button";
 import { Box } from "@/design/components/box";
 import _ from "lodash";
-import { Notice } from "@/design/components/notice";
-import { arrayify } from "~/utils";
 import { DATA_PLACES_IN_COMMUNITY } from "~/components/resources/PlacesInTheCommunity";
+import { RadioGroup } from "@/design/components/RadioGroup";
+import { Select } from "@/design/components/select";
+import { Text } from "@/design/components/text";
+import { cn } from "@/lib/utils";
+import { arrayify } from "~/utils";
+import { TableWrapper } from "@/design/components/tableWrapper";
+import { Input } from "@/design/primitives/input";
+import { sanitizeIrregularCharacters } from "~/utils/words";
+import { CheckCircle2Icon, XCircleIcon } from "lucide-react";
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Places in the community" },
     {
       name: "description",
-      content: "Pick the right Oneida word for the given picture.",
+      content: "Quiz your Oneida knowledge by picking the right translation!",
     },
   ];
 };
@@ -66,67 +40,284 @@ const DATA = DATA_PLACES_IN_COMMUNITY.filter(
     ].includes(datum.key)
 );
 
-const IMAGE_MAP = {
-  ball_park: BallParkImg,
-  bank: BankImg,
-  bar: BarImg,
-  bridge: BridgeImg,
-  casino: CasinoImg,
-  car_repair: CarRepairImg,
-  car_wash: CarWashImg,
-  cemetery: CemeteryImg,
-  church: ChurchImg,
-  dentist: DentistImg,
-  doctor: DoctorImg,
-  dump: DumpImg,
-  fairgrounds: FairgroundsImg,
-  fire_station: FireStationImg,
-  fitness_centre: FitnessCentreImg,
-  gas_station: GasStationImg,
-  hospital: HospitalImg,
-  hotel: HotelImg,
-  jail: JailImg,
-  library: LibraryImg,
-  mall: MallImg,
-  movie_theatre: MovieTheatreImg,
-  playground: PlaygroundImg,
-  police_station: PoliceStationImg,
-  post_office: PostOfficeImg,
-  restaurant: RestaurantImg,
-  school: SchoolImg,
-  store: StoreImg,
-  town: TownImg,
-};
+interface Item {
+  en: string;
+  key: string;
+  on: string | string[];
+}
 
 export default function PracticePlaces() {
-  const [hasStarted, setHasStarted] = React.useState(false);
-
   return (
     <Flex direction="column" gap={4}>
       <Heading level={1} variant="headlineL">
         Places in the community
       </Heading>
 
-      {hasStarted ? (
-        <TheGame onFinish={() => setHasStarted(false)} />
-      ) : (
-        <Box>
-          <Button onClick={() => setHasStarted(true)}>Start</Button>
-        </Box>
-      )}
+      <QuizContainer />
     </Flex>
   );
 }
 
-function TheGame({ onFinish }) {
-  const items = React.useMemo(() => _.shuffle(DATA).slice(0, 10), []);
+interface QuizContainerContextProps {
+  languageSetting: string;
+  answerSetting: string;
+  questionCountSetting: string;
+  setLanguageSetting: (value: string) => void;
+  setAnswerSetting: (value: string) => void;
+  setQuestionCountSetting: (value: string) => void;
+}
+
+const QuizContainerContext =
+  React.createContext<QuizContainerContextProps | null>(null);
+
+function QuizContainer() {
+  const [hasStarted, setHasStarted] = React.useState(false);
+  const [languageSetting, setLanguageSetting] = React.useState("both");
+  const [answerSetting, setAnswerSetting] = React.useState("multipleChoice");
+  const [questionCountSetting, setQuestionCountSetting] = React.useState("5");
+
+  return (
+    <QuizContainerContext.Provider
+      value={{
+        languageSetting,
+        answerSetting,
+        questionCountSetting,
+        setLanguageSetting,
+        setAnswerSetting,
+        setQuestionCountSetting,
+      }}
+    >
+
+      {hasStarted ? (
+        <TheGameVersion2 onReset={() => setHasStarted(false)} />
+      ) : (
+        <Flex direction="column" gap={4}>
+          <Settings />
+
+          <Box><Button onClick={() => setHasStarted(true)}>Start</Button></Box>
+        </Flex>
+      )}
+    </QuizContainerContext.Provider>
+  );
+}
+
+function Settings() {
+  const context = React.useContext(QuizContainerContext);
+  if (!context) {
+    throw new Error('Missing QuizContainerContext.')
+  }
+
+  return (
+    <Flex align="start" gap={8}>
+      <RadioGroup
+        label="Translate"
+        onChange={context.setLanguageSetting}
+        value={context.languageSetting}
+      >
+        <RadioGroup.Option value="en">English to Oneida</RadioGroup.Option>
+        <RadioGroup.Option value="on">Oneida to English</RadioGroup.Option>
+        <RadioGroup.Option value="both">Both</RadioGroup.Option>
+      </RadioGroup>
+
+      <RadioGroup
+        label="Answer with"
+        onChange={context.setAnswerSetting}
+        value={context.answerSetting}
+      >
+        <RadioGroup.Option value="multipleChoice">
+          Multiple choice
+        </RadioGroup.Option>
+        <RadioGroup.Option value="text">Text</RadioGroup.Option>
+      </RadioGroup>
+
+      <Select
+        label="Number of questions"
+        onChange={context.setQuestionCountSetting}
+        options={[1, 2, 5, 10, 20]
+          .map((value) => value.toString())
+          .map((value) => ({ label: value, value }))}
+        value={context.questionCountSetting}
+      />
+    </Flex>
+  );
+}
+
+interface Result {
+  question: string | string[];
+  answer: {
+    correctAnswer: string;
+    isCorrect: boolean;
+    selectedAnswer: string;
+  }
+}
+
+function TheGameVersion2({ onReset }: { onReset: () => void }) {
+  const context = React.useContext(QuizContainerContext);
+  if (!context) {
+    throw new Error('Missing QuizContainerContext.')
+  }
+  const [results, setResults] = React.useState<Result[]>([]);
+
+  return results.length ? (
+    <ResultsScreen results={results} onReset={onReset} />
+  ) : (
+      <PromptsScreen onFinish={(results) => setResults(results)} />
+  );
+}
+
+function PromptsScreen ({
+  onFinish
+}: {
+  onFinish: (results: Result[]) => void
+}) {
+  const context = React.useContext(QuizContainerContext);
+  if (!context) {
+    throw new Error('Missing QuizContainerContext.')
+  }
+  const numItems = Number(context.questionCountSetting);
+  const items = React.useMemo(() => _.shuffle(DATA).slice(0, numItems), [numItems]);
   const [index, setIndex] = React.useState(0);
-  const [selectedItem, setSelectedItem] = React.useState(null);
+  const [results, setResults] = React.useState < Result[]>([]);
+  const [langKeyToUse, setLangKeyToUse] = React.useState(
+    determineLangKey(context.languageSetting)
+  );
   const currentItem = items[index];
-  const isCorrect = selectedItem?.key === currentItem.key;
-  const isFinalItem = index === 9;
+  const isFinalItem = index === numItems - 1;
+
+  const clickNextMultipleChoice = (answerKey: string) => {
+    const selectedAnswer = DATA.find((item) => item.key === answerKey);
+    const newResults = [
+      ...results,
+      {
+        question: getFirstElement(currentItem[langKeyToUse]),
+        answer: {
+          correctAnswer: getFirstElement(currentItem[getOppositeLangKey(langKeyToUse)]),
+          isCorrect: currentItem.key === answerKey,
+          selectedAnswer: getFirstElement(selectedAnswer?.[getOppositeLangKey(langKeyToUse)]),
+        }
+      }
+    ]
+    setResults(newResults)
+    clickNext(newResults);
+  }
+
+  const clickNextTextAnswer = (answer: string, isCorrect: boolean) => {
+    const newResults = [
+      ...results,
+      {
+        question: currentItem[langKeyToUse],
+        answer: {
+          correctAnswer: getFirstElement(currentItem[getOppositeLangKey(langKeyToUse)]),
+          isCorrect: isCorrect,
+          selectedAnswer: answer,
+        }
+      }
+    ]
+    setResults(newResults)
+    clickNext(newResults);
+  }
+
+  const clickNext = (newResults: Result[]) => {
+    if (isFinalItem) {
+      onFinish(newResults);
+    } else {
+      setLangKeyToUse(determineLangKey(context.languageSetting));
+      setIndex(index + 1);
+    }
+  }
+
+  return (
+    <Flex align='center' direction="column" gap={8}>
+      <Text variant="headlineS">{getFirstElement(currentItem[langKeyToUse])}</Text>
+
+      <div className="w-[600px]">
+        <Flex align="center" direction="column" gap={4}>
+          {context?.answerSetting === "multipleChoice" ? (
+          <MultipleChoiceOptions
+            currentItem={currentItem}
+            isFinalItem={isFinalItem}
+            langKey={langKeyToUse}
+              onNext={clickNextMultipleChoice}
+          />
+        ) : (
+              <TextAnswer
+                currentItem={currentItem}
+                isFinalItem={isFinalItem}
+                langKey={langKeyToUse}
+            onNext={clickNextTextAnswer}
+          />
+        )}
+    </Flex>
+      </div>
+    </Flex>
+  )
+}
+
+function ResultsScreen ({
+  onReset,
+  results
+}: {
+  onReset: () => void
+  results: Result[];
+}) {
+  const numCorrect = results.filter((result) => result.answer.isCorrect).length;
+
+  return (
+    <Flex direction="column" gap={2}>
+      <Text>You answered <b>{numCorrect}</b> out of {results.length} questions correctly.</Text>
+
+      <TableWrapper
+        columns={[
+          { accessorKey: 'question', header: 'Question' },
+          {
+            accessorKey: 'answer',
+            cell: (value: Result['answer']) => (
+              <Flex align="center" gap={4}>
+                {value.isCorrect ? (
+                  <>
+                    <CheckCircle2Icon color='green' />
+                    <Text as='span' intent='positive'><b>{value.selectedAnswer}</b></Text>
+                  </>
+                ) : (
+                  <>
+                      <XCircleIcon color='red' />
+                      <Flex direction="column" gap={2}>
+                        <Text>Correct answer: <b>{value.correctAnswer}</b></Text>
+                        <Text>Your answer: <Text as='span' intent='negative'><b>{value.selectedAnswer}</b></Text></Text>
+                      </Flex>
+                  </>
+                )}
+              </Flex>
+            ),
+            header: 'Answer'
+          },
+        ]}
+        data={results}
+      />
+
+      <Box>
+        <Button onClick={onReset}>Go back</Button>
+      </Box>
+    </Flex>
+  )
+}
+
+function MultipleChoiceOptions({ currentItem, isFinalItem, langKey, onNext }: {
+  currentItem: Item;
+  isFinalItem: boolean;
+  langKey: 'on' | 'en'
+  onNext: (key: string) => void;
+}) {
+  const [selectedItemKey, setSelectedItemKey] = React.useState<string>('');
+  const hasSelected = !!selectedItemKey;
+  const isCorrect = selectedItemKey === currentItem.key;
+
   const thingsToShow = React.useMemo(() => {
-    const result = [DATA.find((d) => d.key === currentItem.key)];
+    const result = [];
+    const currentItemDatum = DATA.find((d) => d.key === currentItem.key);
+    if (currentItemDatum) {
+      result.push(currentItemDatum);
+    }
     for (const item of _.shuffle(DATA)) {
       if (item.key !== currentItem.key) {
         result.push(item);
@@ -137,63 +328,92 @@ function TheGame({ onFinish }) {
     }
     return _.shuffle(result);
   }, [currentItem]);
-  const clickNext = React.useCallback(() => {
-    if (isFinalItem) {
-      onFinish();
-    } else {
-      setSelectedItem(null);
-      setIndex(index + 1);
-    }
-  }, [index, isFinalItem, onFinish]);
+
+  const oppositeLangKey = getOppositeLangKey(langKey);
+
+  const onClick = (key: string) => {
+    setSelectedItemKey(key);
+  }
 
   return (
-    <Flex direction="column" gap={8}>
-      <Flex align="center" gap={8}>
-        <img
-          src={IMAGE_MAP[currentItem.key]}
-          alt={currentItem.en}
-          style={{
-            height: 600,
-            width: 1000,
-          }}
-        />
-        <Flex direction="column" gap={2}>
-          {thingsToShow.map((item) => (
-            <Button
-              disabled={!!selectedItem}
-              key={item.key}
-              onClick={() => setSelectedItem(item)}
-            >
-              {arrayify(item.on)[0]}
-            </Button>
-          ))}
-        </Flex>
-      </Flex>
-
-      {!!selectedItem && (
-        <Flex align="center" gap={8}>
-          <div
-            style={{
-              width: 1000,
-            }}
+    <>
+      <div className="grid gap-2 grid-cols-2">
+        {thingsToShow.map((item) => (
+          <button
+            className={cn(
+              "rounded border border-solid border-slate-500 p-2",
+              item.key === currentItem.key && !isCorrect && hasSelected && "bg-green-400 text-white",
+              item.key === selectedItemKey && isCorrect && "bg-green-700 text-white",
+              item.key === selectedItemKey && !isCorrect && "bg-red-700 text-white",
+            )}
+            disabled={hasSelected}
+            key={item.key}
+            onClick={() => onClick(item.key)}
           >
-            <Notice intent={isCorrect ? "positive" : "negative"}>
-              {isCorrect ? (
-                <>
-                  Correct! You selected <b>{arrayify(currentItem.on)[0]}</b>
-                </>
-              ) : (
-                <>
-                  Incorrect ☹️ The correct answer is{" "}
-                  <b>{arrayify(currentItem.on)[0]}</b>
-                </>
-              )}
-            </Notice>
-          </div>
+            {getFirstElement(item[oppositeLangKey])}
+          </button>
+        ))}
+      </div>
 
-          <Button onClick={clickNext}>{isFinalItem ? "Exit" : "Next"}</Button>
-        </Flex>
+      {hasSelected && (
+        <Button onClick={() => {
+          onNext(selectedItemKey);
+          setSelectedItemKey('');
+        }}>
+          {isFinalItem ? 'Finish' : 'Next'}
+        </Button>
       )}
-    </Flex>
+    </>
   );
+}
+
+function TextAnswer ({
+  currentItem,
+  langKey,
+  onNext,
+}: {
+  currentItem: Item;
+  isFinalItem: boolean;
+  langKey: 'on' | 'en'
+  onNext: (value: string, isCorrect: boolean) => void;
+}) {
+  const [value, setValue] = React.useState('')
+  const [hasSubmitted, setHasSubmitted] = React.useState(false);
+
+  return (
+    <>
+      <Flex gap={2}>
+        <Flex.Item grow={1}>
+          <Input disabled={hasSubmitted} onChange={e => setValue(e.target.value)} value={value} />
+        </Flex.Item>
+        <Flex.Item>
+          <Button
+          disabled={hasSubmitted}
+            onClick={() => {
+              const answer = getFirstElement(currentItem[getOppositeLangKey(langKey)]);
+              const isCorrect = sanitizeIrregularCharacters(answer) === sanitizeIrregularCharacters(value);
+              onNext(value, isCorrect);
+              setValue('');
+              setHasSubmitted(false);
+          }}
+          >Submit</Button>
+        </Flex.Item>
+      </Flex>
+    </>
+  );
+}
+
+function determineLangKey(languageSetting: string): "en" | "on" {
+  if (languageSetting === "en" || languageSetting === "on") {
+    return languageSetting;
+  }
+  return Math.random() < 0.5 ? "en" : "on";
+}
+
+function getOppositeLangKey(value: string): 'en' | 'on' {
+  return value === "en" ? "on" : "en"
+}
+
+function getFirstElement (value: undefined | string | string[]) {
+  return arrayify(value)[0];
 }

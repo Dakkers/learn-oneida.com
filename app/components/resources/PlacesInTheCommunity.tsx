@@ -2,7 +2,11 @@ import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { SectionHeading } from "../SectionHeading";
 
-export const DATA_PLACES_IN_COMMUNITY = [
+export const DATA_PLACES_IN_COMMUNITY: Array<{
+  key: string;
+  en: string;
+  on: string | string[];
+}> = [
   { key: "ball_park", en: "at the ball park", on: "tsiʔ tehuttsihkwaʔéktaʔ" },
   {
     key: "band_office",
@@ -62,7 +66,7 @@ export const DATA_PLACES_IN_COMMUNITY = [
     en: "at the health centre",
     on: "tsiʔ thuwatitsyʌtákhwa",
   },
-  { key: "hospital", en: "at the hospital", on: "tsiʔ te yutate shnyé·thaʔ" },
+  { key: "hospital", en: "at the hospital", on: "tsiʔ teyutateshnyé·thaʔ" },
   { key: "hotel", en: "at the hotel", on: "tsiʔ teyetástaʔ" },
   { key: "jail", en: "at the jail", on: "tsiʔ tyutatenhotú·khwaʔ" },
   {
@@ -104,7 +108,7 @@ export const DATA_PLACES_IN_COMMUNITY = [
   { key: "school", en: "at the school", on: "tsiʔ tyutatlihunyʌní·thaʔ" },
   { key: "store", en: "at the store", on: "tsiʔ tyutʌhní·nuheʔ" },
   { key: "town", en: "in town", on: "kanatá·ke" },
-] as const;
+]
 
 export function PlacesInTheCommunityResource({ level = 1 }) {
   return (

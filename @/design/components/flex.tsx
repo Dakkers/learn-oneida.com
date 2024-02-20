@@ -51,6 +51,26 @@ export function Flex({
   );
 }
 
+interface FlexItemProps {
+  as?: FlexProps['as'];
+  children: React.ReactNode;
+  grow?: 0 | 1;
+}
+
+Flex.Item = function FlexItem ({
+  as: Tag = 'div',
+  children,
+  grow,
+}: FlexItemProps) {
+  return (
+    <Tag className={cn(
+      grow && growMap.get(grow),
+    )}>
+      {children}
+    </Tag>
+  )
+}
+
 const gapMap = new Map([
   [0, "gap-0"],
   [1, "gap-1"],
@@ -61,6 +81,11 @@ const gapMap = new Map([
   [6, "gap-6"],
   [7, "gap-7"],
   [8, "gap-8"],
+]);
+
+const growMap = new Map([
+  [0, "grow-0"],
+  [1, "grow"],
 ]);
 
 const justifyContentMap: Record<JustifyContent, string> = {

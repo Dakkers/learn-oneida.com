@@ -31,3 +31,43 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
 export function unwhisperWord(word: string | undefined) {
   return whisperizeWord(word, false);
 }
+
+export function removeAccents(value: string) {
+  return value
+    .replaceAll("á", "a")
+    .replaceAll("é", "e")
+    .replaceAll("í", "i")
+    .replaceAll("ó", "o")
+    .replaceAll("ú", "u")
+    .replaceAll("ʌ́", "ʌ");
+}
+
+export function removeWhisper(value: string) {
+  return value
+    .replaceAll("a̲", "a")
+    .replaceAll("e̲", "e")
+    .replaceAll("i̲", "i")
+    .replaceAll("o̲", "o")
+    .replaceAll("u̲", "u")
+    .replaceAll("ʌ̲", "ʌ")
+    .replaceAll("ˍ", "");
+}
+
+export function removeGlottalStop(value: string) {
+  return value.replaceAll("ʔ", "").replaceAll("ʼ", "").replaceAll("'", "").replaceAll("’", "");
+}
+
+export function removeLongStress(value: string) {
+  return value.replaceAll("·", "").replaceAll(":", "");
+}
+
+export function sanitizeIrregularCharacters(value: string) {
+  return [
+    removeAccents,
+    removeWhisper,
+    removeGlottalStop,
+    removeLongStress,
+  ].reduce((result, fn) => fn(result), value);
+}
+
+// tsi’ tehuttsihkwa’ékta’

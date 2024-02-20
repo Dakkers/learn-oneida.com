@@ -1,6 +1,4 @@
 import { useId } from "react";
-import { Text } from "./text";
-import { Flex } from "./flex";
 import {
   Select as SelectPrimitive,
   SelectContent,
@@ -8,6 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/design/primitives/select";
+import { FormElement } from "./FormElement";
 
 export function Select({
   label,
@@ -26,9 +25,7 @@ export function Select({
   const id = useId();
 
   return (
-    <Flex direction="column" gap={2}>
-      {label && <Text variant="labelL">{label}</Text>}
-
+    <FormElement label={label}>
       <SelectPrimitive onValueChange={onChange} value={value}>
         <SelectTrigger className="w-[180px]" id={id}>
           <SelectValue placeholder="Select..." />
@@ -41,6 +38,6 @@ export function Select({
           ))}
         </SelectContent>
       </SelectPrimitive>
-    </Flex>
-  );
+    </FormElement>
+  )
 }

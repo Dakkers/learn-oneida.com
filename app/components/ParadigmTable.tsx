@@ -46,6 +46,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/design/primitives/button";
 import { Notice } from "@/design/components/notice";
 import _ from "lodash";
+import { sanitizeIrregularCharacters } from "~/utils/words";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()]))
@@ -90,7 +91,7 @@ export function ParadigmTable({
       if (!!phraseObj) {
         if (
           !value ||
-          sanitizePhrase(value) !== sanitizePhrase(phraseObj.phrase)
+          sanitizeIrregularCharacters(value) !== sanitizeIrregularCharacters(phraseObj.phrase)
         ) {
           hasErrors = true;
           form.setError(key, {
@@ -346,44 +347,6 @@ interface ParadigmTableContextProps {
   showBreakdown?: boolean;
   translation: string;
   translationFn?: ({ pronoun }: { pronoun: Pronoun }) => Record<string, string>;
-}
-
-function removeAccents(value: string) {
-  return value
-    .replaceAll("á", "a")
-    .replaceAll("é", "e")
-    .replaceAll("í", "i")
-    .replaceAll("ó", "o")
-    .replaceAll("ú", "u")
-    .replaceAll("ʌ́", "ʌ");
-}
-
-function removeWhisper(value: string) {
-  return value
-    .replaceAll("a̲", "a")
-    .replaceAll("e̲", "e")
-    .replaceAll("i̲", "i")
-    .replaceAll("o̲", "o")
-    .replaceAll("u̲", "u")
-    .replaceAll("ʌ̲", "ʌ")
-    .replaceAll("ˍ", "");
-}
-
-function removeGlottalStop(value: string) {
-  return value.replaceAll("ʔ", "").replaceAll("ʼ", "").replaceAll("'", "");
-}
-
-function removeLongStress(value: string) {
-  return value.replaceAll("·", "").replaceAll(":", "");
-}
-
-function sanitizePhrase(value: string) {
-  return [
-    removeAccents,
-    removeWhisper,
-    removeGlottalStop,
-    removeLongStress,
-  ].reduce((result, fn) => fn(result), value);
 }
 
 export function createParadigmData(
