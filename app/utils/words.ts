@@ -73,5 +73,3 @@ export function sanitizeIrregularCharacters(value: string) {
     removeLongStress,
   ].reduce((result, fn) => fn(result), value);
 }
-
-// tsi’ tehuttsihkwa’ékta’

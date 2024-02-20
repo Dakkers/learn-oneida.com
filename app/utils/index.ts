@@ -177,3 +177,19 @@ export const isPlural = (pronoun: Pronoun) => pluralPronouns.includes(pronoun);
 
 export const arrayify = (value: unknown) =>
   Array.isArray(value) ? value : [value];
+
+export function translatePhrase(
+  phrase: string,
+  pronoun: Pronoun,
+  translationFn?: (arg: { pronoun: Pronoun }) => void
+) {
+  return formatTranslation(phrase, {
+    pronoun: PRONOUN_MAP_EN[pronoun],
+    pronounObjective: PRONOUN_MAP_EN_OBJECTIVE[pronoun],
+    pronounPossessive: PRONOUN_MAP_EN_POSSESSIVE[pronoun],
+    refVerb: REF_VERB_MAP[pronoun],
+    refVerbPast: REF_VERB_PASTTENSE_MAP[pronoun],
+    refVerbPastAlt: REF_VERB_PASTTENSE_ALT_MAP[pronoun],
+    ...(translationFn ? translationFn({ pronoun }) : {}),
+  });
+}

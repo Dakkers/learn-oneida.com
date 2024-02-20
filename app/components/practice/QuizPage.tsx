@@ -32,7 +32,11 @@ interface Item {
 const QuizContainerContext =
   React.createContext<QuizContainerContextProps | null>(null);
 
-export function QuizPage({ data }: { data: Item[] }) {
+export interface QuizPageProps {
+  data: Item[];
+}
+
+export function QuizPage({ data }: QuizPageProps) {
   const [hasStarted, setHasStarted] = React.useState(false);
   const [languageSetting, setLanguageSetting] = React.useState("both");
   const [answerSetting, setAnswerSetting] = React.useState("multipleChoice");

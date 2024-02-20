@@ -166,3 +166,22 @@ function getPrefixArr(prefix: BreakdownType | undefined): BreakdownArray {
     return [];
   }
 }
+
+export function convertBreakdownToPlainText(
+  breakdown: BreakdownArray,
+  options = {}
+) {
+  const breakdownDuplicate = getPrefixArr(options.prefix)
+    .concat(breakdown)
+    .concat(getSuffixArr(options.suffix));
+
+  return breakdownDuplicate
+    .map((part) =>
+      Array.isArray(part)
+        ? part[0]
+        : typeof part === "object"
+        ? part.text
+        : part
+    )
+    .join("");
+}
