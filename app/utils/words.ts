@@ -56,9 +56,9 @@ export function removeWhisper(value: string) {
 export function removeGlottalStop(value: string) {
   return value
     .replaceAll("ʔ", "")
-    .replaceAll("ʼ", "")
+    .replaceAll("ʼ", "") // U+02bc
     .replaceAll("'", "")
-    .replaceAll("’", "");
+    .replaceAll("’", ""); // U+2019
 }
 
 export function removeLongStress(value: string) {

@@ -1,6 +1,34 @@
 // Look for  ́ ́ ́
 
-export const characterTenseData = [
+import { BreakdownType } from "~/components/TextBreakdown";
+
+type TenseEntry =
+  | string[]
+  | {
+      en: string | string[];
+      on: string[];
+    }
+  | {
+      items: Array<{
+        en: string | string[];
+        on: string[];
+      }>;
+    };
+
+type TenseDatum = {
+  dict: number | (string | number)[];
+  stem: string;
+  root: string[] | string;
+  present: TenseEntry;
+  past: TenseEntry;
+  fut: TenseEntry;
+  ifut: TenseEntry;
+  cmd: TenseEntry;
+  en: string[] | string;
+  type?: BreakdownType;
+};
+
+export const characterTenseData: TenseDatum[] = [
   {
     dict: [754],
     stem: "U stem",
@@ -123,7 +151,7 @@ export const characterTenseData = [
     present: ["wak", "atlaʔswáksʌ"],
     past: ["wak", "atlaʔswáksʌ", "hneʔ"],
     fut: ["ʌ", "wak", "atlaʔswaksʌ́", "hakeʔ"],
-    ifut: ["a", "ukwatlaʔswaksʌ", "hakeʔ"],
+    ifut: ["a", "·ukwatlaʔswaksʌ", "hakeʔ"],
     cmd: ["s", "atlaʔswaksʌ", "hak"],
     en: "be unlucky",
   },
@@ -155,7 +183,7 @@ export const characterTenseData = [
   },
 ];
 
-export const mindTenseData = [
+export const mindTenseData: TenseDatum[] = [
   {
     en: "to have a great mind, be intelligent",
     dict: [859],
@@ -247,7 +275,7 @@ export const mindTenseData = [
   },
 ];
 
-export const emotionTenseData = [
+export const emotionTenseData: TenseDatum[] = [
   {
     en: "to cry, weep",
     dict: [120],
@@ -384,7 +412,7 @@ export const emotionTenseData = [
   },
 ];
 
-export const bodyTenseData = [
+export const bodyTenseData: TenseDatum[] = [
   {
     en: "be the way someone looks",
     dict: [803, 1061],
@@ -520,28 +548,28 @@ export const bodyTenseData = [
     ifut: ["a", "·uk", "yaʔtákstʌ", "hake"],
     cmd: ["s", "ayaʔtáksteʔ ***"], // TODO unsure
   },
-  {
-    en: "be fat, chunky, chubby",
-    dict: [99, 990],
-    stem: "A stem",
-    root: ["-ale'sʌ-"],
-    present: ["wak", "álehsʌʔ"],
-    past: ["wak", "aleʔsʌ·", "hné·"],
-    fut: {
-      items: [
-        {
-          on: ["ʌ", "wak", "aleʔsʌʔú", "hakeʔ"],
-          en: "I'm going to be...",
-        },
-        {
-          on: ["ʌ", "wak", "aleʔsʌ́ʔ", "hakeʔ"],
-          en: "I will be more...",
-        },
-      ],
-    },
-    ifut: ["a", "·ukw", "aleʔsʌ́hakeʔ"],
-    cmd: ["s", "aleʔsʌ́hak ***"], // TODO unsure
-  },
+  // {
+  //   en: "be fat, chunky, chubby",
+  //   dict: [99, 990],
+  //   stem: "A stem",
+  //   root: ["-ale'sʌ-"],
+  //   present: ["wak", "álehsʌʔ"],
+  //   past: ["wak", "aleʔsʌ·", "hné·"],
+  //   fut: {
+  //     items: [
+  //       {
+  //         on: ["ʌ", "wak", "aleʔsʌʔú", "hakeʔ"],
+  //         en: "I'm going to be...",
+  //       },
+  //       {
+  //         on: ["ʌ", "wak", "aleʔsʌ́ʔ", "hakeʔ"],
+  //         en: "I will be more...",
+  //       },
+  //     ],
+  //   },
+  //   ifut: ["a", "·ukw", "aleʔsʌ́hakeʔ"],
+  //   cmd: ["s", "aleʔsʌ́hak ***"], // TODO unsure
+  // },
   {
     en: "be skinny, thin",
     dict: [207, 1228],
@@ -555,7 +583,7 @@ export const bodyTenseData = [
   },
 ];
 
-export const physicalTenseData = [
+export const physicalTenseData: TenseDatum[] = [
   {
     en: "be cold",
     dict: [776, 940],
@@ -788,7 +816,7 @@ export const physicalTenseData = [
   },
 ];
 
-export const miscTenseData = [
+export const miscTenseData: TenseDatum[] = [
   {
     en: "to know/recognize something",
     dict: [830],
@@ -854,7 +882,7 @@ export const miscTenseData = [
     present: ["wak", "náktoteʔ"],
     past: ["wak", "nakto·t", "á", "hkweʔ"],
     fut: ["ʌ", "wak", "nakto·t", "ákeʔ"],
-    ifut: ["a", "uknakto·t", "ákeʔ"],
+    ifut: ["a", "·uknakto·t", "ákeʔ"],
     cmd: ["s", "anakto·t", "ák"],
   },
   {
