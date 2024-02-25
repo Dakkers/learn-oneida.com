@@ -163,6 +163,7 @@ export default function PracticePlaces() {
   }, [
     hasStarted,
     questionCountSetting,
+    languageSetting,
     englishOptions,
     oneidaOptions,
   ]);
@@ -250,7 +251,7 @@ function Settings() {
         <RadioGroup.Option value="both">Both</RadioGroup.Option>
       </RadioGroup>
 
-      <RadioGroup
+      {/* <RadioGroup
         label="Answer with"
         onChange={context.setAnswerSetting}
         value={context.answerSetting}
@@ -259,7 +260,7 @@ function Settings() {
           Multiple choice
         </RadioGroup.Option>
         <RadioGroup.Option value="text">Text</RadioGroup.Option>
-      </RadioGroup>
+      </RadioGroup> */}
 
       <Select
         label="Number of questions"
