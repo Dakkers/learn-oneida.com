@@ -4,13 +4,13 @@ import React from "react";
 import { Heading } from "@/design/components/heading";
 import { RadioGroup } from "@/design/components/RadioGroup";
 import { Button } from "@/design/primitives/button";
-import { Select } from "@/design/components/select";
 import { Quiz, useQuizContext } from "~/components/practice/Quiz";
 import { Box } from "@/design/components/box";
 import { bodyTenseData, characterTenseData, emotionTenseData, mindTenseData, miscTenseData, physicalTenseData } from "~/data/module05";
 import { convertBreakdownToPlainText } from "~/components/TextBreakdown";
 import _ from "lodash";
 import { Text } from "@/design/components/text";
+import { NextBtn, QuizContainerContext, Settings } from "~/components/practice/QuizContainer";
 
 export const meta: MetaFunction = () => {
   return [
@@ -60,7 +60,7 @@ const DATA_FULL_LIST = _.flattenDeep(
 );
 
 export default function PracticeTenses() {
-  const [hasStarted, setHasStarted] = React.useState(true);
+  const [hasStarted, setHasStarted] = React.useState(false);
   const [languageSetting, setLanguageSetting] = React.useState("both");
   const [answerSetting, setAnswerSetting] = React.useState("multipleChoice");
   const [questionCountSetting, setQuestionCountSetting] = React.useState("5");
@@ -130,7 +130,7 @@ export default function PracticeTenses() {
           </Quiz>
         ) : (
           <Flex direction="column" gap={4}>
-            <Settings />
+            <Settings enableLanguageSetting={false} enableAnswerTypeSetting={false} />
 
             <Box>
               <Button onClick={() => setHasStarted(true)}>Start</Button>
@@ -139,26 +139,6 @@ export default function PracticeTenses() {
         )}
       </Flex>
     </QuizContainerContext.Provider>
-  );
-}
-
-function Settings() {
-  const context = React.useContext(QuizContainerContext);
-  if (!context) {
-    throw new Error("Missing QuizContainerContext.");
-  }
-
-  return (
-    <Flex align="start" gap={8}>
-      <Select
-        label="Number of questions"
-        onChange={context.setQuestionCountSetting}
-        options={[5, 10, 20, 50]
-          .map((value) => value.toString())
-          .map((value) => ({ label: value, value }))}
-        value={context.questionCountSetting}
-      />
-    </Flex>
   );
 }
 

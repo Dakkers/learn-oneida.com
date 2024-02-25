@@ -2,6 +2,10 @@ import { Button } from "@/design/primitives/button";
 import { useQuizContext } from "./Quiz";
 import { cn } from "@/lib/utils";
 import React from "react";
+import { Flex } from "@/design/components/flex";
+import { Input } from "@/design/primitives/input";
+import { RadioGroup } from "@/design/components/RadioGroup";
+import { Select } from "@/design/components/select";
 
 interface QuizContainerContextProps {
   answerSetting: string;
@@ -15,32 +19,66 @@ interface QuizContainerContextProps {
 export const QuizContainerContext =
   React.createContext<QuizContainerContextProps | null>(null);
 
+export function Settings({
+  enableLanguageSetting = true,
+  enableAnswerTypeSetting = true,
+  enableQuestionCountSetting = true,
+}: {
+  enableLanguageSetting?: boolean;
+  enableAnswerTypeSetting?: boolean;
+  enableQuestionCountSetting?: boolean;
+}) {
+  const context = React.useContext(QuizContainerContext);
+  if (!context) {
+    throw new Error("Missing QuizContainerContext.");
+  }
 
+  return (
+    <Flex align="start" gap={8}>
+      {
+        enableLanguageSetting && (
+          <RadioGroup
+            label="Translate"
+            onChange={context.setLanguageSetting}
+            value={context.languageSetting}
+          >
+            <RadioGroup.Option value="en">English to Oneida</RadioGroup.Option>
+            <RadioGroup.Option value="on">Oneida to English</RadioGroup.Option>
+            <RadioGroup.Option value="both">Both</RadioGroup.Option>
+          </RadioGroup>
+        )
+      }
 
-// function QuestionLol({
-//   question,
-// }) {
-//   const context = useQuizContext();
-//   const id = React.useId();
+      {
+        enableAnswerTypeSetting && (
+          <RadioGroup
+            label="Answer with"
+            onChange={context.setAnswerSetting}
+            value={context.answerSetting}
+          >
+            <RadioGroup.Option value="multipleChoice">
+              Multiple choice
+            </RadioGroup.Option>
+            <RadioGroup.Option value="text">Text</RadioGroup.Option>
+          </RadioGroup>
+        )
+      }
 
-//   return (
-//     <Flex direction="column" gap={4}>
-//       <Text id={id}>
-//         What is the tense in this word: <b>{question}</b>
-//       </Text>
-//       <RadioGroup
-//         aria-labelledby={id}
-//         onChange={context.changeAnswer}
-//       >
-//         {TENSE_LIST.map((t) => (
-//           <RadioGroup.Option key={t} value={t}>{tenseMap[t]}</RadioGroup.Option>
-//         ))}
-//       </RadioGroup>
-//     </Flex>
-//   )
-// }
+      {enableQuestionCountSetting && (
+        <Select
+          label="Number of questions"
+          onChange={context.setQuestionCountSetting}
+          options={[1, 2, 5, 10]
+            .map((value) => value.toString())
+            .map((value) => ({ label: value, value }))}
+          value={context.questionCountSetting}
+        />
+      )}
+    </Flex>
+  );
+}
 
-export function MultipleChoiceButtons({
+export function AnswerMultipleChoiceButtons({
   questionKey,
   isCorrect,
   options,
@@ -80,6 +118,25 @@ export function MultipleChoiceButtons({
         </button>
       ))}
     </div>
+  );
+}
+
+export function AnswerText() {
+  const [value, setValue] = React.useState("");
+  const quizContext = useQuizContext();
+
+  return (
+    <>
+      <Flex gap={2}>
+        <Flex.Item grow={1}>
+          <Input
+            onBlur={() => quizContext.changeAnswer?.(value)}
+            onChange={(e) => setValue(e.target.value)}
+            value={value}
+          />
+        </Flex.Item>
+      </Flex>
+    </>
   );
 }
 

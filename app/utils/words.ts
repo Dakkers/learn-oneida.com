@@ -71,5 +71,5 @@ export function sanitizeIrregularCharacters(value: string) {
     removeWhisper,
     removeGlottalStop,
     removeLongStress,
-  ].reduce((result, fn) => fn(result), value);
+  ].reduce((result, fn) => fn(result), value.toLowerCase());
 }

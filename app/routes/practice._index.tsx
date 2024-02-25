@@ -40,6 +40,10 @@ export default function Resources() {
       href: "/seasons",
       label: "Seasons",
     },
+    {
+      href: "/tenses",
+      label: "Tenses",
+    },
   ];
 
   return (

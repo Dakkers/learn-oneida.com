@@ -3,7 +3,8 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
 import { DATA_PLACES_IN_COMMUNITY } from "~/components/resources/PlacesInTheCommunity";
-import { QuizPage } from "~/components/practice/QuizPage";
+import { EnglishToOneidaQuiz, EnglishToOneidaQuizProps } from "~/components/practice/EnglishToOneidaQuiz";
+import { arrayify } from "~/utils";
 
 export const meta: MetaFunction = () => {
   return [
@@ -30,13 +31,30 @@ const DATA = DATA_PLACES_IN_COMMUNITY.filter(
 );
 
 export default function PracticePlaces() {
+  const [englishOptions, oneidaOptions]: [
+    EnglishToOneidaQuizProps['englishOptions'],
+    EnglishToOneidaQuizProps['oneidaOptions'],
+  ] = React.useMemo(() => {
+    const resultEn = [];
+    const resultOn = [];
+
+    for (const datum of DATA) {
+      resultEn.push({key: datum.key,value: datum.en})
+      resultOn.push({ key: datum.key, value: arrayify(datum.on)[0]})
+    }
+    return [resultEn, resultOn]
+  }, []);
+
   return (
     <Flex direction="column" gap={4}>
       <Heading level={1} variant="headlineL">
-        Places in the community
+        Practice your knowledge of places in the community
       </Heading>
 
-      <QuizPage data={DATA} />
+      <EnglishToOneidaQuiz
+        englishOptions={englishOptions}
+        oneidaOptions={oneidaOptions}
+      />
     </Flex>
   );
 }

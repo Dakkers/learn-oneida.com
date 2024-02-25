@@ -537,17 +537,17 @@ export const bodyTenseData: TenseDatum[] = [
     cmd: ["t", "u", "te", "sa", "hnaʔkaláhs", "ek"],
   },
   // TODO: epenthetic ʌ ?
-  {
-    en: "be heavy",
-    dict: [796, 1038],
-    stem: "C stem",
-    root: ["-ya'takste- -kste-"],
-    present: ["wak", "yaʔtáksteʔ"],
-    past: ["wak", "yaʔtákste", "hkweʔ"],
-    fut: ["ʌ", "wak", "yaʔtákstʌ", "hake"],
-    ifut: ["a", "·uk", "yaʔtákstʌ", "hake"],
-    cmd: ["s", "ayaʔtáksteʔ ***"], // TODO unsure
-  },
+  // {
+  //   en: "be heavy",
+  //   dict: [796, 1038],
+  //   stem: "C stem",
+  //   root: ["-ya'takste- -kste-"],
+  //   present: ["wak", "yaʔtáksteʔ"],
+  //   past: ["wak", "yaʔtákste", "hkweʔ"],
+  //   fut: ["ʌ", "wak", "yaʔtákstʌ", "hake"],
+  //   ifut: ["a", "·uk", "yaʔtákstʌ", "hake"],
+  //   cmd: ["s", "ayaʔtáksteʔ ***"], // TODO unsure
+  // },
   // {
   //   en: "be fat, chunky, chubby",
   //   dict: [99, 990],
@@ -769,7 +769,7 @@ export const physicalTenseData: TenseDatum[] = [
     past: ["wak", "atekhuni·", "hné·"],
     fut: ["ʌ", "wak", "atekhuní", "hakeʔ"],
     ifut: ["a", "·ukw", "atekhuní", "hakeʔ"],
-    cmd: ["s", "atekhuni"],
+    cmd: ["s", "atekhuní"],
   },
   {
     en: "to sleep, to go to sleep",
