@@ -45,13 +45,8 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-interface Opt {
-  key: string;
-  value: string;
-}
-
 export default function PracticeBeingSomewhere() {
-  const [englishOptions, oneidaOptions]: [Opt[], Opt[]] = React.useMemo(() => {
+  const [englishOptions, oneidaOptions] = React.useMemo(() => {
     const resultEn = [];
     const resultOn = [];
 
@@ -86,19 +81,20 @@ export default function PracticeBeingSomewhere() {
       dataWillNotLiveThere,
     ]) {
       for (const phrase of datum.phrases) {
-        const key = `${datum.translation}_${phrase.pronoun}`
+        const key = `${datum.translation}_${phrase.pronoun}`;
         resultEn.push({
           key,
-          value: translatePhrase(datum.translation, phrase.pronoun)})
+          text: translatePhrase(datum.translation, phrase.pronoun),
+        });
         resultOn.push({
           key,
-          value: convertBreakdownToPlainText(phrase.breakdown, {
+          text: convertBreakdownToPlainText(phrase.breakdown, {
             suffix: datum.suffix,
-          })
-        })
+          }),
+        });
       }
     }
-    return [resultEn, resultOn]
+    return [resultEn, resultOn];
   }, []);
 
   return (

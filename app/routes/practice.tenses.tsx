@@ -6,11 +6,22 @@ import { RadioGroup } from "@/design/components/RadioGroup";
 import { Button } from "@/design/primitives/button";
 import { Quiz, useQuizContext } from "~/components/practice/Quiz";
 import { Box } from "@/design/components/box";
-import { bodyTenseData, characterTenseData, emotionTenseData, mindTenseData, miscTenseData, physicalTenseData } from "~/data/module05";
+import {
+  bodyTenseData,
+  characterTenseData,
+  emotionTenseData,
+  mindTenseData,
+  miscTenseData,
+  physicalTenseData,
+} from "~/data/module05";
 import { convertBreakdownToPlainText } from "~/components/TextBreakdown";
 import _ from "lodash";
 import { Text } from "@/design/components/text";
-import { NextBtn, QuizContainerContext, Settings } from "~/components/practice/QuizContainer";
+import {
+  NextBtn,
+  QuizContainerContext,
+  Settings,
+} from "~/components/practice/QuizContainer";
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,13 +34,8 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-const TENSE_LIST = [
-  "present",
-  "past",
-  "fut",
-  "ifut",
-  "cmd",
-] as const;
+const TENSE_LIST = ["present", "past", "fut", "ifut", "cmd"] as const;
+type Tense = (typeof TENSE_LIST)[number];
 
 const DATA_FULL_LIST = _.flattenDeep(
   [
@@ -47,7 +53,7 @@ const DATA_FULL_LIST = _.flattenDeep(
       } else if ("items" in value) {
         return value.items.map((item) => ({
           tense,
-          value: convertBreakdownToPlainText(item),
+          value: convertBreakdownToPlainText(item.on),
         }));
       } else {
         return {
@@ -68,22 +74,24 @@ export default function PracticeTenses() {
   const questions: Array<{
     answer: string;
     question: string;
-    type: 'given_word';
+    type: "given_word";
   }> = React.useMemo(() => {
     if (!hasStarted) {
       return [];
     }
     const result = new Array(Number(questionCountSetting));
     for (let i = 0; i < result.length; i++) {
-      const randomTense = TENSE_LIST[Math.floor(Math.random() * 5)]
-      const datum = _.sample(DATA_FULL_LIST.filter((d) => d.tense === randomTense)) ?? DATA_FULL_LIST.find((d) => d.tense === randomTense)
+      const randomTense = TENSE_LIST[Math.floor(Math.random() * 5)];
+      const datum =
+        _.sample(DATA_FULL_LIST.filter((d) => d.tense === randomTense)) ??
+        DATA_FULL_LIST.find((d) => d.tense === randomTense);
 
       // What is the tense of this word?
       result[i] = {
         answer: randomTense,
         question: datum?.value,
-        type: 'given_word'
-      }
+        type: "given_word",
+      };
     }
     return result;
   }, [hasStarted, questionCountSetting]);
@@ -109,11 +117,11 @@ export default function PracticeTenses() {
             getResultForQuestion={(index, selectedAnswer) => {
               const q = questions[index];
               return {
-                correctAnswer: tenseMap[q.answer],
+                correctAnswer: tenseMap[q.answer as Tense],
                 isCorrect: q.answer === selectedAnswer,
                 question: `What is the tense for: ${q.question}`,
-                selectedAnswer: tenseMap[selectedAnswer],
-              }
+                selectedAnswer: tenseMap[selectedAnswer as Tense],
+              };
             }}
             numberOfQuestions={Number(questionCountSetting)}
             onReset={() => setHasStarted(false)}
@@ -130,7 +138,10 @@ export default function PracticeTenses() {
           </Quiz>
         ) : (
           <Flex direction="column" gap={4}>
-            <Settings enableLanguageSetting={false} enableAnswerTypeSetting={false} />
+            <Settings
+              enableLanguageSetting={false}
+              enableAnswerTypeSetting={false}
+            />
 
             <Box>
               <Button onClick={() => setHasStarted(true)}>Start</Button>
@@ -148,11 +159,9 @@ const tenseMap = {
   ifut: "Indefinite Future",
   past: "Past",
   present: "Present",
-} as const
+} as const;
 
-function QuestionLol({
-  question,
-}) {
+function QuestionLol({ question }: { question: string }) {
   const context = useQuizContext();
   const id = React.useId();
 
@@ -164,11 +173,14 @@ function QuestionLol({
       <RadioGroup
         aria-labelledby={id}
         onChange={context.changeAnswer}
+        value={context.answer}
       >
         {TENSE_LIST.map((t) => (
-          <RadioGroup.Option key={t} value={t}>{tenseMap[t]}</RadioGroup.Option>
+          <RadioGroup.Option key={t} value={t}>
+            {tenseMap[t]}
+          </RadioGroup.Option>
         ))}
       </RadioGroup>
     </Flex>
-  )
+  );
 }

@@ -1,6 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
 export const DATA_DAYS_OF_WEEK = [
   { en: "Sunday", on: "Yautatokʌ́htu", key: "sun" },
@@ -12,7 +13,7 @@ export const DATA_DAYS_OF_WEEK = [
   { en: "Saturday", on: "Ʌtáktaʔ", key: "sat" },
 ];
 
-export function DaysOfTheWeekResource({ level = 1 }: { level?: 1 | 2 }) {
+export function DaysOfTheWeekResource({ level = 1 }: ResourceProps) {
   const daysSpecific = [
     { en: "on Sunday", on: "Yautatokʌhtu·neʔ" },
     { en: "on Monday", on: "Yautʌtaʔú·neʔ" },
@@ -51,7 +52,10 @@ export function DaysOfTheWeekResource({ level = 1 }: { level?: 1 | 2 }) {
         data={DATA_DAYS_OF_WEEK}
       />
 
-      <SectionHeading id="days-on" level={level + 1}>
+      <SectionHeading
+        id="days-on"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         On a specific day
       </SectionHeading>
       <TableWrapper
@@ -59,7 +63,10 @@ export function DaysOfTheWeekResource({ level = 1 }: { level?: 1 | 2 }) {
         data={daysSpecific}
       />
 
-      <SectionHeading id="days-last" level={level + 1}>
+      <SectionHeading
+        id="days-last"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Last...
       </SectionHeading>
       <TableWrapper
@@ -67,7 +74,10 @@ export function DaysOfTheWeekResource({ level = 1 }: { level?: 1 | 2 }) {
         data={daysLast}
       />
 
-      <SectionHeading id="days-next" level={level + 1}>
+      <SectionHeading
+        id="days-next"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Next...
       </SectionHeading>
       <TableWrapper

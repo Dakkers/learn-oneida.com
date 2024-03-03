@@ -18,8 +18,10 @@ export type BreakdownType =
   | "RPL"
   | "SRFL";
 
-type BreakdownArray = Array<
+export type BreakdownArray = Array<
   | string
+  | [string]
+  | [string, BreakdownType]
   | {
       text: string;
       type?: BreakdownType;
@@ -95,7 +97,7 @@ function InnerText({
   return (
     <span
       className={cn(
-        arrayify(type ?? []).map((t) =>
+        arrayify(type ?? []).map((t: BreakdownType) =>
           t ? BREAKDOWN_TYPE_MAP[t] : undefined
         ),
         "font-bold"
@@ -169,7 +171,10 @@ function getPrefixArr(prefix: BreakdownType | undefined): BreakdownArray {
 
 export function convertBreakdownToPlainText(
   breakdown: BreakdownArray,
-  options = {}
+  options: {
+    prefix?: BreakdownType;
+    suffix?: TextBreakdownSuffix;
+  } = {}
 ) {
   const breakdownDuplicate = getPrefixArr(options.prefix)
     .concat(breakdown)

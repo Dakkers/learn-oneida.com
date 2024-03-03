@@ -2,8 +2,9 @@ import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { SectionHeading } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
-export function CountingTimeResource({ level = 1 }) {
+export function CountingTimeResource({ level = 1 }: ResourceProps) {
   const firstTable = [
     {
       num: 1,

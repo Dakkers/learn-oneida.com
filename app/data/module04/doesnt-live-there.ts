@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["yáh thó teʔ", { text: "k" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔ", ["k"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔte", { text: "hs" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔte", ["hs"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔt", { text: "ha" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔt", ["ha"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔt", { text: "yé" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔt", ["yé"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔt", { text: "ka" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔt", ["ka"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔti", { text: "tni" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔti", ["tni"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔt", { text: "yakni" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔt", ["yakni"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔti", { text: "sni" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔti", ["sni"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔt", { text: "hni" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔt", ["hni"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔt", { text: "kni" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔt", ["kni"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔti", { text: "twa" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔti", ["twa"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔt", { text: "yakwa" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔt", ["yakwa"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔti", { text: "swa" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔti", ["swa"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔt", { text: "hati" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔt", ["hati"], "nákleʔ"],
       },
       {
-        breakdown: ["yáh thó teʔt", { text: "kuti" }, "nákleʔ"],
+        breakdown: ["yáh thó teʔt", ["kuti"], "nákleʔ"],
       },
     ],
   },

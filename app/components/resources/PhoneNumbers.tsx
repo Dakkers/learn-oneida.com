@@ -1,6 +1,6 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { Text } from "@/design/components/text";
 import { ResourceProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
@@ -94,22 +94,31 @@ export function PhoneNumbersResource({ level = 1 }: ResourceProps) {
       </SectionHeading>
       <Text>
         The word for phone number is <b>niwashe·tás</b>. Below you will find the
-        paradigms for "at someone's (own) house" and "at someone's (own) place
-        of work", and some examples for how to use the word for phone number
-        with the paradigms.
+        paradigms for &quot;at someone&lsquo;s (own) house&quot; and &quot;at
+        someone&lsquo;s (own) place of work&quot;, and some examples for how to
+        use the word for phone number with the paradigms.
       </Text>
 
-      <SectionHeading id="at-someones-house" level={level + 1}>
-        At Someone's House
+      <SectionHeading
+        id="at-someones-house"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
+        At Someone&lsquo;s House
       </SectionHeading>
       <ParadigmTable data={dataAtSomeonesOwnHouse} />
 
-      <SectionHeading id="at-someones-work" level={level + 1}>
-        At Someone's Work
+      <SectionHeading
+        id="at-someones-work"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
+        At Someone&lsquo;s Work
       </SectionHeading>
       <ParadigmTable data={dataAtSomeonesOwnWork} />
 
-      <SectionHeading id="phone-number-examples" level={level + 1}>
+      <SectionHeading
+        id="phone-number-examples"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Examples
       </SectionHeading>
       <TableWrapper

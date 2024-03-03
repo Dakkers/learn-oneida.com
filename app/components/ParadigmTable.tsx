@@ -21,15 +21,10 @@ import {
   PRONOUN_MAP_ONEIDA,
   Pronoun,
   pronouns,
-  REF_VERB_MAP,
-  formatTranslation,
-  PRONOUN_MAP_EN_OBJECTIVE,
-  REF_VERB_PASTTENSE_MAP,
-  REF_VERB_PASTTENSE_ALT_MAP,
-  PRONOUN_MAP_EN_POSSESSIVE,
   translatePhrase,
 } from "~/utils";
 import {
+  BreakdownArray,
   BreakdownType,
   TextBreakdown,
   TextBreakdownSuffix,
@@ -89,7 +84,7 @@ export function ParadigmTable({
     for (const key in values) {
       const value = values[key];
       const phraseObj = data.phrases.find((p) => p.pronoun === key);
-      if (!!phraseObj) {
+      if (phraseObj) {
         if (
           !value ||
           sanitizeIrregularCharacters(value) !==
@@ -127,10 +122,11 @@ export function ParadigmTable({
       <div>
         <Flex justify="end">
           <SettingsMenu
-            toggleColumn={(columnName: keyof ColumnVisibility) =>
+            toggleColumn={(columnName) =>
               setColVisibility({
                 ...colVisibility,
-                [columnName]: !colVisibility[columnName],
+                [columnName]:
+                  !colVisibility[columnName as keyof ColumnVisibility],
               })
             }
             toggleBreakdown={setShowBreakdown}
@@ -275,7 +271,13 @@ function TableRowWrapper({
   );
 }
 
-function SettingsMenu({ toggleBreakdown, toggleColumn }) {
+function SettingsMenu({
+  toggleBreakdown,
+  toggleColumn,
+}: {
+  toggleBreakdown: (value: boolean) => void;
+  toggleColumn: (value: string) => void;
+}) {
   const context = React.useContext(ParadigmTableContext);
   if (!context) {
     throw new Error("Missing context");
@@ -339,6 +341,8 @@ interface Row {
 
 interface ParadigmTableContextProps {
   colVisibility: ColumnVisibility;
+  // @ts-expect-error To be addressed in LO-15
+  form: SpecialFormType;
   isTesting?: boolean;
   showBreakdown?: boolean;
   translation: string;
@@ -346,10 +350,12 @@ interface ParadigmTableContextProps {
 }
 
 export function createParadigmData(
-  data: any,
+  data: Pick<ParadigmData, "translation" | "suffix" | "type"> & {
+    phrases: Array<{ breakdown: BreakdownArray }>;
+  },
   allowedPronouns?: Pronoun[]
 ): ParadigmData {
-  const result = _.cloneDeep(data);
+  const result = _.cloneDeep(data) as ParadigmData;
   for (let i = 0; i < result.phrases.length; i++) {
     const element = result.phrases[i];
     element.phrase = element.breakdown

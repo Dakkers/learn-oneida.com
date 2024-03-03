@@ -7,64 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        pronoun: "i",
-        breakdown: ["yáh té·", { text: "k" }, "elheʔ"],
+        breakdown: ["yáh té·", ["k"], "elheʔ"],
       },
       {
-        pronoun: "u",
-        breakdown: ["yáh té", { text: "hs" }, "elheʔ"],
+        breakdown: ["yáh té", ["hs"], "elheʔ"],
       },
       {
-        pronoun: "m",
-        breakdown: ["yáh té·", { text: "l" }, "elheʔ"],
+        breakdown: ["yáh té·", ["l"], "elheʔ"],
       },
       {
-        pronoun: "f",
-        breakdown: ["yáh té·", { text: "y" }, "ʌ́lheʔ"],
+        breakdown: ["yáh té·", ["y"], "ʌ́lheʔ"],
       },
       {
-        pronoun: "it",
-        breakdown: ["yáh té·", { text: "w" }, "elheʔ"],
+        breakdown: ["yáh té·", ["w"], "elheʔ"],
       },
       {
-        pronoun: "uni",
-        breakdown: ["yáh té·", { text: "tn" }, "elheʔ"],
+        breakdown: ["yáh té·", ["tn"], "elheʔ"],
       },
       {
-        pronoun: "soni",
-        breakdown: ["yáh téʔ", { text: "yákn" }, "elheʔ"],
+        breakdown: ["yáh téʔ", ["yákn"], "elheʔ"],
       },
       {
-        pronoun: "u2",
-        breakdown: ["yáh té·", { text: "sn" }, "elheʔ"],
+        breakdown: ["yáh té·", ["sn"], "elheʔ"],
       },
       {
-        pronoun: "2m",
-        breakdown: ["yáh té·", { text: "n" }, "elheʔ"],
+        breakdown: ["yáh té·", ["n"], "elheʔ"],
       },
       {
-        pronoun: "2f",
-        breakdown: ["yáh té·", { text: "kn" }, "elheʔ"],
+        breakdown: ["yáh té·", ["kn"], "elheʔ"],
       },
       {
-        pronoun: "us",
-        breakdown: ["yáh té·", { text: "tw" }, "elheʔ"],
+        breakdown: ["yáh té·", ["tw"], "elheʔ"],
       },
       {
-        pronoun: "theyni",
-        breakdown: ["yáh téʔ", { text: "yákw" }, "elheʔ"],
+        breakdown: ["yáh téʔ", ["yákw"], "elheʔ"],
       },
       {
-        pronoun: "yall",
-        breakdown: ["yáh té·", { text: "sw" }, "elheʔ"],
+        breakdown: ["yáh té·", ["sw"], "elheʔ"],
       },
       {
-        pronoun: "ms",
-        breakdown: ["yáh te", { text: "hʌ·n" }, "élheʔ"],
+        breakdown: ["yáh te", ["hʌ·n"], "élheʔ"],
       },
       {
-        pronoun: "fs",
-        breakdown: ["yáh teʔ", { text: "ku·n" }, "élheʔ"],
+        breakdown: ["yáh teʔ", ["ku·n"], "élheʔ"],
       },
     ],
   },

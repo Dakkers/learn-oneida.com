@@ -8,104 +8,49 @@ export default createParadigmData(
     suffix: "hkwe",
     phrases: [
       {
-        breakdown: ["t", { text: "k" }, "íʔtlu·t", { text: "a", type: "JOIN" }],
+        breakdown: ["t", ["k"], "íʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "te",
-          { text: "hs" },
-          "íʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["te", ["hs"], "íʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: ["t", { text: "hʌ́" }, "ʔtlu·t", { text: "a", type: "JOIN" }],
+        breakdown: ["t", ["hʌ́"], "ʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: ["t", { text: "yé" }, "ʔtlu·t", { text: "a", type: "JOIN" }],
+        breakdown: ["t", ["yé"], "ʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: ["t", { text: "kʌ́" }, "ʔtlu·t", { text: "a", type: "JOIN" }],
+        breakdown: ["t", ["kʌ́"], "ʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "ti",
-          { text: "tn" },
-          "íʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["ti", ["tn"], "íʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "t",
-          { text: "yakn" },
-          "íʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["t", ["yakn"], "íʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "ti",
-          { text: "sn" },
-          "íʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["ti", ["sn"], "íʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "t",
-          { text: "hn" },
-          "íʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["t", ["hn"], "íʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "t",
-          { text: "kn" },
-          "íʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["t", ["kn"], "íʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "ti",
-          { text: "twʌ́" },
-          "ʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["ti", ["twʌ́"], "ʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "t",
-          { text: "yakwʌ́" },
-          "ʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["t", ["yakwʌ́"], "ʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "ti",
-          { text: "swʌ́" },
-          "ʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["ti", ["swʌ́"], "ʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "t",
-          { text: "hat" },
-          "íʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["t", ["hat"], "íʔtlu·t", ["a", "JOIN"]],
       },
       {
-        breakdown: [
-          "t",
-          { text: "kut" },
-          "íʔtlu·t",
-          { text: "a", type: "JOIN" },
-        ],
+        breakdown: ["t", ["kut"], "íʔtlu·t", ["a", "JOIN"]],
       },
     ],
   },

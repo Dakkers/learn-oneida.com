@@ -3,7 +3,10 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
 import { DATA_PLACES_IN_COMMUNITY } from "~/components/resources/PlacesInTheCommunity";
-import { EnglishToOneidaQuiz, EnglishToOneidaQuizProps } from "~/components/practice/EnglishToOneidaQuiz";
+import {
+  EnglishToOneidaQuiz,
+  EnglishToOneidaQuizProps,
+} from "~/components/practice/EnglishToOneidaQuiz";
 import { arrayify } from "~/utils";
 
 export const meta: MetaFunction = () => {
@@ -32,17 +35,17 @@ const DATA = DATA_PLACES_IN_COMMUNITY.filter(
 
 export default function PracticePlaces() {
   const [englishOptions, oneidaOptions]: [
-    EnglishToOneidaQuizProps['englishOptions'],
-    EnglishToOneidaQuizProps['oneidaOptions'],
+    EnglishToOneidaQuizProps["englishOptions"],
+    EnglishToOneidaQuizProps["oneidaOptions"]
   ] = React.useMemo(() => {
     const resultEn = [];
     const resultOn = [];
 
     for (const datum of DATA) {
-      resultEn.push({key: datum.key,value: datum.en})
-      resultOn.push({ key: datum.key, value: arrayify(datum.on)[0]})
+      resultEn.push({ key: datum.key, text: datum.en });
+      resultOn.push({ key: datum.key, text: arrayify(datum.on)[0] });
     }
-    return [resultEn, resultOn]
+    return [resultEn, resultOn];
   }, []);
 
   return (

@@ -7,6 +7,11 @@ import { Input } from "@/design/primitives/input";
 import { RadioGroup } from "@/design/components/RadioGroup";
 import { Select } from "@/design/components/select";
 
+export interface QuizOption {
+  key: string;
+  text: string;
+}
+
 interface QuizContainerContextProps {
   answerSetting: string;
   languageSetting: string;
@@ -35,34 +40,30 @@ export function Settings({
 
   return (
     <Flex align="start" gap={8}>
-      {
-        enableLanguageSetting && (
-          <RadioGroup
-            label="Translate"
-            onChange={context.setLanguageSetting}
-            value={context.languageSetting}
-          >
-            <RadioGroup.Option value="en">English to Oneida</RadioGroup.Option>
-            <RadioGroup.Option value="on">Oneida to English</RadioGroup.Option>
-            <RadioGroup.Option value="both">Both</RadioGroup.Option>
-          </RadioGroup>
-        )
-      }
+      {enableLanguageSetting && (
+        <RadioGroup
+          label="Translate"
+          onChange={context.setLanguageSetting}
+          value={context.languageSetting}
+        >
+          <RadioGroup.Option value="en">English to Oneida</RadioGroup.Option>
+          <RadioGroup.Option value="on">Oneida to English</RadioGroup.Option>
+          <RadioGroup.Option value="both">Both</RadioGroup.Option>
+        </RadioGroup>
+      )}
 
-      {
-        enableAnswerTypeSetting && (
-          <RadioGroup
-            label="Answer with"
-            onChange={context.setAnswerSetting}
-            value={context.answerSetting}
-          >
-            <RadioGroup.Option value="multipleChoice">
-              Multiple choice
-            </RadioGroup.Option>
-            <RadioGroup.Option value="text">Text</RadioGroup.Option>
-          </RadioGroup>
-        )
-      }
+      {enableAnswerTypeSetting && (
+        <RadioGroup
+          label="Answer with"
+          onChange={context.setAnswerSetting}
+          value={context.answerSetting}
+        >
+          <RadioGroup.Option value="multipleChoice">
+            Multiple choice
+          </RadioGroup.Option>
+          <RadioGroup.Option value="text">Text</RadioGroup.Option>
+        </RadioGroup>
+      )}
 
       {enableQuestionCountSetting && (
         <Select
@@ -83,9 +84,9 @@ export function AnswerMultipleChoiceButtons({
   isCorrect,
   options,
 }: {
-    questionKey: string;
-    isCorrect: boolean;
-    options: { key: string; text: string }[]
+  questionKey: string;
+  isCorrect: boolean;
+  options: QuizOption[];
 }) {
   const quizContext = useQuizContext();
   const hasSelected = !!quizContext.hasAnswer;
@@ -98,17 +99,17 @@ export function AnswerMultipleChoiceButtons({
             "rounded border border-solid border-slate-500 p-2",
 
             option.key === questionKey &&
-            !isCorrect &&
-            hasSelected &&
-            "bg-green-400 text-white",
+              !isCorrect &&
+              hasSelected &&
+              "bg-green-400 text-white",
 
             option.key === quizContext.answer &&
-            isCorrect &&
-            "bg-green-700 text-white",
+              isCorrect &&
+              "bg-green-700 text-white",
 
             option.key === quizContext.answer &&
-            !isCorrect &&
-            "bg-red-700 text-white"
+              !isCorrect &&
+              "bg-red-700 text-white"
           )}
           disabled={hasSelected}
           key={option.key}

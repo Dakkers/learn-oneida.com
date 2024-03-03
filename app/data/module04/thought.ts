@@ -7,64 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        pronoun: "i",
-        breakdown: ["wá·", { text: "k" }, "elheʔ"],
+        breakdown: ["wá·", ["k"], "elheʔ"],
       },
       {
-        pronoun: "u",
-        breakdown: ["wá", { text: "hs" }, "elheʔ"],
+        breakdown: ["wá", ["hs"], "elheʔ"],
       },
       {
-        pronoun: "m",
-        breakdown: ["wá·", { text: "l" }, "elheʔ"],
+        breakdown: ["wá·", ["l"], "elheʔ"],
       },
       {
-        pronoun: "f",
-        breakdown: ["wá·", { text: "y" }, "elheʔ"],
+        breakdown: ["wá·", ["y"], "elheʔ"],
       },
       {
-        pronoun: "it",
-        breakdown: ["wá·", { text: "w" }, "elheʔ"],
+        breakdown: ["wá·", ["w"], "elheʔ"],
       },
       {
-        pronoun: "uni",
-        breakdown: ["wé", { text: "tn" }, "elheʔ"],
+        breakdown: ["wé", ["tn"], "elheʔ"],
       },
       {
-        pronoun: "soni",
-        breakdown: ["waʔ", { text: "ákn" }, "elheʔ"],
+        breakdown: ["waʔ", ["ákn"], "elheʔ"],
       },
       {
-        pronoun: "u2",
-        breakdown: ["wé", { text: "sn" }, "elheʔ"],
+        breakdown: ["wé", ["sn"], "elheʔ"],
       },
       {
-        pronoun: "2m",
-        breakdown: ["wá·", { text: "n" }, "elheʔ"],
+        breakdown: ["wá·", ["n"], "elheʔ"],
       },
       {
-        pronoun: "2f",
-        breakdown: ["wá·", { text: "kn" }, "elheʔ"],
+        breakdown: ["wá·", ["kn"], "elheʔ"],
       },
       {
-        pronoun: "us",
-        breakdown: ["wé", { text: "tw" }, "elheʔ"],
+        breakdown: ["wé", ["tw"], "elheʔ"],
       },
       {
-        pronoun: "theyni",
-        breakdown: ["waʔ", { text: "ákw" }, "elheʔ"],
+        breakdown: ["waʔ", ["ákw"], "elheʔ"],
       },
       {
-        pronoun: "yall",
-        breakdown: ["wé", { text: "sw" }, "elheʔ"],
+        breakdown: ["wé", ["sw"], "elheʔ"],
       },
       {
-        pronoun: "ms",
-        breakdown: ["wa", { text: "hʌ·n" }, "élheʔ"],
+        breakdown: ["wa", ["hʌ·n"], "élheʔ"],
       },
       {
-        pronoun: "fs",
-        breakdown: ["waʔ", { text: "ku·n" }, "élheʔ"],
+        breakdown: ["waʔ", ["ku·n"], "élheʔ"],
       },
     ],
   },

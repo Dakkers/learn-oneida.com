@@ -1,10 +1,11 @@
 import { Text } from "@/design/components/text";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Flex } from "@/design/components/flex";
+import { BreakdownArray } from "../TextBreakdown";
 
 export function GoodPeopleBadPeopleResource({ level = 1 }: { level?: 1 | 2 }) {
-  const goodPeopleData = [
+  const goodPeopleData: Array<BreakdownArray[]> = [
     [
       [{ text: "k" }, "ukweʔtiyó"],
       [{ text: "k" }, "ukweʔtiyo", "hné·"],
@@ -25,8 +26,8 @@ export function GoodPeopleBadPeopleResource({ level = 1 }: { level?: 1 | 2 }) {
       [{ text: "lʌn" }, "ukweʔtiyóhseʔ"],
       [{ text: "lʌn" }, "ukweʔtiyóhs", "kweʔ"],
     ],
-  ].map(mapper);
-  const badPeopleData = [
+  ];
+  const badPeopleData: Array<BreakdownArray[]> = [
     [
       [{ text: "k" }, "ukweʔtáksʌ"],
       [{ text: "k" }, "ukweʔtaksʌ́", "hné·"],
@@ -47,8 +48,8 @@ export function GoodPeopleBadPeopleResource({ level = 1 }: { level?: 1 | 2 }) {
       [{ text: "lʌn" }, "ukweʔtáksʌhseʔ"],
       [{ text: "lʌn" }, "ukweʔtaksʌhs", "kweʔ"],
     ],
-  ].map(mapper);
-  const goodKidsData = [
+  ];
+  const goodKidsData: Array<BreakdownArray[]> = [
     [
       [{ text: "k" }, "eksaʔtiyó"],
       [{ text: "k" }, "eksaʔtiyo", "hné·"],
@@ -69,8 +70,8 @@ export function GoodPeopleBadPeopleResource({ level = 1 }: { level?: 1 | 2 }) {
       [{ text: "lati" }, "ksaʔtiyóhseʔ"],
       [{ text: "lati" }, "ksaʔtiyóhs", "kweʔ"],
     ],
-  ].map(mapper);
-  const badKidsData = [
+  ];
+  const badKidsData: Array<BreakdownArray[]> = [
     [
       [{ text: "k" }, "eksaʔtáksʌ"],
       [{ text: "k" }, "eksaʔtaksʌ́", "hneʔ"],
@@ -91,40 +92,52 @@ export function GoodPeopleBadPeopleResource({ level = 1 }: { level?: 1 | 2 }) {
       [{ text: "lati" }, "ksaʔtáksʌhseʔ"],
       [{ text: "lati" }, "ksaʔtaksʌhs", "kweʔ"],
     ],
-  ].map(mapper);
+  ];
 
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading level={level}>Good and Bad People</SectionHeading>
       <Text>
         Here, two more conjugations are introduced. <b>iyo</b> makes the entity
-        "good" and <b>aksʌ</b> other makes the "bad".
+        &quot;good&quot; and <b>aksʌ</b> other makes the &quot;bad&quot;.
       </Text>
-      <SectionHeading level={level + 1}>Good People</SectionHeading>
+      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+        Good People
+      </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={TableWrapper.createPastTenseColumns("PR")}
-        data={goodPeopleData}
+        data={goodPeopleData.map(mapper)}
       />
-      <SectionHeading level={level + 1}>Bad People</SectionHeading>
+      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+        Bad People
+      </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={TableWrapper.createPastTenseColumns("PR")}
-        data={badPeopleData}
+        data={badPeopleData.map(mapper)}
       />
-      <SectionHeading level={level + 1}>Good Kids</SectionHeading>
+      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+        Good Kids
+      </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={TableWrapper.createPastTenseColumns("PR")}
-        data={goodKidsData}
+        data={goodKidsData.map(mapper)}
       />
-      <SectionHeading level={level + 1}>Bad Kids</SectionHeading>
+      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+        Bad Kids
+      </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={TableWrapper.createPastTenseColumns("PR")}
-        data={badKidsData}
+        data={badKidsData.map(mapper)}
       />
     </Flex>
   );
 }
 
-const mapper = ([left, right], i) => {
+const mapper = ([left, right]: BreakdownArray[], i: number) => {
   const pronoun =
     i === 0
       ? "i"

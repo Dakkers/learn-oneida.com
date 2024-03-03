@@ -43,11 +43,11 @@ import friendsJson from "../../data/family/plural/friends.json";
 
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
-import { TextBreakdown } from "../TextBreakdown";
-import { PRONOUN_MAP_EN_POSSESSIVE, Pronoun } from "~/utils";
+import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
+import { PRONOUN_MAP_EN_POSSESSIVE, type Pronoun } from "~/utils";
 import { TableOfContents as TOC } from "../TableOfContents";
 import { Letter } from "../Letter";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 
 export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
   return (
@@ -64,30 +64,34 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
       </Text>
       <Text>
         Most of the time, purple pronominals are used. When the relative is
-        older, you must use the pronominal that corresponds to "relative" →
-        "person". When the relative is younger, use the "person" → "relative"
-        pronominal.
+        older, you must use the pronominal that corresponds to
+        &quot;relative&quot; → &quot;person&quot;. When the relative is younger,
+        use the &quot;person&quot; → &quot;relative&quot; pronominal.
       </Text>
       <Text>
-        As a more concrete example, if I wanted to say "my uncle", I would start
-        with the root word <b>nulha</b>. My uncle is a male, and is older than
-        me, so I would then look up the pronominal corresponding to "him → me"
-        which is <Letter>lak</Letter>. Thus, the translation is <b>laknulhá·</b>
-        .
+        As a more concrete example, if I wanted to say &quot;my uncle&quot;, I
+        would start with the root word <b>nulha</b>. My uncle is a male, and is
+        older than me, so I would then look up the pronominal corresponding to
+        &quot;him → me&quot; which is <Letter>lak</Letter>. Thus, the
+        translation is <b>laknulhá·</b>.
       </Text>
       <Text>
-        Similarly, to say "your niece", start with the root word "uhwatʌha".
-        Look up the pronominal corresponding to "you → her" (because your niece
-        is younger than you) and attach it to the root word. The result is{" "}
-        <b>sheyuhwatʌha</b>.
+        Similarly, to say &quot;your niece&quot;, start with the root word
+        &quot;uhwatʌha&quot;. Look up the pronominal corresponding to &quot;you
+        → her&quot; (because your niece is younger than you) and attach it to
+        the root word. The result is <b>sheyuhwatʌha</b>.
       </Text>
       <Text>
-        <strong>Note</strong>: the term "older" is misleading as it doesn't
-        exactly mean "age", but it is more to do with "seniority" in the
-        bloodline. Even if your uncle is actually younger than you, you would
-        still use the pronominal for "he → you".
+        <strong>Note</strong>: the term &quot;older&quot; is misleading as it
+        doesn&lsquo;t exactly mean &quot;age&quot;, but it is more to do with
+        &quot;seniority&quot; in the bloodline. Even if your uncle is actually
+        younger than you, you would still use the pronominal for &quot;he →
+        you&quot;.
       </Text>
-      <SectionHeading id="female-relatives-older" level={level + 1}>
+      <SectionHeading
+        id="female-relatives-older"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Older Female Relatives
       </SectionHeading>
       <RelativesTable
@@ -99,7 +103,10 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         ]}
       />
 
-      <SectionHeading id="female-relatives-younger" level={level + 1}>
+      <SectionHeading
+        id="female-relatives-younger"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Younger Female Relatives
       </SectionHeading>
       <RelativesTable
@@ -115,7 +122,10 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
           },
         ]}
       />
-      <SectionHeading id="male-relatives-older" level={level + 1}>
+      <SectionHeading
+        id="male-relatives-older"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Older Male Relatives
       </SectionHeading>
       <RelativesTable
@@ -126,7 +136,10 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
           { data: olderBrotherJson, en: "older brother", oneida: "ʔkʌha" },
         ]}
       />
-      <SectionHeading id="male-relatives-younger" level={level + 1}>
+      <SectionHeading
+        id="male-relatives-younger"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Younger Male Relatives
       </SectionHeading>
       <RelativesTable
@@ -143,7 +156,10 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         ]}
       />
 
-      <SectionHeading id="cousins" level={level + 1}>
+      <SectionHeading
+        id="cousins"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Cousins & Friends
       </SectionHeading>
       <RelativesTable
@@ -154,7 +170,10 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         pronouns={["soni", "u2", "2m", "2f", "us", "yall"]}
       />
 
-      <SectionHeading id="family" level={level + 1}>
+      <SectionHeading
+        id="family"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Family
       </SectionHeading>
       <RelativesTable
@@ -174,7 +193,10 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         ]}
       />
 
-      <SectionHeading id="siblings" level={level + 1}>
+      <SectionHeading
+        id="siblings"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Siblings, Related
       </SectionHeading>
       <RelativesTable
@@ -201,7 +223,10 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
         ]}
       />
 
-      <SectionHeading id="multiple-family-members" level={level + 1}>
+      <SectionHeading
+        id="multiple-family-members"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Multiple Family Members
       </SectionHeading>
       <RelativesTable
@@ -246,6 +271,7 @@ export function FamilyResource({ level = 1 }: { level: 1 | 2 }) {
           { data: cousinsJson, en: "cousins", oneida: "ʔkʌʔokuha" },
           { data: friendsJson, en: "friends", oneida: "nulha·shuha" },
         ]}
+        // @ts-expect-error To be addressed in LO-16
         pronouns={["i", "u", "m", "f", "she_her"]}
       />
     </>
@@ -256,7 +282,8 @@ function RelativesTable({
   datasets,
   pronouns = ["i", "u", "m", "f", "us", "yall"],
 }: {
-  datasets: any[];
+  // @ts-expect-error To be addressed in LO-16
+  datasets: Unsure[];
   pronouns?: Pronoun[];
 }) {
   return (
@@ -264,12 +291,16 @@ function RelativesTable({
       columns={[
         {
           accessorKey: "pronoun",
-          cell: (value) => <Text>{PRONOUN_MAP_EN_POSSESSIVE[value]}</Text>,
+          // @ts-expect-error To be addressed in LO-12
+          cell: (value: Pronoun) => (
+            <Text>{PRONOUN_MAP_EN_POSSESSIVE[value]}</Text>
+          ),
           header: "Pronoun (en)",
         },
+        // @ts-expect-error To be addressed in LO-12
         ...datasets.map((ds) => ({
           accessorKey: ds.en,
-          cell: (value) => (
+          cell: (value: BreakdownArray) => (
             <TextBreakdown
               breakdown={value}
               prefix={ds.data.prefix}
@@ -289,7 +320,9 @@ function RelativesTable({
       data={pronouns.map((pronoun) => {
         const result = { pronoun };
         for (const ds of datasets) {
+          // @ts-expect-error To be addressed in LO-16
           result[ds.en] = ds.data.phrases.find(
+            // @ts-expect-error To be addressed in LO-16
             (p) => p.pronoun === pronoun
           ).breakdown;
         }

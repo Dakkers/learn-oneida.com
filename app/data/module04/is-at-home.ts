@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["t", { text: "k" }, "í·tluʔ"],
+        breakdown: ["t", ["k"], "í·tluʔ"],
       },
       {
-        breakdown: ["te", { text: "hs" }, "í·tluʔ"],
+        breakdown: ["te", ["hs"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", { text: "hʌ́" }, "·tluʔ"],
+        breakdown: ["t", ["hʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["t", { text: "yé" }, "·tluʔ"],
+        breakdown: ["t", ["yé"], "·tluʔ"],
       },
       {
-        breakdown: ["t", { text: "kʌ́" }, "·tluʔ"],
+        breakdown: ["t", ["kʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["ti", { text: "tn" }, "í·tluʔ"],
+        breakdown: ["ti", ["tn"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", { text: "yakn" }, "í·tluʔ"],
+        breakdown: ["t", ["yakn"], "í·tluʔ"],
       },
       {
-        breakdown: ["ti", { text: "sn" }, "í·tluʔ"],
+        breakdown: ["ti", ["sn"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", { text: "hn" }, "í·tluʔ"],
+        breakdown: ["t", ["hn"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", { text: "kn" }, "í·tluʔ"],
+        breakdown: ["t", ["kn"], "í·tluʔ"],
       },
       {
-        breakdown: ["ti", { text: "twʌ́" }, "·tluʔ"],
+        breakdown: ["ti", ["twʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["t", { text: "yakwʌ́" }, "·tluʔ"],
+        breakdown: ["t", ["yakwʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["ti", { text: "swʌ́" }, "·tluʔ"],
+        breakdown: ["ti", ["swʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["t", { text: "hat" }, "í·tluʔ"],
+        breakdown: ["t", ["hat"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", { text: "kut" }, "í·tluʔ"],
+        breakdown: ["t", ["kut"], "í·tluʔ"],
       },
     ],
   },

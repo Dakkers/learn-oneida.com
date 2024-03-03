@@ -36,7 +36,11 @@ import {
   PURPLES_MAP,
   pronouns,
 } from "~/utils";
-import { BreakdownType, TextBreakdown } from "~/components/TextBreakdown";
+import {
+  BreakdownArray,
+  BreakdownType,
+  TextBreakdown,
+} from "~/components/TextBreakdown";
 import { PronominalColor } from "~/components/Pronominal";
 import { List } from "@/design/components/list";
 import { Letter } from "~/components/Letter";
@@ -330,6 +334,12 @@ function VerbsTable({
   enData: Record<string, string>;
   headerText: string;
   keys: string[];
+  // @ts-expect-error To be addressed in LO-21
+  knowData: SomeData;
+  // @ts-expect-error To be addressed in LO-21
+  likeData: SomeData;
+  // @ts-expect-error To be addressed in LO-21
+  loveData: SomeData;
 }) {
   let typeFallback: BreakdownType | undefined;
   if (color === "red") {
@@ -348,7 +358,7 @@ function VerbsTable({
       },
       {
         accessorKey: "like",
-        cell: (value) => (
+        cell: (value: BreakdownArray) => (
           <TextBreakdown breakdown={value} typeFallback={typeFallback} />
         ),
         header: headerText.replace(
@@ -391,6 +401,7 @@ function VerbsTable({
     [keys, enData, likeData, knowData, loveData]
   );
 
+  // @ts-expect-error To be addressed in LO-12
   return <TableWrapper columns={columns} data={rows} />;
 }
 
@@ -406,14 +417,14 @@ function CommandsSection() {
       </Text>
       <List>
         <List.Item>
-          <b>hlo·li̲’̲·</b> — to tell someone
+          <b>hlo·li̲ʔ̲·</b> — to tell someone
         </List.Item>
         <List.Item>
           <b>liwanu·túse̲</b> — to ask someone
         </List.Item>
       </List>
       <SectionHeading id="commands-tell" level={3}>
-        <b>hlo·li̲’̲·</b> — to tell someone
+        <b>hlo·li̲ʔ̲·</b> — to tell someone
       </SectionHeading>
       <CommandsTable data={hloliData} verb="tell" />
       <SectionHeading id="commands-ask" level={3}>
@@ -446,7 +457,16 @@ function NegatedCommandsSection() {
   );
 }
 
-function CommandsTable({ data, negated = false, verb }) {
+function CommandsTable({
+  data,
+  negated = false,
+  verb,
+}: {
+  // @ts-expect-error To be addressed in LO-21
+  data: SomeOtherData;
+  negated?: boolean;
+  verb: string;
+}) {
   const keys = ["you_me", "you_us_exclusive", "you_her", "you_him"] as const;
   const negativeText = negated ? "Don't" : "";
   const en = {
@@ -463,6 +483,7 @@ function CommandsTable({ data, negated = false, verb }) {
     <TableWrapper
       columns={TableWrapper.columnsParadigmPurple}
       data={keys.map((key) => ({
+        // @ts-expect-error To be addressed in LO-21
         breakdown: data.phrases.find((p) => p.key === key).breakdown,
         en: en[key],
       }))}
@@ -485,6 +506,7 @@ function AliveDeadSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
+        // @ts-expect-error To be addressed in LO-2, LO-11, LO-21
         data={unheJson}
       />
       <SectionHeading id="verb-dead" level={2}>
@@ -499,6 +521,7 @@ function AliveDeadSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
+        // @ts-expect-error To be addressed in LO-2, LO-11
         data={iheyuJson}
       />
     </>
@@ -521,6 +544,7 @@ function PassedOnSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
+        // @ts-expect-error To be addressed in LO-2, LO-11
         data={atukohtuJson}
       />
     </>
@@ -611,6 +635,7 @@ function YoungOldSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
+        // @ts-expect-error To be addressed in LO-21
         data={kstʌhaJson}
       />
 
@@ -631,6 +656,7 @@ function YoungOldSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
+        // @ts-expect-error To be addressed in LO-21
         data={kʌʔni_yʌhaJson}
       />
       <Notice intent="warning">
@@ -751,6 +777,7 @@ function AgeSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
+        // @ts-expect-error To be addressed in LO-21
         data={ohsliyakuJson}
       />
       <Text>
@@ -888,9 +915,14 @@ function ThingsThatAreTheSameSection() {
   );
 }
 
+// @ts-expect-error To be addressed in LO-21
 const getBreakdown = (data, key) =>
-  data.phrases.find((p) => p.key === key || p.pronoun === key)?.breakdown;
+  // @ts-expect-error To be addressed in LO-21
+  data.phrases.find(
+    (p: SomethingElseEntirely) => p.key === key || p.pronoun === key
+  )?.breakdown;
 
+// @ts-expect-error To be addressed in LO-21
 function magicalThing(data) {
   const result = _.cloneDeep(data);
   for (const phrase of result.phrases) {

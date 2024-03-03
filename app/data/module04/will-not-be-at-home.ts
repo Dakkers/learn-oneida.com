@@ -7,139 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "k" },
-          "iʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["k"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "hs" },
-          "iʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["hs"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "hʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["hʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "ye" },
-          "ʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["ye"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "kʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["kʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "ute", type: "IFUT" },
-          { text: "tn" },
-          "iʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["ute", "IFUT"], ["tn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "yakn" },
-          "iʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["yakn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "ute", type: "IFUT" },
-          { text: "sn" },
-          "iʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["ute", "IFUT"], ["sn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "hn" },
-          "iʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["hn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "kn" },
-          "iʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["kn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "ute", type: "IFUT" },
-          { text: "twʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["ute", "IFUT"], ["twʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "yakwʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["yakwʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "ute", type: "IFUT" },
-          { text: "swʌ" },
-          "ʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["ute", "IFUT"], ["swʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "hat" },
-          "iʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["hat"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [
-          "yáh th",
-          { text: "uta", type: "IFUT" },
-          { text: "kut" },
-          "iʔtlu·t",
-          "ákeʔ",
-        ],
+        breakdown: ["yáh th", ["uta", "IFUT"], ["kut"], "iʔtlu·t", "ákeʔ"],
       },
     ],
   },

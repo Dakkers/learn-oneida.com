@@ -1,6 +1,5 @@
 import { Flex } from "@/design/components/flex";
-import { TableWrapper } from "@/design/components/tableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { ResourceProps } from "./utils";
 import redPronominalsJson from "../../data/red-pronominals.json";
 import bluePronominalsJson from "../../data/blue-pronominals.json";
@@ -27,7 +26,7 @@ import {
   pronouns,
 } from "~/utils";
 import { Pronominal, PronominalColor } from "../Pronominal";
-import { TextBreakdown } from "../TextBreakdown";
+import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
 
 export const DATA_SEASONS = [
   { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
@@ -42,7 +41,10 @@ export function PronominalsResource({ level = 1 }: ResourceProps) {
       <SectionHeading id="pronominals" level={level}>
         Pronominals
       </SectionHeading>
-      <SectionHeading id="english-pronouns" level={level + 1}>
+      <SectionHeading
+        id="english-pronouns"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         English Pronouns
       </SectionHeading>
       <Text>
@@ -54,7 +56,10 @@ export function PronominalsResource({ level = 1 }: ResourceProps) {
         Oneida has two kinds of pronouns: <b>standalone</b> and <b>bound</b>.
       </Text>
 
-      <SectionHeading id="standalone-pronouns" level={level + 1}>
+      <SectionHeading
+        id="standalone-pronouns"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Standalone Pronouns
       </SectionHeading>
       <Text>
@@ -62,7 +67,10 @@ export function PronominalsResource({ level = 1 }: ResourceProps) {
         sentence. The standalone pronouns are:
       </Text>
       <FreestandingPronounsSection />
-      <SectionHeading id="bound-pronouns" level={level + 1}>
+      <SectionHeading
+        id="bound-pronouns"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Bound Pronouns
       </SectionHeading>
       <Text>
@@ -85,7 +93,10 @@ export function PronominalsResource({ level = 1 }: ResourceProps) {
         an abbreviation of &quot;pronominal prefix&quot;.
       </Notice>
 
-      <SectionHeading id="red-pronominals" level={level + 1}>
+      <SectionHeading
+        id="red-pronominals"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Subjective (Red) Pronominals
       </SectionHeading>
       <Text>
@@ -104,9 +115,10 @@ export function PronominalsResource({ level = 1 }: ResourceProps) {
         gives us <b>lattókhaʔ</b> wich means &quot;he is wise&quot;.
       </Text>
       <Text>
-        The small numbers in the table cells represent exceptions – Oneida is
+        The small numbers in the table cells represent exceptions — Oneida is
         full of them!
       </Text>
+      {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsTable color="red" data={redPronominalsJson} />
 
       <Text variant="labelL">Exception 1</Text>
@@ -167,24 +179,35 @@ export function PronominalsResource({ level = 1 }: ResourceProps) {
 
       <Separator />
 
-      <SectionHeading id="blue-pronominals" level={level + 1}>
+      <SectionHeading
+        id="blue-pronominals"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Objective (blue) Pronominals
       </SectionHeading>
       <Text>
         The table below displays the full list of objective (blue) pronominals.
       </Text>
+      {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsTable color="blue" data={bluePronominalsJson} />
 
-      <SectionHeading id="purple-pronominals" level={level + 1}>
+      <SectionHeading
+        id="purple-pronominals"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Purple Pronominals
       </SectionHeading>
       <Text>
         The table below displays the full list of purple pronominals. These do
         not have an English counterpart.
       </Text>
+      {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsTable color="purple" data={purplePronominalsJson} />
 
-      <SectionHeading id="lightblue-pronominals" level={level + 1}>
+      <SectionHeading
+        id="lightblue-pronominals"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Possessive (light blue) Pronominals
       </SectionHeading>
       <PronominalsTable
@@ -202,6 +225,7 @@ export function PronominalsResource({ level = 1 }: ResourceProps) {
           "fs",
         ]}
         color="lightblue"
+        // @ts-expect-error To be addressed in LO-17
         data={lightbluePronominalsJson}
       />
     </Flex>
@@ -272,10 +296,15 @@ function FreestandingPronounsSection() {
 function PronominalsTable({
   allowedPronouns,
   color,
-  data = {},
+  data = [],
 }: {
   allowedPronouns?: Pronoun[];
   color: PronominalColor;
+  data:
+    | Pronoun[]
+    | Array<{
+        label: string;
+      }>;
 }) {
   const stems = ["c", "a", "i", "e", "o"];
   const isPurple = color === "purple";
@@ -297,22 +326,27 @@ function PronominalsTable({
       <TableBody>
         {rowsToUse.map((row, i) => (
           <TableRow key={i}>
+            {/* @ts-expect-error To be addressed in LO-17 */}
             {!isPurple && <TableCell>{PRONOUN_MAP_ONEIDA[row]}</TableCell>}
             <TableCell>
               {!isPurple
-                ? PRONOUN_MAP_EN[row]
-                : arrayify(row.label).map((label, j) => (
+                ? // @ts-expect-error To be addressed in LO-17
+                  PRONOUN_MAP_EN[row]
+                : // @ts-expect-error To be addressed in LO-17
+                  arrayify(row.label).map((label, j) => (
                     <div key={j}>{label}</div>
                   ))}
             </TableCell>
 
             {stems.map((stem) => {
+              // @ts-expect-error To be addressed in LO-17
               const datum = isPurple ? row : data[row];
               const content = datum[stem] ?? datum.default;
               return (
                 <TableCell key={stem}>
                   <Flex direction="column">
-                    {content.map((prefixArr, i) => (
+                    {/* @ts-expect-error To be addressed in LO-17 */}
+                    {content.map((prefixArr: PrefixArray, i: number) => (
                       <PronominalTableText
                         color={color}
                         entry={prefixArr}
@@ -330,7 +364,19 @@ function PronominalsTable({
   );
 }
 
-function PronominalTableText({ entry, color }) {
+function PronominalTableText({
+  entry,
+  color,
+}: {
+  entry:
+    | string
+    | {
+        breakdown?: BreakdownArray;
+        excp?: FootnoteNumbers;
+        text: string;
+      };
+  color: PronominalColor;
+}) {
   if (typeof entry === "string") {
     return <Pronominal color={color}>{entry}</Pronominal>;
   }
@@ -350,6 +396,7 @@ function PronominalTableText({ entry, color }) {
     <Pronominal color={color}>{entry.text}</Pronominal>
   ) : (
     <TextBreakdown
+      // @ts-expect-error To be addressed in LO-17
       breakdown={entry.breakdown.map((b) => {
         if (typeof b === "string") {
           return {
@@ -357,6 +404,7 @@ function PronominalTableText({ entry, color }) {
             type: typeFallback,
           };
         }
+        // @ts-expect-error To be addressed in LO-17
         const type = arrayify(b.type ?? []);
         return {
           ...b,
@@ -375,7 +423,9 @@ function PronominalTableText({ entry, color }) {
   );
 }
 
-function Footnotes({ nums: _nums }: { nums: string[] | string }) {
+type FootnoteNumbers = string[] | string;
+
+function Footnotes({ nums: _nums }: { nums: FootnoteNumbers }) {
   const nums = arrayify(_nums).map((n) => parseInt(n));
   nums.sort();
 

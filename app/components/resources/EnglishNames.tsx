@@ -38,6 +38,7 @@ export function EnglishNamesResource({ level = 1 }: ResourceProps) {
       <SectionHeading id="english-names" level={level}>
         English Names
       </SectionHeading>
+      {/* @ts-expect-error To be addressed in LO-12 */}
       <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={names} />
     </Flex>
   );

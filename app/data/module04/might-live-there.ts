@@ -7,65 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [{ text: "uta", type: "IFUT" }, { text: "k" }, "náklekeʔ"],
+        breakdown: [["uta", "IFUT"], ["k"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "uta", type: "IFUT" }, { text: "hs" }, "náklekeʔ"],
+        breakdown: [["uta", "IFUT"], ["hs"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "uta", type: "IFUT" }, { text: "ha" }, "náklekeʔ"],
+        breakdown: [["uta", "IFUT"], ["ha"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "uta", type: "IFUT" }, { text: "yé" }, "náklekeʔ"],
+        breakdown: [["uta", "IFUT"], ["yé"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "uta", type: "IFUT" }, { text: "ka" }, "náklekeʔ"],
+        breakdown: [["uta", "IFUT"], ["ka"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "ute", type: "IFUT" }, { text: "tni" }, "náklekeʔ"],
+        breakdown: [["ute", "IFUT"], ["tni"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          { text: "uta", type: "IFUT" },
-          { text: "yakni" },
-          "náklekeʔ",
-        ],
+        breakdown: [["uta", "IFUT"], ["yakni"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "ute", type: "IFUT" }, { text: "sni" }, "náklekeʔ"],
+        breakdown: [["ute", "IFUT"], ["sni"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "uta", type: "IFUT" }, { text: "hni" }, "náklekeʔ"],
+        breakdown: [["uta", "IFUT"], ["hni"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "uta", type: "IFUT" }, { text: "kni" }, "náklekeʔ"],
+        breakdown: [["uta", "IFUT"], ["kni"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "ute", type: "IFUT" }, { text: "twa" }, "náklekeʔ"],
+        breakdown: [["ute", "IFUT"], ["twa"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          { text: "uta", type: "IFUT" },
-          { text: "yakwa" },
-          "náklekeʔ",
-        ],
+        breakdown: [["uta", "IFUT"], ["yakwa"], "náklekeʔ"],
       },
       {
-        breakdown: [{ text: "ute", type: "IFUT" }, { text: "swa" }, "náklekeʔ"],
+        breakdown: [["ute", "IFUT"], ["swa"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          { text: "uta", type: "IFUT" },
-          { text: "hati" },
-          "náklekeʔ",
-        ],
+        breakdown: [["uta", "IFUT"], ["hati"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          { text: "uta", type: "IFUT" },
-          { text: "kuti" },
-          "náklekeʔ",
-        ],
+        breakdown: [["uta", "IFUT"], ["kuti"], "náklekeʔ"],
       },
     ],
   },

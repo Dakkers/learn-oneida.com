@@ -7,54 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [
-          "thó ye",
-          { text: "he·", type: "RPL" },
-          { text: "k" },
-          "é·seʔ",
-        ],
+        breakdown: ["thó ye", ["he·", "RPL"], ["k"], "é·seʔ"],
       },
       {
-        breakdown: ["thó yé", { text: "hs" }, "ehseʔ"],
+        breakdown: ["thó yé", ["hs"], "ehseʔ"],
       },
       {
-        breakdown: ["thó yé·", { text: "l" }, "ehseʔ"],
+        breakdown: ["thó yé·", ["l"], "ehseʔ"],
       },
       {
-        breakdown: ["thó ye·", { text: "y" }, "ʌ́·seʔ"],
+        breakdown: ["thó ye·", ["y"], "ʌ́·seʔ"],
       },
       {
-        breakdown: ["thó ye·", { text: "w" }, "é·seʔ"],
+        breakdown: ["thó ye·", ["w"], "é·seʔ"],
       },
       {
-        breakdown: ["thó yé", { text: "tn" }, "ehseʔ"],
+        breakdown: ["thó yé", ["tn"], "ehseʔ"],
       },
       {
-        breakdown: ["thó ye", { text: "yákn" }, "ehseʔ"],
+        breakdown: ["thó ye", ["yákn"], "ehseʔ"],
       },
       {
-        breakdown: ["thó yé", { text: "sn" }, "ehseʔ"],
+        breakdown: ["thó yé", ["sn"], "ehseʔ"],
       },
       {
-        breakdown: ["thó yé·", { text: "n" }, "ehseʔ"],
+        breakdown: ["thó yé·", ["n"], "ehseʔ"],
       },
       {
-        breakdown: ["thó yé", { text: "kn" }, "ehseʔ"],
+        breakdown: ["thó yé", ["kn"], "ehseʔ"],
       },
       {
-        breakdown: ["thó yé", { text: "tw" }, "ehseʔ"],
+        breakdown: ["thó yé", ["tw"], "ehseʔ"],
       },
       {
-        breakdown: ["thó ye", { text: "yákw" }, "ehseʔ"],
+        breakdown: ["thó ye", ["yákw"], "ehseʔ"],
       },
       {
-        breakdown: ["thó yé", { text: "sw" }, "ehseʔ"],
+        breakdown: ["thó yé", ["sw"], "ehseʔ"],
       },
       {
-        breakdown: ["thó ye", { text: "hʌ·n" }, "é·seʔ"],
+        breakdown: ["thó ye", ["hʌ·n"], "é·seʔ"],
       },
       {
-        breakdown: ["thó ye", { text: "ku·n" }, "é·seʔ"],
+        breakdown: ["thó ye", ["ku·n"], "é·seʔ"],
       },
     ],
   },

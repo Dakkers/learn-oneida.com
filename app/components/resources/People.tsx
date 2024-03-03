@@ -1,22 +1,26 @@
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
-export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
+export function PeopleResource({ level = 1 }: ResourceProps) {
   return (
     <>
-      <SectionHeading id="people-resource" level={baseLevel}>
+      <SectionHeading id="people-resource" level={level}>
         People
       </SectionHeading>
       <Text>
         It is important to understand that the translations for two or more
-        people are not literal. <i>tehniská·</i> is not the literal translation
-        for &quot;2 boys&quot; – that is <i>tehniyáhse tehniská·</i>. You can
+        people are not literal. <b>tehniská·</b> is not the literal translation
+        for &quot;2 boys&quot; — that is <b>tehniyáhse tehniská·</b>. You can
         learn more about this in the &quot;Counting&quot; resource which is part
         of module 3.
       </Text>
 
-      <SectionHeading id="people-resource-children" level={baseLevel + 1}>
+      <SectionHeading
+        id="people-resource-children"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Children
       </SectionHeading>
       <TableWrapper
@@ -24,7 +28,10 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
         data={dataChildren}
       />
 
-      <SectionHeading id="people-resource-adolescents" level={baseLevel + 1}>
+      <SectionHeading
+        id="people-resource-adolescents"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Adolescents
       </SectionHeading>
       <TableWrapper
@@ -32,7 +39,10 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
         data={dataAdolescents}
       />
 
-      <SectionHeading id="people-resource-adults" level={baseLevel + 1}>
+      <SectionHeading
+        id="people-resource-adults"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Adults
       </SectionHeading>
       <TableWrapper
@@ -40,15 +50,19 @@ export function PeopleResource({ baseLevel = 1 }: { baseLevel?: 1 | 2 }) {
         data={dataAdults}
       />
 
-      <SectionHeading id="people-resource-older" level={baseLevel + 1}>
+      <SectionHeading
+        id="people-resource-older"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Older people
       </SectionHeading>
       <Text>
-        <b>Note</b>: These words do not mean "old people", "seniors", "elders",
-        etc. They mean people that are older than the speaker. Thus,{" "}
+        <b>Note</b>: These words do not mean &quot;old people&quot;,
+        &quot;seniors&quot;, &quot;elders&quot;, etc. They mean people that are
+        older than the speaker. Thus,{" "}
         <b>these words are not commonly used in this context (as nouns)</b>.
         Instead, they are used as verbs. You can learn more about this in the
-        "Age" resource which is part of module 2.
+        &quot;Age&quot; resource which is part of module 2.
       </Text>
       <TableWrapper
         columns={TableWrapper.columnsParadigmBlue}

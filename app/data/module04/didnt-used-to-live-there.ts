@@ -8,124 +8,49 @@ export default createParadigmData(
     suffix: "hkwe",
     phrases: [
       {
-        breakdown: [
-          "yáh thó teʔ",
-          { text: "k" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔ", ["k"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔte",
-          { text: "hs" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔte", ["hs"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔt",
-          { text: "ha" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔt", ["ha"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔt",
-          { text: "yé" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔt", ["yé"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔt",
-          { text: "ka" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔt", ["ka"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔti",
-          { text: "tni" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔti", ["tni"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔt",
-          { text: "yakni" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔt", ["yakni"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔti",
-          { text: "sni" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔti", ["sni"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔt",
-          { text: "hni" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔt", ["hni"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔt",
-          { text: "kni" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔt", ["kni"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔti",
-          { text: "twa" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔti", ["twa"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔt",
-          { text: "yakwa" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔt", ["yakwa"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔti",
-          { text: "swa" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔti", ["swa"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔt",
-          { text: "hati" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔt", ["hati"], "nákl", ["e", "EP"]],
       },
       {
-        breakdown: [
-          "yáh thó teʔt",
-          { text: "kuti" },
-          "nákl",
-          { text: "e", type: "EP" },
-        ],
+        breakdown: ["yáh thó teʔt", ["kuti"], "nákl", ["e", "EP"]],
       },
     ],
   },

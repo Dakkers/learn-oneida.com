@@ -1,6 +1,6 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { ResourceProps } from "./utils";
 
 export const DATA_SEASONS = [
@@ -34,14 +34,20 @@ export function SeasonsResource({ level = 1 }: ResourceProps) {
         columns={TableWrapper.columnsEnglishOneida}
         data={DATA_SEASONS}
       />
-      <SectionHeading id="seasons-during" level={level + 1}>
+      <SectionHeading
+        id="seasons-during"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         During a season
       </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={seasonsDuring}
       />
-      <SectionHeading id="seasons-other" level={level + 1}>
+      <SectionHeading
+        id="seasons-other"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Other phrases
       </SectionHeading>
       <TableWrapper

@@ -7,125 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          "hʌ",
-          { text: "k" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], "hʌ", ["k"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "hs" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["hs"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "hl" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["hl"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "y" },
-          "ʌ́·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["y"], "ʌ́·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "w" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["w"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "yae", type: "IFUT" },
-          { text: "tn" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["yae", "IFUT"], ["tn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "yákn" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["yákn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "yae", type: "IFUT" },
-          { text: "sn" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["yae", "IFUT"], ["sn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "hn" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["hn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "kn" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["kn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "yae", type: "IFUT" },
-          { text: "tw" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["yae", "IFUT"], ["tw"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "yákw" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["yákw"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "yae", type: "IFUT" },
-          { text: "sw" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["yae", "IFUT"], ["sw"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "hʌn" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["hʌn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "thó ",
-          { text: "ya", type: "IFUT" },
-          { text: "kun" },
-          "é·shekeʔ",
-        ],
+        breakdown: ["thó ", ["ya", "IFUT"], ["kun"], "é·shekeʔ"],
       },
     ],
   },

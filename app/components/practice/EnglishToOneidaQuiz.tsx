@@ -1,5 +1,12 @@
 import { Flex } from "@/design/components/flex";
-import { AnswerMultipleChoiceButtons, QuizContainerContext, AnswerText, NextBtn, Settings } from "./QuizContainer";
+import {
+  AnswerMultipleChoiceButtons,
+  QuizContainerContext,
+  AnswerText,
+  NextBtn,
+  Settings,
+  QuizOption,
+} from "./QuizContainer";
 import { Quiz, useQuizContext } from "./Quiz";
 import { Text } from "@/design/components/text";
 import React from "react";
@@ -9,11 +16,19 @@ import _ from "lodash";
 import { sanitizeIrregularCharacters } from "~/utils/words";
 
 export interface EnglishToOneidaQuizProps {
-  englishOptions: Opt[];
-  oneidaOptions: Opt[];
+  englishOptions: QuizOption[];
+  oneidaOptions: QuizOption[];
 }
 
-export function EnglishToOneidaQuiz ({
+interface Question {
+  answer: string;
+  key: string;
+  options: QuizOption[];
+  text: string;
+  type: "english_to_oneida" | "oneida_to_english";
+}
+
+export function EnglishToOneidaQuiz({
   englishOptions,
   oneidaOptions,
 }: EnglishToOneidaQuizProps) {
@@ -32,30 +47,26 @@ export function EnglishToOneidaQuiz ({
         setQuestionCountSetting,
       }}
     >
-      <Content
-        englishOptions={englishOptions}
-        oneidaOptions={oneidaOptions}
-      />
+      <Content englishOptions={englishOptions} oneidaOptions={oneidaOptions} />
     </QuizContainerContext.Provider>
   );
 }
 
-function Content({
-  englishOptions,
-  oneidaOptions,
-}: EnglishToOneidaQuizProps) {
+function Content({ englishOptions, oneidaOptions }: EnglishToOneidaQuizProps) {
   const [hasStarted, setHasStarted] = React.useState(false);
   const questions = useEnglishToOneidaQuestions({
     englishOptions,
     hasStarted,
     oneidaOptions,
-  })
+  });
   const getResultForQuestion = useEnglishToOneidaResultChecker({
-    englishOptions, oneidaOptions, questions
-  })
+    englishOptions,
+    oneidaOptions,
+    questions,
+  });
   const context = React.useContext(QuizContainerContext);
   if (!context) {
-    throw new Error('Missing QuizContainerContext')
+    throw new Error("Missing QuizContainerContext");
   }
 
   return (
@@ -68,7 +79,7 @@ function Content({
         >
           <Flex align="center" direction="column" justify="center" gap={8}>
             <Quiz.Questions>
-              {questions.map((q, i) => (
+              {questions.map((q) => (
                 <StandardQuestion
                   key={q.key}
                   options={q.options}
@@ -93,18 +104,12 @@ function Content({
         </Flex>
       )}
     </>
-  )
-
-}
-
-interface Opt {
-  key: string;
-  value: string;
+  );
 }
 
 interface TypicalOptions {
-  englishOptions: Opt[];
-  oneidaOptions: Opt[];
+  englishOptions: QuizOption[];
+  oneidaOptions: QuizOption[];
 }
 
 export function StandardQuestion({
@@ -112,7 +117,7 @@ export function StandardQuestion({
   questionKey,
   text,
 }: {
-  options: Opt[];
+  options: QuizOption[];
   questionKey: string;
   text: string;
 }) {
@@ -120,9 +125,7 @@ export function StandardQuestion({
   const quizContext = useQuizContext();
   return (
     <Flex align="center" direction="column" gap={8}>
-      <Text variant="headlineS">
-        {text}
-      </Text>
+      <Text variant="headlineS">{text}</Text>
 
       <div className="w-[600px]">
         <Flex align="center" direction="column" gap={4}>
@@ -132,11 +135,13 @@ export function StandardQuestion({
               questionKey={questionKey}
               options={options}
             />
-          ) : <AnswerText />}
+          ) : (
+            <AnswerText />
+          )}
         </Flex>
       </div>
     </Flex>
-  )
+  );
 }
 
 export function useEnglishToOneidaQuestions({
@@ -148,71 +153,66 @@ export function useEnglishToOneidaQuestions({
 }) {
   const context = React.useContext(QuizContainerContext);
 
-  const questions: Array<{
-    answer: string;
-    key: string;
-    options: Array<{ key: string; text: string; }>
-    text: string;
-    type: 'english_to_oneida' | 'oneida_to_english';
-  }> = React.useMemo(() => {
+  const questions: Array<Question> = React.useMemo(() => {
     if (!context || !hasStarted) {
       return [];
     }
 
-    const numOptions = context.languageSetting === 'both' ? englishOptions.length + oneidaOptions.length
-      : context.languageSetting === 'en' ? englishOptions.length
-      : oneidaOptions.length
+    const numOptions =
+      context.languageSetting === "both"
+        ? englishOptions.length + oneidaOptions.length
+        : context.languageSetting === "en"
+        ? englishOptions.length
+        : oneidaOptions.length;
 
     const result: typeof questions = new Array(
-      Math.min(
-        Number(context.questionCountSetting),
-        numOptions,
-      ),
+      Math.min(Number(context.questionCountSetting), numOptions)
     );
     for (let i = 0; i < result.length; i++) {
       const langKey = determineLangKey(context.languageSetting);
-      const list = langKey === 'en' ? englishOptions : oneidaOptions;
-      const oppositeList = langKey === 'en' ? oneidaOptions : englishOptions;
+      const list = langKey === "en" ? englishOptions : oneidaOptions;
+      const oppositeList = langKey === "en" ? oneidaOptions : englishOptions;
 
-      const questionDatum = _.sample(list.filter((datum) => (
-        !(result.find((existingEntry) => existingEntry?.key === datum.key))
-      ))) ?? list[0];
-      const answerDatum = oppositeList.find((opt) => opt.key === questionDatum.key);
+      const questionDatum =
+        _.sample(
+          list.filter(
+            (datum) =>
+              !result.find((existingEntry) => existingEntry?.key === datum.key)
+          )
+        ) ?? list[0];
+      const answerDatum = oppositeList.find(
+        (opt) => opt.key === questionDatum.key
+      );
 
       const optionsForQuestion = [];
       if (answerDatum) {
         optionsForQuestion.push({
           key: answerDatum.key,
-          text: answerDatum.value,
-        })
+          text: answerDatum.text,
+        });
       }
-      const sampledOptions = _.sampleSize(oppositeList, 5)
+      const sampledOptions = _.sampleSize(oppositeList, 5);
       for (const item of sampledOptions) {
         if (item.key !== questionDatum.key) {
           optionsForQuestion.push({
             key: item.key,
-            text: item.value,
+            text: item.text,
           });
         }
         if (optionsForQuestion.length >= 4) {
           break;
         }
       }
-      result[i] = ({
-        answer: answerDatum?.value ?? '',
+      result[i] = {
+        answer: answerDatum?.text ?? "",
         key: questionDatum.key,
         options: _.shuffle(optionsForQuestion),
-        text: questionDatum.value,
-        type: langKey === 'en' ? 'english_to_oneida' : 'oneida_to_english',
-      });
+        text: questionDatum.text,
+        type: langKey === "en" ? "english_to_oneida" : "oneida_to_english",
+      };
     }
     return result;
-  }, [
-    context,
-    hasStarted,
-    englishOptions,
-    oneidaOptions,
-  ]);
+  }, [context, hasStarted, englishOptions, oneidaOptions]);
 
   return questions;
 }
@@ -221,37 +221,40 @@ export function useEnglishToOneidaResultChecker({
   englishOptions,
   oneidaOptions,
   questions,
-}: TypicalOptions) {
+}: TypicalOptions & {
+  questions: Question[];
+}) {
   const context = React.useContext(QuizContainerContext);
   if (!context) {
-    throw new Error('Missing QuizContainerContext');
+    throw new Error("Missing QuizContainerContext");
   }
 
   return (index: number, userAnswer: string) => {
     const q = questions[index];
-    const listToUse = q.type === 'english_to_oneida' ? oneidaOptions : englishOptions;
+    const listToUse =
+      q.type === "english_to_oneida" ? oneidaOptions : englishOptions;
     const correctAnswerObj = listToUse.find((obj) => obj.key === q.key);
 
     let isCorrect = false;
     let selectedAnswer = userAnswer;
 
-    if (context.answerSetting === 'text') {
+    if (context.answerSetting === "text") {
       isCorrect =
         sanitizeIrregularCharacters(userAnswer) ===
-        sanitizeIrregularCharacters(correctAnswerObj?.value ?? '');
+        sanitizeIrregularCharacters(correctAnswerObj?.text ?? "");
     } else {
-      const selectedAnswerObj = listToUse.find((obj) => obj.key === userAnswer)
+      const selectedAnswerObj = listToUse.find((obj) => obj.key === userAnswer);
       isCorrect = q.key === selectedAnswer;
-      selectedAnswer = selectedAnswerObj?.value ?? '';
+      selectedAnswer = selectedAnswerObj?.text ?? "";
     }
 
     return {
-      correctAnswer: correctAnswerObj?.value ?? '',
+      correctAnswer: correctAnswerObj?.text ?? "",
       isCorrect,
       question: q.text,
       selectedAnswer,
-    }
-  }
+    };
+  };
 }
 
 function determineLangKey(languageSetting: string): "en" | "on" {

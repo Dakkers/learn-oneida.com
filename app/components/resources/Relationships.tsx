@@ -1,8 +1,8 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { TextBreakdown } from "../TextBreakdown";
+import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
 import { Text } from "@/design/components/text";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { ResourceProps } from "./utils";
 
 export function RelationshipsResource({ level = 1 }: ResourceProps) {
@@ -25,7 +25,7 @@ export function RelationshipsResource({ level = 1 }: ResourceProps) {
 
 const createColumns = TableWrapper.createPastTenseColumns;
 
-function MarriedTable({ level }) {
+function MarriedTable({ level = 2 }: ResourceProps) {
   const rows = [
     ["i", "wake"],
     ["u", "sa"],
@@ -51,10 +51,14 @@ function MarriedTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="married" level={level + 1}>
+      <SectionHeading
+        id="married"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Married
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={createColumns("PB", { suffix: "hne" })}
         data={rows}
       />
@@ -62,7 +66,7 @@ function MarriedTable({ level }) {
   );
 }
 
-function InARelationshipTable({ level }) {
+function InARelationshipTable({ level = 2 }: ResourceProps) {
   const rows = [
     {
       pronoun: "uni",
@@ -94,10 +98,14 @@ function InARelationshipTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="in-a-relationship" level={level + 1}>
+      <SectionHeading
+        id="in-a-relationship"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         In a relationship
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={createColumns("PR", { suffix: "kwe" })}
         data={rows}
       />
@@ -105,7 +113,7 @@ function InARelationshipTable({ level }) {
   );
 }
 
-function SeparatedTable({ level }) {
+function SeparatedTable({ level = 2 }: ResourceProps) {
   const rows = [
     ["uni", "yuky"],
     ["u2", "tsy"],
@@ -122,10 +130,14 @@ function SeparatedTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="separated" level={level + 1}>
+      <SectionHeading
+        id="separated"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Separated and Reconciled
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={createColumns("PB", {
           headerNow: "Separated",
           headerPast: "Reconciled",
@@ -137,7 +149,7 @@ function SeparatedTable({ level }) {
   );
 }
 
-function EngagedTable({ level }) {
+function EngagedTable({ level = 2 }: ResourceProps) {
   const rows = [
     ["i", "wake"],
     ["soni", "yukni"],
@@ -152,10 +164,14 @@ function EngagedTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="engaged" level={level + 1}>
+      <SectionHeading
+        id="engaged"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Engaged
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={createColumns("PB", { suffix: "hkwe" })}
         data={rows}
       />
@@ -163,7 +179,7 @@ function EngagedTable({ level }) {
   );
 }
 
-function SingleTable({ level }) {
+function SingleTable({ level = 2 }: ResourceProps) {
   const rows = [
     ["i", "k"],
     ["u", "s"],
@@ -179,10 +195,14 @@ function SingleTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="single" level={level + 1}>
+      <SectionHeading
+        id="single"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Single
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={createColumns("PR", { suffix: "hne" })}
         data={rows}
       />
@@ -190,7 +210,7 @@ function SingleTable({ level }) {
   );
 }
 
-function OldManWomanTable({ level }) {
+function OldManWomanTable({ level = 2 }: ResourceProps) {
   const rows = [
     ["i", "li", "khe"],
     ["u", "etshe", "she"],
@@ -206,26 +226,32 @@ function OldManWomanTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="old-man-old-woman" level={level + 1}>
+      <SectionHeading
+        id="old-man-old-woman"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Old Man / Old Woman
       </SectionHeading>
       <Text>
-        This is a colloquial term similar to its English translation, e.g. "my
-        old lady is a real battleaxe!"
+        This is a colloquial term similar to its English translation, e.g.
+        &quot;my old lady is a real battleaxe!&quot;
       </Text>
       <TableWrapper
         columns={[
+          // @ts-expect-error To be addressed in LO-12
           ...TableWrapper.columnsPronouns,
           {
             accessorKey: "oldMan",
-            cell: (value) => (
+            // @ts-expect-error To be addressed in LO-12
+            cell: (value: BreakdownArray) => (
               <TextBreakdown breakdown={value} typeFallback="PP" />
             ),
             header: "Old man",
           },
           {
             accessorKey: "oldWoman",
-            cell: (value) => (
+            // @ts-expect-error To be addressed in LO-12
+            cell: (value: BreakdownArray) => (
               <TextBreakdown breakdown={value} typeFallback="PP" />
             ),
             header: "Old woman",
@@ -237,7 +263,7 @@ function OldManWomanTable({ level }) {
   );
 }
 
-function SpouseTable({ level }) {
+function SpouseTable({ level = 2 }: ResourceProps) {
   const rows = [
     ["Tshyalé lo·né·", "Charlie's spouse"],
     ["Só·s lo·né·", "Susan's spouse"],
@@ -247,12 +273,15 @@ function SpouseTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="spouse" level={level + 1}>
+      <SectionHeading
+        id="spouse"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Spouse
       </SectionHeading>
       <Text>
-        <b>lo·né·</b> is used to describe someone else's spouse, it is not used
-        for "my spouse" or "your spouse".
+        <b>lo·né·</b> is used to describe someone else&lsquo;s spouse, it is not
+        used for &quot;my spouse&quot; or &quot;your spouse&quot;.
       </Text>
       <TableWrapper
         columns={[
@@ -273,7 +302,7 @@ function SpouseTable({ level }) {
   );
 }
 
-function BoyfriendGirlfriendTable({ level }) {
+function BoyfriendGirlfriendTable({ level = 2 }: ResourceProps) {
   const rows = [
     ["i", "ak"],
     ["u", "sa"],
@@ -289,22 +318,28 @@ function BoyfriendGirlfriendTable({ level }) {
 
   return (
     <>
-      <SectionHeading id="girlfriend-boyfriend" level={level + 1}>
+      <SectionHeading
+        id="girlfriend-boyfriend"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Girlfriend / Boyfriend
       </SectionHeading>
       <TableWrapper
         columns={[
+          // @ts-expect-error To be addressed in LO-12
           ...TableWrapper.columnsPronouns,
           {
             accessorKey: "boyfriend",
-            cell: (value) => (
+            // @ts-expect-error To be addressed in LO-12
+            cell: (value: BreakdownArray) => (
               <TextBreakdown breakdown={value} typeFallback="PLB" />
             ),
             header: "Boyfriend",
           },
           {
             accessorKey: "girlfriend",
-            cell: (value) => (
+            // @ts-expect-error To be addressed in LO-12
+            cell: (value: BreakdownArray) => (
               <TextBreakdown breakdown={value} typeFallback="PLB" />
             ),
             header: "Girlfriend",

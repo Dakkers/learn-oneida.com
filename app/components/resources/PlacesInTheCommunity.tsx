@@ -1,6 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { SectionHeading } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
 export const DATA_PLACES_IN_COMMUNITY: Array<{
   key: string;
@@ -110,7 +111,7 @@ export const DATA_PLACES_IN_COMMUNITY: Array<{
   { key: "town", en: "in town", on: "kanatá·ke" },
 ];
 
-export function PlacesInTheCommunityResource({ level = 1 }) {
+export function PlacesInTheCommunityResource({ level = 1 }: ResourceProps) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="places-in-community" level={level}>

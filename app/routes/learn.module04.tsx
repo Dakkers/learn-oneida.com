@@ -1,5 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import React from "react";
 import dataIsHere from "../data/data-ese-is-here.json";
 import dataWasHere from "../data/module04/was-here";
 import dataWillBeHere from "../data/module04/will-be-here";
@@ -273,10 +272,11 @@ export default function LearnModule04() {
         Someone Being Here
       </SectionHeading>
       <Text>
-        Below is a number of paradigm tables for "someone being here".
+        Below is a number of paradigm tables for &quot;someone being here&quot;.
       </Text>
       <AccordionWrapper
         sections={[
+          // @ts-expect-error To be addressed in LO-2
           ["someone-is-here", "Someone is here", dataIsHere],
           ["someone-was-here", "Someone was here", dataWasHere],
           ["someone-will-be-here", "Someone will be here", dataWillBeHere],
@@ -295,8 +295,8 @@ export default function LearnModule04() {
         Someone Being There (temporarily)
       </SectionHeading>
       <Text>
-        Below is a number of paradigm tables for "someone being <b>there</b>{" "}
-        (temporarily)".
+        Below is a number of paradigm tables for &quot;someone being{" "}
+        <b>there</b> (temporarily)&quot;.
       </Text>
       <AccordionWrapper
         sections={[
@@ -330,8 +330,8 @@ export default function LearnModule04() {
         Someone Being At Home / Someone Residing There
       </SectionHeading>
       <Text>
-        Below is a number of paradigm tables for "someone being at home" or
-        "someone residing there".
+        Below is a number of paradigm tables for &quot;someone being at
+        home&quot; or &quot;someone residing there&quot;.
       </Text>
       <AccordionWrapper
         sections={[
@@ -371,7 +371,8 @@ export default function LearnModule04() {
         Someone Living There
       </SectionHeading>
       <Text>
-        Below is a number of paradigm tables for "someone living in an area".
+        Below is a number of paradigm tables for &quot;someone living in an
+        area&quot;.
       </Text>
       <AccordionWrapper
         sections={[

@@ -4,9 +4,12 @@ import { Box } from "@/design/components/box";
 import { Notice } from "@/design/components/notice";
 import type { MetaFunction } from "@remix-run/node";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
-import React from "react";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { TextBreakdown } from "~/components/TextBreakdown";
+import {
+  BreakdownArray,
+  BreakdownType,
+  TextBreakdown,
+} from "~/components/TextBreakdown";
 import { SectionHeading } from "~/components/SectionHeading";
 import { GoodPeopleBadPeopleResource } from "~/components/resources/GoodPeopleBadPeople";
 import { RepetitiveFeatureResource } from "~/components/resources/RepetitiveFeature";
@@ -125,7 +128,7 @@ const pastTenseColumns = [
   TableWrapper.englishColumn,
   {
     accessorKey: "one",
-    cell: (value, row) =>
+    cell: (value: BreakdownArray[], row: { type: BreakdownType }) =>
       value.map((v, i) => (
         <TextBreakdown as="div" breakdown={v} key={i} typeFallback={row.type} />
       )),
@@ -413,6 +416,7 @@ function PastTenseUsedToBe() {
     },
   ];
 
+  // @ts-expect-error To be addressed in LO-12
   return <TableWrapper columns={pastTenseColumns} data={data} />;
 }
 
@@ -520,7 +524,17 @@ function PastTenseWhen() {
     },
   ];
 
+  // @ts-expect-error To be addressed in LO-12
   return <TableWrapper columns={pastTenseColumns} data={data} />;
+}
+
+interface WeirdRow {
+  col0: BreakdownArray;
+  col1: BreakdownArray;
+  col2: BreakdownArray;
+  col3: BreakdownArray;
+  col4: BreakdownArray;
+  col5: BreakdownArray;
 }
 
 function HavingConjugations() {
@@ -533,7 +547,9 @@ function HavingConjugations() {
       <SectionHeading level={3}>
         &quot;Having&quot; a person or animal
       </SectionHeading>
+
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={createColsLol([
           "pronominal",
           "noun root",
@@ -549,7 +565,7 @@ function HavingConjugations() {
             col1: ["ksaʔt"],
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
-            result: (row) => (
+            result: (row: WeirdRow) => (
               <>
                 <TextBreakdown
                   breakdown={[...row.col0, "ksá·t", ...row.col2, ...row.col3]}
@@ -563,7 +579,7 @@ function HavingConjugations() {
             col1: ["wil"],
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
-            result: (row) => (
+            result: (row: WeirdRow) => (
               <>
                 <TextBreakdown
                   breakdown={[
@@ -582,7 +598,7 @@ function HavingConjugations() {
             col1: ["naskw"],
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
-            result: (row) => (
+            result: (row: WeirdRow) => (
               <>
                 <TextBreakdown
                   breakdown={[...row.col0, "náskw", ...row.col2].concat([
@@ -598,7 +614,7 @@ function HavingConjugations() {
             col1: ["nikʌhtluʔtsl"],
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
-            result: (row) => (
+            result: (row: WeirdRow) => (
               <>
                 <TextBreakdown
                   breakdown={[
@@ -617,7 +633,7 @@ function HavingConjugations() {
             col1: ["yaʔtaseʔtsl"],
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
-            result: (row) => (
+            result: (row: WeirdRow) => (
               <>
                 <TextBreakdown
                   breakdown={[
@@ -638,6 +654,7 @@ function HavingConjugations() {
         &quot;Having&quot; a person or animal in the past
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={createColsLol([
           "pronominal",
           "noun root",
@@ -657,7 +674,7 @@ function HavingConjugations() {
             col3: [{ text: "yʌʔt", type: "REP" }],
             col4: [{ text: "a", type: "JOIN" }],
             col5: [{ text: "hkweʔ", type: "PAST" }],
-            result: (row) => (
+            result: (row: WeirdRow) => (
               <>
                 <TextBreakdown
                   breakdown={[
@@ -680,13 +697,14 @@ function HavingConjugations() {
         &quot;Having&quot; a good animal
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={createColsLol(["pronominal", "noun root", "verb root"])}
         data={[
           {
             col0: [{ text: "wak", type: "PB" }],
             col1: ["naskw"],
             col2: [{ text: "iyo", type: "REP" }],
-            result: (row) => (
+            result: (row: WeirdRow) => (
               <>
                 <TextBreakdown
                   breakdown={[
@@ -706,6 +724,7 @@ function HavingConjugations() {
         &quot;Having&quot; an animal in the past
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error To be addressed in LO-12
         columns={createColsLol([
           "pronominal",
           "noun root",
@@ -718,7 +737,7 @@ function HavingConjugations() {
             col1: ["naskw"],
             col2: [{ text: "iyo", type: "REP" }],
             col3: [{ text: "hne", type: "PAST" }],
-            result: (row) => (
+            result: (row: WeirdRow) => (
               <>
                 <TextBreakdown
                   breakdown={[
@@ -738,7 +757,7 @@ function HavingConjugations() {
             col1: ["naskw"],
             col2: [{ text: "aksʌ", type: "REP" }],
             col3: [{ text: "hne", type: "PAST" }],
-            result: (row) => (
+            result: (row: WeirdRow) => (
               <>
                 <TextBreakdown
                   breakdown={[
@@ -759,12 +778,12 @@ function HavingConjugations() {
   );
 }
 
-const createColsLol = (cols) => {
+const createColsLol = (cols: string[]) => {
   const result = [];
   for (let i = 0; i < cols.length; i++) {
     result.push({
       accessorKey: `col${i}`,
-      cell: (value) => <TextBreakdown breakdown={value} />,
+      cell: (value: BreakdownArray) => <TextBreakdown breakdown={value} />,
       header: cols[i],
     });
     if (i !== cols.length - 1) {
@@ -783,7 +802,9 @@ const createColsLol = (cols) => {
   }
   result.push({
     accessorKey: `result`,
-    cell: (renderer, row) => <Flex gap={2}>{renderer(row)}</Flex>,
+    cell: (renderer: (row: WeirdRow) => React.ReactNode, row: WeirdRow) => (
+      <Flex gap={2}>{renderer(row)}</Flex>
+    ),
     header: "Result",
   });
 

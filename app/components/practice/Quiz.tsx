@@ -9,13 +9,13 @@ import React from "react";
 
 interface QuizContextProps {
   answer: string;
+  changeAnswer: (value: string) => void;
   hasAnswer: boolean;
   index: number;
   isFinalQuestion: boolean;
-  nextQuestion?: () => void;
+  nextQuestion: () => void;
   numberOfQuestions?: number;
-  previousQuestion?: () => void;
-  changeAnswer?: (value: string) => void;
+  previousQuestion: () => void;
 }
 
 interface Result {
@@ -26,10 +26,13 @@ interface Result {
 }
 
 const QuizContext = React.createContext<QuizContextProps>({
-  answer: '',
+  answer: "",
+  changeAnswer: (value: string) => console.log(value),
   hasAnswer: false,
   isFinalQuestion: false,
   index: 0,
+  nextQuestion: () => console.log("nextQuestion()"),
+  previousQuestion: () => console.log("previousQuestion()"),
 });
 
 interface QuizProps {
@@ -39,10 +42,15 @@ interface QuizProps {
   onReset: () => void;
 }
 
-export function Quiz({ children, getResultForQuestion, numberOfQuestions = 10, onReset }: QuizProps) {
+export function Quiz({
+  children,
+  getResultForQuestion,
+  numberOfQuestions = 10,
+  onReset,
+}: QuizProps) {
   const [index, setIndex] = React.useState(0);
   const [currentAnswer, setCurrentAnswer] = React.useState("");
-  const [results, setResults] = React.useState < Array<Result | null>>([]);
+  const [results, setResults] = React.useState<Array<Result>>([]);
   const isComplete = index >= numberOfQuestions;
 
   return (
@@ -56,10 +64,7 @@ export function Quiz({ children, getResultForQuestion, numberOfQuestions = 10, o
           const result = getResultForQuestion(index, currentAnswer);
           let newResults = [] as typeof results;
           if (index >= results.length) {
-            newResults = [
-              ...results,
-              null,
-            ]
+            newResults = [...results, result];
           }
           newResults[index] = result;
 
@@ -77,7 +82,9 @@ export function Quiz({ children, getResultForQuestion, numberOfQuestions = 10, o
     >
       {isComplete ? (
         <ResultsScreen onReset={onReset} results={results} />
-      ): <>{children}</>}
+      ) : (
+        <>{children}</>
+      )}
     </QuizContext.Provider>
   );
 }
@@ -119,6 +126,7 @@ function ResultsScreen({
           { accessorKey: "question", header: "Question" },
           {
             accessorKey: "selectedAnswer",
+            // @ts-expect-error To be addressed in LO-12
             cell: (selectedAnswer: Result["selectedAnswer"], row: Result) => (
               <Flex align="center" gap={4}>
                 {row.isCorrect ? (
@@ -149,6 +157,7 @@ function ResultsScreen({
             header: "Answer",
           },
         ]}
+        // @ts-expect-error To be addressed in LO-12
         data={results}
       />
 

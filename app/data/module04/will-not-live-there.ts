@@ -7,124 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "k" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["k"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "hs" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["hs"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "ha" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["ha"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "yé" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["yé"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "ka" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["ka"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "ute", type: "IFUT" },
-          { text: "tni" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["ute", "IFUT"], ["tni"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "yakni" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["yakni"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "ute", type: "IFUT" },
-          { text: "sni" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["ute", "IFUT"], ["sni"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "hni" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["hni"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "kni" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["kni"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "ute", type: "IFUT" },
-          { text: "twa" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["ute", "IFUT"], ["twa"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "yakwa" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["yakwa"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "ute", type: "IFUT" },
-          { text: "swa" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["ute", "IFUT"], ["swa"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "hati" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["hati"], "náklekeʔ"],
       },
       {
-        breakdown: [
-          "yah th",
-          { text: "uta", type: "IFUT" },
-          { text: "kuti" },
-          "náklekeʔ",
-        ],
+        breakdown: ["yah th", ["uta", "IFUT"], ["kuti"], "náklekeʔ"],
       },
     ],
   },

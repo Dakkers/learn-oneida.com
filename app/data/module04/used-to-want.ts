@@ -8,64 +8,49 @@ export default createParadigmData(
     suffix: "hkwe",
     phrases: [
       {
-        pronoun: "i",
-        breakdown: [{ text: "k" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["k"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "u",
-        breakdown: [{ text: "hs" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["hs"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "m",
-        breakdown: [{ text: "l" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["l"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "f",
-        breakdown: [{ text: "y" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["y"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "it",
-        breakdown: [{ text: "w" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["w"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "uni",
-        breakdown: [{ text: "tn" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["tn"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "soni",
-        breakdown: [{ text: "yakn" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["yakn"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "u2",
-        breakdown: [{ text: "sn" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["sn"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "2m",
-        breakdown: [{ text: "n" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["n"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "2f",
-        breakdown: [{ text: "kn" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["kn"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "us",
-        breakdown: [{ text: "tw" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["tw"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "theyni",
-        breakdown: [{ text: "yakw" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["yakw"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "yall",
-        breakdown: [{ text: "sw" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["sw"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "ms",
-        breakdown: [{ text: "lʌ·n" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["lʌ·n"], "élh", ["a", "JOIN"]],
       },
       {
-        pronoun: "fs",
-        breakdown: [{ text: "ku·n" }, "élh", { text: "a", type: "JOIN" }],
+        breakdown: [["ku·n"], "élh", ["a", "JOIN"]],
       },
     ],
   },

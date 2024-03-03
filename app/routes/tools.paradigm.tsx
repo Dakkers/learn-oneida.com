@@ -70,7 +70,7 @@ export default function ToolsParadigm() {
         <Select
           label="Word"
           onChange={(value) => {
-            setWord(value);
+            setWord(value as keyof typeof dataToUse);
             setHasStarted(false);
           }}
           options={[
@@ -117,7 +117,7 @@ export default function ToolsParadigm() {
                     sample(singlePronouns),
                     sample(dualicPronouns),
                     sample(pluralPronouns),
-                  ] as string[])
+                  ] as Pronoun[])
                 : []
             );
             setHasStarted(true);
@@ -133,8 +133,10 @@ export default function ToolsParadigm() {
           columnVisibility={{
             pronounEnglish: false,
           }}
+          // @ts-expect-error LO-11
           data={dataToUse[word]}
           isTesting
+          // @ts-expect-error To be addressed in LO-20
           translationFn={translatorFns[word]}
         />
       )}

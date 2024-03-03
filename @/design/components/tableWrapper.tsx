@@ -7,8 +7,8 @@ import {
   TableHeader,
   TableRow,
 } from "../primitives/table";
-import { BreakdownType, TextBreakdown, TextBreakdownSuffix } from "~/components/TextBreakdown";
-import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, arrayify } from "~/utils";
+import { BreakdownArray, BreakdownType, TextBreakdown, TextBreakdownSuffix } from "~/components/TextBreakdown";
+import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "~/utils";
 import { Text } from "./text";
 import { Flex } from "./flex";
 
@@ -19,6 +19,7 @@ export interface TableWrapperProps {
     accessorKey: string;
     cell?: (value?: unknown, row?: Row) => React.ReactNode;
     header: React.ReactNode;
+    key?: string;
   }>;
   data: Array<Row>;
 }
@@ -32,7 +33,7 @@ export function TableWrapper({ columns, data }: TableWrapperProps) {
         <TableHeader>
           <TableRow>
             {columns.map((c) => (
-              <TableHead key={c.accessorKey}>{c.header}</TableHead>
+              <TableHead key={c.key ?? c.accessorKey}>{c.header}</TableHead>
             ))}
           </TableRow>
         </TableHeader>
@@ -54,12 +55,12 @@ export function TableWrapper({ columns, data }: TableWrapperProps) {
   );
 }
 
-TableWrapper.textArrayCell = (value) => (
+TableWrapper.textArrayCell = (value: any) => (
   <Flex direction="column">
     <TextArray>{value}</TextArray>
   </Flex>
 );
-TableWrapper.textArrayCellBold = (value) => (
+TableWrapper.textArrayCellBold = (value: any) => (
   <Flex direction="column">
     <TextArray bold>{value}</TextArray>
   </Flex>
@@ -71,9 +72,14 @@ const EnglishCol = {
   header: "English",
 };
 
-const createOneidaCol = (typeFallback?: BreakdownType, options = {}) => ({
+interface OneidaColOptions {
+  accessorKey?: string;
+  header?: string;
+}
+
+const createOneidaCol = (typeFallback?: BreakdownType, options: OneidaColOptions = {}) => ({
   accessorKey: options.accessorKey ?? "breakdown",
-  cell: (value) => (
+  cell: (value: BreakdownArray) => (
     <TextBreakdown breakdown={value} typeFallback={typeFallback} />
   ),
   header: options.header ?? "Translation",
@@ -82,26 +88,33 @@ const createOneidaCol = (typeFallback?: BreakdownType, options = {}) => ({
 const pronounColumns: TableWrapperProps["columns"] = [
   {
     accessorKey: "pronoun",
-    cell: (value) => <Text>{PRONOUN_MAP_EN[value]}</Text>,
+    // @ts-expect-error To be addressed in LO-12
+    cell: (value: Pronoun) => <Text>{PRONOUN_MAP_EN[value]}</Text>,
     header: "Pronoun (en)",
+    key: 'pronoun_en',
   },
   {
     accessorKey: "pronoun",
-    cell: (value) => <Text>{PRONOUN_MAP_ONEIDA[value]}</Text>,
+    // @ts-expect-error To be addressed in LO-12
+    cell: (value: Pronoun) => <Text>{PRONOUN_MAP_ONEIDA[value]}</Text>,
     header: "Pronoun (one)",
+    key: 'pronoun_one',
   },
 ];
 
 const columnsParadigmRed: TableWrapperProps["columns"] = [
   EnglishCol,
+  // @ts-expect-error To be addressed in LO-12
   createOneidaCol("PR"),
 ];
 const columnsParadigmBlue: TableWrapperProps["columns"] = [
   EnglishCol,
+  // @ts-expect-error To be addressed in LO-12
   createOneidaCol("PB"),
 ];
 const columnsParadigmPurple: TableWrapperProps["columns"] = [
   EnglishCol,
+  // @ts-expect-error To be addressed in LO-12
   createOneidaCol("PP"),
 ];
 const columnsEnglishOneida: TableWrapperProps["columns"] = [
@@ -117,7 +130,7 @@ const columnsEnglishBreakdown: TableWrapperProps["columns"] = [
   {
     accessorKey: "breakdown",
     cell: (value) => (
-      <TextBreakdown breakdown={value} />
+      <TextBreakdown breakdown={value as BreakdownArray} />
     ),
     header: "Translation",
   },
@@ -136,14 +149,14 @@ const createPastTenseColumns = (
     ...TableWrapper.columnsPronouns,
     {
       accessorKey: "breakdown",
-      cell: (value) => (
+      cell: (value: BreakdownArray) => (
         <TextBreakdown breakdown={value} typeFallback={typeFallback} />
       ),
       header: opts?.headerNow ?? "Now",
     },
     {
       accessorKey: "breakdownPast",
-      cell: (value) => (
+      cell: (value: BreakdownArray) => (
         <TextBreakdown
           breakdown={value}
           suffix={opts.suffix}
@@ -164,6 +177,6 @@ TableWrapper.createTextBreakdownColumn = createOneidaCol;
 TableWrapper.englishColumn = EnglishCol;
 TableWrapper.createPastTenseColumns = createPastTenseColumns;
 
-type MapperArgs = string|string[];
+type MapperArgs = unknown|unknown[];
 TableWrapper.mapLeftRight = ([left, right]: MapperArgs[]) => ({ left, right })
 TableWrapper.mapEnglishOneida = ([en, on]: MapperArgs[]) => ({ en, on })

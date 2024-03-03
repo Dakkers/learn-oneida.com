@@ -4,8 +4,9 @@ import { Text } from "@/design/components/text";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 import { SectionHeading } from "../SectionHeading";
 import { ResourceProps } from "./utils";
+import { Pronoun } from "~/utils";
 
-const allowedPronouns = ["i", "u", "m", "f"];
+const allowedPronouns: Pronoun[] = ["i", "u", "m", "f"];
 
 const NATIONS_LIST = [
   {

@@ -41,7 +41,15 @@ TableOfContents.Section = function TableOfContentsSection({
   return <List>{children}</List>;
 };
 
-TableOfContentsItem.Phrase = function TocItemPhrase({ label, word, value }) {
+TableOfContentsItem.Phrase = function TocItemPhrase({
+  label,
+  word,
+  value,
+}: {
+  label: string;
+  word: string;
+  value: string;
+}) {
   return (
     <TableOfContentsItem
       label={

@@ -1,4 +1,7 @@
-export function formatTranslation(text: string, params) {
+export function formatTranslation(
+  text: string,
+  params: Record<string, string>
+) {
   let result = text;
   for (const key in params) {
     result = result.replace(new RegExp(`{{${key}}}`, "g"), params[key]);
@@ -6,19 +9,24 @@ export function formatTranslation(text: string, params) {
   return result;
 }
 
-export const singlePronouns = ["i", "u", "m", "f", "it"];
-export const dualicPronouns = ["uni", "soni", "u2", "2m", "2f"];
-export const pluralPronouns = ["us", "theyni", "yall", "ms", "fs"];
+export type PronounSingular = "i" | "u" | "m" | "f" | "it";
+export type PronounDualic = "uni" | "soni" | "u2" | "2m" | "2f";
+export type PronounPlural = "us" | "theyni" | "yall" | "ms" | "fs";
+export type Pronoun = PronounSingular | PronounDualic | PronounPlural;
 
-export const pronouns = [
+export const singlePronouns: Pronoun[] = ["i", "u", "m", "f", "it"];
+export const dualicPronouns: Pronoun[] = ["uni", "soni", "u2", "2m", "2f"];
+export const pluralPronouns: Pronoun[] = ["us", "theyni", "yall", "ms", "fs"];
+
+export const pronouns: Pronoun[] = [
   ...singlePronouns,
   ...dualicPronouns,
   ...pluralPronouns,
-] as const;
+];
 
 /** These are pronouns for blue pronominals. Because there are duplicates in the blue set,
  * we this is a smaller set than the full pronouns list. */
-export const pronounsBlue = [
+export const pronounsBlue: Pronoun[] = [
   ...singlePronouns,
   "uni",
   "u2",
@@ -27,8 +35,6 @@ export const pronounsBlue = [
   "us",
   "yall",
 ];
-
-export type Pronoun = (typeof pronouns)[number];
 
 export const PRONOUN_MAP_ONEIDA: Record<Pronoun, string> = {
   i: "í",

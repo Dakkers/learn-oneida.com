@@ -141,6 +141,7 @@ export default function LearnModule01() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
+        // @ts-expect-error To be addressed in LO-2, LO-11
         data={yatsJson}
       />
       <Notice intent="primary">
@@ -163,6 +164,7 @@ export default function LearnModule01() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
+        // @ts-expect-error To be addressed in LO-2, LO-11
         data={anuhteJson}
         translationFn={({ pronoun }) => ({
           verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
@@ -178,9 +180,9 @@ export default function LearnModule01() {
       </Text>
       <ParticlesTable group="module01" />
 
-      <PeopleResource />
+      <PeopleResource level={2} />
 
-      <EnglishNamesResource />
+      <EnglishNamesResource level={2} />
 
       <DialogueSection />
       <TranslationExercisesSection group="module01" />

@@ -1,6 +1,6 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { ResourceProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 
@@ -38,7 +38,10 @@ export function LastNamesResource({ level = 1 }: ResourceProps) {
       </SectionHeading>
       <ParadigmTable data={data} />
 
-      <SectionHeading id="last-names-examples" level={level + 1}>
+      <SectionHeading
+        id="last-names-examples"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Examples
       </SectionHeading>
       <TableWrapper

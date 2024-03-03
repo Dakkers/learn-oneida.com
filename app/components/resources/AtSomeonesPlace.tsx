@@ -1,6 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { SectionHeading } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
 const LIST = [
   ["my mom's place", "aknulhaʔké·ne"],
@@ -19,11 +20,11 @@ const LIST = [
   ["Mary's place", "Walíné·ke·"],
 ].map(([en, on]) => ({ en, on }));
 
-export function AtSomeonesPlaceResource({ level = 1 }) {
+export function AtSomeonesPlaceResource({ level = 1 }: ResourceProps) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="at-someones-place" level={level}>
-        At someone's place
+        At someone&lsquo;s place
       </SectionHeading>
       <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={LIST} />
     </Flex>

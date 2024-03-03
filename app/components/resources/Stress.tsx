@@ -1,5 +1,5 @@
 import { Flex } from "@/design/components/flex";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { Text } from "@/design/components/text";
 import { Letter } from "../Letter";
 import { List } from "@/design/components/list";
@@ -19,7 +19,10 @@ export function StressResource({ level = 1 }: ResourceProps) {
         accent marks over consonants. There are two kinds of stress:
       </Text>
 
-      <SectionHeading id="short-stress" level={level + 1}>
+      <SectionHeading
+        id="short-stress"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Short stress
       </SectionHeading>
       <Text>
@@ -32,7 +35,10 @@ export function StressResource({ level = 1 }: ResourceProps) {
         Examples: <b>kátsheʔ</b>, <b>kákhwa̲ʔ</b>, <b>kítkit</b>, <b>ohʌtú</b>,{" "}
         <b>ohutsyakú</b>, <b>olihwiyó</b>, <b>ohwístaʔ</b>, <b>áhtaʔ</b>.
       </Text>
-      <SectionHeading id="long-stress" level={level + 1}>
+      <SectionHeading
+        id="long-stress"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Long stress
       </SectionHeading>
       <Text>
@@ -47,7 +53,10 @@ export function StressResource({ level = 1 }: ResourceProps) {
         <b>nahté·shuʔ</b>, <b>kekhsá·</b>, <b>niʔí·</b>.
       </Text>
 
-      <SectionHeading id="length" level={level + 1}>
+      <SectionHeading
+        id="length"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Length
       </SectionHeading>
       <Text>
@@ -80,7 +89,10 @@ export function StressResource({ level = 1 }: ResourceProps) {
         <b>Shakonú·wehseʔ kʌ né· akaulhá·</b>
       </Text>
 
-      <SectionHeading id="where-stress" level={level + 1}>
+      <SectionHeading
+        id="where-stress"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Where stress occurs
       </SectionHeading>
       <Text>

@@ -193,7 +193,7 @@ function TranslationExerciseTable({
       columns={[
         {
           accessorKey: "num",
-          cell: (value) => <span className="w-16">{value}</span>,
+          cell: (value) => <span className="w-16">{value as string}</span>,
           header: "",
         },
         { accessorKey: "question", header: "" },

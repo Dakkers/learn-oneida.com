@@ -29,7 +29,12 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
       },
       {
         accessorKey: "examples",
-        cell: (examples) => (
+        cell: (
+          examples: Array<{
+            en: string;
+            oneida: string;
+          }>
+        ) => (
           <Flex direction="column" gap={4}>
             {(examples ?? []).map((ex, i) => (
               <Flex direction="column" gap={0} key={i}>
@@ -176,5 +181,6 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
     return mapping[group].map((key) => particleList.find((p) => p.key === key));
   }, [group]);
 
+  // @ts-expect-error To be addressed in LO-12
   return <TableWrapper columns={columns} data={data} />;
 }

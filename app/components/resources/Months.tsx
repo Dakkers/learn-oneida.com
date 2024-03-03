@@ -1,6 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
 export const DATA_MONTHS = [
   {
@@ -62,7 +63,7 @@ export const DATA_MONTHS = [
   },
 ];
 
-export function MonthsResource({ level = 1 }) {
+export function MonthsResource({ level = 1 }: ResourceProps) {
   const monthsNext = [
     { en: "next January", on: "Tʌyakohúhtyaʔks" },
     { en: "next February", on: "Tshaʔtʌkohsélhaʔ" },
@@ -88,7 +89,10 @@ export function MonthsResource({ level = 1 }) {
         data={DATA_MONTHS}
       />
 
-      <SectionHeading id="months-last" level={level + 1}>
+      <SectionHeading
+        id="months-last"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Last month
       </SectionHeading>
       <TableWrapper
@@ -96,7 +100,10 @@ export function MonthsResource({ level = 1 }) {
         data={monthsLast}
       />
 
-      <SectionHeading id="months-next" level={level + 1}>
+      <SectionHeading
+        id="months-next"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Next month
       </SectionHeading>
       <TableWrapper

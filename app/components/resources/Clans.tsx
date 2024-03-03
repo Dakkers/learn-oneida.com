@@ -1,5 +1,5 @@
 import { Text } from "@/design/components/text";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Flex } from "@/design/components/flex";
 import {
@@ -7,9 +7,10 @@ import {
   ParadigmTable,
   createParadigmData,
 } from "../ParadigmTable";
-import _ from "lodash";
+import { ResourceProps } from "./utils";
+import { type Pronoun } from "~/utils";
 
-const allowedPronouns = [
+const allowedPronouns: Pronoun[] = [
   "i",
   "u",
   "m",
@@ -35,7 +36,7 @@ const dataWolves = magicThing({
   translation: "{{pronoun}} {{refVerb}} Wolf Clan",
 });
 
-export function ClansResource({ level = 1 }: { level?: 1 | 2 }) {
+export function ClansResource({ level = 1 }: ResourceProps) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="clans" level={level}>
@@ -45,7 +46,9 @@ export function ClansResource({ level = 1 }: { level?: 1 | 2 }) {
         Here, you can learn about clan animals and how to say someone is from a
         clan. The clans in Oneida are: bear, turtle, and wolf.
       </Text>
-      <SectionHeading level={level + 1}>Clan Animals</SectionHeading>
+      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+        Clan Animals
+      </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishOneida}
         data={[
@@ -60,7 +63,9 @@ export function ClansResource({ level = 1 }: { level?: 1 | 2 }) {
           ["wolf", "othayu·níˍ"],
         ].map(([en, on]) => ({ en, on }))}
       />
-      <SectionHeading level={level + 1}>Phrases</SectionHeading>
+      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+        Phrases
+      </SectionHeading>
       <ParadigmTable allowedPronouns={allowedPronouns} data={dataBears} />
       <ParadigmTable allowedPronouns={allowedPronouns} data={dataTurtles} />
       <ParadigmTable allowedPronouns={allowedPronouns} data={dataWolves} />

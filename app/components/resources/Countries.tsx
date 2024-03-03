@@ -2,6 +2,7 @@ import { Flex } from "@/design/components/flex";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
 import { SectionHeading } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
 const LIST = [
   ["Canada", "Kolahkowánhne̲"],
@@ -12,7 +13,7 @@ const LIST = [
   ["The whole world", "Ohutsyakwekú"],
 ].map(([en, on]) => ({ en, on }));
 
-export function CountriesResource({ level = 1 }) {
+export function CountriesResource({ level = 1 }: ResourceProps) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="countries" level={level}>

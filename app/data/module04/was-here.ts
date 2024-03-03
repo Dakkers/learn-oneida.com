@@ -8,183 +8,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "i·",
-            type: "RPL",
-          },
-          {
-            text: "k",
-          },
-          "é·s",
-        ],
+        breakdown: ["kʌʔ ", ["i·", "RPL"], ["k"], "é·s"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "í",
-            type: "RPL",
-          },
-          {
-            text: "hs",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["í", "RPL"], ["hs"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "í·",
-            type: "RPL",
-          },
-          {
-            text: "l",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["í·", "RPL"], ["l"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "i·",
-            type: "RPL",
-          },
-          {
-            text: "y",
-          },
-          "ʌ́·s",
-        ],
+        breakdown: ["kʌʔ ", ["i·", "RPL"], ["y"], "ʌ́·s"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "i·",
-            type: "RPL",
-          },
-          {
-            text: "w",
-          },
-          "é·s",
-        ],
+        breakdown: ["kʌʔ ", ["i·", "RPL"], ["w"], "é·s"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "í",
-            type: "RPL",
-          },
-          {
-            text: "tn",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["í", "RPL"], ["tn"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "yakn",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["yakn"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "í",
-            type: "RPL",
-          },
-          {
-            text: "sn",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["í", "RPL"], ["sn"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "í·",
-            type: "RPL",
-          },
-          {
-            text: "n",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["í·", "RPL"], ["n"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "í",
-            type: "RPL",
-          },
-          {
-            text: "kn",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["í", "RPL"], ["kn"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "í",
-            type: "RPL",
-          },
-          {
-            text: "tw",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["í", "RPL"], ["tw"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "yakw",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["yakw"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "í",
-            type: "RPL",
-          },
-          {
-            text: "sw",
-          },
-          "ehs",
-        ],
+        breakdown: ["kʌʔ ", ["í", "RPL"], ["sw"], "ehs"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "lʌ·n",
-          },
-          "é·s",
-        ],
+        breakdown: ["kʌʔ ", ["lʌ·n"], "é·s"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "ku·n",
-          },
-          "é·s",
-        ],
+        breakdown: ["kʌʔ ", ["ku·n"], "é·s"],
       },
     ],
   },

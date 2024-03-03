@@ -1,9 +1,10 @@
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { ResourceProps } from "./utils";
 
-export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
+export function TimesOfDayResource({ level = 1 }: ResourceProps) {
   const dayPhʌases = [
     { en: "day", on: "awʌhnísla̲ʔ̲" },
     { en: "all day", on: "kwʌʔtátiʔ" },
@@ -93,9 +94,9 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
     },
     { en: "every year", on: "nyaʔteyohslaké" },
     { en: "last year", on: "tsyohslatkʌ́" },
-    { en: "next year", on: "yʌtsyohsla·teʔ" },
+    { en: "next year", on: "yʌtsyohslá·teʔ" },
     { en: "the other year", on: "oyá· tshikohslá·ke" },
-    { en: "a particular year", on: "kaʔikʌ́yohsla·té·" },
+    { en: "a particular year", on: "kaʔikʌ́ yohsla·té·" },
     { en: "how many years?", on: "niyohslaké̲" },
     { en: "one year after another", on: "yohslaténi" },
   ];
@@ -130,7 +131,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         specific clock time).
       </Text>
 
-      <SectionHeading id="times-of-day-times" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-times"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Times
       </SectionHeading>
       <TableWrapper
@@ -138,7 +142,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={timePhrases}
       />
 
-      <SectionHeading id="times-of-day-daytime" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-daytime"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Day, daytime
       </SectionHeading>
       <TableWrapper
@@ -146,7 +153,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={dayPhʌases}
       />
 
-      <SectionHeading id="times-of-day-morning" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-morning"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Morning
       </SectionHeading>
       <TableWrapper
@@ -154,7 +164,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={morningPhrases}
       />
 
-      <SectionHeading id="times-of-day-afternoon" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-afternoon"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Afternoon
       </SectionHeading>
       <TableWrapper
@@ -162,7 +175,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={afternoonPhrases}
       />
 
-      <SectionHeading id="times-of-day-evening" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-evening"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Evening
       </SectionHeading>
       <TableWrapper
@@ -170,7 +186,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={eveningPhrases}
       />
 
-      <SectionHeading id="times-of-day-night" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-night"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Night
       </SectionHeading>
       <TableWrapper
@@ -178,7 +197,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={nightPhrases}
       />
 
-      <SectionHeading id="times-of-day-tomorrow" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-tomorrow"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Tomorrow
       </SectionHeading>
       <TableWrapper
@@ -186,7 +208,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={tomorrowPhrases}
       />
 
-      <SectionHeading id="times-of-day-yesterday" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-yesterday"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Yesterday
       </SectionHeading>
       <TableWrapper
@@ -194,7 +219,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={yesterdayPhrases}
       />
 
-      <SectionHeading id="times-of-day-week" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-week"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Week
       </SectionHeading>
       <TableWrapper
@@ -202,7 +230,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={weekPhrases}
       />
 
-      <SectionHeading id="times-of-day-weekend" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-weekend"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Weekend
       </SectionHeading>
       <TableWrapper
@@ -210,7 +241,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={weekendPhrases}
       />
 
-      <SectionHeading id="times-of-day-month" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-month"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Months
       </SectionHeading>
       <TableWrapper
@@ -218,7 +252,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={monthPhrases}
       />
 
-      <SectionHeading id="times-of-day-year" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-year"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Years
       </SectionHeading>
       <TableWrapper
@@ -226,7 +263,10 @@ export function TimesOfDayResource({ level = 1 }: { level: 1 | 2 }) {
         data={yearPhrases}
       />
 
-      <SectionHeading id="times-of-day-other" level={level + 1}>
+      <SectionHeading
+        id="times-of-day-other"
+        level={(level + 1) as SectionHeadingProps["level"]}
+      >
         Other Phrases
       </SectionHeading>
       <TableWrapper

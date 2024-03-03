@@ -154,6 +154,7 @@ function ResultsScreen({
           { accessorKey: "question", header: "Question" },
           {
             accessorKey: "answer",
+            // @ts-expect-error To be addressed in LO-12
             cell: (value: Result["answer"]) => (
               <Flex align="center" gap={4}>
                 {value.isCorrect ? (
@@ -184,6 +185,7 @@ function ResultsScreen({
             header: "Answer",
           },
         ]}
+        // @ts-expect-error To be addressed in LO-12
         data={results}
       />
 

@@ -3,7 +3,7 @@ import { SectionHeading } from "../SectionHeading";
 import { List } from "@/design/components/list";
 import { Letter } from "../Letter";
 import { TableWrapper } from "@/design/components/tableWrapper";
-import { TextBreakdown } from "../TextBreakdown";
+import { BreakdownArray, BreakdownType, TextBreakdown } from "../TextBreakdown";
 import { Flex } from "@/design/components/flex";
 
 export function RepetitiveFeatureResource({ level = 1 }: { level?: 1 | 2 }) {
@@ -170,7 +170,8 @@ export function RepetitiveFeatureResource({ level = 1 }: { level?: 1 | 2 }) {
           TableWrapper.englishColumn,
           {
             accessorKey: "one",
-            cell: (value, row) =>
+            // @ts-expect-error To be fixed in LO-12
+            cell: (value: BreakdownArray[], row: { type: BreakdownType }) =>
               value.map((v, i) => (
                 <TextBreakdown
                   as="div"

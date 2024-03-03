@@ -7,199 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a·",
-            type: "FUT",
-          },
-          {
-            text: "k",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a·", "FUT"], ["k"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a",
-            type: "FUT",
-          },
-          {
-            text: "hs",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a", "FUT"], ["hs"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a",
-            type: "FUT",
-          },
-          {
-            text: "hl",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a", "FUT"], ["hl"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a·",
-            type: "FUT",
-          },
-          {
-            text: "y",
-          },
-          "ʌ́·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a·", "FUT"], ["y"], "ʌ́·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a",
-            type: "FUT",
-          },
-          {
-            text: "w",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a", "FUT"], ["w"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "ae",
-            type: "FUT",
-          },
-          {
-            text: "tn",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["ae", "FUT"], ["tn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a",
-            type: "FUT",
-          },
-          {
-            text: "yakn",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a", "FUT"], ["yakn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "ae",
-            type: "FUT",
-          },
-          {
-            text: "sn",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["ae", "FUT"], ["sn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a",
-            type: "FUT",
-          },
-          {
-            text: "hn",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a", "FUT"], ["hn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a",
-            type: "FUT",
-          },
-          {
-            text: "kn",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a", "FUT"], ["kn"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "ae",
-            type: "FUT",
-          },
-          {
-            text: "tw",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["ae", "FUT"], ["tw"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a",
-            type: "FUT",
-          },
-          {
-            text: "yakw",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a", "FUT"], ["yakw"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "ae",
-            type: "FUT",
-          },
-          {
-            text: "sw",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["ae", "FUT"], ["sw"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a",
-            type: "FUT",
-          },
-          {
-            text: "hʌ·n",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a", "FUT"], ["hʌ·n"], "é·shekeʔ"],
       },
       {
-        breakdown: [
-          "kʌʔ ",
-          {
-            text: "a",
-            type: "FUT",
-          },
-          {
-            text: "ku·n",
-          },
-          "é·shekeʔ",
-        ],
+        breakdown: ["kʌʔ ", ["a", "FUT"], ["ku·n"], "é·shekeʔ"],
       },
     ],
   },

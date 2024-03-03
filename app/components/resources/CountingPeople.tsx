@@ -14,6 +14,7 @@ export function CountingPeopleResource({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         columns={[
           { accessorKey: "en", header: "English" },
+          // @ts-expect-error To be addressed in LO-12
           TableWrapper.createTextBreakdownColumn("PR"),
         ]}
         data={[
@@ -28,10 +29,12 @@ export function CountingPeopleResource({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         columns={[
           { accessorKey: "en", header: "English" },
+          // @ts-expect-error To be addressed in LO-12
           TableWrapper.createTextBreakdownColumn("PR", {
             accessorKey: "male",
             header: "Male(s)",
           }),
+          // @ts-expect-error To be addressed in LO-12
           TableWrapper.createTextBreakdownColumn("PR", {
             accessorKey: "female",
             header: "Female(s)",
@@ -75,7 +78,7 @@ export function CountingPeopleResource({ level = 1 }: { level?: 1 | 2 }) {
           ["three adults", "áhsʌ nihatí lʌnukwé·"],
           ["two older women", "tehniyáhse yotikhstʌ́ha"],
         ].map(([left, right], i) => (
-          <List.Item>
+          <List.Item key={i}>
             {left} — <b>{right}</b>
           </List.Item>
         ))}

@@ -1,16 +1,9 @@
 import type { MetaFunction } from "@remix-run/node";
-import React from "react";
 import dataWasHere from "../data/module04/was-here";
 import dataWillBeHere from "../data/module04/will-be-here";
 import dataMightBeHere from "../data/module04/might-be-here";
 import { Text } from "@/design/components/text";
-import { ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/design/primitives/accordion";
+import { ParadigmTable } from "~/components/ParadigmTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Flex } from "@/design/components/flex";
 import { SectionHeading } from "~/components/SectionHeading";
@@ -24,9 +17,13 @@ import {
   miscTenseData,
   mindTenseData,
   emotionTenseData,
+  TenseDatum,
 } from "~/data/module05";
-import { TextBreakdown } from "~/components/TextBreakdown";
-import _ from "lodash";
+import {
+  BreakdownArray,
+  BreakdownType,
+  TextBreakdown,
+} from "~/components/TextBreakdown";
 import iheyuData from "~/data/iheyu.json";
 import smallData from "~/data/module05/kʌʔ_ni-a";
 import { HeightWeightResource } from "~/components/resources/Weight";
@@ -315,6 +312,7 @@ function StativeVerbExamples() {
       <TableWrapper
         columns={[
           { accessorKey: "type", header: "" },
+          // @ts-expect-error To be addressed in LO-12
           TableWrapper.createTextBreakdownColumn("PR", { header: "" }),
           TableWrapper.englishColumn,
         ]}
@@ -324,59 +322,60 @@ function StativeVerbExamples() {
   );
 }
 
-function VerbSection({ data, title }) {
+function VerbSection({ data, title }: { data: TenseDatum[]; title: string }) {
   return (
     <>
       <SectionHeading id={`verbs-${title.toLowerCase()}`} level={2}>
         Verbs — {title}
       </SectionHeading>
-      {data.map((d) => (
-        <VerbSectionThingy {...d} typeFallback={d.type ?? "PB"} />
+      {data.map((d, i) => (
+        <VerbSectionItem {...d} key={i} id="" typeFallback={d.type ?? "PB"} />
       ))}
     </>
   );
 }
 
-function VerbSectionThingy({
-  dict,
-  id,
-  root,
-  stem,
+function VerbSectionItem({
+  cmd,
   en,
-  typeFallback,
   fut,
+  id,
+  ifut,
   past,
   present,
-  ifut,
-  cmd,
-}: {}) {
-  const dictionaryLabel = dict.length > 1 ? "pages" : "page";
+  typeFallback,
+}: TenseDatum & {
+  id: string;
+  typeFallback?: BreakdownType;
+}) {
   return (
     <Flex direction="column" gap={2}>
       <SectionHeading id={id} level={3}>
         {en}
       </SectionHeading>
-      <Text></Text>
 
       <TableWrapper
         columns={[
           { accessorKey: "type", header: "" },
           {
             accessorKey: "breakdown",
-            cell: (value) => (
+            // @ts-expect-error To be addressed in LO-12
+            cell: (value: TenseDatumBreakdown) => (
               <TheCell typeFallback={typeFallback} value={value} />
             ),
             header: "",
           },
         ]}
-        data={[
-          ["Present", present],
-          ["Past", past],
-          ["Future", fut],
-          ["Conditional", ifut],
-          ["Command", cmd],
-        ].map(([type, breakdown], i) => ({
-          breakdown: createBreakdown(breakdown, i),
+        data={(
+          [
+            ["Present", present],
+            ["Past", past],
+            ["Future", fut],
+            ["Conditional", ifut],
+            ["Command", cmd],
+          ] as const
+        ).map(([type, breakdown]) => ({
+          breakdown: createBreakdown(breakdown),
           type,
         }))}
       />
@@ -384,37 +383,56 @@ function VerbSectionThingy({
   );
 }
 
-function TheCell({ typeFallback, value }) {
-  if (_.isPlainObject(value)) {
-    const items = value.items ?? [value];
-    return (
-      <Flex direction="column" gap={4}>
-        {items.map((item) => (
-          <Flex direction="column" gap={1}>
-            <TextBreakdown breakdown={item.on} typeFallback={typeFallback} />
-            <Text variant="bodyS">{item.en}</Text>
-          </Flex>
-        ))}
-      </Flex>
-    );
+function TheCell({
+  typeFallback,
+  value,
+}: {
+  typeFallback?: BreakdownType;
+  value: TenseDatumBreakdown;
+}) {
+  if (Array.isArray(value)) {
+    return <TextBreakdown breakdown={value} typeFallback={typeFallback} />;
   }
 
-  return <TextBreakdown breakdown={value} typeFallback={typeFallback} />;
+  const items = "items" in value ? value.items : [value];
+  return (
+    <Flex direction="column" gap={4}>
+      {items.map((item, i) => (
+        <Flex direction="column" gap={1} key={i}>
+          <TextBreakdown breakdown={item.on} typeFallback={typeFallback} />
+          <Text variant="bodyS">{item.en}</Text>
+        </Flex>
+      ))}
+    </Flex>
+  );
 }
 
-function createBreakdown(stuff: any, type: number) {
+type TenseDatumBreakdown =
+  | BreakdownArray
+  | {
+      on: BreakdownArray;
+      en: string | string[];
+    }
+  | {
+      items: Array<{
+        on: BreakdownArray;
+        en: string | string[];
+      }>;
+    };
+
+function createBreakdown(stuff: TenseDatum["present"]): TenseDatumBreakdown {
   if (Array.isArray(stuff)) {
-    return createBreakdownHelper(stuff, type);
-  } else if (stuff.items) {
+    return createBreakdownHelper(stuff);
+  } else if ("items" in stuff) {
     return {
       items: stuff.items.map((item) => ({
-        on: createBreakdownHelper(item.on, type),
+        on: createBreakdownHelper(item.on),
         en: item.en,
       })),
     };
   } else {
     return {
-      on: createBreakdownHelper(stuff.on, type),
+      on: createBreakdownHelper(stuff.on),
       en: stuff.en,
     };
   }
@@ -472,11 +490,11 @@ const PAST_TENSE_ENDINGS = [
   "·neʔ", // Weird one
 ];
 
-function createBreakdownHelper(stuff: string[], type: number) {
-  const result = stuff.slice();
+function createBreakdownHelper(stuff: string[]) {
+  const result = stuff.slice() as BreakdownArray;
 
   for (let i = 0; i < result.length; i++) {
-    const text = result[i];
+    const text = stuff[i];
     if (PRONOMINALS.includes(text)) {
       result[i] = { text };
     } else if (FUTURE_TENSE_ENDINGS.includes(text) && i === result.length - 1) {
@@ -645,7 +663,9 @@ function OtherStativeVerbs() {
       <TableWrapper
         columns={[
           TableWrapper.englishColumn,
+          // @ts-expect-error To be addressed in LO-12
           TableWrapper.createTextBreakdownColumn("PB", { header: "It is..." }),
+          // @ts-expect-error To be addressed in LO-12
           TableWrapper.createTextBreakdownColumn("PB", {
             accessorKey: "breakdownPast",
             header: "It used to be...",
@@ -666,6 +686,7 @@ function IrregularStativeVerbsSection() {
       <SectionHeading id="irregular-died" level={2}>
         -iheyu-
       </SectionHeading>
+      {/* @ts-expect-error To be addressed in LO-2 */}
       <ParadigmTable data={iheyuData} />
       <SectionHeading id="irregular-small" level={2}>
         -kʌ- ni-a
@@ -739,18 +760,24 @@ function NegatingStativeVerbsSection() {
         columns={[
           {
             accessorKey: "left",
-            cell: (value) => <TheCell typeFallback="PB" value={value} />,
+            // @ts-expect-error To be addressed in LO-12
+            cell: (value: TenseDatumBreakdown) => (
+              <TheCell typeFallback="PB" value={value} />
+            ),
             header: "",
           },
           {
             accessorKey: "right",
-            cell: (value) => <TheCell typeFallback="PB" value={value} />,
+            // @ts-expect-error To be addressed in LO-12
+            cell: (value: TenseDatumBreakdown) => (
+              <TheCell typeFallback="PB" value={value} />
+            ),
             header: "",
           },
         ]}
         data={data.map(([left, right]) => ({
-          left: createBreakdown(left, 0),
-          right: createBreakdown(right, 1),
+          left: createBreakdown(left),
+          right: createBreakdown(right),
         }))}
       />
     </>

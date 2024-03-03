@@ -15,7 +15,7 @@ type TenseEntry =
       }>;
     };
 
-type TenseDatum = {
+export type TenseDatum = {
   dict: number | (string | number)[];
   stem: string;
   root: string[] | string;
