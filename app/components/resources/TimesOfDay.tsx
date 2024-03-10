@@ -11,7 +11,7 @@ export function TimesOfDayResource({ level = 1 }: ResourceProps) {
     { en: "during the day", on: "tsiʔniwʌhnísles" },
     { en: "this day", on: "Tó· niwʌhnisla·ké" },
     { en: "daytime", on: "kwaʔté·ke" },
-    { en: 'every day', on: "yaʔtewʌhnislaké" }
+    { en: "every day", on: "yaʔtewʌhnislaké" },
   ];
 
   const eveningPhrases = [

@@ -41,8 +41,12 @@ export default function Resources() {
       label: "Seasons",
     },
     {
-      href: "/tenses",
-      label: "Tenses",
+      href: "/tense-conjugation",
+      label: "Tense Conjugation",
+    },
+    {
+      href: "/tense-identification",
+      label: "Tense Identification",
     },
   ];
 

@@ -106,12 +106,12 @@ export function AnswerMultipleChoiceButtons({
               "bg-green-400 text-white",
 
             showCorrectState &&
-            option.key === quizContext.answer &&
+              option.key === quizContext.answer &&
               isCorrect &&
               "bg-green-700 text-white",
 
             showCorrectState &&
-            option.key === quizContext.answer &&
+              option.key === quizContext.answer &&
               !isCorrect &&
               "bg-red-700 text-white"
           )}

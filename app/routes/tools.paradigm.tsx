@@ -1,6 +1,5 @@
 import { Button } from "@/design/primitives/button";
 import { Flex } from "@/design/components/flex";
-import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
 import React, { useId } from "react";
 import dataAttokhaJson from "../data/attokha.json";

@@ -26,11 +26,11 @@ import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Tenses practice" },
+    { title: "Tense Identification" },
     {
       name: "description",
       content:
-        "Practice your knowledge and understanding of tenses in the Oneida language.",
+        "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on a given word.",
     },
   ];
 };
@@ -94,7 +94,7 @@ export default function PracticeTenseIdentification() {
       result[i] = {
         answer: randomTense,
         id: i.toString(),
-        question: datum?.value || '',
+        question: datum?.value || "",
         type: "given_word",
       };
     }
@@ -146,8 +146,12 @@ export default function PracticeTenseIdentification() {
         ) : (
           <>
             <Text>
-              Use this page to practice identifying what tense conjugation a word contains.
-              These words come from <Link className="text-blue-600 underline" to='/learn/module05'>module 5</Link>.
+              Use this page to practice identifying what tense conjugation a
+              word contains. These words come from{" "}
+              <Link className="text-blue-600 underline" to="/learn/module05">
+                module 5
+              </Link>
+              .
             </Text>
 
             <Settings
@@ -175,7 +179,7 @@ const tenseMap = {
 
 function QuestionLol({ answer, id, question }: Q) {
   const quizContext = useQuizContext();
-  console.log(quizContext)
+  console.log(quizContext);
   return (
     <Flex align="center" direction="column" gap={4}>
       <Text>
@@ -184,17 +188,16 @@ function QuestionLol({ answer, id, question }: Q) {
 
       <div className="w-[600px]">
         <Flex align="center" direction="column" gap={4}>
-
-      <AnswerMultipleChoiceButtons
-        isCorrect={quizContext.answer === answer}
-        options={TENSE_LIST.map((t) => ({
-          key: t,
-          text: tenseMap[t],
-        }))}
+          <AnswerMultipleChoiceButtons
+            isCorrect={quizContext.answer === answer}
+            options={TENSE_LIST.map((t) => ({
+              key: t,
+              text: tenseMap[t],
+            }))}
             questionKey={id}
-      />
+          />
         </Flex>
-    </div>
+      </div>
     </Flex>
   );
 }
