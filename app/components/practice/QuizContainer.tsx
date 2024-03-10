@@ -84,12 +84,13 @@ export function AnswerMultipleChoiceButtons({
   isCorrect,
   options,
 }: {
-  questionKey: string;
-  isCorrect: boolean;
+  questionKey?: string;
+  isCorrect?: boolean;
   options: QuizOption[];
 }) {
   const quizContext = useQuizContext();
   const hasSelected = !!quizContext.hasAnswer;
+  const showCorrectState = !!questionKey;
 
   return (
     <div className="grid gap-2 grid-cols-2">
@@ -101,12 +102,15 @@ export function AnswerMultipleChoiceButtons({
             option.key === questionKey &&
               !isCorrect &&
               hasSelected &&
+              showCorrectState &&
               "bg-green-400 text-white",
 
+            showCorrectState &&
             option.key === quizContext.answer &&
               isCorrect &&
               "bg-green-700 text-white",
 
+            showCorrectState &&
             option.key === quizContext.answer &&
               !isCorrect &&
               "bg-red-700 text-white"

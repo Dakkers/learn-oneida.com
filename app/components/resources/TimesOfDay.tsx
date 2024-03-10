@@ -11,6 +11,7 @@ export function TimesOfDayResource({ level = 1 }: ResourceProps) {
     { en: "during the day", on: "tsiʔniwʌhnísles" },
     { en: "this day", on: "Tó· niwʌhnisla·ké" },
     { en: "daytime", on: "kwaʔté·ke" },
+    { en: 'every day', on: "yaʔtewʌhnislaké" }
   ];
 
   const eveningPhrases = [
@@ -114,7 +115,7 @@ export function TimesOfDayResource({ level = 1 }: ResourceProps) {
   const otherPhrases = [
     { en: "always", on: "tyóhtkut" },
     { en: "eclipse", on: "utʌhniʔtáhtuʔ" },
-    { en: "more often", on: "sʌhaʔ yotk ́ á·teʔ" },
+    { en: "more often", on: "sʌ́haʔ yotká·teʔ" },
     { en: "never", on: "yáh newʌtú" },
     { en: ["now", "today"], on: ["nuʔú·waʔ", "nʌʔú·waʔ"] },
     { en: "often", on: "yotká·teʔ" },

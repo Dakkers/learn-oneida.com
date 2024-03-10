@@ -2,7 +2,6 @@ import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
-import { RadioGroup } from "@/design/components/RadioGroup";
 import { Button } from "@/design/primitives/button";
 import { Quiz, useQuizContext } from "~/components/practice/Quiz";
 import { Box } from "@/design/components/box";
@@ -18,10 +17,12 @@ import { convertBreakdownToPlainText } from "~/components/TextBreakdown";
 import _ from "lodash";
 import { Text } from "@/design/components/text";
 import {
+  AnswerMultipleChoiceButtons,
   NextBtn,
   QuizContainerContext,
   Settings,
 } from "~/components/practice/QuizContainer";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -65,21 +66,24 @@ const DATA_FULL_LIST = _.flattenDeep(
   )
 );
 
-export default function PracticeTenses() {
+interface Q {
+  answer: string;
+  id: string;
+  question: string;
+  type: "given_word";
+}
+
+export default function PracticeTenseIdentification() {
   const [hasStarted, setHasStarted] = React.useState(false);
   const [languageSetting, setLanguageSetting] = React.useState("both");
   const [answerSetting, setAnswerSetting] = React.useState("multipleChoice");
   const [questionCountSetting, setQuestionCountSetting] = React.useState("5");
 
-  const questions: Array<{
-    answer: string;
-    question: string;
-    type: "given_word";
-  }> = React.useMemo(() => {
+  const questions: Array<Q> = React.useMemo(() => {
     if (!hasStarted) {
       return [];
     }
-    const result = new Array(Number(questionCountSetting));
+    const result: Q[] = new Array(Number(questionCountSetting));
     for (let i = 0; i < result.length; i++) {
       const randomTense = TENSE_LIST[Math.floor(Math.random() * 5)];
       const datum =
@@ -89,7 +93,8 @@ export default function PracticeTenses() {
       // What is the tense of this word?
       result[i] = {
         answer: randomTense,
-        question: datum?.value,
+        id: i.toString(),
+        question: datum?.value || '',
         type: "given_word",
       };
     }
@@ -109,7 +114,7 @@ export default function PracticeTenses() {
     >
       <Flex direction="column" gap={4}>
         <Heading level={1} variant="headlineL">
-          Practice your knowledge of tenses!
+          Tense Identification
         </Heading>
 
         {hasStarted ? (
@@ -126,18 +131,25 @@ export default function PracticeTenses() {
             numberOfQuestions={Number(questionCountSetting)}
             onReset={() => setHasStarted(false)}
           >
-            <Quiz.Questions>
-              {questions.map((q, i) => (
-                <QuestionLol {...q} key={i} />
-              ))}
-            </Quiz.Questions>
+            <Flex align="center" direction="column" justify="center" gap={8}>
+              <Quiz.Questions>
+                {questions.map((q, i) => (
+                  <QuestionLol {...q} key={i} />
+                ))}
+              </Quiz.Questions>
 
-            <Box>
-              <NextBtn />
-            </Box>
+              <Box>
+                <NextBtn />
+              </Box>
+            </Flex>
           </Quiz>
         ) : (
-          <Flex direction="column" gap={4}>
+          <>
+            <Text>
+              Use this page to practice identifying what tense conjugation a word contains.
+              These words come from <Link className="text-blue-600 underline" to='/learn/module05'>module 5</Link>.
+            </Text>
+
             <Settings
               enableLanguageSetting={false}
               enableAnswerTypeSetting={false}
@@ -146,7 +158,7 @@ export default function PracticeTenses() {
             <Box>
               <Button onClick={() => setHasStarted(true)}>Start</Button>
             </Box>
-          </Flex>
+          </>
         )}
       </Flex>
     </QuizContainerContext.Provider>
@@ -161,26 +173,28 @@ const tenseMap = {
   present: "Present",
 } as const;
 
-function QuestionLol({ question }: { question: string }) {
-  const context = useQuizContext();
-  const id = React.useId();
-
+function QuestionLol({ answer, id, question }: Q) {
+  const quizContext = useQuizContext();
+  console.log(quizContext)
   return (
-    <Flex direction="column" gap={4}>
-      <Text id={id}>
+    <Flex align="center" direction="column" gap={4}>
+      <Text>
         What is the tense in this word: <b>{question}</b>
       </Text>
-      <RadioGroup
-        aria-labelledby={id}
-        onChange={context.changeAnswer}
-        value={context.answer}
-      >
-        {TENSE_LIST.map((t) => (
-          <RadioGroup.Option key={t} value={t}>
-            {tenseMap[t]}
-          </RadioGroup.Option>
-        ))}
-      </RadioGroup>
+
+      <div className="w-[600px]">
+        <Flex align="center" direction="column" gap={4}>
+
+      <AnswerMultipleChoiceButtons
+        isCorrect={quizContext.answer === answer}
+        options={TENSE_LIST.map((t) => ({
+          key: t,
+          text: tenseMap[t],
+        }))}
+            questionKey={id}
+      />
+        </Flex>
+    </div>
     </Flex>
   );
 }
