@@ -146,49 +146,48 @@ export default function PracticeTenseConjugation() {
       {hasStarted && (
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <Flex direction='column' gap={4}>
-
-            <TableWrapper
-              columns={[
-                {
-                  accessorKey: "tense",
-                  cell(value: Tense) {
-                    return <Text>{tenseMap[value]}</Text>;
+            <Flex direction="column" gap={4}>
+              <TableWrapper
+                columns={[
+                  {
+                    accessorKey: "tense",
+                    cell(value: Tense) {
+                      return <Text>{tenseMap[value]}</Text>;
+                    },
+                    header: "Tense",
                   },
-                  header: "Tense",
-                },
-                {
-                  accessorKey: "value",
-                  cell(value, row) {
-                    return (
-                      <FormField
-                        control={form.control}
-                        name={row.tense}
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormControl>
-                              <Input
-                                autoComplete="off"
-                                placeholder="Type here..."
-                                {...field}
-                                value={field.value ?? ""}
-                              />
-                            </FormControl>
+                  {
+                    accessorKey: "value",
+                    cell(value, row) {
+                      return (
+                        <FormField
+                          control={form.control}
+                          name={row.tense}
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormControl>
+                                <Input
+                                  autoComplete="off"
+                                  placeholder="Type here..."
+                                  {...field}
+                                  value={field.value ?? ""}
+                                />
+                              </FormControl>
 
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    );
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      );
+                    },
+                    header: "Answer",
                   },
-                  header: "Answer",
-                },
-              ]}
-              data={TENSE_LIST.map((tense) => ({
-                tense,
-                value: "",
-              }))}
-            />
+                ]}
+                data={TENSE_LIST.map((tense) => ({
+                  tense,
+                  value: "",
+                }))}
+              />
 
               {form.formState.submitCount > 0 && (
                 <Notice intent={isCorrect ? "positive" : "negative"}>
@@ -226,7 +225,10 @@ function checkCorrectAnswer(
 
     if (
       !answer ||
-      !answersToCheck.find((correctAnswer) => sanitizedAnswer === sanitizeIrregularCharacters(correctAnswer))
+      !answersToCheck.find(
+        (correctAnswer) =>
+          sanitizedAnswer === sanitizeIrregularCharacters(correctAnswer)
+      )
     ) {
       return answersToCheck;
     }
