@@ -1,6 +1,6 @@
 import React from "react";
 import { Label } from "../primitives/label";
-import { RadioGroup as RadioGroupPrimitive, RadioGroupItem } from "../primitives/ui/radio-group";
+import { RadioGroup as RadioGroupPrimitive, RadioGroupItem } from "../primitives/radio-group";
 import { FormElement } from "./FormElement";
 import { Flex } from "./flex";
 

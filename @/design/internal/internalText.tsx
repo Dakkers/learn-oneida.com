@@ -52,9 +52,10 @@ export function InternalText({
   intent = "secondary",
   variant = "bodyM",
 }: InternalTextProps) {
+  console.log(typographyClasses[variant])
   return (
     <Tag
-      className={cn(typographyClasses[variant], textColorMap[contrast][intent])}
+      className={`${typographyClasses[variant]} ${cn(textColorMap[contrast][intent])}`}
       id={id}
     >
       {children}

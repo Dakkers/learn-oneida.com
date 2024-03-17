@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { PaddingProps, usePadding } from "@/utils/usePadding";
 
 type Gap = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 
@@ -13,7 +14,7 @@ type JustifyContent =
 
 type AlignItems = "baseline" | "center" | "end" | "start" | "stretch";
 
-interface FlexProps {
+interface FlexProps extends PaddingProps {
   align?: AlignItems;
   as?: "div" | "span";
   children: React.ReactNode;
@@ -33,7 +34,10 @@ export function Flex({
   height,
   justify,
   wrap = false,
+  p, px, py, pl, pt, pr, pb,
 }: FlexProps) {
+  const padding = usePadding({ p, px, py, pl, pt, pr, pb })
+
   return (
     <Tag
       className={cn(
@@ -43,7 +47,8 @@ export function Flex({
         gap && gapMap.get(gap),
         height === "fill" ? "h-full" : undefined,
         justify && justifyContentMap[justify],
-        wrap && "flex-wrap"
+        wrap && "flex-wrap",
+        padding
       )}
     >
       {children}

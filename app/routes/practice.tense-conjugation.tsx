@@ -162,7 +162,7 @@ export default function PracticeTenseConjugation() {
                       return (
                         <FormField
                           control={form.control}
-                          name={row.tense}
+                          name={(row?.tense ?? "") as string}
                           render={({ field }) => (
                             <FormItem>
                               <FormControl>

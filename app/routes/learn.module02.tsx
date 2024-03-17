@@ -917,8 +917,8 @@ function ThingsThatAreTheSameSection() {
 
 // @ts-expect-error To be addressed in LO-21
 const getBreakdown = (data, key) =>
-  // @ts-expect-error To be addressed in LO-21
   data.phrases.find(
+    // @ts-expect-error To be addressed in LO-21
     (p: SomethingElseEntirely) => p.key === key || p.pronoun === key
   )?.breakdown;
 

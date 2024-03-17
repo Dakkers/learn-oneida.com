@@ -12,6 +12,15 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/design/primitives/navigation-menu";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTrigger,
+} from "@/design/primitives/drawer";
+import { Link } from "@remix-run/react";
+import { MenuIcon } from "lucide-react";
+import { Flex } from "@/design/components/flex";
+import { Text } from "@/design/components/text";
 
 const moduleNumbers = new Array(5).fill(0).map((_, i) => (i + 1).toString());
 
@@ -34,6 +43,83 @@ const toolsItems: { title: string; href: string; description: string }[] = [
 ];
 
 export function Navbar() {
+  return (
+    <div>
+      <div className="sm:hidden">
+        <NavbarMobile />
+      </div>
+      <div className="hidden sm:block">
+        <NavbarDesktop />
+      </div>
+    </div>
+  );
+}
+
+function NavbarMobile() {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <Flex align="center" justify="between" p={2}>
+      <Text variant="titleS">Learn Oneida</Text>
+
+      <Drawer open={isOpen} onOpenChange={setIsOpen}>
+        <DrawerTrigger>
+          <MenuIcon />
+        </DrawerTrigger>
+        <DrawerContent>
+          <Flex justify="center">
+            <NavigationMenu>
+              <NavigationMenuList className="flex-col">
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={navigationMenuTriggerStyle()}
+                    href="/"
+                  >
+                    Home
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={navigationMenuTriggerStyle()}
+                    href="/curriculum"
+                  >
+                    Curriculum
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={navigationMenuTriggerStyle()}
+                    href="/resources"
+                  >
+                    Resources
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={navigationMenuTriggerStyle()}
+                    href="/practice"
+                  >
+                    Practice
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={navigationMenuTriggerStyle()}
+                    href="/tools"
+                  >
+                    Tools
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </Flex>
+        </DrawerContent>
+      </Drawer>
+    </Flex>
+  );
+}
+
+function NavbarDesktop() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -95,24 +181,29 @@ export function Navbar() {
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+  React.ComponentPropsWithoutRef<"a"> & {
+    className?: string;
+    href: string;
+    title: string;
+  }
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
+          to={props.href}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   );
