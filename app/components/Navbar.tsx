@@ -81,7 +81,7 @@ function NavbarMobile() {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     className={navigationMenuTriggerStyle()}
-                    href="/curriculum"
+                    href="/learn"
                   >
                     Curriculum
                   </NavigationMenuLink>
