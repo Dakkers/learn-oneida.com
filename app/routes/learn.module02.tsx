@@ -6,7 +6,7 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 
-import nuwehseRed from "../data/nuwehse-red.json";
+import nuwehseRed from "../data/nuwehse-red";
 import yʌteliRed from "../data/yʌteli-red.json";
 import nolukhwaRed from "../data/nolukhwa-red.json";
 import nuwehseBlue from "../data/nuwehse-blue.json";
