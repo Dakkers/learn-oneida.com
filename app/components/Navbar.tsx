@@ -89,6 +89,14 @@ function NavbarMobile() {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     className={navigationMenuTriggerStyle()}
+                    href="/about"
+                  >
+                    About
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={navigationMenuTriggerStyle()}
                     href="/resources"
                   >
                     Resources
@@ -126,6 +134,15 @@ function NavbarDesktop() {
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
             Home
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            className={navigationMenuTriggerStyle()}
+            href="/about"
+          >
+            About
           </NavigationMenuLink>
         </NavigationMenuItem>
 
