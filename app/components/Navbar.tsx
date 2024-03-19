@@ -136,15 +136,15 @@ function NavbarDesktop() {
             Home
           </NavigationMenuLink>
         </NavigationMenuItem>
-        
+
         <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/about"
-                  >
-                    About
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
+          <NavigationMenuLink
+            className={navigationMenuTriggerStyle()}
+            href="/about"
+          >
+            About
+          </NavigationMenuLink>
+        </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuTrigger>Curriculum</NavigationMenuTrigger>
