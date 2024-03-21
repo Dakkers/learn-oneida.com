@@ -2,12 +2,12 @@ import { Button } from "@/design/primitives/button";
 import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
 import React, { useId } from "react";
-import dataAttokhaJson from "../data/attokha.json";
-import dataEhsaksJson from "../data/ehsak.json";
-import dataΛtoleJson from "../data/ʌtole.json";
-import dataIsHereJson from "../data/data-ese-is-here.json";
-import dataItluJson from "../data/itlu.json";
-import dataOtshyusJson from "../data/otshyus.json";
+import dataAttokhaJson from "../data/attokha";
+import dataEhsaksJson from "../data/ehsak";
+import dataΛtoleJson from "../data/ʌtole";
+import dataIsHereJson from "../data/data-ese-is-here";
+import dataItluJson from "../data/itlu";
+import dataOtshyusJson from "../data/otshyus";
 import dataLikeRedJson from "../data/nuwehse-red";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import {

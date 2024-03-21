@@ -1,4 +1,6 @@
-{
+import { ParadigmData } from "~/components/ParadigmTable"
+
+const data: ParadigmData = {
   "translation": "{{pronoun}} {{refVerb}} wise",
   "type": "PR",
   "phrases": [
@@ -79,3 +81,5 @@
     }
   ]
 }
+
+export default data;

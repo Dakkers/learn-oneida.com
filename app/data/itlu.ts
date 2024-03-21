@@ -1,170 +1,174 @@
-{
-  "translation": "{{pronoun}} {{refVerb}} pulling it out",
+import { ParadigmData } from "~/components/ParadigmTable"
+
+const data: ParadigmData = {
+  "translation": "{{pronoun}} {{verb}} some place",
   "phrases": [
     {
       "pronoun": "i",
-      "phrase": "kótshyus",
+      "phrase": "kí·tluʔ",
       "breakdown": [
         {
           "text": "k",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "í·tluʔ" }
       ]
     },
     {
       "pronoun": "u",
-      "phrase": "sótshyus",
+      "phrase": "tsí·tluʔ",
       "breakdown": [
         {
-          "text": "s",
+          "text": "ts",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "í·tluʔ" }
       ]
     },
     {
       "pronoun": "m",
-      "phrase": "lótshyus",
+      "phrase": "lʌ́·tluʔ",
       "breakdown": [
         {
-          "text": "l",
+          "text": "lʌ́",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "·tluʔ" }
       ]
     },
     {
       "pronoun": "f",
-      "phrase": "yakótshyus",
+      "phrase": "yé·tluʔ",
       "breakdown": [
         {
-          "text": "yak",
+          "text": "yé",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "·tluʔ" }
       ]
     },
     {
       "pronoun": "it",
-      "phrase": "yótshyus",
+      "phrase": "kʌ́·tluʔ",
       "breakdown": [
         {
-          "text": "y",
+          "text": "kʌ́",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "·tluʔ" }
       ]
     },
     {
       "pronoun": "uni",
-      "phrase": "tnótshyus",
+      "phrase": "tní·tluʔ",
       "breakdown": [
         {
           "text": "tn",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "í·tluʔ" }
       ]
     },
     {
       "pronoun": "soni",
-      "phrase": "yaknótshyus",
+      "phrase": "yakní·tluʔ",
       "breakdown": [
         {
           "text": "yakn",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "í·tluʔ" }
       ]
     },
     {
       "pronoun": "u2",
-      "phrase": "snótshyus",
+      "phrase": "sní·tluʔ",
       "breakdown": [
         {
           "text": "sn",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "í·tluʔ" }
       ]
     },
     {
       "pronoun": "2m",
-      "phrase": "nótshyus",
+      "phrase": "hní·tluʔ",
       "breakdown": [
         {
-          "text": "n",
+          "text": "hn",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "í·tluʔ" }
       ]
     },
     {
       "pronoun": "2f",
-      "phrase": "knótshyus",
+      "phrase": "kní·tluʔ",
       "breakdown": [
         {
           "text": "kn",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "í·tluʔ" }
       ]
     },
     {
       "pronoun": "us",
-      "phrase": "tyótshyus",
+      "phrase": "twʌ́·tluʔ",
       "breakdown": [
         {
-          "text": "ty",
+          "text": "twʌ́",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "·tluʔ" }
       ]
     },
     {
       "pronoun": "theyni",
-      "phrase": "yakyótshyus",
+      "phrase": "yakwʌ́·tluʔ",
       "breakdown": [
         {
-          "text": "yaky",
+          "text": "yakwʌ́",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "·tluʔ" }
       ]
     },
     {
       "pronoun": "yall",
-      "phrase": "tsyótshyus",
+      "phrase": "swʌ́·tluʔ",
       "breakdown": [
         {
-          "text": "tsy",
+          "text": "swʌ́",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "·tluʔ" }
       ]
     },
     {
       "pronoun": "ms",
-      "phrase": "lʌnótshyus",
+      "phrase": "latí·tluʔ",
       "breakdown": [
         {
-          "text": "lʌn",
+          "text": "lat",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "í·tluʔ" }
       ]
     },
     {
       "pronoun": "fs",
-      "phrase": "kunótshyus",
+      "phrase": "kutí·tluʔ",
       "breakdown": [
         {
-          "text": "kun",
+          "text": "kut",
           "type": "PR"
         },
-        { "text": "ótshyus" }
+        { "text": "í·tluʔ" }
       ]
     }
   ]
 }
+
+export default data;

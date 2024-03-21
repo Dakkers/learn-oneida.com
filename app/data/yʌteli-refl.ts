@@ -1,142 +1,146 @@
-{
+import { ParadigmData } from "~/components/ParadigmTable"
+
+const data: ParadigmData = {
   "translation": "{{pronoun}} {{verb}} {{reflexive}}",
   "type": "PR",
   "phrases": [
     {
       "pronoun": "i",
-      "phrase": "katatnú·wehse̲ʔ",
+      "phrase": "katatyʌtelíˍ",
       "breakdown": [
         { "text": "k" },
         { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "u",
-      "phrase": "satatnú·wehse̲ʔ",
+      "phrase": "satatyʌtelíˍ",
       "breakdown": [
         { "text": "s" },
         { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "m",
-      "phrase": "latatnú·wehse̲ʔ",
+      "phrase": "latatyʌtelíˍ",
       "breakdown": [
         { "text": "l" },
         { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "f",
-      "phrase": "yutatnú·wehse̲ʔ",
+      "phrase": "yutatyʌtelíˍ",
       "breakdown": [
         { "text": "yu" },
         { "text": "tat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "it",
-      "phrase": "watatnú·wehse̲ʔ",
+      "phrase": "watatyʌtelíˍ",
       "breakdown": [
         { "text": "w" },
         { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "uni",
-      "phrase": "tyatatnú·wehse̲ʔ",
+      "phrase": "tyatatyʌtelíˍ",
       "breakdown": [
         { "text": "ty" },
         { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "soni",
-      "phrase": "tsyatatnú·wehse̲ʔ",
+      "phrase": "tsyatatyʌtelíˍ",
       "breakdown": [
         { "text": "tsy" },
         { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "u2",
-      "phrase": "yakyatatnú·wehse̲ʔ",
+      "phrase": "yakyatatyʌtelíˍ",
       "breakdown": [
-        { "text": "yaky" },
-        { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        { "text": "yakya" },
+        { "text": "tat", "type": "REFL" },
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "2m",
-      "phrase": "hyatatnú·wehse̲ʔ",
+      "phrase": "hyatatyʌtelíˍ",
       "breakdown": [
         { "text": "h", "type": "RPL" },
         { "text": "y" },
         { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "2f",
-      "phrase": "kninú·wehse̲ʔ",
+      "phrase": "kniyʌtelíˍ",
       "breakdown": [
         { "text": "ky" },
         { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "us",
-      "phrase": "twatatnú·wehse̲ʔ",
+      "phrase": "twatatyʌtelíˍ",
       "breakdown": [
         { "text": "twa" },
         { "text": "tat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "theyni",
-      "phrase": "yakwatatnú·wehse̲ʔ",
+      "phrase": "yakwatatyʌtelíˍ",
       "breakdown": [
-        { "text": "yakw" },
-        { "text": "atat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        { "text": "yakwa" },
+        { "text": "tat", "type": "REFL" },
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "yall",
-      "phrase": "swatatnú·wehse̲ʔ",
+      "phrase": "swatatyʌtelíˍ",
       "breakdown": [
         { "text": "swa" },
         { "text": "tat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "ms",
-      "phrase": "lutatnú·wehse̲ʔ",
+      "phrase": "lutatyʌtelíˍ",
       "breakdown": [
         { "text": "lu" },
         { "text": "tat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     },
     {
       "pronoun": "fs",
-      "phrase": "kutatnú·wehse̲ʔ",
+      "phrase": "kutatyʌtelíˍ",
       "breakdown": [
         { "text": "ku" },
         { "text": "tat", "type": "REFL" },
-        "nú·wehse̲ʔ"
+        "yʌtelíˍ"
       ]
     }
   ]
 }
+
+export default data;

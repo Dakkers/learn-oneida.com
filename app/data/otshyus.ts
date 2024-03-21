@@ -1,170 +1,174 @@
-{
-  "translation": "{{pronoun}} {{refVerb}} hard to please",
+import { ParadigmData } from "~/components/ParadigmTable"
+
+const data: ParadigmData = {
+  "translation": "{{pronoun}} {{refVerb}} pulling it out",
   "phrases": [
     {
       "pronoun": "i",
-      "phrase": "kʌto·lé·",
+      "phrase": "kótshyus",
       "breakdown": [
         {
           "text": "k",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "u",
-      "phrase": "sʌto·lé·",
+      "phrase": "sótshyus",
       "breakdown": [
         {
           "text": "s",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "m",
-      "phrase": "lʌto·lé·",
+      "phrase": "lótshyus",
       "breakdown": [
         {
           "text": "l",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "f",
-      "phrase": "yakʌto·lé·",
+      "phrase": "yakótshyus",
       "breakdown": [
         {
           "text": "yak",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "it",
-      "phrase": "wʌto·lé·",
+      "phrase": "yótshyus",
       "breakdown": [
         {
-          "text": "w",
+          "text": "y",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "uni",
-      "phrase": "tnʌto·lé·",
+      "phrase": "tnótshyus",
       "breakdown": [
         {
           "text": "tn",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "soni",
-      "phrase": "yaknʌto·lé·",
+      "phrase": "yaknótshyus",
       "breakdown": [
         {
           "text": "yakn",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "u2",
-      "phrase": "snʌto·lé·",
+      "phrase": "snótshyus",
       "breakdown": [
         {
           "text": "sn",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "2m",
-      "phrase": "nʌto·lé·",
+      "phrase": "nótshyus",
       "breakdown": [
         {
           "text": "n",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "2f",
-      "phrase": "knʌto·lé·",
+      "phrase": "knótshyus",
       "breakdown": [
         {
           "text": "kn",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "us",
-      "phrase": "twʌto·lé·",
+      "phrase": "tyótshyus",
       "breakdown": [
         {
-          "text": "tw",
+          "text": "ty",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "theyni",
-      "phrase": "yakwʌto·lé·",
+      "phrase": "yakyótshyus",
       "breakdown": [
         {
-          "text": "yakw",
+          "text": "yaky",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "yall",
-      "phrase": "swʌto·lé·",
+      "phrase": "tsyótshyus",
       "breakdown": [
         {
-          "text": "sw",
+          "text": "tsy",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "ms",
-      "phrase": "lʌnʌto·lé·",
+      "phrase": "lʌnótshyus",
       "breakdown": [
         {
           "text": "lʌn",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     },
     {
       "pronoun": "fs",
-      "phrase": "kunʌto·lé·",
+      "phrase": "kunótshyus",
       "breakdown": [
         {
           "text": "kun",
           "type": "PR"
         },
-        { "text": "ʌto·lé·" }
+        { "text": "ótshyus" }
       ]
     }
   ]
 }
+
+export default data;
