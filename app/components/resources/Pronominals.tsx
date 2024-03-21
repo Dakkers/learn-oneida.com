@@ -1,10 +1,10 @@
 import { Flex } from "@/design/components/flex";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { ResourceProps } from "./utils";
-import redPronominalsJson from "../../data/red-pronominals.json";
-import bluePronominalsJson from "../../data/blue-pronominals.json";
-import purplePronominalsJson from "../../data/purple-pronominals.json";
-import lightbluePronominalsJson from "../../data/lightblue-pronominals.json";
+import redPronominalsJson from "../../data/red-pronominals";
+import bluePronominalsJson from "../../data/blue-pronominals";
+import purplePronominalsJson from "../../data/purple-pronominals";
+import lightbluePronominalsJson from "../../data/lightblue-pronominals";
 import { Text } from "@/design/components/text";
 import { List } from "@/design/components/list";
 import { Notice } from "@/design/components/notice";

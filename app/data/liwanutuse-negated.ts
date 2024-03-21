@@ -1,46 +1,50 @@
-{
+import { ParadigmData } from "~/components/ParadigmTable"
+
+const data: ParadigmData = {
   "phrases": [
     {
       "breakdown": [
         "Tákʌʔ ",
         { "text": "ʌ", "type": "FUT" },
         { "text": "sk" },
-        "hlo·li̲´"
+        "liʔwanu·túse̲"
       ],
       "key": "you_me",
-      "phrase": "Tákʌʔ ʌskhlo·li̲´·"
+      "phrase": "Tákʌʔ ʌskliʔwanu·túse̲·"
     },
     {
       "breakdown": [
         "Tákʌʔ ",
         { "text": "ʌ", "type": "FUT" },
         { "text": "skwa" },
-        "hlo·li̲´"
+        "liʔwanu·túse̲"
       ],
       "key": "you_us_exclusive",
-      "phrase": "Tákʌʔ ʌskwahlo·li̲´·"
+      "phrase": "Tákʌʔ ʌskwaliʔwanu·túse̲·"
     },
     {
       "breakdown": [
         "Tákʌʔ ",
         { "text": "ʌ", "type": "FUT" },
         { "text": "she" },
-        "hlo·li̲´"
+        "liʔwanu·túse̲"
       ],
       "key": "you_her",
-      "phrase": "Tákʌʔ ʌshehlo·li̲´·"
+      "phrase": "Tákʌʔ ʌsheliʔwanu·túse̲·"
     },
     {
       "breakdown": [
         "Tákʌʔ ",
         { "text": "ʌ", "type": "FUT" },
         { "text": "hets" },
-        "hlo·li̲´"
+        "liʔwanu·túse̲"
       ],
       "key": "you_him",
-      "phrase": "Tákʌʔ ʌhetshlo·li̲´·"
+      "phrase": "Tákʌʔ ʌhetsliʔwanu·túse̲·"
     }
   ],
   "translation": "{{subject}} tell {{object}}",
   "type": "PP"
 }
+
+export default data;

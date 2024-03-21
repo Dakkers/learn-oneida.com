@@ -1,4 +1,7 @@
-{
+import { escape } from "lodash"
+import { ParadigmData } from "~/components/ParadigmTable"
+
+const data: ParadigmData = {
   "i": {
     "default": ["wak"],
     "c": [
@@ -121,3 +124,5 @@
     "i": ["yot"]
   }
 }
+
+export default data;
