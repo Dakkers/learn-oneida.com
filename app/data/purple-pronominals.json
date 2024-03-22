@@ -1,6 +1,4 @@
-import { ParadigmData } from "~/components/ParadigmTable"
-
-const data: ParadigmData = [
+[
   {
     "default": ["kuy"],
     "label": "I → you",
@@ -468,5 +466,3 @@ const data: ParadigmData = [
     "i": ["yakot"]
   }
 ]
-
-export default data;

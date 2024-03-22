@@ -24,8 +24,8 @@ import familyJson from "../../data/family/family";
 import friendJson from "../../data/family/friend";
 import cousinJson from "../../data/family/cousin";
 import relatedJson from "../../data/family/related";
-import siblingSameSexJson from "../../data/family/sibling-same-sex";
-import siblingJson from "../../data/family/sibling";
+import siblingSameSexJson from "../../data/family/sibling-same-sex.json";
+import siblingJson from "../../data/family/sibling.json";
 
 import parentsJson from "../../data/family/plural/parents";
 import childrenJson from "../../data/family/plural/children";
@@ -37,9 +37,9 @@ import youngerSiblingsJson from "../../data/family/plural/siblings-younger";
 import unclesAuntsJson from "../../data/family/plural/uncles-aunts";
 import niblingsJson from "../../data/family/plural/niblings";
 
-import siblingsJson from "../../data/family/plural/siblings";
-import cousinsJson from "../../data/family/plural/cousins";
-import friendsJson from "../../data/family/plural/friends";
+import siblingsJson from "../../data/family/plural/siblings.json";
+import cousinsJson from "../../data/family/plural/cousins.json";
+import friendsJson from "../../data/family/plural/friends.json";
 
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";

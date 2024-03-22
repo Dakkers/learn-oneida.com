@@ -1,6 +1,4 @@
-import { ParadigmData } from "~/components/ParadigmTable"
-
-const data: ParadigmData = {
+{
   "i": {
     "default": ["akw"],
     "c": [
@@ -99,4 +97,3 @@ const data: ParadigmData = {
     "i": ["aon", "aot"]
   }
 }
-export default data;
