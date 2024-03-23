@@ -141,7 +141,6 @@ export default function LearnModule01() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11
         data={yatsJson}
       />
       <Notice intent="primary">
@@ -164,7 +163,6 @@ export default function LearnModule01() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11
         data={anuhteJson}
         translationFn={({ pronoun }) => ({
           verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",

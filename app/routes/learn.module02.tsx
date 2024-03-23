@@ -506,7 +506,6 @@ function AliveDeadSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11, LO-21
         data={unheJson}
       />
       <SectionHeading id="verb-dead" level={2}>
@@ -521,7 +520,6 @@ function AliveDeadSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11
         data={iheyuJson}
       />
     </>
@@ -544,7 +542,6 @@ function PassedOnSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11
         data={atukohtuJson}
       />
     </>
@@ -635,7 +632,6 @@ function YoungOldSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-21
         data={kstʌhaJson}
       />
 
@@ -656,7 +652,6 @@ function YoungOldSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-21
         data={kʌʔni_yʌhaJson}
       />
       <Notice intent="warning">
@@ -777,7 +772,6 @@ function AgeSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-21
         data={ohsliyakuJson}
       />
       <Text>
