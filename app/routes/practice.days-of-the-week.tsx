@@ -3,7 +3,7 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
-import { DATA_DAYS_OF_WEEK } from "~/components/resources/DaysOfTheWeek";
+import { DATA_DAYS_OF_WEEK } from "~/components/articles/DaysOfTheWeek";
 
 export const meta: MetaFunction = () => {
   return [

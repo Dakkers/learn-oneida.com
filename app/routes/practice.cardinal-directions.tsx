@@ -8,7 +8,7 @@ import {
   MoveRightIcon,
   MoveUpIcon,
 } from "lucide-react";
-import { DATA_CARDINAL_DIRECTIONS } from "~/components/resources/CardinalDirections";
+import { DATA_CARDINAL_DIRECTIONS } from "~/components/articles/CardinalDirections";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 
 export const meta: MetaFunction = () => {

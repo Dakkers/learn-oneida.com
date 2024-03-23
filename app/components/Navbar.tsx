@@ -97,9 +97,9 @@ function NavbarMobile() {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     className={navigationMenuTriggerStyle()}
-                    href="/resources"
+                    href="/articles"
                   >
-                    Resources
+                    Articles
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
@@ -164,9 +164,9 @@ function NavbarDesktop() {
         <NavigationMenuItem>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
-            href="/resources"
+            href="/articles"
           >
-            Resources
+            Articles
           </NavigationMenuLink>
         </NavigationMenuItem>
 

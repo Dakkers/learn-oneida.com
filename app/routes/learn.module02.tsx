@@ -6,28 +6,28 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 
-import nuwehseRed from "../data/nuwehse-red.json";
-import yʌteliRed from "../data/yʌteli-red.json";
-import nolukhwaRed from "../data/nolukhwa-red.json";
-import nuwehseBlue from "../data/nuwehse-blue.json";
-import yʌteliBlue from "../data/yʌteli-blue.json";
-import nolukhwaBlue from "../data/nolukhwa-blue.json";
+import nuwehseRed from "../data/nuwehse-red";
+import yʌteliRed from "../data/yʌteli-red";
+import nolukhwaRed from "../data/nolukhwa-red";
+import nuwehseBlue from "../data/nuwehse-blue";
+import yʌteliBlue from "../data/yʌteli-blue";
+import nolukhwaBlue from "../data/nolukhwa-blue";
 import nuwehsePurple from "../data/nuwehse-purple.json";
 import yʌteliPurple from "../data/yʌteli-purple.json";
 import nolukhwaPurple from "../data/nolukhwa-purple.json";
-import nuwehseRefl from "../data/nuwehse-refl.json";
-import nolukhwaRefl from "../data/nolukhwa-refl.json";
-import yʌteliRefl from "../data/yʌteli-refl.json";
+import nuwehseRefl from "../data/nuwehse-refl";
+import nolukhwaRefl from "../data/nolukhwa-refl";
+import yʌteliRefl from "../data/yʌteli-refl";
 import liwanutuseData from "../data/liwanutuse.json";
 import hloliData from "../data/hloli.json";
 import hloliNegatedData from "../data/hloli-negated.json";
 import liwanutuseNegatedData from "../data/liwanutuse-negated.json";
-import unheJson from "../data/unhe.json";
-import iheyuJson from "../data/iheyu.json";
-import atukohtuJson from "../data/atukohtu.json";
-import kstʌhaJson from "../data/kstʌha.json";
-import kʌʔni_yʌhaJson from "../data/kʌʔni_yʌha.json";
-import ohsliyakuJson from "../data/ohsliyaku.json";
+import unheJson from "../data/unhe";
+import iheyuJson from "../data/iheyu";
+import atukohtuJson from "../data/atukohtu";
+import kstʌhaJson from "../data/kstʌha";
+import kʌʔni_yʌhaJson from "../data/kʌʔni_yʌha";
+import ohsliyakuJson from "../data/ohsliyaku";
 
 import { TableWrapper } from "@/design/components/tableWrapper";
 import {
@@ -46,16 +46,16 @@ import { List } from "@/design/components/list";
 import { Letter } from "~/components/Letter";
 import _ from "lodash";
 import {
-  FamilyResource,
+  FamilyArticle,
   FamilyTableOfContentItems,
-} from "~/components/resources/Family";
+} from "~/components/articles/Family";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "~/components/SectionHeading";
-import { ParticlesTable } from "~/components/resources/ParticlesTable";
-import { LastNamesResource } from "~/components/resources/LastNames";
-import { AboutSomeoneResource } from "~/components/resources/AboutSomeone";
-import { SimilarInAppearanceResource } from "~/components/resources/SimilarInAppearance";
-import { BeingDifferentResource } from "~/components/resources/BeingDifferent";
+import { ParticlesTable } from "~/components/articles/ParticlesTable";
+import { LastNamesArticle } from "~/components/articles/LastNames";
+import { AboutSomeoneArticle } from "~/components/articles/AboutSomeone";
+import { SimilarInAppearanceArticle } from "~/components/articles/SimilarInAppearance";
+import { BeingDifferentArticle } from "~/components/articles/BeingDifferent";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 
@@ -162,7 +162,7 @@ export default function LearnModule02() {
       <CommandsSection />
       <NegatedCommandsSection />
 
-      <FamilyResource level={2} />
+      <FamilyArticle level={2} />
 
       <AliveDeadSection />
       <PassedOnSection />
@@ -179,11 +179,11 @@ export default function LearnModule02() {
       <ParticlesTable group="module02" />
 
       <DialogueSection />
-      <LastNamesResource level={2} />
-      <AboutSomeoneResource level={2} />
-      <SimilarInAppearanceResource level={2} />
+      <LastNamesArticle level={2} />
+      <AboutSomeoneArticle level={2} />
+      <SimilarInAppearanceArticle level={2} />
       <ThingsThatAreTheSameSection />
-      <BeingDifferentResource level={2} />
+      <BeingDifferentArticle level={2} />
 
       <TranslationExercisesSection group="module02" />
     </Flex>
