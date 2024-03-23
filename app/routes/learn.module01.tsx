@@ -8,21 +8,21 @@ import { singlePronouns } from "~/utils";
 import yatsJson from "../data/yats";
 import anuhteJson from "../data/anuhte";
 import { Box } from "@/design/components/box";
-import { EnglishNamesResource } from "~/components/resources/EnglishNames";
+import { EnglishNamesArticle } from "~/components/articles/EnglishNames";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { Pronominal } from "~/components/Pronominal";
-import { PeopleResource } from "~/components/resources/People";
-import { ParticlesTable } from "~/components/resources/ParticlesTable";
+import { PeopleArticle } from "~/components/articles/People";
+import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Letter } from "~/components/Letter";
 import { SectionHeading } from "~/components/SectionHeading";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
-import { PronominalsResource } from "~/components/resources/Pronominals";
-import { StressResource } from "~/components/resources/Stress";
-import { GlottalStopResource } from "~/components/resources/GlottalStop";
-import { LetterHResource } from "~/components/resources/LetterH";
-import { WhisperedEndingsResource } from "~/components/resources/WhisperedEndings";
+import { PronominalsArticle } from "~/components/articles/Pronominals";
+import { StressArticle } from "~/components/articles/Stress";
+import { GlottalStopArticle } from "~/components/articles/GlottalStop";
+import { LetterHArticle } from "~/components/articles/LetterH";
+import { WhisperedEndingsArticle } from "~/components/articles/WhisperedEndings";
 
 export const meta: MetaFunction = () => {
   return [
@@ -84,12 +84,12 @@ export default function LearnModule01() {
 
         <TOC.Item label="Particles" value="particles" />
 
-        <TOC.Item label="People" value="people-resource">
+        <TOC.Item label="People" value="people-article">
           <TOC.Section>
-            <TOC.Item label="Children" value="people-resource-children" />
-            <TOC.Item label="Adolescents" value="people-resource-adolescents" />
-            <TOC.Item label="Adults" value="people-resource-adults" />
-            <TOC.Item label="Older people" value="people-resource-older" />
+            <TOC.Item label="Children" value="people-article-children" />
+            <TOC.Item label="Adolescents" value="people-article-adolescents" />
+            <TOC.Item label="Adults" value="people-article-adults" />
+            <TOC.Item label="Older people" value="people-article-older" />
           </TOC.Section>
         </TOC.Item>
 
@@ -100,15 +100,15 @@ export default function LearnModule01() {
 
       <Separator />
 
-      <PronominalsResource level={2} />
+      <PronominalsArticle level={2} />
 
-      <StressResource level={2} />
+      <StressArticle level={2} />
 
-      <GlottalStopResource level={2} />
+      <GlottalStopArticle level={2} />
 
-      <LetterHResource level={2} />
+      <LetterHArticle level={2} />
 
-      <WhisperedEndingsResource level={2} />
+      <WhisperedEndingsArticle level={2} />
 
       <SectionHeading id="yats" level={2}>
         yats — my name is...
@@ -180,9 +180,9 @@ export default function LearnModule01() {
       </Text>
       <ParticlesTable group="module01" />
 
-      <PeopleResource level={2} />
+      <PeopleArticle level={2} />
 
-      <EnglishNamesResource level={2} />
+      <EnglishNamesArticle level={2} />
 
       <DialogueSection />
       <TranslationExercisesSection group="module01" />
