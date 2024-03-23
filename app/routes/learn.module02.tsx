@@ -6,28 +6,28 @@ import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 
-import nuwehseRed from "../data/nuwehse-red.json";
-import yʌteliRed from "../data/yʌteli-red.json";
-import nolukhwaRed from "../data/nolukhwa-red.json";
-import nuwehseBlue from "../data/nuwehse-blue.json";
-import yʌteliBlue from "../data/yʌteli-blue.json";
-import nolukhwaBlue from "../data/nolukhwa-blue.json";
+import nuwehseRed from "../data/nuwehse-red";
+import yʌteliRed from "../data/yʌteli-red";
+import nolukhwaRed from "../data/nolukhwa-red";
+import nuwehseBlue from "../data/nuwehse-blue";
+import yʌteliBlue from "../data/yʌteli-blue";
+import nolukhwaBlue from "../data/nolukhwa-blue";
 import nuwehsePurple from "../data/nuwehse-purple.json";
 import yʌteliPurple from "../data/yʌteli-purple.json";
 import nolukhwaPurple from "../data/nolukhwa-purple.json";
-import nuwehseRefl from "../data/nuwehse-refl.json";
-import nolukhwaRefl from "../data/nolukhwa-refl.json";
-import yʌteliRefl from "../data/yʌteli-refl.json";
+import nuwehseRefl from "../data/nuwehse-refl";
+import nolukhwaRefl from "../data/nolukhwa-refl";
+import yʌteliRefl from "../data/yʌteli-refl";
 import liwanutuseData from "../data/liwanutuse.json";
 import hloliData from "../data/hloli.json";
 import hloliNegatedData from "../data/hloli-negated.json";
 import liwanutuseNegatedData from "../data/liwanutuse-negated.json";
-import unheJson from "../data/unhe.json";
-import iheyuJson from "../data/iheyu.json";
-import atukohtuJson from "../data/atukohtu.json";
-import kstʌhaJson from "../data/kstʌha.json";
-import kʌʔni_yʌhaJson from "../data/kʌʔni_yʌha.json";
-import ohsliyakuJson from "../data/ohsliyaku.json";
+import unheJson from "../data/unhe";
+import iheyuJson from "../data/iheyu";
+import atukohtuJson from "../data/atukohtu";
+import kstʌhaJson from "../data/kstʌha";
+import kʌʔni_yʌhaJson from "../data/kʌʔni_yʌha";
+import ohsliyakuJson from "../data/ohsliyaku";
 
 import { TableWrapper } from "@/design/components/tableWrapper";
 import {
@@ -506,7 +506,6 @@ function AliveDeadSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11, LO-21
         data={unheJson}
       />
       <SectionHeading id="verb-dead" level={2}>
@@ -521,7 +520,6 @@ function AliveDeadSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11
         data={iheyuJson}
       />
     </>
@@ -544,7 +542,6 @@ function PassedOnSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11
         data={atukohtuJson}
       />
     </>
@@ -635,7 +632,6 @@ function YoungOldSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-21
         data={kstʌhaJson}
       />
 
@@ -656,7 +652,6 @@ function YoungOldSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-21
         data={kʌʔni_yʌhaJson}
       />
       <Notice intent="warning">
@@ -777,7 +772,6 @@ function AgeSection() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-21
         data={ohsliyakuJson}
       />
       <Text>

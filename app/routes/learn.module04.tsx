@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import dataIsHere from "../data/data-ese-is-here.json";
+import dataIsHere from "../data/data-ese-is-here";
 import dataWasHere from "../data/module04/was-here";
 import dataWillBeHere from "../data/module04/will-be-here";
 import dataMightBeHere from "../data/module04/might-be-here";
@@ -276,7 +276,6 @@ export default function LearnModule04() {
       </Text>
       <AccordionWrapper
         sections={[
-          // @ts-expect-error To be addressed in LO-2
           ["someone-is-here", "Someone is here", dataIsHere],
           ["someone-was-here", "Someone was here", dataWasHere],
           ["someone-will-be-here", "Someone will be here", dataWillBeHere],

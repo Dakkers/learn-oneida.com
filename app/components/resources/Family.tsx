@@ -1,41 +1,41 @@
-import motherJson from "../../data/family/mother.json";
-import grandmotherJson from "../../data/family/grandmother.json";
-import auntJson from "../../data/family/aunt.json";
-import olderSisterJson from "../../data/family/sister-older.json";
+import motherJson from "../../data/family/mother";
+import grandmotherJson from "../../data/family/grandmother";
+import auntJson from "../../data/family/aunt";
+import olderSisterJson from "../../data/family/sister-older";
 
-import nieceJson from "../../data/family/niece.json";
-import daughterJson from "../../data/family/daughter.json";
-import granddaughterJson from "../../data/family/granddaughter.json";
-import youngerSisterJson from "../../data/family/sister-younger.json";
-import greatGranddaughterJson from "../../data/family/great-granddaughter.json";
+import nieceJson from "../../data/family/niece";
+import daughterJson from "../../data/family/daughter";
+import granddaughterJson from "../../data/family/granddaughter";
+import youngerSisterJson from "../../data/family/sister-younger";
+import greatGranddaughterJson from "../../data/family/great-granddaughter";
 
-import grandfatherJson from "../../data/family/grandfather.json";
-import fatherJson from "../../data/family/father.json";
-import uncleJson from "../../data/family/uncle.json";
-import olderBrotherJson from "../../data/family/brother-older.json";
+import grandfatherJson from "../../data/family/grandfather";
+import fatherJson from "../../data/family/father";
+import uncleJson from "../../data/family/uncle";
+import olderBrotherJson from "../../data/family/brother-older";
 
-import greatGrandsonJson from "../../data/family/great-grandson.json";
-import sonJson from "../../data/family/son.json";
-import grandsonJson from "../../data/family/grandson.json";
-import youngerBrotherJson from "../../data/family/brother-younger.json";
-import nephewJson from "../../data/family/nephew.json";
+import greatGrandsonJson from "../../data/family/great-grandson";
+import sonJson from "../../data/family/son";
+import grandsonJson from "../../data/family/grandson";
+import youngerBrotherJson from "../../data/family/brother-younger";
+import nephewJson from "../../data/family/nephew";
 
-import familyJson from "../../data/family/family.json";
-import friendJson from "../../data/family/friend.json";
-import cousinJson from "../../data/family/cousin.json";
-import relatedJson from "../../data/family/related.json";
+import familyJson from "../../data/family/family";
+import friendJson from "../../data/family/friend";
+import cousinJson from "../../data/family/cousin";
+import relatedJson from "../../data/family/related";
 import siblingSameSexJson from "../../data/family/sibling-same-sex.json";
 import siblingJson from "../../data/family/sibling.json";
 
-import parentsJson from "../../data/family/plural/parents.json";
-import childrenJson from "../../data/family/plural/children.json";
-import grandparentsJson from "../../data/family/plural/grandparents.json";
-import grandchildrenJson from "../../data/family/plural/grandchildren.json";
+import parentsJson from "../../data/family/plural/parents";
+import childrenJson from "../../data/family/plural/children";
+import grandparentsJson from "../../data/family/plural/grandparents";
+import grandchildrenJson from "../../data/family/plural/grandchildren";
 
-import olderSiblingsJson from "../../data/family/plural/siblings-older.json";
-import youngerSiblingsJson from "../../data/family/plural/siblings-younger.json";
-import unclesAuntsJson from "../../data/family/plural/uncles-aunts.json";
-import niblingsJson from "../../data/family/plural/niblings.json";
+import olderSiblingsJson from "../../data/family/plural/siblings-older";
+import youngerSiblingsJson from "../../data/family/plural/siblings-younger";
+import unclesAuntsJson from "../../data/family/plural/uncles-aunts";
+import niblingsJson from "../../data/family/plural/niblings";
 
 import siblingsJson from "../../data/family/plural/siblings.json";
 import cousinsJson from "../../data/family/plural/cousins.json";

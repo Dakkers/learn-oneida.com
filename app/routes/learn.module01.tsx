@@ -5,8 +5,8 @@ import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { singlePronouns } from "~/utils";
-import yatsJson from "../data/yats.json";
-import anuhteJson from "../data/anuhte.json";
+import yatsJson from "../data/yats";
+import anuhteJson from "../data/anuhte";
 import { Box } from "@/design/components/box";
 import { EnglishNamesResource } from "~/components/resources/EnglishNames";
 import { ParadigmTable } from "~/components/ParadigmTable";
@@ -141,7 +141,6 @@ export default function LearnModule01() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11
         data={yatsJson}
       />
       <Notice intent="primary">
@@ -164,7 +163,6 @@ export default function LearnModule01() {
           pronounEnglish: false,
           pronounOneida: false,
         }}
-        // @ts-expect-error To be addressed in LO-2, LO-11
         data={anuhteJson}
         translationFn={({ pronoun }) => ({
           verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
