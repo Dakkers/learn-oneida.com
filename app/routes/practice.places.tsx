@@ -2,7 +2,7 @@ import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
-import { DATA_PLACES_IN_COMMUNITY } from "~/components/resources/PlacesInTheCommunity";
+import { DATA_PLACES_IN_COMMUNITY } from "~/components/articles/PlacesInTheCommunity";
 import {
   EnglishToOneidaQuiz,
   EnglishToOneidaQuizProps,
