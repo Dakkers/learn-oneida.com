@@ -132,7 +132,6 @@ export default function ToolsParadigm() {
           columnVisibility={{
             pronounEnglish: false,
           }}
-          // @ts-expect-error LO-11
           data={dataToUse[word]}
           isTesting
           // @ts-expect-error To be addressed in LO-20

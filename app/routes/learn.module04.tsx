@@ -276,7 +276,6 @@ export default function LearnModule04() {
       </Text>
       <AccordionWrapper
         sections={[
-          // @ts-expect-error To be addressed in LO-2
           ["someone-is-here", "Someone is here", dataIsHere],
           ["someone-was-here", "Someone was here", dataWasHere],
           ["someone-will-be-here", "Someone will be here", dataWillBeHere],

@@ -24,7 +24,7 @@ import {
   BreakdownType,
   TextBreakdown,
 } from "~/components/TextBreakdown";
-import iheyuData from "~/data/iheyu.json";
+import iheyuData from "~/data/iheyu";
 import smallData from "~/data/module05/kʌʔ_ni-a";
 import { HeightWeightArticle } from "~/components/articles/Weight";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
@@ -686,7 +686,6 @@ function IrregularStativeVerbsSection() {
       <SectionHeading id="irregular-died" level={2}>
         -iheyu-
       </SectionHeading>
-      {/* @ts-expect-error To be addressed in LO-2 */}
       <ParadigmTable data={iheyuData} />
       <SectionHeading id="irregular-small" level={2}>
         -kʌ- ni-a
