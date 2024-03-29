@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Articles() {
+export default function Practice() {
   const items = [
     {
       href: "/being-somewhere",

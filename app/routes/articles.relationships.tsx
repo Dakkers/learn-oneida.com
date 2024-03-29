@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function ArticlesMonths() {
+export default function ArticlesRelationships() {
   return (
     <div>
       <RelationshipsArticle />
