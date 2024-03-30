@@ -26,9 +26,9 @@ import {
 } from "~/components/TextBreakdown";
 import iheyuData from "~/data/iheyu";
 import smallData from "~/data/module05/kʌʔ_ni-a";
-import { HeightWeightResource } from "~/components/resources/Weight";
+import { HeightWeightArticle } from "~/components/articles/Weight";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
-import { ParticlesTable } from "~/components/resources/ParticlesTable";
+import { ParticlesTable } from "~/components/articles/ParticlesTable";
 
 export const meta: MetaFunction = () => {
   return [
@@ -108,7 +108,7 @@ export default function LearnModule05() {
       <IrregularStativeVerbsSection />
       <NegatingStativeVerbsSection />
 
-      <HeightWeightResource level={2} />
+      <HeightWeightArticle level={2} />
       <SectionHeading id="particles" level={2}>
         Particles
       </SectionHeading>

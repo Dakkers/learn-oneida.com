@@ -2,7 +2,7 @@ import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
-import { DATA_SEASONS } from "~/components/resources/Seasons";
+import { DATA_SEASONS } from "~/components/articles/Seasons";
 import { Flower2Icon, LeafIcon, SnowflakeIcon, SunIcon } from "lucide-react";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 

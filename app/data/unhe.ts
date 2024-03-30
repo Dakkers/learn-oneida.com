@@ -1,174 +1,174 @@
-import { ParadigmData } from "~/components/ParadigmTable"
+import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
-  "translation": "{{pronoun}} {{refVerb}} alive",
-  "phrases": [
+  translation: "{{pronoun}} {{refVerb}} alive",
+  phrases: [
     {
-      "pronoun": "i",
-      "phrase": "kúnheʔ",
-      "breakdown": [
+      pronoun: "i",
+      phrase: "kúnheʔ",
+      breakdown: [
         {
-          "text": "k",
-          "type": "PR"
+          text: "k",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "u",
-      "phrase": "súnheʔ",
-      "breakdown": [
+      pronoun: "u",
+      phrase: "súnheʔ",
+      breakdown: [
         {
-          "text": "s",
-          "type": "PR"
+          text: "s",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "m",
-      "phrase": "lúnheʔ",
-      "breakdown": [
+      pronoun: "m",
+      phrase: "lúnheʔ",
+      breakdown: [
         {
-          "text": "l",
-          "type": "PR"
+          text: "l",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "f",
-      "phrase": "yakúnheʔ",
-      "breakdown": [
+      pronoun: "f",
+      phrase: "yakúnheʔ",
+      breakdown: [
         {
-          "text": "yak",
-          "type": "PR"
+          text: "yak",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "it",
-      "phrase": "yúnheʔ",
-      "breakdown": [
+      pronoun: "it",
+      phrase: "yúnheʔ",
+      breakdown: [
         {
-          "text": "y",
-          "type": "PR"
+          text: "y",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "uni",
-      "phrase": "tnúnheʔ",
-      "breakdown": [
+      pronoun: "uni",
+      phrase: "tnúnheʔ",
+      breakdown: [
         {
-          "text": "tn",
-          "type": "PR"
+          text: "tn",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "soni",
-      "phrase": "yaknúnheʔ",
-      "breakdown": [
+      pronoun: "soni",
+      phrase: "yaknúnheʔ",
+      breakdown: [
         {
-          "text": "yakn",
-          "type": "PR"
+          text: "yakn",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "u2",
-      "phrase": "snúnheʔ",
-      "breakdown": [
+      pronoun: "u2",
+      phrase: "snúnheʔ",
+      breakdown: [
         {
-          "text": "sn",
-          "type": "PR"
+          text: "sn",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "2m",
-      "phrase": "núnheʔ",
-      "breakdown": [
+      pronoun: "2m",
+      phrase: "núnheʔ",
+      breakdown: [
         {
-          "text": "n",
-          "type": "PR"
+          text: "n",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "2f",
-      "phrase": "knúnheʔ",
-      "breakdown": [
+      pronoun: "2f",
+      phrase: "knúnheʔ",
+      breakdown: [
         {
-          "text": "kn",
-          "type": "PR"
+          text: "kn",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "us",
-      "phrase": "tyúnheʔ",
-      "breakdown": [
+      pronoun: "us",
+      phrase: "tyúnheʔ",
+      breakdown: [
         {
-          "text": "ty",
-          "type": "PR"
+          text: "ty",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "theyni",
-      "phrase": "yakyúnheʔ",
-      "breakdown": [
+      pronoun: "theyni",
+      phrase: "yakyúnheʔ",
+      breakdown: [
         {
-          "text": "yaky",
-          "type": "PR"
+          text: "yaky",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "yall",
-      "phrase": "tsyúnheʔ",
-      "breakdown": [
+      pronoun: "yall",
+      phrase: "tsyúnheʔ",
+      breakdown: [
         {
-          "text": "tsy",
-          "type": "PR"
+          text: "tsy",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "ms",
-      "phrase": "lʌnúnheʔ",
-      "breakdown": [
+      pronoun: "ms",
+      phrase: "lʌnúnheʔ",
+      breakdown: [
         {
-          "text": "lʌn",
-          "type": "PR"
+          text: "lʌn",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
+        { text: "únheʔ" },
+      ],
     },
     {
-      "pronoun": "fs",
-      "phrase": "kunúnheʔ",
-      "breakdown": [
+      pronoun: "fs",
+      phrase: "kunúnheʔ",
+      breakdown: [
         {
-          "text": "kun",
-          "type": "PR"
+          text: "kun",
+          type: "PR",
         },
-        { "text": "únheʔ" }
-      ]
-    }
-  ]
-}
+        { text: "únheʔ" },
+      ],
+    },
+  ],
+};
 
 export default data;

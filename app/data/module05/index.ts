@@ -120,7 +120,7 @@ export const characterTenseData: TenseDatum[] = [
     fut: ["ʌ", "wak", "atatewyʌnʌtaʔú", "hakeʔ"],
     ifut: ["a", "·ukw", "atatewyʌnʌtaʔú", "hakeʔ"],
     cmd: ["s", "atatewyʌnʌtaʔú", "hak"],
-    en: "to get ready",
+    en: "get oneself ready",
   },
   {
     dict: [213],
@@ -207,7 +207,7 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["s", "a", "ʔnikuhláksʌ", "hak"],
   },
   {
-    en: "strong-willed",
+    en: "to be strong-willed",
     dict: [857],
     stem: "C stem with epenthetic E",
     root: ["-ʔnikuhlatshahniht-"],

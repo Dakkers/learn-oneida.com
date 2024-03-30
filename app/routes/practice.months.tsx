@@ -2,7 +2,7 @@ import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
-import { DATA_MONTHS } from "~/components/resources/Months";
+import { DATA_MONTHS } from "~/components/articles/Months";
 import {
   EnglishToOneidaQuiz,
   EnglishToOneidaQuizProps,
