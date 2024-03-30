@@ -33,21 +33,23 @@ export default function ToolsFlashcards() {
   const [forceShow, setForceShow] = React.useState(false);
 
   const [data, setData] = React.useState<Item[]>(
-    _.shuffle([...characterTenseData, ...mindTenseData, ...emotionTenseData])
-      .map((item) => {
-        const content = item.present;
-        const blah =
-          "items" in content
-            ? content.items[0].on
-            : Array.isArray(content)
-            ? content
-            : content.on;
-        return {
-          en: arrayify(item.en)[0],
-          on: blah.join(""),
-        };
-      })
-      .slice(0, 5)
+    _.shuffle([
+      ...characterTenseData,
+      ...mindTenseData,
+      ...emotionTenseData,
+    ]).map((item) => {
+      const content = item.present;
+      const blah =
+        "items" in content
+          ? content.items[0].on
+          : Array.isArray(content)
+          ? content
+          : content.on;
+      return {
+        en: arrayify(item.en)[0],
+        on: blah.join(""),
+      };
+    })
   );
 
   const currentWord = data[index];
