@@ -46,16 +46,16 @@ import { List } from "@/design/components/list";
 import { Letter } from "~/components/Letter";
 import _ from "lodash";
 import {
-  FamilyResource,
+  FamilyArticle,
   FamilyTableOfContentItems,
-} from "~/components/resources/Family";
+} from "~/components/articles/Family";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "~/components/SectionHeading";
-import { ParticlesTable } from "~/components/resources/ParticlesTable";
-import { LastNamesResource } from "~/components/resources/LastNames";
-import { AboutSomeoneResource } from "~/components/resources/AboutSomeone";
-import { SimilarInAppearanceResource } from "~/components/resources/SimilarInAppearance";
-import { BeingDifferentResource } from "~/components/resources/BeingDifferent";
+import { ParticlesTable } from "~/components/articles/ParticlesTable";
+import { LastNamesArticle } from "~/components/articles/LastNames";
+import { AboutSomeoneArticle } from "~/components/articles/AboutSomeone";
+import { SimilarInAppearanceArticle } from "~/components/articles/SimilarInAppearance";
+import { BeingDifferentArticle } from "~/components/articles/BeingDifferent";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 
@@ -162,7 +162,7 @@ export default function LearnModule02() {
       <CommandsSection />
       <NegatedCommandsSection />
 
-      <FamilyResource level={2} />
+      <FamilyArticle level={2} />
 
       <AliveDeadSection />
       <PassedOnSection />
@@ -179,11 +179,11 @@ export default function LearnModule02() {
       <ParticlesTable group="module02" />
 
       <DialogueSection />
-      <LastNamesResource level={2} />
-      <AboutSomeoneResource level={2} />
-      <SimilarInAppearanceResource level={2} />
+      <LastNamesArticle level={2} />
+      <AboutSomeoneArticle level={2} />
+      <SimilarInAppearanceArticle level={2} />
       <ThingsThatAreTheSameSection />
-      <BeingDifferentResource level={2} />
+      <BeingDifferentArticle level={2} />
 
       <TranslationExercisesSection group="module02" />
     </Flex>
