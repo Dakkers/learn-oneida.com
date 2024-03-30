@@ -1,45 +1,45 @@
-import { ParadigmData } from "~/components/ParadigmTable"
+import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
-  "translation": "They call {{pronounObjective}} ...",
-  "type": "PP",
-  "phrases": [
+  translation: "They call {{pronounObjective}} ...",
+  type: "PP",
+  phrases: [
     {
-      "pronoun": "i",
-      "phrase": "yukyáts",
-      "breakdown": [{ "text": "yuk" }, "yáts"]
+      pronoun: "i",
+      phrase: "yukyáts",
+      breakdown: [{ text: "yuk" }, "yáts"],
     },
     {
-      "pronoun": "u",
-      "phrase": "yesa·yáts",
-      "breakdown": [{ "text": "yesa·" }, "yáts"]
+      pronoun: "u",
+      phrase: "yesa·yáts",
+      breakdown: [{ text: "yesa·" }, "yáts"],
     },
     {
-      "pronoun": "m",
-      "phrase": "luwa·yáts",
-      "breakdown": [{ "text": "luwa·" }, "yáts"]
+      pronoun: "m",
+      phrase: "luwa·yáts",
+      breakdown: [{ text: "luwa·" }, "yáts"],
     },
     {
-      "pronoun": "f",
-      "phrase": "yutat·yáts",
-      "breakdown": [{ "text": "yutat·" }, "yáts"]
+      pronoun: "f",
+      phrase: "yutat·yáts",
+      breakdown: [{ text: "yutat·" }, "yáts"],
     },
     {
-      "pronoun": "it",
-      "phrase": "kuwa·yáts",
-      "breakdown": [{ "text": "kuwa·" }, "yáts"]
+      pronoun: "it",
+      phrase: "kuwa·yáts",
+      breakdown: [{ text: "kuwa·" }, "yáts"],
     },
     {
-      "pronoun": "ms",
-      "phrase": "luwati·yáts",
-      "breakdown": [{ "text": "luwati·" }, "yáts"]
+      pronoun: "ms",
+      phrase: "luwati·yáts",
+      breakdown: [{ text: "luwati·" }, "yáts"],
     },
     {
-      "pronoun": "fs",
-      "phrase": "kuwati·yáts",
-      "breakdown": [{ "text": "kuwati·" }, "yáts"]
-    }
-  ]
-}
+      pronoun: "fs",
+      phrase: "kuwati·yáts",
+      breakdown: [{ text: "kuwati·" }, "yáts"],
+    },
+  ],
+};
 
 export default data;

@@ -1,174 +1,174 @@
-import { ParadigmData } from "~/components/ParadigmTable"
+import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
-  "translation": "{{pronoun}} {{verb}} some place",
-  "phrases": [
+  translation: "{{pronoun}} {{verb}} some place",
+  phrases: [
     {
-      "pronoun": "i",
-      "phrase": "kí·tluʔ",
-      "breakdown": [
+      pronoun: "i",
+      phrase: "kí·tluʔ",
+      breakdown: [
         {
-          "text": "k",
-          "type": "PR"
+          text: "k",
+          type: "PR",
         },
-        { "text": "í·tluʔ" }
-      ]
+        { text: "í·tluʔ" },
+      ],
     },
     {
-      "pronoun": "u",
-      "phrase": "tsí·tluʔ",
-      "breakdown": [
+      pronoun: "u",
+      phrase: "tsí·tluʔ",
+      breakdown: [
         {
-          "text": "ts",
-          "type": "PR"
+          text: "ts",
+          type: "PR",
         },
-        { "text": "í·tluʔ" }
-      ]
+        { text: "í·tluʔ" },
+      ],
     },
     {
-      "pronoun": "m",
-      "phrase": "lʌ́·tluʔ",
-      "breakdown": [
+      pronoun: "m",
+      phrase: "lʌ́·tluʔ",
+      breakdown: [
         {
-          "text": "lʌ́",
-          "type": "PR"
+          text: "lʌ́",
+          type: "PR",
         },
-        { "text": "·tluʔ" }
-      ]
+        { text: "·tluʔ" },
+      ],
     },
     {
-      "pronoun": "f",
-      "phrase": "yé·tluʔ",
-      "breakdown": [
+      pronoun: "f",
+      phrase: "yé·tluʔ",
+      breakdown: [
         {
-          "text": "yé",
-          "type": "PR"
+          text: "yé",
+          type: "PR",
         },
-        { "text": "·tluʔ" }
-      ]
+        { text: "·tluʔ" },
+      ],
     },
     {
-      "pronoun": "it",
-      "phrase": "kʌ́·tluʔ",
-      "breakdown": [
+      pronoun: "it",
+      phrase: "kʌ́·tluʔ",
+      breakdown: [
         {
-          "text": "kʌ́",
-          "type": "PR"
+          text: "kʌ́",
+          type: "PR",
         },
-        { "text": "·tluʔ" }
-      ]
+        { text: "·tluʔ" },
+      ],
     },
     {
-      "pronoun": "uni",
-      "phrase": "tní·tluʔ",
-      "breakdown": [
+      pronoun: "uni",
+      phrase: "tní·tluʔ",
+      breakdown: [
         {
-          "text": "tn",
-          "type": "PR"
+          text: "tn",
+          type: "PR",
         },
-        { "text": "í·tluʔ" }
-      ]
+        { text: "í·tluʔ" },
+      ],
     },
     {
-      "pronoun": "soni",
-      "phrase": "yakní·tluʔ",
-      "breakdown": [
+      pronoun: "soni",
+      phrase: "yakní·tluʔ",
+      breakdown: [
         {
-          "text": "yakn",
-          "type": "PR"
+          text: "yakn",
+          type: "PR",
         },
-        { "text": "í·tluʔ" }
-      ]
+        { text: "í·tluʔ" },
+      ],
     },
     {
-      "pronoun": "u2",
-      "phrase": "sní·tluʔ",
-      "breakdown": [
+      pronoun: "u2",
+      phrase: "sní·tluʔ",
+      breakdown: [
         {
-          "text": "sn",
-          "type": "PR"
+          text: "sn",
+          type: "PR",
         },
-        { "text": "í·tluʔ" }
-      ]
+        { text: "í·tluʔ" },
+      ],
     },
     {
-      "pronoun": "2m",
-      "phrase": "hní·tluʔ",
-      "breakdown": [
+      pronoun: "2m",
+      phrase: "hní·tluʔ",
+      breakdown: [
         {
-          "text": "hn",
-          "type": "PR"
+          text: "hn",
+          type: "PR",
         },
-        { "text": "í·tluʔ" }
-      ]
+        { text: "í·tluʔ" },
+      ],
     },
     {
-      "pronoun": "2f",
-      "phrase": "kní·tluʔ",
-      "breakdown": [
+      pronoun: "2f",
+      phrase: "kní·tluʔ",
+      breakdown: [
         {
-          "text": "kn",
-          "type": "PR"
+          text: "kn",
+          type: "PR",
         },
-        { "text": "í·tluʔ" }
-      ]
+        { text: "í·tluʔ" },
+      ],
     },
     {
-      "pronoun": "us",
-      "phrase": "twʌ́·tluʔ",
-      "breakdown": [
+      pronoun: "us",
+      phrase: "twʌ́·tluʔ",
+      breakdown: [
         {
-          "text": "twʌ́",
-          "type": "PR"
+          text: "twʌ́",
+          type: "PR",
         },
-        { "text": "·tluʔ" }
-      ]
+        { text: "·tluʔ" },
+      ],
     },
     {
-      "pronoun": "theyni",
-      "phrase": "yakwʌ́·tluʔ",
-      "breakdown": [
+      pronoun: "theyni",
+      phrase: "yakwʌ́·tluʔ",
+      breakdown: [
         {
-          "text": "yakwʌ́",
-          "type": "PR"
+          text: "yakwʌ́",
+          type: "PR",
         },
-        { "text": "·tluʔ" }
-      ]
+        { text: "·tluʔ" },
+      ],
     },
     {
-      "pronoun": "yall",
-      "phrase": "swʌ́·tluʔ",
-      "breakdown": [
+      pronoun: "yall",
+      phrase: "swʌ́·tluʔ",
+      breakdown: [
         {
-          "text": "swʌ́",
-          "type": "PR"
+          text: "swʌ́",
+          type: "PR",
         },
-        { "text": "·tluʔ" }
-      ]
+        { text: "·tluʔ" },
+      ],
     },
     {
-      "pronoun": "ms",
-      "phrase": "latí·tluʔ",
-      "breakdown": [
+      pronoun: "ms",
+      phrase: "latí·tluʔ",
+      breakdown: [
         {
-          "text": "lat",
-          "type": "PR"
+          text: "lat",
+          type: "PR",
         },
-        { "text": "í·tluʔ" }
-      ]
+        { text: "í·tluʔ" },
+      ],
     },
     {
-      "pronoun": "fs",
-      "phrase": "kutí·tluʔ",
-      "breakdown": [
+      pronoun: "fs",
+      phrase: "kutí·tluʔ",
+      breakdown: [
         {
-          "text": "kut",
-          "type": "PR"
+          text: "kut",
+          type: "PR",
         },
-        { "text": "í·tluʔ" }
-      ]
-    }
-  ]
-}
+        { text: "í·tluʔ" },
+      ],
+    },
+  ],
+};
 
 export default data;
