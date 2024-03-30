@@ -91,34 +91,6 @@ export default function ToolsFlashcards() {
     setCurrentTimeoutRef(newTimeoutRef);
   };
 
-  // const goNextRecursively = async (data: Item[], currentIndex: number) => {
-  //   const newIndex = currentIndex + 1;
-  //   if (newIndex >= data.length) {
-  //     return;
-  //   }
-
-  //   const currentWord = data[newIndex];
-  //   setIndex(newIndex);
-  //   speak(currentWord.en);
-
-  //   // Reveal the answer
-  //   await new Promise((resolve) => {
-  //     setTimeout(() => {
-  //       setForceShow(true);
-  //       resolve(null);
-  //     }, 8000);
-  //   });
-
-  //   // Move onto the next card
-  //   await new Promise((resolve) => {
-  //     setTimeout(() => {
-  //       setForceShow(false);
-  //       goNextRecursively(data, newIndex);
-  //       resolve(null);
-  //     }, 2000);
-  //   });
-  // };
-
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading level={1}>Flashcards</SectionHeading>

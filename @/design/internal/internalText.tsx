@@ -52,7 +52,6 @@ export function InternalText({
   intent = "secondary",
   variant = "bodyM",
 }: InternalTextProps) {
-  console.log(typographyClasses[variant])
   return (
     <Tag
       className={`${typographyClasses[variant]} ${cn(textColorMap[contrast][intent])}`}
