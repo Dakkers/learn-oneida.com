@@ -1,174 +1,174 @@
-import { ParadigmData } from "~/components/ParadigmTable"
+import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
-  "translation": "{{pronoun}} {{refVerb}} pulling it out",
-  "phrases": [
+  translation: "{{pronoun}} {{refVerb}} pulling it out",
+  phrases: [
     {
-      "pronoun": "i",
-      "phrase": "kótshyus",
-      "breakdown": [
+      pronoun: "i",
+      phrase: "kótshyus",
+      breakdown: [
         {
-          "text": "k",
-          "type": "PR"
+          text: "k",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "u",
-      "phrase": "sótshyus",
-      "breakdown": [
+      pronoun: "u",
+      phrase: "sótshyus",
+      breakdown: [
         {
-          "text": "s",
-          "type": "PR"
+          text: "s",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "m",
-      "phrase": "lótshyus",
-      "breakdown": [
+      pronoun: "m",
+      phrase: "lótshyus",
+      breakdown: [
         {
-          "text": "l",
-          "type": "PR"
+          text: "l",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "f",
-      "phrase": "yakótshyus",
-      "breakdown": [
+      pronoun: "f",
+      phrase: "yakótshyus",
+      breakdown: [
         {
-          "text": "yak",
-          "type": "PR"
+          text: "yak",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "it",
-      "phrase": "yótshyus",
-      "breakdown": [
+      pronoun: "it",
+      phrase: "yótshyus",
+      breakdown: [
         {
-          "text": "y",
-          "type": "PR"
+          text: "y",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "uni",
-      "phrase": "tnótshyus",
-      "breakdown": [
+      pronoun: "uni",
+      phrase: "tnótshyus",
+      breakdown: [
         {
-          "text": "tn",
-          "type": "PR"
+          text: "tn",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "soni",
-      "phrase": "yaknótshyus",
-      "breakdown": [
+      pronoun: "soni",
+      phrase: "yaknótshyus",
+      breakdown: [
         {
-          "text": "yakn",
-          "type": "PR"
+          text: "yakn",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "u2",
-      "phrase": "snótshyus",
-      "breakdown": [
+      pronoun: "u2",
+      phrase: "snótshyus",
+      breakdown: [
         {
-          "text": "sn",
-          "type": "PR"
+          text: "sn",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "2m",
-      "phrase": "nótshyus",
-      "breakdown": [
+      pronoun: "2m",
+      phrase: "nótshyus",
+      breakdown: [
         {
-          "text": "n",
-          "type": "PR"
+          text: "n",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "2f",
-      "phrase": "knótshyus",
-      "breakdown": [
+      pronoun: "2f",
+      phrase: "knótshyus",
+      breakdown: [
         {
-          "text": "kn",
-          "type": "PR"
+          text: "kn",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "us",
-      "phrase": "tyótshyus",
-      "breakdown": [
+      pronoun: "us",
+      phrase: "tyótshyus",
+      breakdown: [
         {
-          "text": "ty",
-          "type": "PR"
+          text: "ty",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "theyni",
-      "phrase": "yakyótshyus",
-      "breakdown": [
+      pronoun: "theyni",
+      phrase: "yakyótshyus",
+      breakdown: [
         {
-          "text": "yaky",
-          "type": "PR"
+          text: "yaky",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "yall",
-      "phrase": "tsyótshyus",
-      "breakdown": [
+      pronoun: "yall",
+      phrase: "tsyótshyus",
+      breakdown: [
         {
-          "text": "tsy",
-          "type": "PR"
+          text: "tsy",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "ms",
-      "phrase": "lʌnótshyus",
-      "breakdown": [
+      pronoun: "ms",
+      phrase: "lʌnótshyus",
+      breakdown: [
         {
-          "text": "lʌn",
-          "type": "PR"
+          text: "lʌn",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
+        { text: "ótshyus" },
+      ],
     },
     {
-      "pronoun": "fs",
-      "phrase": "kunótshyus",
-      "breakdown": [
+      pronoun: "fs",
+      phrase: "kunótshyus",
+      breakdown: [
         {
-          "text": "kun",
-          "type": "PR"
+          text: "kun",
+          type: "PR",
         },
-        { "text": "ótshyus" }
-      ]
-    }
-  ]
-}
+        { text: "ótshyus" },
+      ],
+    },
+  ],
+};
 
 export default data;

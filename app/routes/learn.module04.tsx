@@ -47,19 +47,19 @@ import { SectionHeading } from "~/components/SectionHeading";
 import { Box } from "@/design/components/box";
 import { Notice } from "@/design/components/notice";
 import { Letter } from "~/components/Letter";
-import { TimesOfDayResource } from "~/components/resources/TimesOfDay";
-import { DaysOfTheWeekResource } from "~/components/resources/DaysOfTheWeek";
-import { MonthsResource } from "~/components/resources/Months";
-import { CountingTimeResource } from "~/components/resources/CountingTime";
-import { RoadsResource } from "~/components/resources/Roads";
-import { CitiesResource } from "~/components/resources/Cities";
-import { CountriesResource } from "~/components/resources/Countries";
-import { AroundTheHouseResource } from "~/components/resources/AroundTheHouse";
-import { AtSomeonesPlaceResource } from "~/components/resources/AtSomeonesPlace";
-import { PlacesInTheCommunityResource } from "~/components/resources/PlacesInTheCommunity";
-import { ParticlesTable } from "~/components/resources/ParticlesTable";
-import { PhoneNumbersResource } from "~/components/resources/PhoneNumbers";
-import { ClockTimeResource } from "~/components/resources/ClockTime";
+import { TimesOfDayArticle } from "~/components/articles/TimesOfDay";
+import { DaysOfTheWeekArticle } from "~/components/articles/DaysOfTheWeek";
+import { MonthsArticle } from "~/components/articles/Months";
+import { CountingTimeArticle } from "~/components/articles/CountingTime";
+import { RoadsArticle } from "~/components/articles/Roads";
+import { CitiesArticle } from "~/components/articles/Cities";
+import { CountriesArticle } from "~/components/articles/Countries";
+import { AroundTheHouseArticle } from "~/components/articles/AroundTheHouse";
+import { AtSomeonesPlaceArticle } from "~/components/articles/AtSomeonesPlace";
+import { PlacesInTheCommunityArticle } from "~/components/articles/PlacesInTheCommunity";
+import { ParticlesTable } from "~/components/articles/ParticlesTable";
+import { PhoneNumbersArticle } from "~/components/articles/PhoneNumbers";
+import { ClockTimeArticle } from "~/components/articles/ClockTime";
 
 export const meta: MetaFunction = () => {
   return [
@@ -426,29 +426,29 @@ export default function LearnModule04() {
         ]}
       />
 
-      <TimesOfDayResource level={2} />
+      <TimesOfDayArticle level={2} />
 
-      <DaysOfTheWeekResource level={2} />
+      <DaysOfTheWeekArticle level={2} />
 
-      <MonthsResource level={2} />
+      <MonthsArticle level={2} />
 
-      <ClockTimeResource level={2} />
+      <ClockTimeArticle level={2} />
 
-      <CountingTimeResource level={2} />
+      <CountingTimeArticle level={2} />
 
-      <PhoneNumbersResource level={2} />
+      <PhoneNumbersArticle level={2} />
 
-      <RoadsResource level={2} />
+      <RoadsArticle level={2} />
 
-      <CitiesResource level={2} />
+      <CitiesArticle level={2} />
 
-      <CountriesResource level={2} />
+      <CountriesArticle level={2} />
 
-      <AroundTheHouseResource level={2} />
+      <AroundTheHouseArticle level={2} />
 
-      <AtSomeonesPlaceResource level={2} />
+      <AtSomeonesPlaceArticle level={2} />
 
-      <PlacesInTheCommunityResource level={2} />
+      <PlacesInTheCommunityArticle level={2} />
 
       <SectionHeading id="particles" level={2}>
         Particles

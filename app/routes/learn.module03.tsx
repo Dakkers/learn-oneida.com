@@ -11,14 +11,14 @@ import {
   TextBreakdown,
 } from "~/components/TextBreakdown";
 import { SectionHeading } from "~/components/SectionHeading";
-import { GoodPeopleBadPeopleResource } from "~/components/resources/GoodPeopleBadPeople";
-import { RepetitiveFeatureResource } from "~/components/resources/RepetitiveFeature";
-import { ParticlesTable } from "~/components/resources/ParticlesTable";
-import { CountingPeopleResource } from "~/components/resources/CountingPeople";
-import { DomesticatedAnimalsResource } from "~/components/resources/DomesticatedAnimals";
-import { RelationshipsResource } from "~/components/resources/Relationships";
-import { ClansResource } from "~/components/resources/Clans";
-import { NationsResource } from "~/components/resources/Nations";
+import { GoodPeopleBadPeopleArticle } from "~/components/articles/GoodPeopleBadPeople";
+import { RepetitiveFeatureArticle } from "~/components/articles/RepetitiveFeature";
+import { ParticlesTable } from "~/components/articles/ParticlesTable";
+import { CountingPeopleArticle } from "~/components/articles/CountingPeople";
+import { DomesticatedAnimalsArticle } from "~/components/articles/DomesticatedAnimals";
+import { RelationshipsArticle } from "~/components/articles/Relationships";
+import { ClansArticle } from "~/components/articles/Clans";
+import { NationsArticle } from "~/components/articles/Nations";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 
@@ -97,21 +97,21 @@ export default function LearnModule03() {
 
       <PastTenseSection />
 
-      <RepetitiveFeatureResource level={2} />
+      <RepetitiveFeatureArticle level={2} />
 
-      <RelationshipsResource level={2} />
+      <RelationshipsArticle level={2} />
 
-      <GoodPeopleBadPeopleResource level={2} />
+      <GoodPeopleBadPeopleArticle level={2} />
 
-      <CountingPeopleResource level={2} />
+      <CountingPeopleArticle level={2} />
 
-      <DomesticatedAnimalsResource level={2} />
+      <DomesticatedAnimalsArticle level={2} />
 
       <HavingConjugations />
 
-      <ClansResource level={2} />
+      <ClansArticle level={2} />
 
-      <NationsResource level={2} />
+      <NationsArticle level={2} />
 
       <SectionHeading id="particles" level={2}>
         Particles
