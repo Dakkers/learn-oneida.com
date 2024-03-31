@@ -7,10 +7,10 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], ["e", "EP"], "khu·níheʔ"],
+        breakdown: [["ke"], "khu·níheʔ"],
       },
       {
-        breakdown: [["s"], "khu·níheʔ"],
+        breakdown: [["h", "RPL"], ["se"], "khu·níheʔ"],
       },
       {
         breakdown: [["la"], "khu·níheʔ"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["sni"], "khu·níheʔ"],
       },
       {
-        breakdown: [["ni"], "khu·níheʔ"],
+        breakdown: [["h", "RPL"], ["ni"], "khu·níheʔ"],
       },
       {
         breakdown: [["kni"], "khu·níheʔ"],

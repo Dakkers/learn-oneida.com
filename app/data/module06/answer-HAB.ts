@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["sni"], "lihwaʔslákwas"],
       },
       {
-        breakdown: [["ni"], "lihwaʔslákwas"],
+        breakdown: [["h", "RPL"], ["ni"], "lihwaʔslákwas"],
       },
       {
         breakdown: [["kni"], "lihwaʔslákwas"],

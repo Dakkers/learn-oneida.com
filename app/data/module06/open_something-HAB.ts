@@ -7,7 +7,7 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], ["e", "EP"], "nhotúkwas"],
+        breakdown: [["ke"], "nhotúkwas"],
       },
       {
         breakdown: [["se"], "nhotúkwas"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["sni"], "nhotúkwas"],
       },
       {
-        breakdown: [["ni"], "nhotúkwas"],
+        breakdown: [["h", "RPL"], ["ni"], "nhotúkwas"],
       },
       {
         breakdown: [["kni"], "nhotúkwas"],

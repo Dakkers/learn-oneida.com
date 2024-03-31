@@ -10,43 +10,43 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["k"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hsa"], "nóhaleʔ"],
+        breakdown: [["wa", "DEF"], ["hse"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ha"], "nóhaleʔ"],
+        breakdown: [["wa", "DEF"], ["ha"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ye"], "nóhaleʔ"],
+        breakdown: [["waʔ", "DEF"], ["e"], "nóhaleʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ka"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tni"], "nóhaleʔ"],
+        breakdown: [["we", "DEF"], ["tni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakni"], "nóhaleʔ"],
+        breakdown: [["waʔ", "DEF"], ["akni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sni"], "nóhaleʔ"],
+        breakdown: [["we", "DEF"], ["sni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hni"], "nóhaleʔ"],
+        breakdown: [["wa", "DEF"], ["hni"], "nóhaleʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["kni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["twa"], "nóhaleʔ"],
+        breakdown: [["we", "DEF"], ["twa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakwa"], "nóhaleʔ"],
+        breakdown: [["waʔ", "DEF"], ["akwa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["swa"], "nóhaleʔ"],
+        breakdown: [["we", "DEF"], ["swa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hati"], "nóhaleʔ"],
+        breakdown: [["wa", "DEF"], ["hati"], "nóhaleʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["kuti"], "nóhaleʔ"],

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], ["e", "EP"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["ke"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["hse"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ha"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["ha"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ye"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["ye"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ka"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["ka"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tni"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["tni"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakni"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["yakni"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sni"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["sni"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hni"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["hni"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kni"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["kni"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["twa"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["twa"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakwa"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["yakwa"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["swa"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["swa"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hati"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["hati"], "khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kuti"], "ʔkhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["kuti"], "khu·ní·"],
       },
     ],
   },

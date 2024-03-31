@@ -7,7 +7,7 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["u", "DEF"], ["k"], ["e", "EP"], "ʔnikuhlayʌ·táneʔ"],
+        breakdown: [["u", "DEF"], ["ke"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["sa"], "ʔnikuhlayʌ·táneʔ"],
@@ -28,7 +28,7 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["yukni"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sni"], "ʔnikuhlayʌ·táneʔ"],
+        breakdown: [["we", "DEF"], ["sni"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["hoti"], "ʔnikuhlayʌ·táneʔ"],
@@ -43,7 +43,7 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["yukwa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["swa"], "ʔnikuhlayʌ·táneʔ"],
+        breakdown: [["we", "DEF"], ["swa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["hoti"], "ʔnikuhlayʌ·táneʔ"],

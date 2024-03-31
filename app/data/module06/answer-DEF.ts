@@ -10,43 +10,43 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["k"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hsa"], "lihwaʔsla·kó·"],
+        breakdown: [["wa", "DEF"], ["hse"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ha"], "lihwaʔsla·kó·"],
+        breakdown: [["wa", "DEF"], ["ha"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ye"], "lihwaʔsla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["e"], "lihwaʔsla·kó·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ka"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tni"], "lihwaʔsla·kó·"],
+        breakdown: [["we", "DEF"], ["tni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakni"], "lihwaʔsla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["akni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sni"], "lihwaʔsla·kó·"],
+        breakdown: [["we", "DEF"], ["sni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hni"], "lihwaʔsla·kó·"],
+        breakdown: [["wa", "DEF"], ["hni"], "lihwaʔsla·kó·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["kni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["twa"], "lihwaʔsla·kó·"],
+        breakdown: [["we", "DEF"], ["twa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakwa"], "lihwaʔsla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["akwa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["swa"], "lihwaʔsla·kó·"],
+        breakdown: [["we", "DEF"], ["swa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hati"], "lihwaʔsla·kó·"],
+        breakdown: [["wa", "DEF"], ["hati"], "lihwaʔsla·kó·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["kuti"], "lihwaʔsla·kó·"],

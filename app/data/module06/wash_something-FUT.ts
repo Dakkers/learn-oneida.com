@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: [["ʌ", "FUT"], ["k"], "nóha·leʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "nóha·leʔ"],
+        breakdown: [["ʌ", "FUT"], ["hse"], "nóha·leʔ"],
       },
       {
         breakdown: [["ʌ", "FUT"], ["ha"], "nóha·leʔ"],

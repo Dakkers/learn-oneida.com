@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], ["e", "EP"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["ke"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hsa"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["hse"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ha"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["ha"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ye"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["ye"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ka"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["ka"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tni"], "ʔkhu·ní·"],
+        breakdown: [["a·e", "IFUT"], ["tni"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakni"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["yakni"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sni"], "ʔkhu·ní·"],
+        breakdown: [["a·e", "IFUT"], ["sni"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hni"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["hni"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["kni"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["kni"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["twa"], "ʔkhu·ní·"],
+        breakdown: [["a·e", "IFUT"], ["twa"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakwa"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["yakwa"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["swa"], "ʔkhu·ní·"],
+        breakdown: [["a·e", "IFUT"], ["swa"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hati"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["hati"], "khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["kuti"], "ʔkhu·ní·"],
+        breakdown: [["a", "IFUT"], ["kuti"], "khu·ní·"],
       },
     ],
   },
