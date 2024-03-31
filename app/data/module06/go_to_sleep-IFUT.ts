@@ -3,8 +3,8 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} VERB",
-    type: "PB",
+    translation: "{{pronoun}} might sleep",
+    type: "PB",d
     phrases: [
       {
         breakdown: [["a", "IFUT"], ["wak"], "i·táweʔ"],

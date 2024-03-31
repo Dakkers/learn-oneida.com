@@ -3,7 +3,7 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} answer",
+    translation: "{{pronoun}} work",
     type: "PR",
     phrases: [
       {

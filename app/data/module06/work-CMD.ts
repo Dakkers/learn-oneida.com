@@ -2,8 +2,8 @@ import { createParadigmData } from "~/components/ParadigmTable";
 
 export default createParadigmData(
   {
-    translation: "Answer me!",
-    type: "Pˍ",
+    translation: "Work!",
+    type: "PB",
     phrases: [
       {
         breakdown: [["sa"], "yo·tʌ·"],
