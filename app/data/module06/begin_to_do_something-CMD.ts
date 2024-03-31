@@ -6,13 +6,13 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["ta", ["s"], "ehseʔ"],
+        breakdown: ["ta", ["s"], "atáhsawʌ"],
       },
       {
-        breakdown: ["ta", ["sn"], "ehseʔ"],
+        breakdown: ["ta", ["sn"], "atáhsawʌ"],
       },
       {
-        breakdown: ["ta", ["sw"], "ehseʔ"],
+        breakdown: ["ta", ["sw"], "atáhsawʌ"],
       },
     ],
   },

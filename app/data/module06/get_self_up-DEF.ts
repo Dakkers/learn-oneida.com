@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["l"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["l"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["w"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["lu"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["lu"], "atkétsko’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "atkétsko’"],
       },
     ],
   },

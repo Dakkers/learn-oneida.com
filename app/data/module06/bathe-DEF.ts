@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["l"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["l"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["w"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["lu"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["lu"], "atya’tóhale’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "atya’tóhale’"],
       },
     ],
   },

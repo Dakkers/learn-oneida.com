@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["k"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hs"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["l"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["l"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yu"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["w"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ty"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakn"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tsy"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hy"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ky"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tw"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakw"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["sw"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["lu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lu"], "atslu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ku"], "atslu·ní·"],
       },
     ],
   },

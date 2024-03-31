@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} VERB",
-    type: "PR",
+    type: "PB",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["wak"], "i·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["sʌ"], "·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["l"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["lo"], "·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yako"], "·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yo"], "·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yukn"], "i·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yukn"], "i·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["sn"], "i·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["lot"], "i·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yot"], "i·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yukwʌ"], "·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yukwʌ"], "·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["swʌ"], "·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lu"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["lot"], "i·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yot"], "i·tá·we’"],
       },
     ],
   },

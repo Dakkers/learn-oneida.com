@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} VERB",
-    type: "PR",
+    type: "PB",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["wak"], "i·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["sʌ"], "·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["l"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lo"], "·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yako"], "·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yo"], "·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yukn"], "i·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yukn"], "i·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["sn"], "i·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lot"], "i·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yot"], "i·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yukwʌ"], "·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yukwʌ"], "·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["swʌ"], "·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["lu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lot"], "i·táwe’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yot"], "i·táwe’"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT"],
+        breakdown: [["wak"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["s"], "ROOT"],
+        breakdown: [["s"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [["lo"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yako"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["yo"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["yuky"], "ROOT"],
+        breakdown: [["yuky"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["yuky"], "ROOT"],
+        breakdown: [["yuky"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: [["tsy"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["lon"], "ROOT"],
+        breakdown: [["lon"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["yon"], "ROOT"],
+        breakdown: [["yon"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["yukw"], "ROOT"],
+        breakdown: [["yukw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["yukw"], "ROOT"],
+        breakdown: [["yukw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: [["sw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["lon"], "ROOT"],
+        breakdown: [["lon"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
       {
-        breakdown: [["yon"], "ROOT"],
+        breakdown: [["yon"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌtá·u"],
       },
     ],
   },

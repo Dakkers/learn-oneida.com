@@ -3,16 +3,16 @@ import { createParadigmData } from "~/components/ParadigmTable";
 export default createParadigmData(
   {
     translation: "VERB!",
-    type: "PR",
+    type: "PB",
     phrases: [
       {
-        breakdown: [["s"], "ehseʔ"],
+        breakdown: [["sʌ"], "·táhw"],
       },
       {
-        breakdown: [["tsy"], "ehseʔ"],
+        breakdown: [["sn"], "i·táhw"],
       },
       {
-        breakdown: [["sw"], "ehseʔ"],
+        breakdown: [["swʌ"], "·táhw"],
       },
     ],
   },

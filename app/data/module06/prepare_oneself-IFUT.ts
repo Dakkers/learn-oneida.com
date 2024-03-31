@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["k"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hs"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["l"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["l"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yu"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["w"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ty"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakn"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tsy"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hy"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ky"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["sw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["lu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lu"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ku"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
     ],
   },

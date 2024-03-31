@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["k"], ["e", "EP"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["la"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["la"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ye"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["ye"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ka"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["ka"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["tni"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["yakni"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["sni"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["hni"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["kni"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["twa"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["twa"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakwa"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["yakwa"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["swa"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["swa"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lati"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["lati"], "nhotu·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kuti"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["kuti"], "nhotu·kó·"],
       },
     ],
   },

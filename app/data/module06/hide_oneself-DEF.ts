@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["l"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["l"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["w"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["lu"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["lu"], "atáhsehte’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "atáhsehte’"],
       },
     ],
   },

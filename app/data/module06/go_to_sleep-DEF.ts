@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} am VERB",
-    type: "PR",
+    type: "PB",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "ROOT"],
+        breakdown: [["u", "DEF"], ["wak"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "ROOT"],
+        breakdown: [["u", "DEF"], ["sʌ"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["l"], "ROOT"],
+        breakdown: [["u", "DEF"], ["lo"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "ROOT"],
+        breakdown: [["u", "DEF"], ["yako"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "ROOT"],
+        breakdown: [["u", "DEF"], ["yo"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "ROOT"],
+        breakdown: [["u", "DEF"], ["yukn"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "ROOT"],
+        breakdown: [["u", "DEF"], ["yukn"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "ROOT"],
+        breakdown: [["u", "DEF"], ["sn"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "ROOT"],
+        breakdown: [["u", "DEF"], ["lot"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "ROOT"],
+        breakdown: [["u", "DEF"], ["yot"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "ROOT"],
+        breakdown: [["u", "DEF"], ["yukwʌ"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "ROOT"],
+        breakdown: [["u", "DEF"], ["yukwʌ"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "ROOT"],
+        breakdown: [["u", "DEF"], ["swʌ"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["lu"], "ROOT"],
+        breakdown: [["u", "DEF"], ["lot"], "i·táwe’"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "ROOT"],
+        breakdown: [["u", "DEF"], ["yot"], "i·táwe’"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["l"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["l"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lu"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["lu"], "atkétsko’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "atkétsko’"],
       },
     ],
   },

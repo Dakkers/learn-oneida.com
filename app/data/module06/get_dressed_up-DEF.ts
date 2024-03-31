@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["l"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["l"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["w"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["lu"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["lu"], "atslu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "atslu·ní·"],
       },
     ],
   },

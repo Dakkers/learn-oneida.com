@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: [["k"], "atkáthos"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: [["hs"], "atkáthos"],
       },
       {
-        breakdown: [["l"], "ROOT"],
+        breakdown: [["l"], "atkáthos"],
       },
       {
-        breakdown: [["yu"], "ROOT"],
+        breakdown: [["yu"], "atkáthos"],
       },
       {
-        breakdown: [["w"], "ROOT"],
+        breakdown: [["w"], "atkáthos"],
       },
       {
-        breakdown: [["ty"], "ROOT"],
+        breakdown: [["ty"], "atkáthos"],
       },
       {
-        breakdown: [["yaky"], "ROOT"],
+        breakdown: [["yaky"], "atkáthos"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: [["tsy"], "atkáthos"],
       },
       {
-        breakdown: [["hy"], "ROOT"],
+        breakdown: [["hy"], "atkáthos"],
       },
       {
-        breakdown: [["ky"], "ROOT"],
+        breakdown: [["ky"], "atkáthos"],
       },
       {
-        breakdown: [["tw"], "ROOT"],
+        breakdown: [["tw"], "atkáthos"],
       },
       {
-        breakdown: [["yakw"], "ROOT"],
+        breakdown: [["yakw"], "atkáthos"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: [["sw"], "atkáthos"],
       },
       {
-        breakdown: [["lu"], "ROOT"],
+        breakdown: [["lu"], "atkáthos"],
       },
       {
-        breakdown: [["ku"], "ROOT"],
+        breakdown: [["ku"], "atkáthos"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["k"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hsa"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["hsa"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["la"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["la"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ye"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["ye"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ka"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["ka"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["tni"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["yakni"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["sni"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["hni"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["kni"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["twa"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["twa"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakwa"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["yakwa"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["swa"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["swa"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["lati"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["lati"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kuti"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["kuti"], "enhotu·kó·"],
       },
     ],
   },

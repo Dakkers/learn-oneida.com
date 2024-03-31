@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} VERB",
-    type: "PR",
+    type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: [["wak"], "i·tá·s"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: [["sʌ"], "·tá·s"],
       },
       {
-        breakdown: [["l"], "ROOT"],
+        breakdown: [["lo"], "·tá·s"],
       },
       {
-        breakdown: [["yu"], "ROOT"],
+        breakdown: [["yako"], "·tá·s"],
       },
       {
-        breakdown: [["w"], "ROOT"],
+        breakdown: [["yo"], "·tá·s"],
       },
       {
-        breakdown: [["ty"], "ROOT"],
+        breakdown: [["yukn"], "i·tá·s"],
       },
       {
-        breakdown: [["yaky"], "ROOT"],
+        breakdown: [["yukn"], "i·tá·s"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: [["sn"], "i·tá·s"],
       },
       {
-        breakdown: [["hy"], "ROOT"],
+        breakdown: [["lot"], "i·tá·s"],
       },
       {
-        breakdown: [["ky"], "ROOT"],
+        breakdown: [["yot"], "i·tá·s"],
       },
       {
-        breakdown: [["tw"], "ROOT"],
+        breakdown: [["yukwʌ"], "·tá·s"],
       },
       {
-        breakdown: [["yakw"], "ROOT"],
+        breakdown: [["yukwʌ"], "·tá·s"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: [["swʌ"], "·tá·s"],
       },
       {
-        breakdown: [["lu"], "ROOT"],
+        breakdown: [["lot"], "i·tá·s"],
       },
       {
-        breakdown: [["ku"], "ROOT"],
+        breakdown: [["yot"], "i·tá·s"],
       },
     ],
   },

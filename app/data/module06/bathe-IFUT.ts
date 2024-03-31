@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["k"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hs"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["l"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["l"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yu"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["w"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ty"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakn"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tsy"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hy"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ky"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tw"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakw"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["sw"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["lu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lu"], "atya’tóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ku"], "atya’tóhale’"],
       },
     ],
   },

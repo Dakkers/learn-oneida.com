@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["k"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hs"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["l"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["l"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yu"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["w"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ty"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakn"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tsy"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hy"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ky"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tw"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakw"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["sw"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["lu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lu"], "atáhsehte’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ku"], "atáhsehte’"],
       },
     ],
   },

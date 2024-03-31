@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["k"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["hs"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["l"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["l"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yu"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["w"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ty"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["hy"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ky"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["tw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["sw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lu"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["lu"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ku"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·táne’"],
       },
     ],
   },

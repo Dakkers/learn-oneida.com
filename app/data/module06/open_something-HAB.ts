@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "lihwa’slákwas"],
+        breakdown: [["k"], ["e", "EP"], "nhotúkwas"],
       },
       {
-        breakdown: [["s"], "lihwa’slákwas"],
+        breakdown: [["se"], "nhotúkwas"],
       },
       {
-        breakdown: [["la"], "lihwa’slákwas"],
+        breakdown: [["la"], "nhotúkwas"],
       },
       {
-        breakdown: [["ye"], "lihwa’slákwas"],
+        breakdown: [["ye"], "nhotúkwas"],
       },
       {
-        breakdown: [["ka"], "lihwa’slákwas"],
+        breakdown: [["ka"], "nhotúkwas"],
       },
       {
-        breakdown: [["tni"], "lihwa’slákwas"],
+        breakdown: [["tni"], "nhotúkwas"],
       },
       {
-        breakdown: [["yakni"], "lihwa’slákwas"],
+        breakdown: [["yakni"], "nhotúkwas"],
       },
       {
-        breakdown: [["sni"], "lihwa’slákwas"],
+        breakdown: [["sni"], "nhotúkwas"],
       },
       {
-        breakdown: [["ni"], "lihwa’slákwas"],
+        breakdown: [["ni"], "nhotúkwas"],
       },
       {
-        breakdown: [["kni"], "lihwa’slákwas"],
+        breakdown: [["kni"], "nhotúkwas"],
       },
       {
-        breakdown: [["twa"], "lihwa’slákwas"],
+        breakdown: [["twa"], "nhotúkwas"],
       },
       {
-        breakdown: [["yakwa"], "lihwa’slákwas"],
+        breakdown: [["yakwa"], "nhotúkwas"],
       },
       {
-        breakdown: [["swa"], "lihwa’slákwas"],
+        breakdown: [["swa"], "nhotúkwas"],
       },
       {
-        breakdown: [["lati"], "lihwa’slákwas"],
+        breakdown: [["lati"], "nhotúkwas"],
       },
       {
-        breakdown: [["kuti"], "lihwa’slákwas"],
+        breakdown: [["kuti"], "nhotúkwas"],
       },
     ],
   },

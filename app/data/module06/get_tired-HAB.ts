@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "lihwa’slákwas"],
+        breakdown: ["te", ["k"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["s"], "lihwa’slákwas"],
+        breakdown: ["te", ["s"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["la"], "lihwa’slákwas"],
+        breakdown: ["te", ["la"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["ye"], "lihwa’slákwas"],
+        breakdown: ["te", ["ye"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["ka"], "lihwa’slákwas"],
+        breakdown: ["te", ["ka"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["tni"], "lihwa’slákwas"],
+        breakdown: ["te", ["tni"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["yakni"], "lihwa’slákwas"],
+        breakdown: ["te", ["yakni"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["sni"], "lihwa’slákwas"],
+        breakdown: ["te", ["sni"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["ni"], "lihwa’slákwas"],
+        breakdown: ["te", ["ni"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["kni"], "lihwa’slákwas"],
+        breakdown: ["te", ["kni"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["twa"], "lihwa’slákwas"],
+        breakdown: ["te", ["twa"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["yakwa"], "lihwa’slákwas"],
+        breakdown: ["te", ["yakwa"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["swa"], "lihwa’slákwas"],
+        breakdown: ["te", ["swa"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["lati"], "lihwa’slákwas"],
+        breakdown: ["te", ["lati"], "hwishʌhe·yú·se’"],
       },
       {
-        breakdown: [["kuti"], "lihwa’slákwas"],
+        breakdown: ["te", ["kuti"], "hwishʌhe·yú·se’"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["wak"], "hwishʌheyú"],
       },
       {
-        breakdown: [["s"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["s"], "hwishʌheyú"],
       },
       {
-        breakdown: [["lo"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["lo"], "hwishʌheyú"],
       },
       {
-        breakdown: [["yako"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["yako"], "hwishʌheyú"],
       },
       {
-        breakdown: [["yo"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["yo"], "hwishʌheyú"],
       },
       {
-        breakdown: [["yukni"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["yukni"], "hwishʌheyú"],
       },
       {
-        breakdown: [["yukni"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["yukni"], "hwishʌheyú"],
       },
       {
-        breakdown: [["sni"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["sni"], "hwishʌheyú"],
       },
       {
-        breakdown: [["loti"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["loti"], "hwishʌheyú"],
       },
       {
-        breakdown: [["yoti"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["yoti"], "hwishʌheyú"],
       },
       {
-        breakdown: [["yukwa"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["yukwa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["yukwa"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["yukwa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["swa"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["swa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["loti"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["loti"], "hwishʌheyú"],
       },
       {
-        breakdown: [["yoti"], "lihwa’slákwʌ"],
+        breakdown: ["te", ["yoti"], "hwishʌheyú"],
       },
     ],
   },

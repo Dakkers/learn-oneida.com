@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: [["k"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: [["hs"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["l"], "ROOT"],
+        breakdown: [["l"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["yu"], "ROOT"],
+        breakdown: [["yu"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["w"], "ROOT"],
+        breakdown: [["w"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["ty"], "ROOT"],
+        breakdown: [["ty"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["yaky"], "ROOT"],
+        breakdown: [["yaky"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: [["tsy"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["hy"], "ROOT"],
+        breakdown: [["hy"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["ky"], "ROOT"],
+        breakdown: [["ky"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["tw"], "ROOT"],
+        breakdown: [["tw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["yakw"], "ROOT"],
+        breakdown: [["yakw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: [["sw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["lu"], "ROOT"],
+        breakdown: [["lu"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
       {
-        breakdown: [["ku"], "ROOT"],
+        breakdown: [["ku"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·se’"],
       },
     ],
   },
