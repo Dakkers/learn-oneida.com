@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["hs"], "ROOT"],
       },
       {
-        breakdown: [["a", "IFUT"], ["l"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["h"], "ROOT"],
       },
       {
         breakdown: [["a", "IFUT"], ["yu"], "ROOT"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["sw"], "ROOT"],
       },
       {
-        breakdown: [["a", "IFUT"], ["lu"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hu"], "ROOT"],
       },
       {
         breakdown: [["a", "IFUT"], ["ku"], "ROOT"],

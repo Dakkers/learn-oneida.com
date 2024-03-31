@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: [["ʌ", "FUT"], ["sʌ"], "·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lo"], "·tá·we’"],
+        breakdown: [["ʌ", "FUT"], ["ho"], "·tá·we’"],
       },
       {
         breakdown: [["ʌ", "FUT"], ["yako"], "·tá·we’"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["ʌ", "FUT"], ["sn"], "i·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lot"], "i·tá·we’"],
+        breakdown: [["ʌ", "FUT"], ["hot"], "i·tá·we’"],
       },
       {
         breakdown: [["ʌ", "FUT"], ["yot"], "i·tá·we’"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: [["ʌ", "FUT"], ["swʌ"], "·tá·we’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lot"], "i·tá·we’"],
+        breakdown: [["ʌ", "FUT"], ["hot"], "i·tá·we’"],
       },
       {
         breakdown: [["ʌ", "FUT"], ["yot"], "i·tá·we’"],

@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: [["u", "DEF"], ["sʌ"], "i·táwe’"],
       },
       {
-        breakdown: [["u", "DEF"], ["lo"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["ho"], "i·táwe’"],
       },
       {
         breakdown: [["u", "DEF"], ["yako"], "i·táwe’"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["u", "DEF"], ["sn"], "i·táwe’"],
       },
       {
-        breakdown: [["u", "DEF"], ["lot"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["hot"], "i·táwe’"],
       },
       {
         breakdown: [["u", "DEF"], ["yot"], "i·táwe’"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: [["u", "DEF"], ["swʌ"], "i·táwe’"],
       },
       {
-        breakdown: [["u", "DEF"], ["lot"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["hot"], "i·táwe’"],
       },
       {
         breakdown: [["u", "DEF"], ["yot"], "i·táwe’"],

@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: ["i", ["se"], "yehse’"],
       },
       {
-        breakdown: ["i", ["la"], "yehse’"],
+        breakdown: ["i", ["ha"], "yehse’"],
       },
       {
         breakdown: ["i", ["ye"], "yehse’"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: ["i", ["swa"], "yehse’"],
       },
       {
-        breakdown: ["i", ["lati"], "yehse’"],
+        breakdown: ["i", ["hati"], "yehse’"],
       },
       {
         breakdown: ["i", ["kuti"], "yehse’"],

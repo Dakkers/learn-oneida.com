@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["hsa"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["la"], "enhotu·kó·"],
+        breakdown: [["waʔ", "DEF"], ["ha"], "enhotu·kó·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ye"], "enhotu·kó·"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["swa"], "enhotu·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["lati"], "enhotu·kó·"],
+        breakdown: [["waʔ", "DEF"], ["hati"], "enhotu·kó·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["kuti"], "enhotu·kó·"],

@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["hsa"], "khu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["la"], "khu·ní·"],
+        breakdown: [["waʔ", "DEF"], ["ha"], "khu·ní·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ye"], "khu·ní·"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["swa"], "khu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["lati"], "khu·ní·"],
+        breakdown: [["waʔ", "DEF"], ["hati"], "khu·ní·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["kuti"], "khu·ní·"],

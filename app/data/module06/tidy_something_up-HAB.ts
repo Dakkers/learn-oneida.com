@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: ["te", ["hs"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["l"], "atohtálhos"],
+        breakdown: ["te", ["h"], "atohtálhos"],
       },
       {
         breakdown: ["te", ["yu"], "atohtálhos"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: ["te", ["sw"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["lu"], "atohtálhos"],
+        breakdown: ["te", ["hu"], "atohtálhos"],
       },
       {
         breakdown: ["te", ["ku"], "atohtálhos"],

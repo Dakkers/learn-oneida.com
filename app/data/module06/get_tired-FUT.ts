@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: ["t", ["ʌ", "FUT"], ["hs"], "hwishʌ́heye’"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["la"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ha"], "hwishʌ́heye’"],
       },
       {
         breakdown: ["t", ["ʌ", "FUT"], ["ye"], "hwishʌ́heye’"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: ["t", ["ʌ", "FUT"], ["swa"], "hwishʌ́heye’"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["lati"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hati"], "hwishʌ́heye’"],
       },
       {
         breakdown: ["t", ["ʌ", "FUT"], ["kuti"], "hwishʌ́heye’"],

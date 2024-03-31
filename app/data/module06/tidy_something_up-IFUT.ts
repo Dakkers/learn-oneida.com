@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: ["t", ["a", "IFUT"], ["hs"], "atohtálho’"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["l"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["h"], "atohtálho’"],
       },
       {
         breakdown: ["t", ["a", "IFUT"], ["yu"], "atohtálho’"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: ["t", ["a", "IFUT"], ["sw"], "atohtálho’"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["lu"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["hu"], "atohtálho’"],
       },
       {
         breakdown: ["t", ["a", "IFUT"], ["ku"], "atohtálho’"],

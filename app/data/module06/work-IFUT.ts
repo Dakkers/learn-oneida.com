@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["sa"], "yo·tʌ́·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["lo"], "yo·tʌ́·"],
+        breakdown: [["a", "IFUT"], ["ho"], "yo·tʌ́·"],
       },
       {
         breakdown: [["a", "IFUT"], ["yako"], "yo·tʌ́·"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["sni"], "yo·tʌ́·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["loti"], "yo·tʌ́·"],
+        breakdown: [["a", "IFUT"], ["hoti"], "yo·tʌ́·"],
       },
       {
         breakdown: [["a", "IFUT"], ["yoti"], "yo·tʌ́·"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["swa"], "yo·tʌ́·"],
       },
       {
-        breakdown: [["a", "IFUT"], ["loti"], "yo·tʌ́·"],
+        breakdown: [["a", "IFUT"], ["hoti"], "yo·tʌ́·"],
       },
       {
         breakdown: [["a", "IFUT"], ["yoti"], "yo·tʌ́·"],

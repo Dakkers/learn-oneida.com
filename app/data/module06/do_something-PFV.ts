@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: ["ni", ["s"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["lo"], "atyelʌ́"],
+        breakdown: ["ni", ["ho"], "atyelʌ́"],
       },
       {
         breakdown: ["ni", ["yako"], "atyelʌ́"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: ["ni", ["tsy"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["lon"], "atyelʌ́"],
+        breakdown: ["ni", ["hon"], "atyelʌ́"],
       },
       {
         breakdown: ["ni", ["yon"], "atyelʌ́"],
@@ -46,7 +46,7 @@ export default createParadigmData(
         breakdown: ["ni", ["sw"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["lon"], "atyelʌ́"],
+        breakdown: ["ni", ["hon"], "atyelʌ́"],
       },
       {
         breakdown: ["ni", ["yon"], "atyelʌ́"],
