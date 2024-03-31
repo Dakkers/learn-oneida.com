@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: [["wak"], "ʌ́"],
       },
       {
-        breakdown: [["s"], "ʌ́"],
+        breakdown: [["saw"], "ʌ́"],
       },
       {
         breakdown: [["law"], "ʌ́"],
@@ -28,7 +28,7 @@ export default createParadigmData(
         breakdown: [["yukn"], "ʌ́"],
       },
       {
-        breakdown: [["sn"], "ʌ́"],
+        breakdown: ["i", ["sn"], "ʌ́"],
       },
       {
         breakdown: [["lon"], "ʌ́"],
@@ -43,7 +43,7 @@ export default createParadigmData(
         breakdown: [["yukw"], "ʌ́"],
       },
       {
-        breakdown: [["sw"], "ʌ́"],
+        breakdown: ["i", ["sw"], "ʌ́"],
       },
       {
         breakdown: [["lon"], "ʌ́"],
