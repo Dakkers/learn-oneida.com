@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: [["k"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: [["hs"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["l"], "ROOT"],
+        breakdown: [["l"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["yu"], "ROOT"],
+        breakdown: [["yu"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["w"], "ROOT"],
+        breakdown: [["w"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["ty"], "ROOT"],
+        breakdown: [["ty"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["yaky"], "ROOT"],
+        breakdown: [["yaky"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: [["tsy"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["hy"], "ROOT"],
+        breakdown: [["hy"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["ky"], "ROOT"],
+        breakdown: [["ky"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["tw"], "ROOT"],
+        breakdown: [["tw"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["yakw"], "ROOT"],
+        breakdown: [["yakw"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: [["sw"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["lu"], "ROOT"],
+        breakdown: [["lu"], "anistya·kéhe’"],
       },
       {
-        breakdown: [["ku"], "ROOT"],
+        breakdown: [["ku"], "anistya·kéhe’"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["k"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hsa"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["hsa"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["la"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["la"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ye"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["ye"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ka"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["ka"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tni"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["tni"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakni"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["yakni"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sni"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["sni"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hni"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["hni"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["kni"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["kni"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["twa"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["twa"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakwa"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["yakwa"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["swa"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["swa"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["lati"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["lati"], "nóhale’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["kuti"], "lihwa’sla·kó·"],
+        breakdown: [["a", "IFUT"], ["kuti"], "nóhale’"],
       },
     ],
   },

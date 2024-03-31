@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT"],
+        breakdown: [["wak"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["s"], "ROOT"],
+        breakdown: [["s"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [["lo"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yako"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["yo"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["yuky"], "ROOT"],
+        breakdown: [["yuky"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["yuky"], "ROOT"],
+        breakdown: [["yuky"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: [["tsy"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["lon"], "ROOT"],
+        breakdown: [["lon"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["yon"], "ROOT"],
+        breakdown: [["yon"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["yukw"], "ROOT"],
+        breakdown: [["yukw"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["yukw"], "ROOT"],
+        breakdown: [["yukw"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: [["sw"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["lon"], "ROOT"],
+        breakdown: [["lon"], ["atat", "REFL"], "lihunyʌ·n"],
       },
       {
-        breakdown: [["yon"], "ROOT"],
+        breakdown: [["yon"], ["atat", "REFL"], "lihunyʌ·n"],
       },
     ],
   },

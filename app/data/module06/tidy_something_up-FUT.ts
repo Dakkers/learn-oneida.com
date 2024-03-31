@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["k"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hs"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["l"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["l"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yu"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["w"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ty"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yaky"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["tsy"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hy"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ky"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["tw"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yakw"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["sw"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lu"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["lu"], "atohtálho’"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ku"], "atohtálho’"],
       },
     ],
   },

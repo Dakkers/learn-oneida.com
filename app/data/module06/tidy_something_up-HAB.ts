@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: ["te", ["k"], "atohtálhos"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: ["te", ["hs"], "atohtálhos"],
       },
       {
-        breakdown: [["l"], "ROOT"],
+        breakdown: ["te", ["l"], "atohtálhos"],
       },
       {
-        breakdown: [["yu"], "ROOT"],
+        breakdown: ["te", ["yu"], "atohtálhos"],
       },
       {
-        breakdown: [["w"], "ROOT"],
+        breakdown: ["te", ["w"], "atohtálhos"],
       },
       {
-        breakdown: [["ty"], "ROOT"],
+        breakdown: ["te", ["ty"], "atohtálhos"],
       },
       {
-        breakdown: [["yaky"], "ROOT"],
+        breakdown: ["te", ["yaky"], "atohtálhos"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: ["te", ["tsy"], "atohtálhos"],
       },
       {
-        breakdown: [["hy"], "ROOT"],
+        breakdown: ["te", ["hy"], "atohtálhos"],
       },
       {
-        breakdown: [["ky"], "ROOT"],
+        breakdown: ["te", ["ky"], "atohtálhos"],
       },
       {
-        breakdown: [["tw"], "ROOT"],
+        breakdown: ["te", ["tw"], "atohtálhos"],
       },
       {
-        breakdown: [["yakw"], "ROOT"],
+        breakdown: ["te", ["yakw"], "atohtálhos"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: ["te", ["sw"], "atohtálhos"],
       },
       {
-        breakdown: [["lu"], "ROOT"],
+        breakdown: ["te", ["lu"], "atohtálhos"],
       },
       {
-        breakdown: [["ku"], "ROOT"],
+        breakdown: ["te", ["ku"], "atohtálhos"],
       },
     ],
   },

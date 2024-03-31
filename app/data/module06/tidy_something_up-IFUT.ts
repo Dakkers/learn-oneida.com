@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["k"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["hs"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["l"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["l"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["yu"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["w"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["ty"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["yakn"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["tsy"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["hy"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["ky"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["tw"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["yakw"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["sw"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["lu"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["lu"], "atohtálho’"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["ku"], "atohtálho’"],
       },
     ],
   },

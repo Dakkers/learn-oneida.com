@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["k"], "i"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hsa"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["ts"], "i"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["la"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["lʌ"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ye"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["ye"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ka"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["kʌ"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tni"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["tn"], "i"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakni"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["yakn"], "i"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sni"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["sn"], "i"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hni"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["hn"], "i"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kni"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["kn"], "i"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["twa"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["twʌ"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakwa"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["yakwʌ"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["swa"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["swʌ"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["lati"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["lat"], "i"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kuti"], "lihwa’sla·kó·"],
+        breakdown: [["wá·", "DEF"], ["kut"], "i"],
       },
     ],
   },

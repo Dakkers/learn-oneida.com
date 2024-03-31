@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["k"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["ts"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["la"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["lʌ"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ye"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["ye"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ka"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["kʌ"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["tn"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["yakn"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["sn"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["hn"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kni"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["kn"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["twa"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["twʌ"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakwa"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["yakwʌ"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["swa"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["swʌ"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lati"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["lat"], "iʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kuti"], "lihwa’sla·kó·"],
+        breakdown: [["ʌ́·", "FUT"], ["kut"], "iʔ"],
       },
     ],
   },
