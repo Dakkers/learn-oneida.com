@@ -16,7 +16,7 @@ export default createParadigmData(
         breakdown: ["t", ["a", "DEF"], ["h"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["yu"], "atáhsawʌʔ"],
+        breakdown: ["t", ["a", "DEF"], ["yu"], "táhsawʌʔ"],
       },
       {
         breakdown: ["t", ["a", "DEF"], ["w"], "atáhsawʌʔ"],
@@ -46,10 +46,10 @@ export default createParadigmData(
         breakdown: ["t", ["a", "DEF"], ["sw"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["hu"], "atáhsawʌʔ"],
+        breakdown: ["t", ["a", "DEF"], ["hu"], "táhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["ku"], "atáhsawʌʔ"],
+        breakdown: ["t", ["a", "DEF"], ["ku"], "táhsawʌʔ"],
       },
     ],
   },

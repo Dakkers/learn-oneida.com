@@ -16,7 +16,7 @@ export default createParadigmData(
         breakdown: ["te", ["h"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["yu"], "atohtálhos"],
+        breakdown: ["te", ["yu"], "tohtálhos"],
       },
       {
         breakdown: ["te", ["w"], "atohtálhos"],
@@ -46,10 +46,10 @@ export default createParadigmData(
         breakdown: ["te", ["sw"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["hu"], "atohtálhos"],
+        breakdown: ["te", ["hu"], "tohtálhos"],
       },
       {
-        breakdown: ["te", ["ku"], "atohtálhos"],
+        breakdown: ["te", ["ku"], "tohtálhos"],
       },
     ],
   },

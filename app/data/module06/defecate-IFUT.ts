@@ -16,7 +16,7 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["h"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "aní·tayʌʔ"],
+        breakdown: [["a", "IFUT"], ["yu"], "ní·tayʌʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["w"], "aní·tayʌʔ"],
@@ -46,10 +46,10 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["sw"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hu"], "aní·tayʌʔ"],
+        breakdown: [["a", "IFUT"], ["hu"], "ní·tayʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "aní·tayʌʔ"],
+        breakdown: [["a", "IFUT"], ["ku"], "ní·tayʌʔ"],
       },
     ],
   },
