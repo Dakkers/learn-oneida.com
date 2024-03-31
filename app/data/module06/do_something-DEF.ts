@@ -16,7 +16,7 @@ export default createParadigmData(
         breakdown: ["n", ["a", "DEF"], ["h"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["aʔ", "DEF"], ["u"], "átyeleʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["ú"], "tyeleʔ"],
       },
       {
         breakdown: ["n", ["ú"], "tyeleʔ"],
@@ -25,7 +25,7 @@ export default createParadigmData(
         breakdown: ["n", ["e", "DEF"], ["ty"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["aʔ", "DEF"], ["yky"], "átyeleʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["aky"], "átyeleʔ"],
       },
       {
         breakdown: ["n", ["e", "DEF"], ["tsy"], "átyeleʔ"],
@@ -46,10 +46,10 @@ export default createParadigmData(
         breakdown: ["n", ["e", "DEF"], ["sw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "DEF"], ["hu"], "átyeleʔ"],
+        breakdown: ["n", ["a", "DEF"], ["hú"], "tyeleʔ"],
       },
       {
-        breakdown: ["n", ["aʔ", "DEF"], ["ku"], "átyeleʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["kú"], "tyeleʔ"],
       },
     ],
   },

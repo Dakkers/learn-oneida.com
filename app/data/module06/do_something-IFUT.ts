@@ -46,10 +46,10 @@ export default createParadigmData(
         breakdown: ["n", ["a·e", "IFUT"], ["sw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["hu"], "átyeleʔ"],
+        breakdown: ["n", ["a", "IFUT"], ["hú"], "tyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["ku"], "átyeleʔ"],
+        breakdown: ["n", ["a", "IFUT"], ["kú"], "tyeleʔ"],
       },
     ],
   },
