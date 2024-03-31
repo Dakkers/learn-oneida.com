@@ -16,13 +16,13 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["h"], "ROOT"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "ROOT"],
+        breakdown: [["a·", "IFUT"], ["yu"], "ROOT"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "ROOT"],
+        breakdown: [["a·", "IFUT"], ["u"], "ROOT"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "ROOT"],
+        breakdown: [["a·e", "IFUT"], ["ty"], "ROOT"],
       },
       {
         breakdown: [["a", "IFUT"], ["yakn"], "ROOT"],
@@ -37,13 +37,13 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["ky"], "ROOT"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "ROOT"],
+        breakdown: [["a·e", "IFUT"], ["tw"], "ROOT"],
       },
       {
         breakdown: [["a", "IFUT"], ["yakw"], "ROOT"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "ROOT"],
+        breakdown: [["a·e", "IFUT"], ["sw"], "ROOT"],
       },
       {
         breakdown: [["a", "IFUT"], ["hu"], "ROOT"],

@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: [["k"], "ROOT"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: [["s"], "ROOT"],
       },
       {
         breakdown: [["l"], "ROOT"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["tsy"], "ROOT"],
       },
       {
-        breakdown: [["hy"], "ROOT"],
+        breakdown: [["y"], "ROOT"],
       },
       {
         breakdown: [["ky"], "ROOT"],

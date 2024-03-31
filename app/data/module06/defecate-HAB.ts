@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: [["k"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["hs"], "aní·tayʌheʔ"],
+        breakdown: [["s"], "aní·tayʌheʔ"],
       },
       {
         breakdown: [["l"], "aní·tayʌheʔ"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["tsy"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["hy"], "aní·tayʌheʔ"],
+        breakdown: [["y"], "aní·tayʌheʔ"],
       },
       {
         breakdown: [["ky"], "aní·tayʌheʔ"],

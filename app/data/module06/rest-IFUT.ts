@@ -16,16 +16,16 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["h"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "tolíshʌʔ"],
+        breakdown: [["a·", "IFUT"], ["yu"], "tolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "atolíshʌʔ"],
+        breakdown: [["a·", "IFUT"], ["u"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "atolíshʌʔ"],
+        breakdown: [["a·e", "IFUT"], ["ty"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "atolíshʌʔ"],
+        breakdown: [["a", "IFUT"], ["yaky"], "atolíshʌʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["tsy"], "atolíshʌʔ"],
@@ -37,13 +37,13 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["ky"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "atolíshʌʔ"],
+        breakdown: [["a·e", "IFUT"], ["tw"], "atolíshʌʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["yakw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "atolíshʌʔ"],
+        breakdown: [["a·e", "IFUT"], ["sw"], "atolíshʌʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["hu"], "tolíshʌʔ"],

@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: [["k"], "atkáthos"],
       },
       {
-        breakdown: [["hs"], "atkáthos"],
+        breakdown: [["s"], "atkáthos"],
       },
       {
         breakdown: [["l"], "atkáthos"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["tsy"], "atkáthos"],
       },
       {
-        breakdown: [["hy"], "atkáthos"],
+        breakdown: [["y"], "atkáthos"],
       },
       {
         breakdown: [["ky"], "atkáthos"],

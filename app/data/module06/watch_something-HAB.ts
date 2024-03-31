@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: [["k"], "atló·loks"],
       },
       {
-        breakdown: [["hs"], "atló·loks"],
+        breakdown: [["s"], "atló·loks"],
       },
       {
         breakdown: [["l"], "atló·loks"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["tsy"], "atló·loks"],
       },
       {
-        breakdown: [["hy"], "atló·loks"],
+        breakdown: [["y"], "atló·loks"],
       },
       {
         breakdown: [["ky"], "atló·loks"],

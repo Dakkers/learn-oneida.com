@@ -10,43 +10,43 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["k"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "anistya·ké·"],
+        breakdown: [["wa", "DEF"], ["hs"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["h"], "anistya·ké·"],
+        breakdown: [["wa", "DEF"], ["h"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "nistya·ké·"],
+        breakdown: [["waʔ", "DEF"], ["u"], "nistya·ké·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["w"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "anistya·ké·"],
+        breakdown: [["we", "DEF"], ["ty"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "anistya·ké·"],
+        breakdown: [["waʔ", "DEF"], ["aky"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "anistya·ké·"],
+        breakdown: [["we", "DEF"], ["tsy"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "anistya·ké·"],
+        breakdown: [["wa", "DEF"], ["hy"], "anistya·ké·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ky"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "anistya·ké·"],
+        breakdown: [["we", "DEF"], ["tw"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "anistya·ké·"],
+        breakdown: [["waʔ", "DEF"], ["akw"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "anistya·ké·"],
+        breakdown: [["we", "DEF"], ["sw"], "anistya·ké·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hu"], "nistya·ké·"],
+        breakdown: [["wa", "DEF"], ["hu"], "nistya·ké·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ku"], "nistya·ké·"],

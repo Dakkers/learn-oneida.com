@@ -16,16 +16,16 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["h"], "atkétskoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "tkétskoʔ"],
+        breakdown: [["a·", "IFUT"], ["yu"], "tkétskoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "atkétskoʔ"],
+        breakdown: [["a·", "IFUT"], ["u"], "atkétskoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "atkétskoʔ"],
+        breakdown: [["a·e", "IFUT"], ["ty"], "atkétskoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "atkétskoʔ"],
+        breakdown: [["a", "IFUT"], ["yaky"], "atkétskoʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["tsy"], "atkétskoʔ"],
@@ -37,13 +37,13 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["ky"], "atkétskoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "atkétskoʔ"],
+        breakdown: [["a·e", "IFUT"], ["tw"], "atkétskoʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["yakw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "atkétskoʔ"],
+        breakdown: [["a·e", "IFUT"], ["sw"], "atkétskoʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["hu"], "tkétskoʔ"],

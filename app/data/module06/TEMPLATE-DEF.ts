@@ -10,43 +10,43 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["k"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "ROOT"],
+        breakdown: [["wa", "DEF"], ["hs"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["h"], "ROOT"],
+        breakdown: [["wa", "DEF"], ["h"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["u"], "ROOT"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["w"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "ROOT"],
+        breakdown: [["we", "DEF"], ["ty"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["aky"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "ROOT"],
+        breakdown: [["we", "DEF"], ["tsy"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "ROOT"],
+        breakdown: [["wa", "DEF"], ["hy"], "ROOT"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ky"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "ROOT"],
+        breakdown: [["we", "DEF"], ["tw"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "ROOT"],
+        breakdown: [["waʔ", "DEF"], ["akw"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "ROOT"],
+        breakdown: [["we", "DEF"], ["sw"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hu"], "ROOT"],
+        breakdown: [["wa", "DEF"], ["hu"], "ROOT"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ku"], "ROOT"],

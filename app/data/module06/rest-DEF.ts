@@ -10,43 +10,43 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["k"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "atolíshʌʔ"],
+        breakdown: [["wa", "DEF"], ["hs"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["h"], "atolíshʌʔ"],
+        breakdown: [["wa", "DEF"], ["h"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "tolíshʌʔ"],
+        breakdown: [["waʔ", "DEF"], ["u"], "tolíshʌʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["w"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "atolíshʌʔ"],
+        breakdown: [["we", "DEF"], ["ty"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "atolíshʌʔ"],
+        breakdown: [["waʔ", "DEF"], ["aky"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "atolíshʌʔ"],
+        breakdown: [["we", "DEF"], ["tsy"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "atolíshʌʔ"],
+        breakdown: [["wa", "DEF"], ["hy"], "atolíshʌʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ky"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "atolíshʌʔ"],
+        breakdown: [["we", "DEF"], ["tw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "atolíshʌʔ"],
+        breakdown: [["waʔ", "DEF"], ["akw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "atolíshʌʔ"],
+        breakdown: [["we", "DEF"], ["sw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hu"], "tolíshʌʔ"],
+        breakdown: [["wa", "DEF"], ["hu"], "tolíshʌʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ku"], "tolíshʌʔ"],

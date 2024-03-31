@@ -10,43 +10,43 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["k"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "atkétskoʔ"],
+        breakdown: [["wa", "DEF"], ["hs"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["h"], "atkétskoʔ"],
+        breakdown: [["wa", "DEF"], ["h"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "tkétskoʔ"],
+        breakdown: [["waʔ", "DEF"], ["u"], "tkétskoʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["w"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "atkétskoʔ"],
+        breakdown: [["we", "DEF"], ["ty"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "atkétskoʔ"],
+        breakdown: [["waʔ", "DEF"], ["aky"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "atkétskoʔ"],
+        breakdown: [["we", "DEF"], ["tsy"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "atkétskoʔ"],
+        breakdown: [["wa", "DEF"], ["hy"], "atkétskoʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ky"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "atkétskoʔ"],
+        breakdown: [["we", "DEF"], ["tw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "atkétskoʔ"],
+        breakdown: [["waʔ", "DEF"], ["akw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "atkétskoʔ"],
+        breakdown: [["we", "DEF"], ["sw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hu"], "tkétskoʔ"],
+        breakdown: [["wa", "DEF"], ["hu"], "tkétskoʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ku"], "tkétskoʔ"],

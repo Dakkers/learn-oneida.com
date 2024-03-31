@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: [["k"], ["atat", "REFL"], "lihunyʌ·níheʔ"],
       },
       {
-        breakdown: [["hs"], ["atat", "REFL"], "lihunyʌ·níheʔ"],
+        breakdown: [["s"], ["atat", "REFL"], "lihunyʌ·níheʔ"],
       },
       {
         breakdown: [["l"], ["atat", "REFL"], "lihunyʌ·níheʔ"],
@@ -31,7 +31,7 @@ export default createParadigmData(
         breakdown: [["tsy"], ["atat", "REFL"], "lihunyʌ·níheʔ"],
       },
       {
-        breakdown: [["hy"], ["atat", "REFL"], "lihunyʌ·níheʔ"],
+        breakdown: [["y"], ["atat", "REFL"], "lihunyʌ·níheʔ"],
       },
       {
         breakdown: [["ky"], ["atat", "REFL"], "lihunyʌ·níheʔ"],
