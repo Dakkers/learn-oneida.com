@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} {{refVerbPast}} VERB",
+    translation: "{{pronoun}} {{refVerbPast}} answered",
     type: "PB",
     phrases: [
       {
-        "breakdown": [["wak"], "ROOT"]
+        breakdown: [["wak"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["sa"], "ROOT"]
+        breakdown: [["s"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["lo"], "ROOT"]
+        breakdown: [["lo"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["yako"], "ROOT"]
+        breakdown: [["yako"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["yo"], "ROOT"]
+        breakdown: [["yo"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["yukni"], "ROOT"]
+        breakdown: [["yukni"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["yukni"], "ROOT"]
+        breakdown: [["yukni"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["sni"], "ROOT"]
+        breakdown: [["sni"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["loti"], "ROOT"]
+        breakdown: [["loti"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["yoti"], "ROOT"]
+        breakdown: [["yoti"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["yukwa"], "ROOT"]
+        breakdown: [["yukwa"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["yukwa"], "ROOT"]
+        breakdown: [["yukwa"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["swa"], "ROOT"]
+        breakdown: [["swa"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["loti"], "ROOT"]
+        breakdown: [["loti"], "lihwa’slákwʌ"],
       },
       {
-        "breakdown": [["yoti"], "ROOT"]
+        breakdown: [["yoti"], "lihwa’slákwʌ"],
       },
     ],
   },

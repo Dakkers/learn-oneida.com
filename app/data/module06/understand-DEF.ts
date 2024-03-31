@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["wa", "DEF"], ["k"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["k"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hs"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["l"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["l"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["y"], "ʌ́·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["w"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["w"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["n"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["kn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tw"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakw"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sw"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["lʌ·n"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["lu"], "ROOT"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["ku·n"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "ROOT"],
       },
     ],
   },

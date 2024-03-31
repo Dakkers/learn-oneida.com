@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} VERB",
+    translation: "{{pronoun}} would answer",
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"],["k"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["k"], ["e", "EP"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["hs"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hsa"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["l"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["la"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["y"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ye"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["w"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ka"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["tn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tni"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakni"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["sn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["sni"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["n"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hni"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["kn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["kni"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["tw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["twa"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakwa"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["sw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["swa"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["lʌ·n"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lati"], "’khu·ní·"],
       },
       {
-        breakdown: [["a", "IFUT"],["ku·n"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["kuti"], "’khu·ní·"],
       },
     ],
   },

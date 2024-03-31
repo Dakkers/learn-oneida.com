@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} VERB",
+    translation: "{{pronoun}} cooks",
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: [["k"], ["e", "EP"], "khu·níhe’"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: [["s"], "khu·níhe’"],
       },
       {
-        breakdown: [["l"], "ROOT"],
+        breakdown: [["la"], "khu·níhe’"],
       },
       {
-        breakdown: [["y"], "ROOT"],
+        breakdown: [["ye"], "khu·níhe’"],
       },
       {
-        breakdown: [["w"], "ROOT"],
+        breakdown: [["ka"], "khu·níhe’"],
       },
       {
-        breakdown: [["tn"], "ROOT"],
+        breakdown: [["tni"], "khu·níhe’"],
       },
       {
-        breakdown: [["yakn"], "ROOT"],
+        breakdown: [["yakni"], "khu·níhe’"],
       },
       {
-        breakdown: [["sn"], "ROOT"],
+        breakdown: [["sni"], "khu·níhe’"],
       },
       {
-        breakdown: [["n"], "ROOT"],
+        breakdown: [["ni"], "khu·níhe’"],
       },
       {
-        breakdown: [["kn"], "ROOT"],
+        breakdown: [["kni"], "khu·níhe’"],
       },
       {
-        breakdown: [["tw"], "ROOT"],
+        breakdown: [["twa"], "khu·níhe’"],
       },
       {
-        breakdown: [["yakw"], "ROOT"],
+        breakdown: [["yakwa"], "khu·níhe’"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: [["swa"], "khu·níhe’"],
       },
       {
-        breakdown: [["lʌ·n"], "ROOT"],
+        breakdown: [["lati"], "khu·níhe’"],
       },
       {
-        breakdown: [["ku·n"], "ROOT"],
+        breakdown: [["kuti"], "khu·níhe’"],
       },
     ],
   },

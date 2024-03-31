@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} VERB",
+    translation: "{{pronoun}} would answer",
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"],["k"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["k"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["hs"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hsa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["l"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["la"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["y"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ye"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["w"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ka"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["tn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["sn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["sni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["n"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["kn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["kni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["tw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["twa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakwa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["sw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["swa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["lʌ·n"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lati"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["a", "IFUT"],["ku·n"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["kuti"], "lihwa’sla·kó·"],
       },
     ],
   },

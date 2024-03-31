@@ -9,12 +9,12 @@ export default createParadigmData(
         breakdown: [["s"], "ehseʔ"],
       },
       {
-        breakdown: [["sn"], "ehseʔ"],
+        breakdown: [["tsy"], "ehseʔ"],
       },
       {
         breakdown: [["sw"], "ehseʔ"],
       },
     ],
   },
-  ['u', 'u2', 'yall']
+  ["u", "u2", "yall"]
 );

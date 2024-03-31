@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["wa", "DEF"], ["k"], "é·seʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["k"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hs"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["hs"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["l"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["l"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["y"], "ʌ́·seʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["yu"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["w"], "é·seʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["w"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tn"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["ty"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakn"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["yaky"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sn"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["tsy"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["n"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["hy"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["kn"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["ky"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tw"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["tw"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakw"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["yakw"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sw"], "ehseʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["sw"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["lʌ·n"], "é·seʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["lu"], "átyele’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["ku·n"], "é·seʔ"],
+        breakdown: ["n", ["aʔ", "DEF"], ["ku"], "átyele’"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: ["ni", ["k"], "atyélha’"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: ["ni", ["hs"], "atyélha’"],
       },
       {
-        breakdown: [["l"], "ROOT"],
+        breakdown: ["ni", ["l"], "atyélha’"],
       },
       {
-        breakdown: [["y"], "ROOT"],
+        breakdown: ["ni", ["yu"], "atyélha’"],
       },
       {
-        breakdown: [["w"], "ROOT"],
+        breakdown: ["ni", ["w"], "atyélha’"],
       },
       {
-        breakdown: [["tn"], "ROOT"],
+        breakdown: ["ni", ["ty"], "atyélha’"],
       },
       {
-        breakdown: [["yakn"], "ROOT"],
+        breakdown: ["ni", ["yaky"], "atyélha’"],
       },
       {
-        breakdown: [["sn"], "ROOT"],
+        breakdown: ["ni", ["tsy"], "atyélha’"],
       },
       {
-        breakdown: [["n"], "ROOT"],
+        breakdown: ["ni", ["hy"], "atyélha’"],
       },
       {
-        breakdown: [["kn"], "ROOT"],
+        breakdown: ["ni", ["ky"], "atyélha’"],
       },
       {
-        breakdown: [["tw"], "ROOT"],
+        breakdown: ["ni", ["tw"], "atyélha’"],
       },
       {
-        breakdown: [["yakw"], "ROOT"],
+        breakdown: ["ni", ["yakw"], "atyélha’"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: ["ni", ["sw"], "atyélha’"],
       },
       {
-        breakdown: [["lʌ·n"], "ROOT"],
+        breakdown: ["ni", ["lu"], "atyélha’"],
       },
       {
-        breakdown: [["ku·n"], "ROOT"],
+        breakdown: ["ni", ["ku"], "atyélha’"],
       },
     ],
   },

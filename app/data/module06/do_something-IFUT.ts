@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"],["k"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["k"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["hs"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["hs"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["l"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["l"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["y"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["yu"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["w"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["w"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["tn"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["ty"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakn"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["yakn"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["sn"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["tsy"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["n"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["hy"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["kn"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["ky"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["tw"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["tw"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakw"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["yakw"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["sw"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["sw"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["lʌ·n"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["lu"], "átyele’"],
       },
       {
-        breakdown: [["a", "IFUT"],["ku·n"], "ROOT"],
+        breakdown: ["n", ["a", "IFUT"], ["ku"], "átyele’"],
       },
     ],
   },

@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} am VERB",
+    translation: "{{pronoun}} am answering",
     type: "PR",
     phrases: [
       {
-        breakdown: [["wa", "DEF"], ["k"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["k"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hs"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["hsa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["l"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["la"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["y"], "ʌ́·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["ye"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["w"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["ka"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["tni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["yakni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["sni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["n"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["hni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["kn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["kni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tw"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["twa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakw"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["yakwa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sw"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["swa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["lʌ·n"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["lati"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["ku·n"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["kuti"], "lihwa’sla·kó·"],
       },
     ],
   },

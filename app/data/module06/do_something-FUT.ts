@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"],["k"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["k"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["hs"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["hs"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["l"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["l"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["y"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["yu"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["w"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["w"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tn"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["ty"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakn"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["yaky"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sn"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["tsy"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["n"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["hy"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["kn"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["ky"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tw"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["tw"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakw"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["yakw"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sw"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["sw"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["lʌ·n"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["lu"], "átyele’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["ku·n"], "ROOT"],
+        breakdown: ["n", ["ʌ", "FUT"], ["ku"], "átyele’"],
       },
     ],
   },

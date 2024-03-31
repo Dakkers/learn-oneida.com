@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"],["k"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["k"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["hs"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hs"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["l"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["l"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["y"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yu"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["w"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["w"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tn"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ty"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakn"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yaky"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sn"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["tsy"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["n"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hy"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["kn"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ky"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tw"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["tw"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakw"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yakw"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sw"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["sw"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["lʌ·n"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["lu"], "atska·hu’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["ku·n"], "ROOT"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ku"], "atska·hu’"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"],["k"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["k"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["hs"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["hs"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["l"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["l"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["y"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["yu"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["w"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["w"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["tn"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["ty"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakn"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["yakn"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["sn"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["tsy"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["n"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["hy"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["kn"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["ky"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["tw"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["tw"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakw"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["yakw"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["sw"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["sw"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["lʌ·n"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["lu"], "atská·hu’"],
       },
       {
-        breakdown: [["a", "IFUT"],["ku·n"], "ROOT"],
+        breakdown: ["t", ["a", "IFUT"], ["ku"], "atská·hu’"],
       },
     ],
   },

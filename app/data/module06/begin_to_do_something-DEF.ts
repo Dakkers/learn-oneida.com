@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["wa", "DEF"], ["k"], "é·seʔ"],
+        breakdown: ["t", ["a", "DEF"], ["k"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hs"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["hs"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["l"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["l"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["y"], "ʌ́·seʔ"],
+        breakdown: ["t", ["a", "DEF"], ["yu"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["w"], "é·seʔ"],
+        breakdown: ["t", ["a", "DEF"], ["w"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tn"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["ty"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakn"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["yaky"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sn"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["tsy"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["n"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["hy"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["kn"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["ky"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tw"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["tw"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakw"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["yakw"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sw"], "ehseʔ"],
+        breakdown: ["t", ["a", "DEF"], ["sw"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["lʌ·n"], "é·seʔ"],
+        breakdown: ["t", ["a", "DEF"], ["lu"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["ku·n"], "é·seʔ"],
+        breakdown: ["t", ["a", "DEF"], ["ku"], "atáhsawʌ’"],
       },
     ],
   },

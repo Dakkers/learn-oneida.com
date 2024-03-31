@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"],["k"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["k"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["hs"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hs"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["l"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["l"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["y"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yu"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["w"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["w"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["tn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ty"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakn"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["sn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tsy"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["n"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["hy"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["kn"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ky"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["tw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["tw"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["yakw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["yakw"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["sw"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["sw"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["lʌ·n"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["lu"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["a", "IFUT"],["ku·n"], "ROOT"],
+        breakdown: [["a", "IFUT"], ["ku"], "aní·tayʌ’"],
       },
     ],
   },

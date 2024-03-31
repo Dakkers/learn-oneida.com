@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} {{refVerbPast}} VERB",
+    translation: "{{pronoun}} {{refVerbPast}} cooked",
     type: "PB",
     phrases: [
       {
-        "breakdown": [["wak"], "ROOT"]
+        breakdown: [["wak"], ["e"], "khuní"],
       },
       {
-        "breakdown": [["sa"], "ROOT"]
+        breakdown: [["s"], "khuní"],
       },
       {
-        "breakdown": [["lo"], "ROOT"]
+        breakdown: [["lo"], "khuní"],
       },
       {
-        "breakdown": [["yako"], "ROOT"]
+        breakdown: [["yako"], "khuní"],
       },
       {
-        "breakdown": [["yo"], "ROOT"]
+        breakdown: [["yo"], "khuní"],
       },
       {
-        "breakdown": [["yukni"], "ROOT"]
+        breakdown: [["yukni"], "khuní"],
       },
       {
-        "breakdown": [["yukni"], "ROOT"]
+        breakdown: [["yukni"], "khuní"],
       },
       {
-        "breakdown": [["sni"], "ROOT"]
+        breakdown: [["sni"], "khuní"],
       },
       {
-        "breakdown": [["loti"], "ROOT"]
+        breakdown: [["loti"], "khuní"],
       },
       {
-        "breakdown": [["yoti"], "ROOT"]
+        breakdown: [["yoti"], "khuní"],
       },
       {
-        "breakdown": [["yukwa"], "ROOT"]
+        breakdown: [["yukwa"], "khuní"],
       },
       {
-        "breakdown": [["yukwa"], "ROOT"]
+        breakdown: [["yukwa"], "khuní"],
       },
       {
-        "breakdown": [["swa"], "ROOT"]
+        breakdown: [["swa"], "khuní"],
       },
       {
-        "breakdown": [["loti"], "ROOT"]
+        breakdown: [["loti"], "khuní"],
       },
       {
-        "breakdown": [["yoti"], "ROOT"]
+        breakdown: [["yoti"], "khuní"],
       },
     ],
   },

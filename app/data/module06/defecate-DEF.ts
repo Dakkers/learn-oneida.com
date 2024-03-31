@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["wa", "DEF"], ["k"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["k"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hs"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["l"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["l"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["y"], "ʌ́·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["w"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["w"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["n"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["kn"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["tw"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["yakw"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], ["sw"], "ehseʔ"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["lʌ·n"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["lu"], "aní·tayʌ’"],
       },
       {
-        breakdown: [["wa", "DEF"], "kʌʔ ", ["ku·n"], "é·seʔ"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "aní·tayʌ’"],
       },
     ],
   },

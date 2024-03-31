@@ -16,25 +16,25 @@ export default createParadigmData(
         breakdown: [["l"], "ROOT"],
       },
       {
-        breakdown: [["y"], "ROOT"],
+        breakdown: [["yu"], "ROOT"],
       },
       {
         breakdown: [["w"], "ROOT"],
       },
       {
-        breakdown: [["tn"], "ROOT"],
+        breakdown: [["ty"], "ROOT"],
       },
       {
-        breakdown: [["yakn"], "ROOT"],
+        breakdown: [["yaky"], "ROOT"],
       },
       {
-        breakdown: [["sn"], "ROOT"],
+        breakdown: [["tsy"], "ROOT"],
       },
       {
-        breakdown: [["n"], "ROOT"],
+        breakdown: [["hy"], "ROOT"],
       },
       {
-        breakdown: [["kn"], "ROOT"],
+        breakdown: [["ky"], "ROOT"],
       },
       {
         breakdown: [["tw"], "ROOT"],
@@ -46,10 +46,10 @@ export default createParadigmData(
         breakdown: [["sw"], "ROOT"],
       },
       {
-        breakdown: [["lʌ·n"], "ROOT"],
+        breakdown: [["lu"], "ROOT"],
       },
       {
-        breakdown: [["ku·n"], "ROOT"],
+        breakdown: [["ku"], "ROOT"],
       },
     ],
   },

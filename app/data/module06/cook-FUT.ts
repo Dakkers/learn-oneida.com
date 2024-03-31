@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} VERB",
+    translation: "{{pronoun}} will cook",
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"],["k"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["k"], ["e", "EP"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["hs"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["l"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["la"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["y"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ye"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["w"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ka"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["tni"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yakni"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["sni"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["n"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["hni"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["kn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["kni"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["twa"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yakwa"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["swa"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["lʌ·n"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["lati"], "’khu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["ku·n"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["kuti"], "’khu·ní·"],
       },
     ],
   },

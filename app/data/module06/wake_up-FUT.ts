@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} VERB",
+    translation: "{{pronoun}} will answer",
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"],["k"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["k"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["hs"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["l"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["la"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["y"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ye"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["w"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["ka"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["tni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yakni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["sni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["n"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["hni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["kn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["kni"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["twa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["yakwa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["swa"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["lʌ·n"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["lati"], "lihwa’sla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["ku·n"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], ["kuti"], "lihwa’sla·kó·"],
       },
     ],
   },

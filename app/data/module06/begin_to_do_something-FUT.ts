@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"],["k"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["k"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["hs"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["hs"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["l"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["l"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["y"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["yu"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["w"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["w"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["ty"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["yaky"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["tsy"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["n"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["hy"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["kn"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["ky"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["tw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["tw"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["yakw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["yakw"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["sw"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["sw"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["lʌ·n"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["lu"], "atáhsawʌ’"],
       },
       {
-        breakdown: [["ʌ", "FUT"],["ku·n"], "ROOT"],
+        breakdown: [["ʌ", "FUT"], "t", ["ku"], "atáhsawʌ’"],
       },
     ],
   },
