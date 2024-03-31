@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["k"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["k"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["hs"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hs"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["h"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["h"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["yu"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yu"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["w"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["w"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["ty"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ty"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["yaky"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yaky"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["tsy"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["tsy"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["hy"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hy"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["ky"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ky"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["tw"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["tw"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["yakw"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yakw"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["sw"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["sw"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["hu"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hu"], "atska·huʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["ku"], "atska·hu’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ku"], "atska·huʔ"],
       },
     ],
   },

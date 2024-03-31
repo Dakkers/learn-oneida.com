@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["h"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["h"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["w"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hu"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["hu"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "atló·loke’"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "atló·lokeʔ"],
       },
     ],
   },

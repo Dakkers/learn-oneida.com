@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "í·lu’"],
+        breakdown: [["a", "IFUT"], ["k"], "í·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ts"], "í·lu’"],
+        breakdown: [["a", "IFUT"], ["ts"], "í·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hʌ"], "·lu’"],
+        breakdown: [["a", "IFUT"], ["hʌ"], "·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ye"], "·lu’"],
+        breakdown: [["a", "IFUT"], ["ye"], "·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["kʌ"], "·lu’"],
+        breakdown: [["a", "IFUT"], ["kʌ"], "·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tn"], "í·lu’"],
+        breakdown: [["a", "IFUT"], ["tn"], "í·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "í·lu’"],
+        breakdown: [["a", "IFUT"], ["yakn"], "í·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sn"], "í·lu’"],
+        breakdown: [["a", "IFUT"], ["sn"], "í·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hn"], "í·lu’"],
+        breakdown: [["a", "IFUT"], ["hn"], "í·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["kn"], "í·lu’"],
+        breakdown: [["a", "IFUT"], ["kn"], "í·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["twʌ"], "·lu’"],
+        breakdown: [["a", "IFUT"], ["twʌ"], "·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakwʌ"], "·lu’"],
+        breakdown: [["a", "IFUT"], ["yakwʌ"], "·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["swʌ"], "·lu’"],
+        breakdown: [["a", "IFUT"], ["swʌ"], "·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hat"], "í·lu’"],
+        breakdown: [["a", "IFUT"], ["hat"], "í·luʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["kut"], "í·lu’"],
+        breakdown: [["a", "IFUT"], ["kut"], "í·luʔ"],
       },
     ],
   },

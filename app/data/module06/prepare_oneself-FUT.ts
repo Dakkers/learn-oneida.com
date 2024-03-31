@@ -12,7 +12,7 @@ export default createParadigmData(
           ["k"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -21,7 +21,7 @@ export default createParadigmData(
           ["hs"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -30,7 +30,7 @@ export default createParadigmData(
           ["h"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -39,7 +39,7 @@ export default createParadigmData(
           ["yu"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -48,7 +48,7 @@ export default createParadigmData(
           ["w"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -57,7 +57,7 @@ export default createParadigmData(
           ["ty"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -66,7 +66,7 @@ export default createParadigmData(
           ["yaky"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -75,7 +75,7 @@ export default createParadigmData(
           ["tsy"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -84,7 +84,7 @@ export default createParadigmData(
           ["hy"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -93,7 +93,7 @@ export default createParadigmData(
           ["ky"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -102,7 +102,7 @@ export default createParadigmData(
           ["tw"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -111,7 +111,7 @@ export default createParadigmData(
           ["yakw"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -120,7 +120,7 @@ export default createParadigmData(
           ["sw"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -129,7 +129,7 @@ export default createParadigmData(
           ["lu"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
       {
@@ -138,7 +138,7 @@ export default createParadigmData(
           ["ku"],
           ["atat", "REFL"],
           ["e", "EP"],
-          "wyʌnʌ·táne’",
+          "wyʌnʌ·táneʔ",
         ],
       },
     ],

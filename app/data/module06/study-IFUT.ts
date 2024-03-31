@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["k"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["hs"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["h"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["h"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["yu"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["w"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["ty"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["yakn"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["tsy"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["hy"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["ky"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["tw"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["yakw"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["sw"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hu"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["hu"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], ["atat", "REFL"], "lihúni’"],
+        breakdown: [["a", "IFUT"], ["ku"], ["atat", "REFL"], "lihúniʔ"],
       },
     ],
   },

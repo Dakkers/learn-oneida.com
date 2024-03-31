@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["h"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hu"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["hu"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "atolíshʌ’"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "atolíshʌʔ"],
       },
     ],
   },

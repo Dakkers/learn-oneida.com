@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "í·lu’"],
+        breakdown: [["waʔ", "DEF"], ["k"], "í·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ts"], "í·lu’"],
+        breakdown: [["waʔ", "DEF"], ["ts"], "í·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hʌ"], "·lu’"],
+        breakdown: [["waʔ", "DEF"], ["hʌ"], "·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ye"], "·lu’"],
+        breakdown: [["waʔ", "DEF"], ["ye"], "·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kʌ"], "·lu’"],
+        breakdown: [["waʔ", "DEF"], ["kʌ"], "·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tn"], "í·lu’"],
+        breakdown: [["waʔ", "DEF"], ["tn"], "í·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakn"], "í·lu’"],
+        breakdown: [["waʔ", "DEF"], ["yakn"], "í·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sn"], "í·lu’"],
+        breakdown: [["waʔ", "DEF"], ["sn"], "í·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hn"], "í·lu’"],
+        breakdown: [["waʔ", "DEF"], ["hn"], "í·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kn"], "í·lu’"],
+        breakdown: [["waʔ", "DEF"], ["kn"], "í·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["twʌ"], "·lu’"],
+        breakdown: [["waʔ", "DEF"], ["twʌ"], "·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakwʌ"], "·lu’"],
+        breakdown: [["waʔ", "DEF"], ["yakwʌ"], "·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["swʌ"], "·lu’"],
+        breakdown: [["waʔ", "DEF"], ["swʌ"], "·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hat"], "í·lu’"],
+        breakdown: [["waʔ", "DEF"], ["hat"], "í·luʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kut"], "í·lu’"],
+        breakdown: [["waʔ", "DEF"], ["kut"], "í·luʔ"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["k"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hsa"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["hsa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ha"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["ha"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ye"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["ye"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ka"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["ka"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["tni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["yakni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["sni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["hni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kni"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["kni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["twa"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["twa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakwa"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["yakwa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["swa"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["swa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hati"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["hati"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kuti"], "lihwa’sla·kó·"],
+        breakdown: [["waʔ", "DEF"], ["kuti"], "lihwaʔsla·kó·"],
       },
     ],
   },

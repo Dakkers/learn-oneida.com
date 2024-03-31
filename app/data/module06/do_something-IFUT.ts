@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["n", ["a", "IFUT"], ["k"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["k"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["hs"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["hs"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["h"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["h"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["yu"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["yu"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["w"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["w"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["ty"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["ty"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["yakn"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["yakn"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["tsy"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["tsy"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["hy"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["hy"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["ky"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["ky"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["tw"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["tw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["yakw"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["yakw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["sw"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["sw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["hu"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["hu"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "IFUT"], ["ku"], "átyele’"],
+        breakdown: ["n", ["a", "IFUT"], ["ku"], "átyeleʔ"],
       },
     ],
   },

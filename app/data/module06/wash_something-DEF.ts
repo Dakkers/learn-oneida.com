@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["k"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hsa"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["hsa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ha"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["ha"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ye"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["ye"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ka"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["ka"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tni"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["tni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakni"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["yakni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sni"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["sni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hni"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["hni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kni"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["kni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["twa"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["twa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakwa"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["yakwa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["swa"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["swa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hati"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["hati"], "nóhaleʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kuti"], "nóhale’"],
+        breakdown: [["waʔ", "DEF"], ["kuti"], "nóhaleʔ"],
       },
     ],
   },

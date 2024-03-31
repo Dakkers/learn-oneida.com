@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["t", ["a", "DEF"], ["k"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["k"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["hs"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["hs"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["h"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["h"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["yu"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["yu"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["w"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["w"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["ty"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["ty"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["yaky"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["yaky"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["tsy"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["tsy"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["hy"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["hy"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["ky"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["ky"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["tw"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["tw"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["yakw"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["yakw"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["sw"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["sw"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["hu"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["hu"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["ku"], "atáhsawʌ’"],
+        breakdown: ["t", ["a", "DEF"], ["ku"], "atáhsawʌʔ"],
       },
     ],
   },

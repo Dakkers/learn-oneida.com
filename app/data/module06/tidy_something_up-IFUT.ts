@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["t", ["a", "IFUT"], ["k"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["k"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["hs"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["hs"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["h"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["h"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["yu"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["yu"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["w"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["w"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["ty"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["ty"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["yakn"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["yakn"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["tsy"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["tsy"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["hy"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["hy"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["ky"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["ky"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["tw"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["tw"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["yakw"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["yakw"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["sw"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["sw"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["hu"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["hu"], "atohtálhoʔ"],
       },
       {
-        breakdown: ["t", ["a", "IFUT"], ["ku"], "atohtálho’"],
+        breakdown: ["t", ["a", "IFUT"], ["ku"], "atohtálhoʔ"],
       },
     ],
   },

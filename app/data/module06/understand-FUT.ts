@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["wak"], ["e", "EP"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["wak"], ["e", "EP"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sa"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["sa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ho"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["ho"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yako"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["yako"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yo"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["yo"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yukni"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["yukni"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yukni"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["yukni"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sni"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["sni"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hoti"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["hoti"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yoti"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["yoti"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yukwa"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["yukwa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yukwa"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["yukwa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["swa"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["swa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hoti"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["hoti"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yoti"], "’nikuhlayʌ·táne’"],
+        breakdown: [["ʌ", "FUT"], ["yoti"], "ʔnikuhlayʌ·táneʔ"],
       },
     ],
   },

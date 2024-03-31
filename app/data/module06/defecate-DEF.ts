@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["k"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["h"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["h"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["w"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hu"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["hu"], "aní·tayʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "aní·tayʌ’"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "aní·tayʌʔ"],
       },
     ],
   },

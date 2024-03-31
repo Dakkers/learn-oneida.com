@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["h"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hu"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["hu"], "atkétskoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "atkétsko’"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "atkétskoʔ"],
       },
     ],
   },

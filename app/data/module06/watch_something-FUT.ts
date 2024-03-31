@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["h"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hu"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["hu"], "atló·lokeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "atló·loke’"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "atló·lokeʔ"],
       },
     ],
   },

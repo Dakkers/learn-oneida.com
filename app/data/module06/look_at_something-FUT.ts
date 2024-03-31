@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["h"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hu"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["hu"], "atkáthoʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "atkátho’"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "atkáthoʔ"],
       },
     ],
   },

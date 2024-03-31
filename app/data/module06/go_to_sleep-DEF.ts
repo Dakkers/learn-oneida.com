@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["u", "DEF"], ["wak"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["wak"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["sʌ"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["sʌ"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["ho"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["ho"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["yako"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["yako"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["yo"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["yo"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["yukn"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["yukn"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["yukn"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["yukn"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["sn"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["sn"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["hot"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["hot"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["yot"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["yot"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["yukwʌ"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["yukwʌ"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["yukwʌ"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["yukwʌ"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["swʌ"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["swʌ"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["hot"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["hot"], "i·táweʔ"],
       },
       {
-        breakdown: [["u", "DEF"], ["yot"], "i·táwe’"],
+        breakdown: [["u", "DEF"], ["yot"], "i·táweʔ"],
       },
     ],
   },

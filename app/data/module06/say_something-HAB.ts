@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "a·túhe’"],
+        breakdown: [["k"], "a·túheʔ"],
       },
       {
-        breakdown: [["hs"], "a·túhe’"],
+        breakdown: [["hs"], "a·túheʔ"],
       },
       {
-        breakdown: [["l"], "a·túhe’"],
+        breakdown: [["l"], "a·túheʔ"],
       },
       {
-        breakdown: [["yu"], "a·túhe’"],
+        breakdown: [["yu"], "a·túheʔ"],
       },
       {
-        breakdown: [["w"], "a·túhe’"],
+        breakdown: [["w"], "a·túheʔ"],
       },
       {
-        breakdown: [["ty"], "a·túhe’"],
+        breakdown: [["ty"], "a·túheʔ"],
       },
       {
-        breakdown: [["yaky"], "a·túhe’"],
+        breakdown: [["yaky"], "a·túheʔ"],
       },
       {
-        breakdown: [["tsy"], "a·túhe’"],
+        breakdown: [["tsy"], "a·túheʔ"],
       },
       {
-        breakdown: [["hy"], "a·túhe’"],
+        breakdown: [["hy"], "a·túheʔ"],
       },
       {
-        breakdown: [["ky"], "a·túhe’"],
+        breakdown: [["ky"], "a·túheʔ"],
       },
       {
-        breakdown: [["tw"], "a·túhe’"],
+        breakdown: [["tw"], "a·túheʔ"],
       },
       {
-        breakdown: [["yakw"], "a·túhe’"],
+        breakdown: [["yakw"], "a·túheʔ"],
       },
       {
-        breakdown: [["sw"], "a·túhe’"],
+        breakdown: [["sw"], "a·túheʔ"],
       },
       {
-        breakdown: [["lu"], "a·túhe’"],
+        breakdown: [["lu"], "a·túheʔ"],
       },
       {
-        breakdown: [["ku"], "a·túhe’"],
+        breakdown: [["ku"], "a·túheʔ"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["k"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["hs"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["h"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["h"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["yu"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["w"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["ty"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["yakn"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["tsy"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["hy"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["ky"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["tw"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["yakw"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["sw"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hu"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["hu"], "atkáthoʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "atkátho’"],
+        breakdown: [["a", "IFUT"], ["ku"], "atkáthoʔ"],
       },
     ],
   },

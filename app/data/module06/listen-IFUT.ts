@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["k"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["hs"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["h"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["h"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["yu"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["w"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["ty"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["yakn"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["tsy"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["hy"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["ky"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["tw"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["yakw"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["sw"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hu"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["hu"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "atahúhsatate’"],
+        breakdown: [["a", "IFUT"], ["ku"], "atahúhsatateʔ"],
       },
     ],
   },

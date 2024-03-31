@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "aní·tayʌhe’"],
+        breakdown: [["k"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["hs"], "aní·tayʌhe’"],
+        breakdown: [["hs"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["l"], "aní·tayʌhe’"],
+        breakdown: [["l"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["yu"], "aní·tayʌhe’"],
+        breakdown: [["yu"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["w"], "aní·tayʌhe’"],
+        breakdown: [["w"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["ty"], "aní·tayʌhe’"],
+        breakdown: [["ty"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["yaky"], "aní·tayʌhe’"],
+        breakdown: [["yaky"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["tsy"], "aní·tayʌhe’"],
+        breakdown: [["tsy"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["hy"], "aní·tayʌhe’"],
+        breakdown: [["hy"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["ky"], "aní·tayʌhe’"],
+        breakdown: [["ky"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["tw"], "aní·tayʌhe’"],
+        breakdown: [["tw"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["yakw"], "aní·tayʌhe’"],
+        breakdown: [["yakw"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["sw"], "aní·tayʌhe’"],
+        breakdown: [["sw"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["lu"], "aní·tayʌhe’"],
+        breakdown: [["lu"], "aní·tayʌheʔ"],
       },
       {
-        breakdown: [["ku"], "aní·tayʌhe’"],
+        breakdown: [["ku"], "aní·tayʌheʔ"],
       },
     ],
   },

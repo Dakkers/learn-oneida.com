@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["h"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hu"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["hu"], "atahúhsatateʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "atahúhsatate’"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "atahúhsatateʔ"],
       },
     ],
   },

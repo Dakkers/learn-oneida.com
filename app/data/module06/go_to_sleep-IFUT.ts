@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["wak"], "i·táwe’"],
+        breakdown: [["a", "IFUT"], ["wak"], "i·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sʌ"], "·táwe’"],
+        breakdown: [["a", "IFUT"], ["sʌ"], "·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ho"], "·táwe’"],
+        breakdown: [["a", "IFUT"], ["ho"], "·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yako"], "·táwe’"],
+        breakdown: [["a", "IFUT"], ["yako"], "·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yo"], "·táwe’"],
+        breakdown: [["a", "IFUT"], ["yo"], "·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukn"], "i·táwe’"],
+        breakdown: [["a", "IFUT"], ["yukn"], "i·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukn"], "i·táwe’"],
+        breakdown: [["a", "IFUT"], ["yukn"], "i·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sn"], "i·táwe’"],
+        breakdown: [["a", "IFUT"], ["sn"], "i·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hot"], "i·táwe’"],
+        breakdown: [["a", "IFUT"], ["hot"], "i·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yot"], "i·táwe’"],
+        breakdown: [["a", "IFUT"], ["yot"], "i·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwʌ"], "·táwe’"],
+        breakdown: [["a", "IFUT"], ["yukwʌ"], "·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwʌ"], "·táwe’"],
+        breakdown: [["a", "IFUT"], ["yukwʌ"], "·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["swʌ"], "·táwe’"],
+        breakdown: [["a", "IFUT"], ["swʌ"], "·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hot"], "i·táwe’"],
+        breakdown: [["a", "IFUT"], ["hot"], "i·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yot"], "i·táwe’"],
+        breakdown: [["a", "IFUT"], ["yot"], "i·táweʔ"],
       },
     ],
   },

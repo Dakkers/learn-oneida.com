@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "nóhalehe’"],
+        breakdown: [["k"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["s"], "nóhalehe’"],
+        breakdown: [["s"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["la"], "nóhalehe’"],
+        breakdown: [["la"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["ye"], "nóhalehe’"],
+        breakdown: [["ye"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["ka"], "nóhalehe’"],
+        breakdown: [["ka"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["tni"], "nóhalehe’"],
+        breakdown: [["tni"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["yakni"], "nóhalehe’"],
+        breakdown: [["yakni"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["sni"], "nóhalehe’"],
+        breakdown: [["sni"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["ni"], "nóhalehe’"],
+        breakdown: [["ni"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["kni"], "nóhalehe’"],
+        breakdown: [["kni"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["twa"], "nóhalehe’"],
+        breakdown: [["twa"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["yakwa"], "nóhalehe’"],
+        breakdown: [["yakwa"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["swa"], "nóhalehe’"],
+        breakdown: [["swa"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["lati"], "nóhalehe’"],
+        breakdown: [["lati"], "nóhaleheʔ"],
       },
       {
-        breakdown: [["kuti"], "nóhalehe’"],
+        breakdown: [["kuti"], "nóhaleheʔ"],
       },
     ],
   },

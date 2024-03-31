@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], "t", ["k"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["k"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["hs"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["hs"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["h"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["h"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["yu"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["yu"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["w"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["w"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["ty"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["ty"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["yaky"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["yaky"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["tsy"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["tsy"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["hy"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["hy"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["ky"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["ky"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["tw"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["tw"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["yakw"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["yakw"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["sw"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["sw"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["hu"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["hu"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["ku"], "atská·hu’"],
+        breakdown: [["waʔ", "DEF"], "t", ["ku"], "atská·huʔ"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["k"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hsa"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["hsa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ha"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["ha"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ye"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["ye"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ka"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["ka"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tni"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["tni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakni"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["yakni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sni"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["sni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hni"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["hni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["kni"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["kni"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["twa"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["twa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakwa"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["yakwa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["swa"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["swa"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hati"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["hati"], "nóhaleʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["kuti"], "nóhale’"],
+        breakdown: [["a", "IFUT"], ["kuti"], "nóhaleʔ"],
       },
     ],
   },

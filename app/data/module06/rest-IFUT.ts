@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["k"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["hs"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["h"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["h"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["yu"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["w"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["ty"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakn"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["yakn"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["tsy"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["hy"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["ky"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["tw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["yakw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["sw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hu"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["hu"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "atolíshʌ’"],
+        breakdown: [["a", "IFUT"], ["ku"], "atolíshʌʔ"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["k"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["k"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["hs"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["hs"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["h"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["h"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["yu"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["yu"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["w"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["w"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["ty"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["ty"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["yaky"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["yaky"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["tsy"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["tsy"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["hy"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["hy"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["ky"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["ky"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["tw"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["tw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["yakw"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["yakw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["sw"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["sw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["hu"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["hu"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["ʌ", "FUT"], ["ku"], "átyele’"],
+        breakdown: ["n", ["ʌ", "FUT"], ["ku"], "átyeleʔ"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["wak"], ["e", "EP"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["wak"], ["e", "EP"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sa"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["sa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ho"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["ho"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yako"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["yako"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yo"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["yo"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["yukni"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["yukni"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sni"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["sni"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["hoti"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["yoti"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["yukwa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["yukwa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["swa"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["swa"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["hoti"], "ʔnikuhlayʌ·táneʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "’nikuhlayʌ·táne’"],
+        breakdown: [["a", "IFUT"], ["yoti"], "ʔnikuhlayʌ·táneʔ"],
       },
     ],
   },

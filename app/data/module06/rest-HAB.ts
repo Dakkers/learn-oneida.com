@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "atolíshʌhe’"],
+        breakdown: [["k"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["hs"], "atolíshʌhe’"],
+        breakdown: [["hs"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["l"], "atolíshʌhe’"],
+        breakdown: [["l"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["yu"], "atolíshʌhe’"],
+        breakdown: [["yu"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["w"], "atolíshʌhe’"],
+        breakdown: [["w"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["ty"], "atolíshʌhe’"],
+        breakdown: [["ty"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["yaky"], "atolíshʌhe’"],
+        breakdown: [["yaky"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["tsy"], "atolíshʌhe’"],
+        breakdown: [["tsy"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["hy"], "atolíshʌhe’"],
+        breakdown: [["hy"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["ky"], "atolíshʌhe’"],
+        breakdown: [["ky"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["tw"], "atolíshʌhe’"],
+        breakdown: [["tw"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["yakw"], "atolíshʌhe’"],
+        breakdown: [["yakw"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["sw"], "atolíshʌhe’"],
+        breakdown: [["sw"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["lu"], "atolíshʌhe’"],
+        breakdown: [["lu"], "atolíshʌheʔ"],
       },
       {
-        breakdown: [["ku"], "atolíshʌhe’"],
+        breakdown: [["ku"], "atolíshʌheʔ"],
       },
     ],
   },

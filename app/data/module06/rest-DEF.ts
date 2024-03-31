@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["h"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["h"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["w"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hu"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["hu"], "atolíshʌʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "atolíshʌ’"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "atolíshʌʔ"],
       },
     ],
   },

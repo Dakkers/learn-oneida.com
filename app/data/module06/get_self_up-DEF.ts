@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hs"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["hs"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["h"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["h"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yu"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["yu"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["w"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ty"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["ty"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yaky"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["yaky"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tsy"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["tsy"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hy"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["hy"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["tw"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["tw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["yakw"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["yakw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["sw"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["sw"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["hu"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["hu"], "atkétskoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "atkétsko’"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "atkétskoʔ"],
       },
     ],
   },

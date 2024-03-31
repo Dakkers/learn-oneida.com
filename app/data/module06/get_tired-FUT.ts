@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["k"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["k"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["hs"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hs"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["ha"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ha"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["ye"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ye"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["ka"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["ka"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["tni"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["tni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["yakni"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yakni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["sni"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["sni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["hni"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["kni"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["kni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["twa"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["twa"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["yakwa"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["yakwa"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["swa"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["swa"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["hati"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hati"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["kuti"], "hwishʌ́heye’"],
+        breakdown: ["t", ["ʌ", "FUT"], ["kuti"], "hwishʌ́heyeʔ"],
       },
     ],
   },
