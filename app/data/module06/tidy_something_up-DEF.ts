@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], "t", ["k"], "atohtálhoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["hs"], "atohtálhoʔ"],
+        breakdown: [["waʔ", "DEF"], "te", ["hs"], "atohtálhoʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], "t", ["h"], "atohtálhoʔ"],
@@ -22,13 +22,13 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], "t", ["w"], "atohtálhoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["ty"], "atohtálhoʔ"],
+        breakdown: [["waʔ", "DEF"], "ti", ["ty"], "atohtálhoʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], "t", ["yaky"], "atohtálhoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["tsy"], "atohtálhoʔ"],
+        breakdown: [["waʔ", "DEF"], "ti", ["tsy"], "atohtálhoʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], "t", ["hy"], "atohtálhoʔ"],
@@ -43,7 +43,7 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], "t", ["yakw"], "atohtálhoʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["sw"], "atohtálhoʔ"],
+        breakdown: [["waʔ", "DEF"], "ti", ["sw"], "atohtálhoʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], "t", ["hu"], "tohtálhoʔ"],

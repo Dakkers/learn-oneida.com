@@ -9,7 +9,7 @@ export default createParadigmData(
         breakdown: ["ta", ["s"], "atáhsawʌ"],
       },
       {
-        breakdown: ["ta", ["sn"], "atáhsawʌ"],
+        breakdown: ["ta", ["tsy"], "atáhsawʌ"],
       },
       {
         breakdown: ["ta", ["sw"], "atáhsawʌ"],

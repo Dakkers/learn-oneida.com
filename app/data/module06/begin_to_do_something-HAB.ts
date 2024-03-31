@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: ["t", ["k"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["hs"], "atahsáwhaʔ"],
+        breakdown: ["te", ["hs"], "atahsáwhaʔ"],
       },
       {
         breakdown: ["t", ["h"], "atahsáwhaʔ"],
@@ -22,13 +22,13 @@ export default createParadigmData(
         breakdown: ["t", ["w"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["ty"], "atahsáwhaʔ"],
+        breakdown: ["ti", ["ty"], "atahsáwhaʔ"],
       },
       {
         breakdown: ["t", ["yaky"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["tsy"], "atahsáwhaʔ"],
+        breakdown: ["ti", ["tsy"], "atahsáwhaʔ"],
       },
       {
         breakdown: ["t", ["hy"], "atahsáwhaʔ"],
@@ -43,7 +43,7 @@ export default createParadigmData(
         breakdown: ["t", ["yakw"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["sw"], "atahsáwhaʔ"],
+        breakdown: ["ti", ["sw"], "atahsáwhaʔ"],
       },
       {
         breakdown: ["t", ["hu"], "tahsáwhaʔ"],

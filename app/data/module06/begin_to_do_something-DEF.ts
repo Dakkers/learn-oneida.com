@@ -19,16 +19,16 @@ export default createParadigmData(
         breakdown: ["t", ["a", "DEF"], ["yu"], "táhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["w"], "atáhsawʌʔ"],
+        breakdown: ["t", ["u"], "táhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["ty"], "atáhsawʌʔ"],
+        breakdown: ["t", ["e", "DEF"], ["ty"], "atáhsawʌʔ"],
       },
       {
         breakdown: ["t", ["a", "DEF"], ["yaky"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["tsy"], "atáhsawʌʔ"],
+        breakdown: ["t", ["e", "DEF"], ["tsy"], "atáhsawʌʔ"],
       },
       {
         breakdown: ["t", ["a", "DEF"], ["hy"], "atáhsawʌʔ"],
@@ -37,13 +37,13 @@ export default createParadigmData(
         breakdown: ["t", ["a", "DEF"], ["ky"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["tw"], "atáhsawʌʔ"],
+        breakdown: ["t", ["e", "DEF"], ["tw"], "atáhsawʌʔ"],
       },
       {
         breakdown: ["t", ["a", "DEF"], ["yakw"], "atáhsawʌʔ"],
       },
       {
-        breakdown: ["t", ["a", "DEF"], ["sw"], "atáhsawʌʔ"],
+        breakdown: ["t", ["e", "DEF"], ["sw"], "atáhsawʌʔ"],
       },
       {
         breakdown: ["t", ["a", "DEF"], ["hu"], "táhsawʌʔ"],
