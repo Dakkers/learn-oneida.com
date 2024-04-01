@@ -3,14 +3,14 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} will answer",
+    translation: "{{pronoun}} will get tired",
     type: "PR",
     phrases: [
       {
         breakdown: ["t", ["ʌ", "FUT"], ["k"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: ["t", ["ʌ", "FUT"], ["hs"], "hwishʌ́heyeʔ"],
+        breakdown: ["t", ["ʌ", "FUT"], ["hse"], "hwishʌ́heyeʔ"],
       },
       {
         breakdown: ["t", ["ʌ", "FUT"], ["ha"], "hwishʌ́heyeʔ"],

@@ -4,13 +4,13 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might sleep",
-    type: "PB",d
+    type: "PB",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["wak"], "i·táweʔ"],
+        breakdown: [["a·", "IFUT"], ["uk"], "i·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sʌ"], "·táweʔ"],
+        breakdown: [["a·e", "IFUT"], ["sʌ"], "·táweʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["ho"], "·táweʔ"],
@@ -28,7 +28,7 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["yukn"], "i·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["sn"], "i·táweʔ"],
+        breakdown: [["a·e", "IFUT"], ["sn"], "i·táweʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["hot"], "i·táweʔ"],
@@ -43,7 +43,7 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["yukwʌ"], "·táweʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["swʌ"], "·táweʔ"],
+        breakdown: [["a·e", "IFUT"], ["swʌ"], "·táweʔ"],
       },
       {
         breakdown: [["a", "IFUT"], ["hot"], "i·táweʔ"],

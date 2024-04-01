@@ -3,14 +3,14 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} {{refVerbPast}} answered",
+    translation: "{{pronoun}} {{refVerbPast}} got tired",
     type: "PB",
     phrases: [
       {
         breakdown: ["te", ["wak"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["s"], "hwishʌheyú"],
+        breakdown: ["te", ["sa"], "hwishʌheyú"],
       },
       {
         breakdown: ["te", ["ho"], "hwishʌheyú"],
