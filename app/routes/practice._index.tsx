@@ -41,12 +41,20 @@ export default function Practice() {
       label: "Seasons",
     },
     {
-      href: "/tense-conjugation",
-      label: "Tense Conjugation",
+      href: "/active-tense-conjugation",
+      label: "Tense Conjugation (Active Verbs)",
     },
     {
-      href: "/tense-identification",
-      label: "Tense Identification",
+      href: "/active-tense-identification",
+      label: "Tense Identification (Active Verbs)",
+    },
+    {
+      href: "/stative-tense-conjugation",
+      label: "Tense Conjugation (Stative Verbs)",
+    },
+    {
+      href: "/stative-tense-identification",
+      label: "Tense Identification (Stative Verbs)",
     },
   ];
 
