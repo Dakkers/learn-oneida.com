@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { arrayify } from "~/utils";
 
 export type BreakdownType =
+  | "DEF"
   | "EP"
   | "FUT"
   | "IFUT"
@@ -109,6 +110,7 @@ function InnerText({
 }
 
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
+  DEF: "text-emerald-400",
   EP: "text-gray-400",
   FUT: "text-emerald-400",
   IFUT: "text-emerald-400",
