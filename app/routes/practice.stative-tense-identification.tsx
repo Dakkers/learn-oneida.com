@@ -30,7 +30,7 @@ export const meta: MetaFunction = () => {
     {
       name: "description",
       content:
-        "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on a given word.",
+        "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on a stative verb.",
     },
   ];
 };
