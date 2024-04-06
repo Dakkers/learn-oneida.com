@@ -2,20 +2,12 @@ import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
 import { Heading } from "@/design/components/heading";
-import {
-  bodyTenseData,
-  characterTenseData,
-  emotionTenseData,
-  mindTenseData,
-  miscTenseData,
-  physicalTenseData,
-} from "~/data/module05";
 import { Text } from "@/design/components/text";
 import { Link } from "@remix-run/react";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Select } from "@/design/components/select";
 import { Button } from "@/design/primitives/button";
-import { arrayify } from "~/utils";
+import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun, pronouns } from "~/utils";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -29,36 +21,29 @@ import {
 } from "@/design/primitives/form";
 import { Input } from "@/design/primitives/input";
 import { Notice } from "@/design/components/notice";
+import { activeVerbsList } from "~/data/module06/activeVerbsList";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Tenses practice" },
+    { title: "Tenses Conjugation for Active Verbs" },
     {
       name: "description",
       content:
-        "Practice your knowledge and understanding of tenses in the Oneida language.",
+        "Practice your knowledge and understanding of tenses for active verbs in the Oneida language.",
     },
   ];
 };
 
-const TENSE_LIST = ["present", "past", "fut", "ifut", "cmd"] as const;
+const TENSE_LIST = ["hab", "def", "fut", "ifut", "cmd", "pfv"] as const;
 type Tense = (typeof TENSE_LIST)[number];
-
-const DATA_FULL_LIST = [
-  ...characterTenseData,
-  ...bodyTenseData,
-  ...mindTenseData,
-  ...miscTenseData,
-  ...emotionTenseData,
-  ...physicalTenseData,
-];
 
 const tenseMap = {
   cmd: "Command",
   fut: "Future",
-  ifut: "Indefinite Future",
-  past: "Past",
-  present: "Present",
+  ifut: "Indefinite",
+  def: "Definite",
+  pfv: "Perfective",
+  hab: "Habitual",
 } as const;
 
 const formSchema = z.object(
@@ -66,16 +51,25 @@ const formSchema = z.object(
 );
 
 export default function PracticeTenseConjugation() {
-  const options = React.useMemo(
+  const verbOptions = React.useMemo(
     () =>
-      DATA_FULL_LIST.map((datum, i) => ({
-        label: `${arrayify(datum.root)[0]} (${datum.en})`,
-        value: i.toString(),
+      activeVerbsList.map((datum) => ({
+        label: datum.en,
+        value: datum.key,
+      })),
+    []
+  );
+  const pronounOptions = React.useMemo(
+    () =>
+      pronouns.map((pronoun) => ({
+        label: `${PRONOUN_MAP_ONEIDA[pronoun]} (${PRONOUN_MAP_EN[pronoun]})`,
+        value: pronoun,
       })),
     []
   );
 
-  const [word, setWord] = React.useState("0");
+  const [word, setWord] = React.useState("answer");
+  const [pronoun, setPronoun] = React.useState("i");
   const [hasStarted, setHasStarted] = React.useState(false);
   const [isCorrect, setIsCorrect] = React.useState(false);
 
@@ -90,16 +84,14 @@ export default function PracticeTenseConjugation() {
       const answer = values[key];
       const result = checkCorrectAnswer(
         answer ?? "",
-        parseInt(word),
+        word,
+        pronoun as Pronoun,
         key as Tense
       );
       if (result) {
         hasErrors = true;
         form.setError(key, {
-          message:
-            result.length > 1
-              ? `Valid answers: ${result.join(", ")}`
-              : `Answer: ${result[0]}`,
+          message: `Answer: ${result}`,
           type: "custom",
         });
       }
@@ -110,14 +102,14 @@ export default function PracticeTenseConjugation() {
   return (
     <Flex direction="column" gap={4}>
       <Heading level={1} variant="headlineL">
-        Tense Conjugation
+        Tense Conjugation for Active Verbs
       </Heading>
 
       <Text>
         Use this page to practice conjugating the different tenses for a given
-        verb. These words come from{" "}
-        <Link className="text-blue-600 underline" to="/learn/module05">
-          module 5
+        active verb. These words come from{" "}
+        <Link className="text-blue-600 underline" to="/learn/module06">
+          module 6
         </Link>
         .
       </Text>
@@ -129,8 +121,18 @@ export default function PracticeTenseConjugation() {
             setWord(value);
             setHasStarted(false);
           }}
-          options={options}
+          options={verbOptions}
           value={word}
+        />
+
+        <Select
+          label="Pronoun"
+          onChange={(value) => {
+            setPronoun(value);
+            setHasStarted(false);
+          }}
+          options={pronounOptions}
+          value={pronoun}
         />
 
         <Button
@@ -183,7 +185,9 @@ export default function PracticeTenseConjugation() {
                     header: "Answer",
                   },
                 ]}
-                data={TENSE_LIST.map((tense) => ({
+                data={TENSE_LIST.filter((tense) =>
+                  tense === "cmd" ? ["u", "u2", "yall"].includes(pronoun) : true
+                ).map((tense) => ({
                   tense,
                   value: "",
                 }))}
@@ -210,28 +214,26 @@ export default function PracticeTenseConjugation() {
 
 function checkCorrectAnswer(
   answer: string,
-  selectedWordIndex: number,
+  word: string,
+  pronoun: Pronoun,
   tense: Tense
 ) {
-  const phraseObj = DATA_FULL_LIST[selectedWordIndex];
-  if (phraseObj) {
-    const sanitizedAnswer = sanitizeIrregularCharacters(answer);
-    const tenseEntry = phraseObj[tense];
-    const answersToCheck = Array.isArray(tenseEntry)
-      ? [tenseEntry.join("")]
-      : "items" in tenseEntry
-      ? tenseEntry.items.map((item) => item.on.join(""))
-      : [tenseEntry.on.join("")];
-
-    if (
-      !answer ||
-      !answersToCheck.find(
-        (correctAnswer) =>
-          sanitizedAnswer === sanitizeIrregularCharacters(correctAnswer)
-      )
-    ) {
-      return answersToCheck;
-    }
+  const verbDatum = activeVerbsList.find((v) => v.key === word);
+  if (!verbDatum) {
+    return null;
   }
-  return null;
+
+  const sanitizedAnswer = sanitizeIrregularCharacters(answer);
+  const tenseEntry = verbDatum[tense];
+  const correctAnswer = tenseEntry.phrases.find(
+    (p) => p.pronoun === pronoun
+  )?.phrase;
+
+  if (
+    !answer ||
+    !correctAnswer ||
+    sanitizedAnswer !== sanitizeIrregularCharacters(correctAnswer)
+  ) {
+    return correctAnswer;
+  }
 }

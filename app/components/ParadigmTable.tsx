@@ -359,8 +359,12 @@ export function createParadigmData(
   for (let i = 0; i < result.phrases.length; i++) {
     const element = result.phrases[i];
     element.phrase = element.breakdown
-      .map((part: string | Record<string, string>) =>
-        typeof part === "string" ? part : part.text
+      .map((part) =>
+        typeof part === "string"
+          ? part
+          : Array.isArray(part)
+          ? part[0]
+          : part.text
       )
       .join("");
     if (allowedPronouns) {

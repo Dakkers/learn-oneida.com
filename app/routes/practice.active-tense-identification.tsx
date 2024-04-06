@@ -1,19 +1,9 @@
 import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
-import { Heading } from "@/design/components/heading";
 import { Button } from "@/design/primitives/button";
 import { Quiz, useQuizContext } from "~/components/practice/Quiz";
 import { Box } from "@/design/components/box";
-import {
-  bodyTenseData,
-  characterTenseData,
-  emotionTenseData,
-  mindTenseData,
-  miscTenseData,
-  physicalTenseData,
-} from "~/data/module05";
-import { convertBreakdownToPlainText } from "~/components/TextBreakdown";
 import _ from "lodash";
 import { Text } from "@/design/components/text";
 import {
@@ -23,45 +13,33 @@ import {
   Settings,
 } from "~/components/practice/QuizContainer";
 import { Link } from "@remix-run/react";
+import { SectionHeading } from "~/components/SectionHeading";
+
+import { activeVerbsList } from "~/data/module06/activeVerbsList";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Tense Identification" },
+    { title: "Tense Identification for Active Verbs" },
     {
       name: "description",
       content:
-        "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on a given word.",
+        "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on an active verb.",
     },
   ];
 };
 
-const TENSE_LIST = ["present", "past", "fut", "ifut", "cmd"] as const;
+const TENSE_LIST = ["hab", "def", "fut", "ifut", "cmd", "pfv"] as const;
 type Tense = (typeof TENSE_LIST)[number];
 
 const DATA_FULL_LIST = _.flattenDeep(
-  [
-    ...characterTenseData,
-    ...bodyTenseData,
-    ...mindTenseData,
-    ...miscTenseData,
-    ...emotionTenseData,
-    ...physicalTenseData,
-  ].map((datum) =>
+  activeVerbsList.map((datum) =>
     TENSE_LIST.map((tense) => {
-      const value = datum[tense];
-      if (Array.isArray(value)) {
-        return { tense, value: convertBreakdownToPlainText(value) };
-      } else if ("items" in value) {
-        return value.items.map((item) => ({
+      return (
+        datum[tense]?.phrases.map((p) => ({
           tense,
-          value: convertBreakdownToPlainText(item.on),
-        }));
-      } else {
-        return {
-          tense,
-          value: convertBreakdownToPlainText(value.on),
-        };
-      }
+          value: p.phrase,
+        })) ?? []
+      );
     })
   )
 );
@@ -113,9 +91,9 @@ export default function PracticeTenseIdentification() {
       }}
     >
       <Flex direction="column" gap={4}>
-        <Heading level={1} variant="headlineL">
-          Tense Identification
-        </Heading>
+        <SectionHeading level={1}>
+          Tense Identification (Active Verbs)
+        </SectionHeading>
 
         {hasStarted ? (
           <Quiz
@@ -146,10 +124,10 @@ export default function PracticeTenseIdentification() {
         ) : (
           <>
             <Text>
-              Use this page to practice identifying what tense conjugation a
-              word contains. These words come from{" "}
-              <Link className="text-blue-600 underline" to="/learn/module05">
-                module 5
+              Use this page to practice identifying what tense conjugation an
+              active verb contains. These words come from{" "}
+              <Link className="text-blue-600 underline" to="/learn/module06">
+                module 6
               </Link>
               .
             </Text>
@@ -172,9 +150,10 @@ export default function PracticeTenseIdentification() {
 const tenseMap = {
   cmd: "Command",
   fut: "Future",
-  ifut: "Indefinite Future",
-  past: "Past",
-  present: "Present",
+  ifut: "Indefinite",
+  def: "Definite",
+  pfv: "Perfective",
+  hab: "Habitual",
 } as const;
 
 function QuestionLol({ answer, id, question }: Q) {
