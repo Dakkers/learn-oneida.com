@@ -346,7 +346,7 @@ export const activeVerbsList = (
     },
     {
       key: "bathe",
-      en: "wash one's body, bathe",
+      en: "bathe, wash one's body",
     },
     {
       key: "beginToDoSomething",
@@ -441,11 +441,13 @@ export const activeVerbsList = (
       en: "work",
     },
   ] as const
-).map((item) => {
-  const result: Partial<TenseDatum> = { ...item };
-  for (const key of ["Cmd", "Def", "Fut", "Hab", "Ifut", "Pfv"] as const) {
-    result[key.toLowerCase() as Lowercase<typeof key>] =
-      mapping[`${item.key}${key}`];
-  }
-  return result as TenseDatum;
-});
+)
+  .map((item) => {
+    const result: Partial<TenseDatum> = { ...item };
+    for (const key of ["Cmd", "Def", "Fut", "Hab", "Ifut", "Pfv"] as const) {
+      result[key.toLowerCase() as Lowercase<typeof key>] =
+        mapping[`${item.key}${key}`];
+    }
+    return result as TenseDatum;
+  })
+  .sort((v1, v2) => v1.en.localeCompare(v2.en));
