@@ -10,7 +10,10 @@ import {
   BreakdownType,
   TextBreakdown,
 } from "~/components/TextBreakdown";
-import { activeVerbsList } from "~/data/module06/activeVerbsList";
+import {
+  ActiveVerbDatum,
+  activeVerbsList,
+} from "~/data/module06/activeVerbsList";
 import _ from "lodash";
 import {
   Accordion,
@@ -18,6 +21,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/design/primitives/accordion";
+import { ParadigmTable } from "~/components/ParadigmTable";
+import { Text } from "@/design/components/text";
+import { Pronominal } from "~/components/Pronominal";
+import { Letter } from "~/components/Letter";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 
@@ -29,6 +36,66 @@ const tenseMap = {
   ifut: "Indefinite",
   pfv: "Perfective",
 } as const;
+
+const columnVisibility = {
+  pronounEnglish: false,
+  pronounOneida: false,
+};
+
+const verbsWithParadigms = [
+  {
+    key: "answer",
+    prefix: "t/te",
+    root: "-lihwaʔslakw",
+    stem: "C",
+  },
+  {
+    key: "beginToDoSomething",
+    prefix: "t",
+    root: "t-...-atahsawh",
+    stem: "A",
+  },
+  {
+    key: "cook",
+    root: "-khuni",
+    stem: "CC",
+  },
+  {
+    key: "doSomething",
+    prefix: "ni",
+    root: "ni-...-atyel",
+    stem: "A",
+  },
+  {
+    key: "getSelfUp",
+    root: "-atkekskw",
+    stem: "A",
+  },
+  {
+    key: "saySomething",
+    root: "atu",
+    stem: "irregular",
+  },
+  {
+    key: "goToSleep",
+    colour: "blue",
+    root: "ita",
+    stem: "I",
+  },
+  {
+    key: "getTired",
+    prefix: "te",
+    root: "te-...-hwishʌheyu",
+    stem: "C",
+  },
+  {
+    key: "work",
+    colour: "blue",
+    root: "-yoʔtʌ-",
+    stem: "C",
+  },
+] as const;
+
 
 export const meta: MetaFunction = () => {
   return [
@@ -61,6 +128,8 @@ export default function LearnModule06() {
       </TOC>
 
       <DailyActivitiesSection />
+
+      <VerbsParadigmsSection />
 
       {/* <TranslationExercisesSection group="module06" /> */}
     </Flex>
@@ -117,3 +186,71 @@ function DailyActivitiesSection() {
     </>
   );
 }
+
+function VerbsParadigmsSection() {
+  return verbsWithParadigms.map((datum) => (
+    <VerbParadigms
+      {...datum}
+      key={datum.key}
+      verbDatum={activeVerbsList.find((v) => v.key === datum.key)!}
+    />
+  ));
+}
+
+function VerbParadigms({
+  colour,
+  prefix,
+  root,
+  stem,
+  verbDatum,
+}: {
+  colour?: 'blue' | 'purple';
+  prefix?: string;
+  root: string;
+  stem: string;
+  verbDatum: ActiveVerbDatum;
+}) {
+  return (
+    <>
+      <SectionHeading id={formatVerbParadigmSectionId(verbDatum)} level={2}>
+        {root} — {verbDatum.en}
+      </SectionHeading>
+
+      <Text>
+        {stem === "irregular" ? (
+          "This word is irregular, and its conjugations depend on context."
+        ) : (
+          <>
+            This word has {stem.includes('C') ? 'a' : 'an'}{" "}
+            <Pronominal color={colour || "r"}>{stem}</Pronominal> stem
+            {prefix && (
+              <>
+                {" "}
+                with a <Letter>{prefix}</Letter> prefix
+              </>
+            )}
+            .
+          </>
+        )}
+      </Text>
+
+      <Accordion type="multiple">
+        {TENSE_LIST.map((tense) => (
+          <AccordionItem key={tense} value={tense}>
+            <AccordionTrigger>{tenseMap[tense]}</AccordionTrigger>
+            <AccordionContent>
+              <ParadigmTable
+                columnVisibility={columnVisibility}
+                data={verbDatum[tense]}
+                key={tense}
+              />
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </>
+  );
+}
+
+const formatVerbParadigmSectionId = (verbDatum: ActiveVerbDatum) =>
+  `paradigm-${_.kebabCase(verbDatum.key)}`;
