@@ -96,7 +96,6 @@ const verbsWithParadigms = [
   },
 ] as const;
 
-
 export const meta: MetaFunction = () => {
   return [
     { title: "Module 6" },
@@ -204,7 +203,7 @@ function VerbParadigms({
   stem,
   verbDatum,
 }: {
-  colour?: 'blue' | 'purple';
+  colour?: "blue" | "purple";
   prefix?: string;
   root: string;
   stem: string;
@@ -221,7 +220,7 @@ function VerbParadigms({
           "This word is irregular, and its conjugations depend on context."
         ) : (
           <>
-            This word has {stem.includes('C') ? 'a' : 'an'}{" "}
+            This word has {stem.includes("C") ? "a" : "an"}{" "}
             <Pronominal color={colour || "r"}>{stem}</Pronominal> stem
             {prefix && (
               <>

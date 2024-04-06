@@ -185,7 +185,7 @@ export const characterTenseData: TenseDatum[] = [
 
 export const mindTenseData: TenseDatum[] = [
   {
-    en: "to have a great mind, be intelligent",
+    en: "be intelligent",
     dict: [859],
     stem: "C stem with epenthetic E",
     root: ["-ʔnikuhlowanʌ-"],
@@ -196,7 +196,7 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["s", "a", "ʔnikuhlowanʌ", "hak"],
   },
   {
-    en: "to grieve, mourn",
+    en: "be grieving, mourning",
     dict: [856],
     stem: "C stem with epenthetic E",
     root: ["-ʔnikuhlaksʌ-"],
@@ -207,7 +207,7 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["s", "a", "ʔnikuhláksʌ", "hak"],
   },
   {
-    en: "to be strong-willed",
+    en: "be strong-willed",
     dict: [857],
     stem: "C stem with epenthetic E",
     root: ["-ʔnikuhlatshahniht-"],
@@ -229,7 +229,7 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["ti", "sa", "ʔnikuhliyó", "hak"],
   },
   {
-    en: "to bother",
+    en: "be bothered",
     dict: [859, 860],
     stem: 'C stem with epenthetic E with "te" prefix',
     root: [".ʔnikulhal-"],
@@ -263,7 +263,7 @@ export const mindTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
-    en: "to get drunk",
+    en: "be drunk",
     dict: [546],
     stem: "C stem",
     root: ["-nahalahtu-"],
