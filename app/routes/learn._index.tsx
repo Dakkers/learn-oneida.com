@@ -1,7 +1,7 @@
-import { Heading } from "@/design/components/heading";
+import { Flex } from "@/design/components/flex";
 import { List } from "@/design/components/list";
-import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
+import { SectionHeading } from "~/components/SectionHeading";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,13 +11,11 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Learn() {
-  const modules = [1, 2, 3, 4];
+  const modules = [1, 2, 3, 4, 5, 6];
 
   return (
-    <div>
-      <Heading level={1} variant="headlineL">
-        Learn
-      </Heading>
+    <Flex direction="column" gap={4}>
+      <SectionHeading level={1}>Learn</SectionHeading>
 
       <p>Start learning from the curriculum:</p>
       <List>
@@ -32,6 +30,6 @@ export default function Learn() {
           </List.Item>
         ))}
       </List>
-    </div>
+    </Flex>
   );
 }
