@@ -346,7 +346,7 @@ export const activeVerbsList = (
     },
     {
       key: "bathe",
-      en: "wash one's body, bathe",
+      en: "bathe, wash one's body",
     },
     {
       key: "beginToDoSomething",
@@ -448,4 +448,4 @@ export const activeVerbsList = (
       mapping[`${item.key}${key}`];
   }
   return result as TenseDatum;
-});
+}).sort((v1, v2) => v1.en.localeCompare(v2.en));
