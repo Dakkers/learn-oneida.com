@@ -12,7 +12,12 @@ import {
 } from "~/components/TextBreakdown";
 import { activeVerbsList } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/design/primitives/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/design/primitives/accordion";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 
@@ -47,11 +52,7 @@ export default function LearnModule06() {
         <TOC.Item label="Daily Activities" value="daily-activities">
           <TOC.Section>
             {activeVerbsList.map((v) => (
-              <TOC.Item
-                key={v.key}
-                label={v.en}
-                value={_.kebabCase(v.key)}
-              />
+              <TOC.Item key={v.key} label={v.en} value={_.kebabCase(v.key)} />
             ))}
           </TOC.Section>
         </TOC.Item>
@@ -66,10 +67,12 @@ export default function LearnModule06() {
   );
 }
 
-function DailyActivitiesSection () {
+function DailyActivitiesSection() {
   return (
     <>
-      <SectionHeading id='daily-activities' level={2}>Daily Activities</SectionHeading>
+      <SectionHeading id="daily-activities" level={2}>
+        Daily Activities
+      </SectionHeading>
 
       <Accordion type="multiple">
         {activeVerbsList.map((v) => (
@@ -79,26 +82,32 @@ function DailyActivitiesSection () {
               <TableWrapper
                 columns={[
                   {
-                    accessorKey: 'tense',
+                    accessorKey: "tense",
                     // @ts-expect-error To be fixed in LO-12
                     cell: (value: keyof typeof tenseMap) => tenseMap[value],
-                    header: 'Tense',
+                    header: "Tense",
                   },
                   {
                     accessorKey: "text",
                     // @ts-expect-error To be fixed in LO-12
-                    cell: (value: BreakdownArray, row: { colour: BreakdownType }) =>
+                    cell: (
+                      value: BreakdownArray,
+                      row: { colour: BreakdownType }
+                    ) => (
                       <TextBreakdown
                         breakdown={value}
                         typeFallback={row.colour}
-                      />,
-                    header: "Translation",
+                      />
+                    ),
+                    header: "",
                   },
                 ]}
                 data={TENSE_LIST.map((tense) => ({
                   colour: v[tense].type,
                   tense,
-                  text: v[tense].phrases.find((p) => p.pronoun === (tense === 'cmd' ? 'u' : 'i'))?.breakdown,
+                  text: v[tense].phrases.find(
+                    (p) => p.pronoun === (tense === "cmd" ? "u" : "i")
+                  )?.breakdown,
                 }))}
               />
             </AccordionContent>
@@ -106,5 +115,5 @@ function DailyActivitiesSection () {
         ))}
       </Accordion>
     </>
-  )
+  );
 }
