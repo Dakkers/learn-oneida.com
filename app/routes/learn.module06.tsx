@@ -118,7 +118,10 @@ export default function LearnModule06() {
 
       <TOC>
         <TOC.Item label="Introduction" value="intro" />
-        <TOC.Item label="Oneida Terms for Tenses" value="oneida-terms-for-tenses" />
+        <TOC.Item
+          label="Oneida Terms for Tenses"
+          value="oneida-terms-for-tenses"
+        />
 
         <TOC.Item label="Daily Activities" value="daily-activities">
           <TOC.Section>
@@ -131,7 +134,13 @@ export default function LearnModule06() {
         <TOC.Item label="Paradigms for Select Active Verbs" value="paradigms">
           <TOC.Section>
             {verbsWithParadigms.map((v) => (
-              <TOC.Item key={v.key} label={v.root} value={formatVerbParadigmSectionId(activeVerbsList.find((v2) => v2.key === v.key)!)} />
+              <TOC.Item
+                key={v.key}
+                label={v.root}
+                value={formatVerbParadigmSectionId(
+                  activeVerbsList.find((v2) => v2.key === v.key)!
+                )}
+              />
             ))}
           </TOC.Section>
         </TOC.Item>
@@ -140,7 +149,7 @@ export default function LearnModule06() {
       </TOC>
 
       <StativeVsActiveSection />
-      <OneidaTermsForTenses/>
+      <OneidaTermsForTenses />
       <DailyActivitiesSection />
 
       <VerbsParadigmsSection />
@@ -150,119 +159,135 @@ export default function LearnModule06() {
   );
 }
 
-function StativeVsActiveSection () {
-  const cookVerbDatum = activeVerbsList.find((v) => v.key === 'cook')!;
+function StativeVsActiveSection() {
+  const cookVerbDatum = activeVerbsList.find((v) => v.key === "cook")!;
 
   return (
     <>
-      <SectionHeading id='intro' level={2}>Introduction</SectionHeading>
+      <SectionHeading id="intro" level={2}>
+        Introduction
+      </SectionHeading>
 
       <Text>
-        <Link href="/learn/module05">Module 5</Link> covered <b>stative verbs</b> which describe the <i>state or condition of someone or something</i>. They have 5 possible tenses:
+        <Link href="/learn/module05">Module 5</Link> covered{" "}
+        <b>stative verbs</b> which describe the{" "}
+        <i>state or condition of someone or something</i>. They have 5 possible
+        tenses:
       </Text>
 
       <TableWrapper
         columns={[
-          { ...TableWrapper.englishColumn, accessorKey: 'tense' },
+          { ...TableWrapper.englishColumn, accessorKey: "tense" },
           // @ts-expect-error LO-12
-          TableWrapper.createTextBreakdownColumn('PB'),
+          TableWrapper.createTextBreakdownColumn("PB"),
           TableWrapper.englishColumn,
         ]}
         data={[
           {
             tense: "Present",
-            en: 'I am lucky',
+            en: "I am lucky",
             breakdown: [["wak"], "atlaʔswiyó"],
           },
           {
             tense: "Past",
-            en: 'I was lucky',
+            en: "I was lucky",
             breakdown: [["wak"], "atlaʔswiyo·", ["hné·", "PAST"]],
           },
           {
             tense: "Future",
-            en: 'I will be lucky',
+            en: "I will be lucky",
             breakdown: [["ʌ", "FUT"], ["wak"], "atlaʔswiyó", ["hakeʔ", "FUT"]],
           },
           {
             tense: "Conditional (Indefinite Future)",
-            en: 'I might be lucky',
-            breakdown: [["a", "IFUT"], ["·ukw"], "atlaʔswiyó", ["hakeʔ", "IFUT"]],
+            en: "I might be lucky",
+            breakdown: [
+              ["a", "IFUT"],
+              ["·ukw"],
+              "atlaʔswiyó",
+              ["hakeʔ", "IFUT"],
+            ],
           },
           {
             tense: "Command",
-            en: 'Be lucky!',
+            en: "Be lucky!",
             breakdown: [["s"], "atlaʔswiyó", ["hak", "FUT"]],
           },
         ]}
       />
 
       <Text>
-        The verbs in module 6 are <b>active verbs</b> which decribe <i>actions, events, or activities</i>. They have as many as 14 possible forms.
-        The 11 that will be covered by this curriculum are the following:
+        The verbs in module 6 are <b>active verbs</b> which decribe{" "}
+        <i>actions, events, or activities</i>. They have as many as 14 possible
+        forms. The 11 that will be covered by this curriculum are the following:
       </Text>
 
       <TableWrapper
         columns={[
-          { ...TableWrapper.englishColumn, accessorKey: 'tense' },
+          { ...TableWrapper.englishColumn, accessorKey: "tense" },
           // @ts-expect-error LO-12
-          TableWrapper.createTextBreakdownColumn('PR'),
+          TableWrapper.createTextBreakdownColumn("PR"),
           TableWrapper.englishColumn,
         ]}
         data={[
           {
             tense: "Habitual",
-            en: 'I cook',
+            en: "I cook",
             breakdown: cookVerbDatum.hab.phrases[0].breakdown,
           },
           {
             tense: "Habitual Past",
-            en: 'I used to cook',
+            en: "I used to cook",
             breakdown: [["ke"], "khu·ní", ["hahkweʔ", "PAST"]],
           },
           {
             tense: "Habitual Future",
-            en: 'I will keep on cooking',
+            en: "I will keep on cooking",
             breakdown: [["ʌ", "FUT"], ["ke"], "khu·ní", ["hekeʔ", "FUT"]],
           },
           {
-            tense: 'Definite Past',
-            en: 'I cooked',
+            tense: "Definite Past",
+            en: "I cooked",
             breakdown: cookVerbDatum.def.phrases[0].breakdown,
           },
           {
-            tense: 'Indefinite Future',
-            en: 'I might cook',
+            tense: "Indefinite Future",
+            en: "I might cook",
             breakdown: cookVerbDatum.ifut.phrases[0].breakdown,
           },
           {
-            tense: 'Definite Future',
-            en: 'I will cook',
+            tense: "Definite Future",
+            en: "I will cook",
             breakdown: cookVerbDatum.fut.phrases[0].breakdown,
           },
           {
-            tense: 'Perfective',
-            en: 'I have cooked',
-            breakdown: [["wake", 'PB'], "khuní"],
+            tense: "Perfective",
+            en: "I have cooked",
+            breakdown: [["wake", "PB"], "khuní"],
           },
           {
-            tense: 'Progressive',
-            en: 'I am going along cooking',
-            breakdown: [["wake", 'PB'], "khuni", ["háti", "PAST"]],
+            tense: "Progressive",
+            en: "I am going along cooking",
+            breakdown: [["wake", "PB"], "khuni", ["háti", "PAST"]],
           },
           {
-            tense: 'Perfective Past',
-            en: 'I had cooked',
-            breakdown: [["wake", 'PB'], "khuni·", ["hné·", "PAST"]],
+            tense: "Perfective Past",
+            en: "I had cooked",
+            breakdown: [["wake", "PB"], "khuni·", ["hné·", "PAST"]],
           },
           {
-            tense: 'Perfective Indefinite',
-            en: 'I should have cooked',
-            breakdown: [["a", "IFUT"], ["·uk", 'PB'], "khuni·", ["keʔ", "PAST"]],
+            tense: "Perfective Indefinite",
+            en: "I should have cooked",
+            breakdown: [
+              ["a", "IFUT"],
+              ["·uk", "PB"],
+              "khuni·",
+              ["keʔ", "PAST"],
+            ],
           },
           {
-            tense: 'Command',
-            en: 'Cook!',
+            tense: "Command",
+            en: "Cook!",
             breakdown: cookVerbDatum.cmd.phrases[0].breakdown,
           },
         ]}
@@ -279,35 +304,35 @@ function StativeVsActiveSection () {
         <List.Item>Command</List.Item>
       </List>
 
-      <Notice>If you are confused by the differences between these tenses, that is okay! While some of the tenses
-        may look redundant, they are used in different contexts. This will be demonstrated later.
+      <Notice>
+        If you are confused by the differences between these tenses, that is
+        okay! While some of the tenses may look redundant, they are used in
+        different contexts. This will be demonstrated later.
       </Notice>
     </>
-  )
+  );
 }
 
-function OneidaTermsForTenses () {
+function OneidaTermsForTenses() {
   return (
     <>
-      <SectionHeading id='oneida-terms-for-tenses' level={2}>
+      <SectionHeading id="oneida-terms-for-tenses" level={2}>
         Oneida Terms for Tenses
       </SectionHeading>
 
       <Text>
-        At this point in the program&lsquo;s lectures, more Oneida should be incorporated
-        to create a more immersive classroom. Below shows the Oneida terms
-        to describe the different tenses.
+        At this point in the program&lsquo;s lectures, more Oneida should be
+        incorporated to create a more immersive classroom. Below shows the
+        Oneida terms to describe the different tenses.
       </Text>
 
-      <SectionHeading level={3}>
-        It is happening
-      </SectionHeading>
+      <SectionHeading level={3}>It is happening</SectionHeading>
 
       <TableWrapper
         columns={[
-          { ...TableWrapper.englishColumn, accessorKey: 'tense' },
+          { ...TableWrapper.englishColumn, accessorKey: "tense" },
           // @ts-expect-error LO-12
-          TableWrapper.createTextBreakdownColumn('PB'),
+          TableWrapper.createTextBreakdownColumn("PB"),
           TableWrapper.englishColumn,
         ]}
         data={[
@@ -339,25 +364,23 @@ function OneidaTermsForTenses () {
           {
             breakdown: ["thó ni", ["yaw"], "ʌʔu", ["háti", "DEF"]],
             en: "That is happening now",
-            tense: ["Progressive", "Stative"]
+            tense: ["Progressive", "Stative"],
           },
           {
             breakdown: ["thó niʔy", ["a·w"], "ʌ́n"],
             en: "Let it happen",
-            tense: "Command"
+            tense: "Command",
           },
         ]}
       />
 
-      <SectionHeading level={3}>
-        That is what I am doing
-      </SectionHeading>
+      <SectionHeading level={3}>That is what I am doing</SectionHeading>
 
       <TableWrapper
         columns={[
-          { ...TableWrapper.englishColumn, accessorKey: 'tense' },
+          { ...TableWrapper.englishColumn, accessorKey: "tense" },
           // @ts-expect-error LO-12
-          TableWrapper.createTextBreakdownColumn('PR'),
+          TableWrapper.createTextBreakdownColumn("PR"),
           TableWrapper.englishColumn,
         ]}
         data={[
@@ -383,13 +406,16 @@ function OneidaTermsForTenses () {
           },
           {
             breakdown: ["thó ni", ["wak", "PB"], "atyel", ["ʌ́", "PFV"]],
-            en: ["That is what I have done", "That is what I'm doing right now"],
+            en: [
+              "That is what I have done",
+              "That is what I'm doing right now",
+            ],
             tense: "Perfective",
           },
           {
             breakdown: ["thó ni", ["wak", "PB"], "atyelʌhátiʔ"],
             en: "That is what I am going along doing right now",
-            tense: ["Progressive", "Stative"]
+            tense: ["Progressive", "Stative"],
           },
           {
             breakdown: ["thó n", ["hs"], "átyel"],
@@ -399,7 +425,7 @@ function OneidaTermsForTenses () {
         ]}
       />
     </>
-  )
+  );
 }
 
 function DailyActivitiesSection() {
@@ -456,12 +482,13 @@ function DailyActivitiesSection() {
 function VerbsParadigmsSection() {
   return (
     <>
-      <SectionHeading id='paradigms' level={2}>
+      <SectionHeading id="paradigms" level={2}>
         Paradigms for Select Active Verbs
       </SectionHeading>
 
       <Text>
-        This section covers paradigms for a select number of verbs from the previous section.
+        This section covers paradigms for a select number of verbs from the
+        previous section.
       </Text>
 
       {verbsWithParadigms.map((datum) => (
@@ -472,7 +499,7 @@ function VerbsParadigmsSection() {
         />
       ))}
     </>
-  )
+  );
 }
 
 function VerbParadigms({
