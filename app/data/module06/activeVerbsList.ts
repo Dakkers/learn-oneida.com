@@ -327,14 +327,39 @@ const mapping = {
   workPfv: workPfvData,
 } as const;
 
-export type TenseDatum = {
+export type ActiveVerbDatum = {
   cmd: ParadigmData;
   def: ParadigmData;
   en: string;
   fut: ParadigmData;
   hab: ParadigmData;
   ifut: ParadigmData;
-  key: string;
+  key:
+    | "answer"
+    | "bathe"
+    | "beginToDoSomething"
+    | "chew"
+    | "cook"
+    | "defecate"
+    | "doSomething"
+    | "getDressedUp"
+    | "getSelfUp"
+    | "getTired"
+    | "goToSleep"
+    | "hideOneself"
+    | "listen"
+    | "lookAtSomething"
+    | "openSomething"
+    | "prepareOneself"
+    | "putSomethingAway"
+    | "rest"
+    | "saySomething"
+    | "study"
+    | "tidySomethingUp"
+    | "understand"
+    | "wakeUp"
+    | "washSomething"
+    | "work";
   pfv: ParadigmData;
 };
 
@@ -443,11 +468,11 @@ export const activeVerbsList = (
   ] as const
 )
   .map((item) => {
-    const result: Partial<TenseDatum> = { ...item };
+    const result: Partial<ActiveVerbDatum> = { ...item };
     for (const key of ["Cmd", "Def", "Fut", "Hab", "Ifut", "Pfv"] as const) {
       result[key.toLowerCase() as Lowercase<typeof key>] =
         mapping[`${item.key}${key}`];
     }
-    return result as TenseDatum;
+    return result as ActiveVerbDatum;
   })
   .sort((v1, v2) => v1.en.localeCompare(v2.en));
