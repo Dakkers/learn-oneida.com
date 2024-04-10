@@ -180,8 +180,42 @@ const englishToOneidaModule05 = [
     "He used to have the same kind of body as Brad Pitt when he was young.",
   ],
 ];
+const oneidaToEnglishModule06 = [
+  ["1", "Yáh teʔwakekhuní nuʔú·waʔ, yáh náhteʔ teʔkatyélhaʔ"],
+  ["2", "Tá·t akenho·tú·, ʌhsatatewyʌnʌ·táneʔ kʌ́"],
+  ["3", "Yáh thayuníʔtayʌʔ tá·t ʌhatló·lokeʔ"],
+  ["4", "Waʔtkatohtálhoʔ né· tshahutyaʔtóhaleʔ"],
+  ["5", "Wahʌ́·luʔ kʌ́ tʌhya·túteʔ"],
+  ["6", "Waʔakyatslu·ní· né· ayukniyóʔtʌʔ átsteʔ"],
+  ["7", "Yáh tehakhlolí kanke tshihoyo·té̲·"],
+  ["8", "Wahshakotiyaʔtakénhaʔ akutinhotu·kó"],
+  ["9", "Waʔakwatkáhthoʔ né· shakoyoʔokúha tsiʔ nahútyele"],
+  ["10", "Yáh tehuwayaʔtakénhʌ latatlihunyʌ·níheʔ"],
+  ["11", "Thó naʔa·wʌ́neʔ tshiyokʌno·lʌ́"],
+  ["12", "Yáh tehonatahséhtu tshahʌníhstyá·keʔ"],
+  ["13", "Ahotinóhaleʔ kaló· tsiʔ niyo·lé nʌ· tshaʔokʌ·nóleʔ"],
+  ["14", "Satahúhsatat tsiʔ náhteʔ yu·tú·"],
+  ["15", "Knú·wehseʔ kʌs katló·loks tsiʔ wataʔklókwas"],
+];
+const englishToOneidaModule06 = [
+  ["1", "We (you and I) should wake up and get ready before noon."],
+  ["2", "Do you ever get tired of taking a bath?"],
+  ["3", "He says that she didn’t begin it."],
+  ["4", "They (females) won’t say when they studied."],
+  ["5", "It has snowed every day but it won’t happen tomorrow."],
+  ["6", "We (they & I) got tired but we didn’t sleep."],
+  ["7", "They can’t help you now, they’re taking a break."],
+  ["8", "She can’t cook now because she’s not up."],
+  ["9", "Why didn’t you open the door? Weren’t you dressed?"],
+  ["10", "They didn’t do anything when they (Ms) woke up."],
+  ["11", "You didn’t ask me, you just told me."],
+  ["12", "The dog won’t eat when it rains."],
+  ["13", "Listen you two, I want you to get up right now."],
+  ["14", "We (all of you and I) should take a break when we get tired."],
+  ["15", "I would have tidied up, but I was too tired."],
+];
 
-type Group = "module01" | "module02" | "module03" | "module05";
+type Group = "module01" | "module02" | "module03" | "module05" | "module06";
 
 function TranslationExerciseTable({
   data,
@@ -220,6 +254,8 @@ export function TranslationExercises({ group }: { group?: Group }) {
         ...englishToOneidaModule03,
         ...oneidaToEnglishModule05,
         ...englishToOneidaModule05,
+        ...oneidaToEnglishModule06,
+        ...englishToOneidaModule06,
       ].map((value, index) => [(index + 1).toString(), value[1]]);
     }
     const mapping: Record<Group, string[][]> = {
@@ -227,6 +263,7 @@ export function TranslationExercises({ group }: { group?: Group }) {
       module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
       module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
       module05: [...oneidaToEnglishModule05, ...englishToOneidaModule05],
+      module06: [...oneidaToEnglishModule06, ...englishToOneidaModule06],
     };
     return mapping[group];
   }, [group]);
