@@ -212,7 +212,7 @@ const englishToOneidaModule06 = [
   ["12", "The dog won’t eat when it rains."],
   ["13", "Listen you two, I want you to get up right now."],
   ["14", "We (all of you and I) should take a break when we get tired."],
-  ["15", "I would have tidied up, but I was too tired"],
+  ["15", "I would have tidied up, but I was too tired."],
 ];
 
 
