@@ -52,6 +52,7 @@ export default createParadigmData(
         breakdown: [["yon"], "atsluní"],
       },
     ],
+    whispered: false,
   },
   pronouns
 );

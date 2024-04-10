@@ -15,6 +15,7 @@ export default createParadigmData(
         breakdown: [["sw"], "atewyʌ́·tu"],
       },
     ],
+    whispered: false,
   },
   ["u", "u2", "yall"]
 );

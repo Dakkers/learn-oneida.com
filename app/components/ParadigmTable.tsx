@@ -42,7 +42,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/design/primitives/button";
 import { Notice } from "@/design/components/notice";
 import _ from "lodash";
-import { sanitizeIrregularCharacters } from "~/utils/words";
+import { sanitizeIrregularCharacters, whisperizeWord } from "~/utils/words";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()]))
@@ -168,6 +168,7 @@ export function ParadigmTable({
                     row={row}
                     suffix={data.suffix}
                     typeFallback={data.type}
+                    whispered={data.whispered}
                   />
                 ))}
               </TableBody>
@@ -199,10 +200,12 @@ function TableRowWrapper({
   row,
   suffix,
   typeFallback,
+  whispered = false,
 }: {
   row: Row;
   suffix?: TextBreakdownSuffix;
   typeFallback?: BreakdownType;
+  whispered?: boolean;
 }) {
   const context = React.useContext(ParadigmTableContext);
   if (!context) {
@@ -257,6 +260,7 @@ function TableRowWrapper({
                 breakdown={row.breakdown}
                 suffix={suffix}
                 typeFallback={typeFallback}
+                whispered={row.whispered ?? whispered ?? false}
               />
             ) : (
               row.phrase
@@ -325,6 +329,7 @@ export interface ParadigmData {
   suffix?: TextBreakdownSuffix;
   translation: string;
   type?: BreakdownType;
+  whispered?: boolean;
 }
 
 interface Row {
@@ -337,6 +342,7 @@ interface Row {
   >;
   phrase: string;
   pronoun: Pronoun;
+  whispered?: boolean;
 }
 
 interface ParadigmTableContextProps {
@@ -350,7 +356,7 @@ interface ParadigmTableContextProps {
 }
 
 export function createParadigmData(
-  data: Pick<ParadigmData, "translation" | "suffix" | "type"> & {
+  data: Pick<ParadigmData, "translation" | "suffix" | "type" | "whispered"> & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },
   allowedPronouns?: Pronoun[]
@@ -358,18 +364,27 @@ export function createParadigmData(
   const result = _.cloneDeep(data) as ParadigmData;
   for (let i = 0; i < result.phrases.length; i++) {
     const element = result.phrases[i];
+    const endIndex = element.breakdown.length - 1;
+    if (element.whispered ?? data.whispered ?? true) {
+      const lastPartOfBreakdown = getBreakdownTextPart(
+        getBreakdownTextPart(element.breakdown[endIndex])
+      );
+      element.breakdown[endIndex] = whisperizeWord(lastPartOfBreakdown);
+    }
+
     element.phrase = element.breakdown
-      .map((part) =>
-        typeof part === "string"
-          ? part
-          : Array.isArray(part)
-          ? part[0]
-          : part.text
-      )
+      .map((part) => getBreakdownTextPart(part))
       .join("");
+
     if (allowedPronouns) {
       element.pronoun = allowedPronouns[i];
     }
   }
+
+  result.whispered = data.whispered ?? true;
+
   return result;
 }
+
+const getBreakdownTextPart = (part: Row["breakdown"][0]) =>
+  typeof part === "string" ? part : Array.isArray(part) ? part[0] : part.text;

@@ -52,6 +52,7 @@ export default createParadigmData(
         breakdown: [["kuti"], "lihwaʔslákwas"],
       },
     ],
+    whispered: false,
   },
   pronouns
 );
