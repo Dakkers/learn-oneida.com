@@ -62,13 +62,12 @@ export function TextBreakdown({
   return (
     <Tag>
       {breakdown.map((part, i) => {
-        const isLastPart = i === breakdown.length - 1
+        const isLastPart = i === breakdown.length - 1;
         const whispered = isLastPart && !!_whispered;
 
         if (typeof part === "string") {
           const isPastTense =
-            (["kweʔ", "hkweʔ", "hné·", "hneʔ"].includes(part) &&
-              isLastPart) ||
+            (["kweʔ", "hkweʔ", "hné·", "hneʔ"].includes(part) && isLastPart) ||
             (["tshi", "tshaʔ"].includes(part) && i === 0);
           return (
             <InnerText key={i} type={isPastTense ? "PAST" : undefined}>

@@ -366,7 +366,9 @@ export function createParadigmData(
     const element = result.phrases[i];
     const endIndex = element.breakdown.length - 1;
     if (element.whispered ?? data.whispered ?? true) {
-      const lastPartOfBreakdown = getBreakdownTextPart(getBreakdownTextPart(element.breakdown[endIndex]))
+      const lastPartOfBreakdown = getBreakdownTextPart(
+        getBreakdownTextPart(element.breakdown[endIndex])
+      );
       element.breakdown[endIndex] = whisperizeWord(lastPartOfBreakdown);
     }
 
@@ -384,8 +386,5 @@ export function createParadigmData(
   return result;
 }
 
-const getBreakdownTextPart = (part: Row['breakdown'][0]) => typeof part === "string"
-  ? part
-  : Array.isArray(part)
-    ? part[0]
-    : part.text
+const getBreakdownTextPart = (part: Row["breakdown"][0]) =>
+  typeof part === "string" ? part : Array.isArray(part) ? part[0] : part.text;

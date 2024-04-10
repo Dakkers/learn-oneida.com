@@ -52,6 +52,7 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["ku"], "tewyʌ́·tuʔ"],
       },
     ],
+    whispered: false,
   },
   pronouns
 );
