@@ -7,24 +7,26 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
   }
 
   const vowels = ["a", "e", "i", "o", "u", "ʌ"];
+  const vowelsAccented = ["á", "é", "í", "ó", "ú", "ʌ́"];
   const vowelsWhispered = ["a̲", "e̲", "i̲", "o̲", "u̲", "ʌ̲"];
+  const vowelsWhisperedAccented = ["á̲","é̲","í̲","ó̲","ú̲","ʌ̲̲́"];
   const reversedIndex = word
     .split("")
     .reverse()
-    .findIndex((char) => vowels.includes(char) || char === WHISPER_CHAR);
+    .findIndex((char) => vowels.includes(char) || vowelsAccented.includes(char) || char === WHISPER_CHAR);
   const index = word.length - reversedIndex - 1;
   const char = word.charAt(index);
 
   if (shouldWhisper) {
-    if (vowelsWhispered.includes(char)) {
+    if (vowelsWhispered.includes(char) || vowelsWhisperedAccented.includes(char)) {
       return word;
     }
-    const lookupIndex = vowels.indexOf(char);
+    const lookupIndex = Math.max(vowels.indexOf(char), vowelsAccented.indexOf(char));
     const result = word.split("");
     result[index] = vowelsWhispered[lookupIndex];
     return result.join("");
   } else {
-    return word.replace(WHISPER_REGEX, "");
+    return word.replace(WHISPER_REGEX, ""); a̲
   }
 }
 

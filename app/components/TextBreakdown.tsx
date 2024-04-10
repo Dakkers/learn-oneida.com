@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { arrayify } from "~/utils";
+import { whisperizeWord } from "~/utils/words";
 
 export type BreakdownType =
   | "DEF"
@@ -45,12 +46,14 @@ export function TextBreakdown({
   prefix,
   suffix,
   typeFallback,
+  whispered: _whispered = false,
 }: {
   as?: "span" | "div";
   breakdown: BreakdownArray;
   prefix?: BreakdownType;
   suffix?: TextBreakdownSuffix;
   typeFallback?: BreakdownType;
+  whispered?: boolean;
 }) {
   const breakdown = getPrefixArr(prefix)
     .concat(_breakdown)
@@ -59,14 +62,17 @@ export function TextBreakdown({
   return (
     <Tag>
       {breakdown.map((part, i) => {
+        const isLastPart = i === breakdown.length - 1
+        const whispered = isLastPart && !!_whispered;
+
         if (typeof part === "string") {
           const isPastTense =
             (["kweʔ", "hkweʔ", "hné·", "hneʔ"].includes(part) &&
-              i === breakdown.length - 1) ||
+              isLastPart) ||
             (["tshi", "tshaʔ"].includes(part) && i === 0);
           return (
             <InnerText key={i} type={isPastTense ? "PAST" : undefined}>
-              {part}
+              {whispered ? whisperizeWord(part) : part}
             </InnerText>
           );
         }
@@ -79,7 +85,7 @@ export function TextBreakdown({
         return (
           <InnerText key={i} type={type ?? typeFallback}>
             {hasLeadingWhitespace ? "&nbsp" : ""}
-            {text}
+            {whispered ? whisperizeWord(text) : text}
             {hasTrailingWhitespace ? "&nbsp" : ""}
           </InnerText>
         );
