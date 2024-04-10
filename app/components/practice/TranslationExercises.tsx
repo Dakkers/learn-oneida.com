@@ -215,7 +215,6 @@ const englishToOneidaModule06 = [
   ["15", "I would have tidied up, but I was too tired."],
 ];
 
-
 type Group = "module01" | "module02" | "module03" | "module05" | "module06";
 
 function TranslationExerciseTable({

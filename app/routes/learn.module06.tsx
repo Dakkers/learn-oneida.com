@@ -27,7 +27,7 @@ import { Pronominal } from "~/components/Pronominal";
 import { Letter } from "~/components/Letter";
 import { Link } from "@/design/primitives/link";
 import { List } from "@/design/components/list";
-import  { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
+import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 
