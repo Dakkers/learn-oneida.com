@@ -56,6 +56,10 @@ export default function Practice() {
       href: "/stative-tense-identification",
       label: "Tense Identification (Stative Verbs)",
     },
+    {
+      href: "/verb-lists",
+      label: "Verb Lists",
+    },
   ];
 
   return (

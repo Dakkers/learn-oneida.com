@@ -329,7 +329,12 @@ function VerbSection({ data, title }: { data: TenseDatum[]; title: string }) {
         Verbs — {title}
       </SectionHeading>
       {data.map((d, i) => (
-        <VerbSectionItem {...d} key={i} id="" typeFallback={d.type ?? "PB"} />
+        <VerbSectionItem
+          {...d}
+          key={d.key}
+          id=""
+          typeFallback={d.type ?? "PB"}
+        />
       ))}
     </>
   );
