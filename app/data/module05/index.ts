@@ -957,11 +957,11 @@ export const miscTenseData: TenseDatum[] = [
     dict: [157],
     stem: "te- + A stem",
     root: [".atekhahsyu-"],
-    present: ["te", "yuky", "atekháhsyu"],
-    past: ["te", "yuky", "atekhahsyu·", "hnéʔ"],
-    fut: ["t", "ʌ", "yuky", "atekhahsyú", "hakeʔ"],
-    ifut: ["t", "a", "yuky", "atekhahsyú", "hakeʔ"],
-    cmd: ["te", "tsy", "atekhahsyú", "hak"],
+    present: ["te", "yukni", "atekháhsyu"],
+    past: ["te", "yukni", "atekhahsyu·", "hnéʔ"],
+    fut: ["t", "ʌ", "yukni", "atekhahsyú", "hakeʔ"],
+    ifut: ["t", "a", "yukni", "atekhahsyú", "hakeʔ"],
+    cmd: ["te", "sni", "atekhahsyú", "hak"],
   },
 ];
 
