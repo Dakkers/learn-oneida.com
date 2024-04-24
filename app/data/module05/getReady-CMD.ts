@@ -2,17 +2,17 @@ import { createParadigmData } from "~/components/ParadigmTable";
 
 export default createParadigmData(
   {
-    translation: "VERB!",
+    translation: "Get ready!",
     type: "PB",
     phrases: [
       {
-        breakdown: [["sa"], "ROOT", ["hak", "FUT"]],
+        breakdown: [["s"], "atatewyʌnʌta’ú", ["hak", "FUT"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["hak", "FUT"]],
+        breakdown: [["tsy"], "atatewyʌnʌta’ú", ["hak", "FUT"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["hak", "FUT"]],
+        breakdown: [["sw"], "atatewyʌnʌta’", ["hak", "FUT"]],
       },
     ],
   },
