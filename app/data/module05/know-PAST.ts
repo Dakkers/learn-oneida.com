@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["wak"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["hs"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["hs"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["ho"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["ho"], "núhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yako"], "núhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yo"], "núhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yuky"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yuky"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["tsy"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["tsy"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["hon"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["hon"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yon"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukw"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukw"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sw"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["sw"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["hon"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["hon"], "anúhte", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yon"], "anúhte", ["hkweʔ", "PAST"]],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT"],
+        breakdown: [["wák"], "yʌ"],
       },
       {
-        breakdown: [["sa"], "ROOT"],
+        breakdown: [["sá"], "yʌ"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [["ló"], "yʌ"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yakó"], "yʌ"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["yó"], "yʌ"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukní"], "yʌ"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukní"], "yʌ"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["sní"], "yʌ"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["lotí"], "yʌ"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yotí"], "yʌ"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwá"], "yʌ"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwá"], "yʌ"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["swá"], "yʌ"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["lotí"], "yʌ"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yotí"], "yʌ"],
       },
     ],
   },

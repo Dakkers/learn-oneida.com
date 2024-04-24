@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], ["e", "EP"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["wak"], ["e", "EP"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["sa"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["lo"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yako"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yo"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukni"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukni"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["sni"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["loti"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yoti"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukwa"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukwa"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["swa"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["loti"], "nyaku", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yoti"], "nyaku", ["hné·", "PAST"]],
       },
     ],
   },

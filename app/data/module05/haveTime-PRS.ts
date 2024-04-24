@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT"],
+        breakdown: [["wak"], "náktote’"],
       },
       {
-        breakdown: [["sa"], "ROOT"],
+        breakdown: [["sa"], "náktote’"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [["lo"], "náktote’"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yako"], "náktote’"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["yo"], "náktote’"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukni"], "náktote’"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukni"], "náktote’"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["sni"], "náktote’"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["loti"], "náktote’"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yoti"], "náktote’"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwa"], "náktote’"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwa"], "náktote’"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["swa"], "náktote’"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["loti"], "náktote’"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yoti"], "náktote’"],
       },
     ],
   },

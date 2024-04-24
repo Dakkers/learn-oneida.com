@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["k"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["hs"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["hs"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["l"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["l"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yu"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yu"], "tatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["w"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["w"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["ty"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["ty"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yaky"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yaky"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["tsy"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["tsy"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["hy"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["hy"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["ky"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["ky"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["tw"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["tw"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yakw"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yakw"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sw"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["sw"], "atatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lu"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["lu"], "tatwʌniyo·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["ku"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["ku"], "tatwʌniyo·", ["hné·", "PAST"]],
       },
     ],
   },

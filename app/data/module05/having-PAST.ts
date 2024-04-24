@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["wak"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["sa"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["lo"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yako"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yo"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yukni"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yukni"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["sni"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["loti"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yoti"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yukwa"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yukwa"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["swa"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["loti"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yoti"], "yʌ·t", ["á","JOIN"], ["hkweʔ", "PAST"]],
       },
     ],
   },
