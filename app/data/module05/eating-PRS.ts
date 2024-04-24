@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT"],
+        breakdown: [["wak"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: [["hs"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["ho"], "ROOT"],
+        breakdown: [["ho"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yako"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["yo"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["yuky"], "ROOT"],
+        breakdown: [["yuky"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["yuky"], "ROOT"],
+        breakdown: [["yuky"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: [["tsy"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["hon"], "ROOT"],
+        breakdown: [["hon"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["yon"], "ROOT"],
+        breakdown: [["yon"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["yukw"], "ROOT"],
+        breakdown: [["yukw"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["yukw"], "ROOT"],
+        breakdown: [["yukw"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: [["sw"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["hon"], "ROOT"],
+        breakdown: [["hon"], ["ate", "SRFL"], "khuní"],
       },
       {
-        breakdown: [["yon"], "ROOT"],
+        breakdown: [["yon"], ["ate", "SRFL"], "khuní"],
       },
     ],
   },

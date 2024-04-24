@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "ROOT"],
+        breakdown: [["te", "DU"], ["wak"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "ROOT"],
+        breakdown: [["te", "DU"], ["hsa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "ROOT"],
+        breakdown: [["te", "DU"], ["lo"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "ROOT"],
+        breakdown: [["te", "DU"], ["yako"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "ROOT"],
+        breakdown: [["te", "DU"], ["yo"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukni"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukni"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "ROOT"],
+        breakdown: [["te", "DU"], ["sni"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["loti"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["yoti"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukwa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukwa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "ROOT"],
+        breakdown: [["te", "DU"], ["swa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["loti"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["yoti"], "hwishʌheyú"],
       },
     ],
   },

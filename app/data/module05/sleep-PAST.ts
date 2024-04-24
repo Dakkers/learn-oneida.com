@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["wak"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["sa"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["lo"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yako"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yo"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yukni"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yukni"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["sni"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["loti"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yoti"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yukwa"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yukwa"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["swa"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["loti"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yoti"], "itá·s", ["kweʔ", "PAST"]],
       },
     ],
   },

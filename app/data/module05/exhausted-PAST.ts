@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["wak"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["hsa"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["lo"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["yako"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["yo"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["yukni"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["yukni"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["sni"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["loti"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["yoti"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["yukwa"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["yukwa"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["swa"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["loti"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["te", "DU"], ["yoti"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
     ],
   },

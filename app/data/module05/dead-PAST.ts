@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["wak"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["s"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["law"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yakaw"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yaw"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukn"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukn"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["sn"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["lon"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yon"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukw"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukw"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["sw"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["lon"], "iheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yon"], "iheyu·", ["hné·", "PAST"]],
       },
     ],
   },

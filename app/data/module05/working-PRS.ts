@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT"],
+        breakdown: [["wak"], "yo·té·"],
       },
       {
-        breakdown: [["sa"], "ROOT"],
+        breakdown: [["sa"], "yo·té·"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [["lo"], "yo·té·"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yako"], "yo·té·"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["yo"], "yo·té·"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukni"], "yo·té·"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukni"], "yo·té·"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["sni"], "yo·té·"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["loti"], "yo·té·"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yoti"], "yo·té·"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwa"], "yo·té·"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwa"], "yo·té·"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["swa"], "yo·té·"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["loti"], "yo·té·"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yoti"], "yo·té·"],
       },
     ],
   },

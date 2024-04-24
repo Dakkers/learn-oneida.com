@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["a·", "IFUT"], ["uk"], ["e", "EP"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a·", "IFUT"], ["uk"], ["e", "EP"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hs"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ho"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["ho"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yako"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yako"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yo"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yo"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukni"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukni"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["sni"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["sni"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hoti"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yoti"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukwa"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukwa"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["swa"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["swa"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hoti"], "lha·l", ["ákeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yoti"], "lha·l", ["ákeʔ", "IFUT"]],
       },
     ],
   },
