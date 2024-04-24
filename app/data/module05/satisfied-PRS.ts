@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], ["e", "EP"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["wak"], ["e", "EP"], "ROOT"],
       },
       {
-        breakdown: [["sa"], "ROOT"],
+        breakdown: [ ["ti", "CIS"],["sa"], "ROOT"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["lo"], "ROOT"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["yako"], "ROOT"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["yo"], "ROOT"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["yukni"], "ROOT"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["yukni"], "ROOT"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [ ["ti", "CIS"],["sni"], "ROOT"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["loti"], "ROOT"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["yoti"], "ROOT"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["yukwa"], "ROOT"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["yukwa"], "ROOT"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [ ["ti", "CIS"],["swa"], "ROOT"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["loti"], "ROOT"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [ ["t", "CIS"],["yoti"], "ROOT"],
       },
     ],
   },
