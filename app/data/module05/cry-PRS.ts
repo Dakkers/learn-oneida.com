@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "ROOT"],
+        breakdown: [["te", "DU"], ["k"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "ROOT"],
+        breakdown: [["te", "DU"], ["hs"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "ROOT"],
+        breakdown: [["te", "DU"], ["l"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "ROOT"],
+        breakdown: [["te", "DU"], ["yu"], "shʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "ROOT"],
+        breakdown: [["te", "DU"], ["w"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["ty"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["yaky"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "ROOT"],
+        breakdown: [["te", "DU"], ["tsy"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["hy"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["ky"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["tw"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["yakw"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "ROOT"],
+        breakdown: [["te", "DU"], ["sw"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["lu"], "shʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["ku"], "shʌ́thos"],
       },
     ],
   },
