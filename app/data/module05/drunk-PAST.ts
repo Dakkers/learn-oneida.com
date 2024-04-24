@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["wak"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["sa"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["lo"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["yako"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["yo"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["yukni"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["yukni"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["sni"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["loti"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["yoti"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["yukwa"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["yukwa"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["swa"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["loti"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["neʔ", "PAST"]],
+        breakdown: [["yoti"], "nahalahtu'ú·", ["neʔ", "PAST"]],
       },
     ],
   },

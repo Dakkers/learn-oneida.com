@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["t", "CIS"], ["wak"], ["e", "EP"], "ROOT"],
+        breakdown: [["t", "CIS"], ["wak"], ["e", "EP"], "’nikuhliyó"],
       },
       {
-        breakdown: [["ti", "CIS"], ["sa"], "ROOT"],
+        breakdown: [["ti", "CIS"], ["sa"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["lo"], "ROOT"],
+        breakdown: [["t", "CIS"], ["lo"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yako"], "ROOT"],
+        breakdown: [["t", "CIS"], ["yako"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yo"], "ROOT"],
+        breakdown: [["t", "CIS"], ["yo"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yukni"], "ROOT"],
+        breakdown: [["t", "CIS"], ["yukni"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yukni"], "ROOT"],
+        breakdown: [["t", "CIS"], ["yukni"], "’nikuhliyó"],
       },
       {
-        breakdown: [["ti", "CIS"], ["sni"], "ROOT"],
+        breakdown: [["ti", "CIS"], ["sni"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["loti"], "ROOT"],
+        breakdown: [["t", "CIS"], ["loti"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yoti"], "ROOT"],
+        breakdown: [["t", "CIS"], ["yoti"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yukwa"], "ROOT"],
+        breakdown: [["t", "CIS"], ["yukwa"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yukwa"], "ROOT"],
+        breakdown: [["t", "CIS"], ["yukwa"], "’nikuhliyó"],
       },
       {
-        breakdown: [["ti", "CIS"], ["swa"], "ROOT"],
+        breakdown: [["ti", "CIS"], ["swa"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["loti"], "ROOT"],
+        breakdown: [["t", "CIS"], ["loti"], "’nikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yoti"], "ROOT"],
+        breakdown: [["t", "CIS"], ["yoti"], "’nikuhliyó"],
       },
     ],
   },

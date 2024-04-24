@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["k"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["hs"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["l"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["l"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["yu"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["w"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["ty"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["yaky"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["tsy"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["hy"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["ky"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["tw"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["yakw"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["sw"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["lu"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["lu"], "á·s", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["ku"], "á·s", ["hakeʔ", "FUT"]],
       },
     ],
   },

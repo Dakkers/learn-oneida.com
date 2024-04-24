@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["k"], "á·"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["hs"], "á·"],
       },
       {
-        breakdown: [["l"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["l"], "á·"],
       },
       {
-        breakdown: [["yu"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["yu"], "á·"],
       },
       {
-        breakdown: [["w"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["w"], "á·"],
       },
       {
-        breakdown: [["ty"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["ty"], "á·"],
       },
       {
-        breakdown: [["yaky"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["yaky"], "á·"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["tsy"], "á·"],
       },
       {
-        breakdown: [["hy"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["hy"], "á·"],
       },
       {
-        breakdown: [["ky"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["ky"], "á·"],
       },
       {
-        breakdown: [["tw"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["tw"], "á·"],
       },
       {
-        breakdown: [["yakw"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["yakw"], "á·"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["sw"], "á·"],
       },
       {
-        breakdown: [["lu"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["lu"], "á·"],
       },
       {
-        breakdown: [["ku"], "ROOT"],
+        breakdown: ["kʌʔ ni", ["ku"], "á·"],
       },
     ],
   },

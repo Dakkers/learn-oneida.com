@@ -1683,8 +1683,8 @@ export type Module5VerbDatum = {
   key: string;
 };
 
-
-export const module5VerbsList_BUT_BETTER = [
+export function createModule5VerbsList (shouldSort = false) {
+  const result =  [
   ...characterTenseData,
   ...bodyTenseData,
   ...mindTenseData,
@@ -1700,4 +1700,9 @@ export const module5VerbsList_BUT_BETTER = [
     }
     return result as unknown as Module5VerbDatum;
   })
-  .sort((v1, v2) => v1.en.localeCompare(v2.en));
+
+  if (shouldSort) {
+    result.sort((v1, v2) => v1.en.localeCompare(v2.en));
+  }
+  return result;
+}

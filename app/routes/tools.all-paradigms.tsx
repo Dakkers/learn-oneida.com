@@ -7,10 +7,8 @@ import { Fragment, useState } from "react";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "~/components/SectionHeading";
 import { TextBreakdown } from "~/components/TextBreakdown";
-import { Module5VerbDatum, TenseDatum, module5VerbsList_BUT_BETTER } from "~/data/module05";
+import { Module5VerbDatum, createModule5VerbsList } from "~/data/module05";
 import { activeVerbsList } from "~/data/module06/activeVerbsList";
-
-console.log(module5VerbsList_BUT_BETTER);
 
 export const meta: MetaFunction = () => {
   return [
@@ -94,6 +92,8 @@ function Module6Paradigms() {
 }
 
 function Module5ParadigmsAsIs() {
+  const data = createModule5VerbsList();
+
   return (
     <TableWrapper
       columns={[
@@ -132,7 +132,7 @@ function Module5ParadigmsAsIs() {
           header: ''
         },
       ]}
-      data={module5VerbsList_BUT_BETTER}
+      data={data}
     />
   )
 

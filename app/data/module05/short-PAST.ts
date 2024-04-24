@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["k"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["s"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["s"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["la"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["la"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["ye"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["ye"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["ka"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["ka"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["tni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["tni"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yakni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["yakni"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["sni"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["ni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["ni"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["kni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["kni"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["twa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["twa"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yakwa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["yakwa"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["swa"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["lati"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["lati"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["kuti"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: ["kʌ’ ni", ["kuti"], "hnʌyésu·", ["neʔ", "PAST"]],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["k"], "hnʌyésha"],
       },
       {
-        breakdown: [["s"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["s"], "hnʌyésha"],
       },
       {
-        breakdown: [["la"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["la"], "hnʌyésha"],
       },
       {
-        breakdown: [["ye"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["ye"], "hnʌyésha"],
       },
       {
-        breakdown: [["ka"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["ka"], "hnʌyésha"],
       },
       {
-        breakdown: [["tni"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["tni"], "hnʌyésha"],
       },
       {
-        breakdown: [["yakni"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["yakni"], "hnʌyésha"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["sni"], "hnʌyésha"],
       },
       {
-        breakdown: [["ni"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["ni"], "hnʌyésha"],
       },
       {
-        breakdown: [["kni"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["kni"], "hnʌyésha"],
       },
       {
-        breakdown: [["twa"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["twa"], "hnʌyésha"],
       },
       {
-        breakdown: [["yakwa"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["yakwa"], "hnʌyésha"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["swa"], "hnʌyésha"],
       },
       {
-        breakdown: [["lati"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["lati"], "hnʌyésha"],
       },
       {
-        breakdown: [["kuti"], "ROOT"],
+        breakdown: ["kʌ’ ni", ["kuti"], "hnʌyésha"],
       },
     ],
   },
