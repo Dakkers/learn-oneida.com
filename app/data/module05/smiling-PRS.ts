@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT"],
+        breakdown: [["wak"], "yéshuhe’"],
       },
       {
-        breakdown: [["sa"], "ROOT"],
+        breakdown: [["sa"], "yéshuhe’"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [["lo"], "yéshuhe’"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yako"], "yéshuhe’"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["yo"], "yéshuhe’"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukni"], "yéshuhe’"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukni"], "yéshuhe’"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["sni"], "yéshuhe’"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["loti"], "yéshuhe’"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yoti"], "yéshuhe’"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwa"], "yéshuhe’"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwa"], "yéshuhe’"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["swa"], "yéshuhe’"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["loti"], "yéshuhe’"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yoti"], "yéshuhe’"],
       },
     ],
   },

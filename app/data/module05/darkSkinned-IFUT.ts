@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["t", "DU"], ["a·", "IFUT"], ["uk"], ["e", "EP"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a·", "IFUT"], ["uk"], ["e", "EP"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["hs"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["hs"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["ho"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["ho"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yako"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["yako"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yo"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["yo"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukni"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["yukni"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukni"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["yukni"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["sni"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["sni"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["hoti"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["hoti"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yoti"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["yoti"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukwa"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["yukwa"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukwa"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["yukwa"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["swa"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["swa"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["hoti"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["hoti"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yoti"], "ROOT", ["hekeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["u", "IFUT"], ["t","CIS"], ["a", "IFUT"], ["yoti"], "hná·kalah", ["hekeʔ", "IFUT"]],
       },
     ],
   },

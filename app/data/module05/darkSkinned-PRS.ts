@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], ["e", "EP"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["wak"], ["e", "EP"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "ROOT"],
+        breakdown: [["te", "DU"], ["ti", "CIS"], ["hsa"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["ho"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yako"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yo"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yukni"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yukni"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "ROOT"],
+        breakdown: [["te", "DU"], ["ti", "CIS"], ["sni"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["hoti"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yoti"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yukwa"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yukwa"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "ROOT"],
+        breakdown: [["te", "DU"], ["ti", "CIS"], ["swa"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["hoti"], "hná·kalahse’"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yoti"], "hná·kalahse’"],
       },
     ],
   },

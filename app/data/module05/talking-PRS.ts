@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], ["e", "EP"], "ROOT"],
+        breakdown: [["wak"], ["é", "EP"], "thaleʔ"],
       },
       {
-        breakdown: [["sa"], "ROOT"],
+        breakdown: [["sá"], "thaleʔ"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [["ló"], "thaleʔ"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yakó"], "thaleʔ"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["yó"], "thaleʔ"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukní"], "thaleʔ"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yukní"], "thaleʔ"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["sní"], "thaleʔ"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["lotí"], "thaleʔ"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yotí"], "thaleʔ"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwá"], "thaleʔ"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukwá"], "thaleʔ"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["swá"], "thaleʔ"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["lotí"], "thaleʔ"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yotí"], "thaleʔ"],
       },
     ],
   },

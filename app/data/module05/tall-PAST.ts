@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["k"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["s"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["s"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["la"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["la"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ye"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ye"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ka"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ka"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["tni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["tni"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yakni"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["sni"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ni"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["kni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["kni"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["twa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["twa"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakwa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yakwa"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["swa"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lati"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["lati"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["kuti"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["kuti"], "hnʌ·yés", ["kweʔ", "PAST"]],
       },
     ],
   },

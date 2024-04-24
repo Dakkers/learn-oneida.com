@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], ["e", "EP"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["k"], ["e", "EP"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["s"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["s"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["la"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["la"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["ye"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ye"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["ka"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ka"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["tni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["tni"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yakni"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["sni"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["ni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ni"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["kni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["kni"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["twa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["twa"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakwa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yakwa"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["swa"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["lati"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["lati"], "shátste", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["kuti"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["kuti"], "shátste", ["hkweʔ", "PAST"]],
       },
     ],
   },

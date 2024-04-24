@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: [["k"], "wístohseʔ"],
       },
       {
-        breakdown: [["s"], "ROOT"],
+        breakdown: [["s"], "wístohseʔ"],
       },
       {
-        breakdown: [["la"], "ROOT"],
+        breakdown: [["la"], "wístohseʔ"],
       },
       {
-        breakdown: [["ye"], "ROOT"],
+        breakdown: [["ye"], "wístohseʔ"],
       },
       {
-        breakdown: [["ka"], "ROOT"],
+        breakdown: [["ka"], "wístohseʔ"],
       },
       {
-        breakdown: [["tni"], "ROOT"],
+        breakdown: [["tni"], "wístohseʔ"],
       },
       {
-        breakdown: [["yakni"], "ROOT"],
+        breakdown: [["yakni"], "wístohseʔ"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["sni"], "wístohseʔ"],
       },
       {
-        breakdown: [["ni"], "ROOT"],
+        breakdown: [["ni"], "wístohseʔ"],
       },
       {
-        breakdown: [["kni"], "ROOT"],
+        breakdown: [["kni"], "wístohseʔ"],
       },
       {
-        breakdown: [["twa"], "ROOT"],
+        breakdown: [["twa"], "wístohseʔ"],
       },
       {
-        breakdown: [["yakwa"], "ROOT"],
+        breakdown: [["yakwa"], "wístohseʔ"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["swa"], "wístohseʔ"],
       },
       {
-        breakdown: [["lati"], "ROOT"],
+        breakdown: [["lati"], "wístohseʔ"],
       },
       {
-        breakdown: [["kuti"], "ROOT"],
+        breakdown: [["kuti"], "wístohseʔ"],
       },
     ],
   },

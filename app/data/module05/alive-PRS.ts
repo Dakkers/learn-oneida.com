@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: [["k"], "únheʔ"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: [["hs"], "únheʔ"],
       },
       {
-        breakdown: [["h"], "ROOT"],
+        breakdown: [["h"], "únheʔ"],
       },
       {
-        breakdown: [["yak"], "ROOT"],
+        breakdown: [["yak"], "únheʔ"],
       },
       {
-        breakdown: [["y"], "ROOT"],
+        breakdown: [["y"], "únheʔ"],
       },
       {
-        breakdown: [["tn"], "ROOT"],
+        breakdown: [["tn"], "únheʔ"],
       },
       {
-        breakdown: [["yakn"], "ROOT"],
+        breakdown: [["yakn"], "únheʔ"],
       },
       {
-        breakdown: [["sn"], "ROOT"],
+        breakdown: [["sn"], "únheʔ"],
       },
       {
-        breakdown: [["hn"], "ROOT"],
+        breakdown: [["hn"], "únheʔ"],
       },
       {
-        breakdown: [["kn"], "ROOT"],
+        breakdown: [["kn"], "únheʔ"],
       },
       {
-        breakdown: [["ty"], "ROOT"],
+        breakdown: [["ty"], "únheʔ"],
       },
       {
-        breakdown: [["yaky"], "ROOT"],
+        breakdown: [["yaky"], "únheʔ"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: [["tsy"], "únheʔ"],
       },
       {
-        breakdown: [["hʌn"], "ROOT"],
+        breakdown: [["hʌn"], "únheʔ"],
       },
       {
-        breakdown: [["kun"], "ROOT"],
+        breakdown: [["kun"], "únheʔ"],
       },
     ],
   },

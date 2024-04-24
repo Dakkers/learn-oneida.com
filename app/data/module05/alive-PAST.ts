@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["k"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["hs"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["hs"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["h"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["h"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yak"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yak"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["y"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["y"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["tn"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["tn"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakn"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yakn"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sn"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["sn"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["hn"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["hn"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["kn"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["kn"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["ty"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ty"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yaky"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yaky"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["tsy"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["tsy"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["hʌn"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["hʌn"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["kun"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["kun"], "únhe", ["hkweʔ", "PAST"]],
       },
     ],
   },

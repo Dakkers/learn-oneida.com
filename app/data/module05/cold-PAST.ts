@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["k"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["s"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["s"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["la"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["la"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ye"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ye"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ka"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ka"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["tni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["tni"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yakni"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["sni"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ni"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["kni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["kni"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["twa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["twa"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakwa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yakwa"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["swa"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lati"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["lati"], "wístohs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["kuti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["kuti"], "wístohs", ["kweʔ", "PAST"]],
       },
     ],
   },

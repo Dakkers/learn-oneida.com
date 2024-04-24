@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["wak"], ["e", "EP"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["wak"], ["e", "EP"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["hs"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["hs"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["ho"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["ho"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yako"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["yako"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yo"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["yo"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukni"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["yukni"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukni"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["yukni"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["sni"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["sni"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["hoti"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["hoti"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yoti"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["yoti"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukwa"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["yukwa"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukwa"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["yukwa"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["swa"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["swa"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["hoti"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["hoti"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yoti"], "ROOT", ["ekeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["t","CIS"], ["yoti"], "hná·kalah", ["ekeʔ", "FUT"]],
       },
     ],
   },

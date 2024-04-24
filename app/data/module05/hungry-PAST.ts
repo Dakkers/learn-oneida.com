@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["k"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["hs"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["hs"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["l"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["l"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yu"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yu"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["w"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["w"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ty"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ty"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yaky"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yaky"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["tsy"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["tsy"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["hy"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["hy"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ky"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ky"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["tw"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["tw"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakw"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yakw"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sw"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["sw"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lu"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["lu"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ku"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ku"], "atuhkálya’ks", ["kweʔ", "PAST"]],
       },
     ],
   },
