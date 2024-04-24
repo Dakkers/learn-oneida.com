@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "ROOT"],
+        breakdown: [["te", "DU"], ["k"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "ROOT"],
+        breakdown: [["te", "DU"], ["hs"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "ROOT"],
+        breakdown: [["te", "DU"], ["h"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "ROOT"],
+        breakdown: [["te", "DU"], ["yak"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "ROOT"],
+        breakdown: [["te", "DU"], ["y"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["tn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["yakn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "ROOT"],
+        breakdown: [["te", "DU"], ["sn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["hn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["kn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["ty"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["yaky"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "ROOT"],
+        breakdown: [["te", "DU"], ["tsy"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["hʌn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["kun"], "anahalawʌlyé"],
       },
     ],
   },

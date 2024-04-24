@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], ["e", "EP"], "ROOT"],
+        breakdown: [["te", "DU"], ["wak"], ["e", "EP"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "ROOT"],
+        breakdown: [["te", "DU"], ["hsa"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "ROOT"],
+        breakdown: [["te", "DU"], ["lo"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "ROOT"],
+        breakdown: [["te", "DU"], ["yako"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "ROOT"],
+        breakdown: [["te", "DU"], ["yo"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukni"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukni"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "ROOT"],
+        breakdown: [["te", "DU"], ["sni"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["loti"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["yoti"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukwa"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukwa"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "ROOT"],
+        breakdown: [["te", "DU"], ["swa"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["loti"], "a’nikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["yoti"], "a’nikuhlyá·ku"],
       },
     ],
   },
