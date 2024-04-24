@@ -16,7 +16,13 @@ export default createParadigmData(
         breakdown: ["yáh te", ["hl"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh teʔ", ["yak"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          "yáh teʔ",
+          ["yak"],
+          "élh",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
         breakdown: ["yáh teʔ", ["w"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
@@ -25,7 +31,13 @@ export default createParadigmData(
         breakdown: ["yáh teʔ", ["tn"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh teʔ", ["yakn"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          "yáh teʔ",
+          ["yakn"],
+          "élh",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
         breakdown: ["yáh teʔ", ["sn"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
@@ -40,16 +52,34 @@ export default createParadigmData(
         breakdown: ["yáh teʔ", ["tw"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh teʔ", ["yakw"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          "yáh teʔ",
+          ["yakw"],
+          "élh",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
         breakdown: ["yáh te", ["sw"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh te", ["lʌ·n"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          "yáh te",
+          ["lʌ·n"],
+          "élh",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["yáh te", ["ku·n"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          "yáh te",
+          ["ku·n"],
+          "élh",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
     ],
   },

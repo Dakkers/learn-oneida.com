@@ -27,21 +27,19 @@ const tenseMap = {
 } as const;
 
 export default function ToolsAllParadigms() {
-  const [module, setModule] = useState('m6');
+  const [module, setModule] = useState("m6");
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   return (
     <Flex direction="column" gap={4}>
       <div className="print:hidden">
-        <SectionHeading level={1}>
-          All Paradigms
-        </SectionHeading>
+        <SectionHeading level={1}>All Paradigms</SectionHeading>
 
-        <Flex align='end' gap={4}>
+        <Flex align="end" gap={4}>
           <Select
             label="Module"
             onChange={setModule}
-            options={[{ label: 'Module 6', value: 'm6' }]}
+            options={[{ label: "Module 6", value: "m6" }]}
             value={module}
           />
           <Button disabled={!module} onClick={() => setHasSubmitted(true)}>
@@ -50,14 +48,12 @@ export default function ToolsAllParadigms() {
         </Flex>
       </div>
 
-      {hasSubmitted && (
-        <Module6Paradigms />
-      )}
+      {hasSubmitted && <Module6Paradigms />}
     </Flex>
   );
 }
 
-function Module6Paradigms () {
+function Module6Paradigms() {
   return (
     <>
       {activeVerbsList.map((v) => (
@@ -69,7 +65,7 @@ function Module6Paradigms () {
                 {v.en} — {tenseMap[t]}
               </SectionHeading>
 
-              <div style={{ pageBreakAfter: 'always' }}>
+              <div style={{ pageBreakAfter: "always" }}>
                 <ParadigmTable
                   columnVisibility={{
                     pronounOneida: true,
@@ -83,7 +79,6 @@ function Module6Paradigms () {
           ))}
         </Fragment>
       ))}
-
     </>
-  )
+  );
 }

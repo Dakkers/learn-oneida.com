@@ -359,12 +359,19 @@ export function createParadigmData(
     const endIndex = element.breakdown.length - 1;
     if (element.whispered ?? data.whispered ?? true) {
       const lastElement = element.breakdown[endIndex];
-      const lastPartOfBreakdown = getBreakdownTextPart(getBreakdownTextPart(lastElement));
+      const lastPartOfBreakdown = getBreakdownTextPart(
+        getBreakdownTextPart(lastElement)
+      );
       const lastPartWhispered = whisperizeWord(lastPartOfBreakdown);
-      element.breakdown[endIndex] = typeof lastElement === 'string' ? lastPartWhispered : {
-        text: lastPartWhispered,
-        type: Array.isArray(lastElement) ? lastElement[1] : lastElement.type ?? undefined
-      }
+      element.breakdown[endIndex] =
+        typeof lastElement === "string"
+          ? lastPartWhispered
+          : {
+              text: lastPartWhispered,
+              type: Array.isArray(lastElement)
+                ? lastElement[1]
+                : lastElement.type ?? undefined,
+            };
     }
 
     element.phrase = element.breakdown

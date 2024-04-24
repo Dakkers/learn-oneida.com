@@ -476,3 +476,22 @@ export const activeVerbsList = (
     return result as ActiveVerbDatum;
   })
   .sort((v1, v2) => v1.en.localeCompare(v2.en));
+
+export const ACTIVE_VERB_TENSE_LIST = [
+  "hab",
+  "def",
+  "fut",
+  "ifut",
+  "cmd",
+  "pfv",
+] as const;
+export type ActiveVerbTense = (typeof ACTIVE_VERB_TENSE_LIST)[number];
+
+export const activeVerbTenseMap: Record<ActiveVerbTense, string> = {
+  cmd: "Command",
+  def: "Definite",
+  fut: "Future",
+  hab: "Habitual",
+  ifut: "Indefinite",
+  pfv: "Perfective",
+} as const;

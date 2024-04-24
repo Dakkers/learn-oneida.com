@@ -28,9 +28,7 @@ export default function Tools() {
 
   return (
     <div>
-      <SectionHeading level={1}>
-        Tools
-      </SectionHeading>
+      <SectionHeading level={1}>Tools</SectionHeading>
 
       <Text>Check out some tools:</Text>
       <List>
