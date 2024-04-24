@@ -2,6 +2,699 @@
 
 import { BreakdownType } from "~/components/TextBreakdown";
 
+import aliveCmdData from './alive-CMD'
+import aliveFutData from './alive-FUT'
+import aliveIfutData from './alive-IFUT'
+import alivePastData from './alive-PAST'
+import alivePrsData from './alive-PRS'
+import amazedCmdData from './amazed-CMD'
+import amazedFutData from './amazed-FUT'
+import amazedIfutData from './amazed-IFUT'
+import amazedPastData from './amazed-PAST'
+import amazedPrsData from './amazed-PRS'
+import angryCmdData from './angry-CMD'
+import angryFutData from './angry-FUT'
+import angryIfutData from './angry-IFUT'
+import angryPastData from './angry-PAST'
+import angryPrsData from './angry-PRS'
+import badCmdData from './bad-CMD'
+import badFutData from './bad-FUT'
+import badIfutData from './bad-IFUT'
+import badPastData from './bad-PAST'
+import badPrsData from './bad-PRS'
+import beCmdData from './be-CMD'
+import beFutData from './be-FUT'
+import beIfutData from './be-IFUT'
+import bePastData from './be-PAST'
+import bePrsData from './be-PRS'
+import beTheWaySomeoneLooksCmdData from './beTheWaySomeoneLooks-CMD'
+import beTheWaySomeoneLooksFutData from './beTheWaySomeoneLooks-FUT'
+import beTheWaySomeoneLooksIfutData from './beTheWaySomeoneLooks-IFUT'
+import beTheWaySomeoneLooksPastData from './beTheWaySomeoneLooks-PAST'
+import beTheWaySomeoneLooksPrsData from './beTheWaySomeoneLooks-PRS'
+import bigCmdData from './big-CMD'
+import bigFutData from './big-FUT'
+import bigIfutData from './big-IFUT'
+import bigPastData from './big-PAST'
+import bigPrsData from './big-PRS'
+import busyCmdData from './busy-CMD'
+import busyFutData from './busy-FUT'
+import busyIfutData from './busy-IFUT'
+import busyPastData from './busy-PAST'
+import busyPrsData from './busy-PRS'
+import coldCmdData from './cold-CMD'
+import coldFutData from './cold-FUT'
+import coldIfutData from './cold-IFUT'
+import coldPastData from './cold-PAST'
+import coldPrsData from './cold-PRS'
+import crazyCmdData from './crazy-CMD'
+import crazyFutData from './crazy-FUT'
+import crazyIfutData from './crazy-IFUT'
+import crazyPastData from './crazy-PAST'
+import crazyPrsData from './crazy-PRS'
+import crossCmdData from './cross-CMD'
+import crossFutData from './cross-FUT'
+import crossIfutData from './cross-IFUT'
+import crossPastData from './cross-PAST'
+import crossPrsData from './cross-PRS'
+import cryCmdData from './cry-CMD'
+import cryFutData from './cry-FUT'
+import cryIfutData from './cry-IFUT'
+import cryPastData from './cry-PAST'
+import cryPrsData from './cry-PRS'
+import darkSkinnedCmdData from './darkSkinned-CMD'
+import darkSkinnedFutData from './darkSkinned-FUT'
+import darkSkinnedIfutData from './darkSkinned-IFUT'
+import darkSkinnedPastData from './darkSkinned-PAST'
+import darkSkinnedPrsData from './darkSkinned-PRS'
+import deadCmdData from './dead-CMD'
+import deadFutData from './dead-FUT'
+import deadIfutData from './dead-IFUT'
+import deadPastData from './dead-PAST'
+import deadPrsData from './dead-PRS'
+import drunkCmdData from './drunk-CMD'
+import drunkFutData from './drunk-FUT'
+import drunkIfutData from './drunk-IFUT'
+import drunkPastData from './drunk-PAST'
+import drunkPrsData from './drunk-PRS'
+import eatingCmdData from './eating-CMD'
+import eatingFutData from './eating-FUT'
+import eatingIfutData from './eating-IFUT'
+import eatingPastData from './eating-PAST'
+import eatingPrsData from './eating-PRS'
+import enjoyingDoingSomethingCmdData from './enjoyingDoingSomething-CMD'
+import enjoyingDoingSomethingFutData from './enjoyingDoingSomething-FUT'
+import enjoyingDoingSomethingIfutData from './enjoyingDoingSomething-IFUT'
+import enjoyingDoingSomethingPastData from './enjoyingDoingSomething-PAST'
+import enjoyingDoingSomethingPrsData from './enjoyingDoingSomething-PRS'
+import exhaustedCmdData from './exhausted-CMD'
+import exhaustedFutData from './exhausted-FUT'
+import exhaustedIfutData from './exhausted-IFUT'
+import exhaustedPastData from './exhausted-PAST'
+import exhaustedPrsData from './exhausted-PRS'
+import expectingCmdData from './expecting-CMD'
+import expectingFutData from './expecting-FUT'
+import expectingIfutData from './expecting-IFUT'
+import expectingPastData from './expecting-PAST'
+import expectingPrsData from './expecting-PRS'
+import famousCmdData from './famous-CMD'
+import famousFutData from './famous-FUT'
+import famousIfutData from './famous-IFUT'
+import famousPastData from './famous-PAST'
+import famousPrsData from './famous-PRS'
+import freeCmdData from './free-CMD'
+import freeFutData from './free-FUT'
+import freeIfutData from './free-IFUT'
+import freePastData from './free-PAST'
+import freePrsData from './free-PRS'
+import funnyCmdData from './funny-CMD'
+import funnyFutData from './funny-FUT'
+import funnyIfutData from './funny-IFUT'
+import funnyPastData from './funny-PAST'
+import funnyPrsData from './funny-PRS'
+import getReadyCmdData from './getReady-CMD'
+import getReadyFutData from './getReady-FUT'
+import getReadyIfutData from './getReady-IFUT'
+import getReadyPastData from './getReady-PAST'
+import getReadyPrsData from './getReady-PRS'
+import goodLookingCmdData from './goodLooking-CMD'
+import goodLookingFutData from './goodLooking-FUT'
+import goodLookingIfutData from './goodLooking-IFUT'
+import goodLookingPastData from './goodLooking-PAST'
+import goodLookingPrsData from './goodLooking-PRS'
+import goodPersonCmdData from './goodPerson-CMD'
+import goodPersonFutData from './goodPerson-FUT'
+import goodPersonIfutData from './goodPerson-IFUT'
+import goodPersonPastData from './goodPerson-PAST'
+import goodPersonPrsData from './goodPerson-PRS'
+import grievingCmdData from './grieving-CMD'
+import grievingFutData from './grieving-FUT'
+import grievingIfutData from './grieving-IFUT'
+import grievingPastData from './grieving-PAST'
+import grievingPrsData from './grieving-PRS'
+import happyCmdData from './happy-CMD'
+import happyFutData from './happy-FUT'
+import happyIfutData from './happy-IFUT'
+import happyPastData from './happy-PAST'
+import happyPrsData from './happy-PRS'
+import haveTimeCmdData from './haveTime-CMD'
+import haveTimeFutData from './haveTime-FUT'
+import haveTimeIfutData from './haveTime-IFUT'
+import haveTimePastData from './haveTime-PAST'
+import haveTimePrsData from './haveTime-PRS'
+import havingCmdData from './having-CMD'
+import havingFutData from './having-FUT'
+import havingIfutData from './having-IFUT'
+import havingPastData from './having-PAST'
+import havingPrsData from './having-PRS'
+import healthyCmdData from './healthy-CMD'
+import healthyFutData from './healthy-FUT'
+import healthyIfutData from './healthy-IFUT'
+import healthyPastData from './healthy-PAST'
+import healthyPrsData from './healthy-PRS'
+import hungryCmdData from './hungry-CMD'
+import hungryFutData from './hungry-FUT'
+import hungryIfutData from './hungry-IFUT'
+import hungryPastData from './hungry-PAST'
+import hungryPrsData from './hungry-PRS'
+import intelligentCmdData from './intelligent-CMD'
+import intelligentFutData from './intelligent-FUT'
+import intelligentIfutData from './intelligent-IFUT'
+import intelligentPastData from './intelligent-PAST'
+import intelligentPrsData from './intelligent-PRS'
+import jealousCmdData from './jealous-CMD'
+import jealousFutData from './jealous-FUT'
+import jealousIfutData from './jealous-IFUT'
+import jealousPastData from './jealous-PAST'
+import jealousPrsData from './jealous-PRS'
+import knowCmdData from './know-CMD'
+import knowFutData from './know-FUT'
+import knowIfutData from './know-IFUT'
+import knowPastData from './know-PAST'
+import knowPrsData from './know-PRS'
+import knowAboutCmdData from './knowAbout-CMD'
+import knowAboutFutData from './knowAbout-FUT'
+import knowAboutIfutData from './knowAbout-IFUT'
+import knowAboutPastData from './knowAbout-PAST'
+import knowAboutPrsData from './knowAbout-PRS'
+import kʌʔ_niAData from './kʌʔ_ni-a'
+import lazyCmdData from './lazy-CMD'
+import lazyFutData from './lazy-FUT'
+import lazyIfutData from './lazy-IFUT'
+import lazyPastData from './lazy-PAST'
+import lazyPrsData from './lazy-PRS'
+import lightSkinnedCmdData from './lightSkinned-CMD'
+import lightSkinnedFutData from './lightSkinned-FUT'
+import lightSkinnedIfutData from './lightSkinned-IFUT'
+import lightSkinnedPastData from './lightSkinned-PAST'
+import lightSkinnedPrsData from './lightSkinned-PRS'
+import likingTheTasteCmdData from './likingTheTaste-CMD'
+import likingTheTasteFutData from './likingTheTaste-FUT'
+import likingTheTasteIfutData from './likingTheTaste-IFUT'
+import likingTheTastePastData from './likingTheTaste-PAST'
+import likingTheTastePrsData from './likingTheTaste-PRS'
+import lonelyCmdData from './lonely-CMD'
+import lonelyFutData from './lonely-FUT'
+import lonelyIfutData from './lonely-IFUT'
+import lonelyPastData from './lonely-PAST'
+import lonelyPrsData from './lonely-PRS'
+import luckyCmdData from './lucky-CMD'
+import luckyFutData from './lucky-FUT'
+import luckyIfutData from './lucky-IFUT'
+import luckyPastData from './lucky-PAST'
+import luckyPrsData from './lucky-PRS'
+import marriedCmdData from './married-CMD'
+import marriedFutData from './married-FUT'
+import marriedIfutData from './married-IFUT'
+import marriedPastData from './married-PAST'
+import marriedPrsData from './married-PRS'
+import overjoyedCmdData from './overjoyed-CMD'
+import overjoyedFutData from './overjoyed-FUT'
+import overjoyedIfutData from './overjoyed-IFUT'
+import overjoyedPastData from './overjoyed-PAST'
+import overjoyedPrsData from './overjoyed-PRS'
+import poorCmdData from './poor-CMD'
+import poorFutData from './poor-FUT'
+import poorIfutData from './poor-IFUT'
+import poorPastData from './poor-PAST'
+import poorPrsData from './poor-PRS'
+import pregnantCmdData from './pregnant-CMD'
+import pregnantFutData from './pregnant-FUT'
+import pregnantIfutData from './pregnant-IFUT'
+import pregnantPastData from './pregnant-PAST'
+import pregnantPrsData from './pregnant-PRS'
+import resentfulCmdData from './resentful-CMD'
+import resentfulFutData from './resentful-FUT'
+import resentfulIfutData from './resentful-IFUT'
+import resentfulPastData from './resentful-PAST'
+import resentfulPrsData from './resentful-PRS'
+import sadCmdData from './sad-CMD'
+import sadFutData from './sad-FUT'
+import sadIfutData from './sad-IFUT'
+import sadPastData from './sad-PAST'
+import sadPrsData from './sad-PRS'
+import satisfiedCmdData from './satisfied-CMD'
+import satisfiedFutData from './satisfied-FUT'
+import satisfiedIfutData from './satisfied-IFUT'
+import satisfiedPastData from './satisfied-PAST'
+import satisfiedPrsData from './satisfied-PRS'
+import scaredyCatCmdData from './scaredyCat-CMD'
+import scaredyCatFutData from './scaredyCat-FUT'
+import scaredyCatIfutData from './scaredyCat-IFUT'
+import scaredyCatPastData from './scaredyCat-PAST'
+import scaredyCatPrsData from './scaredyCat-PRS'
+import separatedCmdData from './separated-CMD'
+import separatedFutData from './separated-FUT'
+import separatedIfutData from './separated-IFUT'
+import separatedPastData from './separated-PAST'
+import separatedPrsData from './separated-PRS'
+import shortCmdData from './short-CMD'
+import shortFutData from './short-FUT'
+import shortIfutData from './short-IFUT'
+import shortPastData from './short-PAST'
+import shortPrsData from './short-PRS'
+import shyCmdData from './shy-CMD'
+import shyFutData from './shy-FUT'
+import shyIfutData from './shy-IFUT'
+import shyPastData from './shy-PAST'
+import shyPrsData from './shy-PRS'
+import sickCmdData from './sick-CMD'
+import sickFutData from './sick-FUT'
+import sickIfutData from './sick-IFUT'
+import sickPastData from './sick-PAST'
+import sickPrsData from './sick-PRS'
+import sleepCmdData from './sleep-CMD'
+import sleepFutData from './sleep-FUT'
+import sleepIfutData from './sleep-IFUT'
+import sleepPastData from './sleep-PAST'
+import sleepPrsData from './sleep-PRS'
+import sleepyCmdData from './sleepy-CMD'
+import sleepyFutData from './sleepy-FUT'
+import sleepyIfutData from './sleepy-IFUT'
+import sleepyPastData from './sleepy-PAST'
+import sleepyPrsData from './sleepy-PRS'
+import smallCmdData from './small-CMD'
+import smallFutData from './small-FUT'
+import smallIfutData from './small-IFUT'
+import smallPastData from './small-PAST'
+import smallPrsData from './small-PRS'
+import smilingCmdData from './smiling-CMD'
+import smilingFutData from './smiling-FUT'
+import smilingIfutData from './smiling-IFUT'
+import smilingPastData from './smiling-PAST'
+import smilingPrsData from './smiling-PRS'
+import strongCmdData from './strong-CMD'
+import strongFutData from './strong-FUT'
+import strongIfutData from './strong-IFUT'
+import strongPastData from './strong-PAST'
+import strongPrsData from './strong-PRS'
+import strongWilledCmdData from './strongWilled-CMD'
+import strongWilledFutData from './strongWilled-FUT'
+import strongWilledIfutData from './strongWilled-IFUT'
+import strongWilledPastData from './strongWilled-PAST'
+import strongWilledPrsData from './strongWilled-PRS'
+import talkingCmdData from './talking-CMD'
+import talkingFutData from './talking-FUT'
+import talkingIfutData from './talking-IFUT'
+import talkingPastData from './talking-PAST'
+import talkingPrsData from './talking-PRS'
+import tallCmdData from './tall-CMD'
+import tallFutData from './tall-FUT'
+import tallIfutData from './tall-IFUT'
+import tallPastData from './tall-PAST'
+import tallPrsData from './tall-PRS'
+import thirstyCmdData from './thirsty-CMD'
+import thirstyFutData from './thirsty-FUT'
+import thirstyIfutData from './thirsty-IFUT'
+import thirstyPastData from './thirsty-PAST'
+import thirstyPrsData from './thirsty-PRS'
+import uglyCmdData from './ugly-CMD'
+import uglyFutData from './ugly-FUT'
+import uglyIfutData from './ugly-IFUT'
+import uglyPastData from './ugly-PAST'
+import uglyPrsData from './ugly-PRS'
+import unluckyCmdData from './unlucky-CMD'
+import unluckyFutData from './unlucky-FUT'
+import unluckyIfutData from './unlucky-IFUT'
+import unluckyPastData from './unlucky-PAST'
+import unluckyPrsData from './unlucky-PRS'
+import unwellCmdData from './unwell-CMD'
+import unwellFutData from './unwell-FUT'
+import unwellIfutData from './unwell-IFUT'
+import unwellPastData from './unwell-PAST'
+import unwellPrsData from './unwell-PRS'
+import wantingCmdData from './wanting-CMD'
+import wantingFutData from './wanting-FUT'
+import wantingIfutData from './wanting-IFUT'
+import wantingPastData from './wanting-PAST'
+import wantingPrsData from './wanting-PRS'
+import wealthyCmdData from './wealthy-CMD'
+import wealthyFutData from './wealthy-FUT'
+import wealthyIfutData from './wealthy-IFUT'
+import wealthyPastData from './wealthy-PAST'
+import wealthyPrsData from './wealthy-PRS'
+import workingCmdData from './working-CMD'
+import workingFutData from './working-FUT'
+import workingIfutData from './working-IFUT'
+import workingPastData from './working-PAST'
+import workingPrsData from './working-PRS'
+import worriedCmdData from './worried-CMD'
+import worriedFutData from './worried-FUT'
+import worriedIfutData from './worried-IFUT'
+import worriedPastData from './worried-PAST'
+import worriedPrsData from './worried-PRS'
+import { ParadigmData } from "~/components/ParadigmTable";
+
+const mapping = {
+  aliveCmd: aliveCmdData,
+aliveFut: aliveFutData,
+aliveIfut: aliveIfutData,
+alivePast: alivePastData,
+alivePrs: alivePrsData,
+amazedCmd: amazedCmdData,
+amazedFut: amazedFutData,
+amazedIfut: amazedIfutData,
+amazedPast: amazedPastData,
+amazedPrs: amazedPrsData,
+angryCmd: angryCmdData,
+angryFut: angryFutData,
+angryIfut: angryIfutData,
+angryPast: angryPastData,
+angryPrs: angryPrsData,
+badCmd: badCmdData,
+badFut: badFutData,
+badIfut: badIfutData,
+badPast: badPastData,
+badPrs: badPrsData,
+beCmd: beCmdData,
+beFut: beFutData,
+beIfut: beIfutData,
+bePast: bePastData,
+bePrs: bePrsData,
+beTheWaySomeoneLooksCmd: beTheWaySomeoneLooksCmdData,
+beTheWaySomeoneLooksFut: beTheWaySomeoneLooksFutData,
+beTheWaySomeoneLooksIfut: beTheWaySomeoneLooksIfutData,
+beTheWaySomeoneLooksPast: beTheWaySomeoneLooksPastData,
+beTheWaySomeoneLooksPrs: beTheWaySomeoneLooksPrsData,
+bigCmd: bigCmdData,
+bigFut: bigFutData,
+bigIfut: bigIfutData,
+bigPast: bigPastData,
+bigPrs: bigPrsData,
+busyCmd: busyCmdData,
+busyFut: busyFutData,
+busyIfut: busyIfutData,
+busyPast: busyPastData,
+busyPrs: busyPrsData,
+coldCmd: coldCmdData,
+coldFut: coldFutData,
+coldIfut: coldIfutData,
+coldPast: coldPastData,
+coldPrs: coldPrsData,
+crazyCmd: crazyCmdData,
+crazyFut: crazyFutData,
+crazyIfut: crazyIfutData,
+crazyPast: crazyPastData,
+crazyPrs: crazyPrsData,
+crossCmd: crossCmdData,
+crossFut: crossFutData,
+crossIfut: crossIfutData,
+crossPast: crossPastData,
+crossPrs: crossPrsData,
+cryCmd: cryCmdData,
+cryFut: cryFutData,
+cryIfut: cryIfutData,
+cryPast: cryPastData,
+cryPrs: cryPrsData,
+darkSkinnedCmd: darkSkinnedCmdData,
+darkSkinnedFut: darkSkinnedFutData,
+darkSkinnedIfut: darkSkinnedIfutData,
+darkSkinnedPast: darkSkinnedPastData,
+darkSkinnedPrs: darkSkinnedPrsData,
+deadCmd: deadCmdData,
+deadFut: deadFutData,
+deadIfut: deadIfutData,
+deadPast: deadPastData,
+deadPrs: deadPrsData,
+drunkCmd: drunkCmdData,
+drunkFut: drunkFutData,
+drunkIfut: drunkIfutData,
+drunkPast: drunkPastData,
+drunkPrs: drunkPrsData,
+eatingCmd: eatingCmdData,
+eatingFut: eatingFutData,
+eatingIfut: eatingIfutData,
+eatingPast: eatingPastData,
+eatingPrs: eatingPrsData,
+enjoyingDoingSomethingCmd: enjoyingDoingSomethingCmdData,
+enjoyingDoingSomethingFut: enjoyingDoingSomethingFutData,
+enjoyingDoingSomethingIfut: enjoyingDoingSomethingIfutData,
+enjoyingDoingSomethingPast: enjoyingDoingSomethingPastData,
+enjoyingDoingSomethingPrs: enjoyingDoingSomethingPrsData,
+exhaustedCmd: exhaustedCmdData,
+exhaustedFut: exhaustedFutData,
+exhaustedIfut: exhaustedIfutData,
+exhaustedPast: exhaustedPastData,
+exhaustedPrs: exhaustedPrsData,
+expectingCmd: expectingCmdData,
+expectingFut: expectingFutData,
+expectingIfut: expectingIfutData,
+expectingPast: expectingPastData,
+expectingPrs: expectingPrsData,
+famousCmd: famousCmdData,
+famousFut: famousFutData,
+famousIfut: famousIfutData,
+famousPast: famousPastData,
+famousPrs: famousPrsData,
+freeCmd: freeCmdData,
+freeFut: freeFutData,
+freeIfut: freeIfutData,
+freePast: freePastData,
+freePrs: freePrsData,
+funnyCmd: funnyCmdData,
+funnyFut: funnyFutData,
+funnyIfut: funnyIfutData,
+funnyPast: funnyPastData,
+funnyPrs: funnyPrsData,
+getReadyCmd: getReadyCmdData,
+getReadyFut: getReadyFutData,
+getReadyIfut: getReadyIfutData,
+getReadyPast: getReadyPastData,
+getReadyPrs: getReadyPrsData,
+goodLookingCmd: goodLookingCmdData,
+goodLookingFut: goodLookingFutData,
+goodLookingIfut: goodLookingIfutData,
+goodLookingPast: goodLookingPastData,
+goodLookingPrs: goodLookingPrsData,
+goodPersonCmd: goodPersonCmdData,
+goodPersonFut: goodPersonFutData,
+goodPersonIfut: goodPersonIfutData,
+goodPersonPast: goodPersonPastData,
+goodPersonPrs: goodPersonPrsData,
+grievingCmd: grievingCmdData,
+grievingFut: grievingFutData,
+grievingIfut: grievingIfutData,
+grievingPast: grievingPastData,
+grievingPrs: grievingPrsData,
+happyCmd: happyCmdData,
+happyFut: happyFutData,
+happyIfut: happyIfutData,
+happyPast: happyPastData,
+happyPrs: happyPrsData,
+haveTimeCmd: haveTimeCmdData,
+haveTimeFut: haveTimeFutData,
+haveTimeIfut: haveTimeIfutData,
+haveTimePast: haveTimePastData,
+haveTimePrs: haveTimePrsData,
+havingCmd: havingCmdData,
+havingFut: havingFutData,
+havingIfut: havingIfutData,
+havingPast: havingPastData,
+havingPrs: havingPrsData,
+healthyCmd: healthyCmdData,
+healthyFut: healthyFutData,
+healthyIfut: healthyIfutData,
+healthyPast: healthyPastData,
+healthyPrs: healthyPrsData,
+hungryCmd: hungryCmdData,
+hungryFut: hungryFutData,
+hungryIfut: hungryIfutData,
+hungryPast: hungryPastData,
+hungryPrs: hungryPrsData,
+intelligentCmd: intelligentCmdData,
+intelligentFut: intelligentFutData,
+intelligentIfut: intelligentIfutData,
+intelligentPast: intelligentPastData,
+intelligentPrs: intelligentPrsData,
+jealousCmd: jealousCmdData,
+jealousFut: jealousFutData,
+jealousIfut: jealousIfutData,
+jealousPast: jealousPastData,
+jealousPrs: jealousPrsData,
+knowCmd: knowCmdData,
+knowFut: knowFutData,
+knowIfut: knowIfutData,
+knowPast: knowPastData,
+knowPrs: knowPrsData,
+knowAboutCmd: knowAboutCmdData,
+knowAboutFut: knowAboutFutData,
+knowAboutIfut: knowAboutIfutData,
+knowAboutPast: knowAboutPastData,
+knowAboutPrs: knowAboutPrsData,
+kʌʔ_niA: kʌʔ_niAData,
+lazyCmd: lazyCmdData,
+lazyFut: lazyFutData,
+lazyIfut: lazyIfutData,
+lazyPast: lazyPastData,
+lazyPrs: lazyPrsData,
+lightSkinnedCmd: lightSkinnedCmdData,
+lightSkinnedFut: lightSkinnedFutData,
+lightSkinnedIfut: lightSkinnedIfutData,
+lightSkinnedPast: lightSkinnedPastData,
+lightSkinnedPrs: lightSkinnedPrsData,
+likingTheTasteCmd: likingTheTasteCmdData,
+likingTheTasteFut: likingTheTasteFutData,
+likingTheTasteIfut: likingTheTasteIfutData,
+likingTheTastePast: likingTheTastePastData,
+likingTheTastePrs: likingTheTastePrsData,
+lonelyCmd: lonelyCmdData,
+lonelyFut: lonelyFutData,
+lonelyIfut: lonelyIfutData,
+lonelyPast: lonelyPastData,
+lonelyPrs: lonelyPrsData,
+luckyCmd: luckyCmdData,
+luckyFut: luckyFutData,
+luckyIfut: luckyIfutData,
+luckyPast: luckyPastData,
+luckyPrs: luckyPrsData,
+marriedCmd: marriedCmdData,
+marriedFut: marriedFutData,
+marriedIfut: marriedIfutData,
+marriedPast: marriedPastData,
+marriedPrs: marriedPrsData,
+overjoyedCmd: overjoyedCmdData,
+overjoyedFut: overjoyedFutData,
+overjoyedIfut: overjoyedIfutData,
+overjoyedPast: overjoyedPastData,
+overjoyedPrs: overjoyedPrsData,
+poorCmd: poorCmdData,
+poorFut: poorFutData,
+poorIfut: poorIfutData,
+poorPast: poorPastData,
+poorPrs: poorPrsData,
+pregnantCmd: pregnantCmdData,
+pregnantFut: pregnantFutData,
+pregnantIfut: pregnantIfutData,
+pregnantPast: pregnantPastData,
+pregnantPrs: pregnantPrsData,
+resentfulCmd: resentfulCmdData,
+resentfulFut: resentfulFutData,
+resentfulIfut: resentfulIfutData,
+resentfulPast: resentfulPastData,
+resentfulPrs: resentfulPrsData,
+sadCmd: sadCmdData,
+sadFut: sadFutData,
+sadIfut: sadIfutData,
+sadPast: sadPastData,
+sadPrs: sadPrsData,
+satisfiedCmd: satisfiedCmdData,
+satisfiedFut: satisfiedFutData,
+satisfiedIfut: satisfiedIfutData,
+satisfiedPast: satisfiedPastData,
+satisfiedPrs: satisfiedPrsData,
+scaredyCatCmd: scaredyCatCmdData,
+scaredyCatFut: scaredyCatFutData,
+scaredyCatIfut: scaredyCatIfutData,
+scaredyCatPast: scaredyCatPastData,
+scaredyCatPrs: scaredyCatPrsData,
+separatedCmd: separatedCmdData,
+separatedFut: separatedFutData,
+separatedIfut: separatedIfutData,
+separatedPast: separatedPastData,
+separatedPrs: separatedPrsData,
+shortCmd: shortCmdData,
+shortFut: shortFutData,
+shortIfut: shortIfutData,
+shortPast: shortPastData,
+shortPrs: shortPrsData,
+shyCmd: shyCmdData,
+shyFut: shyFutData,
+shyIfut: shyIfutData,
+shyPast: shyPastData,
+shyPrs: shyPrsData,
+sickCmd: sickCmdData,
+sickFut: sickFutData,
+sickIfut: sickIfutData,
+sickPast: sickPastData,
+sickPrs: sickPrsData,
+sleepCmd: sleepCmdData,
+sleepFut: sleepFutData,
+sleepIfut: sleepIfutData,
+sleepPast: sleepPastData,
+sleepPrs: sleepPrsData,
+sleepyCmd: sleepyCmdData,
+sleepyFut: sleepyFutData,
+sleepyIfut: sleepyIfutData,
+sleepyPast: sleepyPastData,
+sleepyPrs: sleepyPrsData,
+smallCmd: smallCmdData,
+smallFut: smallFutData,
+smallIfut: smallIfutData,
+smallPast: smallPastData,
+smallPrs: smallPrsData,
+smilingCmd: smilingCmdData,
+smilingFut: smilingFutData,
+smilingIfut: smilingIfutData,
+smilingPast: smilingPastData,
+smilingPrs: smilingPrsData,
+strongCmd: strongCmdData,
+strongFut: strongFutData,
+strongIfut: strongIfutData,
+strongPast: strongPastData,
+strongPrs: strongPrsData,
+strongWilledCmd: strongWilledCmdData,
+strongWilledFut: strongWilledFutData,
+strongWilledIfut: strongWilledIfutData,
+strongWilledPast: strongWilledPastData,
+strongWilledPrs: strongWilledPrsData,
+talkingCmd: talkingCmdData,
+talkingFut: talkingFutData,
+talkingIfut: talkingIfutData,
+talkingPast: talkingPastData,
+talkingPrs: talkingPrsData,
+tallCmd: tallCmdData,
+tallFut: tallFutData,
+tallIfut: tallIfutData,
+tallPast: tallPastData,
+tallPrs: tallPrsData,
+thirstyCmd: thirstyCmdData,
+thirstyFut: thirstyFutData,
+thirstyIfut: thirstyIfutData,
+thirstyPast: thirstyPastData,
+thirstyPrs: thirstyPrsData,
+uglyCmd: uglyCmdData,
+uglyFut: uglyFutData,
+uglyIfut: uglyIfutData,
+uglyPast: uglyPastData,
+uglyPrs: uglyPrsData,
+unluckyCmd: unluckyCmdData,
+unluckyFut: unluckyFutData,
+unluckyIfut: unluckyIfutData,
+unluckyPast: unluckyPastData,
+unluckyPrs: unluckyPrsData,
+unwellCmd: unwellCmdData,
+unwellFut: unwellFutData,
+unwellIfut: unwellIfutData,
+unwellPast: unwellPastData,
+unwellPrs: unwellPrsData,
+wantingCmd: wantingCmdData,
+wantingFut: wantingFutData,
+wantingIfut: wantingIfutData,
+wantingPast: wantingPastData,
+wantingPrs: wantingPrsData,
+wealthyCmd: wealthyCmdData,
+wealthyFut: wealthyFutData,
+wealthyIfut: wealthyIfutData,
+wealthyPast: wealthyPastData,
+wealthyPrs: wealthyPrsData,
+workingCmd: workingCmdData,
+workingFut: workingFutData,
+workingIfut: workingIfutData,
+workingPast: workingPastData,
+workingPrs: workingPrsData,
+worriedCmd: worriedCmdData,
+worriedFut: worriedFutData,
+worriedIfut: worriedIfutData,
+worriedPast: worriedPastData,
+worriedPrs: worriedPrsData,
+} as const
+
+
+
+
+
+
+
 type TenseEntry =
   | string[]
   | {
@@ -21,6 +714,7 @@ export type TenseDatum = {
   stem: string;
   root: string[] | string;
   present: TenseEntry;
+  prs: TenseEntry;
   past: TenseEntry;
   fut: TenseEntry;
   ifut: TenseEntry;
@@ -29,7 +723,7 @@ export type TenseDatum = {
   type?: BreakdownType;
 };
 
-export const characterTenseData: TenseDatum[] = [
+export const characterTenseData: Array<Partial<TenseDatum>> = [
   {
     key: "goodPerson",
     dict: [754],
@@ -178,25 +872,25 @@ export const characterTenseData: TenseDatum[] = [
     cmd: ["sʌ", "·tʌtú", "hak"],
     en: "be poor",
   },
-  {
-    key: "bad person",
-    dict: [752],
-    stem: "U stem",
-    root: ["-ukweʔtaksʌ-"],
-    present: ["k", "ukweʔtáksʌ"],
-    past: ["k", "ukweʔtaksʌ·", "hné·"],
-    fut: ["ʌ", "kukweʔtaksʌ", "hakeʔ"],
-    ifut: ["a", "kukweʔtaksʌ", "hakeʔ"],
-    cmd: {
-      on: ["s", "ukweʔtaksʌ", "hak"],
-      en: "Be bad!",
-    },
-    type: "PR",
-    en: "be a bad person",
-  },
+  // {
+  //   key: "badPerson",
+  //   dict: [752],
+  //   stem: "U stem",
+  //   root: ["-ukweʔtaksʌ-"],
+  //   present: ["k", "ukweʔtáksʌ"],
+  //   past: ["k", "ukweʔtaksʌ·", "hné·"],
+  //   fut: ["ʌ", "kukweʔtaksʌ", "hakeʔ"],
+  //   ifut: ["a", "kukweʔtaksʌ", "hakeʔ"],
+  //   cmd: {
+  //     on: ["s", "ukweʔtaksʌ", "hak"],
+  //     en: "Be bad!",
+  //   },
+  //   type: "PR",
+  //   en: "be a bad person",
+  // },
 ];
 
-export const mindTenseData: TenseDatum[] = [
+export const mindTenseData: Array<Partial<TenseDatum>> = [
   {
     key: "intelligent",
     en: "be intelligent",
@@ -296,7 +990,7 @@ export const mindTenseData: TenseDatum[] = [
   },
 ];
 
-export const emotionTenseData: TenseDatum[] = [
+export const emotionTenseData: Array<Partial<TenseDatum>> = [
   {
     key: "cry",
     en: "to cry, weep",
@@ -445,7 +1139,7 @@ export const emotionTenseData: TenseDatum[] = [
   },
 ];
 
-export const bodyTenseData: TenseDatum[] = [
+export const bodyTenseData: Array<Partial<TenseDatum>> = [
   {
     key: "beTheWaySomeoneLooks",
     en: "be the way someone looks",
@@ -625,7 +1319,7 @@ export const bodyTenseData: TenseDatum[] = [
   // },
 ];
 
-export const physicalTenseData: TenseDatum[] = [
+export const physicalTenseData: Array<Partial<TenseDatum>> = [
   {
     key: "cold",
     en: "be cold",
@@ -678,18 +1372,18 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "únh", "ek"],
     type: "PR",
   },
-  {
-    key: "be awake",
-    en: "to wake up, awaken",
-    dict: [806, 1254],
-    stem: "C stem (with irregular root)",
-    root: ["-ye-"],
-    present: ["wak", "yé·u"],
-    past: ["wak", "yeʔ", "ú·ne·"],
-    fut: ["ʌ", "wak", "yeʔú", "hakeʔ"], // TODO: ʌkiʔ ́ = I will be awake
-    ifut: ["a", "·uk", "yeʔú", "hakeʔ"],
-    cmd: ["s", "ayeʔú", "hak"], // TODO: (*íhsi = You wake up!)
-  },
+  // {
+  //   key: "be awake",
+  //   en: "to wake up, awaken",
+  //   dict: [806, 1254],
+  //   stem: "C stem (with irregular root)",
+  //   root: ["-ye-"],
+  //   present: ["wak", "yé·u"],
+  //   past: ["wak", "yeʔ", "ú·ne·"],
+  //   fut: ["ʌ", "wak", "yeʔú", "hakeʔ"], // TODO: ʌkiʔ ́ = I will be awake
+  //   ifut: ["a", "·uk", "yeʔú", "hakeʔ"],
+  //   cmd: ["s", "ayeʔú", "hak"], // TODO: (*íhsi = You wake up!)
+  // },
   // TODO – these words look weird
   // {
   //   en: "to get warm, boil",
@@ -876,20 +1570,20 @@ export const physicalTenseData: TenseDatum[] = [
   },
 ];
 
-export const miscTenseData: TenseDatum[] = [
-  {
-    key: "knowAbout",
-    en: "to know/recognize something",
-    dict: [830],
-    stem: "C stem",
-    root: ["-yʌteli-"],
-    present: ["k", "yʌtelí"],
-    past: ["k", "", "yʌteli·", "hné·"],
-    fut: ["ʌ", "k", "yʌtelí", "hakeʔ"],
-    ifut: ["a", "k", "yʌtelí", "hakeʔ"],
-    cmd: ["ts", "yʌtelí", "hak"],
-    type: "PR",
-  },
+export const miscTenseData: Array<Partial<TenseDatum>> = [
+  // {
+  //   key: "recognize",
+  //   en: "to know/recognize something",
+  //   dict: [830],
+  //   stem: "C stem",
+  //   root: ["-yʌteli-"],
+  //   present: ["k", "yʌtelí"],
+  //   past: ["k", "", "yʌteli·", "hné·"],
+  //   fut: ["ʌ", "k", "yʌtelí", "hakeʔ"],
+  //   ifut: ["a", "k", "yʌtelí", "hakeʔ"],
+  //   cmd: ["ts", "yʌtelí", "hak"],
+  //   type: "PR",
+  // },
   {
     key: "free",
     en: "be free, single",
@@ -972,4 +1666,38 @@ export const module5VerbsList = [
   ...miscTenseData,
   ...emotionTenseData,
   ...physicalTenseData,
-];
+]
+
+
+
+
+
+
+export type Module5VerbDatum = {
+  cmd: ParadigmData;
+  prs: ParadigmData;
+  en: string;
+  fut: ParadigmData;
+  past: ParadigmData;
+  ifut: ParadigmData;
+  key: string;
+};
+
+
+export const module5VerbsList_BUT_BETTER = [
+  ...characterTenseData,
+  ...bodyTenseData,
+  ...mindTenseData,
+  ...miscTenseData,
+  ...emotionTenseData,
+  ...physicalTenseData,
+]
+  .map((item) => {
+    const result: Partial<TenseDatum> = { ...item };
+    for (const key of ["Prs", "Fut", "Cmd", "Ifut", "Past"] as const) {
+      result[key.toLowerCase() as Lowercase<typeof key>] =
+        mapping[`${item.key}${key}`];
+    }
+    return result as unknown as Module5VerbDatum;
+  })
+  .sort((v1, v2) => v1.en.localeCompare(v2.en));
