@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["yáh thó teʔ", ["k"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔ", ["k"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔte", ["hs"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔte", ["hs"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔt", ["ha"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔt", ["ha"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔt", ["yé"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔt", ["yé"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔt", ["ka"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔt", ["ka"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔti", ["tni"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔti", ["tni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔt", ["yakni"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔt", ["yakni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔti", ["sni"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔti", ["sni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔt", ["hni"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔt", ["hni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔt", ["kni"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔt", ["kni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔti", ["twa"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔti", ["twa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔt", ["yakwa"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔt", ["yakwa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔti", ["swa"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔti", ["swa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔt", ["hati"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔt", ["hati"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó teʔt", ["kuti"], "nákle", "hkweʔ"],
+        breakdown: ["yáh thó teʔt", ["kuti"], "nákle", ["hkweʔ", "PAST"]],
       },
     ],
   },

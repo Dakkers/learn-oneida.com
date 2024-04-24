@@ -333,13 +333,7 @@ export interface ParadigmData {
 }
 
 interface Row {
-  breakdown: Array<
-    | string
-    | {
-        text: string;
-        type?: BreakdownType;
-      }
-  >;
+  breakdown: BreakdownArray;
   phrase: string;
   pronoun: Pronoun;
   whispered?: boolean;
@@ -366,10 +360,13 @@ export function createParadigmData(
     const element = result.phrases[i];
     const endIndex = element.breakdown.length - 1;
     if (element.whispered ?? data.whispered ?? true) {
-      const lastPartOfBreakdown = getBreakdownTextPart(
-        getBreakdownTextPart(element.breakdown[endIndex])
-      );
-      element.breakdown[endIndex] = whisperizeWord(lastPartOfBreakdown);
+      const lastElement = element.breakdown[endIndex];
+      const lastPartOfBreakdown = getBreakdownTextPart(getBreakdownTextPart(lastElement));
+      const lastPartWhispered = whisperizeWord(lastPartOfBreakdown);
+      element.breakdown[endIndex] = typeof lastElement === 'string' ? lastPartWhispered : {
+        text: lastPartWhispered,
+        type: Array.isArray(lastElement) ? lastElement[1] : lastElement.type ?? undefined
+      }
     }
 
     element.phrase = element.breakdown
@@ -386,5 +383,5 @@ export function createParadigmData(
   return result;
 }
 
-const getBreakdownTextPart = (part: Row["breakdown"][0]) =>
+const getBreakdownTextPart = (part: BreakdownArray[number]) =>
   typeof part === "string" ? part : Array.isArray(part) ? part[0] : part.text;

@@ -88,9 +88,7 @@ export default function PracticeBeingSomewhere() {
         });
         resultOn.push({
           key,
-          text: convertBreakdownToPlainText(phrase.breakdown, {
-            suffix: datum.suffix,
-          }),
+          text: convertBreakdownToPlainText(phrase.breakdown),
         });
       }
     }
