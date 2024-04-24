@@ -1,7 +1,7 @@
-import { Heading } from "@/design/components/heading";
 import { List } from "@/design/components/list";
 import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
+import { SectionHeading } from "~/components/SectionHeading";
 
 export const meta: MetaFunction = () => {
   return [
@@ -28,9 +28,7 @@ export default function Tools() {
 
   return (
     <div>
-      <Heading level={1} variant="headlineL">
-        Tools
-      </Heading>
+      <SectionHeading level={1}>Tools</SectionHeading>
 
       <Text>Check out some tools:</Text>
       <List>

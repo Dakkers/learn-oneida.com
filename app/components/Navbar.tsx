@@ -44,7 +44,7 @@ const toolsItems: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div>
+    <div className="print:hidden">
       <div className="sm:hidden">
         <NavbarMobile />
       </div>
