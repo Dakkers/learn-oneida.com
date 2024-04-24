@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["k"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["s"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["la"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ye"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ka"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["tni"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yakni"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
         breakdown: [["sni"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ni"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["kni"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["twa"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yakwa"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
         breakdown: [["swa"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["lati"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["kuti"], "ROOT", ["kweʔ", "PAST"]],
       },
     ],
   },

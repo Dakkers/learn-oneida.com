@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT"],
+        breakdown: [["k"], "ROOT"],
       },
       {
-        breakdown: [["sa"], "ROOT"],
+        breakdown: [["hs"], "ROOT"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [["h"], "ROOT"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yak"], "ROOT"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["y"], "ROOT"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["tn"], "ROOT"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yakn"], "ROOT"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["sn"], "ROOT"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["hn"], "ROOT"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["kn"], "ROOT"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["ty"], "ROOT"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yaky"], "ROOT"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["tsy"], "ROOT"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["hʌn"], "ROOT"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["kun"], "ROOT"],
       },
     ],
   },

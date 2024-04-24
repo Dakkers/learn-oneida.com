@@ -10,10 +10,10 @@ export default createParadigmData(
         breakdown: [["wak"], "ROOT"],
       },
       {
-        breakdown: [["sa"], "ROOT"],
+        breakdown: [["hs"], "ROOT"],
       },
       {
-        breakdown: [["lo"], "ROOT"],
+        breakdown: [["ho"], "ROOT"],
       },
       {
         breakdown: [["yako"], "ROOT"],
@@ -22,34 +22,34 @@ export default createParadigmData(
         breakdown: [["yo"], "ROOT"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yuky"], "ROOT"],
       },
       {
-        breakdown: [["yukni"], "ROOT"],
+        breakdown: [["yuky"], "ROOT"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["tsy"], "ROOT"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["hon"], "ROOT"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yon"], "ROOT"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukw"], "ROOT"],
       },
       {
-        breakdown: [["yukwa"], "ROOT"],
+        breakdown: [["yukw"], "ROOT"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["sw"], "ROOT"],
       },
       {
-        breakdown: [["loti"], "ROOT"],
+        breakdown: [["hon"], "ROOT"],
       },
       {
-        breakdown: [["yoti"], "ROOT"],
+        breakdown: [["yon"], "ROOT"],
       },
     ],
   },

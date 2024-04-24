@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["k"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["s"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["la"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["ye"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["ka"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["tni"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yakni"], "ROOT", ["hné·", "PAST"]],
       },
       {
         breakdown: [["sni"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["ni"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["kni"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["twa"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yakwa"], "ROOT", ["hné·", "PAST"]],
       },
       {
         breakdown: [["swa"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["lati"], "ROOT", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["kuti"], "ROOT", ["hné·", "PAST"]],
       },
     ],
   },

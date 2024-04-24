@@ -22,34 +22,34 @@ export default createParadigmData(
         breakdown: [["t", "DU"], ["a", "IFUT"], ["yo"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukni"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["yuky"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukni"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["yuky"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["sni"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["tsy"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["hoti"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["hon"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yoti"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["yon"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukwa"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukw"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukwa"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["yukw"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["swa"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["sw"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["hoti"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["hon"], "ROOT", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["a", "IFUT"], ["yoti"], "ROOT", ["hakeʔ", "IFUT"]],
+        breakdown: [["t", "DU"], ["a", "IFUT"], ["yon"], "ROOT", ["hakeʔ", "IFUT"]],
       },
     ],
   },

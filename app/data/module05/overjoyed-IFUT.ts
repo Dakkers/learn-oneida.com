@@ -22,34 +22,34 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["yo"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yuky"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yuky"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["sni"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["tsy"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hon"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yon"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukw"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukw"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["swa"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["sw"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hon"], "ROOT", ["akeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "ROOT", ["akeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yon"], "ROOT", ["akeʔ", "IFUT"]],
       },
     ],
   },

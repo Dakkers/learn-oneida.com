@@ -7,7 +7,7 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["a·", "IFUT"], ["uk"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a·", "IFUT"], ["wak"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
         breakdown: [["a", "IFUT"], ["hs"], "ROOT", ["ékeʔ", "IFUT"]],
@@ -22,34 +22,34 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["yo"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yuky"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yuky"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["sni"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["tsy"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hon"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yon"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukw"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukw"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["swa"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["sw"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hon"], "ROOT", ["ékeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "ROOT", ["ékeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yon"], "ROOT", ["ékeʔ", "IFUT"]],
       },
     ],
   },

@@ -22,34 +22,34 @@ export default createParadigmData(
         breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yo"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukni"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yuky"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukni"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yuky"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["sni"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["tsy"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["hoti"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["hon"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yoti"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yon"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukwa"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukw"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukwa"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yukw"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["swa"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["sw"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["hoti"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["hon"], "ROOT", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yoti"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["t", "DU"], ["ʌ", "FUT"], ["yon"], "ROOT", ["hakeʔ", "FUT"]],
       },
     ],
   },

@@ -10,10 +10,10 @@ export default createParadigmData(
         breakdown: [["te", "DU"], ["wak"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "ROOT"],
+        breakdown: [["te", "DU"], ["hs"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "ROOT"],
+        breakdown: [["te", "DU"], ["ho"], "ROOT"],
       },
       {
         breakdown: [["te", "DU"], ["yako"], "ROOT"],
@@ -22,34 +22,34 @@ export default createParadigmData(
         breakdown: [["te", "DU"], ["yo"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["yuky"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "ROOT"],
+        breakdown: [["te", "DU"], ["yuky"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "ROOT"],
+        breakdown: [["te", "DU"], ["tsy"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["hon"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["yon"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukw"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukw"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "ROOT"],
+        breakdown: [["te", "DU"], ["sw"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "ROOT"],
+        breakdown: [["te", "DU"], ["hon"], "ROOT"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "ROOT"],
+        breakdown: [["te", "DU"], ["yon"], "ROOT"],
       },
     ],
   },

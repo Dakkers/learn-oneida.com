@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["k"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["hs"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["l"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yu"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["w"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ty"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yaky"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["tsy"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["hy"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ky"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["tw"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yakw"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["sw"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["lu"], "ROOT", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["ku"], "ROOT", ["kweʔ", "PAST"]],
       },
     ],
   },
