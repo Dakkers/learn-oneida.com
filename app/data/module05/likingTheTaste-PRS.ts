@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT"],
+        breakdown: [["wak"], "e·ká·se’"],
       },
       {
-        breakdown: [["hs"], "ROOT"],
+        breakdown: [["s"], "e·ká·se’"],
       },
       {
-        breakdown: [["ho"], "ROOT"],
+        breakdown: [["law"], "e·ká·se’"],
       },
       {
-        breakdown: [["yako"], "ROOT"],
+        breakdown: [["yakaw"], "e·ká·se’"],
       },
       {
-        breakdown: [["yo"], "ROOT"],
+        breakdown: [["yaw"], "e·ká·se’"],
       },
       {
-        breakdown: [["yuky"], "ROOT"],
+        breakdown: [["yukn"], "e·ká·se’"],
       },
       {
-        breakdown: [["yuky"], "ROOT"],
+        breakdown: [["yukn"], "e·ká·se’"],
       },
       {
-        breakdown: [["tsy"], "ROOT"],
+        breakdown: [["sn"], "e·ká·se’"],
       },
       {
-        breakdown: [["hon"], "ROOT"],
+        breakdown: [["lon"], "e·ká·se’"],
       },
       {
-        breakdown: [["yon"], "ROOT"],
+        breakdown: [["yon"], "e·ká·se’"],
       },
       {
-        breakdown: [["yukw"], "ROOT"],
+        breakdown: [["yukw"], "e·ká·se’"],
       },
       {
-        breakdown: [["yukw"], "ROOT"],
+        breakdown: [["yukw"], "e·ká·se’"],
       },
       {
-        breakdown: [["sw"], "ROOT"],
+        breakdown: [["sw"], "e·ká·se’"],
       },
       {
-        breakdown: [["hon"], "ROOT"],
+        breakdown: [["lon"], "e·ká·se’"],
       },
       {
-        breakdown: [["yon"], "ROOT"],
+        breakdown: [["yon"], "e·ká·se’"],
       },
     ],
   },

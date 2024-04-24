@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["wak"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["hs"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["hs"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["ho"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["haw"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yakaw"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yaw"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yukn"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yukn"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["tsy"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["sn"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["hon"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["hon"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yon"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yukw"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yukw"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sw"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["sw"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["hon"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["hon"], "e·ká·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ROOT", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yon"], "e·ká·s", ["kweʔ", "PAST"]],
       },
     ],
   },

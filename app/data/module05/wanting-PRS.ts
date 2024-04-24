@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "ROOT"],
+        breakdown: [["te", "DU"], ["wak"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["hs"], "ROOT"],
+        breakdown: [["te", "DU"], ["hs"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["ho"], "ROOT"],
+        breakdown: [["te", "DU"], ["ho"], "tuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "ROOT"],
+        breakdown: [["te", "DU"], ["yako"], "tuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "ROOT"],
+        breakdown: [["te", "DU"], ["yo"], "tuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yuky"], "ROOT"],
+        breakdown: [["te", "DU"], ["yuky"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yuky"], "ROOT"],
+        breakdown: [["te", "DU"], ["yuky"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["tsy"], "ROOT"],
+        breakdown: [["te", "DU"], ["tsy"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["hon"], "ROOT"],
+        breakdown: [["te", "DU"], ["hon"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yon"], "ROOT"],
+        breakdown: [["te", "DU"], ["yon"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yukw"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukw"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yukw"], "ROOT"],
+        breakdown: [["te", "DU"], ["yukw"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["sw"], "ROOT"],
+        breakdown: [["te", "DU"], ["sw"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["hon"], "ROOT"],
+        breakdown: [["te", "DU"], ["hon"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yon"], "ROOT"],
+        breakdown: [["te", "DU"], ["yon"], "atuhutsyoní"],
       },
     ],
   },
