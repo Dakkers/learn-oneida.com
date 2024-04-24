@@ -17,12 +17,6 @@ import beginToDoSomethingFutData from "./begin_to_do_something-FUT";
 import beginToDoSomethingHabData from "./begin_to_do_something-HAB";
 import beginToDoSomethingIfutData from "./begin_to_do_something-IFUT";
 import beginToDoSomethingPfvData from "./begin_to_do_something-PFV";
-import chewCmdData from "./chew-CMD";
-import chewDefData from "./chew-DEF";
-import chewFutData from "./chew-FUT";
-import chewHabData from "./chew-HAB";
-import chewIfutData from "./chew-IFUT";
-import chewPfvData from "./chew-PFV";
 import cookCmdData from "./cook-CMD";
 import cookDefData from "./cook-DEF";
 import cookFutData from "./cook-FUT";
@@ -41,6 +35,12 @@ import doSomethingFutData from "./do_something-FUT";
 import doSomethingHabData from "./do_something-HAB";
 import doSomethingIfutData from "./do_something-IFUT";
 import doSomethingPfvData from "./do_something-PFV";
+import eatAMealCmdData from "./eatAMeal-CMD";
+import eatAMealDefData from "./eatAMeal-DEF";
+import eatAMealFutData from "./eatAMeal-FUT";
+import eatAMealHabData from "./eatAMeal-HAB";
+import eatAMealIfutData from "./eatAMeal-IFUT";
+import eatAMealPfvData from "./eatAMeal-PFV";
 import getDressedUpCmdData from "./get_dressed_up-CMD";
 import getDressedUpDefData from "./get_dressed_up-DEF";
 import getDressedUpFutData from "./get_dressed_up-FUT";
@@ -181,12 +181,12 @@ const mapping = {
   beginToDoSomethingHab: beginToDoSomethingHabData,
   beginToDoSomethingIfut: beginToDoSomethingIfutData,
   beginToDoSomethingPfv: beginToDoSomethingPfvData,
-  chewCmd: chewCmdData,
-  chewDef: chewDefData,
-  chewFut: chewFutData,
-  chewHab: chewHabData,
-  chewIfut: chewIfutData,
-  chewPfv: chewPfvData,
+  eatAMealCmd: eatAMealCmdData,
+  eatAMealDef: eatAMealDefData,
+  eatAMealFut: eatAMealFutData,
+  eatAMealHab: eatAMealHabData,
+  eatAMealIfut: eatAMealIfutData,
+  eatAMealPfv: eatAMealPfvData,
   cookCmd: cookCmdData,
   cookDef: cookDefData,
   cookFut: cookFutData,
@@ -338,10 +338,10 @@ export type ActiveVerbDatum = {
     | "answer"
     | "bathe"
     | "beginToDoSomething"
-    | "chew"
     | "cook"
     | "defecate"
     | "doSomething"
+    | "eatAMeal"
     | "getDressedUp"
     | "getSelfUp"
     | "getTired"
@@ -378,8 +378,8 @@ export const activeVerbsList = (
       en: "begin (to do something)",
     },
     {
-      key: "chew",
-      en: "chew",
+      key: "eatAMeal",
+      en: "eat a meal",
     },
     {
       key: "cook",
@@ -395,7 +395,7 @@ export const activeVerbsList = (
     },
     {
       key: "getDressedUp",
-      en: "get dressed / fixed up",
+      en: "get dressed, fixed up",
     },
     {
       key: "getSelfUp",
