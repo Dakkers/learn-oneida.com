@@ -290,7 +290,7 @@ function SettingsMenu({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <Settings />
+        <Settings className="print:hidden" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuItem onClick={() => toggleColumn("pronounEnglish")}>
