@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], ["e", "EP"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["wak"], ["e", "EP"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["sa"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["lo"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["yako"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["yo"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["yukni"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["yukni"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["sni"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["loti"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["yoti"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["yukwa"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["yukwa"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["swa"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["loti"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "’nikuhlatshanitu·", ["né·", "PAST"]],
+        breakdown: [["yoti"], "’nikuhlatshanitú·", ["neʔ", "PAST"]],
       },
     ],
   },
