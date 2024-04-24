@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["wak"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["wak"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ho"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["ho"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yako"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yako"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yo"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yo"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yuky"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yuky"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yuky"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yuky"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hon"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["hon"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yon"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yon"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yukw"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yukw"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yukw"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yukw"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hon"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["hon"], "atshanuní", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yon"], "ROOT", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yon"], "atshanuní", ["hakeʔ", "FUT"]],
       },
     ],
   },

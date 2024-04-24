@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["wak"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["hs"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["hs"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["ho"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ho"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yako"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yo"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yuky"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yuky"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["tsy"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["tsy"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["hon"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["hon"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yon"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yukw"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yukw"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sw"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["sw"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["hon"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["hon"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yon"], "atunhá·la", ["hkweʔ", "PAST"]],
       },
     ],
   },

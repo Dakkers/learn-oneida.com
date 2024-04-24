@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["wak"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["hs"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["hs"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["ho"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["ho"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yako"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yo"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yuky"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yuky"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["tsy"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["tsy"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["hon"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["hon"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yon"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukw"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yukw"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sw"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["sw"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["hon"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["hon"], "atshanuní", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ROOT", ["hné·", "PAST"]],
+        breakdown: [["yon"], "atshanuní", ["hné·", "PAST"]],
       },
     ],
   },

@@ -6,13 +6,13 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["s"], "ROOT", ["ak", "FUT"]],
+        breakdown: [["s"], "atunhá·l", ["ak", "FUT"]],
       },
       {
-        breakdown: [["tsy"], "ROOT", ["ak", "FUT"]],
+        breakdown: [["tsy"], "atunhá·l", ["ak", "FUT"]],
       },
       {
-        breakdown: [["sw"], "ROOT", ["ak", "FUT"]],
+        breakdown: [["sw"], "atunhá·l", ["ak", "FUT"]],
       },
     ],
   },
