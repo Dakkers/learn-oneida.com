@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: [["k"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["s"], "ROOT"],
+        breakdown: [["s"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["la"], "ROOT"],
+        breakdown: [["la"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["ye"], "ROOT"],
+        breakdown: [["ye"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["ka"], "ROOT"],
+        breakdown: [["ka"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["tni"], "ROOT"],
+        breakdown: [["tni"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["yakni"], "ROOT"],
+        breakdown: [["yakni"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["sni"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["ni"], "ROOT"],
+        breakdown: [["ni"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["kni"], "ROOT"],
+        breakdown: [["kni"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["twa"], "ROOT"],
+        breakdown: [["twa"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["yakwa"], "ROOT"],
+        breakdown: [["yakwa"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["swa"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["lati"], "ROOT"],
+        breakdown: [["lati"], "nikʌhtlúha"],
       },
       {
-        breakdown: [["kuti"], "ROOT"],
+        breakdown: [["kuti"], "nikʌhtlúha"],
       },
     ],
   },

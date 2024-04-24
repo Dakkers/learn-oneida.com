@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["k"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["s"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["s"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["la"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["la"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["ye"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ye"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["ka"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ka"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["tni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["tni"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yakni"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["sni"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["ni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["ni"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["kni"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["kni"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["twa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["twa"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yakwa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["yakwa"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["swa"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["lati"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["lati"], "núnha", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["kuti"], "ROOT", ["hkweʔ", "PAST"]],
+        breakdown: [["kuti"], "núnha", ["hkweʔ", "PAST"]],
       },
     ],
   },

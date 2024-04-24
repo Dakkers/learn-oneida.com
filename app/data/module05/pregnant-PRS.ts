@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ROOT"],
+        breakdown: [["k"], "núnha’"],
       },
       {
-        breakdown: [["s"], "ROOT"],
+        breakdown: [["s"], "núnha’"],
       },
       {
-        breakdown: [["la"], "ROOT"],
+        breakdown: [["la"], "núnha’"],
       },
       {
-        breakdown: [["ye"], "ROOT"],
+        breakdown: [["ye"], "núnha’"],
       },
       {
-        breakdown: [["ka"], "ROOT"],
+        breakdown: [["ka"], "núnha’"],
       },
       {
-        breakdown: [["tni"], "ROOT"],
+        breakdown: [["tni"], "núnha’"],
       },
       {
-        breakdown: [["yakni"], "ROOT"],
+        breakdown: [["yakni"], "núnha’"],
       },
       {
-        breakdown: [["sni"], "ROOT"],
+        breakdown: [["sni"], "núnha’"],
       },
       {
-        breakdown: [["ni"], "ROOT"],
+        breakdown: [["ni"], "núnha’"],
       },
       {
-        breakdown: [["kni"], "ROOT"],
+        breakdown: [["kni"], "núnha’"],
       },
       {
-        breakdown: [["twa"], "ROOT"],
+        breakdown: [["twa"], "núnha’"],
       },
       {
-        breakdown: [["yakwa"], "ROOT"],
+        breakdown: [["yakwa"], "núnha’"],
       },
       {
-        breakdown: [["swa"], "ROOT"],
+        breakdown: [["swa"], "núnha’"],
       },
       {
-        breakdown: [["lati"], "ROOT"],
+        breakdown: [["lati"], "núnha’"],
       },
       {
-        breakdown: [["kuti"], "ROOT"],
+        breakdown: [["kuti"], "núnha’"],
       },
     ],
   },
