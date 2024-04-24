@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["wak"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["sa"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["lo"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yako"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yo"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yukni"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yukni"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["sni"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["loti"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yoti"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yukwa"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yukwa"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["swa"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["loti"], "nehlákwas", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "ROOT", ["kweʔ", "PAST"]],
+        breakdown: [["yoti"], "nehlákwas", ["kweʔ", "PAST"]],
       },
     ],
   },
