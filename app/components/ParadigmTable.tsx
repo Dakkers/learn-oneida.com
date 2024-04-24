@@ -166,7 +166,6 @@ export function ParadigmTable({
                   <TableRowWrapper
                     key={i}
                     row={row}
-                    suffix={data.suffix}
                     typeFallback={data.type}
                     whispered={data.whispered}
                   />
@@ -326,7 +325,6 @@ interface ColumnVisibility {
 
 export interface ParadigmData {
   phrases: Row[];
-  suffix?: TextBreakdownSuffix;
   translation: string;
   type?: BreakdownType;
   whispered?: boolean;
@@ -350,7 +348,7 @@ interface ParadigmTableContextProps {
 }
 
 export function createParadigmData(
-  data: Pick<ParadigmData, "translation" | "suffix" | "type" | "whispered"> & {
+  data: Pick<ParadigmData, "translation" | "type" | "whispered"> & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },
   allowedPronouns?: Pronoun[]
