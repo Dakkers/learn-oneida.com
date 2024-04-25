@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["k"], "ukwe’táksʌ"],
+        breakdown: [["k"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["s"], "ukwe’táksʌ"],
+        breakdown: [["s"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["l"], "ukwe’táksʌ"],
+        breakdown: [["l"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["yak"], "ukwe’táksʌ"],
+        breakdown: [["yak"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["y"], "ukwe’táksʌ"],
+        breakdown: [["y"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["tn"], "ukwe’táksʌ"],
+        breakdown: [["tn"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["yakn"], "ukwe’táksʌ"],
+        breakdown: [["yakn"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["sn"], "ukwe’táksʌ"],
+        breakdown: [["sn"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["n"], "ukwe’táksʌ"],
+        breakdown: [["n"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["kn"], "ukwe’táksʌ"],
+        breakdown: [["kn"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["ty"], "ukwe’táksʌ"],
+        breakdown: [["ty"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["yaky"], "ukwe’táksʌ"],
+        breakdown: [["yaky"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["tsy"], "ukwe’táksʌ"],
+        breakdown: [["tsy"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["lʌn"], "ukwe’táksʌ"],
+        breakdown: [["lʌn"], "ukweʔtáksʌ"],
       },
       {
-        breakdown: [["kun"], "ukwe’táksʌ"],
+        breakdown: [["kun"], "ukweʔtáksʌ"],
       },
     ],
   },

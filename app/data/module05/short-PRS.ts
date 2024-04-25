@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} VERB",
-    type: "PB",
+    type: "PR",
     phrases: [
       {
-        breakdown: ["kʌ’ ni", ["k"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["k"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["s"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["s"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["la"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["la"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["ye"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["ye"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["ka"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["ka"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["tni"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["tni"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["yakni"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["yakni"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["sni"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["sni"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["ni"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["ni"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["kni"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["kni"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["twa"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["twa"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["yakwa"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["yakwa"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["swa"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["swa"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["lati"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["lati"], "hnʌyésha"],
       },
       {
-        breakdown: ["kʌ’ ni", ["kuti"], "hnʌyésha"],
+        breakdown: ["kʌʔ ni", ["kuti"], "hnʌyésha"],
       },
     ],
   },

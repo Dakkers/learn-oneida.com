@@ -1455,7 +1455,7 @@ export const physicalTenseData: Array<Partial<TenseDatum>> = [
       on: ["wak", "elha·lé", "hkweʔ"],
       en: "I was ready for it but it didn't happen",
     },
-    fut: ["ʌ", "wak", "elha·l", "ákeʔ"], // TODO: also ʌwakelha·léke’
+    fut: ["ʌ", "wak", "elha·l", "ákeʔ"], // TODO: also ʌwakelha·lékeʔ
     ifut: ["a", "·uk", "elha·l", "ákeʔ"],
     cmd: ["s", "alha·l", "ák"],
   },
@@ -1671,6 +1671,16 @@ export const module5VerbsList = [
 
 
 
+export const STATIVE_VERB_TENSE_LIST = ["prs", "past", "fut", "ifut", "cmd"] as const;
+export type StativeVerbTense = (typeof STATIVE_VERB_TENSE_LIST)[number];
+
+export const stativeVerbTenseMap = {
+  cmd: "Command",
+  fut: "Future",
+  ifut: "Indefinite Future",
+  past: "Past",
+  prs: "Present",
+} as const;
 
 
 export type Module5VerbDatum = {

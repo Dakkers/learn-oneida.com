@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "tsi’yohá"],
+        breakdown: [["wak"], "tsiʔyohá"],
       },
       {
-        breakdown: [["sa"], "tsi’yohá"],
+        breakdown: [["sa"], "tsiʔyohá"],
       },
       {
-        breakdown: [["lo"], "tsi’yohá"],
+        breakdown: [["lo"], "tsiʔyohá"],
       },
       {
-        breakdown: [["yako"], "tsi’yohá"],
+        breakdown: [["yako"], "tsiʔyohá"],
       },
       {
-        breakdown: [["yo"], "tsi’yohá"],
+        breakdown: [["yo"], "tsiʔyohá"],
       },
       {
-        breakdown: [["yukni"], "tsi’yohá"],
+        breakdown: [["yukni"], "tsiʔyohá"],
       },
       {
-        breakdown: [["yukni"], "tsi’yohá"],
+        breakdown: [["yukni"], "tsiʔyohá"],
       },
       {
-        breakdown: [["sni"], "tsi’yohá"],
+        breakdown: [["sni"], "tsiʔyohá"],
       },
       {
-        breakdown: [["loti"], "tsi’yohá"],
+        breakdown: [["loti"], "tsiʔyohá"],
       },
       {
-        breakdown: [["yoti"], "tsi’yohá"],
+        breakdown: [["yoti"], "tsiʔyohá"],
       },
       {
-        breakdown: [["yukwa"], "tsi’yohá"],
+        breakdown: [["yukwa"], "tsiʔyohá"],
       },
       {
-        breakdown: [["yukwa"], "tsi’yohá"],
+        breakdown: [["yukwa"], "tsiʔyohá"],
       },
       {
-        breakdown: [["swa"], "tsi’yohá"],
+        breakdown: [["swa"], "tsiʔyohá"],
       },
       {
-        breakdown: [["loti"], "tsi’yohá"],
+        breakdown: [["loti"], "tsiʔyohá"],
       },
       {
-        breakdown: [["yoti"], "tsi’yohá"],
+        breakdown: [["yoti"], "tsiʔyohá"],
       },
     ],
   },

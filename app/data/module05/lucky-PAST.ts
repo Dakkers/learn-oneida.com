@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["wak"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sa"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["sa"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lo"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["lo"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yako"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["yako"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yo"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["yo"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["yukni"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["yukni"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sni"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["sni"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["loti"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["yoti"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["yukwa"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["yukwa"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["swa"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["swa"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["loti"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "atla’swiyo", ["hné·", "PAST"]],
+        breakdown: [["yoti"], "atlaʔswiyo", ["hné·", "PAST"]],
       },
     ],
   },

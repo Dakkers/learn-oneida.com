@@ -29,12 +29,11 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
     ) {
       return word;
     }
-    const lookupIndex = Math.max(
-      vowels.indexOf(char),
-      vowelsAccented.indexOf(char)
-    );
+    const index1 = vowels.indexOf(char);
+    const index2 = vowelsAccented.indexOf(char);
+    const lookupIndex = Math.max(index1, index2);
     const result = word.split("");
-    result[index] = vowelsWhispered[lookupIndex];
+    result[index] = index1 >= 0 ? vowelsWhispered[lookupIndex] : vowelsWhisperedAccented[lookupIndex];
     return result.join("");
   } else {
     return word.replace(WHISPER_REGEX, "");

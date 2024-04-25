@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "anúhte’"],
+        breakdown: [["wak"], "anúhteʔ"],
       },
       {
-        breakdown: [["hs"], "anúhte’"],
+        breakdown: [["hs"], "anúhteʔ"],
       },
       {
-        breakdown: [["ho"], "anúhte’"],
+        breakdown: [["ho"], "anúhteʔ"],
       },
       {
-        breakdown: [["yako"], "anúhte’"],
+        breakdown: [["yako"], "anúhteʔ"],
       },
       {
-        breakdown: [["yo"], "anúhte’"],
+        breakdown: [["yo"], "anúhteʔ"],
       },
       {
-        breakdown: [["yuky"], "anúhte’"],
+        breakdown: [["yuky"], "anúhteʔ"],
       },
       {
-        breakdown: [["yuky"], "anúhte’"],
+        breakdown: [["yuky"], "anúhteʔ"],
       },
       {
-        breakdown: [["tsy"], "anúhte’"],
+        breakdown: [["tsy"], "anúhteʔ"],
       },
       {
-        breakdown: [["hon"], "anúhte’"],
+        breakdown: [["hon"], "anúhteʔ"],
       },
       {
-        breakdown: [["yon"], "anúhte’"],
+        breakdown: [["yon"], "anúhteʔ"],
       },
       {
-        breakdown: [["yukw"], "anúhte’"],
+        breakdown: [["yukw"], "anúhteʔ"],
       },
       {
-        breakdown: [["yukw"], "anúhte’"],
+        breakdown: [["yukw"], "anúhteʔ"],
       },
       {
-        breakdown: [["sw"], "anúhte’"],
+        breakdown: [["sw"], "anúhteʔ"],
       },
       {
-        breakdown: [["hon"], "anúhte’"],
+        breakdown: [["hon"], "anúhteʔ"],
       },
       {
-        breakdown: [["yon"], "anúhte’"],
+        breakdown: [["yon"], "anúhteʔ"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "nuhwáktanihe’"],
+        breakdown: [["wak"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["sa"], "nuhwáktanihe’"],
+        breakdown: [["sa"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["lo"], "nuhwáktanihe’"],
+        breakdown: [["lo"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["yako"], "nuhwáktanihe’"],
+        breakdown: [["yako"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["yo"], "nuhwáktanihe’"],
+        breakdown: [["yo"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["yukni"], "nuhwáktanihe’"],
+        breakdown: [["yukni"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["yukni"], "nuhwáktanihe’"],
+        breakdown: [["yukni"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["sni"], "nuhwáktanihe’"],
+        breakdown: [["sni"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["loti"], "nuhwáktanihe’"],
+        breakdown: [["loti"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["yoti"], "nuhwáktanihe’"],
+        breakdown: [["yoti"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["yukwa"], "nuhwáktanihe’"],
+        breakdown: [["yukwa"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["yukwa"], "nuhwáktanihe’"],
+        breakdown: [["yukwa"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["swa"], "nuhwáktanihe’"],
+        breakdown: [["swa"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["loti"], "nuhwáktanihe’"],
+        breakdown: [["loti"], "nuhwáktaniheʔ"],
       },
       {
-        breakdown: [["yoti"], "nuhwáktanihe’"],
+        breakdown: [["yoti"], "nuhwáktaniheʔ"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], ["e", "EP"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["wak"], ["e", "EP"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["hsa"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["lo"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["yako"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["yo"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["yukni"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["yukni"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["sni"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["loti"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["yoti"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["yukwa"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["yukwa"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["swa"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["loti"], "ʔnikúlhaleʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "’nikúlhale’"],
+        breakdown: [["te", "DU"], ["yoti"], "ʔnikúlhaleʔ"],
       },
     ],
   },

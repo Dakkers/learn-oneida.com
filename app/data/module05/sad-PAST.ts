@@ -11,51 +11,51 @@ export default createParadigmData(
           ["te", "DU"],
           ["wak"],
           ["e", "EP"],
-          "a’nikuhlya’kú",
+          "aʔnikuhlyaʔkú",
           ["neʔ", "PAST"],
         ],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["hs"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["lo"], "ʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yako"], "ʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yo"], "ʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yuky"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yuky"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["sn"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["lon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yukw"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yukw"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["sw"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["lon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "a’nikuhlya’kú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
     ],
   },

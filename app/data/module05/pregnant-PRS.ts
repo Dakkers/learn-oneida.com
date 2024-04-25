@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} VERB",
-    type: "PB",
+    type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "núnha’"],
+        breakdown: [["k"], "núnhaʔ"],
       },
       {
-        breakdown: [["s"], "núnha’"],
+        breakdown: [["s"], "núnhaʔ"],
       },
       {
-        breakdown: [["la"], "núnha’"],
+        breakdown: [["la"], "núnhaʔ"],
       },
       {
-        breakdown: [["ye"], "núnha’"],
+        breakdown: [["ye"], "núnhaʔ"],
       },
       {
-        breakdown: [["ka"], "núnha’"],
+        breakdown: [["ka"], "núnhaʔ"],
       },
       {
-        breakdown: [["tni"], "núnha’"],
+        breakdown: [["tni"], "núnhaʔ"],
       },
       {
-        breakdown: [["yakni"], "núnha’"],
+        breakdown: [["yakni"], "núnhaʔ"],
       },
       {
-        breakdown: [["sni"], "núnha’"],
+        breakdown: [["sni"], "núnhaʔ"],
       },
       {
-        breakdown: [["ni"], "núnha’"],
+        breakdown: [["ni"], "núnhaʔ"],
       },
       {
-        breakdown: [["kni"], "núnha’"],
+        breakdown: [["kni"], "núnhaʔ"],
       },
       {
-        breakdown: [["twa"], "núnha’"],
+        breakdown: [["twa"], "núnhaʔ"],
       },
       {
-        breakdown: [["yakwa"], "núnha’"],
+        breakdown: [["yakwa"], "núnhaʔ"],
       },
       {
-        breakdown: [["swa"], "núnha’"],
+        breakdown: [["swa"], "núnhaʔ"],
       },
       {
-        breakdown: [["lati"], "núnha’"],
+        breakdown: [["lati"], "núnhaʔ"],
       },
       {
-        breakdown: [["kuti"], "núnha’"],
+        breakdown: [["kuti"], "núnhaʔ"],
       },
     ],
   },

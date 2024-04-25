@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["wak"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["s"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["s"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lo"], "tatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["lo"], "tatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yako"], "tatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["yako"], "tatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yo"], "tatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["yo"], "tatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["yuky"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["yuky"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["tsy"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["tsy"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lon"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["lon"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yon"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["yon"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["yukw"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["yukw"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["swa"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["swa"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lon"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["lon"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yon"], "atatewyʌnʌta’u·", ["hné·", "PAST"]],
+        breakdown: [["yon"], "atatewyʌnʌtaʔu·", ["hné·", "PAST"]],
       },
     ],
   },

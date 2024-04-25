@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "e·ká·se’"],
+        breakdown: [["wak"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["s"], "e·ká·se’"],
+        breakdown: [["s"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["law"], "e·ká·se’"],
+        breakdown: [["law"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["yakaw"], "e·ká·se’"],
+        breakdown: [["yakaw"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["yaw"], "e·ká·se’"],
+        breakdown: [["yaw"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["yukn"], "e·ká·se’"],
+        breakdown: [["yukn"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["yukn"], "e·ká·se’"],
+        breakdown: [["yukn"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["sn"], "e·ká·se’"],
+        breakdown: [["sn"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["lon"], "e·ká·se’"],
+        breakdown: [["lon"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["yon"], "e·ká·se’"],
+        breakdown: [["yon"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["yukw"], "e·ká·se’"],
+        breakdown: [["yukw"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["yukw"], "e·ká·se’"],
+        breakdown: [["yukw"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["sw"], "e·ká·se’"],
+        breakdown: [["sw"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["lon"], "e·ká·se’"],
+        breakdown: [["lon"], "e·ká·seʔ"],
       },
       {
-        breakdown: [["yon"], "e·ká·se’"],
+        breakdown: [["yon"], "e·ká·seʔ"],
       },
     ],
   },

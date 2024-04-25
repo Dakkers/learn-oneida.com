@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["k"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["hs"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["h"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yak"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yak"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["y"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["y"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tn"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["tn"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakn"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yakn"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sn"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["sn"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hn"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["hn"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kn"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["kn"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["ty"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hʌn"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["hʌn"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kun"], "ukwe’táksʌ", ["hakeʔ", "FUT"]],
+        breakdown: [["ʌ", "FUT"], ["kun"], "ukweʔtáksʌ", ["hakeʔ", "FUT"]],
       },
     ],
   },

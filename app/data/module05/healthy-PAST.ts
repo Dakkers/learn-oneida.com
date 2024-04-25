@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["wak"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["hs"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["hs"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "ta’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["lo"], "taʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "ta’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["yako"], "taʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "ta’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["yo"], "taʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["yuky"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yuky"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["yuky"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["tsy"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["tsy"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lon"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["lon"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["yon"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["yukw"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukw"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["yukw"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sw"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["sw"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lon"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["lon"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yon"], "ata’kali·té·", ["kweʔ", "PAST"]],
+        breakdown: [["yon"], "ataʔkali·té·", ["kweʔ", "PAST"]],
       },
     ],
   },

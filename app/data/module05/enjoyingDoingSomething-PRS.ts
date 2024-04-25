@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "u’wéskwanihe’"],
+        breakdown: [["wak"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["s"], "u’wéskwanihe’"],
+        breakdown: [["s"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["la"], "u’wéskwanihe’"],
+        breakdown: [["la"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["yaka"], "u’wéskwanihe’"],
+        breakdown: [["yaka"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["ya"], "u’wéskwanihe’"],
+        breakdown: [["ya"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["yukn"], "u’wéskwanihe’"],
+        breakdown: [["yukn"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["yukn"], "u’wéskwanihe’"],
+        breakdown: [["yukn"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["sn"], "u’wéskwanihe’"],
+        breakdown: [["sn"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["lon"], "u’wéskwanihe’"],
+        breakdown: [["lon"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["yon"], "u’wéskwanihe’"],
+        breakdown: [["yon"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["yuky"], "u’wéskwanihe’"],
+        breakdown: [["yuky"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["yuky"], "u’wéskwanihe’"],
+        breakdown: [["yuky"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["tsy"], "u’wéskwanihe’"],
+        breakdown: [["tsy"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["lon"], "u’wéskwanihe’"],
+        breakdown: [["lon"], "uʔwéskwaniheʔ"],
       },
       {
-        breakdown: [["yon"], "u’wéskwanihe’"],
+        breakdown: [["yon"], "uʔwéskwaniheʔ"],
       },
     ],
   },

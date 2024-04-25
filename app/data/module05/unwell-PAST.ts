@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["wak"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["sa"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["lo"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["yako"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["yo"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["yukni"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["yukni"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["sni"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["loti"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["yoti"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["yukwa"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["yukwa"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["swa"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["loti"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "tsi’yohá", ["hkweʔ", "PAST"]],
+        breakdown: [["yoti"], "tsiʔyohá", ["hkweʔ", "PAST"]],
       },
     ],
   },

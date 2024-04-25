@@ -11,51 +11,51 @@ export default createParadigmData(
           ["te", "DU"],
           ["wak"],
           ["e", "EP"],
-          "’nikúlhale’",
+          "ʔnikúlhaleʔ",
           ["á", "JOIN"], ["hkweʔ", "PAST"],
         ],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["hsa"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["lo"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yako"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yo"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yukni"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yukni"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["sni"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["loti"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yoti"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yukwa"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yukwa"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["swa"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["loti"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "’nikúlhale’", ["á", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["te", "DU"], ["yoti"], "ʔnikúlhaleʔ", ["á", "JOIN"], ["hkweʔ", "PAST"]],
       },
     ],
   },

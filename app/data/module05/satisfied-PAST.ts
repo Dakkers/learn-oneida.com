@@ -11,51 +11,51 @@ export default createParadigmData(
           ["t", "CIS"],
           ["wak"],
           ["e", "EP"],
-          "’nikuhliyo",
+          "ʔnikuhliyo",
           ["hné·", "PAST"],
         ],
       },
       {
-        breakdown: [["ti", "CIS"], ["sa"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["ti", "CIS"], ["sa"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["lo"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["lo"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yako"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["yako"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yo"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["yo"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yukni"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["yukni"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yukni"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["yukni"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["ti", "CIS"], ["sni"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["ti", "CIS"], ["sni"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["loti"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["loti"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yoti"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["yoti"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yukwa"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["yukwa"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yukwa"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["yukwa"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["ti", "CIS"], ["swa"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["ti", "CIS"], ["swa"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["loti"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["loti"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yoti"], "’nikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["yoti"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
     ],
   },

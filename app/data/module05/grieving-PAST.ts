@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], ["e", "EP"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["wak"], ["e", "EP"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sa"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["sa"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lo"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["lo"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yako"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["yako"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yo"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["yo"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["yukni"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["yukni"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["sni"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["sni"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["loti"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["yoti"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["yukwa"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["yukwa"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["swa"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["swa"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["loti"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["loti"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "’nikuhlaksʌʔ", ["hné·", "PAST"]],
+        breakdown: [["yoti"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],
       },
     ],
   },

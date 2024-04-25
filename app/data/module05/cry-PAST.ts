@@ -4,7 +4,7 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be VERB",
-    type: "PB",
+    type: "PR",
     phrases: [
       {
         breakdown: [["te", "DU"], ["k"], "ashʌ́thos", ["kweʔ", "PAST"]],

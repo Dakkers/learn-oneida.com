@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "atla’swiyó"],
+        breakdown: [["wak"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["sa"], "atla’swiyó"],
+        breakdown: [["sa"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["lo"], "atla’swiyó"],
+        breakdown: [["lo"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["yako"], "atla’swiyó"],
+        breakdown: [["yako"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["yo"], "atla’swiyó"],
+        breakdown: [["yo"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["yukni"], "atla’swiyó"],
+        breakdown: [["yukni"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["yukni"], "atla’swiyó"],
+        breakdown: [["yukni"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["sni"], "atla’swiyó"],
+        breakdown: [["sni"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["loti"], "atla’swiyó"],
+        breakdown: [["loti"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["yoti"], "atla’swiyó"],
+        breakdown: [["yoti"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["yukwa"], "atla’swiyó"],
+        breakdown: [["yukwa"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["yukwa"], "atla’swiyó"],
+        breakdown: [["yukwa"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["swa"], "atla’swiyó"],
+        breakdown: [["swa"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["loti"], "atla’swiyó"],
+        breakdown: [["loti"], "atlaʔswiyó"],
       },
       {
-        breakdown: [["yoti"], "atla’swiyó"],
+        breakdown: [["yoti"], "atlaʔswiyó"],
       },
     ],
   },

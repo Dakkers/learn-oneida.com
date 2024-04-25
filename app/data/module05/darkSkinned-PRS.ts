@@ -12,50 +12,50 @@ export default createParadigmData(
           ["t", "CIS"],
           ["wak"],
           ["e", "EP"],
-          "hná·kalahse’",
+          "hná·kalahseʔ",
         ],
       },
       {
-        breakdown: [["te", "DU"], ["ti", "CIS"], ["hsa"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["ti", "CIS"], ["hsa"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["ho"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["ho"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["yako"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yako"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["yo"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yo"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["yukni"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yukni"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["yukni"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yukni"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["ti", "CIS"], ["sni"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["ti", "CIS"], ["sni"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["hoti"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["hoti"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["yoti"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yoti"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["yukwa"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yukwa"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["yukwa"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yukwa"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["ti", "CIS"], ["swa"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["ti", "CIS"], ["swa"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["hoti"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["hoti"], "hná·kalahseʔ"],
       },
       {
-        breakdown: [["te", "DU"], ["t", "CIS"], ["yoti"], "hná·kalahse’"],
+        breakdown: [["te", "DU"], ["t", "CIS"], ["yoti"], "hná·kalahseʔ"],
       },
     ],
   },

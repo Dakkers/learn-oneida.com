@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "ata’kali·té·"],
+        breakdown: [["wak"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["hs"], "ata’kali·té·"],
+        breakdown: [["hs"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["lo"], "ta’kali·té·"],
+        breakdown: [["lo"], "taʔkali·té·"],
       },
       {
-        breakdown: [["yako"], "ta’kali·té·"],
+        breakdown: [["yako"], "taʔkali·té·"],
       },
       {
-        breakdown: [["yo"], "ta’kali·té·"],
+        breakdown: [["yo"], "taʔkali·té·"],
       },
       {
-        breakdown: [["yuky"], "ata’kali·té·"],
+        breakdown: [["yuky"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["yuky"], "ata’kali·té·"],
+        breakdown: [["yuky"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["tsy"], "ata’kali·té·"],
+        breakdown: [["tsy"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["lon"], "ata’kali·té·"],
+        breakdown: [["lon"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["yon"], "ata’kali·té·"],
+        breakdown: [["yon"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["yukw"], "ata’kali·té·"],
+        breakdown: [["yukw"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["yukw"], "ata’kali·té·"],
+        breakdown: [["yukw"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["sw"], "ata’kali·té·"],
+        breakdown: [["sw"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["lon"], "ata’kali·té·"],
+        breakdown: [["lon"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["yon"], "ata’kali·té·"],
+        breakdown: [["yon"], "ataʔkali·té·"],
       },
     ],
   },

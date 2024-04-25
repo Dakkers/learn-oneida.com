@@ -4,10 +4,10 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might VERB",
-    type: "PB",
+    type: "PR",
     phrases: [
       {
-        breakdown: ["kʌʔ n", ["a·", "IFUT"], ["k"], "á·s", ["hakeʔ", "IFUT"]],
+        breakdown: ["kʌʔ n", ["a", "IFUT"], ["k"], "á·s", ["hakeʔ", "IFUT"]],
       },
       {
         breakdown: ["kʌʔ n", ["a", "IFUT"], ["hs"], "á·s", ["hakeʔ", "IFUT"]],

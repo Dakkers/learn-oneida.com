@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might VERB",
-    type: "PB",
+    type: "PR",
     phrases: [
       {
-        breakdown: [["a·", "IFUT"], ["k"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["k"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hs"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["l"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["l"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yu"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yu"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["w"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["w"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ty"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["ty"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yaky"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yaky"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["tsy"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hy"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["ky"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["tw"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["tw"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yakw"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["sw"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["sw"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["lu"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["lu"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "atuhkálya’ks", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["ku"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],
       },
     ],
   },

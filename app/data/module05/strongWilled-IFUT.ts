@@ -11,7 +11,7 @@ export default createParadigmData(
           ["a·", "IFUT"],
           ["uk"],
           ["e", "EP"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -19,7 +19,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["hs"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -27,7 +27,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["ho"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -35,7 +35,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["yako"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -43,7 +43,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["yo"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -51,7 +51,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["yukni"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -59,7 +59,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["yukni"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -67,7 +67,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["sni"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -75,7 +75,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["hoti"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -83,7 +83,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["yoti"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -91,7 +91,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["yukwa"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -99,7 +99,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["yukwa"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -107,7 +107,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["swa"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -115,7 +115,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["hoti"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },
@@ -123,7 +123,7 @@ export default createParadigmData(
         breakdown: [
           ["a", "IFUT"],
           ["yoti"],
-          "’nikuhlatshanítu",
+          "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],
       },

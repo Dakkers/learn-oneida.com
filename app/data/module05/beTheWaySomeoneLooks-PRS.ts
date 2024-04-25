@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} VERB",
-    type: "PB",
+    type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "ya’tó·tʌ"],
+        breakdown: [["k"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["s"], "ya’tó·tʌ"],
+        breakdown: [["s"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["la"], "ya’tó·tʌ"],
+        breakdown: [["la"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["ye"], "ya’tó·tʌ"],
+        breakdown: [["ye"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["ka"], "ya’tó·tʌ"],
+        breakdown: [["ka"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["tni"], "ya’tó·tʌ"],
+        breakdown: [["tni"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["yakni"], "ya’tó·tʌ"],
+        breakdown: [["yakni"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["sni"], "ya’tó·tʌ"],
+        breakdown: [["sni"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["ni"], "ya’tó·tʌ"],
+        breakdown: [["ni"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["kni"], "ya’tó·tʌ"],
+        breakdown: [["kni"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["twa"], "ya’tó·tʌ"],
+        breakdown: [["twa"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["yakwa"], "ya’tó·tʌ"],
+        breakdown: [["yakwa"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["swa"], "ya’tó·tʌ"],
+        breakdown: [["swa"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["lati"], "ya’tó·tʌ"],
+        breakdown: [["lati"], "yaʔtó·tʌ"],
       },
       {
-        breakdown: [["kuti"], "ya’tó·tʌ"],
+        breakdown: [["kuti"], "yaʔtó·tʌ"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["t", "CIS"], ["wak"], ["e", "EP"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["wak"], ["e", "EP"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["ti", "CIS"], ["sa"], "’nikuhliyó"],
+        breakdown: [["ti", "CIS"], ["sa"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["lo"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["lo"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yako"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["yako"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yo"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["yo"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yukni"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["yukni"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yukni"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["yukni"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["ti", "CIS"], ["sni"], "’nikuhliyó"],
+        breakdown: [["ti", "CIS"], ["sni"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["loti"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["loti"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yoti"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["yoti"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yukwa"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["yukwa"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yukwa"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["yukwa"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["ti", "CIS"], ["swa"], "’nikuhliyó"],
+        breakdown: [["ti", "CIS"], ["swa"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["loti"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["loti"], "ʔnikuhliyó"],
       },
       {
-        breakdown: [["t", "CIS"], ["yoti"], "’nikuhliyó"],
+        breakdown: [["t", "CIS"], ["yoti"], "ʔnikuhliyó"],
       },
     ],
   },

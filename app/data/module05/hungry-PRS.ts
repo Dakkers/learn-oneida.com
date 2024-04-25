@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} VERB",
-    type: "PB",
+    type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "atuhkálya’ks"],
+        breakdown: [["k"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["hs"], "atuhkálya’ks"],
+        breakdown: [["hs"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["l"], "atuhkálya’ks"],
+        breakdown: [["l"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["yu"], "atuhkálya’ks"],
+        breakdown: [["yu"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["w"], "atuhkálya’ks"],
+        breakdown: [["w"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["ty"], "atuhkálya’ks"],
+        breakdown: [["ty"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["yaky"], "atuhkálya’ks"],
+        breakdown: [["yaky"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["tsy"], "atuhkálya’ks"],
+        breakdown: [["tsy"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["hy"], "atuhkálya’ks"],
+        breakdown: [["hy"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["ky"], "atuhkálya’ks"],
+        breakdown: [["ky"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["tw"], "atuhkálya’ks"],
+        breakdown: [["tw"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["yakw"], "atuhkálya’ks"],
+        breakdown: [["yakw"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["sw"], "atuhkálya’ks"],
+        breakdown: [["sw"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["lu"], "atuhkálya’ks"],
+        breakdown: [["lu"], "atuhkályaʔks"],
       },
       {
-        breakdown: [["ku"], "atuhkálya’ks"],
+        breakdown: [["ku"], "atuhkályaʔks"],
       },
     ],
   },

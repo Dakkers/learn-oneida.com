@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "náktote’"],
+        breakdown: [["wak"], "náktoteʔ"],
       },
       {
-        breakdown: [["sa"], "náktote’"],
+        breakdown: [["sa"], "náktoteʔ"],
       },
       {
-        breakdown: [["lo"], "náktote’"],
+        breakdown: [["lo"], "náktoteʔ"],
       },
       {
-        breakdown: [["yako"], "náktote’"],
+        breakdown: [["yako"], "náktoteʔ"],
       },
       {
-        breakdown: [["yo"], "náktote’"],
+        breakdown: [["yo"], "náktoteʔ"],
       },
       {
-        breakdown: [["yukni"], "náktote’"],
+        breakdown: [["yukni"], "náktoteʔ"],
       },
       {
-        breakdown: [["yukni"], "náktote’"],
+        breakdown: [["yukni"], "náktoteʔ"],
       },
       {
-        breakdown: [["sni"], "náktote’"],
+        breakdown: [["sni"], "náktoteʔ"],
       },
       {
-        breakdown: [["loti"], "náktote’"],
+        breakdown: [["loti"], "náktoteʔ"],
       },
       {
-        breakdown: [["yoti"], "náktote’"],
+        breakdown: [["yoti"], "náktoteʔ"],
       },
       {
-        breakdown: [["yukwa"], "náktote’"],
+        breakdown: [["yukwa"], "náktoteʔ"],
       },
       {
-        breakdown: [["yukwa"], "náktote’"],
+        breakdown: [["yukwa"], "náktoteʔ"],
       },
       {
-        breakdown: [["swa"], "náktote’"],
+        breakdown: [["swa"], "náktoteʔ"],
       },
       {
-        breakdown: [["loti"], "náktote’"],
+        breakdown: [["loti"], "náktoteʔ"],
       },
       {
-        breakdown: [["yoti"], "náktote’"],
+        breakdown: [["yoti"], "náktoteʔ"],
       },
     ],
   },

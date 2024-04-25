@@ -4,52 +4,52 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might VERB",
-    type: "PB",
+    type: "PR",
     phrases: [
       {
-        breakdown: [["a·", "IFUT"], ["k"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["k"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hs"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ha"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["ha"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ye"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["ye"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ka"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["ka"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["tni"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["tni"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakni"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yakni"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["sni"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["sni"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hni"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hni"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["kni"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["kni"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["twa"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["twa"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakwa"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yakwa"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["swa"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["swa"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hati"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hati"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["kuti"], "ya’tó·tʌ", ["hakeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["kuti"], "yaʔtó·tʌ", ["hakeʔ", "IFUT"]],
       },
     ],
   },
