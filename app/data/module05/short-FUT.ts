@@ -22,34 +22,94 @@ export default createParadigmData(
         breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["ka"], "hnʌyésu", ["hakeʔ", "FUT"]],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["tni"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["tni"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["yakni"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["yakni"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["sni"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["sni"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["hni"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["hni"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["kni"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["kni"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["twa"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["twa"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["yakwa"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["yakwa"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["swa"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["swa"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["hati"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["hati"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
       {
-        breakdown: ["kʌʔ n", ["ʌ", "FUT"], ["kuti"], "hnʌyésu", ["hakeʔ", "FUT"]],
+        breakdown: [
+          "kʌʔ n",
+          ["ʌ", "FUT"],
+          ["kuti"],
+          "hnʌyésu",
+          ["hakeʔ", "FUT"],
+        ],
       },
     ],
   },

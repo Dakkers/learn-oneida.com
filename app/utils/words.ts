@@ -33,7 +33,10 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
     const index2 = vowelsAccented.indexOf(char);
     const lookupIndex = Math.max(index1, index2);
     const result = word.split("");
-    result[index] = index1 >= 0 ? vowelsWhispered[lookupIndex] : vowelsWhisperedAccented[lookupIndex];
+    result[index] =
+      index1 >= 0
+        ? vowelsWhispered[lookupIndex]
+        : vowelsWhisperedAccented[lookupIndex];
     return result.join("");
   } else {
     return word.replace(WHISPER_REGEX, "");

@@ -7,8 +7,17 @@ import { Fragment, useState } from "react";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "~/components/SectionHeading";
 import { TextBreakdown } from "~/components/TextBreakdown";
-import { Module5VerbDatum, STATIVE_VERB_TENSE_LIST, createModule5VerbsList, stativeVerbTenseMap } from "~/data/module05";
-import { activeVerbsList, ACTIVE_VERB_TENSE_LIST, activeVerbTenseMap } from "~/data/module06/activeVerbsList";
+import {
+  Module5VerbDatum,
+  STATIVE_VERB_TENSE_LIST,
+  createModule5VerbsList,
+  stativeVerbTenseMap,
+} from "~/data/module05";
+import {
+  activeVerbsList,
+  ACTIVE_VERB_TENSE_LIST,
+  activeVerbTenseMap,
+} from "~/data/module06/activeVerbsList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -122,43 +131,56 @@ function Module5ParadigmsAsIs() {
     <TableWrapper
       columns={[
         {
-          accessorKey: 'left',
+          accessorKey: "left",
           cell: (value, row: Module5VerbDatum) => {
-            return (
-              <div>{row.en}</div>
-            )
+            return <div>{row.en}</div>;
           },
-          header: ''
+          header: "",
         },
         {
-          accessorKey: 'middle',
+          accessorKey: "middle",
           cell: (value, row: Module5VerbDatum) => {
             return (
-              <Flex direction='column' justify="center" gap={4}>
-                <TextBreakdown breakdown={row.prs.phrases[0].breakdown} typeFallback={row.prs.type} />
-                <TextBreakdown breakdown={row.past.phrases[0].breakdown} typeFallback={row.past.type} />
+              <Flex direction="column" justify="center" gap={4}>
+                <TextBreakdown
+                  breakdown={row.prs.phrases[0].breakdown}
+                  typeFallback={row.prs.type}
+                />
+                <TextBreakdown
+                  breakdown={row.past.phrases[0].breakdown}
+                  typeFallback={row.past.type}
+                />
               </Flex>
-            )
+            );
           },
-          header: ''
+          header: "",
         },
         {
-          accessorKey: 'right',
-          cell: (value, row:Module5VerbDatum) => {
+          accessorKey: "right",
+          cell: (value, row: Module5VerbDatum) => {
             return (
-              <Flex direction='column' justify="center" gap={4}>
-                <TextBreakdown breakdown={row.fut.phrases[0].breakdown} typeFallback={row.fut.type} />
-                <TextBreakdown breakdown={row.ifut.phrases[0].breakdown} typeFallback={row.ifut.type} />
-                <TextBreakdown breakdown={row.cmd.phrases[0].breakdown} typeFallback={row.cmd.type} />
+              <Flex direction="column" justify="center" gap={4}>
+                <TextBreakdown
+                  breakdown={row.fut.phrases[0].breakdown}
+                  typeFallback={row.fut.type}
+                />
+                <TextBreakdown
+                  breakdown={row.ifut.phrases[0].breakdown}
+                  typeFallback={row.ifut.type}
+                />
+                <TextBreakdown
+                  breakdown={row.cmd.phrases[0].breakdown}
+                  typeFallback={row.cmd.type}
+                />
               </Flex>
-            )
+            );
           },
-          header: ''
+          header: "",
         },
       ]}
       data={data}
     />
-  )
+  );
 
   return (
     <>
