@@ -29,7 +29,9 @@ export default function App() {
       </head>
       <body>
         <TitleBar />
-        <Navbar />
+        <div className="bg-gray-100">
+          <Navbar />
+        </div>
         <div className="mx-auto">
           <Outlet />
         </div>
