@@ -4,12 +4,13 @@ import { InternalText, InternalTextProps } from "../internal/internalText";
 export interface HeadingProps
   extends Pick<
     InternalTextProps,
-    "children" | "contrast" | "id" | "intent" | "variant"
+    "align" | "children" | "contrast" | "id" | "intent" | "variant"
   > {
   level: 1 | 2 | 3 | 4 | 5;
 }
 
 export function Heading({
+  align = 'start',
   children,
   contrast = "high",
   id,
@@ -19,6 +20,7 @@ export function Heading({
 }: HeadingProps) {
   return (
     <InternalText
+      align={align}
       as={
         (
           {
