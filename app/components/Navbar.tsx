@@ -73,17 +73,9 @@ function NavbarMobile() {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     className={navigationMenuTriggerStyle()}
-                    href="/"
-                  >
-                    Home
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
                     href="/learn"
                   >
-                    Curriculum
+                    Learn
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
@@ -129,14 +121,8 @@ function NavbarMobile() {
 
 function NavbarDesktop() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="bg-gray-100">
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-            Home
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
         <NavigationMenuItem>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
@@ -147,7 +133,7 @@ function NavbarDesktop() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Curriculum</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Learn</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex flex-col w-[240px] gap-3 p-4 ">
               {moduleNumbers.map((num) => (

@@ -1,6 +1,7 @@
 import type { LinksFunction } from "@remix-run/cloudflare";
 import { cssBundleHref } from "@remix-run/css-bundle";
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -10,6 +11,7 @@ import {
 } from "@remix-run/react";
 import stylesheet from "~/globals.css";
 import { Navbar } from "./components/Navbar";
+import { Text } from "@/design/components/text";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -26,8 +28,9 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <TitleBar />
         <Navbar />
-        <div className="p-8">
+        <div className="mx-auto">
           <Outlet />
         </div>
         <ScrollRestoration />
@@ -35,5 +38,17 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
+  );
+}
+
+function TitleBar() {
+  return (
+    <div className="text-white bg-purple-950 text-center text-4xl py-4">
+        <Text as='span' variant="headlineS">
+      <Link to='/'>
+          <span className="text-white">Learn Oneida</span>
+      </Link>
+      </Text>
+    </div>
   );
 }
