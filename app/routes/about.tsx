@@ -21,8 +21,8 @@ export default function About() {
       <Text>
         Learn-Oneida was created from Fanshawe College&lsquo;s Oneida Language
         Immersion, Culture and Teaching Program curriculum. The curriculum,
-        which was worked on by the Twatati Program based on Oneida Nation,
-        is actually an adaptation of the Onkwawenna Kentyokwah program.
+        which was worked on by the Twatati Program based on Oneida Nation, is
+        actually an adaptation of the Onkwawenna Kentyokwah program.
       </Text>
 
       <Text>
@@ -47,7 +47,9 @@ export default function About() {
 
       <List>
         <List.Item>Dakota St. Laurent - Founder and Lead Developer</List.Item>
-        <List.Item>Belle Pensamiento - Ethics Consultant and Developer</List.Item>
+        <List.Item>
+          Belle Pensamiento - Ethics Consultant and Developer
+        </List.Item>
       </List>
 
       <Heading level={1} variant="headlineS">

@@ -30,64 +30,62 @@ export default function ToolsClock() {
 
   return (
     <>
-      <SectionHeading level={1}>
-        Clock Time
-      </SectionHeading>
+      <SectionHeading level={1}>Clock Time</SectionHeading>
 
-        <Bleed mx={16}>
-          <Flex gap={4}>
-            <Select
-              label="Hour"
-              onChange={setHour}
-              options={_.range(1, 13).map((value) => ({
-                label: value,
-                value: value.toString(),
-              }))}
-              value={hour}
-            />
-            <Select
-              label="Minute"
-              onChange={setMinute}
-              options={_.range(0, 60)
-                .map((v) => v.toString().padStart(2, "0"))
-                .map((value) => ({ label: value, value }))}
-              value={minute}
-            />
-            <Select
-              label="&nbsp;"
-              onChange={setPeriod}
-              options={[
-                { label: "a.m.", value: "AM" },
-                { label: "p.m.", value: "PM" },
-              ]}
-              value={period}
-            />
-            <Flex direction="column" gap={2}>
-              <Text>&nbsp;</Text>
-              <Button
-                onClick={() =>
-                  setTranslatedValue(
-                    doTheTranslate(
-                      (parseInt(hour) % 12) + (period === "AM" ? 0 : 12),
-                      parseInt(minute)
-                    )
+      <Bleed mx={16}>
+        <Flex gap={4}>
+          <Select
+            label="Hour"
+            onChange={setHour}
+            options={_.range(1, 13).map((value) => ({
+              label: value,
+              value: value.toString(),
+            }))}
+            value={hour}
+          />
+          <Select
+            label="Minute"
+            onChange={setMinute}
+            options={_.range(0, 60)
+              .map((v) => v.toString().padStart(2, "0"))
+              .map((value) => ({ label: value, value }))}
+            value={minute}
+          />
+          <Select
+            label="&nbsp;"
+            onChange={setPeriod}
+            options={[
+              { label: "a.m.", value: "AM" },
+              { label: "p.m.", value: "PM" },
+            ]}
+            value={period}
+          />
+          <Flex direction="column" gap={2}>
+            <Text>&nbsp;</Text>
+            <Button
+              onClick={() =>
+                setTranslatedValue(
+                  doTheTranslate(
+                    (parseInt(hour) % 12) + (period === "AM" ? 0 : 12),
+                    parseInt(minute)
                   )
-                }
-              >
-                Translate
-              </Button>
-            </Flex>
+                )
+              }
+            >
+              Translate
+            </Button>
           </Flex>
-        </Bleed>
+        </Flex>
+      </Bleed>
 
-        <Separator />
+      <Separator />
 
-        <Text>Translations:</Text>
-        <List>
-          {translatedValue.map((value, i) => (
-            <List.Item key={i}>{value}</List.Item>
-          ))}
-        </List>
+      <Text>Translations:</Text>
+      <List>
+        {translatedValue.map((value, i) => (
+          <List.Item key={i}>{value}</List.Item>
+        ))}
+      </List>
     </>
   );
 }

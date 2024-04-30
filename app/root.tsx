@@ -21,8 +21,8 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
-  const matches = useMatches()
-  const isHomePage = !!matches.find((m) => m.id === 'routes/_index')
+  const matches = useMatches();
+  const isHomePage = !!matches.find((m) => m.id === "routes/_index");
 
   return (
     <html lang="en">
@@ -37,7 +37,12 @@ export default function App() {
         <div className="bg-gray-100">
           <Navbar />
         </div>
-        <div className={cn("mx-auto flex flex-col gap-4 p-8", isHomePage ? 'max-w-5xl' : 'max-w-lg')}>
+        <div
+          className={cn(
+            "mx-auto flex flex-col gap-4 p-8",
+            isHomePage ? "max-w-5xl" : "max-w-lg"
+          )}
+        >
           <Outlet />
         </div>
         <ScrollRestoration />
@@ -51,10 +56,10 @@ export default function App() {
 function TitleBar() {
   return (
     <div className="text-white bg-purple-950 text-center text-4xl py-4">
-        <Text as='span' variant="headlineS">
-      <Link to='/'>
+      <Text as="span" variant="headlineS">
+        <Link to="/">
           <span className="text-white">Learn Oneida</span>
-      </Link>
+        </Link>
       </Text>
     </div>
   );

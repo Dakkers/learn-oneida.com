@@ -61,10 +61,10 @@ export function ParadigmTable({
   translationFn,
 }: {
   allowedPronouns?: Pronoun[];
-    bleed?: BleedProps['mx'];
+  bleed?: BleedProps["mx"];
   columnVisibility?: Partial<ColumnVisibility>;
   data: ParadigmData;
-    isTesting?: boolean;
+  isTesting?: boolean;
   translationKeys?: Record<string, string>;
   translationFn?: ParadigmTableContextProps["translationFn"];
 }) {
@@ -138,43 +138,43 @@ export function ParadigmTable({
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    {colVisibility.pronounEnglish && (
-                      <TableHead>Pronoun (EN)</TableHead>
-                    )}
-                    {colVisibility.pronounOneida && (
-                      <TableHead>Pronoun</TableHead>
-                    )}
-                    {isTesting ? (
-                      <>
-                        {colVisibility.translation && (
-                          <TableHead>Translation</TableHead>
-                        )}
-                        <TableHead>---</TableHead>
-                      </>
-                    ) : (
-                      <>
-                        <TableHead>Phrase</TableHead>
-                        {colVisibility.translation && (
-                          <TableHead>Translation</TableHead>
-                        )}
-                      </>
-                    )}
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {rowsToShow.map((row, i) => (
-                    <TableRowWrapper
-                      key={i}
-                      row={row}
-                      typeFallback={data.type}
-                      whispered={data.whispered}
-                    />
-                  ))}
-                </TableBody>
-              </Table>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  {colVisibility.pronounEnglish && (
+                    <TableHead>Pronoun (EN)</TableHead>
+                  )}
+                  {colVisibility.pronounOneida && (
+                    <TableHead>Pronoun</TableHead>
+                  )}
+                  {isTesting ? (
+                    <>
+                      {colVisibility.translation && (
+                        <TableHead>Translation</TableHead>
+                      )}
+                      <TableHead>---</TableHead>
+                    </>
+                  ) : (
+                    <>
+                      <TableHead>Phrase</TableHead>
+                      {colVisibility.translation && (
+                        <TableHead>Translation</TableHead>
+                      )}
+                    </>
+                  )}
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {rowsToShow.map((row, i) => (
+                  <TableRowWrapper
+                    key={i}
+                    row={row}
+                    typeFallback={data.type}
+                    whispered={data.whispered}
+                  />
+                ))}
+              </TableBody>
+            </Table>
 
             {isTesting && (
               <>
