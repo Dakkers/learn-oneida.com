@@ -1,4 +1,3 @@
-import { Flex } from "@/design/components/flex";
 import { Notice } from "@/design/components/notice";
 import { Separator } from "@/design/primitives/separator";
 import { Text } from "@/design/components/text";
@@ -23,6 +22,7 @@ import { StressArticle } from "~/components/articles/Stress";
 import { GlottalStopArticle } from "~/components/articles/GlottalStop";
 import { LetterHArticle } from "~/components/articles/LetterH";
 import { WhisperedEndingsArticle } from "~/components/articles/WhisperedEndings";
+import { Bleed } from "@/design/components/Bleed";
 
 export const meta: MetaFunction = () => {
   return [
@@ -33,7 +33,7 @@ export const meta: MetaFunction = () => {
 
 export default function LearnModule01() {
   return (
-    <Flex direction="column" gap={4}>
+    <>
       <SectionHeading level={1}>Module 1</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
@@ -135,14 +135,16 @@ export default function LearnModule01() {
       <Text>
         A paradigm table for <Letter>yats</Letter> looks like this:
       </Text>
-      <ParadigmTable
-        allowedPronouns={[...singlePronouns, "ms", "fs"]}
-        columnVisibility={{
-          pronounEnglish: false,
-          pronounOneida: false,
-        }}
-        data={yatsJson}
-      />
+      <Bleed mx={32}>
+        <ParadigmTable
+          allowedPronouns={[...singlePronouns, "ms", "fs"]}
+          columnVisibility={{
+            pronounEnglish: false,
+            pronounOneida: false,
+          }}
+          data={yatsJson}
+        />
+      </Bleed>
       <Notice intent="primary">
         In this curriculum, the word &quot;paradigm&quot; refers to a list of
         conjugations for a given root word. When you get a grasp of the
@@ -158,16 +160,18 @@ export default function LearnModule01() {
         <Letter>anuhteʔ</Letter> and it uses blue pronominals. It means &quot;to
         know something&quot;. Here&lsquo;s the paradigm table:
       </Text>
-      <ParadigmTable
-        columnVisibility={{
-          pronounEnglish: false,
-          pronounOneida: false,
-        }}
-        data={anuhteJson}
-        translationFn={({ pronoun }) => ({
-          verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
-        })}
-      />
+      <Bleed mx={32}>
+        <ParadigmTable
+          columnVisibility={{
+            pronounEnglish: false,
+            pronounOneida: false,
+          }}
+          data={anuhteJson}
+          translationFn={({ pronoun }) => ({
+            verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
+          })}
+        />
+      </Bleed>
 
       <SectionHeading id="particles" level={2}>
         Particles
@@ -184,7 +188,7 @@ export default function LearnModule01() {
 
       <DialogueSection />
       <TranslationExercisesSection group="module01" />
-    </Flex>
+    </>
   );
 }
 

@@ -8,10 +8,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useMatches,
 } from "@remix-run/react";
 import stylesheet from "~/globals.css";
 import { Navbar } from "./components/Navbar";
 import { Text } from "@/design/components/text";
+import { cn } from "@/lib/utils";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -19,6 +21,9 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+  const matches = useMatches()
+  const isHomePage = !!matches.find((m) => m.id === 'routes/_index')
+
   return (
     <html lang="en">
       <head>
@@ -32,7 +37,7 @@ export default function App() {
         <div className="bg-gray-100">
           <Navbar />
         </div>
-        <div className="mx-auto">
+        <div className={cn("mx-auto flex flex-col gap-4 p-8", isHomePage ? 'max-w-5xl' : 'max-w-lg')}>
           <Outlet />
         </div>
         <ScrollRestoration />

@@ -25,6 +25,7 @@ export function DialogueTable({ data }: { data: DialogueTableData }) {
 
   return (
     <TableWrapper
+      bleed={16}
       columns={columns}
       data={data.map(TableWrapper.mapLeftRight)}
     />

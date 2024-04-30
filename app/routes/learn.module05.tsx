@@ -39,7 +39,7 @@ export const meta: MetaFunction = () => {
 
 export default function LearnModule05() {
   return (
-    <Flex direction="column" gap={4}>
+    <>
       <SectionHeading level={1}>Module 5</SectionHeading>
 
       <Box py={4}>
@@ -114,7 +114,7 @@ export default function LearnModule05() {
       </SectionHeading>
       <ParticlesTable group="module05" />
       <TranslationExercisesSection group="module05" />
-    </Flex>
+    </>
   );
 }
 

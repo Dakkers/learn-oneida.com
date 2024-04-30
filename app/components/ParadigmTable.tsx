@@ -43,6 +43,7 @@ import { Button } from "@/design/primitives/button";
 import { Notice } from "@/design/components/notice";
 import _ from "lodash";
 import { sanitizeIrregularCharacters, whisperizeWord } from "~/utils/words";
+import { Bleed, BleedProps } from "@/design/components/Bleed";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()]))
@@ -53,15 +54,17 @@ const ParadigmTableContext =
 
 export function ParadigmTable({
   allowedPronouns = [],
+  bleed = 32,
   columnVisibility = {},
   data,
   isTesting = false,
   translationFn,
 }: {
   allowedPronouns?: Pronoun[];
+    bleed?: BleedProps['mx'];
   columnVisibility?: Partial<ColumnVisibility>;
   data: ParadigmData;
-  isTesting?: boolean;
+    isTesting?: boolean;
   translationKeys?: Record<string, string>;
   translationFn?: ParadigmTableContextProps["translationFn"];
 }) {
@@ -119,7 +122,7 @@ export function ParadigmTable({
         translationFn,
       }}
     >
-      <div>
+      <Bleed mx={bleed}>
         <Flex justify="end">
           <SettingsMenu
             toggleColumn={(columnName) =>
@@ -135,43 +138,43 @@ export function ParadigmTable({
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  {colVisibility.pronounEnglish && (
-                    <TableHead>Pronoun (EN)</TableHead>
-                  )}
-                  {colVisibility.pronounOneida && (
-                    <TableHead>Pronoun</TableHead>
-                  )}
-                  {isTesting ? (
-                    <>
-                      {colVisibility.translation && (
-                        <TableHead>Translation</TableHead>
-                      )}
-                      <TableHead>---</TableHead>
-                    </>
-                  ) : (
-                    <>
-                      <TableHead>Phrase</TableHead>
-                      {colVisibility.translation && (
-                        <TableHead>Translation</TableHead>
-                      )}
-                    </>
-                  )}
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {rowsToShow.map((row, i) => (
-                  <TableRowWrapper
-                    key={i}
-                    row={row}
-                    typeFallback={data.type}
-                    whispered={data.whispered}
-                  />
-                ))}
-              </TableBody>
-            </Table>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    {colVisibility.pronounEnglish && (
+                      <TableHead>Pronoun (EN)</TableHead>
+                    )}
+                    {colVisibility.pronounOneida && (
+                      <TableHead>Pronoun</TableHead>
+                    )}
+                    {isTesting ? (
+                      <>
+                        {colVisibility.translation && (
+                          <TableHead>Translation</TableHead>
+                        )}
+                        <TableHead>---</TableHead>
+                      </>
+                    ) : (
+                      <>
+                        <TableHead>Phrase</TableHead>
+                        {colVisibility.translation && (
+                          <TableHead>Translation</TableHead>
+                        )}
+                      </>
+                    )}
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {rowsToShow.map((row, i) => (
+                    <TableRowWrapper
+                      key={i}
+                      row={row}
+                      typeFallback={data.type}
+                      whispered={data.whispered}
+                    />
+                  ))}
+                </TableBody>
+              </Table>
 
             {isTesting && (
               <>
@@ -190,7 +193,7 @@ export function ParadigmTable({
             )}
           </form>
         </Form>
-      </div>
+      </Bleed>
     </ParadigmTableContext.Provider>
   );
 }

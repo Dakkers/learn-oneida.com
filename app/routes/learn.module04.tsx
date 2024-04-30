@@ -75,7 +75,7 @@ const columnVisibility = {
 
 export default function LearnModule04() {
   return (
-    <Flex direction="column" gap={4}>
+    <>
       <SectionHeading level={1}>Module 4</SectionHeading>
 
       <Box py={4}>
@@ -454,7 +454,7 @@ export default function LearnModule04() {
         Particles
       </SectionHeading>
       <ParticlesTable group="module04" />
-    </Flex>
+    </>
   );
 }
 

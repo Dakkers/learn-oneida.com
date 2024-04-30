@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
 import { SpacingToken } from "../primitives/types";
 
-type MarginToken = Exclude<SpacingToken, "1px" | "2px">;
+type MarginToken = Exclude<SpacingToken, "1px" | "2px"> | 16 | 32;
 
-interface BleedProps {
+export interface BleedProps {
   children: React.ReactNode;
   m?: MarginToken;
   mx?: MarginToken;
@@ -42,6 +42,8 @@ const mMap = new Map<MarginToken, string>([
   [6, "-m-6"],
   [7, "-m-7"],
   [8, "-m-8"],
+  [16, "-m-16"],
+  [32, "-m-32"],
 ]);
 
 const mxMap = new Map<MarginToken, string>([
@@ -54,6 +56,8 @@ const mxMap = new Map<MarginToken, string>([
   [6, "-mx-6"],
   [7, "-mx-7"],
   [8, "-mx-8"],
+  [16, "-mx-16"],
+  [32, "-mx-32"],
 ]);
 
 const myMap = new Map<MarginToken, string>([
@@ -66,6 +70,8 @@ const myMap = new Map<MarginToken, string>([
   [6, "-my-6"],
   [7, "-my-7"],
   [8, "-my-8"],
+  [16, "-my-16"],
+  [32, "-my-32"],
 ]);
 
 const mlMap = new Map<MarginToken, string>([
@@ -78,6 +84,8 @@ const mlMap = new Map<MarginToken, string>([
   [6, "-ml-6"],
   [7, "-ml-7"],
   [8, "-ml-8"],
+  [16, "-ml-16"],
+  [32, "-ml-32"],
 ]);
 
 const mrMap = new Map<MarginToken, string>([
@@ -90,6 +98,8 @@ const mrMap = new Map<MarginToken, string>([
   [6, "-mr-6"],
   [7, "-mr-7"],
   [8, "-mr-8"],
+  [16, "-mr-16"],
+  [32, "-mr-32"],
 ]);
 
 const mtMap = new Map<MarginToken, string>([
@@ -102,6 +112,8 @@ const mtMap = new Map<MarginToken, string>([
   [6, "-mt-6"],
   [7, "-mt-7"],
   [8, "-mt-8"],
+  [16, "-mt-16"],
+  [32, "-mt-32"],
 ]);
 
 const mbMap = new Map<MarginToken, string>([
@@ -114,4 +126,6 @@ const mbMap = new Map<MarginToken, string>([
   [6, "-mb-6"],
   [7, "-mb-7"],
   [8, "-mb-8"],
+  [16, "-mb-16"],
+  [32, "-mb-32"],
 ]);

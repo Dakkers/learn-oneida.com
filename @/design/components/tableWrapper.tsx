@@ -11,10 +11,12 @@ import { BreakdownArray, BreakdownType, TextBreakdown, TextBreakdownSuffix } fro
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "~/utils";
 import { Text } from "./text";
 import { Flex } from "./flex";
+import { Bleed, BleedProps } from "./Bleed";
 
 type Row = Record<string, unknown>;
 
 export interface TableWrapperProps {
+  bleed?: BleedProps['mx']
   columns: Array<{
     accessorKey: string;
     cell?: (value?: unknown, row?: Row) => React.ReactNode;
@@ -24,34 +26,36 @@ export interface TableWrapperProps {
   data: Array<Row>;
 }
 
-export function TableWrapper({ columns, data }: TableWrapperProps) {
+export function TableWrapper({ bleed = 32, columns, data }: TableWrapperProps) {
   const hasHeader = !!columns.find((col) => !!col.header)
 
   return (
-    <Table>
-      {hasHeader && (
-        <TableHeader>
-          <TableRow>
-            {columns.map((c) => (
-              <TableHead key={c.key ?? c.accessorKey}>{c.header}</TableHead>
-            ))}
-          </TableRow>
-        </TableHeader>
-      )}
-      <TableBody>
-        {data.map((row, i) => (
-          <TableRow key={i}>
-            {columns.map((c, j) => (
-              <TableCell key={`${i}-${j}`}>
-                {c.cell
-                  ? c.cell(row[c.accessorKey], row)
-                  : (row[c.accessorKey] as React.ReactNode)}
-              </TableCell>
-            ))}
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+    <Bleed mx={bleed}>
+      <Table>
+        {hasHeader && (
+          <TableHeader>
+            <TableRow>
+              {columns.map((c) => (
+                <TableHead key={c.key ?? c.accessorKey}>{c.header}</TableHead>
+              ))}
+            </TableRow>
+          </TableHeader>
+        )}
+        <TableBody>
+          {data.map((row, i) => (
+            <TableRow key={i}>
+              {columns.map((c, j) => (
+                <TableCell key={`${i}-${j}`}>
+                  {c.cell
+                    ? c.cell(row[c.accessorKey], row)
+                    : (row[c.accessorKey] as React.ReactNode)}
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </Bleed>
   );
 }
 
