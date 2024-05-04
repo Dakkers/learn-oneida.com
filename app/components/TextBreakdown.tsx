@@ -121,7 +121,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   IFUT: "text-emerald-400",
   JOIN: "text-gray-400",
   OP: "underline decoration-wavy decoration-black",
-  PAST: "text-orange-500",
+  PAST: "text-emerald-400",
   PB: "text-blue-600",
   PLB: "text-cyan-400",
   PP: "text-violet-500",

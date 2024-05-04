@@ -5,52 +5,51 @@ export default createParadigmData(
   {
     translation: "{{pronoun}} used to live there",
     type: "PR",
-    suffix: "hkwe",
     phrases: [
       {
-        breakdown: ["te", ["k"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["te", ["k"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["te", ["hs"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["te", ["hs"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["ha"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["t", ["ha"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["yé"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["t", ["yé"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["ka"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["t", ["ka"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["tni"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["ti", ["tni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["yakni"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["t", ["yakni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["sni"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["ti", ["sni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["hni"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["t", ["hni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["kni"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["t", ["kni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["twa"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["ti", ["twa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["yakwa"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["t", ["yakwa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["swa"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["ti", ["swa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["hati"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["t", ["hati"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["kuti"], "nákleʔ", ["e", "EP"]],
+        breakdown: ["t", ["kuti"], "nákle", ["hkweʔ", "PAST"]],
       },
     ],
   },
