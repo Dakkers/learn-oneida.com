@@ -1,6 +1,6 @@
 export function formatTranslation(
   text: string,
-  params: Record<string, string>
+  params: Record<string, string>,
 ) {
   let result = text;
   for (const key in params) {
@@ -187,7 +187,7 @@ export const arrayify = (value: unknown) =>
 export function translatePhrase(
   phrase: string,
   pronoun: Pronoun,
-  translationFn?: (arg: { pronoun: Pronoun }) => void
+  translationFn?: (arg: { pronoun: Pronoun }) => void,
 ) {
   return formatTranslation(phrase, {
     pronoun: PRONOUN_MAP_EN[pronoun],

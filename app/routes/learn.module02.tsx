@@ -363,7 +363,7 @@ function VerbsTable({
         ),
         header: headerText.replace(
           "{{verb}}",
-          color === "blue" ? "likes" : "like"
+          color === "blue" ? "likes" : "like",
         ),
       },
       {
@@ -373,7 +373,7 @@ function VerbsTable({
         ),
         header: headerText.replace(
           "{{verb}}",
-          color === "blue" ? "knows" : "know"
+          color === "blue" ? "knows" : "know",
         ),
       },
       {
@@ -383,11 +383,11 @@ function VerbsTable({
         ),
         header: headerText.replace(
           "{{verb}}",
-          color === "blue" ? "loves" : "love"
+          color === "blue" ? "loves" : "love",
         ),
       },
     ],
-    [color, headerText, typeFallback]
+    [color, headerText, typeFallback],
   );
 
   const rows = React.useMemo(
@@ -398,7 +398,7 @@ function VerbsTable({
         love: getBreakdown(loveData, key),
         know: getBreakdown(knowData, key),
       })),
-    [keys, enData, likeData, knowData, loveData]
+    [keys, enData, likeData, knowData, loveData],
   );
 
   // @ts-expect-error To be addressed in LO-12
@@ -913,7 +913,7 @@ function ThingsThatAreTheSameSection() {
 const getBreakdown = (data, key) =>
   data.phrases.find(
     // @ts-expect-error To be addressed in LO-21
-    (p: SomethingElseEntirely) => p.key === key || p.pronoun === key
+    (p: SomethingElseEntirely) => p.key === key || p.pronoun === key,
   )?.breakdown;
 
 // @ts-expect-error To be addressed in LO-21

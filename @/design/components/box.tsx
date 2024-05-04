@@ -5,12 +5,6 @@ interface BoxProps extends PaddingProps {
 }
 
 export function Box({ children, p, px, py, pl, pt, pr, pb }: BoxProps) {
-  const padding = usePadding({ p, px, py, pl, pt, pr, pb })
-  return (
-    <div
-      className={padding}
-    >
-      {children}
-    </div>
-  );
+  const padding = usePadding({ p, px, py, pl, pt, pr, pb });
+  return <div className={padding}>{children}</div>;
 }

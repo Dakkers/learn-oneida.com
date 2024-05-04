@@ -4,14 +4,10 @@ import { Text } from "./text";
 
 export function HelpText({
   children,
-  intent = 'secondary',
+  intent = "secondary",
 }: {
   children: React.ReactNode;
   intent?: Intent;
 }) {
-  return (
-    <InternalText intent={intent}>
-      {children}
-    </InternalText>
-  )
+  return <InternalText intent={intent}>{children}</InternalText>;
 }

@@ -111,7 +111,7 @@ export default function ToolsParadigm() {
       ["didnt-used-to-want", dataDidntUsedToWant, "didn't used to want"],
       ["thought", dataThought, "thought"],
     ],
-    []
+    [],
   );
 
   const dataToUse = Object.fromEntries([
@@ -123,8 +123,8 @@ export default function ToolsParadigm() {
     ["ʌtole", dataΛtoleJson],
     ...(_.flatten(
       activeVerbsList.map((v) =>
-        ACTIVE_VERB_TENSE_LIST.map((tense) => [`${v.key}-${tense}`, v[tense]])
-      )
+        ACTIVE_VERB_TENSE_LIST.map((tense) => [`${v.key}-${tense}`, v[tense]]),
+      ),
     ) as Array<[string, ParadigmData]>),
     ...module4Options.map((item) => [item[0], item[1]]),
   ]);
@@ -157,12 +157,12 @@ export default function ToolsParadigm() {
             ACTIVE_VERB_TENSE_LIST.map((tense) => ({
               label: `${datum.en} (${activeVerbTenseMap[tense]})`,
               value: `${datum.key}-${tense}`,
-            }))
-          )
+            })),
+          ),
         ),
         ...module4Options.map((item) => ({ label: item[2], value: item[0] })),
       ].sort((opt1, opt2) => opt1.label.localeCompare(opt2.label)),
-    [module4Options]
+    [module4Options],
   );
 
   return (
@@ -204,18 +204,18 @@ export default function ToolsParadigm() {
               paradigm === "all"
                 ? []
                 : paradigm === "singles"
-                ? singlePronouns
-                : paradigm === "dualics"
-                ? dualicPronouns
-                : paradigm === "plurals"
-                ? pluralPronouns
-                : paradigm === "one"
-                ? ([
-                    sample(singlePronouns),
-                    sample(dualicPronouns),
-                    sample(pluralPronouns),
-                  ] as Pronoun[])
-                : []
+                  ? singlePronouns
+                  : paradigm === "dualics"
+                    ? dualicPronouns
+                    : paradigm === "plurals"
+                      ? pluralPronouns
+                      : paradigm === "one"
+                        ? ([
+                            sample(singlePronouns),
+                            sample(dualicPronouns),
+                            sample(pluralPronouns),
+                          ] as Pronoun[])
+                        : [],
             );
             setHasStarted(true);
           }}

@@ -34,9 +34,15 @@ export function Flex({
   height,
   justify,
   wrap = false,
-  p, px, py, pl, pt, pr, pb,
+  p,
+  px,
+  py,
+  pl,
+  pt,
+  pr,
+  pb,
 }: FlexProps) {
-  const padding = usePadding({ p, px, py, pl, pt, pr, pb })
+  const padding = usePadding({ p, px, py, pl, pt, pr, pb });
 
   return (
     <Tag
@@ -48,7 +54,7 @@ export function Flex({
         height === "fill" ? "h-full" : undefined,
         justify && justifyContentMap[justify],
         wrap && "flex-wrap",
-        padding
+        padding,
       )}
     >
       {children}
@@ -57,24 +63,18 @@ export function Flex({
 }
 
 interface FlexItemProps {
-  as?: FlexProps['as'];
+  as?: FlexProps["as"];
   children: React.ReactNode;
   grow?: 0 | 1;
 }
 
-Flex.Item = function FlexItem ({
-  as: Tag = 'div',
+Flex.Item = function FlexItem({
+  as: Tag = "div",
   children,
   grow,
 }: FlexItemProps) {
-  return (
-    <Tag className={cn(
-      grow && growMap.get(grow),
-    )}>
-      {children}
-    </Tag>
-  )
-}
+  return <Tag className={cn(grow && growMap.get(grow))}>{children}</Tag>;
+};
 
 const gapMap = new Map([
   [0, "gap-0"],

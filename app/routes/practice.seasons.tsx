@@ -29,12 +29,12 @@ export default function PracticeSeasons() {
           key === "spring"
             ? Flower2Icon
             : key === "summer"
-            ? SunIcon
-            : key === "fall"
-            ? LeafIcon
-            : key === "winter"
-            ? SnowflakeIcon
-            : undefined
+              ? SunIcon
+              : key === "fall"
+                ? LeafIcon
+                : key === "winter"
+                  ? SnowflakeIcon
+                  : undefined
         }
       />
     </Flex>

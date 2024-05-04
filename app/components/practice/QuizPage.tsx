@@ -208,12 +208,12 @@ function PromptsScreen({
   const numItems = Number(context.questionCountSetting);
   const items = React.useMemo(
     () => _.shuffle(context.data).slice(0, numItems),
-    [context.data, numItems]
+    [context.data, numItems],
   );
   const [index, setIndex] = React.useState(0);
   const [results, setResults] = React.useState<Result[]>([]);
   const [langKeyToUse, setLangKeyToUse] = React.useState(
-    determineLangKey(context.languageSetting)
+    determineLangKey(context.languageSetting),
   );
   const currentItem = items[index];
   const isFinalItem = index === numItems - 1;
@@ -226,11 +226,11 @@ function PromptsScreen({
         question: getFirstElement(currentItem[langKeyToUse]),
         answer: {
           correctAnswer: getFirstElement(
-            currentItem[getOppositeLangKey(langKeyToUse)]
+            currentItem[getOppositeLangKey(langKeyToUse)],
           ),
           isCorrect: currentItem.key === answerKey,
           selectedAnswer: getFirstElement(
-            selectedAnswer?.[getOppositeLangKey(langKeyToUse)]
+            selectedAnswer?.[getOppositeLangKey(langKeyToUse)],
           ),
         },
       },
@@ -246,7 +246,7 @@ function PromptsScreen({
         question: currentItem[langKeyToUse],
         answer: {
           correctAnswer: getFirstElement(
-            currentItem[getOppositeLangKey(langKeyToUse)]
+            currentItem[getOppositeLangKey(langKeyToUse)],
           ),
           isCorrect: isCorrect,
           selectedAnswer: answer,
@@ -317,7 +317,7 @@ function MultipleChoiceOptions({
   const thingsToShow = React.useMemo(() => {
     const result = [];
     const currentItemDatum = context.data.find(
-      (d) => d.key === currentItem.key
+      (d) => d.key === currentItem.key,
     );
     if (currentItemDatum) {
       result.push(currentItemDatum);
@@ -355,7 +355,7 @@ function MultipleChoiceOptions({
                 "bg-green-700 text-white",
               item.key === selectedItemKey &&
                 !isCorrect &&
-                "bg-red-700 text-white"
+                "bg-red-700 text-white",
             )}
             disabled={hasSelected}
             key={item.key}
@@ -408,7 +408,7 @@ function TextAnswer({
             disabled={hasSubmitted}
             onClick={() => {
               const answer = getFirstElement(
-                currentItem[getOppositeLangKey(langKey)]
+                currentItem[getOppositeLangKey(langKey)],
               );
               const isCorrect =
                 sanitizeIrregularCharacters(answer) ===
