@@ -30,13 +30,13 @@ const DATA = DATA_PLACES_IN_COMMUNITY.filter(
       "political_office",
       "radio_station",
       "reserve",
-    ].includes(datum.key)
+    ].includes(datum.key),
 );
 
 export default function PracticePlaces() {
   const [englishOptions, oneidaOptions]: [
     EnglishToOneidaQuizProps["englishOptions"],
-    EnglishToOneidaQuizProps["oneidaOptions"]
+    EnglishToOneidaQuizProps["oneidaOptions"],
   ] = React.useMemo(() => {
     const resultEn = [];
     const resultOn = [];

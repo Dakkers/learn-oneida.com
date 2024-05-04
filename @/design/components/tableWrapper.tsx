@@ -7,7 +7,12 @@ import {
   TableHeader,
   TableRow,
 } from "../primitives/table";
-import { BreakdownArray, BreakdownType, TextBreakdown, TextBreakdownSuffix } from "~/components/TextBreakdown";
+import {
+  BreakdownArray,
+  BreakdownType,
+  TextBreakdown,
+  TextBreakdownSuffix,
+} from "~/components/TextBreakdown";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "~/utils";
 import { Text } from "./text";
 import { Flex } from "./flex";
@@ -25,7 +30,7 @@ export interface TableWrapperProps {
 }
 
 export function TableWrapper({ columns, data }: TableWrapperProps) {
-  const hasHeader = !!columns.find((col) => !!col.header)
+  const hasHeader = !!columns.find((col) => !!col.header);
 
   return (
     <Table>
@@ -77,7 +82,10 @@ interface OneidaColOptions {
   header?: string;
 }
 
-const createOneidaCol = (typeFallback?: BreakdownType, options: OneidaColOptions = {}) => ({
+const createOneidaCol = (
+  typeFallback?: BreakdownType,
+  options: OneidaColOptions = {},
+) => ({
   accessorKey: options.accessorKey ?? "breakdown",
   cell: (value: BreakdownArray) => (
     <TextBreakdown breakdown={value} typeFallback={typeFallback} />
@@ -91,14 +99,14 @@ const pronounColumns: TableWrapperProps["columns"] = [
     // @ts-expect-error To be addressed in LO-12
     cell: (value: Pronoun) => <Text>{PRONOUN_MAP_EN[value]}</Text>,
     header: "Pronoun (en)",
-    key: 'pronoun_en',
+    key: "pronoun_en",
   },
   {
     accessorKey: "pronoun",
     // @ts-expect-error To be addressed in LO-12
     cell: (value: Pronoun) => <Text>{PRONOUN_MAP_ONEIDA[value]}</Text>,
     header: "Pronoun (one)",
-    key: 'pronoun_one',
+    key: "pronoun_one",
   },
 ];
 
@@ -129,9 +137,7 @@ const columnsEnglishBreakdown: TableWrapperProps["columns"] = [
   EnglishCol,
   {
     accessorKey: "breakdown",
-    cell: (value) => (
-      <TextBreakdown breakdown={value as BreakdownArray} />
-    ),
+    cell: (value) => <TextBreakdown breakdown={value as BreakdownArray} />,
     header: "Translation",
   },
 ];
@@ -144,28 +150,28 @@ interface CreatePastTenseColumnsOptions {
 
 const createPastTenseColumns = (
   typeFallback: BreakdownType,
-  opts: CreatePastTenseColumnsOptions = {}
+  opts: CreatePastTenseColumnsOptions = {},
 ) => [
-    ...TableWrapper.columnsPronouns,
-    {
-      accessorKey: "breakdown",
-      cell: (value: BreakdownArray) => (
-        <TextBreakdown breakdown={value} typeFallback={typeFallback} />
-      ),
-      header: opts?.headerNow ?? "Now",
-    },
-    {
-      accessorKey: "breakdownPast",
-      cell: (value: BreakdownArray) => (
-        <TextBreakdown
-          breakdown={value}
-          suffix={opts.suffix}
-          typeFallback={typeFallback}
-        />
-      ),
-      header: opts?.headerPast ?? "Used to be",
-    },
-  ];
+  ...TableWrapper.columnsPronouns,
+  {
+    accessorKey: "breakdown",
+    cell: (value: BreakdownArray) => (
+      <TextBreakdown breakdown={value} typeFallback={typeFallback} />
+    ),
+    header: opts?.headerNow ?? "Now",
+  },
+  {
+    accessorKey: "breakdownPast",
+    cell: (value: BreakdownArray) => (
+      <TextBreakdown
+        breakdown={value}
+        suffix={opts.suffix}
+        typeFallback={typeFallback}
+      />
+    ),
+    header: opts?.headerPast ?? "Used to be",
+  },
+];
 
 TableWrapper.columnsParadigmRed = columnsParadigmRed;
 TableWrapper.columnsParadigmBlue = columnsParadigmBlue;
@@ -177,6 +183,6 @@ TableWrapper.createTextBreakdownColumn = createOneidaCol;
 TableWrapper.englishColumn = EnglishCol;
 TableWrapper.createPastTenseColumns = createPastTenseColumns;
 
-type MapperArgs = unknown|unknown[];
-TableWrapper.mapLeftRight = ([left, right]: MapperArgs[]) => ({ left, right })
-TableWrapper.mapEnglishOneida = ([en, on]: MapperArgs[]) => ({ en, on })
+type MapperArgs = unknown | unknown[];
+TableWrapper.mapLeftRight = ([left, right]: MapperArgs[]) => ({ left, right });
+TableWrapper.mapEnglishOneida = ([en, on]: MapperArgs[]) => ({ en, on });

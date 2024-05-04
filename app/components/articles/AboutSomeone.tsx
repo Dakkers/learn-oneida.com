@@ -19,7 +19,7 @@ const data = createParadigmData(
       { breakdown: [{ text: "aoti" }, "lihwá·ke̲"] },
     ],
   },
-  [...singlePronouns, "ms", "fs"]
+  [...singlePronouns, "ms", "fs"],
 );
 
 const examplesList = [

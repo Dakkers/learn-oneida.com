@@ -62,7 +62,7 @@ const tenseMap = {
 } as const;
 
 const formSchema = z.object(
-  Object.fromEntries(TENSE_LIST.map((tense) => [tense, z.string().nullish()]))
+  Object.fromEntries(TENSE_LIST.map((tense) => [tense, z.string().nullish()])),
 );
 
 export default function PracticeTenseConjugation() {
@@ -72,7 +72,7 @@ export default function PracticeTenseConjugation() {
         label: `${arrayify(datum.root)[0]} (${datum.en})`,
         value: i.toString(),
       })),
-    []
+    [],
   );
 
   const [word, setWord] = React.useState("0");
@@ -91,7 +91,7 @@ export default function PracticeTenseConjugation() {
       const result = checkCorrectAnswer(
         answer ?? "",
         parseInt(word),
-        key as Tense
+        key as Tense,
       );
       if (result) {
         hasErrors = true;
@@ -211,7 +211,7 @@ export default function PracticeTenseConjugation() {
 function checkCorrectAnswer(
   answer: string,
   selectedWordIndex: number,
-  tense: Tense
+  tense: Tense,
 ) {
   const phraseObj = DATA_FULL_LIST[selectedWordIndex];
   if (phraseObj) {
@@ -220,14 +220,14 @@ function checkCorrectAnswer(
     const answersToCheck = Array.isArray(tenseEntry)
       ? [tenseEntry.join("")]
       : "items" in tenseEntry
-      ? tenseEntry.items.map((item) => item.on.join(""))
-      : [tenseEntry.on.join("")];
+        ? tenseEntry.items.map((item) => item.on.join(""))
+        : [tenseEntry.on.join("")];
 
     if (
       !answer ||
       !answersToCheck.find(
         (correctAnswer) =>
-          sanitizedAnswer === sanitizeIrregularCharacters(correctAnswer)
+          sanitizedAnswer === sanitizeIrregularCharacters(correctAnswer),
       )
     ) {
       return answersToCheck;

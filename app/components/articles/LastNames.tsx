@@ -16,7 +16,7 @@ const data = createParadigmData(
       { breakdown: ["te", { text: "hati" }, "hsʌná·se·le̲ʔ"] },
     ],
   },
-  ["i", "u", "m", "f", "ms"]
+  ["i", "u", "m", "f", "ms"],
 );
 
 const examplesList = [

@@ -113,7 +113,7 @@ export function AnswerMultipleChoiceButtons({
             showCorrectState &&
               option.key === quizContext.answer &&
               !isCorrect &&
-              "bg-red-700 text-white"
+              "bg-red-700 text-white",
           )}
           disabled={hasSelected}
           key={option.key}

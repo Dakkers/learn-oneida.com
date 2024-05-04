@@ -33,7 +33,7 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
           examples: Array<{
             en: string;
             oneida: string;
-          }>
+          }>,
         ) => (
           <Flex direction="column" gap={4}>
             {(examples ?? []).map((ex, i) => (
@@ -49,7 +49,7 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         header: "Examples",
       },
     ],
-    []
+    [],
   );
 
   const data = React.useMemo(() => {

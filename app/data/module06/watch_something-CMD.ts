@@ -17,5 +17,5 @@ export default createParadigmData(
     ],
     whispered: false,
   },
-  ["u", "u2", "yall"]
+  ["u", "u2", "yall"],
 );

@@ -13,15 +13,7 @@ export interface PaddingProps {
   pt?: PaddingToken;
 }
 
-export function usePadding ({
-  p,
-  px,
-  py,
-  pl,
-  pr,
-  pb,
-  pt,
-}: PaddingProps) {
+export function usePadding({ p, px, py, pl, pr, pb, pt }: PaddingProps) {
   return cn(
     p && pMap.get(p),
     px && pxMap.get(px),
@@ -29,8 +21,8 @@ export function usePadding ({
     pl && plMap.get(pl),
     pr && prMap.get(pr),
     pb && pbMap.get(pb),
-    pt && ptMap.get(pt)
-  )
+    pt && ptMap.get(pt),
+  );
 }
 
 const pMap = new Map<PaddingToken, string>([

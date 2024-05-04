@@ -1,6 +1,9 @@
 import { cn } from "@/lib/utils";
 
-export function List({ children, ordered = false }: {
+export function List({
+  children,
+  ordered = false,
+}: {
   children: React.ReactNode;
   ordered?: boolean;
 }) {
@@ -12,8 +15,6 @@ export function List({ children, ordered = false }: {
   );
 }
 
-List.Item = function ListItem({ children }: {
-  children: React.ReactNode;
-}) {
+List.Item = function ListItem({ children }: { children: React.ReactNode }) {
   return <li className="ml-6">{children}</li>;
 };

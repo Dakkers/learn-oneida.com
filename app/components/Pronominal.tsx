@@ -23,12 +23,12 @@ export function Pronominal({
   const textColorClass = ["red", "r"].includes(color ?? "")
     ? "text-red-500"
     : ["blue", "b"].includes(color ?? "")
-    ? "text-blue-700"
-    : ["purple", "p"].includes(color ?? "")
-    ? "text-violet-700"
-    : ["lightblue", "lb"].includes(color ?? "")
-    ? "text-cyan-400"
-    : "text-gray-700";
+      ? "text-blue-700"
+      : ["purple", "p"].includes(color ?? "")
+        ? "text-violet-700"
+        : ["lightblue", "lb"].includes(color ?? "")
+          ? "text-cyan-400"
+          : "text-gray-700";
 
   return <span className={cn(textColorClass, "font-bold")}>{children}</span>;
 }

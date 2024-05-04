@@ -17,7 +17,7 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
       (char) =>
         vowels.includes(char) ||
         vowelsAccented.includes(char) ||
-        char === WHISPER_CHAR
+        char === WHISPER_CHAR,
     );
   const index = word.length - reversedIndex - 1;
   const char = word.charAt(index);
@@ -31,7 +31,7 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
     }
     const lookupIndex = Math.max(
       vowels.indexOf(char),
-      vowelsAccented.indexOf(char)
+      vowelsAccented.indexOf(char),
     );
     const result = word.split("");
     result[index] = vowelsWhispered[lookupIndex];

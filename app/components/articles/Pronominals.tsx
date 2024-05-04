@@ -385,12 +385,12 @@ function PronominalTableText({
     color === "red"
       ? "PR"
       : color === "blue"
-      ? "PB"
-      : color === "purple"
-      ? "PP"
-      : color === "lightblue"
-      ? "PLB"
-      : undefined;
+        ? "PB"
+        : color === "purple"
+          ? "PP"
+          : color === "lightblue"
+            ? "PLB"
+            : undefined;
 
   const textContent = !entry.breakdown ? (
     <Pronominal color={color}>{entry.text}</Pronominal>

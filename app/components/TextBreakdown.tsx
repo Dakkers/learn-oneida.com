@@ -104,9 +104,9 @@ function InnerText({
     <span
       className={cn(
         arrayify(type ?? []).map((t: BreakdownType) =>
-          t ? BREAKDOWN_TYPE_MAP[t] : undefined
+          t ? BREAKDOWN_TYPE_MAP[t] : undefined,
         ),
-        "font-bold"
+        "font-bold",
       )}
     >
       {children}
@@ -141,20 +141,20 @@ function getSuffixArr(suffix: TextBreakdownSuffix | undefined) {
     suffix === "hne"
       ? "hné·"
       : suffix === "kwe"
-      ? "kweʔ"
-      : suffix === "hkwe"
-      ? "hkweʔ"
-      : suffix === "hake"
-      ? "hakeʔ"
-      : suffix === "heke"
-      ? "hekeʔ"
-      : suffix === "hak"
-      ? "hakʔ"
-      : suffix === "ake"
-      ? "akeʔ"
-      : suffix === "áke"
-      ? "ákeʔ"
-      : undefined;
+        ? "kweʔ"
+        : suffix === "hkwe"
+          ? "hkweʔ"
+          : suffix === "hake"
+            ? "hakeʔ"
+            : suffix === "heke"
+              ? "hekeʔ"
+              : suffix === "hak"
+                ? "hakʔ"
+                : suffix === "ake"
+                  ? "akeʔ"
+                  : suffix === "áke"
+                    ? "ákeʔ"
+                    : undefined;
 
   if (!text) {
     return [];
@@ -181,7 +181,7 @@ export function convertBreakdownToPlainText(
   options: {
     prefix?: BreakdownType;
     suffix?: TextBreakdownSuffix;
-  } = {}
+  } = {},
 ) {
   const breakdownDuplicate = getPrefixArr(options.prefix)
     .concat(breakdown)
@@ -192,8 +192,8 @@ export function convertBreakdownToPlainText(
       Array.isArray(part)
         ? part[0]
         : typeof part === "object"
-        ? part.text
-        : part
+          ? part.text
+          : part,
     )
     .join("");
 }

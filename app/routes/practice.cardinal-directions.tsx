@@ -34,12 +34,12 @@ export default function PracticeCardinalDirections() {
           key === "north"
             ? MoveUpIcon
             : key === "east"
-            ? MoveRightIcon
-            : key === "south"
-            ? MoveDownIcon
-            : key === "west"
-            ? MoveLeftIcon
-            : undefined
+              ? MoveRightIcon
+              : key === "south"
+                ? MoveDownIcon
+                : key === "west"
+                  ? MoveLeftIcon
+                  : undefined
         }
       />
     </Flex>

@@ -24,7 +24,7 @@ const dataAtSomeonesOwnHouse = createParadigmData(
       { breakdown: ["tsiʔ t", { text: "yot" }, "yoʔtʌ́staʔ"] },
     ],
   },
-  pronounsBlue
+  pronounsBlue,
 );
 
 const dataAtSomeonesOwnWork = createParadigmData(
@@ -45,7 +45,7 @@ const dataAtSomeonesOwnWork = createParadigmData(
       { breakdown: ["tsiʔ t", { text: "yot" }, "yoʔtʌ́staʔ"] },
     ],
   },
-  pronounsBlue
+  pronounsBlue,
 );
 
 const examplesList = [

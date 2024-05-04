@@ -49,7 +49,7 @@ export function MatchingGamePage({ data, getIcon }: MatchingGamePageProps) {
     setValues(newValues);
     if (Object.keys(newValues).length >= data.length) {
       const success = !Object.keys(newValues).find(
-        (key) => key !== newValues[key]
+        (key) => key !== newValues[key],
       );
       setIsCorrect(success);
     }
@@ -88,28 +88,28 @@ function EnglishSection({
     numItems <= 4
       ? "grid-cols-[repeat(4,200px)]"
       : numItems <= 6
-      ? "grid-cols-[repeat(3,200px)]"
-      : numItems <= 8
-      ? "grid-cols-[repeat(4,200px)]"
-      : numItems <= 9
-      ? "grid-cols-[repeat(3,200px)]"
-      : "grid-cols-[repeat(4,200px)]";
+        ? "grid-cols-[repeat(3,200px)]"
+        : numItems <= 8
+          ? "grid-cols-[repeat(4,200px)]"
+          : numItems <= 9
+            ? "grid-cols-[repeat(3,200px)]"
+            : "grid-cols-[repeat(4,200px)]";
   // I am not proud of this code but I am very tired
   // I know there's a proper way to do this but eh
   const rowsClass =
     numItems <= 4
       ? "grid-rows-[repeat(1,200px)]"
       : numItems <= 8
-      ? "grid-rows-[repeat(2,200px)]"
-      : numItems <= 12
-      ? "grid-rows-[repeat(3,200px)]"
-      : numItems <= 16
-      ? "grid-rows-[repeat(4,200px)]"
-      : numItems <= 20
-      ? "grid-rows-[repeat(5,200px)]"
-      : numItems <= 24
-      ? "grid-rows-[repeat(6,200px)]"
-      : "grid-rows-[repeat(7,200px)]";
+        ? "grid-rows-[repeat(2,200px)]"
+        : numItems <= 12
+          ? "grid-rows-[repeat(3,200px)]"
+          : numItems <= 16
+            ? "grid-rows-[repeat(4,200px)]"
+            : numItems <= 20
+              ? "grid-rows-[repeat(5,200px)]"
+              : numItems <= 24
+                ? "grid-rows-[repeat(6,200px)]"
+                : "grid-rows-[repeat(7,200px)]";
 
   return (
     <div className={`grid ${columnsClass} ${rowsClass} gap-4 mx-auto`}>
@@ -176,7 +176,11 @@ function Draggable({
         "border-solid",
         "border-slate-300",
         "rounded",
-        isDragging ? "bg-slate-300" : isUsed ? "bg-transparent" : "bg-slate-200"
+        isDragging
+          ? "bg-slate-300"
+          : isUsed
+            ? "bg-transparent"
+            : "bg-slate-200",
       )}
       role="button"
       tabIndex={0}
@@ -220,10 +224,10 @@ function DropTarget({
         !context.isComplete
           ? ["border-slate-600", isDropTarget && "bg-slate-100"]
           : isCorrect
-          ? ["border-green-600", "bg-green-100"]
-          : ["border-red-600", "bg-red-100"],
+            ? ["border-green-600", "bg-green-100"]
+            : ["border-red-600", "bg-red-100"],
         "w-[200px]",
-        "h-[200px]"
+        "h-[200px]",
       )}
       ref={ref}
       role="button"
@@ -245,7 +249,7 @@ function DropTarget({
           <div className="absolute bottom-0 py-1 w-full flex justify-center bg-slate-200">
             {
               arrayify(
-                context.data.find((d) => d.key === droppedItemKey)?.on
+                context.data.find((d) => d.key === droppedItemKey)?.on,
               )[0]
             }
           </div>
