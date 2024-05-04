@@ -5,6 +5,12 @@ name: main
 on: [push]
 
 jobs:
+  blah:
+    runs-on: ubuntu-latest
+  
+    steps: 
+      - run: echo 1
+      
   build:
 
     runs-on: ubuntu-latest
