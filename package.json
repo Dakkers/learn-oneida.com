@@ -10,7 +10,8 @@
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
     "typecheck": "tsc",
-    "pages:deploy": "npm run build && wrangler pages deploy ./public"
+    "pages:deploy": "npm run build && wrangler pages deploy ./public",
+    "ci:format": "prettier ./app ./@ --check"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -60,6 +61,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "plop": "^4.0.1",
+    "prettier": "^3.2.5",
     "tsx": "^4.7.0",
     "typescript": "^5.1.0",
     "wrangler": "^3.8.0"

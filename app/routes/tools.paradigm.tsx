@@ -177,6 +177,7 @@ export default function ToolsParadigm() {
             setHasStarted(false);
           }}
           options={wordOptions}
+          // @ts-expect-error TODO: fix this type error
           value={word}
         />
 
