@@ -16,10 +16,10 @@ export const meta: MetaFunction = () => {
 
 export default function Practice() {
   const items = [
-    {
-      href: "/being-somewhere",
-      label: "Being somewhere",
-    },
+    // {
+    //   href: "/being-somewhere",
+    //   label: "Being somewhere",
+    // },
     // {
     //   href: "/cardinal-directions",
     //   label: "Cardinal Directions",
