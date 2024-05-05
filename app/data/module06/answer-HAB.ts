@@ -7,49 +7,55 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "lihwaʔslákwas"],
+        breakdown: [["t", "CIS"], ["k"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["s"], "lihwaʔslákwas"],
+        breakdown: [["te", "CIS"], ["s"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["la"], "lihwaʔslákwas"],
+        breakdown: [["t", "CIS"], ["la"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["ye"], "lihwaʔslákwas"],
+        breakdown: [["t", "CIS"], ["ye"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["ka"], "lihwaʔslákwas"],
+        breakdown: [["t", "CIS"], ["ka"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["tni"], "lihwaʔslákwas"],
+        breakdown: [["te", "CIS"], ["tni"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["yakni"], "lihwaʔslákwas"],
+        breakdown: [["t", "CIS"], ["yakni"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["sni"], "lihwaʔslákwas"],
+        breakdown: [["te", "CIS"], ["sni"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["h", "RPL"], ["ni"], "lihwaʔslákwas"],
+        breakdown: [
+          ["t", "CIS"],
+          ["h", "RPL"],
+          ["ni"],
+          "lihwaʔslákwa",
+          ["s", "HAB"],
+        ],
       },
       {
-        breakdown: [["kni"], "lihwaʔslákwas"],
+        breakdown: [["t", "CIS"], ["kni"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["twa"], "lihwaʔslákwas"],
+        breakdown: [["te", "CIS"], ["twa"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["yakwa"], "lihwaʔslákwas"],
+        breakdown: [["te", "CIS"], ["yakwa"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["swa"], "lihwaʔslákwas"],
+        breakdown: [["t", "CIS"], ["swa"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["lati"], "lihwaʔslákwas"],
+        breakdown: [["t", "CIS"], ["lati"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["kuti"], "lihwaʔslákwas"],
+        breakdown: [["t", "CIS"], ["kuti"], "lihwaʔslákwa", ["s", "HAB"]],
       },
     ],
     whispered: false,
