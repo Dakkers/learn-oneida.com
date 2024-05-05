@@ -10,7 +10,7 @@ export interface HeadingProps
 }
 
 export function Heading({
-  align = 'start',
+  align = "start",
   children,
   contrast = "high",
   id,

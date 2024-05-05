@@ -40,7 +40,7 @@ export default function App() {
         <div
           className={cn(
             "mx-auto flex flex-col gap-4 p-8",
-            isHomePage ? "max-w-5xl" : "max-w-lg"
+            isHomePage ? "max-w-5xl" : "max-w-lg",
           )}
         >
           <Outlet />

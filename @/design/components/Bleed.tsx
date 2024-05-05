@@ -25,7 +25,7 @@ export function Bleed({ children, m, mx, my, ml, mt, mr, mb }: BleedProps) {
         mr && mrMap.get(mr),
         mb && mbMap.get(mb),
         mt && mtMap.get(mt),
-      ) }
+      )}
     >
       {children}
     </div>

@@ -36,13 +36,13 @@ const typographyClasses = {
 } as const;
 
 const alignMap = {
-  start: 'text-start',
-  center: 'text-center',
-  end: 'text-end',
-} as const
+  start: "text-start",
+  center: "text-center",
+  end: "text-end",
+} as const;
 
 export interface InternalTextProps {
-  align?: 'start' | 'center' | 'end'
+  align?: "start" | "center" | "end";
   as?: "span" | "div" | "p" | "h1" | "h2" | "h3" | "h4" | "h5";
   children: React.ReactNode;
   contrast?: Contrast;
@@ -65,7 +65,7 @@ export function InternalText({
       className={cn(
         typographyClasses[variant],
         textColorMap[contrast][intent],
-        align && alignMap[align]
+        align && alignMap[align],
       )}
       id={id}
     >

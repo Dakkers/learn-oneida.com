@@ -21,7 +21,7 @@ import { Bleed, BleedProps } from "./Bleed";
 type Row = Record<string, unknown>;
 
 export interface TableWrapperProps {
-  bleed?: BleedProps['mx']
+  bleed?: BleedProps["mx"];
   columns: Array<{
     accessorKey: string;
     cell?: (value?: unknown, row?: Row) => React.ReactNode;
@@ -32,7 +32,7 @@ export interface TableWrapperProps {
 }
 
 export function TableWrapper({ bleed = 32, columns, data }: TableWrapperProps) {
-  const hasHeader = !!columns.find((col) => !!col.header)
+  const hasHeader = !!columns.find((col) => !!col.header);
 
   return (
     <Bleed mx={bleed}>
