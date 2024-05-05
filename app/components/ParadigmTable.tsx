@@ -46,7 +46,7 @@ import { sanitizeIrregularCharacters, whisperizeWord } from "~/utils/words";
 import { Bleed, BleedProps } from "@/design/components/Bleed";
 
 const formSchema = z.object(
-  Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()]))
+  Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),
 );
 
 const ParadigmTableContext =
@@ -217,7 +217,7 @@ function TableRowWrapper({
   const translatedPhrase = translatePhrase(
     context.translation,
     row.pronoun,
-    context.translationFn
+    context.translationFn,
   );
 
   return (
@@ -354,7 +354,7 @@ export function createParadigmData(
   data: Pick<ParadigmData, "translation" | "type" | "whispered"> & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },
-  allowedPronouns?: Pronoun[]
+  allowedPronouns?: Pronoun[],
 ): ParadigmData {
   const result = _.cloneDeep(data) as ParadigmData;
   for (let i = 0; i < result.phrases.length; i++) {
@@ -363,7 +363,7 @@ export function createParadigmData(
     if (element.whispered ?? data.whispered ?? true) {
       const lastElement = element.breakdown[endIndex];
       const lastPartOfBreakdown = getBreakdownTextPart(
-        getBreakdownTextPart(lastElement)
+        getBreakdownTextPart(lastElement),
       );
       const lastPartWhispered = whisperizeWord(lastPartOfBreakdown);
       element.breakdown[endIndex] =

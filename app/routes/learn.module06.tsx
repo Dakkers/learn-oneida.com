@@ -139,7 +139,7 @@ export default function LearnModule06() {
                 key={v.key}
                 label={v.root}
                 value={formatVerbParadigmSectionId(
-                  activeVerbsList.find((v2) => v2.key === v.key)!
+                  activeVerbsList.find((v2) => v2.key === v.key)!,
                 )}
               />
             ))}
@@ -454,7 +454,7 @@ function DailyActivitiesSection() {
                     // @ts-expect-error To be fixed in LO-12
                     cell: (
                       value: BreakdownArray,
-                      row: { colour: BreakdownType }
+                      row: { colour: BreakdownType },
                     ) => (
                       <TextBreakdown
                         breakdown={value}
@@ -468,7 +468,7 @@ function DailyActivitiesSection() {
                   colour: v[tense].type,
                   tense,
                   text: v[tense].phrases.find(
-                    (p) => p.pronoun === (tense === "cmd" ? "u" : "i")
+                    (p) => p.pronoun === (tense === "cmd" ? "u" : "i"),
                   )?.breakdown,
                 }))}
               />

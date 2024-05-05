@@ -47,7 +47,7 @@ const tenseMap = {
 } as const;
 
 const formSchema = z.object(
-  Object.fromEntries(TENSE_LIST.map((tense) => [tense, z.string().nullish()]))
+  Object.fromEntries(TENSE_LIST.map((tense) => [tense, z.string().nullish()])),
 );
 
 export default function PracticeTenseConjugation() {
@@ -57,7 +57,7 @@ export default function PracticeTenseConjugation() {
         label: datum.en,
         value: datum.key,
       })),
-    []
+    [],
   );
   const pronounOptions = React.useMemo(
     () =>
@@ -65,7 +65,7 @@ export default function PracticeTenseConjugation() {
         label: `${PRONOUN_MAP_ONEIDA[pronoun]} (${PRONOUN_MAP_EN[pronoun]})`,
         value: pronoun,
       })),
-    []
+    [],
   );
 
   const [word, setWord] = React.useState("answer");
@@ -86,7 +86,7 @@ export default function PracticeTenseConjugation() {
         answer ?? "",
         word,
         pronoun as Pronoun,
-        key as Tense
+        key as Tense,
       );
       if (result) {
         hasErrors = true;
@@ -186,7 +186,9 @@ export default function PracticeTenseConjugation() {
                   },
                 ]}
                 data={TENSE_LIST.filter((tense) =>
-                  tense === "cmd" ? ["u", "u2", "yall"].includes(pronoun) : true
+                  tense === "cmd"
+                    ? ["u", "u2", "yall"].includes(pronoun)
+                    : true,
                 ).map((tense) => ({
                   tense,
                   value: "",
@@ -216,7 +218,7 @@ function checkCorrectAnswer(
   answer: string,
   word: string,
   pronoun: Pronoun,
-  tense: Tense
+  tense: Tense,
 ) {
   const verbDatum = activeVerbsList.find((v) => v.key === word);
   if (!verbDatum) {
@@ -226,7 +228,7 @@ function checkCorrectAnswer(
   const sanitizedAnswer = sanitizeIrregularCharacters(answer);
   const tenseEntry = verbDatum[tense];
   const correctAnswer = tenseEntry.phrases.find(
-    (p) => p.pronoun === pronoun
+    (p) => p.pronoun === pronoun,
   )?.phrase;
 
   if (

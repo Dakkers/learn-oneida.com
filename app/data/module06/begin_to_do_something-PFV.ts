@@ -54,5 +54,5 @@ export default createParadigmData(
     ],
     whispered: false,
   },
-  pronouns
+  pronouns,
 );

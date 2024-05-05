@@ -67,8 +67,8 @@ export default function ToolsClock() {
                 setTranslatedValue(
                   doTheTranslate(
                     (parseInt(hour) % 12) + (period === "AM" ? 0 : 12),
-                    parseInt(minute)
-                  )
+                    parseInt(minute),
+                  ),
                 )
               }
             >

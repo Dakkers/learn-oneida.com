@@ -40,8 +40,8 @@ const DATA_FULL_LIST = _.flattenDeep(
           value: p.phrase,
         })) ?? []
       );
-    })
-  )
+    }),
+  ),
 );
 
 interface Q {

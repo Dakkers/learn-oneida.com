@@ -83,7 +83,7 @@ const data = createParadigmData(
       },
     ],
   },
-  [...dualicPronouns, ...pluralPronouns]
+  [...dualicPronouns, ...pluralPronouns],
 );
 
 export function SimilarInAppearanceArticle({ level = 1 }: ArticleProps) {

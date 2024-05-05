@@ -58,7 +58,7 @@ const data = createParadigmData(
       },
     ],
   },
-  [...dualicPronouns, ...pluralPronouns]
+  [...dualicPronouns, ...pluralPronouns],
 );
 
 export function BeingDifferentArticle({ level = 1 }: ArticleProps) {
