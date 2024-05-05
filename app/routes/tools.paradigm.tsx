@@ -166,7 +166,7 @@ export default function ToolsParadigm() {
   );
 
   return (
-    <div>
+    <>
       <SectionHeading level={1}>Paradigm Tester</SectionHeading>
 
       <Flex align="end" gap={2}>
@@ -236,6 +236,6 @@ export default function ToolsParadigm() {
           translationFn={translatorFns[word]}
         />
       )}
-    </div>
+    </>
   );
 }

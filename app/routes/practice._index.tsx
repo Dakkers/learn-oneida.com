@@ -20,26 +20,26 @@ export default function Practice() {
       href: "/being-somewhere",
       label: "Being somewhere",
     },
-    {
-      href: "/cardinal-directions",
-      label: "Cardinal Directions",
-    },
-    {
-      href: "/days-of-the-week",
-      label: "Days of the week",
-    },
-    {
-      href: "/months",
-      label: "Months of the year",
-    },
+    // {
+    //   href: "/cardinal-directions",
+    //   label: "Cardinal Directions",
+    // },
+    // {
+    //   href: "/days-of-the-week",
+    //   label: "Days of the week",
+    // },
+    // {
+    //   href: "/months",
+    //   label: "Months of the year",
+    // },
     {
       href: "/places",
       label: "Places in the community",
     },
-    {
-      href: "/seasons",
-      label: "Seasons",
-    },
+    // {
+    //   href: "/seasons",
+    //   label: "Seasons",
+    // },
     {
       href: "/active-tense-conjugation",
       label: "Tense Conjugation (Active Verbs)",

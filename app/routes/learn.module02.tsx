@@ -68,7 +68,7 @@ export const meta: MetaFunction = () => {
 
 export default function LearnModule02() {
   return (
-    <Flex direction="column" gap={4}>
+    <>
       <SectionHeading level={1}>Module 2</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
@@ -186,7 +186,7 @@ export default function LearnModule02() {
       <BeingDifferentArticle level={2} />
 
       <TranslationExercisesSection group="module02" />
-    </Flex>
+    </>
   );
 }
 

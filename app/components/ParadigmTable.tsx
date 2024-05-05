@@ -43,6 +43,7 @@ import { Button } from "@/design/primitives/button";
 import { Notice } from "@/design/components/notice";
 import _ from "lodash";
 import { sanitizeIrregularCharacters, whisperizeWord } from "~/utils/words";
+import { Bleed, BleedProps } from "@/design/components/Bleed";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),
@@ -53,12 +54,14 @@ const ParadigmTableContext =
 
 export function ParadigmTable({
   allowedPronouns = [],
+  bleed = 32,
   columnVisibility = {},
   data,
   isTesting = false,
   translationFn,
 }: {
   allowedPronouns?: Pronoun[];
+  bleed?: BleedProps["mx"];
   columnVisibility?: Partial<ColumnVisibility>;
   data: ParadigmData;
   isTesting?: boolean;
@@ -119,7 +122,7 @@ export function ParadigmTable({
         translationFn,
       }}
     >
-      <div>
+      <Bleed mx={bleed}>
         <Flex justify="end">
           <SettingsMenu
             toggleColumn={(columnName) =>
@@ -190,7 +193,7 @@ export function ParadigmTable({
             )}
           </form>
         </Form>
-      </div>
+      </Bleed>
     </ParadigmTableContext.Provider>
   );
 }

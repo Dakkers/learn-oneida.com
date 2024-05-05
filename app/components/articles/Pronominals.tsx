@@ -27,6 +27,7 @@ import {
 } from "~/utils";
 import { Pronominal, PronominalColor } from "../Pronominal";
 import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
+import { Bleed } from "@/design/components/Bleed";
 
 export const DATA_SEASONS = [
   { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
@@ -311,56 +312,57 @@ function PronominalsTable({
   const rowsToUse = isPurple ? data : allowedPronouns ?? pronouns;
 
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          {!isPurple && <TableHead></TableHead>}
-          <TableHead>EN</TableHead>
-          <TableHead>C-stem</TableHead>
-          <TableHead>A-stem</TableHead>
-          <TableHead>I-stem</TableHead>
-          <TableHead>E-stem / Λ-stem</TableHead>
-          <TableHead>O-stem / U-stem</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {rowsToUse.map((row, i) => (
-          <TableRow key={i}>
-            {/* @ts-expect-error To be addressed in LO-17 */}
-            {!isPurple && <TableCell>{PRONOUN_MAP_ONEIDA[row]}</TableCell>}
-            <TableCell>
-              {!isPurple
-                ? // @ts-expect-error To be addressed in LO-17
-                  PRONOUN_MAP_EN[row]
-                : // @ts-expect-error To be addressed in LO-17
-                  arrayify(row.label).map((label, j) => (
-                    <div key={j}>{label}</div>
-                  ))}
-            </TableCell>
-
-            {stems.map((stem) => {
-              // @ts-expect-error To be addressed in LO-17
-              const datum = isPurple ? row : data[row];
-              const content = datum[stem] ?? datum.default;
-              return (
-                <TableCell key={stem}>
-                  <Flex direction="column">
-                    {/* @ts-expect-error To be addressed in LO-17 */}
-                    {content.map((prefixArr: PrefixArray, i: number) => (
-                      <PronominalTableText
-                        color={color}
-                        entry={prefixArr}
-                        key={i}
-                      />
-                    ))}
-                  </Flex>
-                </TableCell>
-              );
-            })}
+    <Bleed mx={32}>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            {!isPurple && <TableHead></TableHead>}
+            <TableHead>EN</TableHead>
+            <TableHead>C-stem</TableHead>
+            <TableHead>A-stem</TableHead>
+            <TableHead>I-stem</TableHead>
+            <TableHead>E-stem / Λ-stem</TableHead>
+            <TableHead>O-stem / U-stem</TableHead>
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHeader>
+        <TableBody>
+          {rowsToUse.map((row, i) => (
+            <TableRow key={i}>
+              {/* @ts-expect-error To be addressed in LO-17 */}
+              {!isPurple && <TableCell>{PRONOUN_MAP_ONEIDA[row]}</TableCell>}
+              <TableCell>
+                {!isPurple
+                  ? // @ts-expect-error To be addressed in LO-17
+                    PRONOUN_MAP_EN[row]
+                  : // @ts-expect-error To be addressed in LO-17
+                    arrayify(row.label).map((label, j) => (
+                      <div key={j}>{label}</div>
+                    ))}
+              </TableCell>
+              {stems.map((stem) => {
+                // @ts-expect-error To be addressed in LO-17
+                const datum = isPurple ? row : data[row];
+                const content = datum[stem] ?? datum.default;
+                return (
+                  <TableCell key={stem}>
+                    <Flex direction="column">
+                      {/* @ts-expect-error To be addressed in LO-17 */}
+                      {content.map((prefixArr: PrefixArray, i: number) => (
+                        <PronominalTableText
+                          color={color}
+                          entry={prefixArr}
+                          key={i}
+                        />
+                      ))}
+                    </Flex>
+                  </TableCell>
+                );
+              })}
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </Bleed>
   );
 }
 
