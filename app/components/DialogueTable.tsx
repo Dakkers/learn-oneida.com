@@ -22,7 +22,6 @@ export function DialogueTable({ data }: { data: DialogueTableData }) {
       header: "",
     },
   ];
-
   return (
     <TableWrapper
       columns={columns}
