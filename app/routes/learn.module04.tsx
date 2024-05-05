@@ -470,7 +470,11 @@ function AccordionWrapper({
           <AccordionItem id={id} key={id} value={id}>
             <AccordionTrigger>{title}</AccordionTrigger>
             <AccordionContent>
-              <ParadigmTable bleed={0} columnVisibility={columnVisibility} data={data} />
+              <ParadigmTable
+                bleed={0}
+                columnVisibility={columnVisibility}
+                data={data}
+              />
             </AccordionContent>
           </AccordionItem>
         ))}
