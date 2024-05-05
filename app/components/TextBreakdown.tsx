@@ -3,9 +3,12 @@ import { arrayify } from "~/utils";
 import { whisperizeWord } from "~/utils/words";
 
 export type BreakdownType =
+  | "CIS"
   | "DEF"
+  | "DUAL"
   | "EP"
   | "FUT"
+  | "HAB"
   | "IFUT"
   | "JOIN"
   | "OP"
@@ -115,9 +118,12 @@ function InnerText({
 }
 
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
+  CIS: "text-orange-400",
   DEF: "text-emerald-400",
+  DUAL: "text-orange-400",
   EP: "text-gray-400",
   FUT: "text-emerald-400",
+  HAB: "text-orange-400",
   IFUT: "text-emerald-400",
   JOIN: "text-gray-400",
   OP: "underline decoration-wavy decoration-black",

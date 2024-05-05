@@ -420,7 +420,7 @@ function OneidaTermsForTenses() {
             tense: ["Progressive", "Stative"],
           },
           {
-            breakdown: ["thó n", ["hs"], "átyel"],
+            breakdown: ["thó n", ["a", "IFUT"], ["hs"], "átyel"],
             en: "Do that!",
             tense: "Command",
           },

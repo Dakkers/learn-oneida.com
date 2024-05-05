@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["k"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["s"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["s"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["l"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["l"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["yu"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["yu"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["w"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["w"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["ty"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["ty"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["yaky"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["yaky"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["tsy"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["tsy"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["y"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["y"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["ky"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["ky"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["tw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["tw"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["yakw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["yakw"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["sw"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["sw"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["lu"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["lu"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["ku"], ["atat", "REFL"], ["e", "EP"], "wyʌnʌ·tá·seʔ"],
+        breakdown: [["ku"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
     ],
   },

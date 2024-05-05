@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} am answering",
+    translation: "{{pronoun}} answered",
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["k"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hse"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["hs"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["ha"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["ha"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["e"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["ye"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ka"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["ka"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["we", "DEF"], ["tni"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["tni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["akni"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["akni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["we", "DEF"], ["sni"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["sni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hni"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["hni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kni"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["kni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["we", "DEF"], ["twa"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["twa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["akwa"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["akwa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["we", "DEF"], ["swa"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["swa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hati"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["hati"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kuti"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["kuti"], "lihwaʔsla·kó·"],
       },
     ],
   },
