@@ -11,6 +11,7 @@
     "gen": "plop --plopfile ./scripts/generate.cjs",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "pages:deploy": "npm run build && wrangler pages deploy ./public",
+    "prepare": "husky install",
     "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
     "typecheck": "tsc"
   },
@@ -61,6 +62,8 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "plop": "^4.0.1",
     "prettier": "^3.2.5",
     "tsx": "^4.7.0",
@@ -69,5 +72,9 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
