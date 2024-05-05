@@ -18,11 +18,11 @@ export function DialogueTable({ data }: { data: DialogueTableData }) {
     { accessorKey: "left", cell: (value: any) => TableCell(value), header: "" },
     {
       accessorKey: "right",
-    cell: (value: any) => TableCell(value),
+      cell: (value: any) => TableCell(value),
       header: "",
     },
   ];
-console.log('blah')
+  console.log("blah2");
   return (
     <TableWrapper
       columns={columns}
