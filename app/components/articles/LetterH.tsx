@@ -3,6 +3,7 @@ import { SectionHeading } from "../SectionHeading";
 import { Text } from "@/design/components/text";
 import { ArticleProps } from "./utils";
 import { Letter } from "../Letter";
+import { List } from "@/design/components/list";
 
 export function LetterHArticle({ level = 1 }: ArticleProps) {
   return (
@@ -21,11 +22,23 @@ export function LetterHArticle({ level = 1 }: ArticleProps) {
       </Text>
       <Text>
         In Onʌyoteʔa·ká· we write all the Hs that follow Ks and Ts. Example:{" "}
-        <b>khenú·wehseʔ</b> and <b>thikʌ́</b>. We also write most of the Hs that
-        occur after a vowel and before a consonant. Examples:{" "}
-        <b>yehyatúkhwa̲ʔ</b>, <b>onikwʌ́htalaʔ</b>, <b>kanúhsaʔ</b>. Not all of
-        the Hs that are spoken in a word get written by all speakers, however.
-        It seems to be a matter of personal preference.
+      </Text>
+      <List>
+        <List.Item>khenú·wehseʔ</List.Item>
+        <List.Item>thikʌ́</List.Item>
+      </List>
+      <Text>
+        We also write most of the Hs that occur after a vowel and before a
+        consonant. Examples:
+      </Text>
+      <List>
+        <List.Item>yehyatúkhwa̲ʔ</List.Item>
+        <List.Item>onikwʌ́htalaʔ</List.Item>
+        <List.Item>kanúhsaʔ</List.Item>
+      </List>
+      <Text>
+        Not all of the Hs that are spoken in a word get written by all speakers,
+        however. It seems to be a matter of personal preference.
       </Text>
     </Flex>
   );
