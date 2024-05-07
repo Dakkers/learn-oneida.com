@@ -834,7 +834,7 @@ function DialogueSection() {
     ],
     [
       "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
-      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔiséˍ·",
+      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔisé͟·",
     ],
     [
       "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yó t niʔí·",
@@ -868,7 +868,7 @@ function DialogueSection() {
 function ThingsThatAreTheSameSection() {
   const data = [
     ["They are the same", "Né· tshá·kat"],
-    ["Are they the same?", "Né· kʌ tshá·kat"],
+    ["Are they the same?", "Né· kʌ́ tshá·kat"],
     ["They are not the same", "yah né· tshá·kat té·kʌ"],
     ["Someone and I are the same age", "tshaʔteyuknohsliyá·ku"],
     ["You two are the same age", "tshaʔ tesnohsliyá·ku"],

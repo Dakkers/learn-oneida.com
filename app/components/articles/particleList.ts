@@ -16,7 +16,7 @@ export const particleList = [
     en: "very much",
     examples: [
       {
-        oneida: "Kwáh i·kʌ́ tsiʔ kninú·wehseʔ kaʔikʌ́ né· Só·s khále Alísakwet",
+        oneida: "Kwáh i·kʌ́ tsiʔ kninú·wehseʔ kaʔi·kʌ́· né· Só·s khále Alísakwet",
         en: "Susan and Elizabeth like this very much.",
       },
     ],
@@ -74,7 +74,7 @@ export const particleList = [
   },
   {
     key: "question_indicator",
-    oneida: "kʌ",
+    oneida: "kʌ́",
     en: "Used to indicate a question",
     examples: [
       {
@@ -85,11 +85,11 @@ export const particleList = [
   },
   {
     key: "this",
-    oneida: "kaʔi·kʌ́·",
+    oneida: "kaʔi·kʌ́͟͟·",
     en: "this",
     examples: [
       {
-        oneida: "Akwekú kʌ́ latinú·wehseʔ kaʔi·kʌ lotikhstʌʔokúha",
+        oneida: "Akwekú kʌ́ latinú·wehseʔ kaʔi·kʌ́· lotikhstʌʔokúha",
         en: "Do all of the old men like this?",
       },
     ],
@@ -226,7 +226,7 @@ export const particleList = [
         en: "Who is that man?",
       },
       {
-        oneida: "Sanúhteʔ kʌ úhkaʔ náhteʔ thikʌ́ˍ",
+        oneida: "Sanúhteʔ kʌ́ úhkaʔ náhteʔ thikʌ́ˍ",
         en: "Do you know who that is?",
       },
     ],
@@ -262,7 +262,7 @@ export const particleList = [
     en: "something, anything",
     examples: [
       {
-        oneida: "Náhteʔ ok kʌ yakonúhteʔ né· yeksá·",
+        oneida: "Náhteʔ ok kʌ́ yakonúhteʔ né· yeksá·",
         en: "Does the girl know anything?",
       },
     ],
@@ -286,7 +286,7 @@ export const particleList = [
     en: "more",
     examples: [
       {
-        oneida: "Sʌ́haʔ kʌ yenú·wehseʔ né· kaʔi· kʌ̲",
+        oneida: "Sʌ́haʔ kʌ́ yenú·wehseʔ né· kaʔi·kʌ́͟͟",
         en: "Does she like this more?",
       },
     ],
@@ -330,11 +330,11 @@ export const particleList = [
 
   {
     key: "that",
-    oneida: "thikʌ́",
+    oneida: "thikʌ́͟͟",
     en: "that, that one, that thing",
     examples: [
       {
-        oneida: "Swanú·wehseʔ kʌ́ thí·kʔʌ́ˍ",
+        oneida: "Swanú·wehseʔ kʌ́ thikʌ́͟͟",
         en: "Do you all like that?",
       },
     ],
@@ -413,11 +413,11 @@ export const particleList = [
 
   {
     key: "isnt_it",
-    oneida: "wáhi",
+    oneida: "wáhi̲",
     en: "Isn't it? Innit? Eh?",
     examples: [
       {
-        oneida: "Wá·li yutátyats né· akaulhá·, wáhi",
+        oneida: "Wá·li yutátyats né· akaulhá·, wáhi̲",
         en: "Her name is Mary, isn't it?",
       },
     ],
@@ -1098,7 +1098,7 @@ export const particleList = [
     en: "it is the same, they are the same",
     examples: [
       {
-        oneida: "Né· kʌ tshá·kat kaʔikʌ",
+        oneida: "Né· kʌ́ tshá·kat kaʔi·kʌ",
         en: "Are these (things) the same?",
       },
     ],

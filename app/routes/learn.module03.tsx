@@ -813,7 +813,7 @@ const createColsLol = (cols: string[]) => {
 
 function DialogueSection() {
   const part2: DialogueTableData = [
-    ["To·kʌ́skeʔ kʌ sanyákheʔ", ["ʌ́·, to·kʌ́skeʔ", "Tu·wís yukninyákheʔ"]],
+    ["To·kʌ́skeʔ kʌ́ sanyákheʔ", ["ʌ́·, to·kʌ́skeʔ", "Tu·wís yukninyákheʔ"]],
     [
       ["Tu·wís kʌ́", "Lotinyakú né· So·s"],
       "Lotinyakú·neʔ nok tsiʔ tehonatekháhsyu nuʔú·waʔ",
@@ -839,7 +839,7 @@ function DialogueSection() {
     ],
     [
       "ʌ́· kháleʔ yáh teʔyukninyákheʔ úhkaʔ náhteʔ ok né·n tshaʔteyukniʔtaló·tʌ̲ʔ",
-      ["Tsiʔ nihsekhsá·", "Yukninyákheʔ kháleʔ yáh niʔisé·"],
+      ["Tsiʔ nihsekhsá·", "Yukninyákheʔ kháleʔ yáh niʔisé͟·"],
     ],
     [
       "Etshlihwanu·tú·seʔ tó· nihotikhsá·tayʌʔ oskánhe né·n oyá· yakúkwe",
@@ -855,7 +855,7 @@ function DialogueSection() {
     ],
     [
       "Sanúhteʔ kʌ́ tsiʔ nihatikhsaʔtáksʌs ne shakoyoʔokúha̲",
-      ["Yáh teʔsukweʔtiyó niʔiséˍ", "Tho wakanúhte̲ʔ"],
+      ["Yáh teʔsukweʔtiyó niʔisé͟·", "Tho wakanúhte̲ʔ"],
     ],
     [
       "Yaweluhátiʔ tsiʔ yah teshakoyʌtelí né·n shakoyoʔokúha, yáh tehuwanú·wehseʔ",
