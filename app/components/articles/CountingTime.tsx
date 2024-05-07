@@ -1,10 +1,40 @@
-import { Flex } from "@/design/components/flex";
-import { Text } from "@/design/components/text";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { SectionHeading } from "../SectionHeading";
 import { ArticleProps } from "./utils";
 
 export function CountingTimeArticle({ level = 1 }: ArticleProps) {
+  const [firstTable, secondTable] = createCountingTimeData();
+
+  return (
+    <>
+      <SectionHeading id="counting-time" level={level}>
+        Counting Lengths of Time
+      </SectionHeading>
+      <TableWrapper
+        columns={[
+          { accessorKey: "num", header: "" },
+          { accessorKey: "minutes", header: "Minutes" },
+          { accessorKey: "hours", header: "Hours" },
+          { accessorKey: "days", header: "Days" },
+          { accessorKey: "nights", header: "Nights" },
+        ]}
+        data={firstTable}
+      />
+
+      <TableWrapper
+        columns={[
+          { accessorKey: "num", header: "" },
+          { accessorKey: "weeks", header: "Weeks" },
+          { accessorKey: "months", header: "Months" },
+          { accessorKey: "years", header: "Years" },
+        ]}
+        data={secondTable}
+      />
+    </>
+  );
+}
+
+export function createCountingTimeData() {
   const firstTable = [
     {
       num: 1,
@@ -48,36 +78,5 @@ export function CountingTimeArticle({ level = 1 }: ArticleProps) {
       years: "áhsʌ niyóhslaké",
     },
   ];
-
-  return (
-    <Flex direction="column" gap={4}>
-      <SectionHeading id="counting-time" level={level}>
-        Counting Lengths of Time
-      </SectionHeading>
-      <TableWrapper
-        columns={[
-          { accessorKey: "num", header: "" },
-          { accessorKey: "minutes", header: "Minutes" },
-          { accessorKey: "hours", header: "Hours" },
-          { accessorKey: "days", header: "Days" },
-          { accessorKey: "nights", header: "Nights" },
-        ]}
-        data={firstTable}
-      />
-      <Text>
-        For some reason, the word for &quot;minute&quot; here is different than
-        the word you would use when saying what time it is.
-      </Text>
-
-      <TableWrapper
-        columns={[
-          { accessorKey: "num", header: "" },
-          { accessorKey: "weeks", header: "Weeks" },
-          { accessorKey: "months", header: "Months" },
-          { accessorKey: "years", header: "Years" },
-        ]}
-        data={secondTable}
-      />
-    </Flex>
-  );
+  return [firstTable, secondTable] as const;
 }

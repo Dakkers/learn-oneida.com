@@ -24,6 +24,10 @@ export default function Practice() {
     //   href: "/cardinal-directions",
     //   label: "Cardinal Directions",
     // },
+    {
+      href: "/counting-time",
+      label: "Counting time",
+    },
     // {
     //   href: "/days-of-the-week",
     //   label: "Days of the week",

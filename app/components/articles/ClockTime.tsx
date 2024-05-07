@@ -15,14 +15,17 @@ const simpleExamples = [
 ].map(([en, on]) => ({ en, on }));
 
 const minutesExamples = [
-  ["2:05 a.m.", "wísk nikahí·kalat yotukóhtu tékni niyohwistá·e astéhtsiʔ"],
+  ["2:05 a.m.", "wísk nikahí·kalake yotukóhtu tékni niyohwistá·e astéhtsiʔ"],
   ["3:30 a.m.", "tshaʔtewahsʌnʌ́ áhsʌ niyohwistá·e astéhtsiʔ"],
-  ["4:50 a.m.", "oye·lí· nikahí·kalat tyono·lúhe wísk niyohwistá·e astéhtsiʔ"],
-  ["2:05 p.m.", "wísk nikahí·kalat yotukóhtu tékni niyohwistá·e yotukóhtu ʌ́ti"],
+  ["4:50 a.m.", "oye·lí· nikahí·kalake tyono·lúhe wísk niyohwistá·e astéhtsiʔ"],
+  [
+    "2:05 p.m.",
+    "wísk nikahí·kalake yotukóhtu tékni niyohwistá·e yotukóhtu ʌ́ti",
+  ],
   ["3:30 p.m.", "tshaʔtewahsʌnʌ́ áhsʌ niyohwistá·e yotukóhtu ʌ́ti"],
   [
     "5:50 p.m.",
-    "oye·lí· nikahí·kalat tyono·lúhe wísk niyohwistá·e yotukóhtu ʌ́ti",
+    "oye·lí· nikahí·kalake tyono·lúhe wísk niyohwistá·e yotukóhtu ʌ́ti",
   ],
 ].map(([en, on]) => ({ en, on }));
 
@@ -44,7 +47,8 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
         Clock Time
       </SectionHeading>
       <Text>
-        Clock time in Oneida is a bit tricky. Let's start with a couple words:
+        Clock time in Oneida is a bit tricky. Let&lsquo;s start with a couple
+        words:
       </Text>
       <List>
         <List.Item>
@@ -68,10 +72,10 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
         </List.Item>
       </List>
       <Text>
-        So if someone asks you what time it is, and it's midnight or noon, you
-        can simply say
-        <b>ahsútha</b> or <b>ʌtí</b>, respectively. Now, let's look at a couple
-        simple examples:
+        So if someone asks you what time it is, and it&lsquo;s midnight or noon,
+        you can simply say
+        <b>ahsútha</b> or <b>ʌtí</b>, respectively. Now, let&lsquo;s look at a
+        couple simple examples:
       </Text>
 
       <TableWrapper
@@ -84,11 +88,15 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </Text>
       <List>
         <List.Item>
-          When it's less than 30 minutes: "X minutes after the hour"
+          When it&lsquo;s less than 30 minutes: &quot;X minutes after the
+          hour&quot;
         </List.Item>
-        <List.Item>When it's exactly 30 minutes: "half-past"</List.Item>
         <List.Item>
-          When it's more than 30 minutes: "X minutes before the next hour"
+          When it&lsquo;s exactly 30 minutes: &quot;half-past&quot;
+        </List.Item>
+        <List.Item>
+          When it&lsquo;s more than 30 minutes: &quot;X minutes before the next
+          hour&quot;
         </List.Item>
       </List>
 

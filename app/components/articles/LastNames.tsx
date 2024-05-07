@@ -20,13 +20,13 @@ const data = createParadigmData(
 );
 
 const examplesList = [
-  ["Is Smith your last name?", "Smith kʌ tetsʌná·se·leʔ"],
+  ["Is Smith your last name?", "Smith kʌ́ tetsʌná·se·leʔ"],
   ["Smith is not my last name", "Yah Smith thaʔtekhsʌná·se·leʔ"],
-  ["Jackson is 50 Cent's last name", "Jackson né· tehahsʌná·sleʔ 50 Cent"],
-  ["Knowles is Beyonce's last name", "Knowles né· teyehsʌná·sleʔ Beyonce"],
+  ["Jackson is 50 Cent's last name", "Jackson né· tehahsʌná·seleʔ 50 Cent"],
+  ["Knowles is Beyonce's last name", "Knowles né· teyehsʌná·seleʔ Beyonce"],
   [
     "McCartney, Lennon, Harrison & Starr are the last names of the Beatles",
-    "McCartney, Lennon, Harrison & Starr né· tehatihsʌná·sleʔ Beatles",
+    "McCartney, Lennon, Harrison & Starr né· tehatihsʌná·seleʔ Beatles",
   ],
 ].map(TableWrapper.mapEnglishOneida);
 
