@@ -15,14 +15,17 @@ const simpleExamples = [
 ].map(([en, on]) => ({ en, on }));
 
 const minutesExamples = [
-  ["2:05 a.m.", "wísk nikahí·kalat yotukóhtu tékni niyohwistá·e astéhtsiʔ"],
+  ["2:05 a.m.", "wísk nikahí·kalake yotukóhtu tékni niyohwistá·e astéhtsiʔ"],
   ["3:30 a.m.", "tshaʔtewahsʌnʌ́ áhsʌ niyohwistá·e astéhtsiʔ"],
-  ["4:50 a.m.", "oye·lí· nikahí·kalat tyono·lúhe wísk niyohwistá·e astéhtsiʔ"],
-  ["2:05 p.m.", "wísk nikahí·kalat yotukóhtu tékni niyohwistá·e yotukóhtu ʌ́ti"],
+  ["4:50 a.m.", "oye·lí· nikahí·kalake tyono·lúhe wísk niyohwistá·e astéhtsiʔ"],
+  [
+    "2:05 p.m.",
+    "wísk nikahí·kalake yotukóhtu tékni niyohwistá·e yotukóhtu ʌ́ti",
+  ],
   ["3:30 p.m.", "tshaʔtewahsʌnʌ́ áhsʌ niyohwistá·e yotukóhtu ʌ́ti"],
   [
     "5:50 p.m.",
-    "oye·lí· nikahí·kalat tyono·lúhe wísk niyohwistá·e yotukóhtu ʌ́ti",
+    "oye·lí· nikahí·kalake tyono·lúhe wísk niyohwistá·e yotukóhtu ʌ́ti",
   ],
 ].map(([en, on]) => ({ en, on }));
 

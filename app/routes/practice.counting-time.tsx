@@ -150,6 +150,7 @@ export function TableAsForm({
             },
             {
               accessorKey: "key",
+              // @ts-expect-error TODO
               cell: (val: string) => (
                 <FormField
                   control={form.control}
