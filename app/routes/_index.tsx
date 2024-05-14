@@ -61,7 +61,7 @@ export default function Index() {
       <div className="lg:max-w-5xl mt-6 mx-auto">
         <SectionHeading level={2}>Learn</SectionHeading>
 
-        <div className="grid grid-cols-3 mt-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-4">
           {modules.map((card, i) => (
             <Card className="p-6" key={i}>
               <CardTitle>
