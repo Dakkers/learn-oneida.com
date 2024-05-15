@@ -39,7 +39,7 @@ export default function App() {
         </div>
         <div
           className={cn(
-            "mx-auto flex flex-col gap-4 p-8",
+            "mx-auto flex flex-col gap-4 p-4 md:p-8",
             isHomePage ? "max-w-5xl" : "max-w-lg",
           )}
         >

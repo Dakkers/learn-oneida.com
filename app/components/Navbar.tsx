@@ -58,10 +58,31 @@ export function Navbar() {
 function NavbarMobile() {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  return (
-    <Flex align="center" justify="between" p={2}>
-      <Text variant="titleS">Learn Oneida</Text>
+  const items = [
+    {
+      href: "/learn",
+      text: "Learn",
+    },
+    {
+      href: "/about",
+      text: "About",
+    },
+    {
+      href: "/articles",
+      text: "Articles",
+    },
+    {
+      href: "/practice",
+      text: "Practice",
+    },
+    {
+      href: "/tools",
+      text: "Tools",
+    },
+  ];
 
+  return (
+    <Flex align="center" justify="end" p={2}>
       <Drawer open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger>
           <MenuIcon />
@@ -70,46 +91,16 @@ function NavbarMobile() {
           <Flex justify="center">
             <NavigationMenu>
               <NavigationMenuList className="flex-col">
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/learn"
-                  >
-                    Learn
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/about"
-                  >
-                    About
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/articles"
-                  >
-                    Articles
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/practice"
-                  >
-                    Practice
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/tools"
-                  >
-                    Tools
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
+                {items.map((item, i) => (
+                  <NavigationMenuItem key={i}>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle(true)}
+                      href={item.href}
+                    >
+                      {item.text}
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                ))}
               </NavigationMenuList>
             </NavigationMenu>
           </Flex>

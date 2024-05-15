@@ -62,10 +62,8 @@ export function InternalText({
 }: InternalTextProps) {
   return (
     <Tag
-      className={cn(
-        typographyClasses[variant],
-        textColorMap[contrast][intent],
-        align && alignMap[align],
+      className={typographyClasses[variant].concat(
+        cn(textColorMap[contrast][intent], align && alignMap[align]),
       )}
       id={id}
     >
