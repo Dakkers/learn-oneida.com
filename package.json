@@ -67,7 +67,7 @@
     "plop": "^4.0.1",
     "prettier": "^3.2.5",
     "tsx": "^4.7.0",
-    "typescript": "^5.1.0",
+    "typescript": "^5.4.5",
     "wrangler": "^3.8.0"
   },
   "engines": {

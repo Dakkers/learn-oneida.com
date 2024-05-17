@@ -14,9 +14,11 @@ export type BreakdownType =
   | "OP"
   | "PAST"
   | "PB"
+  | "PFV"
   | "PLB"
   | "PP"
   | "PR"
+  | "PTV"
   | "RECP"
   | "REFL"
   | "REP"
@@ -141,9 +143,11 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   OP: "underline decoration-wavy decoration-black",
   PAST: "text-emerald-400",
   PB: "text-blue-600",
+  PFV: "text-emerald-400",
   PLB: "text-cyan-400",
   PP: "text-violet-500",
   PR: "text-red-600",
+  PTV: "text-orange-400",
   RECP: "text-green-700",
   REFL: "text-green-700",
   REP: "text-yellow-600",

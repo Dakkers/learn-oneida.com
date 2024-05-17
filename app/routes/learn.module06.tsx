@@ -24,13 +24,14 @@ import {
 } from "@/design/primitives/accordion";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { Text } from "@/design/components/text";
-import { Pronominal } from "~/components/Pronominal";
+import { Pronominal, PronominalColor } from "~/components/Pronominal";
 import { Letter } from "~/components/Letter";
 import { Link } from "@/design/primitives/link";
 import { List } from "@/design/components/list";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { Bleed } from "@/design/components/Bleed";
 import { TextArray } from "@/utils/TextArray";
+import { pronouns } from "~/utils";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 
@@ -149,7 +150,7 @@ export default function LearnModule06() {
           </TOC.Section>
         </TOC.Item>
 
-        <TOC.Item label="Paradigms for Select Active Verbs" value="paradigms">
+        {/* <TOC.Item label="Paradigms for Select Active Verbs" value="paradigms">
           <TOC.Section>
             {verbsWithParadigms.map((v) => (
               <TOC.Item
@@ -161,7 +162,7 @@ export default function LearnModule06() {
               />
             ))}
           </TOC.Section>
-        </TOC.Item>
+        </TOC.Item> */}
 
         <TOC.Item label="Translation exercises" value="translation-exercises" />
       </TOC>
@@ -172,7 +173,7 @@ export default function LearnModule06() {
       <ExamplesSection />
       <DailyActivitiesSection />
 
-      <VerbsParadigmsSection />
+      {/* <VerbsParadigmsSection /> */}
 
       <TranslationExercisesSection group="module06" />
     </>
@@ -308,7 +309,8 @@ function StativeVsActiveSection() {
           {
             tense: "Command",
             en: "Cook!",
-            breakdown: cookVerbDatum.cmd.phrases[0].breakdown,
+
+            breakdown: cookVerbDatum.cmd!.phrases[0].breakdown,
           },
         ]}
       />
@@ -453,7 +455,7 @@ function HowConstructedSection() {
     key: ActiveVerbTense;
     ending?: string;
     prepronominal?: string[];
-    colors?: string[];
+    colors?: PronominalColor[];
   }[] = [
     {
       key: "cmd",
@@ -480,7 +482,7 @@ function HowConstructedSection() {
     {
       key: "pfv",
       ending: "perfective",
-      colors: ["Blue", "Purple"],
+      colors: ["blue", "purple"],
     },
   ];
 
@@ -494,6 +496,7 @@ function HowConstructedSection() {
         columns={[
           {
             accessorKey: "key",
+            // @ts-expect-error To be addressed
             cell: (key: ActiveVerbTense, row: (typeof data)[0]) => (
               <TextArray>
                 {tenseMap[key]}
@@ -507,6 +510,7 @@ function HowConstructedSection() {
           },
           {
             accessorKey: "prepronominal",
+            // @ts-expect-error To be addressed
             cell: (prepronominal: string[]) => (
               <TextArray>{prepronominal ?? []}</TextArray>
             ),
@@ -514,13 +518,16 @@ function HowConstructedSection() {
           },
           {
             accessorKey: "colors",
-            cell: (colors: string[]) => (
+            // @ts-expect-error To be addressed
+            cell: (colors: data[0]["colors"]) => (
               <TextArray>
-                {(colors ?? ["Red", "Blue", "Purple"]).map((name) => (
-                  <Pronominal color={name.toLowerCase()} key={name}>
-                    {name}
-                  </Pronominal>
-                ))}
+                {(colors ?? (["red", "blue", "purple"] as const)).map(
+                  (name: PronominalColor) => (
+                    <Pronominal color={name} key={name}>
+                      {name}
+                    </Pronominal>
+                  ),
+                )}
               </TextArray>
             ),
             header: "Colours",
@@ -532,6 +539,7 @@ function HowConstructedSection() {
           },
           {
             accessorKey: "ending",
+            // @ts-expect-error To be addressed
             cell: (ending: string) => (ending ? `${ending} ending` : ""),
             header: "Ending",
           },
@@ -554,7 +562,7 @@ function ExamplesSection() {
       key: "cmd",
       tense: "Command",
       en: "Cook!",
-      breakdown: cookVerbDatum.cmd.phrases[0].breakdown,
+      breakdown: cookVerbDatum.cmd!.phrases[0].breakdown,
       negation: ["Tákʌʔ ", ["ʌ", "FUT"], ["se"], "khuni"],
       negationEn: "Don't cook!",
       desc: ["Used to tell someone to do something right now."],
@@ -634,6 +642,7 @@ function ExamplesSection() {
         columns={[
           {
             accessorKey: "key",
+            // @ts-expect-error To be addressed
             cell: (key: ActiveVerbTense, row: (typeof data)[0]) => (
               <TextArray>
                 <span className="underline">{tenseMap[key]}</span>
@@ -650,6 +659,7 @@ function ExamplesSection() {
           },
           {
             accessorKey: "desc",
+            // @ts-expect-error To be addressed
             cell: (desc: string[]) => (
               <Flex direction="column" gap={2}>
                 <TextArray>{desc}</TextArray>
@@ -659,6 +669,7 @@ function ExamplesSection() {
           },
           {
             accessorKey: "negation",
+            // @ts-expect-error To be addressed
             cell: (negation: BreakdownArray, row: (typeof data)[0]) => (
               <TextArray>
                 <TextBreakdown
@@ -699,45 +710,60 @@ function DailyActivitiesSection() {
 
       <Bleed mx={32}>
         <Accordion type="multiple">
-          {activeVerbsList.map((v) => (
-            <AccordionItem id={_.kebabCase(v.key)} key={v.key} value={v.key}>
-              <AccordionTrigger>{v.en}</AccordionTrigger>
-              <AccordionContent>
-                <TableWrapper
-                  bleed={0}
-                  columns={[
-                    {
-                      accessorKey: "tense",
-                      // @ts-expect-error To be fixed in LO-12
-                      cell: (value: keyof typeof tenseMap) => tenseMap[value],
-                      header: "Tense",
-                    },
-                    {
-                      accessorKey: "text",
-                      // @ts-expect-error To be fixed in LO-12
-                      cell: (
-                        value: BreakdownArray,
-                        row: { colour: BreakdownType },
-                      ) => (
-                        <TextBreakdown
-                          breakdown={value}
-                          typeFallback={row.colour}
-                        />
-                      ),
-                      header: "",
-                    },
-                  ]}
-                  data={TENSE_LIST.map((tense) => ({
-                    colour: v[tense].type,
-                    tense,
-                    text: v[tense].phrases.find(
-                      (p) => p.pronoun === (tense === "cmd" ? "u" : "i"),
-                    )?.breakdown,
-                  }))}
-                />
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+          {activeVerbsList.map((v) => {
+            const data = TENSE_LIST.filter((tense) => !!v[tense]).map(
+              (tense) => ({
+                colour: v[tense]!.type,
+                tense,
+                text: (tense === "cmd"
+                  ? v[tense]!.phrases.find((p) => p.pronoun === "u")
+                  : v[tense]!.phrases.find((p) => p.pronoun === "i") ??
+                    v[tense]!.phrases.find((p) => p.pronoun === "it"))!
+                  .breakdown,
+              }),
+            );
+
+            console.log(data);
+
+            return (
+              <AccordionItem id={_.kebabCase(v.key)} key={v.key} value={v.key}>
+                <AccordionTrigger>{v.en}</AccordionTrigger>
+                <AccordionContent>
+                  {v.exception === 1 ? (
+                    <Text>This uses the &quot;it&quot; pronominals.</Text>
+                  ) : null}
+
+                  <TableWrapper
+                    bleed={0}
+                    columns={[
+                      {
+                        accessorKey: "tense",
+                        // @ts-expect-error To be fixed in LO-12
+                        cell: (value: keyof typeof tenseMap) => tenseMap[value],
+                        header: "Tense",
+                      },
+                      {
+                        accessorKey: "text",
+                        // @ts-expect-error To be fixed in LO-12
+                        cell: (
+                          value: BreakdownArray,
+                          row: { colour: BreakdownType },
+                        ) => (
+                          <TextBreakdown
+                            breakdown={value}
+                            typeFallback={row.colour}
+                          />
+                        ),
+                        header: "",
+                      },
+                    ]}
+                    // @ts-expect-error There's no nulls!
+                    data={data}
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
         </Accordion>
       </Bleed>
     </>
@@ -806,19 +832,22 @@ function VerbParadigms({
 
       <Bleed mx={32}>
         <Accordion type="multiple">
-          {TENSE_LIST.map((tense) => (
-            <AccordionItem key={tense} value={tense}>
-              <AccordionTrigger>{tenseMap[tense]}</AccordionTrigger>
-              <AccordionContent>
-                <ParadigmTable
-                  bleed={0}
-                  columnVisibility={columnVisibility}
-                  data={verbDatum[tense]}
-                  key={tense}
-                />
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+          {TENSE_LIST.map((tense) =>
+            verbDatum[tense] ? (
+              <AccordionItem key={tense} value={tense}>
+                <AccordionTrigger>{tenseMap[tense]}</AccordionTrigger>
+                <AccordionContent>
+                  <ParadigmTable
+                    bleed={0}
+                    columnVisibility={columnVisibility}
+                    data={verbDatum[tense]!}
+                    key={tense}
+                    allowedPronouns={verbDatum.pronouns ?? pronouns}
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            ) : null,
+          )}
         </Accordion>
       </Bleed>
     </>

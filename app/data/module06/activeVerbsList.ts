@@ -71,6 +71,11 @@ import hideOneselfFutData from "./hide_oneself-FUT";
 import hideOneselfHabData from "./hide_oneself-HAB";
 import hideOneselfIfutData from "./hide_oneself-IFUT";
 import hideOneselfPfvData from "./hide_oneself-PFV";
+import itHappensDefData from "./it_happens-DEF";
+import itHappensFutData from "./it_happens-FUT";
+import itHappensHabData from "./it_happens-HAB";
+import itHappensIfutData from "./it_happens-IFUT";
+import itHappensPfvData from "./it_happens-PFV";
 import listenCmdData from "./listen-CMD";
 import listenDefData from "./listen-DEF";
 import listenFutData from "./listen-FUT";
@@ -101,6 +106,11 @@ import putSomethingAwayFutData from "./put_something_away-FUT";
 import putSomethingAwayHabData from "./put_something_away-HAB";
 import putSomethingAwayIfutData from "./put_something_away-IFUT";
 import putSomethingAwayPfvData from "./put_something_away-PFV";
+import rainDefData from "./rain-DEF";
+import rainFutData from "./rain-FUT";
+import rainHabData from "./rain-HAB";
+import rainIfutData from "./rain-IFUT";
+import rainPfvData from "./rain-PFV";
 import restCmdData from "./rest-CMD";
 import restDefData from "./rest-DEF";
 import restFutData from "./rest-FUT";
@@ -113,6 +123,11 @@ import saySomethingFutData from "./say_something-FUT";
 import saySomethingHabData from "./say_something-HAB";
 import saySomethingIfutData from "./say_something-IFUT";
 import saySomethingPfvData from "./say_something-PFV";
+import snowDefData from "./snow-DEF";
+import snowFutData from "./snow-FUT";
+import snowHabData from "./snow-HAB";
+import snowIfutData from "./snow-IFUT";
+import snowPfvData from "./snow-PFV";
 import studyCmdData from "./study-CMD";
 import studyDefData from "./study-DEF";
 import studyFutData from "./study-FUT";
@@ -161,6 +176,7 @@ import workFutData from "./work-FUT";
 import workHabData from "./work-HAB";
 import workIfutData from "./work-IFUT";
 import workPfvData from "./work-PFV";
+import { Pronoun } from "~/utils";
 
 const mapping = {
   answerCmd: answerCmdData,
@@ -235,6 +251,11 @@ const mapping = {
   hideOneselfHab: hideOneselfHabData,
   hideOneselfIfut: hideOneselfIfutData,
   hideOneselfPfv: hideOneselfPfvData,
+  itHappensDef: itHappensDefData,
+  itHappensFut: itHappensFutData,
+  itHappensHab: itHappensHabData,
+  itHappensIfut: itHappensIfutData,
+  itHappensPfv: itHappensPfvData,
   listenCmd: listenCmdData,
   listenDef: listenDefData,
   listenFut: listenFutData,
@@ -265,6 +286,11 @@ const mapping = {
   putSomethingAwayHab: putSomethingAwayHabData,
   putSomethingAwayIfut: putSomethingAwayIfutData,
   putSomethingAwayPfv: putSomethingAwayPfvData,
+  rainDef: rainDefData,
+  rainFut: rainFutData,
+  rainHab: rainHabData,
+  rainIfut: rainIfutData,
+  rainPfv: rainPfvData,
   restCmd: restCmdData,
   restDef: restDefData,
   restFut: restFutData,
@@ -277,6 +303,11 @@ const mapping = {
   saySomethingHab: saySomethingHabData,
   saySomethingIfut: saySomethingIfutData,
   saySomethingPfv: saySomethingPfvData,
+  snowDef: snowDefData,
+  snowFut: snowFutData,
+  snowHab: snowHabData,
+  snowIfut: snowIfutData,
+  snowPfv: snowPfvData,
   studyCmd: studyCmdData,
   studyDef: studyDefData,
   studyFut: studyFutData,
@@ -327,10 +358,13 @@ const mapping = {
   workPfv: workPfvData,
 } as const;
 
+const NO_COMMAND = ["snow", "rain", "itHappens"];
+
 export type ActiveVerbDatum = {
-  cmd: ParadigmData;
+  cmd?: ParadigmData;
   def: ParadigmData;
   en: string;
+  exception?: number;
   fut: ParadigmData;
   hab: ParadigmData;
   ifut: ParadigmData;
@@ -347,13 +381,16 @@ export type ActiveVerbDatum = {
     | "getTired"
     | "goToSleep"
     | "hideOneself"
+    | "itHappens"
     | "listen"
     | "lookAtSomething"
     | "openADoor"
     | "prepareOneself"
     | "putSomethingAway"
+    | "rain"
     | "rest"
     | "saySomething"
+    | "snow"
     | "study"
     | "tidySomethingUp"
     | "understand"
@@ -361,116 +398,144 @@ export type ActiveVerbDatum = {
     | "washSomething"
     | "work";
   pfv: ParadigmData;
+  pronouns?: Pronoun[];
 };
 
-export const activeVerbsList = (
-  [
-    {
-      key: "answer",
-      en: "answer, reply",
-    },
-    {
-      key: "bathe",
-      en: "bathe, wash one's body",
-    },
-    {
-      key: "beginToDoSomething",
-      en: "begin (to do something)",
-    },
-    {
-      key: "eatAMeal",
-      en: "eat a meal",
-    },
-    {
-      key: "cook",
-      en: "cook",
-    },
-    {
-      key: "defecate",
-      en: "defecate",
-    },
-    {
-      key: "doSomething",
-      en: "do (something)",
-    },
-    {
-      key: "getDressedUp",
-      en: "get dressed, fixed up",
-    },
-    {
-      key: "getSelfUp",
-      en: "get (raise) self up",
-    },
-    {
-      key: "getTired",
-      en: "tired, get",
-    },
-    {
-      key: "goToSleep",
-      en: "sleep, go to",
-    },
-    {
-      key: "hideOneself",
-      en: "hide oneself",
-    },
-    {
-      key: "listen",
-      en: "listen",
-    },
-    {
-      key: "lookAtSomething",
-      en: "look (at something)",
-    },
-    {
-      key: "openADoor",
-      en: "open a door",
-    },
-    {
-      key: "prepareOneself",
-      en: "prepare oneself, get oneself ready",
-    },
-    {
-      key: "putSomethingAway",
-      en: "put something away",
-    },
-    {
-      key: "rest",
-      en: "rest",
-    },
-    {
-      key: "saySomething",
-      en: "say (something)",
-    },
-    {
-      key: "study",
-      en: "study",
-    },
-    {
-      key: "tidySomethingUp",
-      en: "tidy something up",
-    },
-    {
-      key: "understand",
-      en: "understand, grasp",
-    },
-    {
-      key: "wakeUp",
-      en: "wake up",
-    },
-    {
-      key: "washSomething",
-      en: "wash something",
-    },
-    {
-      key: "work",
-      en: "work",
-    },
-  ] as const
-)
+export const activeVerbsList: {
+  key: ActiveVerbDatum["key"];
+  en: string;
+  exception?: number;
+  pronouns?: Pronoun[];
+}[] = [
+  {
+    key: "answer",
+    en: "answer, reply",
+  },
+  {
+    key: "bathe",
+    en: "bathe, wash one's body",
+  },
+  {
+    key: "beginToDoSomething",
+    en: "begin (to do something)",
+  },
+  {
+    key: "eatAMeal",
+    en: "eat a meal",
+  },
+  {
+    key: "cook",
+    en: "cook",
+  },
+  {
+    key: "defecate",
+    en: "defecate",
+  },
+  {
+    key: "doSomething",
+    en: "do (something)",
+  },
+  {
+    key: "getDressedUp",
+    en: "get dressed, fixed up",
+  },
+  {
+    key: "getSelfUp",
+    en: "get (raise) self up",
+  },
+  {
+    key: "getTired",
+    en: "tired, get",
+  },
+  {
+    key: "goToSleep",
+    en: "sleep, go to",
+  },
+  {
+    key: "itHappens",
+    en: "it happens",
+    pronouns: ["it"],
+    exception: 1,
+  },
+  {
+    key: "hideOneself",
+    en: "hide oneself",
+  },
+  {
+    key: "listen",
+    en: "listen",
+  },
+  {
+    key: "lookAtSomething",
+    en: "look (at something)",
+  },
+  {
+    key: "openADoor",
+    en: "open a door",
+  },
+  {
+    key: "prepareOneself",
+    en: "prepare oneself, get oneself ready",
+  },
+  {
+    key: "putSomethingAway",
+    en: "put something away",
+  },
+  {
+    key: "rain",
+    en: "rain",
+    pronouns: ["it"],
+    exception: 1,
+  },
+  {
+    key: "rest",
+    en: "rest",
+  },
+  {
+    key: "saySomething",
+    en: "say (something)",
+  },
+  {
+    key: "snow",
+    en: "snow",
+    pronouns: ["it"],
+    exception: 1,
+  },
+  {
+    key: "study",
+    en: "study",
+  },
+  {
+    key: "tidySomethingUp",
+    en: "tidy something up",
+  },
+  {
+    key: "understand",
+    en: "understand, grasp",
+  },
+  {
+    key: "wakeUp",
+    en: "wake up",
+  },
+  {
+    key: "washSomething",
+    en: "wash something",
+  },
+  {
+    key: "work",
+    en: "work",
+  },
+]
   .map((item) => {
+    // @ts-expect-error The keys are fine -_-
     const result: Partial<ActiveVerbDatum> = { ...item };
     for (const key of ["Cmd", "Def", "Fut", "Hab", "Ifut", "Pfv"] as const) {
+      if (key === "Cmd" && NO_COMMAND.includes(item.key)) {
+        continue;
+      }
+
       result[key.toLowerCase() as Lowercase<typeof key>] =
+        // @ts-expect-error The above if condition should prevent this
         mapping[`${item.key}${key}`];
     }
     return result as ActiveVerbDatum;
