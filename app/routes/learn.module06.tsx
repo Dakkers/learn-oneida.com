@@ -11,9 +11,9 @@ import {
   TextBreakdown,
 } from "~/components/TextBreakdown";
 import {
-  ActiveVerbDatum,
-  ActiveVerbTense,
-  activeVerbsList,
+  Module6VerbDatum,
+  Module6VerbTense,
+  createModule6VerbList,
 } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
 import {
@@ -44,7 +44,7 @@ const tenseMap = {
   pfv: "Perfective",
 } as const;
 
-const tenseBreakdownMap: Record<ActiveVerbTense, BreakdownArray> = {
+const tenseBreakdownMap: Record<Module6VerbTense, BreakdownArray> = {
   cmd: ["tsiʔ n", ["a", "IFUT"], ["hs"], "átyel"],
   def: ["n", ["aʔ", "DEF"], ["k"], "átyele̲ʔ"],
   fut: ["n", ["ʌ", "FUT"], ["k"], "átyele̲ʔ"],
@@ -144,7 +144,7 @@ export default function LearnModule06() {
 
         <TOC.Item label="Daily Activities" value="daily-activities">
           <TOC.Section>
-            {activeVerbsList.map((v) => (
+            {createModule6VerbList().map((v) => (
               <TOC.Item key={v.key} label={v.en} value={_.kebabCase(v.key)} />
             ))}
           </TOC.Section>
@@ -181,7 +181,7 @@ export default function LearnModule06() {
 }
 
 function StativeVsActiveSection() {
-  const cookVerbDatum = activeVerbsList.find((v) => v.key === "cook")!;
+  const cookVerbDatum = createModule6VerbList().find((v) => v.key === "cook")!;
 
   return (
     <>
@@ -452,7 +452,7 @@ function OneidaTermsForTenses() {
 
 function HowConstructedSection() {
   const data: {
-    key: ActiveVerbTense;
+    key: Module6VerbTense;
     ending?: string;
     prepronominal?: string[];
     colors?: PronominalColor[];
@@ -497,7 +497,7 @@ function HowConstructedSection() {
           {
             accessorKey: "key",
             // @ts-expect-error To be addressed
-            cell: (key: ActiveVerbTense, row: (typeof data)[0]) => (
+            cell: (key: Module6VerbTense, row: (typeof data)[0]) => (
               <TextArray>
                 {tenseMap[key]}
                 <TextBreakdown
@@ -556,7 +556,7 @@ function HowConstructedSection() {
 }
 
 function ExamplesSection() {
-  const cookVerbDatum = activeVerbsList.find((v) => v.key === "cook")!;
+  const cookVerbDatum = createModule6VerbList().find((v) => v.key === "cook")!;
   const data = [
     {
       key: "cmd",
@@ -643,7 +643,7 @@ function ExamplesSection() {
           {
             accessorKey: "key",
             // @ts-expect-error To be addressed
-            cell: (key: ActiveVerbTense, row: (typeof data)[0]) => (
+            cell: (key: Module6VerbTense, row: (typeof data)[0]) => (
               <TextArray>
                 <span className="underline">{tenseMap[key]}</span>
                 <TextBreakdown
@@ -710,7 +710,7 @@ function DailyActivitiesSection() {
 
       <Bleed mx={32}>
         <Accordion type="multiple">
-          {activeVerbsList.map((v) => {
+          {createModule6VerbList().map((v) => {
             const data = TENSE_LIST.filter((tense) => !!v[tense]).map(
               (tense) => ({
                 colour: v[tense]!.type,
@@ -723,13 +723,11 @@ function DailyActivitiesSection() {
               }),
             );
 
-            console.log(data);
-
             return (
               <AccordionItem id={_.kebabCase(v.key)} key={v.key} value={v.key}>
                 <AccordionTrigger>{v.en}</AccordionTrigger>
                 <AccordionContent>
-                  {v.exception === 1 ? (
+                  {v.exceptions?.includes(1) ? (
                     <Text>This uses the &quot;it&quot; pronominals.</Text>
                   ) : null}
 
@@ -757,7 +755,6 @@ function DailyActivitiesSection() {
                         header: "",
                       },
                     ]}
-                    // @ts-expect-error There's no nulls!
                     data={data}
                   />
                 </AccordionContent>
@@ -771,6 +768,7 @@ function DailyActivitiesSection() {
 }
 
 function VerbsParadigmsSection() {
+  const list = createModule6VerbList();
   return (
     <>
       <SectionHeading id="paradigms" level={2}>
@@ -786,7 +784,7 @@ function VerbsParadigmsSection() {
         <VerbParadigms
           {...datum}
           key={datum.key}
-          verbDatum={activeVerbsList.find((v) => v.key === datum.key)!}
+          verbDatum={list.find((v) => v.key === datum.key)!}
         />
       ))}
     </>
@@ -804,7 +802,7 @@ function VerbParadigms({
   prefix?: string;
   root: string;
   stem: string;
-  verbDatum: ActiveVerbDatum;
+  verbDatum: Module6VerbDatum;
 }) {
   return (
     <>
@@ -854,5 +852,5 @@ function VerbParadigms({
   );
 }
 
-const formatVerbParadigmSectionId = (verbDatum: ActiveVerbDatum) =>
+const formatVerbParadigmSectionId = (verbDatum: Module6VerbDatum) =>
   `paradigm-${_.kebabCase(verbDatum.key)}`;

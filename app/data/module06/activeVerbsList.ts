@@ -1,3 +1,4 @@
+import { match, P } from "ts-pattern";
 import { ParadigmData } from "~/components/ParadigmTable";
 import answerCmdData from "./answer-CMD";
 import answerDefData from "./answer-DEF";
@@ -176,7 +177,49 @@ import workFutData from "./work-FUT";
 import workHabData from "./work-HAB";
 import workIfutData from "./work-IFUT";
 import workPfvData from "./work-PFV";
-import { Pronoun } from "~/utils";
+import { Pronoun, pronouns } from "~/utils";
+import _ from "lodash";
+
+type Module6VerbKey =
+  | "answer"
+  | "bathe"
+  | "beginToDoSomething"
+  | "cook"
+  | "defecate"
+  | "doSomething"
+  | "eatAMeal"
+  | "getDressedUp"
+  | "getSelfUp"
+  | "getTired"
+  | "goToSleep"
+  | "hideOneself"
+  | "rain"
+  | "itHappens"
+  | "listen"
+  | "lookAtSomething"
+  | "openADoor"
+  | "prepareOneself"
+  | "putSomethingAway"
+  | "rest"
+  | "saySomething"
+  | "snow"
+  | "study"
+  | "tidySomethingUp"
+  | "understand"
+  | "wakeUp"
+  | "washSomething"
+  | "work";
+
+export const MODULE_6_VERB_TENSE_LIST = [
+  "hab",
+  "def",
+  "fut",
+  "ifut",
+  "cmd",
+  "pfv",
+] as const;
+
+export type Module6VerbTense = (typeof MODULE_6_VERB_TENSE_LIST)[number];
 
 const mapping = {
   answerCmd: answerCmdData,
@@ -251,6 +294,7 @@ const mapping = {
   hideOneselfHab: hideOneselfHabData,
   hideOneselfIfut: hideOneselfIfutData,
   hideOneselfPfv: hideOneselfPfvData,
+  itHappensCmd: null,
   itHappensDef: itHappensDefData,
   itHappensFut: itHappensFutData,
   itHappensHab: itHappensHabData,
@@ -286,6 +330,7 @@ const mapping = {
   putSomethingAwayHab: putSomethingAwayHabData,
   putSomethingAwayIfut: putSomethingAwayIfutData,
   putSomethingAwayPfv: putSomethingAwayPfvData,
+  rainCmd: null,
   rainDef: rainDefData,
   rainFut: rainFutData,
   rainHab: rainHabData,
@@ -303,6 +348,7 @@ const mapping = {
   saySomethingHab: saySomethingHabData,
   saySomethingIfut: saySomethingIfutData,
   saySomethingPfv: saySomethingPfvData,
+  snowCmd: null,
   snowDef: snowDefData,
   snowFut: snowFutData,
   snowHab: snowHabData,
@@ -358,201 +404,23 @@ const mapping = {
   workPfv: workPfvData,
 } as const;
 
-const NO_COMMAND = ["snow", "rain", "itHappens"];
+const EXCEPTION_IT_ONLY = 1;
+const EXCEPTION_NO_COMMAND = 2;
 
-export type ActiveVerbDatum = {
-  cmd?: ParadigmData;
+export type Module6VerbDatum = {
+  cmd: ParadigmData | null;
   def: ParadigmData;
   en: string;
-  exception?: number;
+  exceptions?: number[];
   fut: ParadigmData;
   hab: ParadigmData;
   ifut: ParadigmData;
-  key:
-    | "answer"
-    | "bathe"
-    | "beginToDoSomething"
-    | "cook"
-    | "defecate"
-    | "doSomething"
-    | "eatAMeal"
-    | "getDressedUp"
-    | "getSelfUp"
-    | "getTired"
-    | "goToSleep"
-    | "hideOneself"
-    | "itHappens"
-    | "listen"
-    | "lookAtSomething"
-    | "openADoor"
-    | "prepareOneself"
-    | "putSomethingAway"
-    | "rain"
-    | "rest"
-    | "saySomething"
-    | "snow"
-    | "study"
-    | "tidySomethingUp"
-    | "understand"
-    | "wakeUp"
-    | "washSomething"
-    | "work";
+  key: Module6VerbKey;
   pfv: ParadigmData;
   pronouns?: Pronoun[];
 };
 
-export const activeVerbsList: {
-  key: ActiveVerbDatum["key"];
-  en: string;
-  exception?: number;
-  pronouns?: Pronoun[];
-}[] = [
-  {
-    key: "answer",
-    en: "answer, reply",
-  },
-  {
-    key: "bathe",
-    en: "bathe, wash one's body",
-  },
-  {
-    key: "beginToDoSomething",
-    en: "begin (to do something)",
-  },
-  {
-    key: "eatAMeal",
-    en: "eat a meal",
-  },
-  {
-    key: "cook",
-    en: "cook",
-  },
-  {
-    key: "defecate",
-    en: "defecate",
-  },
-  {
-    key: "doSomething",
-    en: "do (something)",
-  },
-  {
-    key: "getDressedUp",
-    en: "get dressed, fixed up",
-  },
-  {
-    key: "getSelfUp",
-    en: "get (raise) self up",
-  },
-  {
-    key: "getTired",
-    en: "tired, get",
-  },
-  {
-    key: "goToSleep",
-    en: "sleep, go to",
-  },
-  {
-    key: "itHappens",
-    en: "it happens",
-    pronouns: ["it"],
-    exception: 1,
-  },
-  {
-    key: "hideOneself",
-    en: "hide oneself",
-  },
-  {
-    key: "listen",
-    en: "listen",
-  },
-  {
-    key: "lookAtSomething",
-    en: "look (at something)",
-  },
-  {
-    key: "openADoor",
-    en: "open a door",
-  },
-  {
-    key: "prepareOneself",
-    en: "prepare oneself, get oneself ready",
-  },
-  {
-    key: "putSomethingAway",
-    en: "put something away",
-  },
-  {
-    key: "rain",
-    en: "rain",
-    pronouns: ["it"],
-    exception: 1,
-  },
-  {
-    key: "rest",
-    en: "rest",
-  },
-  {
-    key: "saySomething",
-    en: "say (something)",
-  },
-  {
-    key: "snow",
-    en: "snow",
-    pronouns: ["it"],
-    exception: 1,
-  },
-  {
-    key: "study",
-    en: "study",
-  },
-  {
-    key: "tidySomethingUp",
-    en: "tidy something up",
-  },
-  {
-    key: "understand",
-    en: "understand, grasp",
-  },
-  {
-    key: "wakeUp",
-    en: "wake up",
-  },
-  {
-    key: "washSomething",
-    en: "wash something",
-  },
-  {
-    key: "work",
-    en: "work",
-  },
-]
-  .map((item) => {
-    // @ts-expect-error The keys are fine -_-
-    const result: Partial<ActiveVerbDatum> = { ...item };
-    for (const key of ["Cmd", "Def", "Fut", "Hab", "Ifut", "Pfv"] as const) {
-      if (key === "Cmd" && NO_COMMAND.includes(item.key)) {
-        continue;
-      }
-
-      result[key.toLowerCase() as Lowercase<typeof key>] =
-        // @ts-expect-error The above if condition should prevent this
-        mapping[`${item.key}${key}`];
-    }
-    return result as ActiveVerbDatum;
-  })
-  .sort((v1, v2) => v1.en.localeCompare(v2.en));
-
-export const ACTIVE_VERB_TENSE_LIST = [
-  "hab",
-  "def",
-  "fut",
-  "ifut",
-  "cmd",
-  "pfv",
-] as const;
-export type ActiveVerbTense = (typeof ACTIVE_VERB_TENSE_LIST)[number];
-
-export const activeVerbTenseMap: Record<ActiveVerbTense, string> = {
+export const module6VerbTenseMap: Record<Module6VerbTense, string> = {
   cmd: "Command",
   def: "Definite",
   fut: "Future",
@@ -560,3 +428,165 @@ export const activeVerbTenseMap: Record<ActiveVerbTense, string> = {
   ifut: "Indefinite",
   pfv: "Perfective",
 } as const;
+
+export function createModule6VerbList() {
+  const activeVerbsList: {
+    en?: string;
+    exceptions?: number[];
+    key: Module6VerbKey;
+    pronouns?: Pronoun[];
+  }[] = [
+    {
+      key: "answer",
+      en: "answer, reply",
+    },
+    {
+      key: "bathe",
+      en: "bathe, wash one's body",
+    },
+    {
+      key: "beginToDoSomething",
+      en: "begin (to do something)",
+    },
+    {
+      key: "eatAMeal",
+    },
+    {
+      key: "cook",
+    },
+    {
+      key: "defecate",
+    },
+    {
+      key: "doSomething",
+      en: "do (something)",
+    },
+    {
+      key: "getDressedUp",
+      en: "get dressed, fixed up",
+    },
+    {
+      key: "getSelfUp",
+      en: "get (raise) self up",
+    },
+    {
+      key: "getTired",
+      en: "tired, get",
+    },
+    {
+      key: "goToSleep",
+      en: "sleep, go to",
+    },
+    {
+      key: "itHappens",
+      en: "it happens",
+      pronouns: ["it"],
+      exceptions: [EXCEPTION_IT_ONLY, EXCEPTION_NO_COMMAND],
+    },
+    {
+      key: "hideOneself",
+    },
+    {
+      key: "listen",
+    },
+    {
+      key: "lookAtSomething",
+      en: "look (at something)",
+    },
+    {
+      key: "openADoor",
+    },
+    {
+      key: "prepareOneself",
+      en: "prepare oneself, get oneself ready",
+    },
+    {
+      key: "putSomethingAway",
+    },
+    {
+      key: "rain",
+      pronouns: ["it"],
+      exceptions: [EXCEPTION_IT_ONLY, EXCEPTION_NO_COMMAND],
+    },
+    {
+      key: "rest",
+    },
+    {
+      key: "saySomething",
+      en: "say (something)",
+    },
+    {
+      key: "snow",
+      pronouns: ["it"],
+      exceptions: [EXCEPTION_IT_ONLY, EXCEPTION_NO_COMMAND],
+    },
+    {
+      key: "study",
+      en: "study",
+    },
+    {
+      key: "tidySomethingUp",
+    },
+    {
+      key: "understand",
+      en: "understand, grasp",
+    },
+    {
+      key: "wakeUp",
+    },
+    {
+      key: "washSomething",
+    },
+    {
+      key: "work",
+    },
+  ];
+
+  const resultingList: Module6VerbDatum[] = [];
+
+  for (const v of activeVerbsList) {
+    const item: Partial<Module6VerbDatum> = {
+      ..._.pick(v, ["en", "exceptions", "key"]),
+    };
+    item.en = v.en ?? _.startCase(_.camelCase(v.key)).toLowerCase();
+    item.pronouns = v.exceptions?.includes(EXCEPTION_IT_ONLY)
+      ? ["it"]
+      : pronouns;
+    for (const tense of MODULE_6_VERB_TENSE_LIST) {
+      if (tense === "cmd" && v.exceptions?.includes(EXCEPTION_NO_COMMAND)) {
+        item[tense] = null;
+        continue;
+      }
+      const tenseKey = _.capitalize(tense) as Capitalize<Module6VerbTense>;
+
+      // @ts-expect-error IDK
+      item[tense] = mapping[`${v.key}${tenseKey}`];
+    }
+    resultingList.push(item as Module6VerbDatum);
+  }
+  return resultingList.sort(sorter);
+}
+
+export function createModule6VerbListFlat() {
+  const resultingList = createModule6VerbList();
+  const flattenedResult = [];
+  for (const tense of MODULE_6_VERB_TENSE_LIST) {
+    for (const v of resultingList) {
+      if (tense === "cmd" && v.exceptions?.includes(EXCEPTION_NO_COMMAND)) {
+        continue;
+      }
+      flattenedResult.push({
+        ...v[tense],
+        en: `${v.en} (${module6VerbTenseMap[tense]})`,
+        key: `${v.key}-${tense}`,
+        tense,
+      });
+    }
+  }
+  return flattenedResult.sort(sorter);
+}
+
+const sorter = (
+  v1: Pick<Module6VerbDatum, "en">,
+  v2: Pick<Module6VerbDatum, "en">,
+) => v1.en.localeCompare(v2.en);
