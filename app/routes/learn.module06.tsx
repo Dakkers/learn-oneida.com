@@ -120,6 +120,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function LearnModule06() {
+  const list = createModule6VerbList();
   return (
     <>
       <SectionHeading level={1}>Module 6</SectionHeading>
@@ -157,7 +158,7 @@ export default function LearnModule06() {
                 key={v.key}
                 label={v.root}
                 value={formatVerbParadigmSectionId(
-                  activeVerbsList.find((v2) => v2.key === v.key)!,
+                  list.find((v2) => v2.key === v.key)!,
                 )}
               />
             ))}
