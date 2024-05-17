@@ -12,6 +12,7 @@ import {
 } from "~/components/TextBreakdown";
 import {
   ActiveVerbDatum,
+  ActiveVerbTense,
   activeVerbsList,
 } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
@@ -29,6 +30,7 @@ import { Link } from "@/design/primitives/link";
 import { List } from "@/design/components/list";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { Bleed } from "@/design/components/Bleed";
+import { TextArray } from "@/utils/TextArray";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 
@@ -40,6 +42,15 @@ const tenseMap = {
   ifut: "Indefinite",
   pfv: "Perfective",
 } as const;
+
+const tenseBreakdownMap: Record<ActiveVerbTense, BreakdownArray> = {
+  cmd: ["tsiʔ n", ["a", "IFUT"], ["hs"], "átyel"],
+  def: ["n", ["aʔ", "DEF"], ["k"], "átyele̲ʔ"],
+  fut: ["n", ["ʌ", "FUT"], ["k"], "átyele̲ʔ"],
+  hab: ["tsiʔ ni", ["k"], "atyélhaʔ"],
+  ifut: ["n", ["a", "IFUT"], ["k"], "átyele̲ʔ"],
+  pfv: ["ni", ["wak", "PB"], "átyele̲ʔ"],
+};
 
 const columnVisibility = {
   pronounEnglish: false,
@@ -124,6 +135,11 @@ export default function LearnModule06() {
           label="Oneida Terms for Tenses"
           value="oneida-terms-for-tenses"
         />
+        <TOC.Item
+          label="How Active Verbs Are Constructed"
+          value="how-its-constructed"
+        />
+        <TOC.Item label="Active Verb Examples" value="examples" />
 
         <TOC.Item label="Daily Activities" value="daily-activities">
           <TOC.Section>
@@ -152,6 +168,8 @@ export default function LearnModule06() {
 
       <StativeVsActiveSection />
       <OneidaTermsForTenses />
+      <HowConstructedSection />
+      <ExamplesSection />
       <DailyActivitiesSection />
 
       <VerbsParadigmsSection />
@@ -387,22 +405,22 @@ function OneidaTermsForTenses() {
         ]}
         data={[
           {
-            breakdown: ["thó ni", ["k"], "atyelhaʔ"],
+            breakdown: ["thó ni", ["k"], "atyélhaʔ"],
             en: ["That is what I do", "That is what I am doing now"],
             tense: ["Habitual", "Stative"],
           },
           {
-            breakdown: ["thó n", ["aʔ", "DEF"], ["k"], "atyeleʔ"],
+            breakdown: ["thó n", ["aʔ", "DEF"], ["k"], "átyeleʔ"],
             en: "That is what I did",
             tense: "Definite Past",
           },
           {
-            breakdown: ["thó n", ["a", "IFUT"], ["k"], "atyeleʔ"],
+            breakdown: ["thó n", ["a", "IFUT"], ["k"], "átyeleʔ"],
             en: "That is what I would do",
             tense: "Indefinite Future",
           },
           {
-            breakdown: ["thó n", ["ʌ", "FUT"], ["k"], "atyeleʔ"],
+            breakdown: ["thó n", ["ʌ", "FUT"], ["k"], "átyeleʔ"],
             en: "That is what I will do",
             tense: "Definite Future",
           },
@@ -426,6 +444,248 @@ function OneidaTermsForTenses() {
           },
         ]}
       />
+    </>
+  );
+}
+
+function HowConstructedSection() {
+  const data: {
+    key: ActiveVerbTense;
+    ending?: string;
+    prepronominal?: string[];
+    colors?: string[];
+  }[] = [
+    {
+      key: "cmd",
+    },
+    {
+      key: "hab",
+      ending: "habitual",
+    },
+    {
+      key: "def",
+      ending: "punctual",
+      prepronominal: ["waʔ", "wa", "we"],
+    },
+    {
+      key: "ifut",
+      ending: "punctual",
+      prepronominal: ["a", "ae"],
+    },
+    {
+      key: "fut",
+      ending: "punctual",
+      prepronominal: ["ʌ"],
+    },
+    {
+      key: "pfv",
+      ending: "perfective",
+      colors: ["Blue", "Purple"],
+    },
+  ];
+
+  return (
+    <>
+      <SectionHeading id="how-its-constructed" level={2}>
+        How Active Verbs Are Constructed
+      </SectionHeading>
+
+      <TableWrapper
+        columns={[
+          {
+            accessorKey: "key",
+            cell: (key: ActiveVerbTense, row: (typeof data)[0]) => (
+              <TextArray>
+                {tenseMap[key]}
+                <TextBreakdown
+                  breakdown={tenseBreakdownMap[row.key]}
+                  typeFallback="PR"
+                />
+              </TextArray>
+            ),
+            header: "Tense",
+          },
+          {
+            accessorKey: "prepronominal",
+            cell: (prepronominal: string[]) => (
+              <TextArray>{prepronominal ?? []}</TextArray>
+            ),
+            header: "Prepronominal",
+          },
+          {
+            accessorKey: "colors",
+            cell: (colors: string[]) => (
+              <TextArray>
+                {(colors ?? ["Red", "Blue", "Purple"]).map((name) => (
+                  <Pronominal color={name.toLowerCase()} key={name}>
+                    {name}
+                  </Pronominal>
+                ))}
+              </TextArray>
+            ),
+            header: "Colours",
+          },
+          {
+            accessorKey: "root",
+            cell: () => "root",
+            header: "",
+          },
+          {
+            accessorKey: "ending",
+            cell: (ending: string) => (ending ? `${ending} ending` : ""),
+            header: "Ending",
+          },
+        ]}
+        data={data}
+      />
+
+      <Text>
+        Examples of habitual, punctual, and perfective endings can be found on
+        page 20 of the Oneida-English dictionary.
+      </Text>
+    </>
+  );
+}
+
+function ExamplesSection() {
+  const cookVerbDatum = activeVerbsList.find((v) => v.key === "cook")!;
+  const data = [
+    {
+      key: "cmd",
+      tense: "Command",
+      en: "Cook!",
+      breakdown: cookVerbDatum.cmd.phrases[0].breakdown,
+      negation: ["Tákʌʔ ", ["ʌ", "FUT"], ["se"], "khuni"],
+      negationEn: "Don't cook!",
+      desc: ["Used to tell someone to do something right now."],
+    },
+    {
+      key: "hab",
+      tense: "Habitual",
+      en: "I cook",
+      breakdown: cookVerbDatum.hab.phrases[0].breakdown,
+      negation: ["Yáh teʔ", ["ke"], "khu·níheʔ"],
+      negationEn: "I do not cook",
+      desc: [
+        "Describes events that happen regularly, whether once an hour or once a year.There is an expectation that the event will occur again.",
+        'Describes "what people do" or "what they are."',
+        "Sometimes describes actions that are happening right now.",
+      ],
+    },
+    {
+      key: "def",
+      tense: "Definite Past",
+      en: "I cooked",
+      breakdown: cookVerbDatum.def.phrases[0].breakdown,
+      negation: ["Yáh teʔ", ["wake", "PB"], "khu·ní·"],
+      negationEn: "I did not cook",
+      desc: [
+        "Describes a completed event (verbs that end in -ed in English)",
+        "Describes an event in which someone is en route or going to do something",
+      ],
+    },
+    {
+      key: "ifut",
+      tense: "Indefinite Future",
+      en: "I might cook",
+      breakdown: cookVerbDatum.ifut.phrases[0].breakdown,
+      negation: ["Yáh th", ["a", "IFUT"], ["ke"], "khu·ní·"],
+      negationEn: "I will not cook",
+      desc: [
+        "Describes an event that might or could happen in the future",
+        "Describes an event that might or could have happened in the past",
+      ],
+    },
+    {
+      key: "fut",
+      tense: "Definite Future",
+      en: "I will cook",
+      breakdown: cookVerbDatum.fut.phrases[0].breakdown,
+      negation: ["Yáh th", ["a", "IFUT"], ["ke"], "khu·ní·"],
+      negationEn: "I might not cook",
+      desc: ["Describes an event that likely will occur in the future"],
+    },
+    {
+      key: "pfv",
+      tense: "Perfective",
+      en: "I have cooked",
+      negation: ["Yáh teʔ", ["wake", "PB"], "khu·ní·"],
+      negationEn: "I have not cooked",
+      desc: [
+        "Describes one (or many) events that have been completed, either recently or long ago",
+        "Describes a change that has occurred",
+        "Describes an event that is happening right now",
+      ],
+    },
+  ];
+
+  return (
+    <>
+      <SectionHeading id="examples" level={2}>
+        Active Verb Examples
+      </SectionHeading>
+
+      <Text>
+        Below is a table with each of the six tenses we&lsquo;re looking at,
+        their negations, and descriptions as to how they&lsquo;re used.
+      </Text>
+
+      <TableWrapper
+        columns={[
+          {
+            accessorKey: "key",
+            cell: (key: ActiveVerbTense, row: (typeof data)[0]) => (
+              <TextArray>
+                <span className="underline">{tenseMap[key]}</span>
+                <TextBreakdown
+                  breakdown={tenseBreakdownMap[key]}
+                  typeFallback="PR"
+                  wrap="nowrap"
+                />
+                <div></div>
+                {row.en}
+              </TextArray>
+            ),
+            header: "Tense",
+          },
+          {
+            accessorKey: "desc",
+            cell: (desc: string[]) => (
+              <Flex direction="column" gap={2}>
+                <TextArray>{desc}</TextArray>
+              </Flex>
+            ),
+            header: "Description",
+          },
+          {
+            accessorKey: "negation",
+            cell: (negation: BreakdownArray, row: (typeof data)[0]) => (
+              <TextArray>
+                <TextBreakdown
+                  breakdown={negation}
+                  typeFallback="PR"
+                  wrap="nowrap"
+                />
+                {row.negationEn}
+              </TextArray>
+            ),
+            header: "Negation",
+          },
+        ]}
+        data={data}
+      />
+
+      <Text>There are two things to note here:</Text>
+      <List ordered>
+        <List.Item>
+          The &quot;Indefinite Future&quot; and &quot;Future&quot; negations are
+          the same, just like in previous modules
+        </List.Item>
+        <List.Item>
+          The &quot;Perfective&quot; and &quot;Definite&quot; negations are the
+          same, and use blue pronominals (the Perfective form)
+        </List.Item>
+      </List>
     </>
   );
 }

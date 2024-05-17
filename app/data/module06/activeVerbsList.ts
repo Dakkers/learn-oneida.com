@@ -83,12 +83,12 @@ import lookAtSomethingFutData from "./look_at_something-FUT";
 import lookAtSomethingHabData from "./look_at_something-HAB";
 import lookAtSomethingIfutData from "./look_at_something-IFUT";
 import lookAtSomethingPfvData from "./look_at_something-PFV";
-import openSomethingCmdData from "./open_something-CMD";
-import openSomethingDefData from "./open_something-DEF";
-import openSomethingFutData from "./open_something-FUT";
-import openSomethingHabData from "./open_something-HAB";
-import openSomethingIfutData from "./open_something-IFUT";
-import openSomethingPfvData from "./open_something-PFV";
+import openADoorCmdData from "./open_a_door-CMD";
+import openADoorDefData from "./open_a_door-DEF";
+import openADoorFutData from "./open_a_door-FUT";
+import openADoorHabData from "./open_a_door-HAB";
+import openADoorIfutData from "./open_a_door-IFUT";
+import openADoorPfvData from "./open_a_door-PFV";
 import prepareOneselfCmdData from "./prepare_oneself-CMD";
 import prepareOneselfDefData from "./prepare_oneself-DEF";
 import prepareOneselfFutData from "./prepare_oneself-FUT";
@@ -247,12 +247,12 @@ const mapping = {
   lookAtSomethingHab: lookAtSomethingHabData,
   lookAtSomethingIfut: lookAtSomethingIfutData,
   lookAtSomethingPfv: lookAtSomethingPfvData,
-  openSomethingCmd: openSomethingCmdData,
-  openSomethingDef: openSomethingDefData,
-  openSomethingFut: openSomethingFutData,
-  openSomethingHab: openSomethingHabData,
-  openSomethingIfut: openSomethingIfutData,
-  openSomethingPfv: openSomethingPfvData,
+  openADoorCmd: openADoorCmdData,
+  openADoorDef: openADoorDefData,
+  openADoorFut: openADoorFutData,
+  openADoorHab: openADoorHabData,
+  openADoorIfut: openADoorIfutData,
+  openADoorPfv: openADoorPfvData,
   prepareOneselfCmd: prepareOneselfCmdData,
   prepareOneselfDef: prepareOneselfDefData,
   prepareOneselfFut: prepareOneselfFutData,
@@ -349,7 +349,7 @@ export type ActiveVerbDatum = {
     | "hideOneself"
     | "listen"
     | "lookAtSomething"
-    | "openSomething"
+    | "openADoor"
     | "prepareOneself"
     | "putSomethingAway"
     | "rest"
@@ -422,8 +422,8 @@ export const activeVerbsList = (
       en: "look (at something)",
     },
     {
-      key: "openSomething",
-      en: "open something",
+      key: "openADoor",
+      en: "open a door",
     },
     {
       key: "prepareOneself",

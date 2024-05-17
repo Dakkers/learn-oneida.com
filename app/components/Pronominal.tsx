@@ -14,11 +14,9 @@ export type PronominalColor =
 export function Pronominal({
   color,
   children,
-  variant,
 }: {
   color?: PronominalColor;
   children: React.ReactNode;
-  variant?: TextProps["variant"];
 }) {
   const textColorClass = ["red", "r"].includes(color ?? "")
     ? "text-red-500"

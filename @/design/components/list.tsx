@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Text } from "./text";
 
 export function List({
   children,
@@ -16,5 +17,9 @@ export function List({
 }
 
 List.Item = function ListItem({ children }: { children: React.ReactNode }) {
-  return <li className="ml-6">{children}</li>;
+  return (
+    <li className="ml-6">
+      <Text>{children}</Text>
+    </li>
+  );
 };

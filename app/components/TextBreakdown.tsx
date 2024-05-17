@@ -43,6 +43,16 @@ export type TextBreakdownSuffix =
   | "ake"
   | "áke";
 
+interface TextBreakdownProps {
+  as?: "span" | "div";
+  breakdown: BreakdownArray;
+  prefix?: BreakdownType;
+  suffix?: TextBreakdownSuffix;
+  typeFallback?: BreakdownType;
+  whispered?: boolean;
+  wrap?: "nowrap";
+}
+
 export function TextBreakdown({
   as: Tag = "span",
   breakdown: _breakdown,
@@ -50,14 +60,8 @@ export function TextBreakdown({
   suffix,
   typeFallback,
   whispered: _whispered = false,
-}: {
-  as?: "span" | "div";
-  breakdown: BreakdownArray;
-  prefix?: BreakdownType;
-  suffix?: TextBreakdownSuffix;
-  typeFallback?: BreakdownType;
-  whispered?: boolean;
-}) {
+  wrap,
+}: TextBreakdownProps) {
   const breakdown = getPrefixArr(prefix)
     .concat(_breakdown)
     .concat(getSuffixArr(suffix));
@@ -65,6 +69,7 @@ export function TextBreakdown({
   return (
     <Tag>
       {breakdown.map((part, i) => {
+        const innerTextProps = { wrap };
         const isLastPart = i === breakdown.length - 1;
         const whispered = isLastPart && !!_whispered;
 
@@ -73,7 +78,11 @@ export function TextBreakdown({
             (["kweʔ", "hkweʔ", "hné·", "hneʔ"].includes(part) && isLastPart) ||
             (["tshi", "tshaʔ"].includes(part) && i === 0);
           return (
-            <InnerText key={i} type={isPastTense ? "PAST" : undefined}>
+            <InnerText
+              {...innerTextProps}
+              key={i}
+              type={isPastTense ? "PAST" : undefined}
+            >
               {whispered ? whisperizeWord(part) : part}
             </InnerText>
           );
@@ -85,7 +94,7 @@ export function TextBreakdown({
         const hasLeadingWhitespace = text.trimStart() !== text;
         const hasTrailingWhitespace = text.trimStart() !== text;
         return (
-          <InnerText key={i} type={type ?? typeFallback}>
+          <InnerText {...innerTextProps} key={i} type={type ?? typeFallback}>
             {hasLeadingWhitespace ? "&nbsp" : ""}
             {whispered ? whisperizeWord(text) : text}
             {hasTrailingWhitespace ? "&nbsp" : ""}
@@ -99,9 +108,11 @@ export function TextBreakdown({
 function InnerText({
   children,
   type,
+  wrap,
 }: {
   children: React.ReactNode;
   type?: BreakdownType | BreakdownType[];
+  wrap?: TextBreakdownProps["wrap"];
 }) {
   return (
     <span
@@ -110,6 +121,7 @@ function InnerText({
           t ? BREAKDOWN_TYPE_MAP[t] : undefined,
         ),
         "font-bold",
+        wrap === "nowrap" && "text-nowrap",
       )}
     >
       {children}
