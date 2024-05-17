@@ -150,7 +150,7 @@ export default function LearnModule06() {
           </TOC.Section>
         </TOC.Item>
 
-        {/* <TOC.Item label="Paradigms for Select Active Verbs" value="paradigms">
+        <TOC.Item label="Paradigms for Select Active Verbs" value="paradigms">
           <TOC.Section>
             {verbsWithParadigms.map((v) => (
               <TOC.Item
@@ -162,7 +162,7 @@ export default function LearnModule06() {
               />
             ))}
           </TOC.Section>
-        </TOC.Item> */}
+        </TOC.Item>
 
         <TOC.Item label="Translation exercises" value="translation-exercises" />
       </TOC>
@@ -173,7 +173,7 @@ export default function LearnModule06() {
       <ExamplesSection />
       <DailyActivitiesSection />
 
-      {/* <VerbsParadigmsSection /> */}
+      <VerbsParadigmsSection />
 
       <TranslationExercisesSection group="module06" />
     </>
