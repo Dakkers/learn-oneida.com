@@ -590,3 +590,14 @@ const sorter = (
   v1: Pick<Module6VerbDatum, "en">,
   v2: Pick<Module6VerbDatum, "en">,
 ) => v1.en.localeCompare(v2.en);
+
+export function getPronounsForModule6Verb(verbKey: string): Pronoun[] {
+  const datum = createModule6VerbList().find((v) => v.key === verbKey);
+  if (!datum) {
+    return [];
+  }
+  if (datum.exceptions?.includes(EXCEPTION_IT_ONLY)) {
+    return ["it"];
+  }
+  return pronouns;
+}

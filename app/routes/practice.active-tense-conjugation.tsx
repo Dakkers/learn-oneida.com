@@ -24,6 +24,7 @@ import { Notice } from "@/design/components/notice";
 import {
   Module6VerbTense,
   createModule6VerbList,
+  getPronounsForModule6Verb,
 } from "~/data/module06/activeVerbsList";
 
 export const meta: MetaFunction = () => {
@@ -54,6 +55,11 @@ const formSchema = z.object(
 );
 
 export default function PracticeTenseConjugation() {
+  const [word, setWord] = React.useState("answer");
+  const [pronoun, setPronoun] = React.useState("i");
+  const [hasStarted, setHasStarted] = React.useState(false);
+  const [isCorrect, setIsCorrect] = React.useState(false);
+
   const verbOptions = React.useMemo(
     () =>
       createModule6VerbList().map((datum) => ({
@@ -62,19 +68,12 @@ export default function PracticeTenseConjugation() {
       })),
     [],
   );
-  const pronounOptions = React.useMemo(
-    () =>
-      pronouns.map((pronoun) => ({
-        label: `${PRONOUN_MAP_ONEIDA[pronoun]} (${PRONOUN_MAP_EN[pronoun]})`,
-        value: pronoun,
-      })),
-    [],
-  );
-
-  const [word, setWord] = React.useState("answer");
-  const [pronoun, setPronoun] = React.useState("i");
-  const [hasStarted, setHasStarted] = React.useState(false);
-  const [isCorrect, setIsCorrect] = React.useState(false);
+  const pronounOptions = React.useMemo(() => {
+    return getPronounsForModule6Verb(word).map((pronoun) => ({
+      label: `${PRONOUN_MAP_ONEIDA[pronoun]} (${PRONOUN_MAP_EN[pronoun]})`,
+      value: pronoun,
+    }));
+  }, [word]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {},
@@ -123,6 +122,10 @@ export default function PracticeTenseConjugation() {
           onChange={(value) => {
             setWord(value);
             setHasStarted(false);
+            const allowedPronouns = getPronounsForModule6Verb(value);
+            if (!allowedPronouns.includes(pronoun as Pronoun)) {
+              setPronoun(allowedPronouns[0] ?? "");
+            }
           }}
           options={verbOptions}
           value={word}

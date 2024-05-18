@@ -4,7 +4,7 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} will understand",
-    type: "PR",
+    type: "PB",
     phrases: [
       {
         breakdown: [["ʌ", "FUT"], ["wak"], ["e", "EP"], "ʔnikuhlayʌ·táneʔ"],
