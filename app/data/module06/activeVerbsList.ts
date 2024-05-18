@@ -1,3 +1,4 @@
+import { match, P } from "ts-pattern";
 import { ParadigmData } from "~/components/ParadigmTable";
 import answerCmdData from "./answer-CMD";
 import answerDefData from "./answer-DEF";
@@ -71,6 +72,11 @@ import hideOneselfFutData from "./hide_oneself-FUT";
 import hideOneselfHabData from "./hide_oneself-HAB";
 import hideOneselfIfutData from "./hide_oneself-IFUT";
 import hideOneselfPfvData from "./hide_oneself-PFV";
+import itHappensDefData from "./it_happens-DEF";
+import itHappensFutData from "./it_happens-FUT";
+import itHappensHabData from "./it_happens-HAB";
+import itHappensIfutData from "./it_happens-IFUT";
+import itHappensPfvData from "./it_happens-PFV";
 import listenCmdData from "./listen-CMD";
 import listenDefData from "./listen-DEF";
 import listenFutData from "./listen-FUT";
@@ -83,12 +89,12 @@ import lookAtSomethingFutData from "./look_at_something-FUT";
 import lookAtSomethingHabData from "./look_at_something-HAB";
 import lookAtSomethingIfutData from "./look_at_something-IFUT";
 import lookAtSomethingPfvData from "./look_at_something-PFV";
-import openSomethingCmdData from "./open_something-CMD";
-import openSomethingDefData from "./open_something-DEF";
-import openSomethingFutData from "./open_something-FUT";
-import openSomethingHabData from "./open_something-HAB";
-import openSomethingIfutData from "./open_something-IFUT";
-import openSomethingPfvData from "./open_something-PFV";
+import openADoorCmdData from "./open_a_door-CMD";
+import openADoorDefData from "./open_a_door-DEF";
+import openADoorFutData from "./open_a_door-FUT";
+import openADoorHabData from "./open_a_door-HAB";
+import openADoorIfutData from "./open_a_door-IFUT";
+import openADoorPfvData from "./open_a_door-PFV";
 import prepareOneselfCmdData from "./prepare_oneself-CMD";
 import prepareOneselfDefData from "./prepare_oneself-DEF";
 import prepareOneselfFutData from "./prepare_oneself-FUT";
@@ -101,6 +107,11 @@ import putSomethingAwayFutData from "./put_something_away-FUT";
 import putSomethingAwayHabData from "./put_something_away-HAB";
 import putSomethingAwayIfutData from "./put_something_away-IFUT";
 import putSomethingAwayPfvData from "./put_something_away-PFV";
+import rainDefData from "./rain-DEF";
+import rainFutData from "./rain-FUT";
+import rainHabData from "./rain-HAB";
+import rainIfutData from "./rain-IFUT";
+import rainPfvData from "./rain-PFV";
 import restCmdData from "./rest-CMD";
 import restDefData from "./rest-DEF";
 import restFutData from "./rest-FUT";
@@ -113,6 +124,11 @@ import saySomethingFutData from "./say_something-FUT";
 import saySomethingHabData from "./say_something-HAB";
 import saySomethingIfutData from "./say_something-IFUT";
 import saySomethingPfvData from "./say_something-PFV";
+import snowDefData from "./snow-DEF";
+import snowFutData from "./snow-FUT";
+import snowHabData from "./snow-HAB";
+import snowIfutData from "./snow-IFUT";
+import snowPfvData from "./snow-PFV";
 import studyCmdData from "./study-CMD";
 import studyDefData from "./study-DEF";
 import studyFutData from "./study-FUT";
@@ -161,6 +177,49 @@ import workFutData from "./work-FUT";
 import workHabData from "./work-HAB";
 import workIfutData from "./work-IFUT";
 import workPfvData from "./work-PFV";
+import { Pronoun, pronouns } from "~/utils";
+import _ from "lodash";
+
+type Module6VerbKey =
+  | "answer"
+  | "bathe"
+  | "beginToDoSomething"
+  | "cook"
+  | "defecate"
+  | "doSomething"
+  | "eatAMeal"
+  | "getDressedUp"
+  | "getSelfUp"
+  | "getTired"
+  | "goToSleep"
+  | "hideOneself"
+  | "rain"
+  | "itHappens"
+  | "listen"
+  | "lookAtSomething"
+  | "openADoor"
+  | "prepareOneself"
+  | "putSomethingAway"
+  | "rest"
+  | "saySomething"
+  | "snow"
+  | "study"
+  | "tidySomethingUp"
+  | "understand"
+  | "wakeUp"
+  | "washSomething"
+  | "work";
+
+export const MODULE_6_VERB_TENSE_LIST = [
+  "hab",
+  "def",
+  "fut",
+  "ifut",
+  "cmd",
+  "pfv",
+] as const;
+
+export type Module6VerbTense = (typeof MODULE_6_VERB_TENSE_LIST)[number];
 
 const mapping = {
   answerCmd: answerCmdData,
@@ -235,6 +294,12 @@ const mapping = {
   hideOneselfHab: hideOneselfHabData,
   hideOneselfIfut: hideOneselfIfutData,
   hideOneselfPfv: hideOneselfPfvData,
+  itHappensCmd: null,
+  itHappensDef: itHappensDefData,
+  itHappensFut: itHappensFutData,
+  itHappensHab: itHappensHabData,
+  itHappensIfut: itHappensIfutData,
+  itHappensPfv: itHappensPfvData,
   listenCmd: listenCmdData,
   listenDef: listenDefData,
   listenFut: listenFutData,
@@ -247,12 +312,12 @@ const mapping = {
   lookAtSomethingHab: lookAtSomethingHabData,
   lookAtSomethingIfut: lookAtSomethingIfutData,
   lookAtSomethingPfv: lookAtSomethingPfvData,
-  openSomethingCmd: openSomethingCmdData,
-  openSomethingDef: openSomethingDefData,
-  openSomethingFut: openSomethingFutData,
-  openSomethingHab: openSomethingHabData,
-  openSomethingIfut: openSomethingIfutData,
-  openSomethingPfv: openSomethingPfvData,
+  openADoorCmd: openADoorCmdData,
+  openADoorDef: openADoorDefData,
+  openADoorFut: openADoorFutData,
+  openADoorHab: openADoorHabData,
+  openADoorIfut: openADoorIfutData,
+  openADoorPfv: openADoorPfvData,
   prepareOneselfCmd: prepareOneselfCmdData,
   prepareOneselfDef: prepareOneselfDefData,
   prepareOneselfFut: prepareOneselfFutData,
@@ -265,6 +330,12 @@ const mapping = {
   putSomethingAwayHab: putSomethingAwayHabData,
   putSomethingAwayIfut: putSomethingAwayIfutData,
   putSomethingAwayPfv: putSomethingAwayPfvData,
+  rainCmd: null,
+  rainDef: rainDefData,
+  rainFut: rainFutData,
+  rainHab: rainHabData,
+  rainIfut: rainIfutData,
+  rainPfv: rainPfvData,
   restCmd: restCmdData,
   restDef: restDefData,
   restFut: restFutData,
@@ -277,6 +348,12 @@ const mapping = {
   saySomethingHab: saySomethingHabData,
   saySomethingIfut: saySomethingIfutData,
   saySomethingPfv: saySomethingPfvData,
+  snowCmd: null,
+  snowDef: snowDefData,
+  snowFut: snowFutData,
+  snowHab: snowHabData,
+  snowIfut: snowIfutData,
+  snowPfv: snowPfvData,
   studyCmd: studyCmdData,
   studyDef: studyDefData,
   studyFut: studyFutData,
@@ -327,44 +404,38 @@ const mapping = {
   workPfv: workPfvData,
 } as const;
 
-export type ActiveVerbDatum = {
-  cmd: ParadigmData;
+const EXCEPTION_IT_ONLY = 1;
+const EXCEPTION_NO_COMMAND = 2;
+
+export type Module6VerbDatum = {
+  cmd: ParadigmData | null;
   def: ParadigmData;
   en: string;
+  exceptions?: number[];
   fut: ParadigmData;
   hab: ParadigmData;
   ifut: ParadigmData;
-  key:
-    | "answer"
-    | "bathe"
-    | "beginToDoSomething"
-    | "cook"
-    | "defecate"
-    | "doSomething"
-    | "eatAMeal"
-    | "getDressedUp"
-    | "getSelfUp"
-    | "getTired"
-    | "goToSleep"
-    | "hideOneself"
-    | "listen"
-    | "lookAtSomething"
-    | "openSomething"
-    | "prepareOneself"
-    | "putSomethingAway"
-    | "rest"
-    | "saySomething"
-    | "study"
-    | "tidySomethingUp"
-    | "understand"
-    | "wakeUp"
-    | "washSomething"
-    | "work";
+  key: Module6VerbKey;
   pfv: ParadigmData;
+  pronouns?: Pronoun[];
 };
 
-export const activeVerbsList = (
-  [
+export const module6VerbTenseMap: Record<Module6VerbTense, string> = {
+  cmd: "Command",
+  def: "Definite",
+  fut: "Future",
+  hab: "Habitual",
+  ifut: "Indefinite",
+  pfv: "Perfective",
+} as const;
+
+export function createModule6VerbList() {
+  const activeVerbsList: {
+    en?: string;
+    exceptions?: number[];
+    key: Module6VerbKey;
+    pronouns?: Pronoun[];
+  }[] = [
     {
       key: "answer",
       en: "answer, reply",
@@ -379,15 +450,12 @@ export const activeVerbsList = (
     },
     {
       key: "eatAMeal",
-      en: "eat a meal",
     },
     {
       key: "cook",
-      en: "cook",
     },
     {
       key: "defecate",
-      en: "defecate",
     },
     {
       key: "doSomething",
@@ -410,20 +478,23 @@ export const activeVerbsList = (
       en: "sleep, go to",
     },
     {
+      key: "itHappens",
+      en: "it happens",
+      pronouns: ["it"],
+      exceptions: [EXCEPTION_IT_ONLY, EXCEPTION_NO_COMMAND],
+    },
+    {
       key: "hideOneself",
-      en: "hide oneself",
     },
     {
       key: "listen",
-      en: "listen",
     },
     {
       key: "lookAtSomething",
       en: "look (at something)",
     },
     {
-      key: "openSomething",
-      en: "open something",
+      key: "openADoor",
     },
     {
       key: "prepareOneself",
@@ -431,15 +502,23 @@ export const activeVerbsList = (
     },
     {
       key: "putSomethingAway",
-      en: "put something away",
+    },
+    {
+      key: "rain",
+      pronouns: ["it"],
+      exceptions: [EXCEPTION_IT_ONLY, EXCEPTION_NO_COMMAND],
     },
     {
       key: "rest",
-      en: "rest",
     },
     {
       key: "saySomething",
       en: "say (something)",
+    },
+    {
+      key: "snow",
+      pronouns: ["it"],
+      exceptions: [EXCEPTION_IT_ONLY, EXCEPTION_NO_COMMAND],
     },
     {
       key: "study",
@@ -447,7 +526,6 @@ export const activeVerbsList = (
     },
     {
       key: "tidySomethingUp",
-      en: "tidy something up",
     },
     {
       key: "understand",
@@ -455,43 +533,71 @@ export const activeVerbsList = (
     },
     {
       key: "wakeUp",
-      en: "wake up",
     },
     {
       key: "washSomething",
-      en: "wash something",
     },
     {
       key: "work",
-      en: "work",
     },
-  ] as const
-)
-  .map((item) => {
-    const result: Partial<ActiveVerbDatum> = { ...item };
-    for (const key of ["Cmd", "Def", "Fut", "Hab", "Ifut", "Pfv"] as const) {
-      result[key.toLowerCase() as Lowercase<typeof key>] =
-        mapping[`${item.key}${key}`];
+  ];
+
+  const resultingList: Module6VerbDatum[] = [];
+
+  for (const v of activeVerbsList) {
+    const item: Partial<Module6VerbDatum> = {
+      ..._.pick(v, ["en", "exceptions", "key"]),
+    };
+    item.en = v.en ?? _.startCase(_.camelCase(v.key)).toLowerCase();
+    item.pronouns = v.exceptions?.includes(EXCEPTION_IT_ONLY)
+      ? ["it"]
+      : pronouns;
+    for (const tense of MODULE_6_VERB_TENSE_LIST) {
+      if (tense === "cmd" && v.exceptions?.includes(EXCEPTION_NO_COMMAND)) {
+        item[tense] = null;
+        continue;
+      }
+      const tenseKey = _.capitalize(tense) as Capitalize<Module6VerbTense>;
+
+      // @ts-expect-error IDK
+      item[tense] = mapping[`${v.key}${tenseKey}`];
     }
-    return result as ActiveVerbDatum;
-  })
-  .sort((v1, v2) => v1.en.localeCompare(v2.en));
+    resultingList.push(item as Module6VerbDatum);
+  }
+  return resultingList.sort(sorter);
+}
 
-export const ACTIVE_VERB_TENSE_LIST = [
-  "hab",
-  "def",
-  "fut",
-  "ifut",
-  "cmd",
-  "pfv",
-] as const;
-export type ActiveVerbTense = (typeof ACTIVE_VERB_TENSE_LIST)[number];
+export function createModule6VerbListFlat() {
+  const resultingList = createModule6VerbList();
+  const flattenedResult = [];
+  for (const tense of MODULE_6_VERB_TENSE_LIST) {
+    for (const v of resultingList) {
+      if (tense === "cmd" && v.exceptions?.includes(EXCEPTION_NO_COMMAND)) {
+        continue;
+      }
+      flattenedResult.push({
+        ...v[tense],
+        en: `${v.en} (${module6VerbTenseMap[tense]})`,
+        key: `${v.key}-${tense}`,
+        tense,
+      });
+    }
+  }
+  return flattenedResult.sort(sorter);
+}
 
-export const activeVerbTenseMap: Record<ActiveVerbTense, string> = {
-  cmd: "Command",
-  def: "Definite",
-  fut: "Future",
-  hab: "Habitual",
-  ifut: "Indefinite",
-  pfv: "Perfective",
-} as const;
+const sorter = (
+  v1: Pick<Module6VerbDatum, "en">,
+  v2: Pick<Module6VerbDatum, "en">,
+) => v1.en.localeCompare(v2.en);
+
+export function getPronounsForModule6Verb(verbKey: string): Pronoun[] {
+  const datum = createModule6VerbList().find((v) => v.key === verbKey);
+  if (!datum) {
+    return [];
+  }
+  if (datum.exceptions?.includes(EXCEPTION_IT_ONLY)) {
+    return ["it"];
+  }
+  return pronouns;
+}
