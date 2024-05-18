@@ -601,3 +601,10 @@ export function getPronounsForModule6Verb(verbKey: string): Pronoun[] {
   }
   return pronouns;
 }
+
+export function findModule6Verb(
+  verbKey: string,
+  list: Module6VerbDatum[] | null = null,
+) {
+  return (list ?? createModule6VerbList()).find((item) => item.key === verbKey);
+}

@@ -21,6 +21,7 @@ import { useForm } from "react-hook-form";
 import { AnyZodObject, z } from "zod";
 import { SectionHeading } from "~/components/SectionHeading";
 import { createCountingTimeData } from "~/components/articles/CountingTime";
+import { TableAsForm } from "~/components/practice/TableAsForm";
 import { sanitizeIrregularCharacters } from "~/utils/words";
 
 export const meta: MetaFunction = () => {
@@ -100,95 +101,5 @@ export default function PracticeMonths() {
         </Flex>
       )}
     </>
-  );
-}
-
-export function TableAsForm({
-  bleed = 0,
-  checkCorrectness,
-  formSchema,
-  rows,
-}: {
-  bleed?: BleedProps["mx"];
-  checkCorrectness: (key: string, val: string) => string | null | undefined;
-  formSchema: AnyZodObject;
-  rows: Array<{ en: string; key: string; on: string }>;
-}) {
-  const [isCorrect, setIsCorrect] = useState(false);
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    defaultValues: {},
-    resolver: zodResolver(formSchema),
-  });
-
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    let hasErrors = false;
-    for (const key in values) {
-      const value = values[key];
-      const result = checkCorrectness(key, value);
-      if (result) {
-        hasErrors = true;
-        form.setError(key, {
-          message: typeof result === "string" ? result : "Incorrect answer.",
-          type: "custom",
-        });
-      }
-    }
-    setIsCorrect(!hasErrors);
-  };
-
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
-        <TableWrapper
-          bleed={bleed}
-          columns={[
-            {
-              accessorKey: "en",
-              cell: TableWrapper.textArrayCellBold,
-              header: "Question",
-            },
-            {
-              accessorKey: "key",
-              // @ts-expect-error TODO
-              cell: (val: string) => (
-                <FormField
-                  control={form.control}
-                  name={val}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          autoComplete="off"
-                          placeholder="Type here..."
-                          {...field}
-                          value={field.value ?? ""}
-                        />
-                      </FormControl>
-
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              ),
-              header: "Answer",
-            },
-          ]}
-          data={rows}
-        />
-
-        {form.formState.submitCount > 0 && (
-          <Notice intent={isCorrect ? "positive" : "negative"}>
-            {isCorrect
-              ? "Good job! You answered each prompt correctly."
-              : "There were some mistakes with your answers. Scroll up to take a look."}
-          </Notice>
-        )}
-
-        <Flex justify="end">
-          <Button type="submit">Submit</Button>
-        </Flex>
-      </form>
-    </Form>
   );
 }
