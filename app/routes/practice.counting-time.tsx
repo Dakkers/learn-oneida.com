@@ -78,18 +78,9 @@ export default function PracticeMonths() {
 
       {hasStarted ? (
         <TableAsForm
-          checkCorrectness={(key, val) => {
-            const obj = rows.find((r) => r.key === key);
-            if (obj) {
-              if (
-                !val ||
-                sanitizeIrregularCharacters(val) !==
-                  sanitizeIrregularCharacters(obj.on)
-              ) {
-                return `Answer: ${obj.on}`;
-              }
-            }
-          }}
+          checkCorrectness={(key, val) =>
+            TableAsForm.defaultCheckCorrectness({ key, val, rows })
+          }
           formSchema={formSchema}
           rows={rows}
         />
