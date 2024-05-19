@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: ["te", ["wak"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["wak"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["hs"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["hs"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["ho"], "tohtálhu"],
+        breakdown: [["te", "DUAL"], ["ho"], "tohtálhu"],
       },
       {
-        breakdown: ["te", ["yako"], "tohtálhu"],
+        breakdown: [["te", "DUAL"], ["yako"], "tohtálhu"],
       },
       {
-        breakdown: ["te", ["yo"], "tohtálhu"],
+        breakdown: [["te", "DUAL"], ["yo"], "tohtálhu"],
       },
       {
-        breakdown: ["te", ["yuky"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["yuky"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["yuky"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["yuky"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["tsy"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["tsy"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["hon"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["hon"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["yon"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["yon"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["yukw"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["yukw"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["yukw"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["yukw"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["sw"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["sw"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["hon"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["hon"], "atohtálhu"],
       },
       {
-        breakdown: ["te", ["yon"], "atohtálhu"],
+        breakdown: [["te", "DUAL"], ["yon"], "atohtálhu"],
       },
     ],
   },

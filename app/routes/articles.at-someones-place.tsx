@@ -4,7 +4,7 @@ import { AtSomeonesPlaceArticle } from "~/components/articles/AtSomeonesPlace";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "AtSomeonesPlace" },
+    { title: "At Someone's Place" },
     {
       name: "description",
       content: "At someone's place in Oneida",

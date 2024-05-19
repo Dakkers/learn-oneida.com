@@ -45,12 +45,12 @@ const tenseMap = {
 } as const;
 
 const tenseBreakdownMap: Record<Module6VerbTense, BreakdownArray> = {
-  cmd: ["tsiʔ n", ["a", "IFUT"], ["hs"], "átyel"],
-  def: ["n", ["aʔ", "DEF"], ["k"], "átyele̲ʔ"],
-  fut: ["n", ["ʌ", "FUT"], ["k"], "átyele̲ʔ"],
-  hab: ["tsiʔ ni", ["k"], "atyélhaʔ"],
-  ifut: ["n", ["a", "IFUT"], ["k"], "átyele̲ʔ"],
-  pfv: ["ni", ["wak", "PB"], "átyele̲ʔ"],
+  cmd: ["tsiʔ ", ["n", "PTV"], ["a", "IFUT"], ["hs"], "átyel"],
+  def: [["n", "PTV"], ["aʔ", "DEF"], ["k"], "átyele̲ʔ"],
+  fut: [["n", "PTV"], ["ʌ", "FUT"], ["k"], "átyele̲ʔ"],
+  hab: ["tsiʔ ", ["ni", "PTV"], ["k"], "atyélhaʔ"],
+  ifut: [["n", "PTV"], ["a", "IFUT"], ["k"], "átyele̲ʔ"],
+  pfv: [["ni", "PTV"], ["wak", "PB"], "átyele̲ʔ"],
 };
 
 const columnVisibility = {

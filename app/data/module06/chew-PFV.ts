@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: ["te", ["wak"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["wak"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["hs"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["hs"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["ho"], "tská·huʔ"],
+        breakdown: [["te", "DUAL"], ["ho"], "tská·huʔ"],
       },
       {
-        breakdown: ["te", ["yako"], "tská·huʔ"],
+        breakdown: [["te", "DUAL"], ["yako"], "tská·huʔ"],
       },
       {
-        breakdown: ["te", ["yo"], "tská·huʔ"],
+        breakdown: [["te", "DUAL"], ["yo"], "tská·huʔ"],
       },
       {
-        breakdown: ["te", ["yuky"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["yuky"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["yuky"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["yuky"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["tsy"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["tsy"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["hon"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["hon"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["yon"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["yon"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["yukw"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["yukw"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["yukw"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["yukw"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["sw"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["sw"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["hon"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["hon"], "atská·huʔ"],
       },
       {
-        breakdown: ["te", ["yon"], "atská·huʔ"],
+        breakdown: [["te", "DUAL"], ["yon"], "atská·huʔ"],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["te", ["k"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["te", "CIS"], ["k"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["te", ["hs"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["te", "CIS"], ["hs"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["ha"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["t", "CIS"], ["ha"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["yé"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["t", "CIS"], ["yé"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["ka"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["t", "CIS"], ["ka"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["tni"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["ti", "CIS"], ["tni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["yakni"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["t", "CIS"], ["yakni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["sni"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["ti", "CIS"], ["sni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["hni"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["t", "CIS"], ["hni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["kni"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["t", "CIS"], ["kni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["twa"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["ti", "CIS"], ["twa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["yakwa"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["t", "CIS"], ["yakwa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["swa"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["ti", "CIS"], ["swa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["hati"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["t", "CIS"], ["hati"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["kuti"], "nákle", ["hkweʔ", "PAST"]],
+        breakdown: [["t", "CIS"], ["kuti"], "nákle", ["hkweʔ", "PAST"]],
       },
     ],
   },

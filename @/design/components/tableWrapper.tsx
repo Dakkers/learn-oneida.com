@@ -92,7 +92,11 @@ const createOneidaCol = (
 ) => ({
   accessorKey: options.accessorKey ?? "breakdown",
   cell: (value: BreakdownArray) => (
-    <TextBreakdown breakdown={value} typeFallback={typeFallback} />
+    <TextBreakdown
+      breakdown={value}
+      typeFallback={typeFallback}
+      wrap="nowrap"
+    />
   ),
   header: options.header ?? "Translation",
 });
@@ -141,7 +145,10 @@ const columnsEnglishBreakdown: TableWrapperProps["columns"] = [
   EnglishCol,
   {
     accessorKey: "breakdown",
-    cell: (value) => <TextBreakdown breakdown={value as BreakdownArray} />,
+    // @ts-expect-error TODO
+    cell: (value: BreakdownArray) => (
+      <TextBreakdown breakdown={value} wrap="nowrap" />
+    ),
     header: "Translation",
   },
 ];

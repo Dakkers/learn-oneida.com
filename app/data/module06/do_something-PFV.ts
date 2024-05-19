@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: ["ni", ["wak"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["wak"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["s"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["s"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["ho"], "tyelʌ́"],
+        breakdown: [["ni", "PTV"], ["ho"], "tyelʌ́"],
       },
       {
-        breakdown: ["ni", ["yako"], "tyelʌ́"],
+        breakdown: [["ni", "PTV"], ["yako"], "tyelʌ́"],
       },
       {
-        breakdown: ["ni", ["yo"], "tyelʌ́"],
+        breakdown: [["ni", "PTV"], ["yo"], "tyelʌ́"],
       },
       {
-        breakdown: ["ni", ["yuky"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["yuky"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["yuky"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["yuky"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["tsy"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["tsy"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["hon"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["hon"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["yon"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["yon"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["yukw"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["yukw"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["yukw"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["yukw"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["sw"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["sw"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["hon"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["hon"], "atyelʌ́"],
       },
       {
-        breakdown: ["ni", ["yon"], "atyelʌ́"],
+        breakdown: [["ni", "PTV"], ["yon"], "atyelʌ́"],
       },
     ],
     whispered: false,
