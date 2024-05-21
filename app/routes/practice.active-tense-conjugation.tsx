@@ -8,7 +8,6 @@ import { Select } from "@/design/components/select";
 import { Button } from "@/design/primitives/button";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "~/utils";
 import { z } from "zod";
-import { sanitizeIrregularCharacters } from "~/utils/words";
 import {
   MODULE_6_VERB_TENSE_LIST,
   createModule6VerbList,
@@ -124,18 +123,9 @@ export default function PracticeTenseConjugation() {
       {hasStarted && (
         <TableAsForm
           bleed={32}
-          checkCorrectness={(key, val) => {
-            const obj = rows.find((r) => r.key === key);
-            if (obj) {
-              if (
-                !val ||
-                sanitizeIrregularCharacters(val) !==
-                  sanitizeIrregularCharacters(obj.on)
-              ) {
-                return `Answer: ${obj.on}`;
-              }
-            }
-          }}
+          checkCorrectness={(key, val) =>
+            TableAsForm.defaultCheckCorrectness({ key, val, rows })
+          }
           formSchema={formSchema}
           rows={rows}
         />

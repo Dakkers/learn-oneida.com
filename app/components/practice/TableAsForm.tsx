@@ -15,6 +15,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnyZodObject, z } from "zod";
+import {
+  sanitizeIrregularCharacters,
+  standardizeCharacters,
+} from "~/utils/words";
 
 type FormRow = Record<string, unknown> & {
   en: string;
@@ -130,3 +134,25 @@ export function TableAsForm({
     </Form>
   );
 }
+
+TableAsForm.defaultCheckCorrectness = function defaultCheckCorrectness({
+  key,
+  rows,
+  val,
+}: {
+  difficulty?: "easy" | "medium" | "hard";
+  key: string;
+  rows: FormRow[];
+  val: string;
+}) {
+  const obj = rows.find((r) => r.key === key);
+  if (obj) {
+    if (
+      !val ||
+      sanitizeIrregularCharacters(standardizeCharacters(val)) !==
+        sanitizeIrregularCharacters(obj.on)
+    ) {
+      return `Answer: ${obj.on}`;
+    }
+  }
+};
