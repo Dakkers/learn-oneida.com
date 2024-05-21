@@ -22,7 +22,7 @@ import { MenuIcon } from "lucide-react";
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
 
-const moduleNumbers = new Array(5).fill(0).map((_, i) => (i + 1).toString());
+const moduleNumbers = new Array(6).fill(0).map((_, i) => (i + 1).toString());
 
 const toolsItems: { title: string; href: string; description: string }[] = [
   {
@@ -44,7 +44,7 @@ const toolsItems: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div>
+    <div className="print:hidden">
       <div className="sm:hidden">
         <NavbarMobile />
       </div>
@@ -58,10 +58,31 @@ export function Navbar() {
 function NavbarMobile() {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  return (
-    <Flex align="center" justify="between" p={2}>
-      <Text variant="titleS">Learn Oneida</Text>
+  const items = [
+    {
+      href: "/learn",
+      text: "Learn",
+    },
+    {
+      href: "/about",
+      text: "About",
+    },
+    {
+      href: "/articles",
+      text: "Articles",
+    },
+    {
+      href: "/practice",
+      text: "Practice",
+    },
+    {
+      href: "/tools",
+      text: "Tools",
+    },
+  ];
 
+  return (
+    <Flex align="center" justify="end" p={2}>
       <Drawer open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger>
           <MenuIcon />
@@ -70,54 +91,16 @@ function NavbarMobile() {
           <Flex justify="center">
             <NavigationMenu>
               <NavigationMenuList className="flex-col">
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/"
-                  >
-                    Home
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/learn"
-                  >
-                    Curriculum
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/about"
-                  >
-                    About
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/articles"
-                  >
-                    Articles
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/practice"
-                  >
-                    Practice
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    href="/tools"
-                  >
-                    Tools
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
+                {items.map((item, i) => (
+                  <NavigationMenuItem key={i}>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle(true)}
+                      href={item.href}
+                    >
+                      {item.text}
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                ))}
               </NavigationMenuList>
             </NavigationMenu>
           </Flex>
@@ -129,14 +112,8 @@ function NavbarMobile() {
 
 function NavbarDesktop() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="bg-gray-100">
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-            Home
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
         <NavigationMenuItem>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
@@ -147,7 +124,7 @@ function NavbarDesktop() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Curriculum</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Learn</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex flex-col w-[240px] gap-3 p-4 ">
               {moduleNumbers.map((num) => (
@@ -211,7 +188,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           to={props.href}
           {...props}

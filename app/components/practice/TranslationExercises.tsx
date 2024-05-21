@@ -7,19 +7,19 @@ import { SectionHeading } from "../SectionHeading";
 
 const oneidaToEnglishModule01 = [
   ["1", "Né· lokstʌ́ha lanú·wehseʔ oní né· khaleʔ akokstʌ́ha yenú·wehse̲ʔ"],
-  ["2", "Yah kʌ tesanúhteʔ oh náhte yutátyats né· thikʌ́ yeksá·"],
+  ["2", "Yah kʌ́ tesanúhteʔ oh náhte yutátyats né· thikʌ́ yeksá·"],
   ["3", "Kutikwekú kutiksaʔshúha luwanú·wehseʔ né· laulhá·"],
-  ["4", "Kwítel kʌ luwa·yáts thikʌ́ laksá·"],
+  ["4", "Kwítel kʌ́ luwa·yáts thikʌ́ laksá·"],
   ["5", "Sʌ́haʔ yakninú·wehseʔ ne thí·kʌ̲"],
   ["6", "Yah tehonúhteʔ tsiʔ náhteʔ luwati·yáts thikʌ́ latiksaʔshúha̲ʔ"],
   ["7", "Yah ki só·tsiʔ tehinú·wehseʔ Wílo"],
   ["8", "Akwekú shakonú·wehseʔ ne thikʌ́ lokstʌ́ha,nok tsiʔ yah neʔn Wá·li"],
-  ["9", "Sanúhteʔ kʌ úhkaʔ náhteʔ yenú·wehseʔ kaʔí·kʌ"],
-  ["10", "Sʌ́haʔ snú·wehseʔ kaʔikʌ́ tsiʔ ni·yóht thikʌ́, wahi"],
-  ["11", "Yah kʌ tehninú·wehse̲ʔ (tehniyáhse)"],
+  ["9", "Sanúhteʔ kʌ́ úhkaʔ náhteʔ yenú·wehseʔ kaʔí·kʌ̲"],
+  ["10", "Sʌ́haʔ snú·wehseʔ kaʔi·kʌ́· tsiʔ ni·yóht thikʌ́, wáhi̲"],
+  ["11", "Yah kʌ́ tehninú·wehse̲ʔ (tehniyáhse)"],
   ["12", "Wakanúhteʔ tsiʔ shukwanú·wehseʔ thikʌ́ lokstʌ́ha̲"],
   ["13", "Kunú·wehseʔ niʔisé·, kwah né·n tsiʔ niyot niʔisé· sknú·wehse̲ʔ"],
-  ["14", "Tokʌ́skeʔ kʌ tsiʔ lonúhteʔ oh náhteʔ yúkyats"],
+  ["14", "Tokʌ́skeʔ kʌ́ tsiʔ lonúhteʔ oh náhteʔ yúkyats"],
   ["15", "Wé·ne tsiʔ yah tehinú·wehseʔ thikʌ́ lú·kwe̲"],
 ];
 
@@ -42,29 +42,32 @@ const englishToOneidaModule01 = [
 ];
 
 const oneidaToEnglishModule02 = [
-  ["1", "Akwekú neʔn teyakwatahnu·teleʔ yesanú·wehse"],
-  ["2", "Lawʌheyú kʌ neʔn Wílo lohsótha"],
-  ["3", "Sheyʌtelí kʌ úhkaʔ ok náhteʔ neʔn lutátnuhkweʔ Tu·wís"],
-  ["4", "Shekú kʌ tehnúnheʔ yesayoʔokúha"],
-  ["5", "Yah úhkaʔ teʔkheyʌtelí thikʌ lutátnuhkweʔ Tshyalé"],
-  ["6", "Íhsi kʌ nú· né· oyé·li naʔtehaohsliyá·ku né· etsheʔkʌ ha"],
-  ["7", "Yah tehyatátnuhkweʔ Tu·wís kháleʔ tsyalá·seʔ nok tsiʔ teshyatyelʌ"],
-  ["8", "Smith kʌ tehnihsʌná·sleʔ né· Tshyalé luwayoʔokuha"],
-  ["9", "Náhteʔ ok kʌ sanuhte né· liʔkʌ ha laolihwá·ke"],
-  ["10", "Tó· sʌ haʔ kʌʔnitho·yʌ ·ha né· Kwítel tsiʔ ni·yót niʔisé·"],
-  ["11", "Latikwekú kaló nʌ né· oyé·li naʔtehonohsliyá·ku neʔn luwatiyʌʔokúha"],
-  ["12", "Sʌ haʔ kʌ kʌʔnitisayʌ ha tsiʔ ni·yót swatʌloʔshúha"],
-  ["13", "Yah úhkaʔ náhteʔ teyuknú·wehseʔ né· yaʔníha laohwa·tsíleʔ"],
-  ["14", "Tákʌʔ ʌshehlo·lí· yukeʔkʌ ha tsiʔ yakawʌheyú né· yonatʌ·ló·"],
+  ["1", "Akwekú neʔn teyakwatahnu·teleʔ yesanú·wehse̲ʔ"],
+  ["2", "Lawʌheyú kʌ́ neʔn Wílo lohsótha̲"],
+  ["3", "Sheyʌtelí kʌ́ úhkaʔ ok náhteʔ neʔn lutátnuhkweʔ Tu·wís"],
+  ["4", "Shekú kʌ́ tehnúnheʔ yesayoʔokúha̲"],
+  ["5", "Yah úhkaʔ teʔkheyʌtelí thikʌ́ lutátnuhkweʔ Tshyalé"],
+  ["6", "Íhsi kʌ́ nú· né· oyé·li naʔtehaohsliyá·ku né· etsheʔkʌha̲"],
+  ["7", "Yah tehyatátnuhkweʔ Tu·wís kháleʔ tsyalá·seʔ nok tsiʔ teshyatyelʌ́"],
+  ["8", "Smith kʌ́ tehnihsʌná·sleʔ né· Tshyalé luwayoʔokuha̲"],
+  ["9", "Náhteʔ ok kʌ́ sanuhte né· liʔkʌ́ha laolihwá·ke̲"],
+  ["10", "Tó· sʌ́haʔ kʌʔnithoyʌ·ha né· Kwítel tsiʔ ni·yót niʔisé͟·"],
+  [
+    "11",
+    "Latikwekú kaló nʌʔ né· oyé·li naʔtehonohsliyá·ku neʔn luwatiyʌʔokúha̲",
+  ],
+  ["12", "Sʌ́haʔ kʌ́ kʌʔnitisayʌ́ha tsiʔ ni·yót swatʌloʔshúha̲"],
+  ["13", "Yah úhkaʔ náhteʔ teyuknú·wehseʔ né· yaʔníha laohwa·tsíle̲ʔ"],
+  ["14", "Tákʌʔ ʌshehlo·lí· yukeʔkʌha tsiʔ yakawʌheyú né· yonatʌ·ló͟·"],
   ["15", "Yah thaʔtetsitsyatyelʌ né· tsyalá·seʔ Kwítel"],
-  ["16", "Shekú kʌ tehnúnheʔ né· Tá·wet luwayʌ ha"],
-  ["17", "Akwekú luwá·nuwehseʔ thikʌ lokstʌ ha"],
+  ["16", "Shekú kʌ́ tehnúnheʔ né· Tá·wet luwayʌ́ha̲"],
+  ["17", "Akwekú luwá·nuwehseʔ thikʌ́ lokstʌ́ha̲"],
   ["18", "Yah thaʔteyakyatatyʌtelí né· tsyalá·seʔ Wílo"],
   [
     "19",
-    "To niyohslaké sʌ haʔ kʌʔnitho·yʌ · neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha",
+    "To niyohslaké sʌ́haʔ kʌʔnitho·yʌ · neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha",
   ],
-  ["20", "Akwekú kʌ shakoyʌtelí neʔn sheyatleʔokúha"],
+  ["20", "Akwekú kʌ́ shakoyʌtelí neʔn sheyatleʔokúha"],
 ];
 
 const englishToOneidaModule02 = [
@@ -95,7 +98,7 @@ const oneidaToEnglishModule03 = [
   ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwaʔ"],
   ["3", "Yah só·tsiʔ tehlukweʔtiyó né·n etshuhwatʌ́ha̲"],
   ["4", "Úhkaʔ náhteʔ sninyakú"],
-  ["5", "Tekniyáhse kʌ yakokhsá·tayʌʔ né· shekhstʌ́ha yutateʔkʌ́ha̲"],
+  ["5", "Tekniyáhse kʌ́ yakokhsá·tayʌʔ né· shekhstʌ́ha yutateʔkʌ́ha̲"],
   ["6", "Né· kʌ́ thikʌ́ lanikʌhtlúha né·n Wá·li akonikʌhtlú·tsliʔ"],
   ["7", "Tó· náheʔ onʌ tshaʔtehonatekháhsyu né·n Só·s luwayʌ́ha̲"],
   ["8", "Yáh thaʔtehyatatnú·wehseʔ nok tsiʔ shekú ihnehse"],
@@ -111,7 +114,7 @@ const oneidaToEnglishModule03 = [
   ["15", "Sʌ́haʔ wahu·níseʔ yuknináskwayʌʔ tsiʔ ni·yót yuknikhsá·tayʌʔ"],
   ["16", "E·so kʌ́ hyanolúkhwaʔ né· etshekstʌ́há"],
   ["17", "Akwekú luwatinú·wehseʔ né· lotinyáhtʌ"],
-  ["18", "Akwekú lotikhsá·tayʌʔ né· ukwatʌló·shuha, yáh niʔisé·"],
+  ["18", "Akwekú lotikhsá·tayʌʔ né· ukwatʌló·shuha, yáh niʔisé͟·"],
 ];
 
 const englishToOneidaModule03 = [
@@ -180,8 +183,42 @@ const englishToOneidaModule05 = [
     "He used to have the same kind of body as Brad Pitt when he was young.",
   ],
 ];
+const oneidaToEnglishModule06 = [
+  ["1", "Yáh teʔwakekhuní nuʔú·waʔ, yáh náhteʔ teʔkatyélhaʔ"],
+  ["2", "Tá·t akenho·tú·, ʌhsatatewyʌnʌ·táneʔ kʌ́"],
+  ["3", "Yáh thayuníʔtayʌʔ tá·t ʌhatló·lokeʔ"],
+  ["4", "Waʔtkatohtálhoʔ né· tshahutyaʔtóhaleʔ"],
+  ["5", "Wahʌ́·luʔ kʌ́ tʌhya·túteʔ"],
+  ["6", "Waʔakyatslu·ní· né· ayukniyóʔtʌʔ átsteʔ"],
+  ["7", "Yáh tehakhlolí kanke tshihoyo·té̲·"],
+  ["8", "Wahshakotiyaʔtakénhaʔ akutinhotu·kó"],
+  ["9", "Waʔakwatkáhthoʔ né· shakoyoʔokúha tsiʔ nahútyele"],
+  ["10", "Yáh tehuwayaʔtakénhʌ latatlihunyʌ·níheʔ"],
+  ["11", "Thó naʔa·wʌ́neʔ tshiyokʌno·lʌ́"],
+  ["12", "Yáh tehonatahséhtu tshahʌníhstyá·keʔ"],
+  ["13", "Ahotinóhaleʔ kaló· tsiʔ niyo·lé nʌ· tshaʔokʌ·nóleʔ"],
+  ["14", "Satahúhsatat tsiʔ náhteʔ yu·tú·"],
+  ["15", "Knú·wehseʔ kʌs katló·loks tsiʔ wataʔklókwas"],
+];
+const englishToOneidaModule06 = [
+  ["1", "We (you and I) should wake up and get ready before noon."],
+  ["2", "Do you ever get tired of taking a bath?"],
+  ["3", "He says that she didn’t begin it."],
+  ["4", "They (females) won’t say when they studied."],
+  ["5", "It has snowed every day but it won’t happen tomorrow."],
+  ["6", "We (they & I) got tired but we didn’t sleep."],
+  ["7", "They can’t help you now, they’re taking a break."],
+  ["8", "She can’t cook now because she’s not up."],
+  ["9", "Why didn’t you open the door? Weren’t you dressed?"],
+  ["10", "They didn’t do anything when they (Ms) woke up."],
+  ["11", "You didn’t ask me, you just told me."],
+  ["12", "The dog won’t eat when it rains."],
+  ["13", "Listen you two, I want you to get up right now."],
+  ["14", "We (all of you and I) should take a break when we get tired."],
+  ["15", "I would have tidied up, but I was too tired."],
+];
 
-type Group = "module01" | "module02" | "module03" | "module05";
+type Group = "module01" | "module02" | "module03" | "module05" | "module06";
 
 function TranslationExerciseTable({
   data,
@@ -220,6 +257,8 @@ export function TranslationExercises({ group }: { group?: Group }) {
         ...englishToOneidaModule03,
         ...oneidaToEnglishModule05,
         ...englishToOneidaModule05,
+        ...oneidaToEnglishModule06,
+        ...englishToOneidaModule06,
       ].map((value, index) => [(index + 1).toString(), value[1]]);
     }
     const mapping: Record<Group, string[][]> = {
@@ -227,6 +266,7 @@ export function TranslationExercises({ group }: { group?: Group }) {
       module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
       module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
       module05: [...oneidaToEnglishModule05, ...englishToOneidaModule05],
+      module06: [...oneidaToEnglishModule06, ...englishToOneidaModule06],
     };
     return mapping[group];
   }, [group]);

@@ -59,7 +59,8 @@
   },
   "soni": {
     "default": ["yukn"],
-    "c": ["yukni"]
+    "c": ["yukni"],
+    "a": ["yuky"]
   },
   "u2": {
     "default": ["sn"],
@@ -69,7 +70,6 @@
   "2m": {
     "default": ["lon"],
     "c": ["loti"],
-    "a": ["lu"],
     "i": ["lot"]
   },
   "2f": {
@@ -113,11 +113,13 @@
   "ms": {
     "default": ["lon"],
     "c": ["loti"],
-    "i": ["lot"]
+    "i": ["lot"],
+    "a": ["lon"]
   },
   "fs": {
     "default": ["yon"],
     "c": ["yoti"],
-    "i": ["yot"]
+    "i": ["yot"],
+    "a": ["yon"]
   }
 }

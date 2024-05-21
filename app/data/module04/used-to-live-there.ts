@@ -5,54 +5,53 @@ export default createParadigmData(
   {
     translation: "{{pronoun}} used to live there",
     type: "PR",
-    suffix: "hkwe",
     phrases: [
       {
-        breakdown: ["te", ["k"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["te", "CIS"], ["k"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["te", ["hs"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["te", "CIS"], ["hs"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["ha"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["t", "CIS"], ["ha"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["yé"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["t", "CIS"], ["yé"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["ka"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["t", "CIS"], ["ka"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["tni"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["ti", "CIS"], ["tni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["yakni"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["t", "CIS"], ["yakni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["sni"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["ti", "CIS"], ["sni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["hni"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["t", "CIS"], ["hni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["kni"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["t", "CIS"], ["kni"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["twa"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["ti", "CIS"], ["twa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["yakwa"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["t", "CIS"], ["yakwa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["ti", ["swa"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["ti", "CIS"], ["swa"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["hati"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["t", "CIS"], ["hati"], "nákle", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["t", ["kuti"], "nákleʔ", ["e", "EP"]],
+        breakdown: [["t", "CIS"], ["kuti"], "nákle", ["hkweʔ", "PAST"]],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

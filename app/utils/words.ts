@@ -7,19 +7,32 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
   }
 
   const vowels = ["a", "e", "i", "o", "u", "ʌ"];
+  const vowelsAccented = ["á", "é", "í", "ó", "ú", "ʌ́"];
   const vowelsWhispered = ["a̲", "e̲", "i̲", "o̲", "u̲", "ʌ̲"];
+  const vowelsWhisperedAccented = ["á̲", "é̲", "í̲", "ó̲", "ú̲", "ʌ̲̲́"];
   const reversedIndex = word
     .split("")
     .reverse()
-    .findIndex((char) => vowels.includes(char) || char === WHISPER_CHAR);
+    .findIndex(
+      (char) =>
+        vowels.includes(char) ||
+        vowelsAccented.includes(char) ||
+        char === WHISPER_CHAR,
+    );
   const index = word.length - reversedIndex - 1;
   const char = word.charAt(index);
 
   if (shouldWhisper) {
-    if (vowelsWhispered.includes(char)) {
+    if (
+      vowelsWhispered.includes(char) ||
+      vowelsWhisperedAccented.includes(char)
+    ) {
       return word;
     }
-    const lookupIndex = vowels.indexOf(char);
+    const lookupIndex = Math.max(
+      vowels.indexOf(char),
+      vowelsAccented.indexOf(char),
+    );
     const result = word.split("");
     result[index] = vowelsWhispered[lookupIndex];
     return result.join("");
@@ -53,23 +66,36 @@ export function removeWhisper(value: string) {
     .replaceAll("ˍ", "");
 }
 
-export function removeGlottalStop(value: string) {
-  return value
-    .replaceAll("ʔ", "")
-    .replaceAll("ʼ", "") // U+02bc
-    .replaceAll("'", "")
-    .replaceAll("’", ""); // U+2019
-}
-
 export function removeLongStress(value: string) {
   return value.replaceAll("·", "").replaceAll(":", "");
 }
 
 export function sanitizeIrregularCharacters(value: string) {
-  return [
-    removeAccents,
-    removeWhisper,
-    removeGlottalStop,
-    removeLongStress,
-  ].reduce((result, fn) => fn(result), value.toLowerCase());
+  return [removeAccents, removeWhisper, removeLongStress].reduce(
+    (result, fn) => fn(result),
+    value.toLowerCase(),
+  );
+}
+
+function replaceForCaret(value: string) {
+  let result = value;
+  for (const char of ["v", "^"]) {
+    result = result.replaceAll(char, "ʌ");
+  }
+  return result;
+}
+
+function replaceForGlottal(value: string) {
+  let result = value;
+  for (const char of ["ʼ", "'", "’"]) {
+    result = result.replaceAll(char, "ʔ");
+  }
+  return result;
+}
+
+export function standardizeCharacters(value: string) {
+  return [replaceForCaret, replaceForGlottal].reduce(
+    (result, fn) => fn(result),
+    value.toLowerCase(),
+  );
 }

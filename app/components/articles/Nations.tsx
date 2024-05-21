@@ -108,7 +108,7 @@ const dataNations = createParadigmData(
     translation: "{{pronoun}} {{refVerb}} an Oneida",
     type: "PB",
   },
-  allowedPronouns
+  allowedPronouns,
 );
 
 export function NationsArticle({ level = 1 }: ArticleProps) {

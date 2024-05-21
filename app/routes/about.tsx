@@ -3,6 +3,7 @@ import { Heading } from "@/design/components/heading";
 import { List } from "@/design/components/list";
 import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";
+import { SectionHeading } from "~/components/SectionHeading";
 
 export const meta: MetaFunction = () => {
   return [
@@ -14,15 +15,13 @@ export const meta: MetaFunction = () => {
 export default function About() {
   return (
     <Flex direction="column" gap={4}>
-      <Heading level={1} variant="headlineL">
-        About Learn-Oneida
-      </Heading>
+      <SectionHeading level={1}>About Learn-Oneida</SectionHeading>
 
       <Text>
-        Learn-Oneida was created from Fanshawe College's Oneida Language
-        Immersion, Culture and Teaching Program Curriculum. It was originally
-        adapted from the Twatati Program, designed by and delivered in the
-        Oneida community.
+        Learn-Oneida was created from Fanshawe College&lsquo;s Oneida Language
+        Immersion, Culture and Teaching Program curriculum. The curriculum,
+        which was worked on by the Twatati Program based on Oneida Nation, is
+        actually an adaptation of the Onkwawenna Kentyokwah program.
       </Text>
 
       <Text>
@@ -30,9 +29,7 @@ export default function About() {
         maintained with community input in mind.
       </Text>
 
-      <Heading level={1} variant="headlineS">
-        Land Acknowledgement
-      </Heading>
+      <SectionHeading level={2}>Land Acknowledgement</SectionHeading>
 
       <Text>
         Anowal Software acknowledges that we live and work on Turtle Island
@@ -41,27 +38,46 @@ export default function About() {
         by Anishinabe, Haudenosaunee, Attiwonderonk (Neutral) peoples.
       </Text>
 
-      <Heading level={1} variant="headlineS">
-        Team
-      </Heading>
+      <SectionHeading level={2}>Team</SectionHeading>
 
       <List>
-        <List.Item>Dakota St. Laurent - Lead Developer</List.Item>
-        <List.Item>Belle Pensamiento - Product Manager and Developer</List.Item>
+        <List.Item>Dakota St. Laurent - Founder and Lead Developer</List.Item>
+        <List.Item>
+          Belle Pensamiento - Ethics Consultant and Developer
+        </List.Item>
       </List>
 
-      <Heading level={1} variant="headlineS">
-        Contact Us
-      </Heading>
+      <SectionHeading level={2}>Join our mailing list</SectionHeading>
 
       <Text>
-        Questions? Comments? Want to see more features? &nbsp;
+        To join our mailing list, click{" "}
         <a
           className="underline text-blue-600"
-          href="mailto:belle@pensamiento.ca"
+          href="https://cdn.forms-content-1.sg-form.com/a00ff373-143f-11ef-ae17-feb76e8a007c"
         >
-          Email us!
+          here
         </a>
+        .
+      </Text>
+
+      <SectionHeading level={2}>Contact us</SectionHeading>
+
+      <Text>
+        Questions? Found some Typos? Want to see more features? Email &nbsp;
+        <a
+          className="underline text-blue-600"
+          href="mailto:belle@anowal-software.com"
+        >
+          Belle
+        </a>{" "}
+        or{" "}
+        <a
+          className="underline text-blue-600"
+          href="mailto:dakota@anowal-software.com"
+        >
+          Dakota
+        </a>
+        !
       </Text>
     </Flex>
   );

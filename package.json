@@ -5,12 +5,15 @@
   "type": "module",
   "scripts": {
     "build": "remix build",
+    "ci:format": "prettier ./app ./@ --check",
     "dev": "remix dev --manual -c \"npm run start\"",
+    "format:write": "prettier ./app ./@ --write",
     "gen": "plop --plopfile ./scripts/generate.cjs",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "pages:deploy": "npm run build && wrangler pages deploy ./public",
+    "prepare": "husky install",
     "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
-    "typecheck": "tsc",
-    "pages:deploy": "npm run build && wrangler pages deploy ./public"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -41,6 +44,7 @@
     "seedrandom": "^3.0.5",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
+    "ts-pattern": "^5.1.1",
     "usehooks-ts": "^3.0.2",
     "vaul": "^0.9.0",
     "zod": "^3.22.4"
@@ -60,12 +64,18 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "plop": "^4.0.1",
+    "prettier": "^3.2.5",
     "tsx": "^4.7.0",
-    "typescript": "^5.1.0",
+    "typescript": "^5.4.5",
     "wrangler": "^3.8.0"
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,css,md}": "npm run format:write"
   }
 }

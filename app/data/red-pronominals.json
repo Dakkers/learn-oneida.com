@@ -97,7 +97,8 @@
   },
   "u2": {
     "default": ["sn"],
-    "c": ["sni"]
+    "c": ["sni"],
+    "a": ["tsy"]
   },
   "2m": {
     "default": [
@@ -106,7 +107,12 @@
         "breakdown": [{ "text": "h", "type": "RPL" }, "n"]
       }
     ],
-    "c": ["hni"],
+    "c": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "ni"]
+      }
+    ],
     "a": [
       {
         "excp": "2",

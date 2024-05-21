@@ -142,14 +142,14 @@ const mapper = ([left, right]: BreakdownArray[], i: number) => {
     i === 0
       ? "i"
       : i === 1
-      ? "u"
-      : i === 2
-      ? "m"
-      : i === 3
-      ? "f"
-      : i === 4
-      ? "ms"
-      : undefined;
+        ? "u"
+        : i === 2
+          ? "m"
+          : i === 3
+            ? "f"
+            : i === 4
+              ? "ms"
+              : undefined;
   return {
     breakdown: left,
     breakdownPast: right,

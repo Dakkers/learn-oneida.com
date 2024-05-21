@@ -7,51 +7,141 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["uta", "IFUT"], ["k"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["k"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["hs"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["hs"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["ha"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["ha"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["yé"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["yé"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["ka"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["ka"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["ute", "IFUT"], ["tni"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["e", "IFUT"],
+          ["tni"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["yakni"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["yakni"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["ute", "IFUT"], ["sni"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["e", "IFUT"],
+          ["sni"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["hni"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["hni"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["kni"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["kni"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["ute", "IFUT"], ["twa"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["e", "IFUT"],
+          ["twa"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["yakwa"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["yakwa"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["ute", "IFUT"], ["swa"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["e", "IFUT"],
+          ["swa"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["hati"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["hati"],
+          "náklekeʔ",
+        ],
       },
       {
-        breakdown: [["uta", "IFUT"], ["kuti"], "náklekeʔ"],
+        breakdown: [
+          ["u", "IFUT"],
+          ["t", "CIS"],
+          ["a", "IFUT"],
+          ["kuti"],
+          "náklekeʔ",
+        ],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

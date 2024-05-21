@@ -5,54 +5,53 @@ export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerbPastAlt}} there",
     type: "PR",
-    suffix: "kwe",
     phrases: [
       {
-        breakdown: ["thó ye·", ["k"], "é·s"],
+        breakdown: ["thó ye·", ["k"], "é·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó yé", ["hs"], "ehs"],
+        breakdown: ["thó yé", ["hs"], "ehs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó yé·", ["l"], "ehs"],
+        breakdown: ["thó yé·", ["l"], "ehs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó ye·", ["y"], "ʌ́·s"],
+        breakdown: ["thó ye·", ["y"], "ʌ́·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó ye·", ["w"], "é·s"],
+        breakdown: ["thó ye·", ["w"], "é·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó yé", ["tn"], "eʔs"],
+        breakdown: ["thó yé", ["tn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó ye", ["yákn"], "eʔs"],
+        breakdown: ["thó ye", ["yákn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó yé", ["sn"], "eʔs"],
+        breakdown: ["thó yé", ["sn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó yé·", ["n"], "eʔs"],
+        breakdown: ["thó yé·", ["n"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó yé", ["kn"], "eʔs"],
+        breakdown: ["thó yé", ["kn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó yé", ["tw"], "eʔs"],
+        breakdown: ["thó yé", ["tw"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó ye", ["yákw"], "eʔs"],
+        breakdown: ["thó ye", ["yákw"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó yé", ["sw"], "ehs"],
+        breakdown: ["thó yé", ["sw"], "ehs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó ye", ["hʌ·n"], "é·s"],
+        breakdown: ["thó ye", ["hʌ·n"], "é·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["thó ye", ["ku·n"], "é·s"],
+        breakdown: ["thó ye", ["ku·n"], "é·s", ["kweʔ", "PAST"]],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

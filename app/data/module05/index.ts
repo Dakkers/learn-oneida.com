@@ -16,6 +16,7 @@ type TenseEntry =
     };
 
 export type TenseDatum = {
+  key: string;
   dict: number | (string | number)[];
   stem: string;
   root: string[] | string;
@@ -30,6 +31,7 @@ export type TenseDatum = {
 
 export const characterTenseData: TenseDatum[] = [
   {
+    key: "goodPerson",
     dict: [754],
     stem: "U stem",
     root: ["-ukweʔtiyo-"],
@@ -45,6 +47,7 @@ export const characterTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "famous",
     dict: [402],
     stem: "C stem",
     root: ["-hsʌn- -owan(ʌ)-"],
@@ -56,6 +59,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "be famous, well-known",
   },
   {
+    key: "funny",
     dict: [670],
     stem: "C stem with epenthetic E",
     root: ["-stelist-"],
@@ -67,6 +71,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "be funny, amusing",
   },
   {
+    key: "lazy",
     dict: [59],
     stem: "C stem",
     root: ["-nolu- -ʔse-"],
@@ -78,6 +83,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "be lazy, tired of",
   },
   {
+    key: "cross",
     dict: [537],
     stem: "C stem",
     root: ["-liʔwaksʌʔ-"],
@@ -89,10 +95,10 @@ export const characterTenseData: TenseDatum[] = [
     en: "be cross, bad-tempered",
   },
   {
+    key: "busy",
     dict: [777, 925],
     stem: 'C stem with epenthetic E and "te" prefix',
     root: [".wyʌnhalaʔ-", "-wyenhalaʔ-"],
-    // TODO: also has tewakeyenhalá·u for present
     present: ["te", "wak", "e", "wyʌnhalá·u"],
     past: ["te", "wak", "e", "wyʌnhalaʔ", "ú·ne·"],
     fut: ["t", "ʌ", "wak", "e", "wyʌnhalaʔú", "hakeʔ"],
@@ -101,6 +107,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "be busy",
   },
   {
+    key: "lucky",
     dict: [229, 1088],
     stem: "A stem",
     root: ["-atlaʔswiyo-"],
@@ -112,6 +119,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "be lucky",
   },
   {
+    key: "getReady",
     dict: [136, 1148],
     stem: "A stem",
     root: ["-atatewyʌnʌtaʔ-"],
@@ -123,6 +131,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "get oneself ready",
   },
   {
+    key: "wealthy",
     dict: [213],
     stem: "A stem",
     root: ["-atkanuni-"],
@@ -134,6 +143,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "be wealthy, prosperous, well-off",
   },
   {
+    key: "shy",
     dict: [264, 1176],
     stem: "A stem",
     root: ["-atsheyalu-"],
@@ -145,6 +155,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "be shy",
   },
   {
+    key: "unlucky",
     dict: [229, 1248],
     stem: "A stem",
     root: ["-atlaʔswaksʌʔ-"],
@@ -156,6 +167,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "be unlucky",
   },
   {
+    key: "poor",
     dict: [432],
     stem: "irregular I stem",
     root: ["-itʌht-"],
@@ -167,6 +179,7 @@ export const characterTenseData: TenseDatum[] = [
     en: "be poor",
   },
   {
+    key: "bad person",
     dict: [752],
     stem: "U stem",
     root: ["-ukweʔtaksʌ-"],
@@ -185,7 +198,8 @@ export const characterTenseData: TenseDatum[] = [
 
 export const mindTenseData: TenseDatum[] = [
   {
-    en: "to have a great mind, be intelligent",
+    key: "intelligent",
+    en: "be intelligent",
     dict: [859],
     stem: "C stem with epenthetic E",
     root: ["-ʔnikuhlowanʌ-"],
@@ -196,7 +210,8 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["s", "a", "ʔnikuhlowanʌ", "hak"],
   },
   {
-    en: "to grieve, mourn",
+    key: "grieving",
+    en: "be grieving, mourning",
     dict: [856],
     stem: "C stem with epenthetic E",
     root: ["-ʔnikuhlaksʌ-"],
@@ -207,7 +222,8 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["s", "a", "ʔnikuhláksʌ", "hak"],
   },
   {
-    en: "to be strong-willed",
+    key: "strongWilled",
+    en: "be strong-willed",
     dict: [857],
     stem: "C stem with epenthetic E",
     root: ["-ʔnikuhlatshahniht-"],
@@ -218,6 +234,7 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["s", "a", "ʔnikuhlatshanítu", "hak"],
   },
   {
+    key: "satisfied",
     en: "be satisfied, content, pleased",
     dict: [858],
     stem: 'C stem with epenthetic E and "t" prefix',
@@ -229,7 +246,8 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["ti", "sa", "ʔnikuhliyó", "hak"],
   },
   {
-    en: "to bother",
+    key: "worried",
+    en: "be worried, bothered",
     dict: [859, 860],
     stem: 'C stem with epenthetic E with "te" prefix',
     root: [".ʔnikulhal-"],
@@ -240,6 +258,7 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["teh", "sa", "ʔnikulha·l", "ák"],
   },
   {
+    key: "sad",
     en: "be sad, troubled, depressed",
     dict: [319],
     stem: 'A stem with "te" prefix',
@@ -251,6 +270,7 @@ export const mindTenseData: TenseDatum[] = [
     cmd: ["teh", "s", "aʔnikuhlyaʔkú", "hak"],
   },
   {
+    key: "crazy",
     en: "be crazy",
     dict: [100],
     stem: 'A stem with "te" prefix',
@@ -263,7 +283,8 @@ export const mindTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
-    en: "to get drunk",
+    key: "drunk",
+    en: "be drunk",
     dict: [546],
     stem: "C stem",
     root: ["-nahalahtu-"],
@@ -277,6 +298,7 @@ export const mindTenseData: TenseDatum[] = [
 
 export const emotionTenseData: TenseDatum[] = [
   {
+    key: "cry",
     en: "to cry, weep",
     dict: [120],
     stem: 'A stem with "te" prefix',
@@ -289,6 +311,7 @@ export const emotionTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "lonely",
     en: "be lonely, lonesome",
     dict: [352],
     stem: "ʌ stem",
@@ -301,6 +324,7 @@ export const emotionTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "angry",
     en: "be angry, mad",
     dict: [562, 1089],
     stem: "C stem",
@@ -312,6 +336,7 @@ export const emotionTenseData: TenseDatum[] = [
     cmd: ["s", "a", "naʔkhwʌʔú", "hak"],
   },
   {
+    key: "amazed",
     en: "be amazed, awestruck, surprised",
     dict: [574],
     stem: "C stem",
@@ -323,7 +348,8 @@ export const emotionTenseData: TenseDatum[] = [
     cmd: ["s", "a", "nehlakwá·s", "hek"],
   },
   {
-    en: "be resentful, dissatisfied, annoying",
+    key: "resentful",
+    en: "be resentful, dissatisfied, annoyed",
     dict: [663, 1151],
     stem: "C stem with epenthetic E",
     root: ["-shwaʔtani-"],
@@ -334,6 +360,7 @@ export const emotionTenseData: TenseDatum[] = [
     cmd: ["s", "a", "shwaʔtaní", "hak"],
   },
   {
+    key: "scaredyCat",
     en: "be a scaredy cat",
     dict: [82, 1164],
     stem: "A stem",
@@ -345,6 +372,7 @@ export const emotionTenseData: TenseDatum[] = [
     cmd: ["s", "ahtluʔní", "hak"],
   },
   {
+    key: "jealous",
     en: "be jealous",
     dict: [186, 1058],
     stem: "A stem",
@@ -356,6 +384,7 @@ export const emotionTenseData: TenseDatum[] = [
     cmd: ["s", "atʌʔkewh", "y", "ʌ́", "hak"],
   },
   {
+    key: "happy",
     en: "be happy",
     dict: [260, 1033],
     stem: "A stem",
@@ -367,6 +396,7 @@ export const emotionTenseData: TenseDatum[] = [
     cmd: ["s", "atshanuní", "hak"],
   },
   {
+    key: "overjoyed",
     en: "be overjoyed, high spirited",
     dict: [284],
     stem: "A stem",
@@ -378,7 +408,8 @@ export const emotionTenseData: TenseDatum[] = [
     cmd: ["s", "atunhá·l", "ak"],
   },
   {
-    en: "to want, need, desire",
+    key: "wanting",
+    en: "be wanting, needing, desiring",
     dict: [280, 1257],
     stem: "te- + A stem",
     root: [".atuhutsyoni-"],
@@ -389,7 +420,8 @@ export const emotionTenseData: TenseDatum[] = [
     cmd: ["te", "s", "atuhutsyuní", "hak"],
   },
   {
-    en: "to like or enjoy the taste (of something)",
+    key: "likingTheTaste",
+    en: "liking or enjoying the taste (of something)",
     dict: [333, 1224],
     stem: "E stem",
     root: ["-ekaʔ-"],
@@ -400,7 +432,8 @@ export const emotionTenseData: TenseDatum[] = [
     cmd: ["s", "e·ká·s", "hek"],
   },
   {
-    en: "to enjoy, like, take pleasure (in doing something)",
+    key: "enjoyingDoingSomething",
+    en: "be enjoying, liking, taking pleasure (in doing something)",
     dict: [761],
     stem: "U stem",
     root: ["-uʔweskwani-"],
@@ -414,6 +447,7 @@ export const emotionTenseData: TenseDatum[] = [
 
 export const bodyTenseData: TenseDatum[] = [
   {
+    key: "beTheWaySomeoneLooks",
     en: "be the way someone looks",
     dict: [803, 1061],
     stem: 'C stem with "ni" prefix',
@@ -429,6 +463,7 @@ export const bodyTenseData: TenseDatum[] = [
   // TODO - pregnant is `nel` in my version of the dictionary?
 
   // {
+  // key: 'pregnant',
   //   en: "be pregnant",
   //   dict: [609, 1132],
   //   stem: "C stem",
@@ -441,6 +476,7 @@ export const bodyTenseData: TenseDatum[] = [
   //   type: "PR",
   // },
   {
+    key: "goodLooking",
     en: "be good-looking, handsome",
     dict: [591],
     stem: "C stem",
@@ -453,6 +489,7 @@ export const bodyTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "ugly",
     en: "be ugly, homely",
     dict: [367, 1245],
     stem: "C stem",
@@ -465,6 +502,7 @@ export const bodyTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "big",
     en: "be big",
     dict: [498, 907],
     stem: "C stem",
@@ -477,7 +515,7 @@ export const bodyTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
-    // Are there epenthetic K's in this one?
+    key: "small",
     en: "be small, little",
     dict: [1186, 59],
     stem: "A Stem",
@@ -490,6 +528,7 @@ export const bodyTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "tall",
     en: "be tall",
     dict: [390, 1223],
     stem: "C stem",
@@ -502,6 +541,7 @@ export const bodyTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "short",
     en: "be short",
     dict: [390, 1175],
     stem: 'C stem with "ni" prefix',
@@ -514,6 +554,7 @@ export const bodyTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "lightSkinned",
     en: "be light-skinned",
     dict: ["382?", 424],
     stem: "C stem with epenthetic E",
@@ -526,6 +567,7 @@ export const bodyTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "darkSkinned",
     en: "be dark-skinned",
     dict: [424, 957],
     stem: 'C stem with epenthetic E and "tet" prefix',
@@ -585,6 +627,7 @@ export const bodyTenseData: TenseDatum[] = [
 
 export const physicalTenseData: TenseDatum[] = [
   {
+    key: "cold",
     en: "be cold",
     dict: [776, 940],
     stem: "C stem",
@@ -597,6 +640,7 @@ export const physicalTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "strong",
     en: "be strong",
     dict: [867, 1210],
     stem: "C stem",
@@ -609,6 +653,7 @@ export const physicalTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "hungry",
     en: "be hungry",
     dict: [280, 1049],
     stem: "A stem",
@@ -621,6 +666,7 @@ export const physicalTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "alive",
     en: "be alive",
     dict: [755, 1079],
     stem: "U stem",
@@ -633,6 +679,7 @@ export const physicalTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "be awake",
     en: "to wake up, awaken",
     dict: [806, 1254],
     stem: "C stem (with irregular root)",
@@ -656,7 +703,8 @@ export const physicalTenseData: TenseDatum[] = [
   //   cmd: ["s","ayaʔtaʔtalihʌ́", "hak"],
   // },
   {
-    en: "to be sick",
+    key: "sick",
+    en: "be sick",
     dict: [607, 1177],
     stem: "C stem",
     root: ["-nuhwakt(e)- -a- -ni-"],
@@ -667,7 +715,8 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "anuhwaktaní", "hak"],
   },
   {
-    en: "to smile",
+    key: "smiling",
+    en: "be smiling",
     dict: [818, 1188],
     stem: "C stem",
     root: ["-yeshu-"],
@@ -678,6 +727,7 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "ayeshú", "hak"],
   },
   {
+    key: "talking",
     en: "be talking",
     dict: [697, 1222],
     stem: "Irregular C stem with epenthetic E",
@@ -689,6 +739,7 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "atha·l", "ák"],
   },
   {
+    key: "thirsty",
     en: "be thirsty",
     dict: [623, 1229],
     stem: "C stem with epenthetic E",
@@ -700,7 +751,8 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "anyaʔtathʌ́h", "sek"],
   },
   {
-    en: "to expect, be ready",
+    key: "expecting",
+    en: "be expecting, be ready",
     dict: [517],
     stem: "C stem with epenthetic E",
     root: ["-lhal(e)-"],
@@ -714,6 +766,7 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "alha·l", "ák"],
   },
   {
+    key: "unwell",
     en: "be unwell, sickly",
     dict: [739],
     stem: "C stem",
@@ -725,6 +778,7 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "atsiʔyoh", "ák"],
   },
   {
+    key: "working",
     en: "be working",
     dict: [836],
     stem: "C stem",
@@ -736,6 +790,7 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "ayo·t", "ék"],
   },
   {
+    key: "sleepy",
     en: "be sleepy",
     dict: [666],
     stem: "C stem with epenthetic E",
@@ -747,6 +802,7 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "aslʌhtaláh", "sek"],
   },
   {
+    key: "exhausted",
     en: "be dead tired, weary, exhausted",
     dict: [416],
     stem: 'C stem with "te" prefix',
@@ -761,6 +817,7 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["t", "ʌ", "s", "ahwihshʌheyú", "hak"],
   },
   {
+    key: "eating",
     en: "be eating a meal",
     dict: [158],
     stem: "A stem",
@@ -772,7 +829,8 @@ export const physicalTenseData: TenseDatum[] = [
     cmd: ["s", "atekhuní"],
   },
   {
-    en: "to sleep, to go to sleep",
+    key: "sleep",
+    en: "be sleeping, be going to sleep",
     dict: [430],
     stem: "I stem",
     root: ["-itaʔ-"],
@@ -788,7 +846,8 @@ export const physicalTenseData: TenseDatum[] = [
     },
   },
   {
-    en: "to die, be dead",
+    key: "dead",
+    en: "be dead",
     dict: [423],
     stem: "Irregular I stem",
     root: ["-ihey(u)-", "-ʌhey(u)"],
@@ -804,6 +863,7 @@ export const physicalTenseData: TenseDatum[] = [
     },
   },
   {
+    key: "healthy",
     en: "be well, healthy",
     dict: [152, 1263],
     stem: "A stem",
@@ -818,6 +878,7 @@ export const physicalTenseData: TenseDatum[] = [
 
 export const miscTenseData: TenseDatum[] = [
   {
+    key: "knowAbout",
     en: "to know/recognize something",
     dict: [830],
     stem: "C stem",
@@ -830,6 +891,7 @@ export const miscTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "free",
     en: "be free, single",
     dict: [145],
     stem: "A stem",
@@ -842,6 +904,7 @@ export const miscTenseData: TenseDatum[] = [
     type: "PR",
   },
   {
+    key: "having",
     en: "to have, keep something",
     dict: [820],
     stem: "C stem",
@@ -853,6 +916,7 @@ export const miscTenseData: TenseDatum[] = [
     cmd: ["s", "ayʌ·t", "ák"],
   },
   {
+    key: "married",
     en: "be married",
     dict: [621],
     stem: "C stem with epenthetic E",
@@ -864,6 +928,7 @@ export const miscTenseData: TenseDatum[] = [
     cmd: ["s", "anyakú", "hak"],
   },
   {
+    key: "know",
     en: "to know, be aware",
     dict: [113],
     stem: "A stem",
@@ -875,6 +940,7 @@ export const miscTenseData: TenseDatum[] = [
     cmd: ["s", "anúht", "ek"],
   },
   {
+    key: "haveTime",
     en: "to have time or room",
     dict: [552],
     stem: "C stem",
@@ -886,6 +952,7 @@ export const miscTenseData: TenseDatum[] = [
     cmd: ["s", "anakto·t", "ák"],
   },
   {
+    key: "separated",
     en: "be separated, undone, unravelled",
     dict: [157],
     stem: "te- + A stem",
@@ -896,4 +963,13 @@ export const miscTenseData: TenseDatum[] = [
     ifut: ["t", "a", "yuky", "atekhahsyú", "hakeʔ"],
     cmd: ["te", "tsy", "atekhahsyú", "hak"],
   },
+];
+
+export const module5VerbsList = [
+  ...characterTenseData,
+  ...bodyTenseData,
+  ...mindTenseData,
+  ...miscTenseData,
+  ...emotionTenseData,
+  ...physicalTenseData,
 ];

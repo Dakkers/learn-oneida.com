@@ -5,54 +5,53 @@ export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerbPastAlt}} not there",
     type: "PR",
-    suffix: "kwe",
     phrases: [
       {
-        breakdown: ["yáh thó thye·", ["k"], "é·s"],
+        breakdown: ["yáh thó thye·", ["k"], "é·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé", ["hs"], "eʔs"],
+        breakdown: ["yáh thó thyé", ["hs"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé·", ["l"], "eʔs"],
+        breakdown: ["yáh thó thyé·", ["l"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thye·", ["y"], "ʌ́·s"],
+        breakdown: ["yáh thó thye·", ["y"], "ʌ́·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thye·", ["w"], "é·s"],
+        breakdown: ["yáh thó thye·", ["w"], "é·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé", ["tn"], "eʔs"],
+        breakdown: ["yáh thó thyé", ["tn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thye", ["yákn"], "eʔs"],
+        breakdown: ["yáh thó thye", ["yákn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé", ["sn"], "eʔs"],
+        breakdown: ["yáh thó thyé", ["sn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé·", ["n"], "ehse"],
+        breakdown: ["yáh thó thyé·", ["n"], "ehse", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé", ["kn"], "eʔs"],
+        breakdown: ["yáh thó thyé", ["kn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé", ["tw"], "eʔse"],
+        breakdown: ["yáh thó thyé", ["tw"], "eʔse", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thye", ["yákw"], "eʔse"],
+        breakdown: ["yáh thó thye", ["yákw"], "eʔse", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé", ["sw"], "eʔse"],
+        breakdown: ["yáh thó thyé", ["sw"], "eʔse", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thye", ["hʌ·n"], "é·s"],
+        breakdown: ["yáh thó thye", ["hʌ·n"], "é·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thye", ["ku·n"], "é·s"],
+        breakdown: ["yáh thó thye", ["ku·n"], "é·s", ["kweʔ", "PAST"]],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

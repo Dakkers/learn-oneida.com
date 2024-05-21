@@ -16,37 +16,53 @@ export const meta: MetaFunction = () => {
 
 export default function Practice() {
   const items = [
+    // {
+    //   href: "/being-somewhere",
+    //   label: "Being somewhere",
+    // },
+    // {
+    //   href: "/cardinal-directions",
+    //   label: "Cardinal Directions",
+    // },
     {
-      href: "/being-somewhere",
-      label: "Being somewhere",
+      href: "/counting-time",
+      label: "Counting time",
     },
-    {
-      href: "/cardinal-directions",
-      label: "Cardinal Directions",
-    },
-    {
-      href: "/days-of-the-week",
-      label: "Days of the week",
-    },
-    {
-      href: "/months",
-      label: "Months of the year",
-    },
+    // {
+    //   href: "/days-of-the-week",
+    //   label: "Days of the week",
+    // },
+    // {
+    //   href: "/months",
+    //   label: "Months of the year",
+    // },
     {
       href: "/places",
       label: "Places in the community",
     },
+    // {
+    //   href: "/seasons",
+    //   label: "Seasons",
+    // },
     {
-      href: "/seasons",
-      label: "Seasons",
+      href: "/active-tense-conjugation",
+      label: "Tense Conjugation (Active Verbs)",
     },
     {
-      href: "/tense-conjugation",
-      label: "Tense Conjugation",
+      href: "/active-tense-identification",
+      label: "Tense Identification (Active Verbs)",
     },
     {
-      href: "/tense-identification",
-      label: "Tense Identification",
+      href: "/stative-tense-conjugation",
+      label: "Tense Conjugation (Stative Verbs)",
+    },
+    {
+      href: "/stative-tense-identification",
+      label: "Tense Identification (Stative Verbs)",
+    },
+    {
+      href: "/verb-lists",
+      label: "Verb Lists",
     },
   ];
 

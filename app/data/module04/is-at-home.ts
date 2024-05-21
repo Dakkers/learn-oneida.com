@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["t", ["k"], "í·tluʔ"],
+        breakdown: [["t", "CIS"], ["k"], "í·tluʔ"],
       },
       {
-        breakdown: ["te", ["hs"], "í·tluʔ"],
+        breakdown: [["te", "CIS"], ["hs"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", ["hʌ́"], "·tluʔ"],
+        breakdown: [["t", "CIS"], ["hʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["t", ["yé"], "·tluʔ"],
+        breakdown: [["t", "CIS"], ["yé"], "·tluʔ"],
       },
       {
-        breakdown: ["t", ["kʌ́"], "·tluʔ"],
+        breakdown: [["t", "CIS"], ["kʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["ti", ["tn"], "í·tluʔ"],
+        breakdown: [["ti", "CIS"], ["tn"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", ["yakn"], "í·tluʔ"],
+        breakdown: [["t", "CIS"], ["yakn"], "í·tluʔ"],
       },
       {
-        breakdown: ["ti", ["sn"], "í·tluʔ"],
+        breakdown: [["ti", "CIS"], ["sn"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", ["hn"], "í·tluʔ"],
+        breakdown: [["t", "CIS"], ["hn"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", ["kn"], "í·tluʔ"],
+        breakdown: [["t", "CIS"], ["kn"], "í·tluʔ"],
       },
       {
-        breakdown: ["ti", ["twʌ́"], "·tluʔ"],
+        breakdown: [["ti", "CIS"], ["twʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["t", ["yakwʌ́"], "·tluʔ"],
+        breakdown: [["t", "CIS"], ["yakwʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["ti", ["swʌ́"], "·tluʔ"],
+        breakdown: [["ti", "CIS"], ["swʌ́"], "·tluʔ"],
       },
       {
-        breakdown: ["t", ["hat"], "í·tluʔ"],
+        breakdown: [["t", "CIS"], ["hat"], "í·tluʔ"],
       },
       {
-        breakdown: ["t", ["kut"], "í·tluʔ"],
+        breakdown: [["t", "CIS"], ["kut"], "í·tluʔ"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

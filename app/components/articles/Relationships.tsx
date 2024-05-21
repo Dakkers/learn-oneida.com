@@ -123,8 +123,8 @@ function SeparatedTable({ level = 2 }: ArticleProps) {
   ].map(([pronoun, p]) => {
     return {
       pronoun,
-      breakdown: ["te", { text: p }, "atekháshyu"],
-      breakdownPast: ["te", { text: p }, "atekhashyu"],
+      breakdown: [["te", "DUAL"], { text: p }, "atekháshyu"],
+      breakdownPast: [["te", "DUAL"], { text: p }, "atekhashyu"],
     };
   });
 

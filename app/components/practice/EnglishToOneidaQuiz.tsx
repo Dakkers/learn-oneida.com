@@ -162,11 +162,11 @@ export function useEnglishToOneidaQuestions({
       context.languageSetting === "both"
         ? englishOptions.length + oneidaOptions.length
         : context.languageSetting === "en"
-        ? englishOptions.length
-        : oneidaOptions.length;
+          ? englishOptions.length
+          : oneidaOptions.length;
 
     const result: typeof questions = new Array(
-      Math.min(Number(context.questionCountSetting), numOptions)
+      Math.min(Number(context.questionCountSetting), numOptions),
     );
     for (let i = 0; i < result.length; i++) {
       const langKey = determineLangKey(context.languageSetting);
@@ -177,11 +177,11 @@ export function useEnglishToOneidaQuestions({
         _.sample(
           list.filter(
             (datum) =>
-              !result.find((existingEntry) => existingEntry?.key === datum.key)
-          )
+              !result.find((existingEntry) => existingEntry?.key === datum.key),
+          ),
         ) ?? list[0];
       const answerDatum = oppositeList.find(
-        (opt) => opt.key === questionDatum.key
+        (opt) => opt.key === questionDatum.key,
       );
 
       const optionsForQuestion = [];

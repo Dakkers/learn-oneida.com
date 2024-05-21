@@ -1,4 +1,3 @@
-import { Flex } from "@/design/components/flex";
 import { Notice } from "@/design/components/notice";
 import { Separator } from "@/design/primitives/separator";
 import { Text } from "@/design/components/text";
@@ -23,6 +22,7 @@ import { StressArticle } from "~/components/articles/Stress";
 import { GlottalStopArticle } from "~/components/articles/GlottalStop";
 import { LetterHArticle } from "~/components/articles/LetterH";
 import { WhisperedEndingsArticle } from "~/components/articles/WhisperedEndings";
+import { Bleed } from "@/design/components/Bleed";
 
 export const meta: MetaFunction = () => {
   return [
@@ -33,7 +33,7 @@ export const meta: MetaFunction = () => {
 
 export default function LearnModule01() {
   return (
-    <Flex direction="column" gap={4}>
+    <>
       <SectionHeading level={1}>Module 1</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
@@ -135,14 +135,16 @@ export default function LearnModule01() {
       <Text>
         A paradigm table for <Letter>yats</Letter> looks like this:
       </Text>
-      <ParadigmTable
-        allowedPronouns={[...singlePronouns, "ms", "fs"]}
-        columnVisibility={{
-          pronounEnglish: false,
-          pronounOneida: false,
-        }}
-        data={yatsJson}
-      />
+      <Bleed mx={32}>
+        <ParadigmTable
+          allowedPronouns={[...singlePronouns, "ms", "fs"]}
+          columnVisibility={{
+            pronounEnglish: false,
+            pronounOneida: false,
+          }}
+          data={yatsJson}
+        />
+      </Bleed>
       <Notice intent="primary">
         In this curriculum, the word &quot;paradigm&quot; refers to a list of
         conjugations for a given root word. When you get a grasp of the
@@ -158,16 +160,18 @@ export default function LearnModule01() {
         <Letter>anuhteʔ</Letter> and it uses blue pronominals. It means &quot;to
         know something&quot;. Here&lsquo;s the paradigm table:
       </Text>
-      <ParadigmTable
-        columnVisibility={{
-          pronounEnglish: false,
-          pronounOneida: false,
-        }}
-        data={anuhteJson}
-        translationFn={({ pronoun }) => ({
-          verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
-        })}
-      />
+      <Bleed mx={32}>
+        <ParadigmTable
+          columnVisibility={{
+            pronounEnglish: false,
+            pronounOneida: false,
+          }}
+          data={anuhteJson}
+          translationFn={({ pronoun }) => ({
+            verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
+          })}
+        />
+      </Bleed>
 
       <SectionHeading id="particles" level={2}>
         Particles
@@ -184,7 +188,7 @@ export default function LearnModule01() {
 
       <DialogueSection />
       <TranslationExercisesSection group="module01" />
-    </Flex>
+    </>
   );
 }
 
@@ -192,10 +196,10 @@ function DialogueSection() {
   const part1: DialogueTableData = [
     [
       { one: "Úhkaʔ náhteʔ niʔí·", en: "Who am I?" },
-      { one: "Kwítel niʔisé·", en: "You are Peter." },
+      { one: "Kwítel niʔisé͟·", en: "You are Peter." },
     ],
     [
-      { one: "Úhkaʔ náhteʔ niʔisé·", en: "Who are you?" },
+      { one: "Úhkaʔ náhteʔ niʔisé͟·", en: "Who are you?" },
       { one: "Wá·li niʔí·", en: "I am Mary." },
     ],
     [
@@ -213,64 +217,64 @@ function DialogueSection() {
   ];
   const part2: DialogueTableData = [
     [
-      { one: "Tshyalé kʌ niʔí·", en: "Am I Charlie?" },
-      { one: "Λ́·, Tshyalé niʔisé·", en: "Yes. You are Charlie" },
+      { one: "Tshyalé kʌ́ niʔí·", en: "Am I Charlie?" },
+      { one: "Λ́·, Tshyalé niʔisé͟·", en: "Yes. You are Charlie" },
     ],
     [
-      { one: "Wá·li kʌ niʔisé·", en: "Are you Mary?" },
+      { one: "Wá·li kʌ́ niʔisé͟·", en: "Are you Mary?" },
       { one: "Λ́·, Wá·li niʔí·", en: "Yes. I am Mary." },
     ],
     [
-      { one: "Tá·wet kʌ neʔn laulhá·", en: "Is he David?" },
+      { one: "Tá·wet kʌ́ neʔn laulhá·", en: "Is he David?" },
       { one: "Λ́·, Tá·wet nen laulhá·", en: "Yes. He is David." },
     ],
     [
-      { one: "Klistí·n kʌ neʔn akaulhá·", en: "Is she Christine?" },
+      { one: "Klistí·n kʌ́ neʔn akaulhá·", en: "Is she Christine?" },
       { one: "Λ́·, Klistí·n neʔn akaulhá·", en: "Yes. She is Christine." },
     ],
   ];
   const part3: DialogueTableData = [
     [
-      { one: "Í· kʌ neʔn Tshyalé", en: "Am I Charlie?" },
+      { one: "Í· kʌ́ neʔn Tshyalé", en: "Am I Charlie?" },
       { one: "Λ́·, isé· né· Tshyalé", en: "Yes, you are Charlie." },
     ],
     [
-      { one: "Isé· kʌ neʔn Wá·li", en: "Are you Mary?" },
+      { one: "Isé· kʌ́ neʔn Wá·li", en: "Are you Mary?" },
       { one: "Λ́·, í· né· Wá·li", en: "Yes, I am Mary." },
     ],
     [
-      { one: "Laulhá· kʌ neʔn Tá·wet", en: "Is he David?" },
+      { one: "Laulhá· kʌ́ neʔn Tá·wet", en: "Is he David?" },
       { one: "Λ́·, laulhá· né·", en: "Yes, he is David." },
     ],
     [
-      { one: "Akaulhá· kʌ neʔn Ní·ki", en: "Is she Amelia?" },
+      { one: "Akaulhá· kʌ́ neʔn Ní·ki", en: "Is she Amelia?" },
       { one: "Λ́·, akaulhá· né· Ní·ki", en: "Yes, she is Amelia." },
     ],
   ];
   const part4: DialogueTableData = [
     [
-      { one: "Wá·li kʌ niʔí·", en: "Am I Mary?" },
+      { one: "Wá·li kʌ́ niʔí·", en: "Am I Mary?" },
       {
-        one: ["Tah", "Yah Wá·li té·kʌ nisé·", "Só·s niʔisé·"],
+        one: ["Tah", "Yah Wá·li té·kʌ nisé·", "Só·s niʔisé͟·"],
         en: "No. You're not Mary. You are Susan.",
       },
     ],
     [
-      { one: "Tshyalé kʌ niʔisé·", en: "Are you Charlie?" },
+      { one: "Tshyalé kʌ́ niʔisé͟·", en: "Are you Charlie?" },
       {
         one: ["Tah", "Yah Tshyalé té·kʌ niʔí·", "Wá·li niʔí·"],
         en: "No. I'm not Charlie. I'm Mary.",
       },
     ],
     [
-      { one: "Wílo kʌ neʔn laulhá·", en: "Is he William?" },
+      { one: "Wílo kʌ́ neʔn laulhá·", en: "Is he William?" },
       {
         one: ["Tah", "Yah Wílo té:kʌ neʔn laulhá·", "Tá·wet neʔn laulhá·"],
         en: "No. He's not William. He's David.",
       },
     ],
     [
-      { one: "Lá·kel kʌ neʔn akaulhá·", en: "Is she Rachel?" },
+      { one: "Lá·kel kʌ́ neʔn akaulhá·", en: "Is she Rachel?" },
       {
         one: ["Tah", "Yah Lá·kel té:kʌ neʔn akaulhá·", "Só·s neʔn akaulhá··"],
         en: "No. She's not Rachel. She's Susan.",
@@ -279,28 +283,28 @@ function DialogueSection() {
   ];
   const part5: DialogueTableData = [
     [
-      { one: "Í· kʌ neʔn Wá·li", en: "Am I Mary?" },
+      { one: "Í· kʌ́ neʔn Wá·li", en: "Am I Mary?" },
       {
-        one: ["Tah", "Yah Wá·li té·kʌ niʔisé·", "Só·s ni·sé·"],
+        one: ["Tah", "Yah Wá·li té·kʌ niʔisé͟·", "Só·s ni·sé·"],
         en: "No. You're not Mary. You're Susan.",
       },
     ],
     [
-      { one: "Isé· kʌ neʔn Tu·wís", en: "Are you Thomas?" },
+      { one: "Isé· kʌ́ neʔn Tu·wís", en: "Are you Thomas?" },
       {
         one: ["Tah", "Yah Tu·wís té·kʌ niʔí·", "Wílo niʔí·"],
         en: "No. I'm not Thomas. I'm William.",
       },
     ],
     [
-      { one: "Laulhá· kʌ neʔn Tshyalé", en: "Is he Charlie?" },
+      { one: "Laulhá· kʌ́ neʔn Tshyalé", en: "Is he Charlie?" },
       {
         one: ["Tah", "Yah Tshyalé té·kʌ neʔn laulhá·", "Ta·wet neʔn laulhá·"],
         en: "No. He's not Charlie. He's David.",
       },
     ],
     [
-      { one: "Akaulhá· kʌ neʔn Ní·ki", en: "Is she Amelia?" },
+      { one: "Akaulhá· kʌ́ neʔn Ní·ki", en: "Is she Amelia?" },
       {
         one: ["Tah", "Yah Ní·ki té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá·"],
         en: "No. She's not Amelia. She's Susan.",
@@ -309,8 +313,8 @@ function DialogueSection() {
   ];
   const part6: DialogueTableData = [
     [
-      { one: "Sknú·wehseʔ kʌ niʔí·", en: "Do you like me?" },
-      { one: "Λ́·, kunú·wehseʔ niʔisé·", en: "Yes, I like you." },
+      { one: "Sknú·wehseʔ kʌ́ niʔí·", en: "Do you like me?" },
+      { one: "Λ́·, kunú·wehseʔ niʔisé͟·", en: "Yes, I like you." },
     ],
     [
       null,
@@ -320,58 +324,58 @@ function DialogueSection() {
       },
     ],
     [
-      { one: "Etsnú·wehseʔ kʌ neʔn laulhá·", en: "Do you like him?" },
+      { one: "Etsnú·wehseʔ kʌ́ neʔn laulhá·", en: "Do you like him?" },
       { one: "Λ́·, linú·wehseʔ né· laulhá·", en: "Yes, I like him." },
     ],
     [
-      { one: "Etsnú·wehseʔ kʌ neʔn Wílo", en: "Do you like William?" },
+      { one: "Etsnú·wehseʔ kʌ́ neʔn Wílo", en: "Do you like William?" },
       { one: "Λ́·, linú·wehseʔ né· Wílo", en: "Yes, I like William." },
     ],
     [
-      { one: "Shenú·wehseʔ kʌ neʔn akaulhá·", en: "Do you like her?" },
+      { one: "Shenú·wehseʔ kʌ́ neʔn akaulhá·", en: "Do you like her?" },
       { one: "Λ́·, khenú·wehseʔ né· akaulhá·", en: "Yes, I like her." },
     ],
     [
-      { one: "Shenú·wehseʔ kʌ neʔn Kowaklít", en: "Do you like Margaret?" },
+      { one: "Shenú·wehseʔ kʌ́ neʔn Kowaklít", en: "Do you like Margaret?" },
       { one: "Λ́·, khenú·wehseʔ né· Kowaklít", en: "Yes, I like Margaret." },
     ],
     [
-      { one: "Shenú·wehseʔ kʌ neʔn lonulhá·", en: "Do you like them?" },
+      { one: "Shenú·wehseʔ kʌ́ neʔn lonulhá·", en: "Do you like them?" },
       { one: "Λ́·, khenú·wehseʔ né· lonulhá·", en: "Yes, I like them." },
     ],
     [
-      { one: "Shenú·wehseʔ kʌ neʔn Beatles", en: "Do you like the Beatles?" },
+      { one: "Shenú·wehseʔ kʌ́ neʔn Beatles", en: "Do you like the Beatles?" },
       { one: "Λ́·, khenú·wehseʔ né· Beatles", en: "Yes, I like the Beatles." },
     ],
   ];
   const part7: DialogueTableData = [
     [
-      { one: "I·sé· kʌ skunú·wehse̲ʔ", en: "Do you like me?" },
+      { one: "I·sé· kʌ́ sknú·wehse̲ʔ", en: "Do you like me?" },
       { one: "Λ́·, í· kunú·wehse̲ʔ", en: "Yes, I like you." },
     ],
     [
-      { one: "laulhá· kʌ etsnú·wehse̲ʔ", en: "Do you like him?" },
+      { one: "laulhá· kʌ́ etsnú·wehse̲ʔ", en: "Do you like him?" },
       { one: "Λ́·, laulhá· linú·wehse̲ʔ", en: "Yes, I like him." },
     ],
     [
-      { one: "Kwítel kʌ etsnú·wehse̲ʔ", en: "Do you like Peter?" },
+      { one: "Kwítel kʌ́ etsnú·wehse̲ʔ", en: "Do you like Peter?" },
       { one: "Λ́·, Kwítel linú·wehse̲ʔ", en: "Yes, I like Peter." },
     ],
     [
-      { one: "Akaulhá· kʌ shenú·wehse̲ʔ", en: "Do you like her?" },
+      { one: "Akaulhá· kʌ́ shenú·wehse̲ʔ", en: "Do you like her?" },
       { one: "Λ́·, akaulhá· khenú·wehse̲ʔ", en: "Yes, I like her." },
     ],
     [
-      { one: "Kowaklit kʌ shenú·wehse̲ʔ", en: "Do you like Margaret?" },
+      { one: "Kowaklit kʌ́ shenú·wehse̲ʔ", en: "Do you like Margaret?" },
       { one: "Λ́·, Kowaklít khenú·wehse̲ʔ", en: "Yes, I like Margaret." },
     ],
     [
-      { one: "Lonulhá· kʌ shenú·wehse̲ʔ", en: "Do you like them?" },
+      { one: "Lonulhá· kʌ́ shenú·wehse̲ʔ", en: "Do you like them?" },
       { one: "Λ́·, lonulhá· khenú·wehse̲ʔ", en: "Yes, I like them." },
     ],
     [
       {
-        one: "Rolling Stones kʌ shenú·wehse̲ʔ",
+        one: "Rolling Stones kʌ́ shenú·wehse̲ʔ",
         en: "Do you like the Rolling Stones?",
       },
       {
@@ -383,7 +387,7 @@ function DialogueSection() {
   const part8: DialogueTableData = [
     [
       { one: "Úhkaʔ náhteʔ khenú·wehseʔ", en: "Who do I like?" },
-      { one: "Í· skunú·wehseʔ", en: "You like me." },
+      { one: "Í· sknú·wehseʔ", en: "You like me." },
     ],
     [null, { one: "Kwítel etsnú·wehseʔ", en: "You like Peter." }],
     [null, { one: "Klistí·n shenú·wehseʔ", en: "You like Kristin." }],
@@ -487,7 +491,7 @@ function DialogueSection() {
     ],
     [
       {
-        one: "Sʌ́haʔ kʌ shenú·wehseʔ neʔn Beach Boys tsiʔ ni·yót neʔn Beatles",
+        one: "Sʌ́haʔ kʌ́ shenú·wehseʔ neʔn Beach Boys tsiʔ ni·yót neʔn Beatles",
         en: "Do you like the Beach Boys more than the Beatles?",
       },
       {
@@ -497,7 +501,7 @@ function DialogueSection() {
     ],
     [
       {
-        one: "Sʌ́haʔ kʌ etsnú·wehseʔ neʔn Nelson Mandela tsiʔ ni·yót neʔn Stephen Harper",
+        one: "Sʌ́haʔ kʌ́ etsnú·wehseʔ neʔn Nelson Mandela tsiʔ ni·yót neʔn Stephen Harper",
         en: "Do you like Nelson Mandela more than Stephen Harper?",
       },
       {
@@ -527,7 +531,7 @@ function DialogueSection() {
     ],
     [
       {
-        one: "Lonanúhteʔ kʌ né· thikʌ́ latiksaʔshuha oh náhte kuwatí·yats né· thikʌ́ otikhstʌʔokúha̲",
+        one: "Lonanúhteʔ kʌ́ né· thikʌ́ latiksaʔshuha oh náhte kuwatí·yats né· thikʌ́ otikhstʌʔokúha̲",
         en: "Do those children know what those old womenʔs names are?",
       },
       {
@@ -537,7 +541,7 @@ function DialogueSection() {
     ],
     [
       {
-        one: "Laulhá· kʌ lonúhteʔ náhte yesá·yats",
+        one: "Laulhá· kʌ́ lonúhteʔ náhte yesá·yats",
         en: "Does he know what your name is?",
       },
       {
@@ -547,7 +551,7 @@ function DialogueSection() {
     ],
     [
       {
-        one: "Klistí·n kʌ yutátyats né· thikʌ́ yakú·kwe̲",
+        one: "Klistí·n kʌ́ yutátyats né· thikʌ́ yakú·kwe̲",
         en: "Is that womanʔs name Christine?",
       },
       {
@@ -557,7 +561,7 @@ function DialogueSection() {
     ],
     [
       {
-        one: "Onulhá· kʌ yonanúhteʔ náhte luwati·yáts neʔn Rolling Stones",
+        one: "Onulhá· kʌ́ yonanúhteʔ náhte luwati·yáts neʔn Rolling Stones",
         en: "Do they know what the Rolling Stones names are?",
       },
       {
@@ -569,10 +573,10 @@ function DialogueSection() {
   const part11: DialogueTableData = [
     [
       {
-        one: "Skyʌtelí kʌ náhte ni yúkyats",
+        one: "Skyʌtelí kʌ́ náhte ni yúkyats",
         en: "Do you know what my name is?",
       },
-      { one: "Lá·kel kʌ yesa·yáts", en: "Is your name Rachel?" },
+      { one: "Lá·kel kʌ́ yesa·yáts", en: "Is your name Rachel?" },
     ],
     [
       {
@@ -583,7 +587,7 @@ function DialogueSection() {
         ],
         en: "No. My name is not Rachel. That old woman is the one named Rachel.",
       },
-      { one: "Kowáklit kʌ yesa·yáts", en: "Is your name Margaret?" },
+      { one: "Kowáklit kʌ́ yesa·yáts", en: "Is your name Margaret?" },
     ],
     [
       {

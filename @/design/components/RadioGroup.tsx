@@ -1,6 +1,9 @@
 import React from "react";
 import { Label } from "../primitives/label";
-import { RadioGroup as RadioGroupPrimitive, RadioGroupItem } from "../primitives/radio-group";
+import {
+  RadioGroup as RadioGroupPrimitive,
+  RadioGroupItem,
+} from "../primitives/radio-group";
 import { FormElement } from "./FormElement";
 import { Flex } from "./flex";
 
@@ -8,11 +11,11 @@ export function RadioGroup({
   children,
   label,
   onChange,
-  value
+  value,
 }: {
   children: React.ReactNode;
   label?: string;
-  onChange: (value: string) => void
+  onChange: (value: string) => void;
   value: string;
 }) {
   return (
@@ -21,7 +24,7 @@ export function RadioGroup({
         {children}
       </RadioGroupPrimitive>
     </FormElement>
-  )
+  );
 }
 
 RadioGroup.Option = function RadioGroupOption({
@@ -37,5 +40,5 @@ RadioGroup.Option = function RadioGroupOption({
       <RadioGroupItem value={value} id={id} />
       <Label htmlFor={id}>{children}</Label>
     </Flex>
-  )
-}
+  );
+};

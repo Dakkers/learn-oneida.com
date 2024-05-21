@@ -39,7 +39,7 @@ export const meta: MetaFunction = () => {
 
 export default function LearnModule05() {
   return (
-    <Flex direction="column" gap={4}>
+    <>
       <SectionHeading level={1}>Module 5</SectionHeading>
 
       <Box py={4}>
@@ -114,7 +114,7 @@ export default function LearnModule05() {
       </SectionHeading>
       <ParticlesTable group="module05" />
       <TranslationExercisesSection group="module05" />
-    </Flex>
+    </>
   );
 }
 
@@ -329,7 +329,12 @@ function VerbSection({ data, title }: { data: TenseDatum[]; title: string }) {
         Verbs — {title}
       </SectionHeading>
       {data.map((d, i) => (
-        <VerbSectionItem {...d} key={i} id="" typeFallback={d.type ?? "PB"} />
+        <VerbSectionItem
+          {...d}
+          key={d.key}
+          id=""
+          typeFallback={d.type ?? "PB"}
+        />
       ))}
     </>
   );
@@ -534,8 +539,8 @@ function OtherStativeVerbs() {
 
     {
       en: "depressing, sad, troubled",
-      breakdown: ["te", ["yo"], "ʔnikuhlyá·ku"],
-      breakdownPast: ["te", ["yo"], "ʔnikuhlyaʔk", ["ú·neʔ", "PAST"]],
+      breakdown: [["te", "DUAL"], ["yo"], "ʔnikuhlyá·ku"],
+      breakdownPast: [["te", "DUAL"], ["yo"], "ʔnikuhlyaʔk", ["ú·neʔ", "PAST"]],
     },
     {
       en: "be pitiful",
@@ -544,8 +549,8 @@ function OtherStativeVerbs() {
     },
     {
       en: "sad, low spirits",
-      breakdown: ["t", ["yo"], "ʔnikuhlʌ́·u"],
-      breakdownPast: ["t", ["yo"], "ʔnikuhlʌ", ["u·ne", "PAST"]],
+      breakdown: [["t", "CIS"], ["yo"], "ʔnikuhlʌ́·u"],
+      breakdownPast: [["t", "CIS"], ["yo"], "ʔnikuhlʌ", ["u·ne", "PAST"]],
     },
     {
       en: "ashamed, embarrassed",
@@ -554,8 +559,8 @@ function OtherStativeVerbs() {
     },
     {
       en: "straighten out, mediate",
-      breakdown: ["t", ["yo"], "lihwakwalíhsyu"],
-      breakdownPast: ["t", ["yo"], "lihwakwalihsyú", ["hneʔ", "PAST"]],
+      breakdown: [["t", "CIS"], ["yo"], "lihwakwalíhsyu"],
+      breakdownPast: [["t", "CIS"], ["yo"], "lihwakwalihsyú", ["hneʔ", "PAST"]],
     },
     {
       en: "it is good",
@@ -584,13 +589,18 @@ function OtherStativeVerbs() {
     },
     {
       en: "interesting, pull the mind",
-      breakdown: ["t", ["yo"], "ʔnikuhlati·lúteʔ"],
-      breakdownPast: ["t", ["yo"], "ʔnikuhlatilute", ["hkweʔ", "PAST"]],
+      breakdown: [["t", "CIS"], ["yo"], "ʔnikuhlati·lúteʔ"],
+      breakdownPast: [
+        ["t", "CIS"],
+        ["yo"],
+        "ʔnikuhlatilute",
+        ["hkweʔ", "PAST"],
+      ],
     },
     {
       en: "satisfying",
-      breakdown: ["t", ["yo"], "ʔnikuhliyó"],
-      breakdownPast: ["t", ["yo"], "ʔnikuhliyo", ["hné·", "PAST"]],
+      breakdown: [["t", "CIS"], ["yo"], "ʔnikuhliyó"],
+      breakdownPast: [["t", "CIS"], ["yo"], "ʔnikuhliyo", ["hné·", "PAST"]],
     },
     {
       en: "amazing, surprising, awesome",
@@ -599,7 +609,7 @@ function OtherStativeVerbs() {
     },
     {
       en: "awful, mess(e.g.the weather)",
-      breakdown: ["te", ["yo"], "tanú·yanit"],
+      breakdown: [["te", "DUAL"], ["yo"], "tanú·yanit"],
       breakdownPast: [
         "te",
         ["yo"],
@@ -610,8 +620,8 @@ function OtherStativeVerbs() {
     },
     {
       en: "dangerous, hazardous",
-      breakdown: ["te", ["yo"], "telyʌ́·talu"],
-      breakdownPast: ["te", ["yo"], "telyatalu", ["hné·", "PAST"]],
+      breakdown: [["te", "DUAL"], ["yo"], "telyʌ́·talu"],
+      breakdownPast: [["te", "DUAL"], ["yo"], "telyatalu", ["hné·", "PAST"]],
     },
     {
       en: "difficult",

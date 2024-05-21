@@ -19,21 +19,21 @@ const data = createParadigmData(
       { breakdown: [{ text: "aoti" }, "lihwá·ke̲"] },
     ],
   },
-  [...singlePronouns, "ms", "fs"]
+  [...singlePronouns, "ms", "fs"],
 );
 
 const examplesList = [
-  ["Do you know anything about me?", "Sanúhteʔ kʌ náhteʔ ní· aklihwá·ke"],
+  ["Do you know anything about me?", "Sanúhteʔ kʌ́ náhteʔ ní· aklihwá·ke̲"],
   [
     "Tell me a little bit about yourself.",
-    "Takhló·li ostúha ni·isé· salihwá·ke",
+    "Takhló·li ostúha ni·isé· salihwá·ke̲",
   ],
-  ["What do you know about David?", "Náhteʔ né· sanúhteʔ Tá·wit laolihwá·ke"],
-  ["Who is this about?", "Úhkaʔ náhteʔ né· akolihwá·ke kaʔí·kʌ"],
-  ["What's this about?", "Náhteʔ aolihwá·ke kaʔi·kʌ ̲"],
+  ["What do you know about David?", "Náhteʔ né· sanúhteʔ Tá·wit laolihwá·ke̲"],
+  ["Who is this about?", "Úhkaʔ náhteʔ né· akolihwá·ke kaʔí·kʌ̲"],
+  ["What's this about?", "Náhteʔ aolihwá·ke kaʔi·kʌ̲"],
   [
     "I don't like anything about them.",
-    "Yáh náhteʔ né· teʔknú·wehseʔ lonulhá· laotilihwá·ke",
+    "Yáh náhteʔ né· teʔknú·wehseʔ lonulhá· laotilihwá·ke̲",
   ],
 ].map(TableWrapper.mapEnglishOneida);
 
@@ -41,7 +41,7 @@ export function AboutSomeoneArticle({ level = 1 }: ArticleProps) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="about-someone" level={level}>
-        Last Names
+        About Someone
       </SectionHeading>
       <ParadigmTable data={data} />
 

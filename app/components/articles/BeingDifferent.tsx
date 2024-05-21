@@ -12,7 +12,12 @@ const data = createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["te", { text: "ty" }, { text: "at", type: "SRFL" }, "tíhʌ"],
+        breakdown: [
+          ["te", "DUAL"],
+          { text: "ty" },
+          { text: "at", type: "SRFL" },
+          "tíhʌ",
+        ],
       },
       {
         breakdown: [
@@ -31,13 +36,28 @@ const data = createParadigmData(
         ],
       },
       {
-        breakdown: ["te", { text: "hy" }, { text: "at", type: "SRFL" }, "tíhʌ"],
+        breakdown: [
+          ["te", "DUAL"],
+          { text: "hy" },
+          { text: "at", type: "SRFL" },
+          "tíhʌ",
+        ],
       },
       {
-        breakdown: ["te", { text: "ky" }, { text: "at", type: "SRFL" }, "tíhʌ"],
+        breakdown: [
+          ["te", "DUAL"],
+          { text: "ky" },
+          { text: "at", type: "SRFL" },
+          "tíhʌ",
+        ],
       },
       {
-        breakdown: ["te", { text: "tw" }, { text: "at", type: "SRFL" }, "tíhʌ"],
+        breakdown: [
+          ["te", "DUAL"],
+          { text: "tw" },
+          { text: "at", type: "SRFL" },
+          "tíhʌ",
+        ],
       },
       {
         breakdown: [
@@ -48,17 +68,32 @@ const data = createParadigmData(
         ],
       },
       {
-        breakdown: ["te", { text: "sw" }, { text: "at", type: "SRFL" }, "tíhʌ"],
+        breakdown: [
+          ["te", "DUAL"],
+          { text: "sw" },
+          { text: "at", type: "SRFL" },
+          "tíhʌ",
+        ],
       },
       {
-        breakdown: ["te", { text: "hu" }, { text: "at", type: "SRFL" }, "tíhʌ"],
+        breakdown: [
+          ["te", "DUAL"],
+          { text: "hu" },
+          { text: "at", type: "SRFL" },
+          "tíhʌ",
+        ],
       },
       {
-        breakdown: ["te", { text: "ku" }, { text: "at", type: "SRFL" }, "tíhʌ"],
+        breakdown: [
+          ["te", "DUAL"],
+          { text: "ku" },
+          { text: "at", type: "SRFL" },
+          "tíhʌ",
+        ],
       },
     ],
   },
-  [...dualicPronouns, ...pluralPronouns]
+  [...dualicPronouns, ...pluralPronouns],
 );
 
 export function BeingDifferentArticle({ level = 1 }: ArticleProps) {

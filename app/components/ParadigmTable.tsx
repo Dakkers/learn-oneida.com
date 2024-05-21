@@ -42,10 +42,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/design/primitives/button";
 import { Notice } from "@/design/components/notice";
 import _ from "lodash";
-import { sanitizeIrregularCharacters } from "~/utils/words";
+import { sanitizeIrregularCharacters, whisperizeWord } from "~/utils/words";
+import { Bleed, BleedProps } from "@/design/components/Bleed";
 
 const formSchema = z.object(
-  Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()]))
+  Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),
 );
 
 const ParadigmTableContext =
@@ -53,12 +54,14 @@ const ParadigmTableContext =
 
 export function ParadigmTable({
   allowedPronouns = [],
+  bleed = 32,
   columnVisibility = {},
   data,
   isTesting = false,
   translationFn,
 }: {
   allowedPronouns?: Pronoun[];
+  bleed?: BleedProps["mx"];
   columnVisibility?: Partial<ColumnVisibility>;
   data: ParadigmData;
   isTesting?: boolean;
@@ -119,7 +122,7 @@ export function ParadigmTable({
         translationFn,
       }}
     >
-      <div>
+      <Bleed mx={bleed}>
         <Flex justify="end">
           <SettingsMenu
             toggleColumn={(columnName) =>
@@ -166,8 +169,8 @@ export function ParadigmTable({
                   <TableRowWrapper
                     key={i}
                     row={row}
-                    suffix={data.suffix}
                     typeFallback={data.type}
+                    whispered={data.whispered}
                   />
                 ))}
               </TableBody>
@@ -190,7 +193,7 @@ export function ParadigmTable({
             )}
           </form>
         </Form>
-      </div>
+      </Bleed>
     </ParadigmTableContext.Provider>
   );
 }
@@ -199,10 +202,12 @@ function TableRowWrapper({
   row,
   suffix,
   typeFallback,
+  whispered = false,
 }: {
   row: Row;
   suffix?: TextBreakdownSuffix;
   typeFallback?: BreakdownType;
+  whispered?: boolean;
 }) {
   const context = React.useContext(ParadigmTableContext);
   if (!context) {
@@ -212,7 +217,7 @@ function TableRowWrapper({
   const translatedPhrase = translatePhrase(
     context.translation,
     row.pronoun,
-    context.translationFn
+    context.translationFn,
   );
 
   return (
@@ -257,6 +262,7 @@ function TableRowWrapper({
                 breakdown={row.breakdown}
                 suffix={suffix}
                 typeFallback={typeFallback}
+                whispered={row.whispered ?? whispered ?? false}
               />
             ) : (
               row.phrase
@@ -286,7 +292,7 @@ function SettingsMenu({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <Settings />
+        <Settings className="print:hidden" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuItem onClick={() => toggleColumn("pronounEnglish")}>
@@ -322,21 +328,16 @@ interface ColumnVisibility {
 
 export interface ParadigmData {
   phrases: Row[];
-  suffix?: TextBreakdownSuffix;
   translation: string;
   type?: BreakdownType;
+  whispered?: boolean;
 }
 
 interface Row {
-  breakdown: Array<
-    | string
-    | {
-        text: string;
-        type?: BreakdownType;
-      }
-  >;
+  breakdown: BreakdownArray;
   phrase: string;
   pronoun: Pronoun;
+  whispered?: boolean;
 }
 
 interface ParadigmTableContextProps {
@@ -350,22 +351,45 @@ interface ParadigmTableContextProps {
 }
 
 export function createParadigmData(
-  data: Pick<ParadigmData, "translation" | "suffix" | "type"> & {
+  data: Pick<ParadigmData, "translation" | "type" | "whispered"> & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },
-  allowedPronouns?: Pronoun[]
+  allowedPronouns?: Pronoun[],
 ): ParadigmData {
   const result = _.cloneDeep(data) as ParadigmData;
   for (let i = 0; i < result.phrases.length; i++) {
     const element = result.phrases[i];
+    const endIndex = element.breakdown.length - 1;
+    if (element.whispered ?? data.whispered ?? true) {
+      const lastElement = element.breakdown[endIndex];
+      const lastPartOfBreakdown = getBreakdownTextPart(
+        getBreakdownTextPart(lastElement),
+      );
+      const lastPartWhispered = whisperizeWord(lastPartOfBreakdown);
+      element.breakdown[endIndex] =
+        typeof lastElement === "string"
+          ? lastPartWhispered
+          : {
+              text: lastPartWhispered,
+              type: Array.isArray(lastElement)
+                ? lastElement[1]
+                : lastElement.type ?? undefined,
+            };
+    }
+
     element.phrase = element.breakdown
-      .map((part: string | Record<string, string>) =>
-        typeof part === "string" ? part : part.text
-      )
+      .map((part) => getBreakdownTextPart(part))
       .join("");
+
     if (allowedPronouns) {
       element.pronoun = allowedPronouns[i];
     }
   }
+
+  result.whispered = data.whispered ?? true;
+
   return result;
 }
+
+const getBreakdownTextPart = (part: BreakdownArray[number]) =>
+  typeof part === "string" ? part : Array.isArray(part) ? part[0] : part.text;
