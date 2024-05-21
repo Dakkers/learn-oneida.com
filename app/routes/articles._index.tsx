@@ -31,7 +31,7 @@ export default function Articles() {
     },
     {
       href: "/cardinal-directions",
-      label: "Cardinal Directions",
+      label: "Cardinal directions",
     },
     {
       href: "/cities",
@@ -67,7 +67,7 @@ export default function Articles() {
     },
     {
       href: "/english-names",
-      label: "English Names",
+      label: "English names",
     },
     {
       href: "/good-people-bad-people",
@@ -84,6 +84,10 @@ export default function Articles() {
     {
       href: "/places-in-the-community",
       label: "Places in the community",
+    },
+    {
+      href: "/phone-numbers",
+      label: "Phone numbers",
     },
     {
       href: "/relationships",

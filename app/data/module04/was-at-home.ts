@@ -7,49 +7,139 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["t", ["k"], "íʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["k"],
+          "íʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["te", ["hs"], "íʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["te", "CIS"],
+          ["hs"],
+          "íʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["t", ["hʌ́"], "ʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["hʌ́"],
+          "ʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["t", ["yé"], "ʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["yé"],
+          "ʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["t", ["kʌ́"], "ʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["kʌ́"],
+          "ʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["ti", ["tn"], "íʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["ti", "CIS"],
+          ["tn"],
+          "íʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["t", ["yakn"], "íʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["yakn"],
+          "íʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["ti", ["sn"], "íʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["ti", "CIS"],
+          ["sn"],
+          "íʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["t", ["hn"], "íʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["hn"],
+          "íʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["t", ["kn"], "íʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["kn"],
+          "íʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["ti", ["twʌ́"], "ʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["ti", "CIS"],
+          ["twʌ́"],
+          "ʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["t", ["yakwʌ́"], "ʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["yakwʌ́"],
+          "ʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["ti", ["swʌ́"], "ʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["ti", "CIS"],
+          ["swʌ́"],
+          "ʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["t", ["hat"], "íʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["hat"],
+          "íʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
       {
-        breakdown: ["t", ["kut"], "íʔtlu·t", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [
+          ["t", "CIS"],
+          ["kut"],
+          "íʔtlu·t",
+          ["a", "JOIN"],
+          ["hkweʔ", "PAST"],
+        ],
       },
     ],
   },

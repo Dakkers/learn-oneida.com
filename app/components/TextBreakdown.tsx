@@ -132,9 +132,9 @@ function InnerText({
 }
 
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
-  CIS: "text-orange-400",
+  CIS: "text-lime-500",
   DEF: "text-emerald-400",
-  DUAL: "text-orange-400",
+  DUAL: "text-lime-500",
   EP: "text-gray-400",
   FUT: "text-emerald-400",
   HAB: "text-emerald-400",
@@ -147,7 +147,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   PLB: "text-cyan-400",
   PP: "text-violet-500",
   PR: "text-red-600",
-  PTV: "text-orange-400",
+  PTV: "text-lime-500",
   RECP: "text-green-700",
   REFL: "text-green-700",
   REP: "text-yellow-600",

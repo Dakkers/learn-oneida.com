@@ -12,7 +12,7 @@ const dataCountingWeight = [
   },
   {
     en: "two pounds",
-    breakdown: ["te", ["ka"], "kú·tslakeʔ"],
+    breakdown: [["te", "DUAL"], ["ka"], "kú·tslakeʔ"],
   },
   {
     en: "ten pounds",
@@ -27,7 +27,7 @@ const dataCountingFeet = [
   },
   {
     en: "two feet",
-    breakdown: ["te", ["w"], "ahsi·takeʔ"],
+    breakdown: [["te", "DUAL"], ["w"], "ahsi·takeʔ"],
   },
   {
     en: "three feet",
@@ -42,7 +42,7 @@ const dataCountingInches = [
   },
   {
     en: "two feet",
-    breakdown: ["te", ["ka"], "wyʌ́kalakeʔ"],
+    breakdown: [["te", "DUAL"], ["ka"], "wyʌ́kalakeʔ"],
   },
   {
     en: "three feet",

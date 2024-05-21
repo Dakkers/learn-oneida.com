@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], "te", ["k"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["te", "DUAL"], ["k"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "te", ["hse"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["te", "DUAL"], ["hse"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["ha"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["ha"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["ye"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["ye"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["ka"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["ka"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "te", ["tni"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["te", "DUAL"], ["tni"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["yakni"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["yakni"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "te", ["sni"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["te", "DUAL"], ["sni"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["hni"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["hni"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["kni"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["kni"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "te", ["twa"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["te", "DUAL"], ["twa"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["yakwa"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["yakwa"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "te", ["swa"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["te", "DUAL"], ["swa"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["hati"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["hati"], "khwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["kuti"], "khwishʌ́heyeʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["kuti"], "khwishʌ́heyeʔ"],
       },
     ],
   },
