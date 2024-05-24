@@ -2,7 +2,7 @@ import { Flex } from "@/design/components/flex";
 import { Button } from "@/design/primitives/button";
 import type { MetaFunction } from "@remix-run/node";
 import _ from "lodash";
-import React from "react";
+import React, { useState } from "react";
 import { SectionHeading } from "~/components/SectionHeading";
 import {
   characterTenseData,
@@ -11,6 +11,7 @@ import {
 } from "~/data/module05";
 import { arrayify } from "~/utils";
 import { useInterval } from "usehooks-ts";
+import { Select } from "@/design/components/select";
 
 export const meta: MetaFunction = () => {
   return [
@@ -31,6 +32,7 @@ export default function ToolsFlashcards() {
   const [index, setIndex] = React.useState(-1);
   const [hasStarted, setHasStarted] = React.useState(false);
   const [forceShow, setForceShow] = React.useState(false);
+  const [selectedModule, setSelectedModule] = useState("m6");
 
   const [data, setData] = React.useState<Item[]>(
     _.shuffle([
@@ -43,13 +45,13 @@ export default function ToolsFlashcards() {
         "items" in content
           ? content.items[0].on
           : Array.isArray(content)
-          ? content
-          : content.on;
+            ? content
+            : content.on;
       return {
         en: arrayify(item.en)[0],
         on: blah.join(""),
       };
-    })
+    }),
   );
 
   const currentWord = data[index];
@@ -74,7 +76,7 @@ export default function ToolsFlashcards() {
 
       processItem(newIndex);
     },
-    hasStarted ? 10000 : null
+    hasStarted ? 10000 : null,
   );
 
   const handleStart = () => {
@@ -104,9 +106,19 @@ export default function ToolsFlashcards() {
           show={forceShow}
         />
       ) : (
-        <div>
+        <Flex align="end" gap={4}>
+          <Select
+            label="Module"
+            onChange={setSelectedModule}
+            options={[
+              { label: "Module 5", value: "m5" },
+              { label: "Module 6", value: "m6" },
+            ]}
+            value={selectedModule}
+          />
+
           <Button onClick={handleStart}>Start</Button>
-        </div>
+        </Flex>
       )}
     </Flex>
   );
