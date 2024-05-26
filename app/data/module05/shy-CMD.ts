@@ -16,5 +16,5 @@ export default createParadigmData(
       },
     ],
   },
-  ["u", "u2", "yall"]
+  ["u", "u2", "yall"],
 );
