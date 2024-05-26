@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["k"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["k"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["hs"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["hs"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["h"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["h"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yak"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["yak"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["y"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["y"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["tn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["tn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yakn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["yakn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["sn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["sn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["hn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["hn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["kn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["kn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["ty"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["ty"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["yaky"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["yaky"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["tsy"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["tsy"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["hʌn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["hʌn"], "anahalawʌlyé"],
       },
       {
-        breakdown: [["te", "DU"], ["kun"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["kun"], "anahalawʌlyé"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

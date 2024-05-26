@@ -79,7 +79,7 @@ const dataChildren = [
   },
   {
     en: ["Boys (2)", "Boy and girl"],
-    breakdown: ["te", { text: "hni" }, "ksá·"],
+    breakdown: [["te", "DUAL"], { text: "hni" }, "ksá·"],
   },
   {
     en: ["Boys (3+)", "Mix of boys and girls"],
@@ -91,7 +91,7 @@ const dataChildren = [
   },
   {
     en: "Girls (2)",
-    breakdown: ["te", { text: "kni" }, "ksá·"],
+    breakdown: [["te", "DUAL"], { text: "kni" }, "ksá·"],
   },
   {
     en: ["Girls (3+)"],
@@ -106,7 +106,7 @@ const dataAdolescents = [
   },
   {
     en: ["Young men (2)"],
-    breakdown: ["te", { text: "hni" }, "nikʌtlúha"],
+    breakdown: [["te", "DUAL"], { text: "hni" }, "nikʌtlúha"],
   },
   {
     en: ["Young men (3+)"],
@@ -118,7 +118,7 @@ const dataAdolescents = [
   },
   {
     en: "Young women (2)",
-    breakdown: ["te", { text: "kni" }, "yaʔtaséha"],
+    breakdown: [["te", "DUAL"], { text: "kni" }, "yaʔtaséha"],
   },
   {
     en: ["Young women (3+)"],
@@ -133,7 +133,7 @@ const dataAdults = [
   },
   {
     en: ["Men (2)", "Man and woman"],
-    breakdown: ["te", { text: "hn" }, "u·kwé·"],
+    breakdown: [["te", "DUAL"], { text: "hn" }, "u·kwé·"],
   },
   {
     en: ["Men (3+)", "Mix of men and women"],
@@ -145,7 +145,7 @@ const dataAdults = [
   },
   {
     en: "Women (2)",
-    breakdown: ["te", { text: "kn" }, "u·kwé·"],
+    breakdown: [["te", "DUAL"], { text: "kn" }, "u·kwé·"],
   },
   {
     en: ["Women (3+)"],

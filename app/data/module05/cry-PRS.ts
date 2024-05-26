@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["k"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["k"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["hs"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["hs"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["l"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["l"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yu"], "shʌ́thos"],
+        breakdown: [["te", "DUAL"], ["yu"], "shʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["w"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["w"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["ty"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["ty"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yaky"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["yaky"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["tsy"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["tsy"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["hy"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["hy"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["ky"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["ky"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["tw"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["tw"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["yakw"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["yakw"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["sw"], "ashʌ́thos"],
+        breakdown: [["te", "DUAL"], ["sw"], "ashʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["lu"], "shʌ́thos"],
+        breakdown: [["te", "DUAL"], ["lu"], "shʌ́thos"],
       },
       {
-        breakdown: [["te", "DU"], ["ku"], "shʌ́thos"],
+        breakdown: [["te", "DUAL"], ["ku"], "shʌ́thos"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

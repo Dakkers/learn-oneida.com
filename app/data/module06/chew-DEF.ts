@@ -3,55 +3,55 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} am chewing",
+    translation: "{{pronoun}} chewed",
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], "t", ["k"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["k"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "te", ["hs"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["te", "DUAL"], ["hs"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["h"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["h"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["yu"], "tská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["yu"], "tská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["w"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["w"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "ti", ["ty"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["ti", "DUAL"], ["ty"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["yaky"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["yaky"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "ti", ["tsy"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["ti", "DUAL"], ["tsy"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["hy"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["hy"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["ky"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["ky"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["tw"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["tw"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["yakw"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["yakw"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "ti", ["sw"], "atská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["ti", "DUAL"], ["sw"], "atská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["hu"], "tská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["hu"], "tská·huʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], "t", ["ku"], "tská·huʔ"],
+        breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["ku"], "tská·huʔ"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

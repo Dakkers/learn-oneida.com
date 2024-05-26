@@ -8,7 +8,7 @@ export default createParadigmData(
     phrases: [
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a·", "IFUT"],
@@ -20,7 +20,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -31,7 +31,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -42,7 +42,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -53,7 +53,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -64,7 +64,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -75,7 +75,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -86,7 +86,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -97,7 +97,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -108,7 +108,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -119,7 +119,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -130,7 +130,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -141,7 +141,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -152,7 +152,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -163,7 +163,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -174,5 +174,5 @@ export default createParadigmData(
       },
     ],
   },
-  pronouns
+  pronouns,
 );

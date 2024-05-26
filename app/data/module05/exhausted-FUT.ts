@@ -8,7 +8,7 @@ export default createParadigmData(
     phrases: [
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["wak"],
           "hwishʌheyú",
@@ -17,7 +17,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["hs"],
           "hwishʌheyú",
@@ -26,7 +26,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["ho"],
           "hwishʌheyú",
@@ -35,7 +35,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["yako"],
           "hwishʌheyú",
@@ -44,7 +44,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["yo"],
           "hwishʌheyú",
@@ -53,7 +53,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["yukni"],
           "hwishʌheyú",
@@ -62,7 +62,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["yukni"],
           "hwishʌheyú",
@@ -71,7 +71,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["sni"],
           "hwishʌheyú",
@@ -80,7 +80,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["hoti"],
           "hwishʌheyú",
@@ -89,7 +89,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["yoti"],
           "hwishʌheyú",
@@ -98,7 +98,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["yukwa"],
           "hwishʌheyú",
@@ -107,7 +107,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["yukwa"],
           "hwishʌheyú",
@@ -116,7 +116,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["swa"],
           "hwishʌheyú",
@@ -125,7 +125,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["hoti"],
           "hwishʌheyú",
@@ -134,7 +134,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["t", "DU"],
+          ["t", "DUAL"],
           ["ʌ", "FUT"],
           ["yoti"],
           "hwishʌheyú",
@@ -143,5 +143,5 @@ export default createParadigmData(
       },
     ],
   },
-  pronouns
+  pronouns,
 );

@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["wak"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["hsa"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["lo"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yako"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yo"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yukni"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yukni"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["sni"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["loti"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yoti"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yukwa"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yukwa"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["swa"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["loti"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "hwishʌheyu·", ["hné·", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yoti"], "hwishʌheyu·", ["hné·", "PAST"]],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

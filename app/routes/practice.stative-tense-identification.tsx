@@ -62,8 +62,8 @@ const DATA_FULL_LIST = _.flattenDeep(
           value: convertBreakdownToPlainText(value.on),
         };
       }
-    })
-  )
+    }),
+  ),
 );
 
 interface Q {

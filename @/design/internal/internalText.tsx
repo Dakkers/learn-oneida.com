@@ -35,7 +35,14 @@ const typographyClasses = {
   titleS: "text-xsTitleS md:text-mdTitleS",
 } as const;
 
+const alignMap = {
+  start: "text-start",
+  center: "text-center",
+  end: "text-end",
+} as const;
+
 export interface InternalTextProps {
+  align?: "start" | "center" | "end";
   as?: "span" | "div" | "p" | "h1" | "h2" | "h3" | "h4" | "h5";
   children: React.ReactNode;
   contrast?: Contrast;
@@ -45,6 +52,7 @@ export interface InternalTextProps {
 }
 
 export function InternalText({
+  align,
   as: Tag = "div",
   children,
   contrast = "high",
@@ -54,7 +62,9 @@ export function InternalText({
 }: InternalTextProps) {
   return (
     <Tag
-      className={`${typographyClasses[variant]} ${cn(textColorMap[contrast][intent])}`}
+      className={typographyClasses[variant].concat(
+        cn(textColorMap[contrast][intent], align && alignMap[align]),
+      )}
       id={id}
     >
       {children}

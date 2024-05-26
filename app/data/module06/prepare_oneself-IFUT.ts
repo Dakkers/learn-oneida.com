@@ -7,141 +7,51 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["k"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["k"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["hs"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["hs"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["h"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["h"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["yu"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["yu"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["w"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["w"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["ty"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["ty"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["yakn"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["yakn"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["tsy"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["tsy"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["hy"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["hy"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["ky"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["ky"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["tw"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["tw"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["yakw"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["yakw"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["sw"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["sw"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["lu"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["lu"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
       {
-        breakdown: [
-          ["a", "IFUT"],
-          ["ku"],
-          ["atat", "REFL"],
-          ["e", "EP"],
-          "wyʌnʌ·táneʔ",
-        ],
+        breakdown: [["a", "IFUT"], ["ku"], ["atat", "REFL"], "ewyʌnʌ·táneʔ"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

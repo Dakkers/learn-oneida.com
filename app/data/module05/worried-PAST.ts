@@ -8,7 +8,7 @@ export default createParadigmData(
     phrases: [
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["wak"],
           ["e", "EP"],
           "ʔnikúlhaleʔ",
@@ -18,7 +18,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["hsa"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -27,7 +27,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["lo"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -36,7 +36,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["yako"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -45,7 +45,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["yo"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -54,7 +54,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["yukni"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -63,7 +63,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["yukni"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -72,7 +72,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["sni"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -81,7 +81,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["loti"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -90,7 +90,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["yoti"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -99,7 +99,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["yukwa"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -108,7 +108,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["yukwa"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -117,7 +117,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["swa"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -126,7 +126,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["loti"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -135,7 +135,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["yoti"],
           "ʔnikúlhaleʔ",
           ["á", "JOIN"],
@@ -144,5 +144,5 @@ export default createParadigmData(
       },
     ],
   },
-  pronouns
+  pronouns,
 );

@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["t", ["k"], "atahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["k"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["te", ["hs"], "atahsáwhaʔ"],
+        breakdown: [["te", "CIS"], ["hs"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["h"], "atahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["h"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["yu"], "tahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["yu"], "tahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["w"], "atahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["w"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["ti", ["ty"], "atahsáwhaʔ"],
+        breakdown: [["ti", "CIS"], ["ty"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["yaky"], "atahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["yaky"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["ti", ["tsy"], "atahsáwhaʔ"],
+        breakdown: [["ti", "CIS"], ["tsy"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["hy"], "atahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["hy"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["ky"], "atahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["ky"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["tw"], "atahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["tw"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["yakw"], "atahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["yakw"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["ti", ["sw"], "atahsáwhaʔ"],
+        breakdown: [["ti", "CIS"], ["sw"], "atahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["hu"], "tahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["hu"], "tahsáwhaʔ"],
       },
       {
-        breakdown: ["t", ["ku"], "tahsáwhaʔ"],
+        breakdown: [["t", "CIS"], ["ku"], "tahsáwhaʔ"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

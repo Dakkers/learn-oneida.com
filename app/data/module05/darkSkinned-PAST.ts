@@ -8,7 +8,7 @@ export default createParadigmData(
     phrases: [
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["wak"],
           ["e", "EP"],
@@ -18,7 +18,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["hsa"],
           "hná·kalah",
@@ -27,7 +27,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["lo"],
           "hná·kalah",
@@ -36,7 +36,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["yako"],
           "hná·kalah",
@@ -45,7 +45,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["yo"],
           "hná·kalah",
@@ -54,7 +54,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["yukni"],
           "hná·kalah",
@@ -63,7 +63,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["yukni"],
           "hná·kalah",
@@ -72,7 +72,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["sni"],
           "hná·kalah",
@@ -81,7 +81,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["loti"],
           "hná·kalah",
@@ -90,7 +90,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["yoti"],
           "hná·kalah",
@@ -99,7 +99,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["yukwa"],
           "hná·kalah",
@@ -108,7 +108,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["yukwa"],
           "hná·kalah",
@@ -117,7 +117,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["swa"],
           "hná·kalah",
@@ -126,7 +126,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["loti"],
           "hná·kalah",
@@ -135,7 +135,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          ["te", "DU"],
+          ["te", "DUAL"],
           ["t", "CIS"],
           ["yoti"],
           "hná·kalah",
@@ -144,5 +144,5 @@ export default createParadigmData(
       },
     ],
   },
-  pronouns
+  pronouns,
 );

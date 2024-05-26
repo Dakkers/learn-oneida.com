@@ -9,14 +9,14 @@ import { SectionHeading } from "~/components/SectionHeading";
 import { TextBreakdown } from "~/components/TextBreakdown";
 import {
   Module5VerbDatum,
-  STATIVE_VERB_TENSE_LIST,
+  MODULE_5_VERB_TENSE_LIST,
   createModule5VerbsList,
-  stativeVerbTenseMap,
+  module5VerbTenseMap,
 } from "~/data/module05";
 import {
-  activeVerbsList,
-  ACTIVE_VERB_TENSE_LIST,
-  activeVerbTenseMap,
+  createModule6VerbList,
+  MODULE_6_VERB_TENSE_LIST,
+  module6VerbTenseMap,
 } from "~/data/module06/activeVerbsList";
 
 export const meta: MetaFunction = () => {
@@ -70,10 +70,10 @@ function Module5Paradigms() {
       {data.map((v) => (
         <Fragment key={v.key}>
           <SectionHeading level={2}>{v.en}</SectionHeading>
-          {STATIVE_VERB_TENSE_LIST.map((t) => (
+          {MODULE_5_VERB_TENSE_LIST.map((t) => (
             <>
               <SectionHeading level={3} key={t}>
-                {v.en} — {stativeVerbTenseMap[t]}
+                {v.en} — {module5VerbTenseMap[t]}
               </SectionHeading>
 
               <div style={{ pageBreakAfter: "always" }}>
@@ -97,13 +97,13 @@ function Module5Paradigms() {
 function Module6Paradigms() {
   return (
     <>
-      {activeVerbsList.map((v) => (
+      {createModule6VerbList().map((v) => (
         <Fragment key={v.key}>
           <SectionHeading level={2}>{v.en}</SectionHeading>
-          {ACTIVE_VERB_TENSE_LIST.map((t) => (
+          {MODULE_6_VERB_TENSE_LIST.map((t) => (
             <>
               <SectionHeading level={3} key={t}>
-                {v.en} — {activeVerbTenseMap[t]}
+                {v.en} — {module6VerbTenseMap[t]}
               </SectionHeading>
 
               <div style={{ pageBreakAfter: "always" }}>
@@ -113,7 +113,7 @@ function Module6Paradigms() {
                     pronounEnglish: false,
                     translation: true,
                   }}
-                  data={v[t]}
+                  data={v[t]!}
                 />
               </div>
             </>
@@ -132,6 +132,7 @@ function Module5ParadigmsAsIs() {
       columns={[
         {
           accessorKey: "left",
+          // @ts-expect-error TODO
           cell: (value, row: Module5VerbDatum) => {
             return <div>{row.en}</div>;
           },
@@ -139,6 +140,7 @@ function Module5ParadigmsAsIs() {
         },
         {
           accessorKey: "middle",
+          // @ts-expect-error TODO
           cell: (value, row: Module5VerbDatum) => {
             return (
               <Flex direction="column" justify="center" gap={4}>
@@ -157,6 +159,7 @@ function Module5ParadigmsAsIs() {
         },
         {
           accessorKey: "right",
+          // @ts-expect-error TODO
           cell: (value, row: Module5VerbDatum) => {
             return (
               <Flex direction="column" justify="center" gap={4}>
@@ -180,33 +183,5 @@ function Module5ParadigmsAsIs() {
       ]}
       data={data}
     />
-  );
-
-  return (
-    <>
-      {activeVerbsList.map((v) => (
-        <Fragment key={v.key}>
-          <SectionHeading level={2}>{v.en}</SectionHeading>
-          {TENSE_LIST.map((t) => (
-            <>
-              <SectionHeading level={3} key={t}>
-                {v.en} — {tenseMap[t]}
-              </SectionHeading>
-
-              <div style={{ pageBreakAfter: "always" }}>
-                <ParadigmTable
-                  columnVisibility={{
-                    pronounOneida: true,
-                    pronounEnglish: false,
-                    translation: true,
-                  }}
-                  data={v[t]}
-                />
-              </div>
-            </>
-          ))}
-        </Fragment>
-      ))}
-    </>
   );
 }

@@ -7,52 +7,52 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["wak"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["s"], "lihwaʔslákwʌ"],
+        breakdown: [["te", "CIS"], ["s"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["lo"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["ho"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["yako"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yako"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["yo"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yo"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["yukni"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yukni"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["yukni"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yukni"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["sni"], "lihwaʔslákwʌ"],
+        breakdown: [["te", "CIS"], ["sni"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["loti"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["hoti"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["yoti"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yoti"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["yukwa"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yukwa"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["yukwa"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yukwa"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["swa"], "lihwaʔslákwʌ"],
+        breakdown: [["te", "CIS"], ["swa"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["loti"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["hoti"], "lihwaʔslákwʌ"],
       },
       {
-        breakdown: [["yoti"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yoti"], "lihwaʔslákwʌ"],
       },
     ],
     whispered: false,
   },
-  pronouns
+  pronouns,
 );

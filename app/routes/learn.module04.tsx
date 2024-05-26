@@ -42,7 +42,6 @@ import {
   AccordionTrigger,
 } from "@/design/primitives/accordion";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
-import { Flex } from "@/design/components/flex";
 import { SectionHeading } from "~/components/SectionHeading";
 import { Box } from "@/design/components/box";
 import { Notice } from "@/design/components/notice";
@@ -60,6 +59,7 @@ import { PlacesInTheCommunityArticle } from "~/components/articles/PlacesInTheCo
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { PhoneNumbersArticle } from "~/components/articles/PhoneNumbers";
 import { ClockTimeArticle } from "~/components/articles/ClockTime";
+import { Bleed } from "@/design/components/Bleed";
 
 export const meta: MetaFunction = () => {
   return [
@@ -75,7 +75,7 @@ const columnVisibility = {
 
 export default function LearnModule04() {
   return (
-    <Flex direction="column" gap={4}>
+    <>
       <SectionHeading level={1}>Module 4</SectionHeading>
 
       <Box py={4}>
@@ -454,7 +454,7 @@ export default function LearnModule04() {
         Particles
       </SectionHeading>
       <ParticlesTable group="module04" />
-    </Flex>
+    </>
   );
 }
 
@@ -464,15 +464,21 @@ function AccordionWrapper({
   sections: Array<[string, string, ParadigmData]>;
 }) {
   return (
-    <Accordion type="multiple">
-      {sections.map(([id, title, data]) => (
-        <AccordionItem id={id} key={id} value={id}>
-          <AccordionTrigger>{title}</AccordionTrigger>
-          <AccordionContent>
-            <ParadigmTable columnVisibility={columnVisibility} data={data} />
-          </AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
+    <Bleed mx={32}>
+      <Accordion type="multiple">
+        {sections.map(([id, title, data]) => (
+          <AccordionItem id={id} key={id} value={id}>
+            <AccordionTrigger>{title}</AccordionTrigger>
+            <AccordionContent>
+              <ParadigmTable
+                bleed={0}
+                columnVisibility={columnVisibility}
+                data={data}
+              />
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </Bleed>
   );
 }

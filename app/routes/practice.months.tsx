@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => {
 export default function PracticeMonths() {
   const [englishOptions, oneidaOptions]: [
     EnglishToOneidaQuizProps["englishOptions"],
-    EnglishToOneidaQuizProps["oneidaOptions"]
+    EnglishToOneidaQuizProps["oneidaOptions"],
   ] = React.useMemo(() => {
     const resultEn = [];
     const resultOn = [];

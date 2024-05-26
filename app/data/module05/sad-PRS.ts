@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["wak"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["hs"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["hs"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "ʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["lo"], "ʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "ʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["yako"], "ʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "ʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["yo"], "ʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yuky"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["yuky"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yuky"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["yuky"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["sn"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["sn"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["lon"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["lon"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yon"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["yon"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yukw"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["yukw"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yukw"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["yukw"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["sw"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["sw"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["lon"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["lon"], "aʔnikuhlyá·ku"],
       },
       {
-        breakdown: [["te", "DU"], ["yon"], "aʔnikuhlyá·ku"],
+        breakdown: [["te", "DUAL"], ["yon"], "aʔnikuhlyá·ku"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

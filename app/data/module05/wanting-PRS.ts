@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["wak"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["hs"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["hs"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["ho"], "tuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["ho"], "tuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "tuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["yako"], "tuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "tuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["yo"], "tuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yuky"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["yuky"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yuky"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["yuky"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["tsy"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["tsy"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["hon"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["hon"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yon"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["yon"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yukw"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["yukw"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yukw"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["yukw"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["sw"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["sw"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["hon"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["hon"], "atuhutsyoní"],
       },
       {
-        breakdown: [["te", "DU"], ["yon"], "atuhutsyoní"],
+        breakdown: [["te", "DUAL"], ["yon"], "atuhutsyoní"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

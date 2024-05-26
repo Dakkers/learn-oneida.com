@@ -7,7 +7,7 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "nhotu·kó·"],
+        breakdown: [["waʔ", "DEF"], ["ke"], "nhotu·kó·"],
       },
       {
         breakdown: [["wa", "DEF"], ["hse"], "nhotu·kó·"],
@@ -53,5 +53,5 @@ export default createParadigmData(
       },
     ],
   },
-  pronouns
+  pronouns,
 );

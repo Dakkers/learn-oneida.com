@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["k"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["k"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["hs"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["hs"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["l"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["l"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yu"], "shʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yu"], "shʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["w"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["w"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["ty"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["ty"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yaky"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yaky"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["tsy"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["tsy"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["hy"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["hy"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["ky"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["ky"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["tw"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["tw"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["yakw"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["yakw"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["sw"], "ashʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["sw"], "ashʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["lu"], "shʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["lu"], "shʌ́thos", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DU"], ["ku"], "shʌ́thos", ["kweʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["ku"], "shʌ́thos", ["kweʔ", "PAST"]],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

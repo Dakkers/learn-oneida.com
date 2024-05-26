@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["wak"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["hs"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["hs"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["ho"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["ho"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["yako"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["yo"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["yuky"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["yuky"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["yuky"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["yuky"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["tsy"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["tsy"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["hon"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["hon"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["yon"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["yon"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["yukw"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["yukw"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["yukw"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["yukw"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["sw"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["sw"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["hon"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["hon"], "atekháhsyu"],
       },
       {
-        breakdown: [["te", "DU"], ["yon"], "atekháhsyu"],
+        breakdown: [["te", "DUAL"], ["yon"], "atekháhsyu"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

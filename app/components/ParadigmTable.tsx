@@ -43,9 +43,10 @@ import { Button } from "@/design/primitives/button";
 import { Notice } from "@/design/components/notice";
 import _ from "lodash";
 import { sanitizeIrregularCharacters, whisperizeWord } from "~/utils/words";
+import { Bleed, BleedProps } from "@/design/components/Bleed";
 
 const formSchema = z.object(
-  Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()]))
+  Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),
 );
 
 const ParadigmTableContext =
@@ -53,12 +54,14 @@ const ParadigmTableContext =
 
 export function ParadigmTable({
   allowedPronouns = [],
+  bleed = 32,
   columnVisibility = {},
   data,
   isTesting = false,
   translationFn,
 }: {
   allowedPronouns?: Pronoun[];
+  bleed?: BleedProps["mx"];
   columnVisibility?: Partial<ColumnVisibility>;
   data: ParadigmData;
   isTesting?: boolean;
@@ -119,7 +122,7 @@ export function ParadigmTable({
         translationFn,
       }}
     >
-      <div>
+      <Bleed mx={bleed}>
         <Flex justify="end">
           <SettingsMenu
             toggleColumn={(columnName) =>
@@ -190,7 +193,7 @@ export function ParadigmTable({
             )}
           </form>
         </Form>
-      </div>
+      </Bleed>
     </ParadigmTableContext.Provider>
   );
 }
@@ -214,7 +217,7 @@ function TableRowWrapper({
   const translatedPhrase = translatePhrase(
     context.translation,
     row.pronoun,
-    context.translationFn
+    context.translationFn,
   );
 
   return (
@@ -351,7 +354,7 @@ export function createParadigmData(
   data: Pick<ParadigmData, "translation" | "type" | "whispered"> & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },
-  allowedPronouns?: Pronoun[]
+  allowedPronouns?: Pronoun[],
 ): ParadigmData {
   const result = _.cloneDeep(data) as ParadigmData;
   for (let i = 0; i < result.phrases.length; i++) {
@@ -360,7 +363,7 @@ export function createParadigmData(
     if (element.whispered ?? data.whispered ?? true) {
       const lastElement = element.breakdown[endIndex];
       const lastPartOfBreakdown = getBreakdownTextPart(
-        getBreakdownTextPart(lastElement)
+        getBreakdownTextPart(lastElement),
       );
       const lastPartWhispered = whisperizeWord(lastPartOfBreakdown);
       element.breakdown[endIndex] =

@@ -1662,16 +1662,16 @@ export const module5VerbsList = [
   ...physicalTenseData,
 ];
 
-export const STATIVE_VERB_TENSE_LIST = [
+export const MODULE_5_VERB_TENSE_LIST = [
   "prs",
   "past",
   "fut",
   "ifut",
   "cmd",
 ] as const;
-export type StativeVerbTense = (typeof STATIVE_VERB_TENSE_LIST)[number];
+export type StativeVerbTense = (typeof MODULE_5_VERB_TENSE_LIST)[number];
 
-export const stativeVerbTenseMap = {
+export const module5VerbTenseMap = {
   cmd: "Command",
   fut: "Future",
   ifut: "Indefinite Future",

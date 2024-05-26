@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["k"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hse"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["te", "CIS"], ["hs"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ha"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["ha"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ye"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["ye"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ka"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["ka"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tni"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["te", "CIS"], ["tni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakni"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["yakni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sni"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["te", "CIS"], ["sni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hni"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["hni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kni"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["kni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["twa"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["te", "CIS"], ["twa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakwa"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["yakwa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["swa"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["te", "CIS"], ["swa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hati"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["hati"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kuti"], "lihwaʔsla·kó·"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["kuti"], "lihwaʔsla·kó·"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

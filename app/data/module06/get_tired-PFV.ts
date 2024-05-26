@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: ["te", ["wak"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["wak"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["sa"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["sa"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["ho"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["ho"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["yako"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yako"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["yo"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yo"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["yukni"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yukni"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["yukni"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yukni"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["sni"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["sni"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["hoti"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["hoti"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["yoti"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yoti"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["yukwa"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yukwa"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["yukwa"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yukwa"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["swa"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["swa"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["hoti"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["hoti"], "hwishʌheyú"],
       },
       {
-        breakdown: ["te", ["yoti"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yoti"], "hwishʌheyú"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

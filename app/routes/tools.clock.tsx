@@ -9,6 +9,8 @@ import _ from "lodash";
 import { Text } from "@/design/components/text";
 import { List } from "@/design/components/list";
 import { doTheTranslate } from "~/utils/time";
+import { SectionHeading } from "~/components/SectionHeading";
+import { Bleed } from "@/design/components/Bleed";
 
 export const meta: MetaFunction = () => {
   return [
@@ -27,12 +29,10 @@ export default function ToolsClock() {
   const [translatedValue, setTranslatedValue] = React.useState<string[]>([]);
 
   return (
-    <div>
-      <Heading level={1} variant="headlineL">
-        Clock Time
-      </Heading>
+    <>
+      <SectionHeading level={1}>Clock Time</SectionHeading>
 
-      <Flex direction="column" gap={4}>
+      <Bleed mx={16}>
         <Flex gap={4}>
           <Select
             label="Hour"
@@ -60,7 +60,6 @@ export default function ToolsClock() {
             ]}
             value={period}
           />
-
           <Flex direction="column" gap={2}>
             <Text>&nbsp;</Text>
             <Button
@@ -68,8 +67,8 @@ export default function ToolsClock() {
                 setTranslatedValue(
                   doTheTranslate(
                     (parseInt(hour) % 12) + (period === "AM" ? 0 : 12),
-                    parseInt(minute)
-                  )
+                    parseInt(minute),
+                  ),
                 )
               }
             >
@@ -77,16 +76,16 @@ export default function ToolsClock() {
             </Button>
           </Flex>
         </Flex>
+      </Bleed>
 
-        <Separator />
+      <Separator />
 
-        <Text>Translations:</Text>
-        <List>
-          {translatedValue.map((value, i) => (
-            <List.Item key={i}>{value}</List.Item>
-          ))}
-        </List>
-      </Flex>
-    </div>
+      <Text>Translations:</Text>
+      <List>
+        {translatedValue.map((value, i) => (
+          <List.Item key={i}>{value}</List.Item>
+        ))}
+      </List>
+    </>
   );
 }

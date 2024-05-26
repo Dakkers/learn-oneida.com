@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["n", ["aʔ", "DEF"], ["k"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["aʔ", "DEF"], ["k"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "DEF"], ["hs"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["a", "DEF"], ["hs"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "DEF"], ["h"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["a", "DEF"], ["h"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["aʔ", "DEF"], ["ú"], "tyeleʔ"],
+        breakdown: [["n", "PTV"], ["aʔ", "DEF"], ["ú"], "tyeleʔ"],
       },
       {
-        breakdown: ["n", ["ú"], "tyeleʔ"],
+        breakdown: [["n", "PTV"], ["ú"], "tyeleʔ"],
       },
       {
-        breakdown: ["n", ["e", "DEF"], ["ty"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["e", "DEF"], ["ty"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["aʔ", "DEF"], ["aky"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["aʔ", "DEF"], ["aky"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["e", "DEF"], ["tsy"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["e", "DEF"], ["tsy"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "DEF"], ["hy"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["a", "DEF"], ["hy"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["aʔ", "DEF"], ["ky"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["aʔ", "DEF"], ["ky"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["e", "DEF"], ["tw"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["e", "DEF"], ["tw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["aʔ", "DEF"], ["akw"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["aʔ", "DEF"], ["akw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["e", "DEF"], ["sw"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["e", "DEF"], ["sw"], "átyeleʔ"],
       },
       {
-        breakdown: ["n", ["a", "DEF"], ["hú"], "tyeleʔ"],
+        breakdown: [["n", "PTV"], ["a", "DEF"], ["hú"], "tyeleʔ"],
       },
       {
-        breakdown: ["n", ["aʔ", "DEF"], ["kú"], "tyeleʔ"],
+        breakdown: [["n", "PTV"], ["aʔ", "DEF"], ["kú"], "tyeleʔ"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

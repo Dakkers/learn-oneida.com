@@ -68,7 +68,7 @@ export const meta: MetaFunction = () => {
 
 export default function LearnModule02() {
   return (
-    <Flex direction="column" gap={4}>
+    <>
       <SectionHeading level={1}>Module 2</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
@@ -186,7 +186,7 @@ export default function LearnModule02() {
       <BeingDifferentArticle level={2} />
 
       <TranslationExercisesSection group="module02" />
-    </Flex>
+    </>
   );
 }
 
@@ -363,7 +363,7 @@ function VerbsTable({
         ),
         header: headerText.replace(
           "{{verb}}",
-          color === "blue" ? "likes" : "like"
+          color === "blue" ? "likes" : "like",
         ),
       },
       {
@@ -373,7 +373,7 @@ function VerbsTable({
         ),
         header: headerText.replace(
           "{{verb}}",
-          color === "blue" ? "knows" : "know"
+          color === "blue" ? "knows" : "know",
         ),
       },
       {
@@ -383,11 +383,11 @@ function VerbsTable({
         ),
         header: headerText.replace(
           "{{verb}}",
-          color === "blue" ? "loves" : "love"
+          color === "blue" ? "loves" : "love",
         ),
       },
     ],
-    [color, headerText, typeFallback]
+    [color, headerText, typeFallback],
   );
 
   const rows = React.useMemo(
@@ -398,7 +398,7 @@ function VerbsTable({
         love: getBreakdown(loveData, key),
         know: getBreakdown(knowData, key),
       })),
-    [keys, enData, likeData, knowData, loveData]
+    [keys, enData, likeData, knowData, loveData],
   );
 
   // @ts-expect-error To be addressed in LO-12
@@ -834,7 +834,7 @@ function DialogueSection() {
     ],
     [
       "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
-      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔiséˍ·",
+      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔisé͟·",
     ],
     [
       "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yó t niʔí·",
@@ -868,7 +868,7 @@ function DialogueSection() {
 function ThingsThatAreTheSameSection() {
   const data = [
     ["They are the same", "Né· tshá·kat"],
-    ["Are they the same?", "Né· kʌ tshá·kat"],
+    ["Are they the same?", "Né· kʌ́ tshá·kat"],
     ["They are not the same", "yah né· tshá·kat té·kʌ"],
     ["Someone and I are the same age", "tshaʔteyuknohsliyá·ku"],
     ["You two are the same age", "tshaʔ tesnohsliyá·ku"],
@@ -913,7 +913,7 @@ function ThingsThatAreTheSameSection() {
 const getBreakdown = (data, key) =>
   data.phrases.find(
     // @ts-expect-error To be addressed in LO-21
-    (p: SomethingElseEntirely) => p.key === key || p.pronoun === key
+    (p: SomethingElseEntirely) => p.key === key || p.pronoun === key,
   )?.breakdown;
 
 // @ts-expect-error To be addressed in LO-21

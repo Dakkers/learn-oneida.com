@@ -5,17 +5,20 @@ import { whisperizeWord } from "~/utils/words";
 export type BreakdownType =
   | "CIS"
   | "DEF"
-  | "DU"
+  | "DUAL"
   | "EP"
   | "FUT"
+  | "HAB"
   | "IFUT"
   | "JOIN"
   | "OP"
   | "PAST"
   | "PB"
+  | "PFV"
   | "PLB"
   | "PP"
   | "PR"
+  | "PTV"
   | "RECP"
   | "REFL"
   | "REP"
@@ -42,6 +45,16 @@ export type TextBreakdownSuffix =
   | "ake"
   | "áke";
 
+interface TextBreakdownProps {
+  as?: "span" | "div";
+  breakdown: BreakdownArray;
+  prefix?: BreakdownType;
+  suffix?: TextBreakdownSuffix;
+  typeFallback?: BreakdownType;
+  whispered?: boolean;
+  wrap?: "nowrap";
+}
+
 export function TextBreakdown({
   as: Tag = "span",
   breakdown: _breakdown,
@@ -49,14 +62,8 @@ export function TextBreakdown({
   suffix,
   typeFallback,
   whispered: _whispered = false,
-}: {
-  as?: "span" | "div";
-  breakdown: BreakdownArray;
-  prefix?: BreakdownType;
-  suffix?: TextBreakdownSuffix;
-  typeFallback?: BreakdownType;
-  whispered?: boolean;
-}) {
+  wrap,
+}: TextBreakdownProps) {
   const breakdown = getPrefixArr(prefix)
     .concat(_breakdown)
     .concat(getSuffixArr(suffix));
@@ -64,6 +71,7 @@ export function TextBreakdown({
   return (
     <Tag>
       {breakdown.map((part, i) => {
+        const innerTextProps = { wrap };
         const isLastPart = i === breakdown.length - 1;
         const whispered = isLastPart && !!_whispered;
 
@@ -72,7 +80,11 @@ export function TextBreakdown({
             (["kweʔ", "hkweʔ", "hné·", "hneʔ"].includes(part) && isLastPart) ||
             (["tshi", "tshaʔ"].includes(part) && i === 0);
           return (
-            <InnerText key={i} type={isPastTense ? "PAST" : undefined}>
+            <InnerText
+              {...innerTextProps}
+              key={i}
+              type={isPastTense ? "PAST" : undefined}
+            >
               {whispered ? whisperizeWord(part) : part}
             </InnerText>
           );
@@ -84,7 +96,7 @@ export function TextBreakdown({
         const hasLeadingWhitespace = text.trimStart() !== text;
         const hasTrailingWhitespace = text.trimStart() !== text;
         return (
-          <InnerText key={i} type={type ?? typeFallback}>
+          <InnerText {...innerTextProps} key={i} type={type ?? typeFallback}>
             {hasLeadingWhitespace ? "&nbsp" : ""}
             {whispered ? whisperizeWord(text) : text}
             {hasTrailingWhitespace ? "&nbsp" : ""}
@@ -98,17 +110,20 @@ export function TextBreakdown({
 function InnerText({
   children,
   type,
+  wrap,
 }: {
   children: React.ReactNode;
   type?: BreakdownType | BreakdownType[];
+  wrap?: TextBreakdownProps["wrap"];
 }) {
   return (
     <span
       className={cn(
         arrayify(type ?? []).map((t: BreakdownType) =>
-          t ? BREAKDOWN_TYPE_MAP[t] : undefined
+          t ? BREAKDOWN_TYPE_MAP[t] : undefined,
         ),
-        "font-bold"
+        "font-bold",
+        wrap === "nowrap" && "text-nowrap",
       )}
     >
       {children}
@@ -117,19 +132,22 @@ function InnerText({
 }
 
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
-  CIS: "text-orange-500",
+  CIS: "text-lime-500",
   DEF: "text-emerald-400",
-  DU: "text-orange-500",
+  DUAL: "text-lime-500",
   EP: "text-gray-400",
   FUT: "text-emerald-400",
+  HAB: "text-emerald-400",
   IFUT: "text-emerald-400",
   JOIN: "text-yellow-400",
   OP: "underline decoration-wavy decoration-black",
   PAST: "text-emerald-400",
   PB: "text-blue-600",
+  PFV: "text-emerald-400",
   PLB: "text-cyan-400",
   PP: "text-violet-500",
   PR: "text-red-600",
+  PTV: "text-lime-500",
   RECP: "text-green-700",
   REFL: "text-green-700",
   REP: "text-yellow-600",
@@ -145,20 +163,20 @@ function getSuffixArr(suffix: TextBreakdownSuffix | undefined) {
     suffix === "hne"
       ? "hné·"
       : suffix === "kwe"
-      ? "kweʔ"
-      : suffix === "hkwe"
-      ? "hkweʔ"
-      : suffix === "hake"
-      ? "hakeʔ"
-      : suffix === "heke"
-      ? "hekeʔ"
-      : suffix === "hak"
-      ? "hakʔ"
-      : suffix === "ake"
-      ? "akeʔ"
-      : suffix === "áke"
-      ? "ákeʔ"
-      : undefined;
+        ? "kweʔ"
+        : suffix === "hkwe"
+          ? "hkweʔ"
+          : suffix === "hake"
+            ? "hakeʔ"
+            : suffix === "heke"
+              ? "hekeʔ"
+              : suffix === "hak"
+                ? "hakʔ"
+                : suffix === "ake"
+                  ? "akeʔ"
+                  : suffix === "áke"
+                    ? "ákeʔ"
+                    : undefined;
 
   if (!text) {
     return [];
@@ -185,7 +203,7 @@ export function convertBreakdownToPlainText(
   options: {
     prefix?: BreakdownType;
     suffix?: TextBreakdownSuffix;
-  } = {}
+  } = {},
 ) {
   const breakdownDuplicate = getPrefixArr(options.prefix)
     .concat(breakdown)
@@ -196,8 +214,8 @@ export function convertBreakdownToPlainText(
       Array.isArray(part)
         ? part[0]
         : typeof part === "object"
-        ? part.text
-        : part
+          ? part.text
+          : part,
     )
     .join("");
 }

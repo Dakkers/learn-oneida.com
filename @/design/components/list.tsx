@@ -1,6 +1,10 @@
 import { cn } from "@/lib/utils";
+import { Text } from "./text";
 
-export function List({ children, ordered = false }: {
+export function List({
+  children,
+  ordered = false,
+}: {
   children: React.ReactNode;
   ordered?: boolean;
 }) {
@@ -12,8 +16,10 @@ export function List({ children, ordered = false }: {
   );
 }
 
-List.Item = function ListItem({ children }: {
-  children: React.ReactNode;
-}) {
-  return <li className="ml-6">{children}</li>;
+List.Item = function ListItem({ children }: { children: React.ReactNode }) {
+  return (
+    <li className="ml-6">
+      <Text>{children}</Text>
+    </li>
+  );
 };

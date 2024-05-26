@@ -1,11 +1,16 @@
 import { Heading, HeadingProps } from "@/design/components/heading";
 
 export interface SectionHeadingProps
-  extends Pick<HeadingProps, "children" | "id" | "intent"> {
+  extends Pick<HeadingProps, "align" | "children" | "id" | "intent"> {
   level: 1 | 2 | 3;
 }
 
-export function SectionHeading({ children, id, level }: SectionHeadingProps) {
+export function SectionHeading({
+  align,
+  children,
+  id,
+  level,
+}: SectionHeadingProps) {
   const variantMap = {
     1: "headlineL",
     2: "headlineS",
@@ -13,7 +18,7 @@ export function SectionHeading({ children, id, level }: SectionHeadingProps) {
   } as const;
 
   return (
-    <Heading id={id} level={level} variant={variantMap[level]}>
+    <Heading align={align} id={id} level={level} variant={variantMap[level]}>
       {children}
     </Heading>
   );

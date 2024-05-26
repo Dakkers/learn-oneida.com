@@ -7,11 +7,11 @@ import { ArticleProps } from "./utils";
 export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
   const dayPhʌases = [
     { en: "day", on: "awʌhnísla̲ʔ̲" },
-    { en: "all day", on: "kwʌʔtátiʔ" },
+    { en: "all day", on: "kwʌʔtáti̲ʔ" },
     { en: "during the day", on: "tsiʔniwʌhnísles" },
-    { en: "this day", on: "Tó· niwʌhnisla·ké" },
-    { en: "daytime", on: "kwaʔté·ke" },
-    { en: "every day", on: "yaʔtewʌhnislaké" },
+    { en: "this day", on: "Tó· niwʌhnisla·ké͟" },
+    { en: "daytime", on: "kwaʔté·ke̲" },
+    { en: "every day", on: "yaʔtewʌhnislaké͟" },
   ];
 
   const eveningPhrases = [
@@ -38,21 +38,21 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
   ];
 
   const morningPhrases = [
-    { en: "(earlier) this morning", on: "sʌhaʔ ast ́ éhtsiʔ" },
-    { en: "early morning", on: "astéhtsiʔ" },
-    { en: "the other morning", on: "oyá· tshitwastéhtsiʔ" },
-    { en: ["morning", "morning time"], on: "astehtsiwé·ke" },
+    { en: "(earlier) this morning", on: "sʌhaʔ astéhtsi̲ʔ" },
+    { en: ["early morning", "in the morning"], on: "astéhtsii̲" },
+    { en: "the other morning", on: "oyá· tshitwastéhtsi̲ʔ" },
+    { en: ["morning", "morning time"], on: "astehtsiwé·ke̲" },
   ];
 
   const nightPhrases = [
-    { en: "night", on: "né· wahsuta·té·" },
-    { en: "night-time", on: "kwaʔshuté·ke" },
+    { en: "night", on: "né· wahsuta·té͟·" },
+    { en: "night-time", on: "kwaʔshuté·ke̲" },
     { en: "all night", on: "kwaʔshutátiʔ" },
     { en: "during the night", on: "tsiʔ niwahsu·tés" },
     { en: "every night", on: "yaʔtewahsu·táke" },
     { en: "midnight", on: "ashú·tha" },
     { en: "(when it got dark) last night", on: "kwaʔshu·té·" },
-    { en: ["this night", "tonight"], on: "kaʔikʌ́wahsuta·té·" },
+    { en: ["this night", "tonight"], on: "kaʔi·kʌ́· wahsuta·té͟·" },
     { en: "the other night", on: "oyá· tshitkwaʔshu·té·" },
     { en: "how many nights?", on: "Tó· niwahsu·táke̲ʔ" },
     { en: "when it gets dark", on: "tshityó·kalas" },
@@ -88,16 +88,16 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
   ];
 
   const yearPhrases = [
-    { en: "all year", on: "Ohslakwekú" },
+    { en: "all year", on: "ohslakwekú" },
     {
-      en: ["during the year", "all year", "through the year"],
+      en: ["during the year", "through the year"],
       on: "tsiʔ niyóhsles",
     },
-    { en: "every year", on: "nyaʔteyohslaké" },
+    { en: "every year", on: "nyaʔteyohsla·ké͟" },
     { en: "last year", on: "tsyohslatkʌ́" },
     { en: "next year", on: "yʌtsyohslá·teʔ" },
-    { en: "the other year", on: "oyá· tshikohslá·ke" },
-    { en: "a particular year", on: "kaʔikʌ́ yohsla·té·" },
+    { en: "the other year", on: "oyá· tshikohslá·ke̲" },
+    { en: "a particular year", on: "kaʔi·kʌ́· yohsla·té·" },
     { en: "how many years?", on: "niyohslaké̲" },
     { en: "one year after another", on: "yohslaténi" },
   ];
@@ -117,7 +117,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
     { en: "eclipse", on: "utʌhniʔtáhtuʔ" },
     { en: "more often", on: "sʌ́haʔ yotká·teʔ" },
     { en: "never", on: "yáh newʌtú" },
-    { en: ["now", "today"], on: ["nuʔú·waʔ", "nʌʔú·waʔ"] },
+    { en: ["now", "today"], on: ["nuʔú·wa̲ʔ", "nʌʔú·wa̲ʔ"] },
     { en: "often", on: "yotká·teʔ" },
     { en: "sometimes", on: "swatye·lʌ́" },
   ];

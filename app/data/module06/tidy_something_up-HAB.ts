@@ -7,52 +7,52 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["te", ["k"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["k"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["hs"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["hs"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["h"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["h"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["yu"], "tohtálhos"],
+        breakdown: [["te", "DUAL"], ["yu"], "tohtálhos"],
       },
       {
-        breakdown: ["te", ["w"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["w"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["ty"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["ty"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["yaky"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["yaky"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["tsy"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["tsy"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["hy"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["hy"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["ky"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["ky"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["tw"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["tw"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["yakw"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["yakw"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["sw"], "atohtálhos"],
+        breakdown: [["te", "DUAL"], ["sw"], "atohtálhos"],
       },
       {
-        breakdown: ["te", ["hu"], "tohtálhos"],
+        breakdown: [["te", "DUAL"], ["hu"], "tohtálhos"],
       },
       {
-        breakdown: ["te", ["ku"], "tohtálhos"],
+        breakdown: [["te", "DUAL"], ["ku"], "tohtálhos"],
       },
     ],
     whispered: false,
   },
-  pronouns
+  pronouns,
 );

@@ -49,7 +49,7 @@ export function doTheTranslate(hour: number, minute: number): string[] {
         translateNumber((effectiveHour % 12).toString()),
         HOUR,
         AFTER,
-        NOON
+        NOON,
       );
     }
     result.push(unwhisperWord(subresult.join(" ")).trim());

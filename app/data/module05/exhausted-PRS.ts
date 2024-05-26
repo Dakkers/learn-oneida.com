@@ -7,51 +7,51 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["te", "DU"], ["wak"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["wak"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["hsa"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["hsa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["lo"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["lo"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yako"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yako"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yo"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yo"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yukni"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yukni"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yukni"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["sni"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["sni"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["loti"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yoti"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yukwa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yukwa"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yukwa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["swa"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["swa"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["loti"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["loti"], "hwishʌheyú"],
       },
       {
-        breakdown: [["te", "DU"], ["yoti"], "hwishʌheyú"],
+        breakdown: [["te", "DUAL"], ["yoti"], "hwishʌheyú"],
       },
     ],
   },
-  pronouns
+  pronouns,
 );

@@ -15,7 +15,7 @@ import {
 import { Link } from "@remix-run/react";
 import { SectionHeading } from "~/components/SectionHeading";
 
-import { activeVerbsList } from "~/data/module06/activeVerbsList";
+import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -31,19 +31,6 @@ export const meta: MetaFunction = () => {
 const TENSE_LIST = ["hab", "def", "fut", "ifut", "cmd", "pfv"] as const;
 type Tense = (typeof TENSE_LIST)[number];
 
-const DATA_FULL_LIST = _.flattenDeep(
-  activeVerbsList.map((datum) =>
-    TENSE_LIST.map((tense) => {
-      return (
-        datum[tense]?.phrases.map((p) => ({
-          tense,
-          value: p.phrase,
-        })) ?? []
-      );
-    })
-  )
-);
-
 interface Q {
   answer: string;
   id: string;
@@ -58,6 +45,16 @@ export default function PracticeTenseIdentification() {
   const [questionCountSetting, setQuestionCountSetting] = React.useState("5");
 
   const questions: Array<Q> = React.useMemo(() => {
+    const DATA_FULL_LIST = _.flattenDeep(
+      createModule6VerbListFlat().map(
+        (v) =>
+          v.phrases!.map((p) => ({
+            tense: v.tense,
+            value: p.phrase,
+          })) ?? [],
+      ),
+    );
+
     if (!hasStarted) {
       return [];
     }

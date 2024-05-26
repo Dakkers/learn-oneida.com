@@ -323,7 +323,7 @@ function RelativesTable({
           // @ts-expect-error To be addressed in LO-16
           result[ds.en] = ds.data.phrases.find(
             // @ts-expect-error To be addressed in LO-16
-            (p) => p.pronoun === pronoun
+            (p) => p.pronoun === pronoun,
           ).breakdown;
         }
         return result;

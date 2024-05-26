@@ -3,6 +3,7 @@ import { SectionHeading } from "../SectionHeading";
 import { Text } from "@/design/components/text";
 import { ArticleProps } from "./utils";
 import { Letter } from "../Letter";
+import { List } from "@/design/components/list";
 
 export function GlottalStopArticle({ level = 1 }: ArticleProps) {
   return (
@@ -22,11 +23,25 @@ export function GlottalStopArticle({ level = 1 }: ArticleProps) {
         Example: When saying “no,” people sometimes say “uh-unh.” (The glottal
         stop occurs after the “uh” and before the “unh.”) Many people also
         glottalize the double-t in words like kitten, so that they say “kiʔten.”
-        Examples of Onʌyoteʔa·ká· words with glottal stops are: oʔwá·luʔ,
-        oʔsluniʔkéha, otsiʔnowʌ́, kátsheʔ, otsí·tsyaʔ. Sometimes a vowel with a
-        glottal stop is given a short or a long stress. Examples: wakyo·té·,
-        ká·khaleʔ, laksá·, kanutó·tsliʔ.
+        Examples of Onʌyoteʔa·ká· words with glottal stops are:
       </Text>
+      <List>
+        <List.Item>oʔwá·luʔ</List.Item>
+        <List.Item>oʔsluniʔkéha</List.Item>
+        <List.Item>otsiʔnowʌ́</List.Item>
+        <List.Item>kátsheʔ</List.Item>
+        <List.Item>otsí·tsyaʔ</List.Item>
+      </List>
+      <Text>
+        Sometimes a vowel with a glottal stop is given a short or a long stress.
+        Examples:
+      </Text>
+      <List>
+        <List.Item>wakyo·té·</List.Item>
+        <List.Item>ká·khaleʔ</List.Item>
+        <List.Item>laksá·</List.Item>
+        <List.Item>kanutó·tsliʔ</List.Item>
+      </List>
     </Flex>
   );
 }
