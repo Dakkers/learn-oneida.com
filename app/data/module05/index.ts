@@ -806,18 +806,18 @@ export const characterTenseData: Array<Partial<TenseDatum>> = [
     cmd: ["s", "atlaʔswiyó", "hak"],
     en: "be lucky",
   },
-  {
-    key: "getReady",
-    dict: [136, 1148],
-    stem: "A stem",
-    root: ["-atatewyʌnʌtaʔ-"],
-    present: ["wak", "atatewyʌnʌtá·u"],
-    past: ["wak", "atatewyʌnʌtaʔu·", "hné"],
-    fut: ["ʌ", "wak", "atatewyʌnʌtaʔú", "hakeʔ"],
-    ifut: ["a", "·ukw", "atatewyʌnʌtaʔú", "hakeʔ"],
-    cmd: ["s", "atatewyʌnʌtaʔú", "hak"],
-    en: "get oneself ready",
-  },
+  // {
+  //   key: "getReady",
+  //   dict: [136, 1148],
+  //   stem: "A stem",
+  //   root: ["-atatewyʌnʌtaʔ-"],
+  //   present: ["wak", "atatewyʌnʌtá·u"],
+  //   past: ["wak", "atatewyʌnʌtaʔu·", "hné"],
+  //   fut: ["ʌ", "wak", "atatewyʌnʌtaʔú", "hakeʔ"],
+  //   ifut: ["a", "·ukw", "atatewyʌnʌtaʔú", "hakeʔ"],
+  //   cmd: ["s", "atatewyʌnʌtaʔú", "hak"],
+  //   en: "get oneself ready",
+  // },
   {
     key: "wealthy",
     dict: [213],
@@ -1134,19 +1134,20 @@ export const emotionTenseData: Array<Partial<TenseDatum>> = [
 ];
 
 export const bodyTenseData: Array<Partial<TenseDatum>> = [
-  {
-    key: "beTheWaySomeoneLooks",
-    en: "be the way someone looks",
-    dict: [803, 1061],
-    stem: 'C stem with "ni" prefix',
-    root: ["-yaʔtoʔtʌ-"],
-    present: ["ni", "k", "yaʔtó·tʌ"],
-    past: ["ni", "k", "yaʔtoʔtʌ́", "hne·"],
-    fut: ["n", "ʌ", "k", "yaʔtoʔtʌ́", "hakeʔ"],
-    ifut: ["n", "a", "k", "yaʔtoʔtʌ́", "hakeʔ"],
-    cmd: ["n", "ʌ", "hs", "yaʔtoʔtʌ́", "hak"],
-    type: "PR",
-  },
+  // TODO - what are some examples of this?
+  // {
+  //   key: "beTheWaySomeoneLooks",
+  //   en: "be the way someone looks",
+  //   dict: [803, 1061],
+  //   stem: 'C stem with "ni" prefix',
+  //   root: ["-yaʔtoʔtʌ-"],
+  //   present: ["ni", "k", "yaʔtó·tʌ"],
+  //   past: ["ni", "k", "yaʔtoʔtʌ́", "hne·"],
+  //   fut: ["n", "ʌ", "k", "yaʔtoʔtʌ́", "hakeʔ"],
+  //   ifut: ["n", "a", "k", "yaʔtoʔtʌ́", "hakeʔ"],
+  //   cmd: ["n", "ʌ", "hs", "yaʔtoʔtʌ́", "hak"],
+  //   type: "PR",
+  // },
 
   // TODO - pregnant is `nel` in my version of the dictionary?
 

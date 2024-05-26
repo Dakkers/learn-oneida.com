@@ -3,12 +3,12 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} used to be VERB",
+    translation: "{{pronoun}} used to be busy",
     type: "PB",
     phrases: [
       {
         breakdown: [
-          ["te"],
+          ["te", "DUAL"],
           ["wak"],
           ["e", "EP"],
           "wyʌnhalaʔú·",

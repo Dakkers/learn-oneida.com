@@ -3,53 +3,53 @@ import { pronouns } from "~/utils";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} {{refVerb}} VERB",
+    translation: "{{pronoun}} {{refVerb}} busy",
     type: "PB",
     phrases: [
       {
-        breakdown: [["te"], ["wak"], ["e", "EP"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["wak"], ["e", "EP"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["sa"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["sa"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["ho"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["ho"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["yako"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["yako"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["yo"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["yo"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["yukni"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["yukni"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["yukni"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["yukni"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["sni"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["sni"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["hoti"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["hoti"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["yoti"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["yoti"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["yukwa"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["yukwa"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["yukwa"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["yukwa"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["swa"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["swa"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["hoti"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["hoti"], "wyʌnhalá·u"],
       },
       {
-        breakdown: [["te"], ["yoti"], "wyʌnhalá·u"],
+        breakdown: [["te", "DUAL"], ["yoti"], "wyʌnhalá·u"],
       },
     ],
   },
