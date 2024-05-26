@@ -206,6 +206,7 @@ type Module6VerbKey =
   | "study"
   | "tidySomethingUp"
   | "understand"
+  | "urinate"
   | "wakeUp"
   | "washSomething"
   | "watchSomething"
@@ -556,6 +557,10 @@ export function createModule6VerbList() {
       en: "understand, grasp",
       key: "understand",
       root: "-ʔnikuhlayʌta-",
+    },
+    {
+      key: "urinate",
+      root: "-anistyake-",
     },
     {
       key: "wakeUp",

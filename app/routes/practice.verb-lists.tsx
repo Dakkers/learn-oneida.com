@@ -167,7 +167,7 @@ export default function PracticeTenseConjugation() {
         You can pick a specific pronominal and tense to work with too.
       </Text>
 
-      <Flex align="end" gap={2}>
+      <Flex direction="column" gap={2}>
         <Select
           label="Verb List"
           onChange={(value) => {

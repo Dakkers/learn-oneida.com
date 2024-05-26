@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const breakpointsVariants = ['sm', 'md', 'lg', 'xl']
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -10,6 +12,27 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   prefix: "",
+  safelist: [
+    ...[
+      /flex-row/,
+      /flex-col/,
+      /items-+/,
+      /-?m-+/,
+      /-?mx-+/,
+      /-?my-+/,
+      /-?mt-+/,
+      /-?mr-+/,
+      /-?mb-+/,
+      /-?ml-+/,
+      /p-+/,
+      /px-+/,
+      /py-+/,
+      /pt-+/,
+      /pr-+/,
+      /pb-+/,
+      /pl-+/,
+    ].map((pattern) => ({ pattern, variants: breakpointsVariants }))
+  ],
   theme: {
     container: {
       center: true,
