@@ -6,12 +6,10 @@ import { Button } from "@/design/primitives/button";
 import { Quiz, useQuizContext } from "~/components/practice/Quiz";
 import { Box } from "@/design/components/box";
 import {
-  bodyTenseData,
-  characterTenseData,
-  emotionTenseData,
-  mindTenseData,
-  miscTenseData,
-  physicalTenseData,
+  MODULE_5_VERB_TENSE_LIST,
+  Module5VerbTense,
+  createModule5VerbsList,
+  module5VerbTenseMap,
 } from "~/data/module05";
 import { convertBreakdownToPlainText } from "~/components/TextBreakdown";
 import _ from "lodash";
@@ -35,33 +33,14 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-const TENSE_LIST = ["present", "past", "fut", "ifut", "cmd"] as const;
-type Tense = (typeof TENSE_LIST)[number];
-
 const DATA_FULL_LIST = _.flattenDeep(
-  [
-    ...characterTenseData,
-    ...bodyTenseData,
-    ...mindTenseData,
-    ...miscTenseData,
-    ...emotionTenseData,
-    ...physicalTenseData,
-  ].map((datum) =>
-    TENSE_LIST.map((tense) => {
+  createModule5VerbsList().map((datum) =>
+    MODULE_5_VERB_TENSE_LIST.map((tense) => {
       const value = datum[tense];
-      if (Array.isArray(value)) {
-        return { tense, value: convertBreakdownToPlainText(value) };
-      } else if ("items" in value) {
-        return value.items.map((item) => ({
-          tense,
-          value: convertBreakdownToPlainText(item.on),
-        }));
-      } else {
-        return {
-          tense,
-          value: convertBreakdownToPlainText(value.on),
-        };
-      }
+      return {
+        tense,
+        value: convertBreakdownToPlainText(value.phrases[0].breakdown),
+      };
     }),
   ),
 );
@@ -85,7 +64,8 @@ export default function PracticeTenseIdentification() {
     }
     const result: Q[] = new Array(Number(questionCountSetting));
     for (let i = 0; i < result.length; i++) {
-      const randomTense = TENSE_LIST[Math.floor(Math.random() * 5)];
+      const randomTense =
+        MODULE_5_VERB_TENSE_LIST[Math.floor(Math.random() * 5)];
       const datum =
         _.sample(DATA_FULL_LIST.filter((d) => d.tense === randomTense)) ??
         DATA_FULL_LIST.find((d) => d.tense === randomTense);
@@ -122,10 +102,12 @@ export default function PracticeTenseIdentification() {
             getResultForQuestion={(index, selectedAnswer) => {
               const q = questions[index];
               return {
-                correctAnswer: tenseMap[q.answer as Tense],
+                correctAnswer:
+                  module5VerbTenseMap[q.answer as Module5VerbTense],
                 isCorrect: q.answer === selectedAnswer,
                 question: `What is the tense for: ${q.question}`,
-                selectedAnswer: tenseMap[selectedAnswer as Tense],
+                selectedAnswer:
+                  module5VerbTenseMap[selectedAnswer as Module5VerbTense],
               };
             }}
             numberOfQuestions={Number(questionCountSetting)}
@@ -169,14 +151,6 @@ export default function PracticeTenseIdentification() {
   );
 }
 
-const tenseMap = {
-  cmd: "Command",
-  fut: "Future",
-  ifut: "Indefinite Future",
-  past: "Past",
-  present: "Present",
-} as const;
-
 function QuestionLol({ answer, id, question }: Q) {
   const quizContext = useQuizContext();
   console.log(quizContext);
@@ -190,9 +164,9 @@ function QuestionLol({ answer, id, question }: Q) {
         <Flex align="center" direction="column" gap={4}>
           <AnswerMultipleChoiceButtons
             isCorrect={quizContext.answer === answer}
-            options={TENSE_LIST.map((t) => ({
+            options={MODULE_5_VERB_TENSE_LIST.map((t) => ({
               key: t,
-              text: tenseMap[t],
+              text: module5VerbTenseMap[t],
             }))}
             questionKey={id}
           />

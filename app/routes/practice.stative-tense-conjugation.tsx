@@ -2,15 +2,18 @@ import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
 import React, { useMemo } from "react";
 import { Heading } from "@/design/components/heading";
-import { module5VerbsList } from "~/data/module05";
 import { Text } from "@/design/components/text";
 import { Link } from "@remix-run/react";
 import { Select } from "@/design/components/select";
 import { Button } from "@/design/primitives/button";
 import { arrayify } from "~/utils";
 import { z } from "zod";
-import { sanitizeIrregularCharacters } from "~/utils/words";
 import { TableAsForm } from "~/components/practice/TableAsForm";
+import {
+  MODULE_5_VERB_TENSE_LIST,
+  createModule5VerbsList,
+  module5VerbTenseMap,
+} from "~/data/module05";
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,20 +26,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-const TENSE_LIST = ["present", "past", "fut", "ifut", "cmd"] as const;
-
-const tenseMap = {
-  cmd: "Command",
-  fut: "Future",
-  ifut: "Indefinite Future",
-  past: "Past",
-  present: "Present",
-} as const;
-
 export default function PracticeTenseConjugation() {
   const options = React.useMemo(
     () =>
-      module5VerbsList.map((datum) => ({
+      createModule5VerbsList().map((datum) => ({
         label: `${arrayify(datum.root)[0]} (${datum.en})`,
         value: datum.key,
       })),
@@ -47,22 +40,17 @@ export default function PracticeTenseConjugation() {
   const [hasStarted, setHasStarted] = React.useState(false);
 
   const rows = useMemo(() => {
-    const datum = module5VerbsList.find((item) => item.key === word);
+    const datum = createModule5VerbsList().find((item) => item.key === word);
     if (!datum) {
       return [];
     }
 
-    return TENSE_LIST.map((tense) => {
+    return MODULE_5_VERB_TENSE_LIST.map((tense) => {
       const val = datum[tense];
       return {
-        en: tenseMap[tense],
+        en: module5VerbTenseMap[tense],
         key: `${datum.key}_${tense}`,
-        on: (Array.isArray(val)
-          ? val
-          : "items" in val
-            ? val.items[0].on
-            : val.on
-        ).join(""),
+        // on:
       };
     });
   }, [word]);

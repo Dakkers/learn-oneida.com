@@ -11,15 +11,6 @@ import { Box } from "@/design/components/box";
 import { Notice } from "@/design/components/notice";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import {
-  characterTenseData,
-  bodyTenseData,
-  physicalTenseData,
-  miscTenseData,
-  mindTenseData,
-  emotionTenseData,
-  TenseDatum,
-} from "~/data/module05";
-import {
   BreakdownArray,
   BreakdownType,
   TextBreakdown,
@@ -29,6 +20,7 @@ import smallData from "~/data/module05/kʌʔ_ni-a";
 import { HeightWeightArticle } from "~/components/articles/Weight";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
+import { Module5VerbDatum, createModule5VerbsList } from "~/data/module05";
 
 export const meta: MetaFunction = () => {
   return [
@@ -97,12 +89,12 @@ export default function LearnModule05() {
 
       <StativeVerbExamples />
 
-      <VerbSection data={characterTenseData} title="Character" />
-      <VerbSection data={mindTenseData} title="Mind" />
-      <VerbSection data={emotionTenseData} title="Emotions" />
-      <VerbSection data={bodyTenseData} title="Body" />
-      <VerbSection data={physicalTenseData} title="Physical" />
-      <VerbSection data={miscTenseData} title="Misc" />
+      <VerbSection category="character" title="Character" />
+      <VerbSection category="mind" title="Mind" />
+      <VerbSection category="emotion" title="Emotions" />
+      <VerbSection category="body" title="Body" />
+      <VerbSection category="physical" title="Physical" />
+      <VerbSection category="misc" title="Misc" />
 
       <OtherStativeVerbs />
       <IrregularStativeVerbsSection />
@@ -322,13 +314,15 @@ function StativeVerbExamples() {
   );
 }
 
-function VerbSection({ data, title }: { data: TenseDatum[]; title: string }) {
+function VerbSection({ category, title }: { category: string; title: string }) {
+  const data = createModule5VerbsList().filter((d) => d.category === category);
+
   return (
     <>
       <SectionHeading id={`verbs-${title.toLowerCase()}`} level={2}>
         Verbs — {title}
       </SectionHeading>
-      {data.map((d, i) => (
+      {data.map((d) => (
         <VerbSectionItem
           {...d}
           key={d.key}
@@ -347,9 +341,9 @@ function VerbSectionItem({
   id,
   ifut,
   past,
-  present,
+  prs: present,
   typeFallback,
-}: TenseDatum & {
+}: Module5VerbDatum & {
   id: string;
   typeFallback?: BreakdownType;
 }) {

@@ -28,9 +28,16 @@ import {
   Module6VerbTense,
   createModule6VerbList,
   createModule6VerbListFlat,
+  module6VerbTenseMap,
 } from "~/data/module06/activeVerbsList";
 import { SectionHeading } from "~/components/SectionHeading";
-import { module5VerbsList } from "~/data/module05";
+import {
+  MODULE_5_VERB_TENSE_LIST,
+  Module5VerbTense,
+  createModule5VerbsList,
+  createModule5VerbsListFlat,
+  module5VerbTenseMap,
+} from "~/data/module05";
 
 export const meta: MetaFunction = () => {
   return [
@@ -42,25 +49,16 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-const TENSE_LIST_M5 = ["present", "past", "fut", "ifut", "cmd"] as const;
-type TenseM5 = (typeof TENSE_LIST_M5)[number];
-
-const tenseMap: Record<TenseM5 | Module6VerbTense, string> = {
-  cmd: "Command",
-  fut: "Future",
-  ifut: "Indefinite",
-  def: "Definite",
-  pfv: "Perfective",
-  hab: "Habitual",
-  present: "Present",
-  past: "Past",
+const tenseMap: Record<Module5VerbTense | Module6VerbTense, string> = {
+  ...module5VerbTenseMap,
+  ...module6VerbTenseMap,
 } as const;
 
 export default function PracticeTenseConjugation() {
   const [selectedVerbList, setSelectedVerbList] = React.useState("m6");
   const [selectedPronoun, setSelectedPronoun] = React.useState("i");
   const [selectedTense, setSelectedTense] = React.useState<
-    TenseM5 | Module6VerbTense
+    Module5VerbTense | Module6VerbTense
   >("hab");
   const [hasStarted, setHasStarted] = React.useState(false);
   const [isCorrect, setIsCorrect] = React.useState(false);
@@ -94,7 +92,7 @@ export default function PracticeTenseConjugation() {
   const tenseOptions = React.useMemo(() => {
     return (
       selectedVerbList === "m5"
-        ? TENSE_LIST_M5
+        ? MODULE_5_VERB_TENSE_LIST
         : selectedVerbList === "m6"
           ? MODULE_6_VERB_TENSE_LIST
           : []
@@ -119,18 +117,14 @@ export default function PracticeTenseConjugation() {
 
   const rows = React.useMemo(() => {
     if (selectedVerbList === "m5") {
-      return module5VerbsList.map((v) => {
-        const tenseEntry = v[selectedTense as TenseM5];
-        const english = Array.isArray(tenseEntry)
-          ? v.en
-          : "items" in tenseEntry
-            ? tenseEntry.items[0].en
-            : tenseEntry.en;
-        return {
-          en: english,
-          key: v.key,
-        };
-      });
+      return createModule5VerbsList()
+        .map((v) => {
+          return {
+            en: v.en,
+            key: v.key,
+          };
+        })
+        .filter(Boolean);
     } else if (selectedVerbList === "m6") {
       return createModule6VerbList().map((v) => {
         return {
@@ -140,12 +134,12 @@ export default function PracticeTenseConjugation() {
       });
     }
     return [];
-  }, [selectedVerbList, selectedTense]);
+  }, [selectedVerbList]);
 
   const defaultValues = React.useMemo(() => {
     const keys = (
       selectedVerbList === "m5"
-        ? module5VerbsList
+        ? createModule5VerbsListFlat()
         : selectedVerbList === "m6"
           ? createModule6VerbListFlat()
           : []
@@ -171,7 +165,7 @@ export default function PracticeTenseConjugation() {
         <Select
           label="Verb List"
           onChange={(value) => {
-            setSelectedTense(value === "m5" ? "present" : "hab");
+            setSelectedTense(value === "m5" ? "prs" : "hab");
             setSelectedVerbList(value);
           }}
           options={[
@@ -184,7 +178,7 @@ export default function PracticeTenseConjugation() {
         <Select
           label="Tense"
           onChange={(value) =>
-            setSelectedTense(value as TenseM5 | Module6VerbTense)
+            setSelectedTense(value as Module5VerbTense | Module6VerbTense)
           }
           options={tenseOptions}
           value={selectedTense}
@@ -269,7 +263,12 @@ function checkCorrectAnswer(
   selectedPronoun: Pronoun,
 ) {
   if (selectedVerbList === "m5") {
-    return checkCorrectAnswerForModule5(key, answer, selectedTense as TenseM5);
+    return checkCorrectAnswerForModule5(
+      key,
+      answer,
+      selectedTense as Module5VerbTense,
+      selectedPronoun,
+    );
   } else if (selectedVerbList === "m6") {
     const verbDatum = createModule6VerbList().find((v) => v.key === key);
     if (verbDatum) {
@@ -297,26 +296,26 @@ function checkCorrectAnswer(
 function checkCorrectAnswerForModule5(
   key: string,
   answer: string,
-  tense: TenseM5,
+  tense: Module5VerbTense,
+  selectedPronoun: Pronoun,
 ) {
-  const phraseObj = module5VerbsList.find((v) => v.key === key);
+  const phraseObj = createModule5VerbsList().find((v) => v.key === key);
   if (phraseObj) {
     const sanitizedAnswer = sanitizeIrregularCharacters(answer);
     const tenseEntry = phraseObj[tense];
-    const answersToCheck = Array.isArray(tenseEntry)
-      ? [tenseEntry.join("")]
-      : "items" in tenseEntry
-        ? tenseEntry.items.map((item) => item.on.join(""))
-        : [tenseEntry.on.join("")];
+    if (!tenseEntry) {
+      return null;
+    }
+    const correctAnswer = tenseEntry.phrases.find(
+      (p) => p.pronoun === selectedPronoun,
+    )?.phrase;
 
     if (
       !answer ||
-      !answersToCheck.find(
-        (correctAnswer) =>
-          sanitizedAnswer === sanitizeIrregularCharacters(correctAnswer),
-      )
+      !correctAnswer ||
+      sanitizedAnswer !== sanitizeIrregularCharacters(correctAnswer)
     ) {
-      return answersToCheck;
+      return correctAnswer;
     }
   }
   return null;

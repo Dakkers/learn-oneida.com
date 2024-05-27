@@ -179,6 +179,9 @@ import workPfvData from "./work-PFV";
 import { Pronoun, pronouns } from "~/utils";
 import _ from "lodash";
 
+const EXCEPTION_IT_ONLY = 1;
+const EXCEPTION_NO_COMMAND = 2;
+
 type Module6VerbKey =
   | "answer"
   | "bathe"
@@ -220,6 +223,19 @@ export const MODULE_6_VERB_TENSE_LIST = [
 ] as const;
 
 export type Module6VerbTense = (typeof MODULE_6_VERB_TENSE_LIST)[number];
+
+export type Module6VerbDatum = {
+  cmd: ParadigmData | null;
+  def: ParadigmData;
+  en: string;
+  exceptions?: number[];
+  fut: ParadigmData;
+  hab: ParadigmData;
+  ifut: ParadigmData;
+  key: Module6VerbKey;
+  pfv: ParadigmData;
+  pronouns?: Pronoun[];
+};
 
 const mapping = {
   answerCmd: answerCmdData,
@@ -403,22 +419,6 @@ const mapping = {
   workIfut: workIfutData,
   workPfv: workPfvData,
 } as const;
-
-const EXCEPTION_IT_ONLY = 1;
-const EXCEPTION_NO_COMMAND = 2;
-
-export type Module6VerbDatum = {
-  cmd: ParadigmData | null;
-  def: ParadigmData;
-  en: string;
-  exceptions?: number[];
-  fut: ParadigmData;
-  hab: ParadigmData;
-  ifut: ParadigmData;
-  key: Module6VerbKey;
-  pfv: ParadigmData;
-  pronouns?: Pronoun[];
-};
 
 export const module6VerbTenseMap: Record<Module6VerbTense, string> = {
   cmd: "Command",
