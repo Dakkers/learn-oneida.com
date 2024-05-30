@@ -16,14 +16,18 @@ export const meta: MetaFunction = () => {
 
 export default function Practice() {
   const items = [
-    {
-      href: "/being-somewhere",
-      label: "Being somewhere",
-    },
+    // {
+    //   href: "/being-somewhere",
+    //   label: "Being somewhere",
+    // },
     // {
     //   href: "/cardinal-directions",
     //   label: "Cardinal Directions",
     // },
+    {
+      href: "/counting-time",
+      label: "Counting time",
+    },
     // {
     //   href: "/days-of-the-week",
     //   label: "Days of the week",

@@ -7,43 +7,43 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["h"], "atewyʌ́·tuʔ"],
       },
       {
         breakdown: [["ʌ", "FUT"], ["yu"], "tewyʌ·tú"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "atewyʌ́·tuʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "atewyʌ·tú"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atewyʌ́·tuʔ"],
       },
       {
         breakdown: [["ʌ", "FUT"], ["hu"], "tewyʌ·tú"],

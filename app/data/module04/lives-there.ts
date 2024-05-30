@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["te", ["k"], "nákleʔ"],
+        breakdown: [["te", "CIS"], ["k"], "nákleʔ"],
       },
       {
-        breakdown: ["te", ["hs"], "nákleʔ"],
+        breakdown: [["te", "CIS"], ["hs"], "nákleʔ"],
       },
       {
-        breakdown: ["t", ["ha"], "nákleʔ"],
+        breakdown: [["t", "CIS"], ["ha"], "nákleʔ"],
       },
       {
-        breakdown: ["t", ["yé"], "nákleʔ"],
+        breakdown: [["t", "CIS"], ["yé"], "nákleʔ"],
       },
       {
-        breakdown: ["t", ["ka"], "nákleʔ"],
+        breakdown: [["t", "CIS"], ["ka"], "nákleʔ"],
       },
       {
-        breakdown: ["ti", ["tni"], "nákleʔ"],
+        breakdown: [["ti", "CIS"], ["tni"], "nákleʔ"],
       },
       {
-        breakdown: ["t", ["yakni"], "nákleʔ"],
+        breakdown: [["t", "CIS"], ["yakni"], "nákleʔ"],
       },
       {
-        breakdown: ["ti", ["sni"], "nákleʔ"],
+        breakdown: [["ti", "CIS"], ["sni"], "nákleʔ"],
       },
       {
-        breakdown: ["t", ["hni"], "nákleʔ"],
+        breakdown: [["t", "CIS"], ["hni"], "nákleʔ"],
       },
       {
-        breakdown: ["t", ["kni"], "nákleʔ"],
+        breakdown: [["t", "CIS"], ["kni"], "nákleʔ"],
       },
       {
-        breakdown: ["ti", ["twa"], "nákleʔ"],
+        breakdown: [["ti", "CIS"], ["twa"], "nákleʔ"],
       },
       {
-        breakdown: ["t", ["yakwa"], "nákleʔ"],
+        breakdown: [["t", "CIS"], ["yakwa"], "nákleʔ"],
       },
       {
-        breakdown: ["ti", ["swa"], "nákleʔ"],
+        breakdown: [["ti", "CIS"], ["swa"], "nákleʔ"],
       },
       {
-        breakdown: ["t", ["hati"], "nákleʔ"],
+        breakdown: [["t", "CIS"], ["hati"], "nákleʔ"],
       },
       {
-        breakdown: ["t", ["kuti"], "nákleʔ"],
+        breakdown: [["t", "CIS"], ["kuti"], "nákleʔ"],
       },
     ],
   },

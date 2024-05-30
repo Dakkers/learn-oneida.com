@@ -19,7 +19,7 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
         ]}
         data={[
           ["one human being", ["ts", { text: "y" }, "ukwe·tát"]],
-          ["two human beings", ["te", { text: "y" }, "ukwe·tákeʔ"]],
+          ["two human beings", [["te", "DUAL"], { text: "y" }, "ukwe·tákeʔ"]],
           ["three human beings", ["áhsʌ ni", { text: "y" }, "ukwe·tákeʔ"]],
           ["four human beings", ["kayé ni", { text: "y" }, "ukwe·tákeʔ"]],
           ["five human beings", ["wísk ni", { text: "y" }, "ukwe·tákeʔ"]],
@@ -48,8 +48,8 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
           ],
           [
             "two",
-            ["te", { text: "hni" }, "yáhse"],
-            ["te", { text: "kni" }, "yáhse"],
+            [["te", "DUAL"], { text: "hni" }, "yáhse"],
+            [["te", "DUAL"], { text: "kni" }, "yáhse"],
           ],
           [
             "three",

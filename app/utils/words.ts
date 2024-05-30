@@ -66,23 +66,36 @@ export function removeWhisper(value: string) {
     .replaceAll("ˍ", "");
 }
 
-export function removeGlottalStop(value: string) {
-  return value
-    .replaceAll("ʔ", "")
-    .replaceAll("ʼ", "") // U+02bc
-    .replaceAll("'", "")
-    .replaceAll("’", ""); // U+2019
-}
-
 export function removeLongStress(value: string) {
   return value.replaceAll("·", "").replaceAll(":", "");
 }
 
 export function sanitizeIrregularCharacters(value: string) {
-  return [
-    removeAccents,
-    removeWhisper,
-    removeGlottalStop,
-    removeLongStress,
-  ].reduce((result, fn) => fn(result), value.toLowerCase());
+  return [removeAccents, removeWhisper, removeLongStress].reduce(
+    (result, fn) => fn(result),
+    value.toLowerCase(),
+  );
+}
+
+function replaceForCaret(value: string) {
+  let result = value;
+  for (const char of ["v", "^"]) {
+    result = result.replaceAll(char, "ʌ");
+  }
+  return result;
+}
+
+function replaceForGlottal(value: string) {
+  let result = value;
+  for (const char of ["ʼ", "'", "’"]) {
+    result = result.replaceAll(char, "ʔ");
+  }
+  return result;
+}
+
+export function standardizeCharacters(value: string) {
+  return [replaceForCaret, replaceForGlottal].reduce(
+    (result, fn) => fn(result),
+    value.toLowerCase(),
+  );
 }

@@ -53,11 +53,7 @@ import {
 import sample from "lodash/sample";
 import { Select } from "@/design/components/select";
 import { SectionHeading } from "~/components/SectionHeading";
-import {
-  ACTIVE_VERB_TENSE_LIST,
-  activeVerbTenseMap,
-  activeVerbsList,
-} from "~/data/module06/activeVerbsList";
+import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
 
 export const meta: MetaFunction = () => {
@@ -121,11 +117,7 @@ export default function ToolsParadigm() {
     ["like-red", dataLikeRedJson],
     ["otshyus", dataOtshyusJson],
     ["ʌtole", dataΛtoleJson],
-    ...(_.flatten(
-      activeVerbsList.map((v) =>
-        ACTIVE_VERB_TENSE_LIST.map((tense) => [`${v.key}-${tense}`, v[tense]]),
-      ),
-    ) as Array<[string, ParadigmData]>),
+    ...createModule6VerbListFlat().map((v) => [v.key, v]),
     ...module4Options.map((item) => [item[0], item[1]]),
   ]);
 
@@ -152,14 +144,10 @@ export default function ToolsParadigm() {
         { label: "look for (something)", value: "ehsaks" },
         { label: "pull someting out", value: "otshyus" },
         { label: "reside some place", value: "i_tlu" },
-        ..._.flattenDeep(
-          activeVerbsList.map((datum) =>
-            ACTIVE_VERB_TENSE_LIST.map((tense) => ({
-              label: `${datum.en} (${activeVerbTenseMap[tense]})`,
-              value: `${datum.key}-${tense}`,
-            })),
-          ),
-        ),
+        ...createModule6VerbListFlat().map((datum) => ({
+          label: datum.en,
+          value: datum.key,
+        })),
         ...module4Options.map((item) => ({ label: item[2], value: item[0] })),
       ].sort((opt1, opt2) => opt1.label.localeCompare(opt2.label)),
     [module4Options],

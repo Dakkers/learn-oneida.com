@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], "te", ["k"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["te", "CIS"], ["k"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "te", ["hs"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["te", "CIS"], ["hs"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["ha"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["ha"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["yé"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["yé"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["ka"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["ka"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "ti", ["tni"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["ti", "CIS"], ["tni"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["yakni"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["yakni"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "ti", ["sni"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["ti", "CIS"], ["sni"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["hni"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["hni"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["kni"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["kni"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "ti", ["twa"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["ti", "CIS"], ["twa"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["yakwa"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["yakwa"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "ti", ["swa"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["ti", "CIS"], ["swa"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["hati"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["hati"], "náklekeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["kuti"], "náklekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["kuti"], "náklekeʔ"],
       },
     ],
   },

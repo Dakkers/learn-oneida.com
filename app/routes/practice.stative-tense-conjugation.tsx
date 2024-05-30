@@ -1,34 +1,16 @@
 import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
-import React from "react";
+import React, { useMemo } from "react";
 import { Heading } from "@/design/components/heading";
-import {
-  bodyTenseData,
-  characterTenseData,
-  emotionTenseData,
-  mindTenseData,
-  miscTenseData,
-  physicalTenseData,
-} from "~/data/module05";
+import { module5VerbsList } from "~/data/module05";
 import { Text } from "@/design/components/text";
 import { Link } from "@remix-run/react";
-import { TableWrapper } from "@/design/components/tableWrapper";
 import { Select } from "@/design/components/select";
 import { Button } from "@/design/primitives/button";
 import { arrayify } from "~/utils";
-import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { sanitizeIrregularCharacters } from "~/utils/words";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/design/primitives/form";
-import { Input } from "@/design/primitives/input";
-import { Notice } from "@/design/components/notice";
+import { TableAsForm } from "~/components/practice/TableAsForm";
 
 export const meta: MetaFunction = () => {
   return [
@@ -42,16 +24,6 @@ export const meta: MetaFunction = () => {
 };
 
 const TENSE_LIST = ["present", "past", "fut", "ifut", "cmd"] as const;
-type Tense = (typeof TENSE_LIST)[number];
-
-const DATA_FULL_LIST = [
-  ...characterTenseData,
-  ...bodyTenseData,
-  ...mindTenseData,
-  ...miscTenseData,
-  ...emotionTenseData,
-  ...physicalTenseData,
-];
 
 const tenseMap = {
   cmd: "Command",
@@ -61,51 +33,45 @@ const tenseMap = {
   present: "Present",
 } as const;
 
-const formSchema = z.object(
-  Object.fromEntries(TENSE_LIST.map((tense) => [tense, z.string().nullish()])),
-);
-
 export default function PracticeTenseConjugation() {
   const options = React.useMemo(
     () =>
-      DATA_FULL_LIST.map((datum, i) => ({
+      module5VerbsList.map((datum) => ({
         label: `${arrayify(datum.root)[0]} (${datum.en})`,
-        value: i.toString(),
+        value: datum.key,
       })),
     [],
   );
 
-  const [word, setWord] = React.useState("0");
+  const [word, setWord] = React.useState("goodPerson");
   const [hasStarted, setHasStarted] = React.useState(false);
-  const [isCorrect, setIsCorrect] = React.useState(false);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    defaultValues: {},
-    resolver: zodResolver(formSchema),
-  });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    let hasErrors = false;
-    for (const key in values) {
-      const answer = values[key];
-      const result = checkCorrectAnswer(
-        answer ?? "",
-        parseInt(word),
-        key as Tense,
-      );
-      if (result) {
-        hasErrors = true;
-        form.setError(key, {
-          message:
-            result.length > 1
-              ? `Valid answers: ${result.join(", ")}`
-              : `Answer: ${result[0]}`,
-          type: "custom",
-        });
-      }
+  const rows = useMemo(() => {
+    const datum = module5VerbsList.find((item) => item.key === word);
+    if (!datum) {
+      return [];
     }
-    setIsCorrect(!hasErrors);
-  }
+
+    return TENSE_LIST.map((tense) => {
+      const val = datum[tense];
+      return {
+        en: tenseMap[tense],
+        key: `${datum.key}_${tense}`,
+        on: (Array.isArray(val)
+          ? val
+          : "items" in val
+            ? val.items[0].on
+            : val.on
+        ).join(""),
+      };
+    });
+  }, [word]);
+
+  const formSchema = useMemo(() => {
+    return z.object(
+      Object.fromEntries(rows.map((r) => [r.key, z.string().optional()])),
+    );
+  }, [rows]);
 
   return (
     <Flex direction="column" gap={4}>
@@ -144,94 +110,15 @@ export default function PracticeTenseConjugation() {
       </Flex>
 
       {hasStarted && (
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <Flex direction="column" gap={4}>
-              <TableWrapper
-                columns={[
-                  {
-                    accessorKey: "tense",
-                    cell(value: Tense) {
-                      return <Text>{tenseMap[value]}</Text>;
-                    },
-                    header: "Tense",
-                  },
-                  {
-                    accessorKey: "value",
-                    cell(value, row) {
-                      return (
-                        <FormField
-                          control={form.control}
-                          name={(row?.tense ?? "") as string}
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormControl>
-                                <Input
-                                  autoComplete="off"
-                                  placeholder="Type here..."
-                                  {...field}
-                                  value={field.value ?? ""}
-                                />
-                              </FormControl>
-
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      );
-                    },
-                    header: "Answer",
-                  },
-                ]}
-                data={TENSE_LIST.map((tense) => ({
-                  tense,
-                  value: "",
-                }))}
-              />
-
-              {form.formState.submitCount > 0 && (
-                <Notice intent={isCorrect ? "positive" : "negative"}>
-                  {isCorrect
-                    ? "Good job! You answered each prompt correctly."
-                    : "There were some mistakes with your answers. Scroll up to take a look."}
-                </Notice>
-              )}
-
-              <Flex justify="end">
-                <Button type="submit">Submit</Button>
-              </Flex>
-            </Flex>
-          </form>
-        </Form>
+        <TableAsForm
+          bleed={32}
+          checkCorrectness={(key, val) =>
+            TableAsForm.defaultCheckCorrectness({ key, val, rows })
+          }
+          formSchema={formSchema}
+          rows={rows}
+        />
       )}
     </Flex>
   );
-}
-
-function checkCorrectAnswer(
-  answer: string,
-  selectedWordIndex: number,
-  tense: Tense,
-) {
-  const phraseObj = DATA_FULL_LIST[selectedWordIndex];
-  if (phraseObj) {
-    const sanitizedAnswer = sanitizeIrregularCharacters(answer);
-    const tenseEntry = phraseObj[tense];
-    const answersToCheck = Array.isArray(tenseEntry)
-      ? [tenseEntry.join("")]
-      : "items" in tenseEntry
-        ? tenseEntry.items.map((item) => item.on.join(""))
-        : [tenseEntry.on.join("")];
-
-    if (
-      !answer ||
-      !answersToCheck.find(
-        (correctAnswer) =>
-          sanitizedAnswer === sanitizeIrregularCharacters(correctAnswer),
-      )
-    ) {
-      return answersToCheck;
-    }
-  }
-  return null;
 }

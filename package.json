@@ -44,6 +44,7 @@
     "seedrandom": "^3.0.5",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
+    "ts-pattern": "^5.1.1",
     "vaul": "^0.9.0",
     "zod": "^3.22.4"
   },
@@ -67,7 +68,7 @@
     "plop": "^4.0.1",
     "prettier": "^3.2.5",
     "tsx": "^4.7.0",
-    "typescript": "^5.1.0",
+    "typescript": "^5.4.5",
     "wrangler": "^3.8.0"
   },
   "engines": {

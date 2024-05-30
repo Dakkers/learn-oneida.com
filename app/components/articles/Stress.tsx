@@ -31,10 +31,17 @@ export function StressArticle({ level = 1 }: ArticleProps) {
         short stress are pronounced slightly louder and with a rising tone of
         voice. The vowel is the same length as other vowels in the word.
       </Text>
-      <Text>
-        Examples: <b>kátsheʔ</b>, <b>kákhwa̲ʔ</b>, <b>kítkit</b>, <b>ohʌtú</b>,{" "}
-        <b>ohutsyakú</b>, <b>olihwiyó</b>, <b>ohwístaʔ</b>, <b>áhtaʔ</b>.
-      </Text>
+      <Text>Examples:</Text>
+      <List>
+        <List.Item>kátsheʔ</List.Item>
+        <List.Item>kákhwa̲ʔ</List.Item>
+        <List.Item>kítkit</List.Item>
+        <List.Item>ohʌtú</List.Item>
+        <List.Item>ohutsyakú</List.Item>
+        <List.Item>olihwiyó</List.Item>
+        <List.Item>ohwístaʔ</List.Item>
+        <List.Item>áhtaʔ</List.Item>
+      </List>
       <SectionHeading
         id="long-stress"
         level={(level + 1) as SectionHeadingProps["level"]}
@@ -48,10 +55,15 @@ export function StressArticle({ level = 1 }: ArticleProps) {
         stress are pronounced slightly louder and noticeably longer than other
         vowels in the same word.
       </Text>
-      <Text>
-        Examples: <b>owi·lá·</b>, <b>onú·ta</b>, <b>ola·ná·</b>,{" "}
-        <b>nahté·shuʔ</b>, <b>kekhsá·</b>, <b>niʔí·</b>.
-      </Text>
+      <Text>Examples:</Text>
+      <List>
+        <List.Item>owi·lá·</List.Item>
+        <List.Item>onú·ta</List.Item>
+        <List.Item>ola·ná·</List.Item>
+        <List.Item>nahté·shuʔ</List.Item>
+        <List.Item>keksá·</List.Item>
+        <List.Item>niʔí·</List.Item>
+      </List>
 
       <SectionHeading
         id="length"
@@ -71,22 +83,22 @@ export function StressArticle({ level = 1 }: ArticleProps) {
         Onʌyoteʔa·ká· which frequently uses long stress to properly say a word.
         This means that students will have to begin using long stress much more
         often. Onʌyoteʔa·ká· spoken with only short, stressed vowels sounds
-        “American.”
+        &quot;American.&quot;
       </Text>
       <Text>
         English speakers in this part of the country do use long stress, but
         usually for emphasis or to convey emotion. Being sarcastic they might
-        say: “Well, excuuuuuse me.” Expressing sorrow or empathy they might say:
-        “I&lsquo;m sooo sorry.”
+        say: &quot;Well, excuuuuuse me.&quot; Expressing sorrow or empathy they
+        might say: &quot;I&lsquo;m sooo sorry.&quot;
       </Text>
       <Text>
         Students should not stress or lengthen prefixes, roots, suffixes,
         particles, or whole words to convey emphasis or emotion because these
         are conveyed through word choice or word order. In English, speakers
-        raise their inflection to change a statement into a question, as in: “He
-        likes her.” versus “He likes her?”. Onʌyoteʔa·ká· speakers should not
-        raise their inflection when asking questions, as in:{" "}
-        <b>Shakonú·wehseʔ kʌ né· akaulhá·</b>
+        raise their inflection to change a statement into a question, as in:
+        &quot;He likes her.&quot; versus &quot;He likes her?&quot;.
+        Onʌyoteʔa·ká· speakers should not raise their inflection when asking
+        questions, as in: <b>Shakonú·wehseʔ kʌ́ né· akaulhá·</b>
       </Text>
 
       <SectionHeading

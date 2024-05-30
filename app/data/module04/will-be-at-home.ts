@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], "t", ["k"], "iʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["k"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "te", ["hs"], "iʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["te", "CIS"], ["hs"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["hʌ"], "ʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["hʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["ye"], "ʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["ye"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["kʌ"], "ʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["kʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "ti", ["tn"], "iʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["ti", "CIS"], ["tn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["yakn"], "iʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["yakn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "ti", ["sn"], "iʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["ti", "CIS"], ["sn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["hn"], "iʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["hn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["kn"], "iʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["kn"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "ti", ["twʌ"], "ʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["ti", "CIS"], ["twʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["yakwʌ"], "ʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["yakwʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "ti", ["swʌ"], "ʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["ti", "CIS"], ["swʌ"], "ʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["hat"], "iʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["hat"], "iʔtlu·t", "ákeʔ"],
       },
       {
-        breakdown: [["ʌ", "FUT"], "t", ["kut"], "iʔtlu·t", "ákeʔ"],
+        breakdown: [["ʌ", "FUT"], ["t", "CIS"], ["kut"], "iʔtlu·t", "ákeʔ"],
       },
     ],
   },
