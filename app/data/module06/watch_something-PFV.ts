@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "atló·luʔ"],
+        breakdown: [["wak"], "atló·lu"],
       },
       {
-        breakdown: [["s"], "atló·luʔ"],
+        breakdown: [["s"], "atló·lu"],
       },
       {
-        breakdown: [["lo"], "tló·luʔ"],
+        breakdown: [["lo"], "tló·lu"],
       },
       {
-        breakdown: [["yako"], "tló·luʔ"],
+        breakdown: [["yako"], "tló·lu"],
       },
       {
-        breakdown: [["yo"], "tló·luʔ"],
+        breakdown: [["yo"], "tló·lu"],
       },
       {
-        breakdown: [["yuky"], "atló·luʔ"],
+        breakdown: [["yuky"], "atló·lu"],
       },
       {
-        breakdown: [["yuky"], "atló·luʔ"],
+        breakdown: [["yuky"], "atló·lu"],
       },
       {
-        breakdown: [["tsy"], "atló·luʔ"],
+        breakdown: [["tsy"], "atló·lu"],
       },
       {
-        breakdown: [["lon"], "atló·luʔ"],
+        breakdown: [["lon"], "atló·lu"],
       },
       {
-        breakdown: [["yon"], "atló·luʔ"],
+        breakdown: [["yon"], "atló·lu"],
       },
       {
-        breakdown: [["yukw"], "atló·luʔ"],
+        breakdown: [["yukw"], "atló·lu"],
       },
       {
-        breakdown: [["yukw"], "atló·luʔ"],
+        breakdown: [["yukw"], "atló·lu"],
       },
       {
-        breakdown: [["sw"], "atló·luʔ"],
+        breakdown: [["sw"], "atló·lu"],
       },
       {
-        breakdown: [["lon"], "atló·luʔ"],
+        breakdown: [["lon"], "atló·lu"],
       },
       {
-        breakdown: [["yon"], "atló·luʔ"],
+        breakdown: [["yon"], "atló·lu"],
       },
     ],
     whispered: false,
