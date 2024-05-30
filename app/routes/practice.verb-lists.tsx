@@ -32,7 +32,11 @@ import {
 } from "~/data/module06/activeVerbsList";
 import { SectionHeading } from "~/components/SectionHeading";
 import { module5VerbsList } from "~/data/module05";
-import { TENSE_LIST_M4, TenseM4, createModule4Data } from "~/data/module04";
+import {
+  MODULE_4_TENSE_LIST,
+  Module4VerbTense,
+  createModule4Data,
+} from "~/data/module04";
 
 export const meta: MetaFunction = () => {
   return [
@@ -47,23 +51,24 @@ export const meta: MetaFunction = () => {
 const TENSE_LIST_M5 = ["present", "past", "fut", "ifut", "cmd"] as const;
 type TenseM5 = (typeof TENSE_LIST_M5)[number];
 
-const tenseMap: Record<TenseM4 | TenseM5 | Module6VerbTense, string> = {
-  cmd: "Command",
-  fut: "Future",
-  ifut: "Indefinite",
-  def: "Definite",
-  pfv: "Perfective",
-  hab: "Habitual",
-  prs: "Present",
-  present: "Present",
-  past: "Past",
-} as const;
+const tenseMap: Record<Module4VerbTense | TenseM5 | Module6VerbTense, string> =
+  {
+    cmd: "Command",
+    fut: "Future",
+    ifut: "Indefinite",
+    def: "Definite",
+    pfv: "Perfective",
+    hab: "Habitual",
+    prs: "Present",
+    present: "Present",
+    past: "Past",
+  } as const;
 
 export default function PracticeTenseConjugation() {
   const [selectedVerbList, setSelectedVerbList] = React.useState("m6");
   const [selectedPronoun, setSelectedPronoun] = React.useState<Pronoun>("i");
   const [selectedTense, setSelectedTense] = React.useState<
-    TenseM4 | TenseM5 | Module6VerbTense
+    Module4VerbTense | TenseM5 | Module6VerbTense
   >("hab");
   const [hasStarted, setHasStarted] = React.useState(false);
   const [isCorrect, setIsCorrect] = React.useState(false);
@@ -96,7 +101,7 @@ export default function PracticeTenseConjugation() {
   const tenseOptions = React.useMemo(() => {
     return (
       selectedVerbList === "m4"
-        ? TENSE_LIST_M4
+        ? MODULE_4_TENSE_LIST
         : selectedVerbList === "m5"
           ? TENSE_LIST_M5
           : selectedVerbList === "m6"
@@ -126,7 +131,7 @@ export default function PracticeTenseConjugation() {
   const rows = React.useMemo(() => {
     if (selectedVerbList === "m4") {
       return createModule4Data()
-        .filter((v) => v.tense === (selectedTense as TenseM4))
+        .filter((v) => v.tense === (selectedTense as Module4VerbTense))
         .map((v) => ({
           en: translatePhrase(v.data.translation, selectedPronoun),
           key: v.key,
