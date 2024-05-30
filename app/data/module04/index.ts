@@ -207,14 +207,14 @@ export function createModule4Data() {
     },
     {
       data: dataDoesntLiveThere,
-      en: "Someone doesnt live there",
+      en: "Someone doesn't live there",
       key: "data-doesnt-live-there",
       negated: true,
       tense: "prs",
     },
     {
       data: dataDidntUsedToLiveThere,
-      en: "Someone didnt used to live there",
+      en: "Someone didn't used to live there",
       key: "data-didnt-used-to-live-there",
       negated: true,
       tense: "past",
@@ -234,7 +234,7 @@ export function createModule4Data() {
     },
     {
       data: dataDontWant,
-      en: "Someone dont want",
+      en: "Someone don't want",
       key: "data-dont-want",
       negated: true,
       tense: "prs",
@@ -247,7 +247,7 @@ export function createModule4Data() {
     },
     {
       data: dataDidntUsedToWant,
-      en: "Someone didnt used to want",
+      en: "Someone didn't used to want",
       key: "data-didnt-used-to-want",
       negated: true,
       tense: "past",

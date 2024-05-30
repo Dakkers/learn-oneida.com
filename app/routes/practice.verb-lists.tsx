@@ -11,6 +11,7 @@ import {
   Pronoun,
   arrayify,
   pronouns,
+  translatePhrase,
 } from "~/utils";
 import { useForm } from "react-hook-form";
 import { sanitizeIrregularCharacters } from "~/utils/words";
@@ -60,7 +61,7 @@ const tenseMap: Record<TenseM4 | TenseM5 | Module6VerbTense, string> = {
 
 export default function PracticeTenseConjugation() {
   const [selectedVerbList, setSelectedVerbList] = React.useState("m6");
-  const [selectedPronoun, setSelectedPronoun] = React.useState("i");
+  const [selectedPronoun, setSelectedPronoun] = React.useState<Pronoun>("i");
   const [selectedTense, setSelectedTense] = React.useState<
     TenseM4 | TenseM5 | Module6VerbTense
   >("hab");
@@ -126,7 +127,10 @@ export default function PracticeTenseConjugation() {
     if (selectedVerbList === "m4") {
       return createModule4Data()
         .filter((v) => v.tense === (selectedTense as TenseM4))
-        .map((v) => ({ en: v.en, key: v.key }));
+        .map((v) => ({
+          en: translatePhrase(v.data.translation, selectedPronoun),
+          key: v.key,
+        }));
     } else if (selectedVerbList === "m5") {
       return module5VerbsList.map((v) => {
         const tenseEntry = v[selectedTense as TenseM5];
@@ -143,13 +147,16 @@ export default function PracticeTenseConjugation() {
     } else if (selectedVerbList === "m6") {
       return createModule6VerbList().map((v) => {
         return {
-          en: v.en,
+          en: translatePhrase(
+            v[selectedTense as Module6VerbTense]!.translation,
+            selectedPronoun,
+          ),
           key: v.key,
         };
       });
     }
     return [];
-  }, [selectedVerbList, selectedTense]);
+  }, [selectedVerbList, selectedTense, selectedPronoun]);
 
   const defaultValues = React.useMemo(() => {
     const keys = (
@@ -206,7 +213,7 @@ export default function PracticeTenseConjugation() {
 
         <Select
           label="Pronoun"
-          onChange={setSelectedPronoun}
+          onChange={(val) => setSelectedPronoun(val as Pronoun)}
           options={pronounsOptions}
           value={selectedPronoun}
         />
