@@ -33,15 +33,15 @@ import dataDidntUsedToWant from "./didnt-used-to-want";
 import dataThought from "./thought";
 import { ParadigmData } from "~/components/ParadigmTable";
 
-export const TENSE_LIST_M4 = ["prs", "past", "fut", "ifut"] as const;
-export type TenseM4 = (typeof TENSE_LIST_M4)[number];
+export const MODULE_4_TENSE_LIST = ["prs", "past", "fut", "ifut"] as const;
+export type Module4VerbTense = (typeof MODULE_4_TENSE_LIST)[number];
 
 interface Module4Datum {
   data: ParadigmData;
   en: string;
   key: string;
   negated?: true;
-  tense: TenseM4;
+  tense: Module4VerbTense;
 }
 
 export function createModule4Data() {
@@ -234,7 +234,7 @@ export function createModule4Data() {
     },
     {
       data: dataDontWant,
-      en: "Someone don't want",
+      en: "Someone doesn't want",
       key: "data-dont-want",
       negated: true,
       tense: "prs",
