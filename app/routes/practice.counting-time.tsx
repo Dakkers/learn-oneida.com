@@ -1,28 +1,14 @@
-import { Bleed, BleedProps } from "@/design/components/Bleed";
 import { Flex } from "@/design/components/flex";
-import { Notice } from "@/design/components/notice";
-import { TableWrapper } from "@/design/components/tableWrapper";
 import { Text } from "@/design/components/text";
 import { Button } from "@/design/primitives/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/design/primitives/form";
-import { Input } from "@/design/primitives/input";
 import { Link } from "@/design/primitives/link";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { MetaFunction } from "@remix-run/cloudflare";
 import { shuffle } from "lodash";
 import { useMemo, useState } from "react";
-import { useForm } from "react-hook-form";
-import { AnyZodObject, z } from "zod";
+import { z } from "zod";
 import { SectionHeading } from "~/components/SectionHeading";
 import { createCountingTimeData } from "~/components/articles/CountingTime";
 import { TableAsForm } from "~/components/practice/TableAsForm";
-import { sanitizeIrregularCharacters } from "~/utils/words";
 
 export const meta: MetaFunction = () => {
   return [

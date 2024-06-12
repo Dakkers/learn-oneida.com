@@ -157,7 +157,11 @@ export default function ToolsParadigm() {
     <>
       <SectionHeading level={1}>Paradigm Tester</SectionHeading>
 
-      <Flex align="end" gap={2}>
+      <Flex
+        align={{ sm: "end" }}
+        direction={{ xs: "column", sm: "row" }}
+        gap={2}
+      >
         <Select
           label="Word"
           onChange={(value) => {
@@ -185,31 +189,33 @@ export default function ToolsParadigm() {
           value={paradigm}
         />
 
-        <Button
-          disabled={!word || hasStarted}
-          onClick={() => {
-            setAllowedPronouns(
-              paradigm === "all"
-                ? []
-                : paradigm === "singles"
-                  ? singlePronouns
-                  : paradigm === "dualics"
-                    ? dualicPronouns
-                    : paradigm === "plurals"
-                      ? pluralPronouns
-                      : paradigm === "one"
-                        ? ([
-                            sample(singlePronouns),
-                            sample(dualicPronouns),
-                            sample(pluralPronouns),
-                          ] as Pronoun[])
-                        : [],
-            );
-            setHasStarted(true);
-          }}
-        >
-          Start
-        </Button>
+        <Flex.Item>
+          <Button
+            disabled={!word || hasStarted}
+            onClick={() => {
+              setAllowedPronouns(
+                paradigm === "all"
+                  ? []
+                  : paradigm === "singles"
+                    ? singlePronouns
+                    : paradigm === "dualics"
+                      ? dualicPronouns
+                      : paradigm === "plurals"
+                        ? pluralPronouns
+                        : paradigm === "one"
+                          ? ([
+                              sample(singlePronouns),
+                              sample(dualicPronouns),
+                              sample(pluralPronouns),
+                            ] as Pronoun[])
+                          : [],
+              );
+              setHasStarted(true);
+            }}
+          >
+            Start
+          </Button>
+        </Flex.Item>
       </Flex>
 
       {hasStarted && (
