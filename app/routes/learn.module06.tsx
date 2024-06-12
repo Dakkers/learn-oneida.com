@@ -576,7 +576,7 @@ function ExamplesSection() {
       negation: ["Yáh teʔ", ["ke"], "khu·níheʔ"],
       negationEn: "I do not cook",
       desc: [
-        "Describes events that happen regularly, whether once an hour or once a year.There is an expectation that the event will occur again.",
+        "Describes events that happen regularly, whether once an hour or once a year. There is an expectation that the event will occur again.",
         'Describes "what people do" or "what they are."',
         "Sometimes describes actions that are happening right now.",
       ],
@@ -709,7 +709,13 @@ function DailyActivitiesSection() {
         Daily Activities
       </SectionHeading>
 
-      <Bleed mx={32}>
+      <Bleed
+        mx={{
+          xs: 0,
+          md: 16,
+          lg: 32,
+        }}
+      >
         <Accordion type="multiple">
           {createModule6VerbList().map((v) => {
             const data = TENSE_LIST.filter((tense) => !!v[tense]).map(
@@ -829,7 +835,13 @@ function VerbParadigms({
         )}
       </Text>
 
-      <Bleed mx={32}>
+      <Bleed
+        mx={{
+          xs: 0,
+          md: 16,
+          lg: 32,
+        }}
+      >
         <Accordion type="multiple">
           {TENSE_LIST.map((tense) =>
             verbDatum[tense] ? (
