@@ -1,6 +1,6 @@
 import { Flex } from "@/design/components/flex";
 import type { MetaFunction } from "@remix-run/node";
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { Text } from "@/design/components/text";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import { Select } from "@/design/components/select";
@@ -29,6 +29,7 @@ import {
   Module6VerbTense,
   createModule6VerbList,
   createModule6VerbListFlat,
+  getPronounsForModule6Verb,
 } from "~/data/module06/activeVerbsList";
 import { SectionHeading } from "~/components/SectionHeading";
 import { module5VerbsList } from "~/data/module05";
@@ -37,6 +38,8 @@ import {
   Module4VerbTense,
   createModule4Data,
 } from "~/data/module04";
+import { TableAsForm } from "~/components/practice/TableAsForm";
+import { z } from "zod";
 
 export const meta: MetaFunction = () => {
   return [
@@ -65,40 +68,14 @@ const tenseMap: Record<Module4VerbTense | TenseM5 | Module6VerbTense, string> =
   } as const;
 
 export default function PracticeTenseConjugation() {
-  const [selectedVerbList, setSelectedVerbList] = React.useState("m6");
-  const [selectedPronoun, setSelectedPronoun] = React.useState<Pronoun>("i");
-  const [selectedTense, setSelectedTense] = React.useState<
+  const [selectedVerbList, setSelectedVerbList] = useState("m6");
+  const [selectedPronoun, setSelectedPronoun] = useState<Pronoun>("i");
+  const [selectedTense, setSelectedTense] = useState<
     Module4VerbTense | TenseM5 | Module6VerbTense
   >("hab");
-  const [hasStarted, setHasStarted] = React.useState(false);
-  const [isCorrect, setIsCorrect] = React.useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
 
-  function onSubmit(values: Record<string, string>) {
-    let hasErrors = false;
-    for (const key in values) {
-      const answer = values[key];
-      const result = checkCorrectAnswer(
-        key,
-        answer ?? "",
-        selectedVerbList,
-        selectedTense,
-        selectedPronoun as Pronoun,
-      );
-      if (result) {
-        hasErrors = true;
-        form.setError(key, {
-          message:
-            Array.isArray(result) && result.length > 1
-              ? `Valid answers: ${result.join(", ")}`
-              : `Answer: ${arrayify(result)[0]}`,
-          type: "custom",
-        });
-      }
-    }
-    setIsCorrect(!hasErrors);
-  }
-
-  const tenseOptions = React.useMemo(() => {
+  const tenseOptions = useMemo(() => {
     return (
       selectedVerbList === "m4"
         ? MODULE_4_TENSE_LIST
@@ -113,7 +90,7 @@ export default function PracticeTenseConjugation() {
     }));
   }, [selectedVerbList]);
 
-  const pronounsOptions = React.useMemo(() => {
+  const pronounsOptions = useMemo(() => {
     let result: Pronoun[] = [];
     if (selectedVerbList === "m4") {
       result = pronouns;
@@ -128,13 +105,14 @@ export default function PracticeTenseConjugation() {
     }));
   }, [selectedVerbList, selectedTense]);
 
-  const rows = React.useMemo(() => {
+  const rows = useMemo(() => {
     if (selectedVerbList === "m4") {
       return createModule4Data()
         .filter((v) => v.tense === (selectedTense as Module4VerbTense))
         .map((v) => ({
           en: translatePhrase(v.data.translation, selectedPronoun),
           key: v.key,
+          on: v.data.phrases.find((p) => p.pronoun === selectedPronoun)!.phrase,
         }));
     } else if (selectedVerbList === "m5") {
       return module5VerbsList.map((v) => {
@@ -144,42 +122,47 @@ export default function PracticeTenseConjugation() {
           : "items" in tenseEntry
             ? tenseEntry.items[0].en
             : tenseEntry.en;
+
+        const oneida = (
+          Array.isArray(tenseEntry)
+            ? tenseEntry
+            : "items" in tenseEntry
+              ? tenseEntry.items[0].on
+              : tenseEntry.on
+        ).join("");
+
         return {
           en: english,
           key: v.key,
+          on: oneida,
         };
       });
     } else if (selectedVerbList === "m6") {
-      return createModule6VerbList().map((v) => {
-        return {
-          en: translatePhrase(
-            v[selectedTense as Module6VerbTense]!.translation,
-            selectedPronoun,
-          ),
-          key: v.key,
-        };
-      });
+      return createModule6VerbList()
+        .filter((v) =>
+          getPronounsForModule6Verb(v.key).includes(selectedPronoun),
+        )
+        .map((v) => {
+          return {
+            en: translatePhrase(
+              v[selectedTense as Module6VerbTense]!.translation,
+              selectedPronoun,
+            ),
+            key: v.key,
+            on: v[selectedTense as Module6VerbTense]!.phrases.find(
+              (p) => p.pronoun === selectedPronoun,
+            )!.phrase,
+          };
+        });
     }
     return [];
   }, [selectedVerbList, selectedTense, selectedPronoun]);
 
-  const defaultValues = React.useMemo(() => {
-    const keys = (
-      selectedVerbList === "m4"
-        ? createModule4Data()
-        : selectedVerbList === "m5"
-          ? module5VerbsList
-          : selectedVerbList === "m6"
-            ? createModule6VerbListFlat()
-            : []
-    ).map((v) => v.key);
-
-    return Object.fromEntries(keys.map((k) => [k, ""]));
-  }, [selectedVerbList]);
-
-  const form = useForm({
-    defaultValues,
-  });
+  const formSchema = useMemo(() => {
+    return z.object(
+      Object.fromEntries(rows.map((r) => [r.key, z.string().optional()])),
+    );
+  }, [rows]);
 
   return (
     <Flex direction="column" gap={4}>
@@ -198,6 +181,7 @@ export default function PracticeTenseConjugation() {
               value === "m4" ? "prs" : value === "m5" ? "present" : "hab",
             );
             setSelectedVerbList(value);
+            setHasStarted(false);
           }}
           options={[
             { label: "Module 4", value: "m4" },
@@ -209,16 +193,20 @@ export default function PracticeTenseConjugation() {
 
         <Select
           label="Tense"
-          onChange={(value) =>
-            setSelectedTense(value as TenseM5 | Module6VerbTense)
-          }
+          onChange={(value) => {
+            setSelectedTense(value as TenseM5 | Module6VerbTense);
+            setHasStarted(false);
+          }}
           options={tenseOptions}
           value={selectedTense}
         />
 
         <Select
           label="Pronoun"
-          onChange={(val) => setSelectedPronoun(val as Pronoun)}
+          onChange={(val) => {
+            setSelectedPronoun(val as Pronoun);
+            setHasStarted(false);
+          }}
           options={pronounsOptions}
           value={selectedPronoun}
         />
@@ -229,59 +217,14 @@ export default function PracticeTenseConjugation() {
       </Flex>
 
       {hasStarted && (
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <Flex direction="column" gap={4}>
-              <TableWrapper
-                columns={[
-                  {
-                    accessorKey: "en",
-                    header: "Word",
-                  },
-                  {
-                    accessorKey: "value",
-                    cell(value, row) {
-                      return (
-                        <FormField
-                          control={form.control}
-                          name={(row?.key ?? "") as string}
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormControl>
-                                <Input
-                                  autoComplete="off"
-                                  placeholder="Type here..."
-                                  {...field}
-                                  value={field.value ?? ""}
-                                />
-                              </FormControl>
-
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      );
-                    },
-                    header: "Answer",
-                  },
-                ]}
-                data={rows}
-              />
-
-              {form.formState.submitCount > 0 && (
-                <Notice intent={isCorrect ? "positive" : "negative"}>
-                  {isCorrect
-                    ? "Good job! You answered each prompt correctly."
-                    : "There were some mistakes with your answers. Scroll up to take a look."}
-                </Notice>
-              )}
-
-              <Flex justify="end">
-                <Button type="submit">Submit</Button>
-              </Flex>
-            </Flex>
-          </form>
-        </Form>
+        <TableAsForm
+          bleed={32}
+          checkCorrectness={(key, val) =>
+            TableAsForm.defaultCheckCorrectness({ key, val, rows })
+          }
+          formSchema={formSchema}
+          rows={rows}
+        />
       )}
     </Flex>
   );
