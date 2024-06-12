@@ -1,5 +1,4 @@
 import { Box } from "@/design/components/box";
-import { Flex } from "@/design/components/flex";
 import { Notice } from "@/design/components/notice";
 import { Text } from "@/design/components/text";
 import type { MetaFunction } from "@remix-run/node";

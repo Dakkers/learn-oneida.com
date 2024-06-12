@@ -54,7 +54,11 @@ const ParadigmTableContext =
 
 export function ParadigmTable({
   allowedPronouns = [],
-  bleed = 32,
+  bleed = {
+    xs: 0,
+    md: 16,
+    lg: 32,
+  },
   columnVisibility = {},
   data,
   isTesting = false,
