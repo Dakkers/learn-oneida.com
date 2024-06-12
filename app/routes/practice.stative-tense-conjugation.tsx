@@ -4,13 +4,12 @@ import React, { useMemo } from "react";
 import { Heading } from "@/design/components/heading";
 import { module5VerbsList } from "~/data/module05";
 import { Text } from "@/design/components/text";
-import { Link } from "@remix-run/react";
 import { Select } from "@/design/components/select";
 import { Button } from "@/design/primitives/button";
 import { arrayify } from "~/utils";
 import { z } from "zod";
-import { sanitizeIrregularCharacters } from "~/utils/words";
 import { TableAsForm } from "~/components/practice/TableAsForm";
+import { Link } from "@/design/primitives/link";
 
 export const meta: MetaFunction = () => {
   return [
@@ -81,14 +80,15 @@ export default function PracticeTenseConjugation() {
 
       <Text>
         Use this page to practice conjugating the different tenses for a given
-        verb. These words come from{" "}
-        <Link className="text-blue-600 underline" to="/learn/module05">
-          module 5
-        </Link>
+        verb. These words come from <Link href="/learn/module05">module 5</Link>
         .
       </Text>
 
-      <Flex align="end" gap={2}>
+      <Flex
+        align={{ sm: "end" }}
+        direction={{ xs: "column", sm: "row" }}
+        gap={2}
+      >
         <Select
           label="Word"
           onChange={(value) => {
@@ -99,19 +99,20 @@ export default function PracticeTenseConjugation() {
           value={word}
         />
 
-        <Button
-          disabled={!word || hasStarted}
-          onClick={() => {
-            setHasStarted(true);
-          }}
-        >
-          Start
-        </Button>
+        <Flex.Item>
+          <Button
+            disabled={!word || hasStarted}
+            onClick={() => {
+              setHasStarted(true);
+            }}
+          >
+            Start
+          </Button>
+        </Flex.Item>
       </Flex>
 
       {hasStarted && (
         <TableAsForm
-          bleed={32}
           checkCorrectness={(key, val) =>
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }

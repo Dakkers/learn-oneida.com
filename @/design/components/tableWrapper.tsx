@@ -31,7 +31,15 @@ export interface TableWrapperProps {
   data: Array<Row>;
 }
 
-export function TableWrapper({ bleed = 32, columns, data }: TableWrapperProps) {
+export function TableWrapper({
+  bleed = {
+    xs: 0,
+    md: 16,
+    lg: 32,
+  },
+  columns,
+  data,
+}: TableWrapperProps) {
   const hasHeader = !!columns.find((col) => !!col.header);
 
   return (

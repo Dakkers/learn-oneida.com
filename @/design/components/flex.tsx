@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Responsive, responsiveClassName } from "@/utils/responsive";
 import { PaddingProps, usePadding } from "@/utils/usePadding";
 
 type Gap = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
@@ -14,11 +15,13 @@ type JustifyContent =
 
 type AlignItems = "baseline" | "center" | "end" | "start" | "stretch";
 
+type Direction = "row" | "column";
+
 interface FlexProps extends PaddingProps {
-  align?: AlignItems;
+  align?: AlignItems | Responsive<AlignItems>;
   as?: "div" | "span";
   children: React.ReactNode;
-  direction?: "row" | "column";
+  direction?: Direction | Responsive<Direction>;
   gap?: Gap;
   height?: "fill";
   justify?: JustifyContent;
@@ -48,8 +51,11 @@ export function Flex({
     <Tag
       className={cn(
         "flex",
-        align && alignItemsMap[align],
-        direction === "column" ? "flex-col" : "flex-row",
+        responsiveClassName(align, "items-"),
+        responsiveClassName(
+          direction,
+          (val) => `flex-${val === "column" ? "col" : "row"}`,
+        ),
         gap && gapMap.get(gap),
         height === "fill" ? "h-full" : undefined,
         justify && justifyContentMap[justify],
@@ -101,12 +107,4 @@ const justifyContentMap: Record<JustifyContent, string> = {
   evenly: "justify-evenly",
   start: "justify-start",
   stretch: "justify-stretch",
-} as const;
-
-const alignItemsMap: Record<AlignItems, string> = {
-  baseline: "items-baseline",
-  center: "items-center",
-  end: "items-end",
-  start: "items-start",
-  stretch: "items-stretch",
 } as const;

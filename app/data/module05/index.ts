@@ -5,12 +5,12 @@ import { BreakdownType } from "~/components/TextBreakdown";
 type TenseEntry =
   | string[]
   | {
-      en: string | string[];
+      en: string;
       on: string[];
     }
   | {
       items: Array<{
-        en: string | string[];
+        en: string;
         on: string[];
       }>;
     };
@@ -25,7 +25,7 @@ export type TenseDatum = {
   fut: TenseEntry;
   ifut: TenseEntry;
   cmd: TenseEntry;
-  en: string[] | string;
+  en: string;
   type?: BreakdownType;
 };
 

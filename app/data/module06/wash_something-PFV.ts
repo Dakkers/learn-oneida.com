@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "nóhaleʔ"],
+        breakdown: [["wak"], "nóhale"],
       },
       {
-        breakdown: [["s"], "nóhaleʔ"],
+        breakdown: [["s"], "nóhale"],
       },
       {
-        breakdown: [["lo"], "nóhaleʔ"],
+        breakdown: [["lo"], "nóhale"],
       },
       {
-        breakdown: [["yako"], "nóhaleʔ"],
+        breakdown: [["yako"], "nóhale"],
       },
       {
-        breakdown: [["yo"], "nóhaleʔ"],
+        breakdown: [["yo"], "nóhale"],
       },
       {
-        breakdown: [["yukni"], "nóhaleʔ"],
+        breakdown: [["yukni"], "nóhale"],
       },
       {
-        breakdown: [["yukni"], "nóhaleʔ"],
+        breakdown: [["yukni"], "nóhale"],
       },
       {
-        breakdown: [["sni"], "nóhaleʔ"],
+        breakdown: [["sni"], "nóhale"],
       },
       {
-        breakdown: [["loti"], "nóhaleʔ"],
+        breakdown: [["loti"], "nóhale"],
       },
       {
-        breakdown: [["yoti"], "nóhaleʔ"],
+        breakdown: [["yoti"], "nóhale"],
       },
       {
-        breakdown: [["yukwa"], "nóhaleʔ"],
+        breakdown: [["yukwa"], "nóhale"],
       },
       {
-        breakdown: [["yukwa"], "nóhaleʔ"],
+        breakdown: [["yukwa"], "nóhale"],
       },
       {
-        breakdown: [["swa"], "nóhaleʔ"],
+        breakdown: [["swa"], "nóhale"],
       },
       {
-        breakdown: [["loti"], "nóhaleʔ"],
+        breakdown: [["loti"], "nóhale"],
       },
       {
-        breakdown: [["yoti"], "nóhaleʔ"],
+        breakdown: [["yoti"], "nóhale"],
       },
     ],
   },

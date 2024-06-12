@@ -206,8 +206,10 @@ type Module6VerbKey =
   | "study"
   | "tidySomethingUp"
   | "understand"
+  | "urinate"
   | "wakeUp"
   | "washSomething"
+  | "watchSomething"
   | "work";
 
 export const MODULE_6_VERB_TENSE_LIST = [
@@ -435,110 +437,146 @@ export function createModule6VerbList() {
     exceptions?: number[];
     key: Module6VerbKey;
     pronouns?: Pronoun[];
+    root: string;
   }[] = [
     {
-      key: "answer",
       en: "answer, reply",
+      key: "answer",
+      root: "-lihwaʔslakw-",
     },
     {
-      key: "bathe",
       en: "bathe, wash one's body",
+      key: "bathe",
+      root: "-atyaʔtohale-",
     },
     {
-      key: "beginToDoSomething",
       en: "begin (to do something)",
-    },
-    {
-      key: "eatAMeal",
+      key: "beginToDoSomething",
+      root: "t...atahsaw",
     },
     {
       key: "cook",
+      root: "-khuni-",
     },
     {
       key: "defecate",
+      root: "-aniʔtayʌ-",
     },
     {
-      key: "doSomething",
       en: "do (something)",
+      key: "doSomething",
+      root: "ni...atyel",
     },
     {
-      key: "getDressedUp",
+      key: "eatAMeal",
+      root: "-atkhuni",
+    },
+    {
       en: "get dressed, fixed up",
+      key: "getDressedUp",
+      root: "-atsluni-",
     },
     {
-      key: "getSelfUp",
       en: "get (raise) self up",
+      key: "getSelfUp",
+      root: "-atketsw-",
     },
     {
-      key: "getTired",
       en: "tired, get",
+      key: "getTired",
+      root: "te...hwishʌheyu-",
     },
     {
-      key: "goToSleep",
       en: "sleep, go to",
+      key: "goToSleep",
+      root: "-ita-",
     },
     {
-      key: "itHappens",
       en: "it happens",
-      pronouns: ["it"],
       exceptions: [EXCEPTION_IT_ONLY, EXCEPTION_NO_COMMAND],
+      key: "itHappens",
+      root: "n...ʌ",
+      pronouns: ["it"],
     },
     {
       key: "hideOneself",
+      root: "-atahseht-",
     },
     {
       key: "listen",
+      root: "-atahuhsatat-",
     },
     {
-      key: "lookAtSomething",
       en: "look (at something)",
+      key: "lookAtSomething",
+      root: "-atkatho-",
     },
     {
       key: "openADoor",
+      root: "-nhotukw-",
     },
     {
-      key: "prepareOneself",
       en: "prepare oneself, get oneself ready",
+      key: "prepareOneself",
+      root: "-atatewynʌta-",
     },
     {
       key: "putSomethingAway",
+      root: "-atewyʌʔtu-",
     },
     {
       key: "rain",
+      root: "-kʌnol-",
       pronouns: ["it"],
       exceptions: [EXCEPTION_IT_ONLY, EXCEPTION_NO_COMMAND],
     },
     {
       key: "rest",
+      root: "-atolishʌ-",
     },
     {
-      key: "saySomething",
       en: "say (something)",
+      key: "saySomething",
+      root: "-lohli-",
     },
     {
       key: "snow",
+      root: "-ataʔklokw-",
       pronouns: ["it"],
       exceptions: [EXCEPTION_IT_ONLY, EXCEPTION_NO_COMMAND],
     },
     {
       key: "study",
-      en: "study",
+      root: "-atatlihunyʌni-",
     },
     {
       key: "tidySomethingUp",
+      root: "te...atohtalho-",
     },
     {
-      key: "understand",
       en: "understand, grasp",
+      key: "understand",
+      root: "-ʔnikuhlayʌta-",
+    },
+    {
+      key: "urinate",
+      root: "-anistyake-",
     },
     {
       key: "wakeUp",
+      root: "-ye-",
     },
     {
       key: "washSomething",
+      root: "-nohale-",
+    },
+    {
+      key: "watchSomething",
+      root: "-atlohlok-",
     },
     {
       key: "work",
+      root: "-yoʔtʌ-",
     },
   ];
 
@@ -546,7 +584,7 @@ export function createModule6VerbList() {
 
   for (const v of activeVerbsList) {
     const item: Partial<Module6VerbDatum> = {
-      ..._.pick(v, ["en", "exceptions", "key"]),
+      ..._.pick(v, ["en", "exceptions", "key", "root"]),
     };
     item.en = v.en ?? _.startCase(_.camelCase(v.key)).toLowerCase();
     item.pronouns = v.exceptions?.includes(EXCEPTION_IT_ONLY)

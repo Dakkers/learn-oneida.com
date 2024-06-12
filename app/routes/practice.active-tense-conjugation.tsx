@@ -3,7 +3,6 @@ import type { MetaFunction } from "@remix-run/node";
 import React, { useMemo } from "react";
 import { Heading } from "@/design/components/heading";
 import { Text } from "@/design/components/text";
-import { Link } from "@remix-run/react";
 import { Select } from "@/design/components/select";
 import { Button } from "@/design/primitives/button";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "~/utils";
@@ -16,6 +15,7 @@ import {
   module6VerbTenseMap,
 } from "~/data/module06/activeVerbsList";
 import { TableAsForm } from "~/components/practice/TableAsForm";
+import { Link } from "@/design/primitives/link";
 
 export const meta: MetaFunction = () => {
   return [
@@ -79,13 +79,14 @@ export default function PracticeTenseConjugation() {
       <Text>
         Use this page to practice conjugating the different tenses for a given
         active verb. These words come from{" "}
-        <Link className="text-blue-600 underline" to="/learn/module06">
-          module 6
-        </Link>
-        .
+        <Link href="/learn/module06">module 6</Link>.
       </Text>
 
-      <Flex align="end" gap={2}>
+      <Flex
+        align={{ sm: "end" }}
+        direction={{ xs: "column", sm: "row" }}
+        gap={2}
+      >
         <Select
           label="Word"
           onChange={(value) => {
@@ -110,19 +111,20 @@ export default function PracticeTenseConjugation() {
           value={pronoun}
         />
 
-        <Button
-          disabled={!word || hasStarted}
-          onClick={() => {
-            setHasStarted(true);
-          }}
-        >
-          Start
-        </Button>
+        <Flex.Item>
+          <Button
+            disabled={!word || hasStarted}
+            onClick={() => {
+              setHasStarted(true);
+            }}
+          >
+            Start
+          </Button>
+        </Flex.Item>
       </Flex>
 
       {hasStarted && (
         <TableAsForm
-          bleed={32}
           checkCorrectness={(key, val) =>
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }

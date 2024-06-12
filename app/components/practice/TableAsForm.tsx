@@ -27,7 +27,11 @@ type FormRow = Record<string, unknown> & {
 };
 
 export function TableAsForm({
-  bleed = 0,
+  bleed = {
+    xs: 0,
+    md: 16,
+    lg: 32,
+  },
   checkCorrectness,
   formSchema,
   rows,
