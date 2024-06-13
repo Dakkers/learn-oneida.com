@@ -1,4 +1,3 @@
-import { match, P } from "ts-pattern";
 import { ParadigmData } from "~/components/ParadigmTable";
 import answerCmdData from "./answer-CMD";
 import answerDefData from "./answer-DEF";
@@ -420,6 +419,7 @@ export type Module6VerbDatum = {
   key: Module6VerbKey;
   pfv: ParadigmData;
   pronouns?: Pronoun[];
+  root: string;
 };
 
 export const module6VerbTenseMap: Record<Module6VerbTense, string> = {
