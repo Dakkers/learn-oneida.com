@@ -99,7 +99,10 @@ export default function PracticeTenseConjugation() {
       return createModule5VerbsList()
         .map((v) => {
           return {
-            en: v.en,
+            en: translatePhrase(
+              v[selectedTense as Module5VerbTense]!.translation,
+              selectedPronoun,
+            ),
             key: v.key,
             on: v[selectedTense as Module5VerbTense]!.phrases.find(
               (p) => p.pronoun === selectedPronoun,
@@ -181,9 +184,11 @@ export default function PracticeTenseConjugation() {
           value={selectedPronoun}
         />
 
-        <Button disabled={hasStarted} onClick={() => setHasStarted(true)}>
-          Start
-        </Button>
+        <Flex.Item>
+          <Button disabled={hasStarted} onClick={() => setHasStarted(true)}>
+            Start
+          </Button>
+        </Flex.Item>
       </Flex>
 
       {hasStarted && (

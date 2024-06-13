@@ -153,7 +153,6 @@ export default function PracticeTenseIdentification() {
 
 function QuestionLol({ answer, id, question }: Q) {
   const quizContext = useQuizContext();
-  console.log(quizContext);
   return (
     <Flex align="center" direction="column" gap={4}>
       <Text>

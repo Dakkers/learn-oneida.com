@@ -37,15 +37,15 @@ const dataCountingFeet = [
 
 const dataCountingInches = [
   {
-    en: "one foot",
+    en: "one inch",
     breakdown: ["s", ["ka"], "wyʌ́kalat"],
   },
   {
-    en: "two feet",
+    en: "two inches",
     breakdown: [["te", "DUAL"], ["ka"], "wyʌ́kalakeʔ"],
   },
   {
-    en: "three feet",
+    en: "three inches",
     breakdown: ["áhsʌ ni", ["ka"], "wyʌ́kalakeʔ"],
   },
 ];

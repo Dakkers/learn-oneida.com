@@ -5,7 +5,12 @@ import { Heading } from "@/design/components/heading";
 import { Text } from "@/design/components/text";
 import { Select } from "@/design/components/select";
 import { Button } from "@/design/primitives/button";
-import { arrayify } from "~/utils";
+import {
+  PRONOUN_MAP_EN,
+  PRONOUN_MAP_ONEIDA,
+  arrayify,
+  pronouns,
+} from "~/utils";
 import { z } from "zod";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import {
@@ -27,7 +32,11 @@ export const meta: MetaFunction = () => {
 };
 
 export default function PracticeTenseConjugation() {
-  const options = React.useMemo(
+  const [word, setWord] = React.useState("goodPerson");
+  const [hasStarted, setHasStarted] = React.useState(false);
+  const [pronoun, setPronoun] = React.useState("i");
+
+  const verbOptions = React.useMemo(
     () =>
       createModule5VerbsList().map((datum) => ({
         label: `${arrayify(datum.root)[0]} (${datum.en})`,
@@ -36,8 +45,12 @@ export default function PracticeTenseConjugation() {
     [],
   );
 
-  const [word, setWord] = React.useState("goodPerson");
-  const [hasStarted, setHasStarted] = React.useState(false);
+  const pronounOptions = React.useMemo(() => {
+    return pronouns.map((pronoun) => ({
+      label: `${PRONOUN_MAP_ONEIDA[pronoun]} (${PRONOUN_MAP_EN[pronoun]})`,
+      value: pronoun,
+    }));
+  }, []);
 
   const rows = useMemo(() => {
     const datum = createModule5VerbsList().find((item) => item.key === word);
@@ -45,15 +58,14 @@ export default function PracticeTenseConjugation() {
       return [];
     }
 
-    return MODULE_5_VERB_TENSE_LIST.map((tense) => {
-      const val = datum[tense];
-      return {
-        en: module5VerbTenseMap[tense],
-        key: `${datum.key}_${tense}`,
-        // on:
-      };
-    });
-  }, [word]);
+    return MODULE_5_VERB_TENSE_LIST.filter((tense) =>
+      tense === "cmd" ? ["u", "u2", "yall"].includes(pronoun) : true,
+    ).map((tense) => ({
+      en: module5VerbTenseMap[tense],
+      key: `${datum.key}_${tense}`,
+      on: datum[tense]!.phrases.find((p) => p.pronoun === pronoun)!.phrase,
+    }));
+  }, [pronoun, word]);
 
   const formSchema = useMemo(() => {
     return z.object(
@@ -84,8 +96,18 @@ export default function PracticeTenseConjugation() {
             setWord(value);
             setHasStarted(false);
           }}
-          options={options}
+          options={verbOptions}
           value={word}
+        />
+
+        <Select
+          label="Pronoun"
+          onChange={(value) => {
+            setPronoun(value);
+            setHasStarted(false);
+          }}
+          options={pronounOptions}
+          value={pronoun}
         />
 
         <Flex.Item>
