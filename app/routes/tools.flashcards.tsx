@@ -2,7 +2,7 @@ import { Flex } from "@/design/components/flex";
 import { Button } from "@/design/primitives/button";
 import type { MetaFunction } from "@remix-run/node";
 import _ from "lodash";
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { SectionHeading } from "~/components/SectionHeading";
 import {
   characterTenseData,
@@ -12,6 +12,10 @@ import {
 import { arrayify } from "~/utils";
 import { useInterval } from "usehooks-ts";
 import { Select } from "@/design/components/select";
+import { RadioGroup } from "@/design/components/RadioGroup";
+import { Card } from "@/design/primitives/ui/card";
+import { Text } from "@/design/components/text";
+import { createModule6VerbList } from "~/data/module06/activeVerbsList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -29,37 +33,89 @@ interface Item {
 }
 
 export default function ToolsFlashcards() {
-  const [index, setIndex] = React.useState(-1);
-  const [hasStarted, setHasStarted] = React.useState(false);
-  const [forceShow, setForceShow] = React.useState(false);
+  const [index, setIndex] = useState(-1);
+  const [data, setData] = useState<Item[]>([]);
+  const [hasStarted, setHasStarted] = useState(false);
   const [selectedModule, setSelectedModule] = useState("m6");
-
-  const [data, setData] = React.useState<Item[]>(
-    _.shuffle([
-      ...characterTenseData,
-      ...mindTenseData,
-      ...emotionTenseData,
-    ]).map((item) => {
-      const content = item.present;
-      const blah =
-        "items" in content
-          ? content.items[0].on
-          : Array.isArray(content)
-            ? content
-            : content.on;
-      return {
-        en: arrayify(item.en)[0],
-        on: blah.join(""),
-      };
-    }),
+  const [autoAdvanceSetting, setAutoAdvanceSetting] = useState("off");
+  const [audioSetting, setAudioSetting] = useState("off");
+  const [currentTimeoutRef, setCurrentTimeoutRef] = useState<number | null>(
+    null,
   );
+  const [isShowing, setIsShowing] = useState(false);
+
+  const shouldAutoAdvance = autoAdvanceSetting === "on";
+
+  const createData = () => {
+    if (selectedModule === "m5") {
+      return _.shuffle([
+        ...characterTenseData,
+        ...mindTenseData,
+        ...emotionTenseData,
+      ]).map((item) => {
+        const content = item.present;
+        const blah =
+          "items" in content
+            ? content.items[0].on
+            : Array.isArray(content)
+              ? content
+              : content.on;
+        return {
+          en: arrayify(item.en)[0],
+          on: blah.join(""),
+        };
+      });
+    } else if (selectedModule === "m6") {
+      return _.shuffle(
+        createModule6VerbList().map((datum) => ({
+          en: datum.en,
+          on: datum.root,
+        })),
+      );
+    } else {
+      return [];
+    }
+  };
 
   const currentWord = data[index];
-  const [currentTimeoutRef, setCurrentTimeoutRef] = React.useState<
-    number | null
-  >(null);
 
-  React.useEffect(() => {
+  const goNext = () => {
+    setIsShowing(false);
+    const newIndex = index + 1;
+    if (newIndex >= data.length) {
+      setHasStarted(false);
+      return;
+    }
+
+    processItem(newIndex, data);
+  };
+
+  const handleStart = () => {
+    const data = createData();
+    setData(data);
+    setHasStarted(true);
+    processItem(0, data);
+  };
+
+  const processItem = useCallback(
+    (index = 0, data: Item[] = []) => {
+      setIndex(index);
+      if (audioSetting === "on") {
+        speak(data[index].en);
+      }
+
+      if (shouldAutoAdvance) {
+        const newTimeoutRef = window.setTimeout(() => {
+          setIsShowing(true);
+        }, 8000);
+
+        setCurrentTimeoutRef(newTimeoutRef);
+      }
+    },
+    [shouldAutoAdvance, audioSetting],
+  );
+
+  useEffect(() => {
     return () => {
       clearTimeout(currentTimeoutRef);
     };
@@ -67,57 +123,72 @@ export default function ToolsFlashcards() {
 
   useInterval(
     () => {
-      setForceShow(false);
-      const newIndex = index + 1;
-      if (newIndex >= data.length) {
-        setHasStarted(false);
-        return;
-      }
-
-      processItem(newIndex);
+      goNext();
     },
-    hasStarted ? 10000 : null,
+    hasStarted && shouldAutoAdvance ? 10000 : null,
   );
-
-  const handleStart = () => {
-    setHasStarted(true);
-    processItem();
-  };
-
-  const processItem = (index = 0) => {
-    setIndex(index);
-    speak(data[index].en);
-
-    const newTimeoutRef = window.setTimeout(() => {
-      setForceShow(true);
-    }, 8000);
-
-    setCurrentTimeoutRef(newTimeoutRef);
-  };
 
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading level={1}>Flashcards</SectionHeading>
 
       {hasStarted ? (
-        <TheCard
-          englishText={currentWord.en}
-          oneidaText={currentWord.on}
-          show={forceShow}
-        />
-      ) : (
-        <Flex align="end" gap={4}>
-          <Select
-            label="Module"
-            onChange={setSelectedModule}
-            options={[
-              { label: "Module 5", value: "m5" },
-              { label: "Module 6", value: "m6" },
-            ]}
-            value={selectedModule}
+        <Flex direction="column" gap={4}>
+          <TheCard
+            englishText={currentWord.en}
+            isShowing={isShowing}
+            onClickAnswer={() => setIsShowing(true)}
+            oneidaText={currentWord.on}
           />
 
-          <Button onClick={handleStart}>Start</Button>
+          <Flex justify="between">
+            <Button
+              onClick={() => {
+                setHasStarted(false);
+                setIndex(-1);
+              }}
+            >
+              Go back
+            </Button>
+
+            <Button onClick={goNext}>Next</Button>
+          </Flex>
+        </Flex>
+      ) : (
+        <Flex direction="column" gap={4}>
+          <Flex direction={{ xs: "column", sm: "row" }} gap={4}>
+            <RadioGroup
+              label="Auto-advance"
+              onChange={setAutoAdvanceSetting}
+              value={autoAdvanceSetting}
+            >
+              <RadioGroup.Option value="on">On</RadioGroup.Option>
+              <RadioGroup.Option value="off">Off</RadioGroup.Option>
+            </RadioGroup>
+
+            <RadioGroup
+              label="Audio"
+              onChange={setAudioSetting}
+              value={audioSetting}
+            >
+              <RadioGroup.Option value="on">On</RadioGroup.Option>
+              <RadioGroup.Option value="off">Off</RadioGroup.Option>
+            </RadioGroup>
+
+            <Select
+              label="Module"
+              onChange={setSelectedModule}
+              options={[
+                { label: "Module 5", value: "m5" },
+                { label: "Module 6", value: "m6" },
+              ]}
+              value={selectedModule}
+            />
+          </Flex>
+
+          <Flex.Item>
+            <Button onClick={handleStart}>Start</Button>
+          </Flex.Item>
         </Flex>
       )}
     </Flex>
@@ -126,35 +197,40 @@ export default function ToolsFlashcards() {
 
 function TheCard({
   englishText,
+  isShowing = false,
+  onClickAnswer,
   oneidaText,
-  show = false,
 }: {
   englishText: string;
   oneidaText: string;
-  show?: boolean;
+  onClickAnswer: () => void;
+  isShowing?: boolean;
 }) {
-  const [isShowing, setIsShowing] = React.useState(show);
-  if (isShowing !== show) {
-    setIsShowing(show);
-  }
+  const oneidaTextEl = (
+    <Text as="span" variant="bodyL">
+      <strong>{oneidaText}</strong>
+    </Text>
+  );
 
   return (
-    <>
-      <div>{englishText}</div>
+    <Card className="p-6">
+      <Flex align="center" direction="column" gap={4}>
+        <Text variant="bodyL">{englishText}</Text>
 
-      <div>
-        {isShowing ? (
-          <span>{oneidaText}</span>
-        ) : (
-          <button className="bg-slate-700" onClick={() => setIsShowing(true)}>
-            <span aria-hidden className="invisible">
-              {oneidaText}
-            </span>
-            <span className="sr-only">Click to reveal</span>
-          </button>
-        )}
-      </div>
-    </>
+        <div>
+          {isShowing ? (
+            oneidaTextEl
+          ) : (
+            <button className="bg-slate-700" onClick={onClickAnswer}>
+              <span aria-hidden className="invisible">
+                {oneidaTextEl}
+              </span>
+              <span className="sr-only">Click to reveal</span>
+            </button>
+          )}
+        </div>
+      </Flex>
+    </Card>
   );
 }
 
