@@ -21,7 +21,7 @@ const data = createParadigmData(
       },
       {
         breakdown: [
-          "te",
+          ["te", "DUAL"],
           { text: "yaky" },
           { text: "at", type: "SRFL" },
           "tíhʌ",
@@ -29,7 +29,7 @@ const data = createParadigmData(
       },
       {
         breakdown: [
-          "te",
+          ["te", "DUAL"],
           { text: "tsy" },
           { text: "at", type: "SRFL" },
           "tíhʌ",
@@ -61,7 +61,7 @@ const data = createParadigmData(
       },
       {
         breakdown: [
-          "te",
+          ["te", "DUAL"],
           { text: "yakw" },
           { text: "at", type: "SRFL" },
           "tíhʌ",

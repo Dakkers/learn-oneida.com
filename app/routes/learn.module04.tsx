@@ -464,7 +464,13 @@ function AccordionWrapper({
   sections: Array<[string, string, ParadigmData]>;
 }) {
   return (
-    <Bleed mx={32}>
+    <Bleed
+      mx={{
+        xs: 0,
+        md: 16,
+        lg: 32,
+      }}
+    >
       <Accordion type="multiple">
         {sections.map(([id, title, data]) => (
           <AccordionItem id={id} key={id} value={id}>

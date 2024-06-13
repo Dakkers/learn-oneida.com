@@ -45,6 +45,10 @@ export default function Practice() {
     //   label: "Seasons",
     // },
     {
+      href: "/tense-conjugation-module-4",
+      label: "Tense Conjugation (Module 4)",
+    },
+    {
       href: "/active-tense-conjugation",
       label: "Tense Conjugation (Active Verbs)",
     },

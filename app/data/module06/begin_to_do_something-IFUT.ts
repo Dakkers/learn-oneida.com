@@ -43,7 +43,7 @@ export default createParadigmData(
         ],
       },
       {
-        breakdown: [["u", "IFUT"], ["t", "CIS"], ["u"], "atáhsawʌʔ"],
+        breakdown: [["u", "IFUT"], ["t", "CIS"], ["u"], "táhsawʌʔ"],
       },
       {
         breakdown: [

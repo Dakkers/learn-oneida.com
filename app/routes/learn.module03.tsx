@@ -21,6 +21,7 @@ import { ClansArticle } from "~/components/articles/Clans";
 import { NationsArticle } from "~/components/articles/Nations";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
+import { TextArray } from "@/utils/TextArray";
 
 export const meta: MetaFunction = () => {
   return [
@@ -566,12 +567,12 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <>
+              <TextArray>
                 <TextBreakdown
                   breakdown={[...row.col0, "ksá·t", ...row.col2, ...row.col3]}
                 />
                 <span>(I have a child)</span>
-              </>
+              </TextArray>
             ),
           },
           {
@@ -580,7 +581,7 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <>
+              <TextArray>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -590,7 +591,7 @@ function HavingConjugations() {
                   ].concat([{ text: "yʌ́·", type: "REP" }])}
                 />
                 <span>(I have a baby)</span>
-              </>
+              </TextArray>
             ),
           },
           {
@@ -599,14 +600,14 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <>
+              <TextArray>
                 <TextBreakdown
                   breakdown={[...row.col0, "náskw", ...row.col2].concat([
                     { text: "yʌʔ", type: "REP" },
                   ])}
                 />
                 <span>(I have an animal)</span>
-              </>
+              </TextArray>
             ),
           },
           {
@@ -615,7 +616,7 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <>
+              <TextArray>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -625,7 +626,7 @@ function HavingConjugations() {
                   ].concat([{ text: "yʌ́·", type: "REP" }])}
                 />
                 <span>(I have a boyfriend)</span>
-              </>
+              </TextArray>
             ),
           },
           {
@@ -634,7 +635,7 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <>
+              <TextArray>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -644,7 +645,7 @@ function HavingConjugations() {
                   ].concat([{ text: "yʌ́·", type: "REP" }])}
                 />
                 <span>(I have a girlfriend)</span>
-              </>
+              </TextArray>
             ),
           },
         ]}
@@ -675,7 +676,7 @@ function HavingConjugations() {
             col4: [{ text: "a", type: "JOIN" }],
             col5: [{ text: "hkweʔ", type: "PAST" }],
             result: (row: WeirdRow) => (
-              <>
+              <TextArray>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -687,7 +688,7 @@ function HavingConjugations() {
                   ]}
                 />
                 <span>(I used to have an animal)</span>
-              </>
+              </TextArray>
             ),
           },
         ]}
@@ -705,7 +706,7 @@ function HavingConjugations() {
             col1: ["naskw"],
             col2: [{ text: "iyo", type: "REP" }],
             result: (row: WeirdRow) => (
-              <>
+              <TextArray>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -714,7 +715,7 @@ function HavingConjugations() {
                   ]}
                 />
                 <span>(I have a good animal)</span>
-              </>
+              </TextArray>
             ),
           },
         ]}
@@ -738,7 +739,7 @@ function HavingConjugations() {
             col2: [{ text: "iyo", type: "REP" }],
             col3: [{ text: "hne", type: "PAST" }],
             result: (row: WeirdRow) => (
-              <>
+              <TextArray>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -749,7 +750,7 @@ function HavingConjugations() {
                   ]}
                 />
                 <span>(I used to have a good animal)</span>
-              </>
+              </TextArray>
             ),
           },
           {
@@ -758,7 +759,7 @@ function HavingConjugations() {
             col2: [{ text: "aksʌ", type: "REP" }],
             col3: [{ text: "hne", type: "PAST" }],
             result: (row: WeirdRow) => (
-              <>
+              <TextArray>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -769,7 +770,7 @@ function HavingConjugations() {
                   ]}
                 />
                 <span>(I used to have a bad animal)</span>
-              </>
+              </TextArray>
             ),
           },
         ]}

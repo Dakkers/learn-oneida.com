@@ -39,7 +39,11 @@ export function Settings({
   }
 
   return (
-    <Flex align="start" gap={8}>
+    <Flex
+      align={{ sm: "start" }}
+      direction={{ xs: "column", sm: "row" }}
+      gap={2}
+    >
       {enableLanguageSetting && (
         <RadioGroup
           label="Translate"

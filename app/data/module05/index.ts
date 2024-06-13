@@ -1360,7 +1360,7 @@ export function createModule5VerbsList(shouldSort = false) {
     ...emotionTenseData,
     ...physicalTenseData,
   ].map((item) => {
-    const result: Partial<TenseDatum> = { ...item };
+    const result: Partial<Module5VerbDatum> = { ...item };
     for (const key of ["Prs", "Fut", "Cmd", "Ifut", "Past"] as const) {
       result[key.toLowerCase() as Lowercase<typeof key>] =
         // @ts-expect-error Meh
