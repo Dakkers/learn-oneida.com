@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../@/design/components/text.tsx"],
+  "sourcesContent": ["import React from \"react\";\nimport { InternalText, InternalTextProps } from \"../internal/internalText\";\n\nexport interface TextProps\n  extends Pick<\n    InternalTextProps,\n    \"children\" | \"contrast\" | \"id\" | \"intent\" | \"variant\"\n  > {\n  as?: \"span\" | \"div\" | \"p\";\n}\n\nexport function Text({\n  as: Tag = \"div\",\n  children,\n  contrast = \"high\",\n  id,\n  intent = \"secondary\",\n  variant = \"bodyM\",\n}: TextProps) {\n  return (\n    <InternalText\n      as={Tag}\n      contrast={contrast}\n      id={id}\n      intent={intent}\n      variant={variant}\n    >\n      {children}\n    </InternalText>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;AAoBI;AATG,SAAS,KAAK;AAAA,EACnB,IAAI,MAAM;AAAA,EACV;AAAA,EACA,WAAW;AAAA,EACX;AAAA,EACA,SAAS;AAAA,EACT,UAAU;AACZ,GAAc;AACZ,SACE;AAAA,IAAC;AAAA;AAAA,MACC,IAAI;AAAA,MACJ;AAAA,MACA;AAAA,MACA;AAAA,MACA;AAAA,MAEC;AAAA;AAAA,IAPH;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAQA;AAEJ;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../@/design/primitives/link.tsx"],
+  "sourcesContent": ["import { Link as RemixLink } from \"@remix-run/react\";\nimport React from \"react\";\n\nexport interface LinkProps {\n  children: React.ReactNode;\n  href: string;\n}\n\nexport function Link({ children, href }: LinkProps) {\n  return (\n    <RemixLink className=\"text-blue-600 underline\" to={href}>\n      {children}\n    </RemixLink>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;AAUI;AAFG,SAASA,MAAK,EAAE,UAAU,KAAK,GAAc;AAClD,SACE,mDAAC,QAAU,WAAU,2BAA0B,IAAI,MAChD,YADH;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": ["Link"]
+}

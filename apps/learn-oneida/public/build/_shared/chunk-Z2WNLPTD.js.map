@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../@/design/components/notice.tsx"],
+  "sourcesContent": ["import { cn } from \"@/lib/utils\";\nimport { Intent } from \"../primitives/types\";\n\ninterface NoticeProps {\n  children: React.ReactNode;\n  intent?: Intent;\n}\n\nexport function Notice({ children, intent }: NoticeProps) {\n  return (\n    <div className={cn(\"p-4\", \"rounded\", intentMap[intent ?? \"secondary\"])}>\n      {children}\n    </div>\n  );\n}\n\nconst intentMap: Record<Intent, string> = {\n  magic: \"bg-violet-200\",\n  negative: \"bg-red-200\",\n  positive: \"bg-green-200\",\n  primary: \"bg-blue-100\",\n  secondary: \"bg-gray-200\",\n  warning: \"bg-amber-200\",\n} as const;\n"],
+  "mappings": ";;;;;;;;;;;AAUI;AAFG,SAAS,OAAO,EAAE,UAAU,OAAO,GAAgB;AACxD,SACE,mDAAC,SAAI,WAAW,GAAG,OAAO,WAAW,UAAU,UAAU,WAAW,CAAC,GAClE,YADH;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;AAEA,IAAM,YAAoC;AAAA,EACxC,OAAO;AAAA,EACP,UAAU;AAAA,EACV,UAAU;AAAA,EACV,SAAS;AAAA,EACT,WAAW;AAAA,EACX,SAAS;AACX;",
+  "names": []
+}

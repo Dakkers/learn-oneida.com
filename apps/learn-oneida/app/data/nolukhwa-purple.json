@@ -1,0 +1,80 @@
+{
+  "translation": "{{subject}} {{verb}} {{object}}",
+  "type": "PP",
+  "phrases": [
+    {
+      "key": "i_you",
+      "phrase": "kunolúkhwa̲ʔ",
+      "breakdown": [{ "text": "ku" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "i_him",
+      "phrase": "linolúkhwa̲ʔ",
+      "breakdown": [{ "text": "li" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "i_her",
+      "phrase": "khenolúkhwa̲ʔ",
+      "breakdown": [{ "text": "khe" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "you_me",
+      "phrase": "sknolúkhwa̲ʔ",
+      "breakdown": [{ "text": "sk" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "you_him",
+      "phrase": "etshnolúkhwa̲ʔ",
+      "breakdown": [
+        { "text": "h", "type": "RPL" },
+        { "text": "etsh" },
+        "nolúkhwa̲ʔ"
+      ]
+    },
+    {
+      "key": "you_her",
+      "phrase": "shenolúkhwa̲ʔ",
+      "breakdown": [{ "text": "she" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "he_me",
+      "phrase": "laknolúkhwa̲ʔ",
+      "breakdown": [{ "text": "lak" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "he_you",
+      "phrase": "yanolúkhwa̲ʔ",
+      "breakdown": [{ "text": "ya" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "he_him",
+      "phrase": "lonolúkhwa̲ʔ",
+      "breakdown": [{ "text": "lo" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "he_her",
+      "phrase": "shakonolúkhwa̲ʔ",
+      "breakdown": [{ "text": "shako" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "she_me",
+      "phrase": "yuknolúkhwa̲ʔ",
+      "breakdown": [{ "text": "yuk" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "she_you",
+      "phrase": "yesanolúkhwa̲ʔ",
+      "breakdown": [{ "text": "yesa" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "she_him",
+      "phrase": "luwanolúkhwa̲ʔ",
+      "breakdown": [{ "text": "luwa" }, "nolúkhwa̲ʔ"]
+    },
+    {
+      "key": "she_her",
+      "phrase": "yutatnolúkhwa̲ʔ",
+      "breakdown": [{ "text": "yutat" }, "nolúkhwa̲ʔ"]
+    }
+  ]
+}

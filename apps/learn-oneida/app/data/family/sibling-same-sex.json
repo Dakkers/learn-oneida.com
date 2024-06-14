@@ -1,0 +1,97 @@
+{
+  "translation": "{{pronoun}} are siblings",
+  "type": "PR",
+  "prefix": "RECP",
+  "phrases": [
+    {
+      "pronoun": "uni",
+      "phrase": "tetyatahnu·téleʔ",
+      "breakdown": [
+        { "text": "ty" },
+        { "text": "ata", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    },
+    {
+      "pronoun": "soni",
+      "phrase": "teyakyatahnu·téleʔ",
+      "breakdown": [
+        { "text": "yaky" },
+        { "text": "ata", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    },
+    {
+      "pronoun": "u2",
+      "phrase": "tetsyatahnu·téleʔ",
+      "breakdown": [
+        { "text": "tsy" },
+        { "text": "ata", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    },
+    {
+      "pronoun": "2m",
+      "phrase": "tehyatahnu·téleʔ",
+      "breakdown": [
+        { "text": "hy" },
+        { "text": "ata", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    },
+    {
+      "pronoun": "2f",
+      "phrase": "tekyatahnu·téleʔ",
+      "breakdown": [
+        { "text": "ky" },
+        { "text": "ata", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    },
+    {
+      "pronoun": "us",
+      "phrase": "tetwatahnu·téleʔ",
+      "breakdown": [
+        { "text": "tw" },
+        { "text": "ata", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    },
+    {
+      "pronoun": "theyni",
+      "phrase": "teyakwatahnu·téleʔ",
+      "breakdown": [
+        { "text": "yakw" },
+        { "text": "ata", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    },
+    {
+      "pronoun": "yall",
+      "phrase": "teswatathnu·téleʔ",
+      "breakdown": [
+        { "text": "sw" },
+        { "text": "atat", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    },
+    {
+      "pronoun": "ms",
+      "phrase": "tehutahnu·téleʔ",
+      "breakdown": [
+        { "text": "hu" },
+        { "text": "ta", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    },
+    {
+      "pronoun": "fs",
+      "phrase": "tekutahnu·téleʔ",
+      "breakdown": [
+        { "text": "ku" },
+        { "text": "ta", "type": "REFL" },
+        "hnu·téleʔ"
+      ]
+    }
+  ]
+}
