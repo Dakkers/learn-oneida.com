@@ -43,7 +43,7 @@ export default createParadigmData(
         breakdown: ["kʌʔ ni", { text: "yakw" }, "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "sw" }, "á·"],
+        breakdown: ["kʌʔ ni", { text: "swa" }, "á·"],
       },
       {
         breakdown: ["kʌʔ ni", { text: "hʌn" }, "á·"],

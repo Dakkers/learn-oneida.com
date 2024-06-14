@@ -11,15 +11,6 @@ import { Box } from "@/design/components/box";
 import { Notice } from "@/design/components/notice";
 import { TableWrapper } from "@/design/components/tableWrapper";
 import {
-  characterTenseData,
-  bodyTenseData,
-  physicalTenseData,
-  miscTenseData,
-  mindTenseData,
-  emotionTenseData,
-  TenseDatum,
-} from "~/data/module05";
-import {
   BreakdownArray,
   BreakdownType,
   TextBreakdown,
@@ -29,6 +20,7 @@ import smallData from "~/data/module05/kʌʔ_ni-a";
 import { HeightWeightArticle } from "~/components/articles/Weight";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
+import { Module5VerbDatum, createModule5VerbsList } from "~/data/module05";
 
 export const meta: MetaFunction = () => {
   return [
@@ -97,12 +89,12 @@ export default function LearnModule05() {
 
       <StativeVerbExamples />
 
-      <VerbSection data={characterTenseData} title="Character" />
-      <VerbSection data={mindTenseData} title="Mind" />
-      <VerbSection data={emotionTenseData} title="Emotions" />
-      <VerbSection data={bodyTenseData} title="Body" />
-      <VerbSection data={physicalTenseData} title="Physical" />
-      <VerbSection data={miscTenseData} title="Misc" />
+      <VerbSection category="character" title="Character" />
+      <VerbSection category="mind" title="Mind" />
+      <VerbSection category="emotion" title="Emotions" />
+      <VerbSection category="body" title="Body" />
+      <VerbSection category="physical" title="Physical" />
+      <VerbSection category="misc" title="Misc" />
 
       <OtherStativeVerbs />
       <IrregularStativeVerbsSection />
@@ -322,13 +314,15 @@ function StativeVerbExamples() {
   );
 }
 
-function VerbSection({ data, title }: { data: TenseDatum[]; title: string }) {
+function VerbSection({ category, title }: { category: string; title: string }) {
+  const data = createModule5VerbsList().filter((d) => d.category === category);
+
   return (
     <>
       <SectionHeading id={`verbs-${title.toLowerCase()}`} level={2}>
         Verbs — {title}
       </SectionHeading>
-      {data.map((d, i) => (
+      {data.map((d) => (
         <VerbSectionItem
           {...d}
           key={d.key}
@@ -347,9 +341,9 @@ function VerbSectionItem({
   id,
   ifut,
   past,
-  present,
+  prs: present,
   typeFallback,
-}: TenseDatum & {
+}: Module5VerbDatum & {
   id: string;
   typeFallback?: BreakdownType;
 }) {
@@ -365,8 +359,8 @@ function VerbSectionItem({
           {
             accessorKey: "breakdown",
             // @ts-expect-error To be addressed in LO-12
-            cell: (value: TenseDatumBreakdown) => (
-              <TheCell typeFallback={typeFallback} value={value} />
+            cell: (value: BreakdownArray) => (
+              <TextBreakdown typeFallback={typeFallback} breakdown={value} />
             ),
             header: "",
           },
@@ -379,144 +373,15 @@ function VerbSectionItem({
             ["Conditional", ifut],
             ["Command", cmd],
           ] as const
-        ).map(([type, breakdown]) => ({
-          breakdown: createBreakdown(breakdown),
+        ).map(([type, datum]) => ({
+          breakdown: datum.phrases.find(
+            (p) => p.pronoun === (type === "Command" ? "u" : "i"),
+          )!.breakdown,
           type,
         }))}
       />
     </Flex>
   );
-}
-
-function TheCell({
-  typeFallback,
-  value,
-}: {
-  typeFallback?: BreakdownType;
-  value: TenseDatumBreakdown;
-}) {
-  if (Array.isArray(value)) {
-    return <TextBreakdown breakdown={value} typeFallback={typeFallback} />;
-  }
-
-  const items = "items" in value ? value.items : [value];
-  return (
-    <Flex direction="column" gap={4}>
-      {items.map((item, i) => (
-        <Flex direction="column" gap={1} key={i}>
-          <TextBreakdown breakdown={item.on} typeFallback={typeFallback} />
-          <Text variant="bodyS">{item.en}</Text>
-        </Flex>
-      ))}
-    </Flex>
-  );
-}
-
-type TenseDatumBreakdown =
-  | BreakdownArray
-  | {
-      on: BreakdownArray;
-      en: string | string[];
-    }
-  | {
-      items: Array<{
-        on: BreakdownArray;
-        en: string | string[];
-      }>;
-    };
-
-function createBreakdown(stuff: TenseDatum["present"]): TenseDatumBreakdown {
-  if (Array.isArray(stuff)) {
-    return createBreakdownHelper(stuff);
-  } else if ("items" in stuff) {
-    return {
-      items: stuff.items.map((item) => ({
-        on: createBreakdownHelper(item.on),
-        en: item.en,
-      })),
-    };
-  } else {
-    return {
-      on: createBreakdownHelper(stuff.on),
-      en: stuff.en,
-    };
-  }
-}
-
-const PRONOMINALS = [
-  "·uk", // ???
-  "·ukw",
-  "hs",
-  "k",
-  "s",
-  "sa",
-  "sʌ",
-  "ts",
-  "tsy",
-  "wak",
-  "wák",
-  "yuky",
-];
-
-const FUTURE_TENSE_ENDINGS = [
-  "ak",
-  "ák",
-  "akeʔ",
-  "ákeʔ",
-  "éhk",
-  "ek",
-  "ék",
-  "éke",
-  "ekeʔ",
-  "ékeʔ",
-  "hak",
-  "hakeʔ",
-  "hek",
-  "hekeʔ",
-  "sekeʔ",
-  "sek",
-];
-
-const PAST_TENSE_ENDINGS = [
-  "hkweʔ",
-  "hne·",
-  "hné·",
-  "hné",
-  "hnéʔ",
-  "ke",
-  "kweʔ",
-  "né·",
-  "u·né·",
-  "ú·ne·",
-  "ú·ne",
-  "ú·neʔ",
-  "u·neʔ",
-  "úne·",
-  "·neʔ", // Weird one
-];
-
-function createBreakdownHelper(stuff: string[]) {
-  const result = stuff.slice() as BreakdownArray;
-
-  for (let i = 0; i < result.length; i++) {
-    const text = stuff[i];
-    if (PRONOMINALS.includes(text)) {
-      result[i] = { text };
-    } else if (FUTURE_TENSE_ENDINGS.includes(text) && i === result.length - 1) {
-      result[i] = { text, type: "FUT" };
-    } else if (["a", "ʌ", "u"].includes(text) && i <= 2) {
-      result[i] = { text, type: "FUT" };
-    } else if (PAST_TENSE_ENDINGS.includes(text) && i === result.length - 1) {
-      result[i] = { text, type: "PAST" };
-    } else if (
-      ["e", "há", "á", "y"].includes(text) &&
-      i !== 0 &&
-      i !== result.length - 1
-    ) {
-      result[i] = { text, type: "EP" };
-    }
-  }
-  return result;
 }
 
 function OtherStativeVerbs() {
@@ -709,51 +574,51 @@ function NegatingStativeVerbsSection() {
   const data = [
     [
       {
-        on: ["wak", "atshanuní"],
+        on: [["wak"], "atshanuní"],
         en: "I am happy",
       },
       {
-        on: ["yah teʔ", "wak", "atshanuní"],
+        on: ["yah teʔ", ["wak"], "atshanuní"],
         en: "I am not happy",
       },
     ],
     [
       {
-        on: ["wak", "atshanuni·", "hné·"],
+        on: [["wak"], "atshanuni·", ["hné·", "PAST"]],
         en: "I was happy",
       },
       {
-        on: ["yah teʔ", "wak", "atshanuni·", "hné·"],
+        on: ["yah teʔ", ["wak"], "atshanuni·", ["hné·", "PAST"]],
         en: "I was not happy",
       },
     ],
     [
       {
-        on: ["ʌ", "wak", "atshanuní", "hakeʔ"],
+        on: ["ʌ", ["wak"], "atshanuní", "hakeʔ"],
         en: "I will be happy",
       },
       {
-        on: ["yah th", "a", "·ukw", "atshanuní", "hakeʔ"],
+        on: ["yah th", ["a", "IFUT"], ["·ukw"], "atshanuní", "hakeʔ"],
         en: "I would not be happy",
       },
     ],
     [
       {
-        on: ["a", "·ukw", "atshanuní", "hakeʔ"],
+        on: [["a", "IFUT"], ["·ukw"], "atshanuní", "hakeʔ"],
         en: "I would be happy",
       },
       {
-        on: ["yah th", "a", "·ukw", "atshanuní", "hakeʔ"],
+        on: ["yah th", ["a", "IFUT"], ["·ukw"], "atshanuní", "hakeʔ"],
         en: "I would not be happy",
       },
     ],
     [
       {
-        on: ["s", "atshanuní", "hak"],
+        on: [["s"], "atshanuní", "hak"],
         en: "You be happy!",
       },
       {
-        on: ["Tákʌʔ ", "ʌ", "s", "atshanuní", "hak"],
+        on: ["Tákʌʔ ", "ʌ", ["s"], "atshanuní", "hak"],
         en: "Don't you be happy!",
       },
     ],
@@ -770,23 +635,29 @@ function NegatingStativeVerbsSection() {
           {
             accessorKey: "left",
             // @ts-expect-error To be addressed in LO-12
-            cell: (value: TenseDatumBreakdown) => (
-              <TheCell typeFallback="PB" value={value} />
+            cell: (value: { on: BreakdownArray; en: string }) => (
+              <>
+                <TextBreakdown breakdown={value.on} typeFallback="PB" />
+                <Text variant="bodyS">{value.en}</Text>
+              </>
             ),
             header: "",
           },
           {
             accessorKey: "right",
             // @ts-expect-error To be addressed in LO-12
-            cell: (value: TenseDatumBreakdown) => (
-              <TheCell typeFallback="PB" value={value} />
+            cell: (value: { on: BreakdownArray; en: string }) => (
+              <>
+                <TextBreakdown breakdown={value.on} typeFallback="PB" />
+                <Text variant="bodyS">{value.en}</Text>
+              </>
             ),
             header: "",
           },
         ]}
         data={data.map(([left, right]) => ({
-          left: createBreakdown(left),
-          right: createBreakdown(right),
+          left,
+          right,
         }))}
       />
     </>
