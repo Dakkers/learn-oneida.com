@@ -9,9 +9,9 @@
     "dev": "next dev",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
-    "pages:deploy": "npm run pages:build && wrangler pages deploy",
+    "pages:deploy": "pnpm run pages:build && wrangler pages deploy",
     "prepare": "husky install",
-    "preview": "npm run pages:build && wrangler pages dev",
+    "preview": "pnpm run pages:build && wrangler pages dev",
     "start": "next start",
     "typecheck": "tsc"
   },
@@ -25,25 +25,32 @@
     "@cloudflare/workers-types": "^4.20230518.0",
     "@remix-run/dev": "^2.4.1",
     "@types/lodash": "^4.14.202",
+    "@types/node": "^20",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@types/seedrandom": "^3.0.8",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "eslint": "^8.38.0",
+    "autoprefixer": "^10.0.1",
+    "eslint-config-next": "14.1.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-next-on-pages": "^1.11.3",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint": "^8.38.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "postcss": "^8",
     "prettier": "^3.2.5",
+    "tailwindcss": "^3.3.0",
     "tsx": "^4.7.0",
     "typescript": "^5.4.5",
+    "vercel": "^34.2.7",
     "wrangler": "^3.8.0"
   },
   "lint-staged": {
-    "*.{ts,tsx,css,md}": "npm run format:write"
+    "*.{ts,tsx,css,md}": "pnpm run format:write"
   }
 }
