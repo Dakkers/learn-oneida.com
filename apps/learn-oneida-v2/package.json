@@ -1,5 +1,5 @@
 {
-  "name": "learn-mohawk",
+  "name": "learn-oneida-v2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,8 +18,8 @@
   "dependencies": {
     "@ukwehuwehneke/ohutsya": "workspace:*",
     "next": "14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.11.3",
@@ -50,8 +50,5 @@
     "typescript": "^5.4.5",
     "vercel": "^34.2.7",
     "wrangler": "^3.60.3"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,css,md}": "pnpm run format:write"
   }
 }
