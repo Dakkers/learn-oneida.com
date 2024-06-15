@@ -20,7 +20,8 @@
       ],
       "~/*": [
         "app/*"
-      ]
+      ],
+      "@ukwehuwehneke/*": ["../../packages/*/src"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -31,5 +32,8 @@
     "./remix.env.d.ts",
     "**/*.ts",
     "**/*.tsx"
+  ],
+  "references": [
+    {"path": "../../packages/ohutsya", "prepend": true}
   ]
 }

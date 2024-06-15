@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "ci:format": "pnpm -r ci:format",
+    "format:write": "pnpm -r format:write",
+    "typecheck": "pnpm -r typecheck",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
   },
   "keywords": [],
   "author": "",

@@ -1,14 +1,11 @@
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
 import { Link } from "@/design/primitives/link";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardTitle,
-} from "@/design/primitives/ui/card";
+import { CardDescription, CardTitle } from "@/design/primitives/ui/card";
 import type { MetaFunction } from "@remix-run/node";
 import { SectionHeading } from "~/components/SectionHeading";
+
+import { Card } from "@ukwehuwehneke/ohutsya";
 
 export const meta: MetaFunction = () => {
   return [

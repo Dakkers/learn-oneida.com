@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../@/design/components/box.tsx"],
-  "sourcesContent": ["import { PaddingProps, usePadding } from \"@/utils/usePadding\";\n\ninterface BoxProps extends PaddingProps {\n  children: React.ReactNode;\n}\n\nexport function Box({ children, p, px, py, pl, pt, pr, pb }: BoxProps) {\n  const padding = usePadding({ p, px, py, pl, pt, pr, pb });\n  return <div className={padding}>{children}</div>;\n}\n"],
-  "mappings": ";;;;;;;;;;;AAQS;AAFF,SAAS,IAAI,EAAE,UAAU,GAAG,IAAI,IAAI,IAAI,IAAI,IAAI,GAAG,GAAa;AACrE,QAAM,UAAU,WAAW,EAAE,GAAG,IAAI,IAAI,IAAI,IAAI,IAAI,GAAG,CAAC;AACxD,SAAO,mDAAC,SAAI,WAAW,SAAU,YAA1B;AAAA;AAAA;AAAA;AAAA,SAAmC;AAC5C;",
-  "names": []
-}

@@ -11,12 +11,16 @@ import {
   useMatches,
 } from "@remix-run/react";
 import stylesheet from "~/globals.css";
+// import ohutsyaCss from "@ukwehuwehneke/ohutsya/lib/ohutsya.css";
 import { Navbar } from "./components/Navbar";
 import { Text } from "@/design/components/text";
 import { cn } from "@/lib/utils";
 
+// console.log(ohutsyaCss)
+
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
+  // { rel: "stylesheet", href: ohutsyaCss },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 

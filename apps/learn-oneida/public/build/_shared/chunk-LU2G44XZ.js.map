@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../@/design/components/heading.tsx"],
-  "sourcesContent": ["import React from \"react\";\nimport { InternalText, InternalTextProps } from \"../internal/internalText\";\n\nexport interface HeadingProps\n  extends Pick<\n    InternalTextProps,\n    \"align\" | \"children\" | \"contrast\" | \"id\" | \"intent\" | \"variant\"\n  > {\n  level: 1 | 2 | 3 | 4 | 5;\n}\n\nexport function Heading({\n  align = \"start\",\n  children,\n  contrast = \"high\",\n  id,\n  intent = \"secondary\",\n  level,\n  variant = \"bodyM\",\n}: HeadingProps) {\n  return (\n    <InternalText\n      align={align}\n      as={\n        (\n          {\n            1: \"h1\",\n            2: \"h2\",\n            3: \"h3\",\n            4: \"h4\",\n            5: \"h5\",\n          } as const\n        )[level]\n      }\n      contrast={contrast}\n      id={id}\n      intent={intent}\n      variant={variant}\n    >\n      {children}\n    </InternalText>\n  );\n}\n"],
-  "mappings": ";;;;;;;;;;;AAqBI;AAVG,SAAS,QAAQ;AAAA,EACtB,QAAQ;AAAA,EACR;AAAA,EACA,WAAW;AAAA,EACX;AAAA,EACA,SAAS;AAAA,EACT;AAAA,EACA,UAAU;AACZ,GAAiB;AACf,SACE;AAAA,IAAC;AAAA;AAAA,MACC;AAAA,MACA,IAEI;AAAA,QACE,GAAG;AAAA,QACH,GAAG;AAAA,QACH,GAAG;AAAA,QACH,GAAG;AAAA,QACH,GAAG;AAAA,MACL,EACA,KAAK;AAAA,MAET;AAAA,MACA;AAAA,MACA;AAAA,MACA;AAAA,MAEC;AAAA;AAAA,IAlBH;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAmBA;AAEJ;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../@/design/components/list.tsx"],
-  "sourcesContent": ["import { cn } from \"@/lib/utils\";\nimport { Text } from \"./text\";\n\nexport function List({\n  children,\n  ordered = false,\n}: {\n  children: React.ReactNode;\n  ordered?: boolean;\n}) {\n  const Tag = ordered ? \"ol\" : \"ul\";\n  return (\n    <Tag className={cn(\"list-outside\", ordered ? \"list-decimal\" : \"list-disc\")}>\n      {children}\n    </Tag>\n  );\n}\n\nList.Item = function ListItem({ children }: { children: React.ReactNode }) {\n  return (\n    <li className=\"ml-6\">\n      <Text>{children}</Text>\n    </li>\n  );\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAYI;AATG,SAAS,KAAK;AAAA,EACnB;AAAA,EACA,UAAU;AACZ,GAGG;AACD,QAAM,MAAM,UAAU,OAAO;AAC7B,SACE,mDAAC,OAAI,WAAW,GAAG,gBAAgB,UAAU,iBAAiB,WAAW,GACtE,YADH;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;AAEA,KAAK,OAAO,SAAS,SAAS,EAAE,SAAS,GAAkC;AACzE,SACE,mDAAC,QAAG,WAAU,QACZ,6DAAC,QAAM,YAAP;AAAA;AAAA;AAAA;AAAA,SAAgB,KADlB;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
-  "names": []
-}
