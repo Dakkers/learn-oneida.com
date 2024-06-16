@@ -27,13 +27,13 @@ for (const fn of filenames) {
     if (pageName === '_index') {
       createTheDir(pagePath, originalFilepath)
     } else {
-      const pagePath = path.resolve(parentDirPath, pageName)
-      console.log('\t',pagePath)
+      // console.log('\t',pagePath)
+      createTheDir(pagePath, originalFilepath)
     }
   }
 }
 
-const createTheDir = (newPath, originalPath) => {
+function createTheDir (newPath, originalPath) {
   if (!fs.existsSync(newPath)) {
     fs.mkdirSync(newPath);
   }
