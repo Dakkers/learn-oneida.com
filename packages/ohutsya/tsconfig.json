@@ -14,7 +14,8 @@
     "noEmit": true,
     "outDir": "lib/types",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["src/*"],
+      "@/*": ["src/*"],
     },
     "rootDir": "src",
     "skipLibCheck": true,
