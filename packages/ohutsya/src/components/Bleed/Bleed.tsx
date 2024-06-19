@@ -1,6 +1,4 @@
-import { cn } from "~/utils";
-import { responsiveClassName } from "~/utils/responsive";
-import { MarginProps } from "@/design/utils/useMargin";
+import { cn, MarginProps, responsiveClassName } from "../../utils";
 
 export interface BleedProps extends MarginProps {
   children: React.ReactNode;

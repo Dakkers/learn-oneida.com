@@ -1,18 +1,18 @@
 import React from 'react';
 import {
   Drawer as PrimitiveDrawer,
-  DrawerPortal as PrimitiveDrawerPortal,
-  DrawerOverlay as PrimitiveDrawerOverlay,
+  // DrawerPortal as PrimitiveDrawerPortal,
+  // DrawerOverlay as PrimitiveDrawerOverlay,
   DrawerTrigger as PrimitiveDrawerTrigger,
-  DrawerClose as PrimitiveDrawerClose,
+  // DrawerClose as PrimitiveDrawerClose,
   DrawerContent as PrimitiveDrawerContent,
-  DrawerHeader as PrimitiveDrawerHeader,
-  DrawerFooter as PrimitiveDrawerFooter,
-  DrawerTitle as PrimitiveDrawerTitle,
-  DrawerDescription as PrimitiveDrawerDescription
+  // DrawerHeader as PrimitiveDrawerHeader,
+  // DrawerFooter as PrimitiveDrawerFooter,
+  // DrawerTitle as PrimitiveDrawerTitle,
+  // DrawerDescription as PrimitiveDrawerDescription
 } from '../../primitives/drawer'
 
-interface DrawerProps {
+export interface DrawerProps {
   children: React.ReactNode;
   open: boolean;
   onOpenChange: (val: boolean) => void;
@@ -26,7 +26,6 @@ export function Drawer ({
   const childrenArray = React.Children.toArray(children);
   const triggerChild = findChildWithSymbol(childrenArray, DrawerTriggerSymbol);
   const otherChildren = findOtherChildren(childrenArray, [DrawerTriggerSymbol]);
-  console.log(triggerChild)
 
   return (
     <PrimitiveDrawer open={open} onOpenChange={onOpenChange}>
@@ -40,6 +39,8 @@ export function Drawer ({
 
 Drawer.Trigger = function DrawerTrigger ({
   children
+}: {
+  children: React.ReactNode;
 }) {
   return (
     <PrimitiveDrawerTrigger>
@@ -54,11 +55,11 @@ Object.assign(Drawer.Trigger, { [DrawerTriggerSymbol]: true })
 
 function findChildWithSymbol (children: React.ReactNode | React.ReactNode[], symbol: symbol) {
   const stuff = Array.isArray(children) ? children : React.Children.toArray(children);
-  console.log(stuff)
   return stuff.find((child) => hasSymbol(child, symbol));
 }
 
 function hasSymbol(child: React.ReactNode, symbol: symbol) {
+  // @ts-expect-error TODO
   return symbol in child && child[symbol] === true;
 }
 

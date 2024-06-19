@@ -1,13 +1,15 @@
 import React from "react";
 import { Text, TextProps } from "../components/Text/Text";
 
+export interface TextArrayProps extends TextProps {
+  bold?: boolean;
+}
+
 export function TextArray({
   bold,
   children,
   ...props
-}: TextProps & {
-  bold?: boolean;
-}) {
+}: TextArrayProps) {
   const WrapperTag = bold ? "b" : React.Fragment;
   if (!Array.isArray(children)) {
     return (

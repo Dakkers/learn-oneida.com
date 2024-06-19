@@ -8,7 +8,7 @@ export default {
   component: Drawer,
 } satisfies Meta<typeof Drawer>;
 
-export const Basic: StoryFn<typeof Drawer> = (args) => {
+export const Basic: StoryFn<typeof Drawer> = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

@@ -6,17 +6,19 @@ import {
 import { FormElement } from "../../internal/FormElement";
 import { Flex } from "../Flex/Flex";
 
+export interface RadioGroupProps {
+  children: React.ReactNode;
+  label?: string;
+  onChange: (value: string) => void;
+  value: string;
+}
+
 export function RadioGroup({
   children,
   label,
   onChange,
   value,
-}: {
-  children: React.ReactNode;
-  label?: string;
-  onChange: (value: string) => void;
-  value: string;
-}) {
+}: RadioGroupProps) {
   return (
     <FormElement label={label}>
       <RadioGroupPrimitive onValueChange={onChange} value={value}>

@@ -1,12 +1,9 @@
-import { Notice } from "@/design/components/notice";
-import { Separator } from "@/design/primitives/separator";
-import { Text } from "@/design/components/text";
+import { Bleed,Box,Divider,Notice,Text } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { singlePronouns } from "~/utils";
-import yatsJson from "../data/yats";
-import anuhteJson from "../data/anuhte";
-import { Box } from "@/design/components/box";
+import yatsJson from "~/data/yats";
+import anuhteJson from "~/data/anuhte";
 import { EnglishNamesArticle } from "~/components/articles/EnglishNames";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { Pronominal } from "~/components/Pronominal";
@@ -22,7 +19,6 @@ import { StressArticle } from "~/components/articles/Stress";
 import { GlottalStopArticle } from "~/components/articles/GlottalStop";
 import { LetterHArticle } from "~/components/articles/LetterH";
 import { WhisperedEndingsArticle } from "~/components/articles/WhisperedEndings";
-import { Bleed } from "@/design/components/Bleed";
 
 export const meta: any = () => {
   return [
@@ -98,7 +94,7 @@ export default function LearnModule01() {
         <TOC.Item label="Translation exercises" value="translation-exercises" />
       </TOC>
 
-      <Separator />
+      <Divider />
 
       <PronominalsArticle level={2} />
 

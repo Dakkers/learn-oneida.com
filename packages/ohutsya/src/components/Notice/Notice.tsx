@@ -1,6 +1,6 @@
 import { cn, type Intent } from "../../utils";
 
-interface NoticeProps {
+export interface NoticeProps {
   children: React.ReactNode;
   intent?: Intent;
 }

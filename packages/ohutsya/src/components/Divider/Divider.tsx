@@ -1,6 +1,6 @@
 import { Separator } from "../../primitives/separator";
 
-interface DividerProps {
+export interface DividerProps {
   decorative?: boolean;
   orientation?: 'horizontal' | 'vertical'
 }

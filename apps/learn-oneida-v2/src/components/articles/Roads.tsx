@@ -1,5 +1,5 @@
 import { Flex } from "@/design/components/flex";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import { SectionHeading } from "../SectionHeading";
 import { Text } from "@/design/components/text";
 import { ArticleProps } from "./utils";

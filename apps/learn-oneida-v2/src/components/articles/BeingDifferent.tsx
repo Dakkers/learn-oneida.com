@@ -1,5 +1,5 @@
 import { Flex } from "@/design/components/flex";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import { SectionHeading } from "../SectionHeading";
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";

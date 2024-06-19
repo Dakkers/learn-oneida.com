@@ -28,7 +28,7 @@ import kstʌhaJson from "../data/kstʌha";
 import kʌʔni_yʌhaJson from "../data/kʌʔni_yʌha";
 import ohsliyakuJson from "../data/ohsliyaku";
 
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_EN_OBJECTIVE,

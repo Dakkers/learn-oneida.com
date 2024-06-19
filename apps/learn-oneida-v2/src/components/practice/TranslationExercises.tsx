@@ -1,7 +1,7 @@
 import {
   TableWrapper,
   TableWrapperProps,
-} from "@/design/components/tableWrapper";
+} from "@/components/TableWrapper";
 import React from "react";
 import { SectionHeading } from "../SectionHeading";
 

@@ -1,6 +1,5 @@
-import { Flex } from "@/design/components/flex";
-import { TableWrapper } from "@/design/components/tableWrapper";
-import { TextArray } from "@/design/utils/TextArray";
+import { Flex, TextArray } from "@ukwehuwehneke/ohutsya";
+import { TableWrapper } from "~/components/TableWrapper";
 
 type Entry = string | string[];
 type Cell =

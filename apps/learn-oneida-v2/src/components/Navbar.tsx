@@ -2,8 +2,10 @@
 
 import * as React from "react";
 
-import { cn } from "@/design/library/utils";
 import {
+  cn,
+  Drawer,
+  Flex,
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
@@ -11,15 +13,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/design/primitives/navigation-menu";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/design/primitives/drawer";
+} from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
-import { Flex } from "@/design/components/flex";
 
 const moduleNumbers = new Array(6).fill(0).map((_, i) => (i + 1).toString());
 
@@ -83,27 +79,26 @@ function NavbarMobile() {
   return (
     <Flex align="center" justify="end" p={2}>
       <Drawer open={isOpen} onOpenChange={setIsOpen}>
-        <DrawerTrigger>
+        <Drawer.Trigger>
           <MenuIcon />
-        </DrawerTrigger>
-        <DrawerContent>
-          <Flex justify="center">
-            <NavigationMenu>
-              <NavigationMenuList className="flex-col">
-                {items.map((item, i) => (
-                  <NavigationMenuItem key={i}>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle(true)}
-                      href={item.href}
-                    >
-                      {item.text}
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
-          </Flex>
-        </DrawerContent>
+        </Drawer.Trigger>
+
+        <Flex justify="center">
+          <NavigationMenu>
+            <NavigationMenuList className="flex-col">
+              {items.map((item, i) => (
+                <NavigationMenuItem key={i}>
+                  <NavigationMenuLink
+                    className={navigationMenuTriggerStyle(true)}
+                    href={item.href}
+                  >
+                    {item.text}
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
+        </Flex>
       </Drawer>
     </Flex>
   );

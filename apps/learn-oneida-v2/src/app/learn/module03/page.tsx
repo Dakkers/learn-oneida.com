@@ -4,7 +4,7 @@ import { Box } from "@/design/components/box";
 import { Notice } from "@/design/components/notice";
 
 import { TableOfContents as TOC } from "~/components/TableOfContents";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import {
   BreakdownArray,
   BreakdownType,

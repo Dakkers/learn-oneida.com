@@ -1,4 +1,4 @@
-import { cn } from "@/design/library/utils";
+import { cn } from "@ukwehuwehneke/ohutsya";
 import { arrayify } from "~/utils";
 import { whisperizeWord } from "~/utils/words";
 

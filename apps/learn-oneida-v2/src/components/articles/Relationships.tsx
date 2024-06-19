@@ -1,5 +1,5 @@
 import { Flex } from "@/design/components/flex";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
 import { Text } from "@/design/components/text";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";

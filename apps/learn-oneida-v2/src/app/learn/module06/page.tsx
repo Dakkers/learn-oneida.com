@@ -4,7 +4,7 @@ import { Flex } from "@/design/components/flex";
 import { SectionHeading } from "~/components/SectionHeading";
 import { Box } from "@/design/components/box";
 import { Notice } from "@/design/components/notice";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import {
   BreakdownArray,
   BreakdownType,

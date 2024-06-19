@@ -1,19 +1,26 @@
 import {
+  Bleed,
+  BleedProps,
+  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/design/primitives/dropdown-menu";
-import { Flex } from "@/design/components/flex";
-import { Input } from "@/design/primitives/input";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/design/primitives/table";
+  Flex,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+  Input,
+  Notice,
+  PrimitiveTable,
+  PrimitiveTableBody,
+  PrimitiveTableCell,
+  PrimitiveTableHead,
+  PrimitiveTableHeader,
+  PrimitiveTableRow,
+} from "@ukwehuwehneke/ohutsya";
 import { Settings } from "lucide-react";
 import React from "react";
 import {
@@ -29,21 +36,11 @@ import {
   TextBreakdown,
   TextBreakdownSuffix,
 } from "./TextBreakdown";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/design/primitives/form";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/design/primitives/button";
-import { Notice } from "@/design/components/notice";
 import _ from "lodash";
 import { sanitizeIrregularCharacters, whisperizeWord } from "~/utils/words";
-import { Bleed, BleedProps } from "@/design/components/Bleed";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),
@@ -142,33 +139,33 @@ export function ParadigmTable({
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <Table>
-              <TableHeader>
-                <TableRow>
+            <PrimitiveTable>
+              <PrimitiveTableHeader>
+                <PrimitiveTableRow>
                   {colVisibility.pronounEnglish && (
-                    <TableHead>Pronoun (EN)</TableHead>
+                    <PrimitiveTableHead>Pronoun (EN)</PrimitiveTableHead>
                   )}
                   {colVisibility.pronounOneida && (
-                    <TableHead>Pronoun</TableHead>
+                    <PrimitiveTableHead>Pronoun</PrimitiveTableHead>
                   )}
                   {isTesting ? (
                     <>
                       {colVisibility.translation && (
-                        <TableHead>Translation</TableHead>
+                        <PrimitiveTableHead>Translation</PrimitiveTableHead>
                       )}
-                      <TableHead>---</TableHead>
+                      <PrimitiveTableHead>---</PrimitiveTableHead>
                     </>
                   ) : (
                     <>
-                      <TableHead>Phrase</TableHead>
+                      <PrimitiveTableHead>Phrase</PrimitiveTableHead>
                       {colVisibility.translation && (
-                        <TableHead>Translation</TableHead>
+                        <PrimitiveTableHead>Translation</PrimitiveTableHead>
                       )}
                     </>
                   )}
-                </TableRow>
-              </TableHeader>
-              <TableBody>
+                </PrimitiveTableRow>
+              </PrimitiveTableHeader>
+              <PrimitiveTableBody>
                 {rowsToShow.map((row, i) => (
                   <TableRowWrapper
                     key={i}
@@ -177,8 +174,8 @@ export function ParadigmTable({
                     whispered={data.whispered}
                   />
                 ))}
-              </TableBody>
-            </Table>
+              </PrimitiveTableBody>
+            </PrimitiveTable>
 
             {isTesting && (
               <>
@@ -225,19 +222,19 @@ function TableRowWrapper({
   );
 
   return (
-    <TableRow>
+    <PrimitiveTableRow>
       {colVisibility.pronounEnglish && (
-        <TableCell>{PRONOUN_MAP_EN[row.pronoun]}</TableCell>
+        <PrimitiveTableCell>{PRONOUN_MAP_EN[row.pronoun]}</PrimitiveTableCell>
       )}
       {colVisibility.pronounOneida && (
-        <TableCell>{PRONOUN_MAP_ONEIDA[row.pronoun]}</TableCell>
+        <PrimitiveTableCell>{PRONOUN_MAP_ONEIDA[row.pronoun]}</PrimitiveTableCell>
       )}
       {context.isTesting ? (
         <>
           {colVisibility.translation && (
-            <TableCell>{translatedPhrase}</TableCell>
+            <PrimitiveTableCell>{translatedPhrase}</PrimitiveTableCell>
           )}
-          <TableCell>
+          <PrimitiveTableCell>
             <FormField
               control={context.form.control}
               name={row.pronoun}
@@ -256,11 +253,11 @@ function TableRowWrapper({
                 </FormItem>
               )}
             />
-          </TableCell>
+          </PrimitiveTableCell>
         </>
       ) : (
         <>
-          <TableCell>
+          <PrimitiveTableCell>
             {showBreakdown ? (
               <TextBreakdown
                 breakdown={row.breakdown}
@@ -271,13 +268,13 @@ function TableRowWrapper({
             ) : (
               row.phrase
             )}
-          </TableCell>
+          </PrimitiveTableCell>
           {colVisibility.translation && (
-            <TableCell>{translatedPhrase}</TableCell>
+            <PrimitiveTableCell>{translatedPhrase}</PrimitiveTableCell>
           )}
         </>
       )}
-    </TableRow>
+    </PrimitiveTableRow>
   );
 }
 

@@ -1,7 +1,7 @@
 import { cn } from "../../utils";
 import { Text } from "../Text";
 
-interface ListProps {
+export interface ListProps {
   children: React.ReactNode;
   ordered?: boolean;
 }

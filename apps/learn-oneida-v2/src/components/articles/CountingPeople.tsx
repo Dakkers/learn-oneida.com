@@ -1,7 +1,7 @@
 import { Flex } from "@/design/components/flex";
 import { Text } from "@/design/components/text";
 import { SectionHeading } from "../SectionHeading";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import { List } from "@/design/components/list";
 
 export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {

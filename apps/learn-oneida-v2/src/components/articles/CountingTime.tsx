@@ -1,4 +1,4 @@
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import { SectionHeading } from "../SectionHeading";
 import { ArticleProps } from "./utils";
 

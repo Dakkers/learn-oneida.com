@@ -1,4 +1,3 @@
-import NextLink from "next/link";
 import React from "react";
 
 export interface LinkProps {
@@ -8,8 +7,8 @@ export interface LinkProps {
 
 export function Link({ children, href }: LinkProps) {
   return (
-    <NextLink className="text-blue-600 underline" href={href}>
+    <a className="text-blue-600 underline" href={href}>
       {children}
-    </NextLink>
+    </a>
   );
 }

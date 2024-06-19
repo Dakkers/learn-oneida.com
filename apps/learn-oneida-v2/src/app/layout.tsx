@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import '@ukwehuwehneke/ohutsya/lib/ohutsya.css'
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
-import { cn } from "@/design/library/utils";
+import { cn } from "@ukwehuwehneke/ohutsya";
 import { Navbar } from "@/components/Navbar";
 
 const notoSansFont = Noto_Sans({ subsets: ["latin"] });
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={notoSansFont.className}>
         <TitleBar />
         <div className="bg-gray-100">
-          <Navbar />
+          {/* <Navbar /> */}
         </div>
         <div
           className={cn(

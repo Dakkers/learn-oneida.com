@@ -2,7 +2,7 @@ import { Text } from "@/design/components/text";
 import { SectionHeading } from "../SectionHeading";
 import { List } from "@/design/components/list";
 import { Letter } from "../Letter";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import { BreakdownArray, BreakdownType, TextBreakdown } from "../TextBreakdown";
 import { Flex } from "@/design/components/flex";
 

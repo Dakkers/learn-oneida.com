@@ -1,7 +1,7 @@
-import { Heading, HeadingProps } from "@/design/components/heading";
+import { Heading, HeadingProps } from "@ukwehuwehneke/ohutsya";
 
 export interface SectionHeadingProps
-  extends Pick<HeadingProps, "align" | "children" | "id" | "intent"> {
+  extends Partial<Pick<HeadingProps, "align" | "children" | "id" | "intent">> {
   level: 1 | 2 | 3;
 }
 

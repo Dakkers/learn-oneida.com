@@ -6,7 +6,7 @@ import {
   AccordionContent as PrimitiveAccordionContent
 } from "../../primitives/accordion";
 
-interface AccordionProps {
+export interface AccordionProps {
   children: React.ReactNode;
   type?: 'single' | 'multiple'
 }
@@ -22,7 +22,7 @@ export function Accordion ({
   )
 }
 
-interface AccordionItemProps {
+export interface AccordionItemProps {
   children: React.ReactNode;
   id: string;
   title: React.ReactNode;

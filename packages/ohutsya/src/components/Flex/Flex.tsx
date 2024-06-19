@@ -15,7 +15,7 @@ type AlignItems = "baseline" | "center" | "end" | "start" | "stretch";
 
 type Direction = "row" | "column";
 
-interface FlexProps extends PaddingProps {
+export interface FlexProps extends PaddingProps {
   align?: AlignItems | Responsive<AlignItems>;
   as?: "div" | "span";
   children: React.ReactNode;

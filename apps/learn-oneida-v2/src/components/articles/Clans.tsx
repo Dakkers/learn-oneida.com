@@ -1,6 +1,6 @@
 import { Text } from "@/design/components/text";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@/design/components/flex";
 import {
   ParadigmData,

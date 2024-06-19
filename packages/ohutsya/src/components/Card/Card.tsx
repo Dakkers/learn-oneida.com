@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { cn } from "../../utils/tailwind";
 
-interface CardProps {
+export interface CardProps {
   as?: "section" | "article";
 
   children: React.ReactNode;
@@ -18,7 +18,7 @@ export function Card({ as: Tag = "article", children }: CardProps) {
   );
 }
 
-interface CardFooterProps {
+export interface CardFooterProps {
   children: React.ReactNode;
 }
 

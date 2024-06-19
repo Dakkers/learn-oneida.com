@@ -1,6 +1,6 @@
 import { Flex } from "@/design/components/flex";
 import { Select } from "@/design/components/select";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import { Button } from "@/design/primitives/button";
 
 import { Fragment, useState } from "react";

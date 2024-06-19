@@ -1,10 +1,5 @@
-import { Flex } from "@/design/components/flex";
-import { Text } from "@/design/components/text";
-import { Link } from "@/design/primitives/link";
-import { CardDescription, CardTitle } from "@/design/primitives/ui/card";
 import { SectionHeading } from "~/components/SectionHeading";
-
-import { Card } from "@ukwehuwehneke/ohutsya";
+import { Box, Card, Flex, Link, Text } from "@ukwehuwehneke/ohutsya";
 
 export default function Index() {
   const modules: {
@@ -51,14 +46,12 @@ export default function Index() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-4">
           {modules.map((card, i) => (
             <Card className="p-6" key={i}>
-              <CardTitle>
                 <Text variant="titleM">
                   {"title" in card ? card.title : `Module ${i}`}
                 </Text>
-              </CardTitle>
-              <CardDescription className="mt-2">
+              <Box className="mt-2">
                 <Text>{card.desc}</Text>
-              </CardDescription>
+              </Box>
 
               {(card.active ?? true) && (
                 <Flex justify="end" pt={4}>

@@ -8,12 +8,7 @@ import {
 } from "../../primitives/select";
 import { FormElement } from "../../internal/FormElement";
 
-export function Select({
-  label,
-  onChange,
-  options,
-  value,
-}: {
+export interface SelectProps {
   label?: string;
   onChange: (value: string) => void;
   options: Array<{
@@ -21,7 +16,14 @@ export function Select({
     value: string;
   }>;
   value: string;
-}) {
+}
+
+export function Select({
+  label,
+  onChange,
+  options,
+  value,
+}: SelectProps) {
   const id = useId();
 
   return (

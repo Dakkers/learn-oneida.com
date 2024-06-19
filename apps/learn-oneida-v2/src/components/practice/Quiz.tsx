@@ -1,6 +1,6 @@
 import { Box } from "@/design/components/box";
 import { Flex } from "@/design/components/flex";
-import { TableWrapper } from "@/design/components/tableWrapper";
+import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@/design/components/text";
 import { Button } from "@/design/primitives/button";
 import { cn } from "@/design/library/utils";
