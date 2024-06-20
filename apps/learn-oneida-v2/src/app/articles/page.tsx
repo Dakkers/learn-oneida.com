@@ -1,4 +1,6 @@
-import { Heading } from "@/design/components/heading";
+"use client";
+
+import { Heading } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 

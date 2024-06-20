@@ -1,10 +1,10 @@
-import { Button } from "@/design/primitives/button";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Input } from "@/design/primitives/input";
 import { Separator } from "@/design/primitives/separator";
 
 import React from "react";
-import { Heading } from "@/design/components/heading";
+import { Heading } from "@ukwehuwehneke/ohutsya";
 import { translateNumber } from "~/utils/numbers";
 
 export const meta: any = () => {

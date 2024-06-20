@@ -1,4 +1,4 @@
-import { Heading } from "@/design/components/heading";
+import { Heading } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 

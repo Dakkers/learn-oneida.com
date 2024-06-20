@@ -1,6 +1,8 @@
+"use client";
+
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { Box } from "@/design/components/box";
+import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 
 import { TableOfContents as TOC } from "~/components/TableOfContents";
@@ -21,7 +23,7 @@ import { ClansArticle } from "~/components/articles/Clans";
 import { NationsArticle } from "~/components/articles/Nations";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
-import { TextArray } from "@/design/utils/TextArray";
+import { TextArray } from "@ukwehuwehneke/ohutsya";
 
 export const meta: any = () => {
   return [

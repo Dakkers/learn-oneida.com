@@ -100,7 +100,6 @@ export default function LearnModule01() {
 
       <PronominalsArticle level={2} />
 
-      {/*
 
       <StressArticle level={2} />
 
@@ -187,7 +186,7 @@ export default function LearnModule01() {
       <EnglishNamesArticle level={2} />
 
       <DialogueSection />
-      <TranslationExercisesSection group="module01" /> */}
+      <TranslationExercisesSection group="module01" />
     </>
   );
 }

@@ -1,10 +1,10 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
-import { Heading } from "@/design/components/heading";
-import { Button } from "@/design/primitives/button";
+import { Heading } from "@ukwehuwehneke/ohutsya";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import { Quiz, useQuizContext } from "~/components/practice/Quiz";
-import { Box } from "@/design/components/box";
+import { Box } from "@ukwehuwehneke/ohutsya";
 import {
   MODULE_5_VERB_TENSE_LIST,
   Module5VerbTense,

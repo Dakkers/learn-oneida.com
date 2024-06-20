@@ -1,7 +1,7 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
-import { Heading } from "@/design/components/heading";
+import { Heading } from "@ukwehuwehneke/ohutsya";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 import { DATA_DAYS_OF_WEEK } from "~/components/articles/DaysOfTheWeek";
 

@@ -1,10 +1,10 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
-import { Heading } from "@/design/components/heading";
+import { Heading } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { Select } from "@/design/components/select";
-import { Button } from "@/design/primitives/button";
+import { Select } from "@ukwehuwehneke/ohutsya";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
@@ -15,7 +15,7 @@ import {
 import { z } from "zod";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { createModule4Data } from "~/data/module04";
-import { Link } from "@/design/primitives/link";
+import { Link } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "~/components/SectionHeading";
 
 export const meta: any = () => {

@@ -1,7 +1,7 @@
-import { Button } from "@/design/primitives/button";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { Heading } from "@/design/components/heading";
-import { Select } from "@/design/components/select";
+import { Heading } from "@ukwehuwehneke/ohutsya";
+import { Select } from "@ukwehuwehneke/ohutsya";
 import { Separator } from "@/design/primitives/separator";
 
 import React from "react";

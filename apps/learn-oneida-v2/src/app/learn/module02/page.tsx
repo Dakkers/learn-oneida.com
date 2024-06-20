@@ -1,32 +1,34 @@
-import { Box } from "@/design/components/box";
+"use client";
+
+import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 
-import nuwehseRed from "../data/nuwehse-red";
-import yʌteliRed from "../data/yʌteli-red";
-import nolukhwaRed from "../data/nolukhwa-red";
-import nuwehseBlue from "../data/nuwehse-blue";
-import yʌteliBlue from "../data/yʌteli-blue";
-import nolukhwaBlue from "../data/nolukhwa-blue";
-import nuwehsePurple from "../data/nuwehse-purple.json";
-import yʌteliPurple from "../data/yʌteli-purple.json";
-import nolukhwaPurple from "../data/nolukhwa-purple.json";
-import nuwehseRefl from "../data/nuwehse-refl";
-import nolukhwaRefl from "../data/nolukhwa-refl";
-import yʌteliRefl from "../data/yʌteli-refl";
-import liwanutuseData from "../data/liwanutuse.json";
-import hloliData from "../data/hloli.json";
-import hloliNegatedData from "../data/hloli-negated.json";
-import liwanutuseNegatedData from "../data/liwanutuse-negated.json";
-import unheJson from "../data/unhe";
-import iheyuJson from "../data/iheyu";
-import atukohtuJson from "../data/atukohtu";
-import kstʌhaJson from "../data/kstʌha";
-import kʌʔni_yʌhaJson from "../data/kʌʔni_yʌha";
-import ohsliyakuJson from "../data/ohsliyaku";
+import nuwehseRed from "~/data/nuwehse-red";
+import yʌteliRed from "~/data/yʌteli-red";
+import nolukhwaRed from "~/data/nolukhwa-red";
+import nuwehseBlue from "~/data/nuwehse-blue";
+import yʌteliBlue from "~/data/yʌteli-blue";
+import nolukhwaBlue from "~/data/nolukhwa-blue";
+import nuwehsePurple from "~/data/nuwehse-purple.json";
+import yʌteliPurple from "~/data/yʌteli-purple.json";
+import nolukhwaPurple from "~/data/nolukhwa-purple.json";
+import nuwehseRefl from "~/data/nuwehse-refl";
+import nolukhwaRefl from "~/data/nolukhwa-refl";
+import yʌteliRefl from "~/data/yʌteli-refl";
+import liwanutuseData from "~/data/liwanutuse.json";
+import hloliData from "~/data/hloli.json";
+import hloliNegatedData from "~/data/hloli-negated.json";
+import liwanutuseNegatedData from "~/data/liwanutuse-negated.json";
+import unheJson from "~/data/unhe";
+import iheyuJson from "~/data/iheyu";
+import atukohtuJson from "~/data/atukohtu";
+import kstʌhaJson from "~/data/kstʌha";
+import kʌʔni_yʌhaJson from "~/data/kʌʔni_yʌha";
+import ohsliyakuJson from "~/data/ohsliyaku";
 
 import { TableWrapper } from "@/components/TableWrapper";
 import {

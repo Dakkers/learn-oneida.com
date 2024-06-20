@@ -1,8 +1,8 @@
-import { Box } from "@/design/components/box";
+import { Box } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { Button } from "@/design/primitives/button";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import { cn } from "@/design/library/utils";
 import { CheckCircle2Icon, XCircleIcon } from "lucide-react";
 import React from "react";

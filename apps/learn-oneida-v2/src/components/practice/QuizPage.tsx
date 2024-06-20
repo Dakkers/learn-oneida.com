@@ -1,10 +1,10 @@
 import { RadioGroup } from "@/design/components/RadioGroup";
-import { Box } from "@/design/components/box";
+import { Box } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { Select } from "@/design/components/select";
+import { Select } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { Button } from "@/design/primitives/button";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import { Input } from "@/design/primitives/input";
 import { cn } from "@/design/library/utils";
 import _ from "lodash";

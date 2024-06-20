@@ -1,13 +1,14 @@
+"use client";
 
-import dataWasHere from "../data/module04/was-here";
-import dataWillBeHere from "../data/module04/will-be-here";
-import dataMightBeHere from "../data/module04/might-be-here";
+import dataWasHere from "~/data/module04/was-here";
+import dataWillBeHere from "~/data/module04/will-be-here";
+import dataMightBeHere from "~/data/module04/might-be-here";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "~/components/SectionHeading";
-import { Box } from "@/design/components/box";
+import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {

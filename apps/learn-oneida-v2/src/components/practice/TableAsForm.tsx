@@ -2,7 +2,7 @@ import { BleedProps } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { Button } from "@/design/primitives/button";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import {
   Form,
   FormControl,

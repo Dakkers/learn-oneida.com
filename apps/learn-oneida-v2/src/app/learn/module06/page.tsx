@@ -1,8 +1,9 @@
+"use client";
 
 import { TableOfContents as TOC } from "~/components/TableOfContents";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Accordion, Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "~/components/SectionHeading";
-import { Box } from "@/design/components/box";
+import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
@@ -16,21 +17,15 @@ import {
   createModule6VerbList,
 } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/design/primitives/accordion";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Pronominal, PronominalColor } from "~/components/Pronominal";
 import { Letter } from "~/components/Letter";
-import { Link } from "@/design/primitives/link";
+import { Link } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
-import { TextArray } from "@/design/utils/TextArray";
+import { TextArray } from "@ukwehuwehneke/ohutsya";
 import { pronouns } from "~/utils";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
@@ -731,9 +726,7 @@ function DailyActivitiesSection() {
             );
 
             return (
-              <AccordionItem id={_.kebabCase(v.key)} key={v.key} value={v.key}>
-                <AccordionTrigger>{v.en}</AccordionTrigger>
-                <AccordionContent>
+              <Accordion.Item id={_.kebabCase(v.key)} key={v.key} title={v.en}>
                   {v.exceptions?.includes(1) ? (
                     <Text>This uses the &quot;it&quot; pronominals.</Text>
                   ) : null}
@@ -764,8 +757,7 @@ function DailyActivitiesSection() {
                     ]}
                     data={data}
                   />
-                </AccordionContent>
-              </AccordionItem>
+              </Accordion.Item>
             );
           })}
         </Accordion>
@@ -845,9 +837,7 @@ function VerbParadigms({
         <Accordion type="multiple">
           {TENSE_LIST.map((tense) =>
             verbDatum[tense] ? (
-              <AccordionItem key={tense} value={tense}>
-                <AccordionTrigger>{tenseMap[tense]}</AccordionTrigger>
-                <AccordionContent>
+              <Accordion.Item key={tense} id={tense} title={tenseMap[tense]}>
                   <ParadigmTable
                     bleed={0}
                     columnVisibility={columnVisibility}
@@ -855,8 +845,7 @@ function VerbParadigms({
                     key={tense}
                     allowedPronouns={verbDatum.pronouns ?? pronouns}
                   />
-                </AccordionContent>
-              </AccordionItem>
+              </Accordion.Item>
             ) : null,
           )}
         </Accordion>

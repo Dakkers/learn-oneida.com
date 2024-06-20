@@ -1,10 +1,10 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
-import { Heading } from "@/design/components/heading";
+import { Heading } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { Select } from "@/design/components/select";
-import { Button } from "@/design/primitives/button";
+import { Select } from "@ukwehuwehneke/ohutsya";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
@@ -18,7 +18,7 @@ import {
   createModule5VerbsList,
   module5VerbTenseMap,
 } from "~/data/module05";
-import { Link } from "@/design/primitives/link";
+import { Link } from "@ukwehuwehneke/ohutsya";
 
 export const meta: any = () => {
   return [

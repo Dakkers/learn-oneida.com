@@ -10,8 +10,8 @@ import {
 import { Quiz, useQuizContext } from "./Quiz";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import React from "react";
-import { Box } from "@/design/components/box";
-import { Button } from "@/design/primitives/button";
+import { Box } from "@ukwehuwehneke/ohutsya";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import { sanitizeIrregularCharacters } from "~/utils/words";
 

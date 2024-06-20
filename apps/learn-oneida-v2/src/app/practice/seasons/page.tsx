@@ -1,7 +1,7 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
-import { Heading } from "@/design/components/heading";
+import { Heading } from "@ukwehuwehneke/ohutsya";
 import { DATA_SEASONS } from "~/components/articles/Seasons";
 import { Flower2Icon, LeafIcon, SnowflakeIcon, SunIcon } from "lucide-react";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";

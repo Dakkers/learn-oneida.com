@@ -1,7 +1,7 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
-import { Heading } from "@/design/components/heading";
+import { Heading } from "@ukwehuwehneke/ohutsya";
 import { DATA_PLACES_IN_COMMUNITY } from "~/components/articles/PlacesInTheCommunity";
 import {
   EnglishToOneidaQuiz,

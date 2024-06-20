@@ -1,11 +1,11 @@
-import { Button } from "@/design/primitives/button";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import { useQuizContext } from "./Quiz";
 import { cn } from "@/design/library/utils";
 import React from "react";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Input } from "@/design/primitives/input";
 import { RadioGroup } from "@/design/components/RadioGroup";
-import { Select } from "@/design/components/select";
+import { Select } from "@ukwehuwehneke/ohutsya";
 
 export interface QuizOption {
   key: string;

@@ -1,7 +1,7 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { Select } from "@/design/components/select";
+import { Select } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { Button } from "@/design/primitives/button";
+import { Button } from "@ukwehuwehneke/ohutsya";
 
 import { Fragment, useState } from "react";
 import { ParadigmTable } from "~/components/ParadigmTable";

@@ -1,9 +1,9 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
-import { Button } from "@/design/primitives/button";
+import { Button } from "@ukwehuwehneke/ohutsya";
 import { Quiz, useQuizContext } from "~/components/practice/Quiz";
-import { Box } from "@/design/components/box";
+import { Box } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import {
