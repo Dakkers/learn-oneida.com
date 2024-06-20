@@ -1,3 +1,4 @@
+"use client";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "../SectionHeading";
 import { List } from "@ukwehuwehneke/ohutsya";

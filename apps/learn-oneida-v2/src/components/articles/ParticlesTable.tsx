@@ -1,3 +1,4 @@
+"use client";
 import { TableWrapper } from "@/components/TableWrapper";
 import { particleList } from "./particleList";
 import React from "react";

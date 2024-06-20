@@ -1,3 +1,5 @@
+"use client";
+
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "../SectionHeading";
 import { Text } from "@ukwehuwehneke/ohutsya";
@@ -12,7 +14,7 @@ export function GlottalStopArticle({ level = 1 }: ArticleProps) {
         Glottal Stops
       </SectionHeading>
       <Text>
-        A common feature of Onʌyoteʔa·ká· is the GLOTTAL STOP indicated in
+        A common feature of Onʌyoteʔa·ká· is the <strong>glottal stop</strong> indicated in
         writing by an apostrophe (<Letter>&lsquo;</Letter>) or the symbol{" "}
         <Letter>ʔ</Letter>. A glottal stop occurs when a speaker abruptly “cuts”
         the end off a vowel by stopping air and sound coming out of their

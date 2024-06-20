@@ -1,3 +1,4 @@
+"use client";
 import motherJson from "../../data/family/mother";
 import grandmotherJson from "../../data/family/grandmother";
 import auntJson from "../../data/family/aunt";

@@ -1,3 +1,4 @@
+"use client";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { TableWrapper } from "@/components/TableWrapper";
