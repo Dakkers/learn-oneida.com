@@ -1,8 +1,8 @@
 import { TableWrapper } from "@/components/TableWrapper";
 import { particleList } from "./particleList";
 import React from "react";
-import { Flex } from "@/design/components/flex";
-import { Text } from "@/design/components/text";
+import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Text } from "@ukwehuwehneke/ohutsya";
 
 type ParticlesGroup =
   | "module01"

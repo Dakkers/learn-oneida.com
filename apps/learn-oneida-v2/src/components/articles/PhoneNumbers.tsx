@@ -1,7 +1,7 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 import { pronounsBlue } from "~/utils";

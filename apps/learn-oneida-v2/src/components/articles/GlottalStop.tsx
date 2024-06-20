@@ -1,9 +1,9 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "../SectionHeading";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
 import { Letter } from "../Letter";
-import { List } from "@/design/components/list";
+import { List } from "@ukwehuwehneke/ohutsya";
 
 export function GlottalStopArticle({ level = 1 }: ArticleProps) {
   return (

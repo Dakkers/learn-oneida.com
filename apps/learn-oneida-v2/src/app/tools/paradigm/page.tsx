@@ -1,5 +1,5 @@
 import { Button } from "@/design/primitives/button";
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
 import dataAttokhaJson from "../data/attokha";

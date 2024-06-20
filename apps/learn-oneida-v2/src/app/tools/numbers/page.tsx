@@ -1,5 +1,5 @@
 import { Button } from "@/design/primitives/button";
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Input } from "@/design/primitives/input";
 import { Separator } from "@/design/primitives/separator";
 

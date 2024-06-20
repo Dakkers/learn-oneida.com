@@ -42,7 +42,7 @@ import cousinsJson from "../../data/family/plural/cousins.json";
 import friendsJson from "../../data/family/plural/friends.json";
 
 import { TableWrapper } from "@/components/TableWrapper";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
 import { PRONOUN_MAP_EN_POSSESSIVE, type Pronoun } from "~/utils";
 import { TableOfContents as TOC } from "../TableOfContents";

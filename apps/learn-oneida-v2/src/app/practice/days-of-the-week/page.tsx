@@ -1,4 +1,4 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { Heading } from "@/design/components/heading";

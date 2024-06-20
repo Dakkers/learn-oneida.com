@@ -1,11 +1,11 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { Button } from "@/design/primitives/button";
 import { Quiz, useQuizContext } from "~/components/practice/Quiz";
 import { Box } from "@/design/components/box";
 import _ from "lodash";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import {
   AnswerMultipleChoiceButtons,
   NextBtn,

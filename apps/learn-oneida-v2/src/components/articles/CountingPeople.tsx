@@ -1,8 +1,8 @@
-import { Flex } from "@/design/components/flex";
-import { Text } from "@/design/components/text";
+import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "../SectionHeading";
 import { TableWrapper } from "@/components/TableWrapper";
-import { List } from "@/design/components/list";
+import { List } from "@ukwehuwehneke/ohutsya";
 
 export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
   return (

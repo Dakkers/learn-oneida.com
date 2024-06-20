@@ -1,7 +1,7 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo, useState } from "react";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { Select } from "@/design/components/select";
 import { Button } from "@/design/primitives/button";
 import {

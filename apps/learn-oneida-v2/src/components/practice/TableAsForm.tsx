@@ -1,6 +1,6 @@
-import { BleedProps } from "@/design/components/Bleed";
-import { Flex } from "@/design/components/flex";
-import { Notice } from "@/design/components/notice";
+import { BleedProps } from "@ukwehuwehneke/ohutsya";
+import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Button } from "@/design/primitives/button";
 import {

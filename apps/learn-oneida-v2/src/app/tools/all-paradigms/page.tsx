@@ -1,4 +1,4 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Select } from "@/design/components/select";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Button } from "@/design/primitives/button";

@@ -1,16 +1,16 @@
 import { Button } from "@/design/primitives/button";
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Heading } from "@/design/components/heading";
 import { Select } from "@/design/components/select";
 import { Separator } from "@/design/primitives/separator";
 
 import React from "react";
 import _ from "lodash";
-import { Text } from "@/design/components/text";
-import { List } from "@/design/components/list";
+import { Text } from "@ukwehuwehneke/ohutsya";
+import { List } from "@ukwehuwehneke/ohutsya";
 import { doTheTranslate } from "~/utils/time";
 import { SectionHeading } from "~/components/SectionHeading";
-import { Bleed } from "@/design/components/Bleed";
+import { Bleed } from "@ukwehuwehneke/ohutsya";
 
 export const meta: any = () => {
   return [

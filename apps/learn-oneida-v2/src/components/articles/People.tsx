@@ -1,5 +1,5 @@
 import { TableWrapper } from "@/components/TableWrapper";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { ArticleProps } from "./utils";
 

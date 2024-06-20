@@ -1,4 +1,4 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import {
   AnswerMultipleChoiceButtons,
   QuizContainerContext,
@@ -8,7 +8,7 @@ import {
   QuizOption,
 } from "./QuizContainer";
 import { Quiz, useQuizContext } from "./Quiz";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import React from "react";
 import { Box } from "@/design/components/box";
 import { Button } from "@/design/primitives/button";

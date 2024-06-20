@@ -1,9 +1,9 @@
 import { RadioGroup } from "@/design/components/RadioGroup";
 import { Box } from "@/design/components/box";
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Select } from "@/design/components/select";
 import { TableWrapper } from "@/components/TableWrapper";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@/design/primitives/button";
 import { Input } from "@/design/primitives/input";
 import { cn } from "@/design/library/utils";

@@ -1,7 +1,7 @@
-import { Flex } from "@/design/components/flex";
-import { Text } from "@/design/components/text";
+import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { Box } from "@/design/components/box";
-import { Notice } from "@/design/components/notice";
+import { Notice } from "@ukwehuwehneke/ohutsya";
 
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { TableWrapper } from "@/components/TableWrapper";

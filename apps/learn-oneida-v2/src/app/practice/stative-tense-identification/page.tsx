@@ -1,4 +1,4 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { Heading } from "@/design/components/heading";
@@ -13,7 +13,7 @@ import {
 } from "~/data/module05";
 import { convertBreakdownToPlainText } from "~/components/TextBreakdown";
 import _ from "lodash";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import {
   AnswerMultipleChoiceButtons,
   NextBtn,

@@ -1,6 +1,8 @@
+"use client";
+
 import {
   Bleed,
-  BleedProps,
+  type BleedProps,
   Button,
   DropdownMenu,
   DropdownMenuContent,

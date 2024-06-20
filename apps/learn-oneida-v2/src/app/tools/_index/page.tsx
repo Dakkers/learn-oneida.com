@@ -1,5 +1,5 @@
-import { List } from "@/design/components/list";
-import { Text } from "@/design/components/text";
+import { List } from "@ukwehuwehneke/ohutsya";
+import { Text } from "@ukwehuwehneke/ohutsya";
 
 import { SectionHeading } from "~/components/SectionHeading";
 

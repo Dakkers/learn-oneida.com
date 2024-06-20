@@ -13,6 +13,11 @@ export default defineConfig(({ mode }) => {
         name: packageJson.name,
       },
       outDir: './lib',
+      rollupOptions: {
+        external: [
+          ...(Object.keys(packageJson.peerDependencies))
+        ]
+      },
       sourcemap: true,
       target: ['es2015'],
     },

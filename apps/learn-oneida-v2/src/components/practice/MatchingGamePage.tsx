@@ -1,9 +1,9 @@
 import { Separator } from "@/design/primitives/separator";
 import React from "react";
 import { useDrag, useDrop, type TextDropItem } from "react-aria";
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { cn } from "@/design/library/utils";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { arrayify } from "~/utils";
 import { LucideIcon } from "lucide-react";
 import { ClientOnly } from "remix-utils/client-only";

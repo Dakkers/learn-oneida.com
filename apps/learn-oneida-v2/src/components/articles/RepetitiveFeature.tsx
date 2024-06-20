@@ -1,10 +1,10 @@
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "../SectionHeading";
-import { List } from "@/design/components/list";
+import { List } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
 import { TableWrapper } from "@/components/TableWrapper";
 import { BreakdownArray, BreakdownType, TextBreakdown } from "../TextBreakdown";
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 
 export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
   const data = [

@@ -1,9 +1,9 @@
 
 import { TableOfContents as TOC } from "~/components/TableOfContents";
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "~/components/SectionHeading";
 import { Box } from "@/design/components/box";
-import { Notice } from "@/design/components/notice";
+import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
   BreakdownArray,
@@ -23,13 +23,13 @@ import {
   AccordionTrigger,
 } from "@/design/primitives/accordion";
 import { ParadigmTable } from "~/components/ParadigmTable";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { Pronominal, PronominalColor } from "~/components/Pronominal";
 import { Letter } from "~/components/Letter";
 import { Link } from "@/design/primitives/link";
-import { List } from "@/design/components/list";
+import { List } from "@ukwehuwehneke/ohutsya";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
-import { Bleed } from "@/design/components/Bleed";
+import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { TextArray } from "@/design/utils/TextArray";
 import { pronouns } from "~/utils";
 

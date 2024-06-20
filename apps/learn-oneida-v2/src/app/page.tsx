@@ -1,3 +1,5 @@
+"use client"
+
 import { SectionHeading } from "~/components/SectionHeading";
 import { Box, Card, Flex, Link, Text } from "@ukwehuwehneke/ohutsya";
 

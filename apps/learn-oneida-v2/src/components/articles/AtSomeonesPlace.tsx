@@ -1,4 +1,4 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { SectionHeading } from "../SectionHeading";
 import { ArticleProps } from "./utils";

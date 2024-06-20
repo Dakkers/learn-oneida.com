@@ -33,7 +33,7 @@ import dataUsedToWant from "../data/module04/used-to-want";
 import dataDidntUsedToWant from "../data/module04/didnt-used-to-want";
 import dataThought from "../data/module04/thought";
 
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
 import {
   Accordion,
@@ -44,7 +44,7 @@ import {
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { SectionHeading } from "~/components/SectionHeading";
 import { Box } from "@/design/components/box";
-import { Notice } from "@/design/components/notice";
+import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "~/components/Letter";
 import { TimesOfDayArticle } from "~/components/articles/TimesOfDay";
 import { DaysOfTheWeekArticle } from "~/components/articles/DaysOfTheWeek";
@@ -59,7 +59,7 @@ import { PlacesInTheCommunityArticle } from "~/components/articles/PlacesInTheCo
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { PhoneNumbersArticle } from "~/components/articles/PhoneNumbers";
 import { ClockTimeArticle } from "~/components/articles/ClockTime";
-import { Bleed } from "@/design/components/Bleed";
+import { Bleed } from "@ukwehuwehneke/ohutsya";
 
 export const meta: any = () => {
   return [

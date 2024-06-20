@@ -1,5 +1,5 @@
-import { Flex } from "@/design/components/flex";
-import { List } from "@/design/components/list";
+import { Flex } from "@ukwehuwehneke/ohutsya";
+import { List } from "@ukwehuwehneke/ohutsya";
 
 import { SectionHeading } from "~/components/SectionHeading";
 

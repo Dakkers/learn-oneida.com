@@ -1,8 +1,8 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
-import { List } from "@/design/components/list";
+import { List } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
 
 export function StressArticle({ level = 1 }: ArticleProps) {

@@ -1,3 +1,5 @@
+"use client"
+
 import { Flex, TextArray } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "~/components/TableWrapper";
 

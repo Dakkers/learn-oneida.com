@@ -1,4 +1,6 @@
-import { Bleed,Box,Divider,Notice,Text } from "@ukwehuwehneke/ohutsya";
+"use client";
+
+import { Bleed, Box,Divider,Notice,Text } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { singlePronouns } from "~/utils";
@@ -98,6 +100,8 @@ export default function LearnModule01() {
 
       <PronominalsArticle level={2} />
 
+      {/*
+
       <StressArticle level={2} />
 
       <GlottalStopArticle level={2} />
@@ -183,7 +187,7 @@ export default function LearnModule01() {
       <EnglishNamesArticle level={2} />
 
       <DialogueSection />
-      <TranslationExercisesSection group="module01" />
+      <TranslationExercisesSection group="module01" /> */}
     </>
   );
 }

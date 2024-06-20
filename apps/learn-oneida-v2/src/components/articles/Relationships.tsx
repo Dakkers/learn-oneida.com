@@ -1,7 +1,7 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { ArticleProps } from "./utils";
 

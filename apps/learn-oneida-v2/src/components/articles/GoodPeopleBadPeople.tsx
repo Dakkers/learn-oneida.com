@@ -1,7 +1,7 @@
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { TableWrapper } from "@/components/TableWrapper";
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { BreakdownArray } from "../TextBreakdown";
 
 export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {

@@ -1,23 +1,23 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 import { ArticleProps } from "./utils";
 import redPronominalsJson from "../../data/red-pronominals.json";
 import bluePronominalsJson from "../../data/blue-pronominals.json";
 import purplePronominalsJson from "../../data/purple-pronominals.json";
 import lightbluePronominalsJson from "../../data/lightblue-pronominals.json";
-import { Text } from "@/design/components/text";
-import { List } from "@/design/components/list";
-import { Notice } from "@/design/components/notice";
+import { Text } from "@ukwehuwehneke/ohutsya";
+import { List } from "@ukwehuwehneke/ohutsya";
+import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
-import { Separator } from "@radix-ui/react-dropdown-menu";
+import { Divider } from "@ukwehuwehneke/ohutsya";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/design/primitives/table";
+  PrimitiveTable,
+  PrimitiveTableBody,
+  PrimitiveTableCell,
+  PrimitiveTableHead,
+  PrimitiveTableHeader,
+  PrimitiveTableRow,
+} from "@ukwehuwehneke/ohutsya";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
@@ -27,7 +27,7 @@ import {
 } from "~/utils";
 import { Pronominal, PronominalColor } from "../Pronominal";
 import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
-import { Bleed } from "@/design/components/Bleed";
+import { Bleed } from "@ukwehuwehneke/ohutsya";
 
 export const DATA_SEASONS = [
   { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
@@ -101,7 +101,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         Subjective (Red) Pronominals
       </SectionHeading>
       <Text>
-        The table below displays the full list of subjective (red) pronominals.
+        The Primitivetable below displays the full list of subjective (red) pronominals.
         Each column represents a different &quot;stem&quot;, which is the first
         letter in a root word. For example, the root word <b>nuwehseʔ</b>{" "}
         (&quot;to like&quot;) starts with the letter &quot;N&quot; which is a
@@ -116,11 +116,11 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         gives us <b>lattókhaʔ</b> wich means &quot;he is wise&quot;.
       </Text>
       <Text>
-        The small numbers in the table cells represent exceptions — Oneida is
+        The small numbers in the Primitivetable cells represent exceptions — Oneida is
         full of them!
       </Text>
       {/* @ts-expect-error To be addressed in LO-17 */}
-      <PronominalsTable color="red" data={redPronominalsJson} />
+      <PronominalsPrimitiveTable color="red" data={redPronominalsJson} />
 
       <Text variant="labelL">Exception 1</Text>
       <Text>
@@ -178,7 +178,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         <b>íthsaʔas</b> and <b>yah tethsáʔas</b>
       </Text>
 
-      <Separator />
+      <Divider />
 
       <SectionHeading
         id="blue-pronominals"
@@ -187,10 +187,10 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         Objective (blue) Pronominals
       </SectionHeading>
       <Text>
-        The table below displays the full list of objective (blue) pronominals.
+        The Primitivetable below displays the full list of objective (blue) pronominals.
       </Text>
       {/* @ts-expect-error To be addressed in LO-17 */}
-      <PronominalsTable color="blue" data={bluePronominalsJson} />
+      <PronominalsPrimitiveTable color="blue" data={bluePronominalsJson} />
 
       <SectionHeading
         id="purple-pronominals"
@@ -199,11 +199,11 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         Purple Pronominals
       </SectionHeading>
       <Text>
-        The table below displays the full list of purple pronominals. These do
+        The Primitivetable below displays the full list of purple pronominals. These do
         not have an English counterpart.
       </Text>
       {/* @ts-expect-error To be addressed in LO-17 */}
-      <PronominalsTable color="purple" data={purplePronominalsJson} />
+      <PronominalsPrimitiveTable color="purple" data={purplePronominalsJson} />
 
       <SectionHeading
         id="lightblue-pronominals"
@@ -211,7 +211,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
       >
         Possessive (light blue) Pronominals
       </SectionHeading>
-      <PronominalsTable
+      <PronominalsPrimitiveTable
         allowedPronouns={[
           "i",
           "u",
@@ -245,24 +245,24 @@ function EnglishPronounsTable() {
   ] as const;
 
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>Subjective Set</TableHead>
-          <TableHead>Objective Set</TableHead>
-          <TableHead>Possessive Set</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
+    <PrimitiveTable>
+      <PrimitiveTableHeader>
+        <PrimitiveTableRow>
+          <PrimitiveTableHead>Subjective Set</PrimitiveTableHead>
+          <PrimitiveTableHead>Objective Set</PrimitiveTableHead>
+          <PrimitiveTableHead>Possessive Set</PrimitiveTableHead>
+        </PrimitiveTableRow>
+      </PrimitiveTableHeader>
+      <PrimitiveTableBody>
         {data.map((row, i) => (
-          <TableRow key={i}>
-            <TableCell>{row[0]}</TableCell>
-            <TableCell>{row[1]}</TableCell>
-            <TableCell>{row[2]}</TableCell>
-          </TableRow>
+          <PrimitiveTableRow key={i}>
+            <PrimitiveTableCell>{row[0]}</PrimitiveTableCell>
+            <PrimitiveTableCell>{row[1]}</PrimitiveTableCell>
+            <PrimitiveTableCell>{row[2]}</PrimitiveTableCell>
+          </PrimitiveTableRow>
         ))}
-      </TableBody>
-    </Table>
+      </PrimitiveTableBody>
+    </PrimitiveTable>
   );
 }
 
@@ -280,21 +280,21 @@ function FreestandingPronounsSection() {
 
   return (
     <div>
-      <Table>
-        <TableBody>
+      <PrimitiveTable>
+        <PrimitiveTableBody>
           {data.map((row, i) => (
-            <TableRow key={i}>
-              <TableCell>{row[0]}</TableCell>
-              <TableCell>{row[1]}</TableCell>
-            </TableRow>
+            <PrimitiveTableRow key={i}>
+              <PrimitiveTableCell>{row[0]}</PrimitiveTableCell>
+              <PrimitiveTableCell>{row[1]}</PrimitiveTableCell>
+            </PrimitiveTableRow>
           ))}
-        </TableBody>
-      </Table>
+        </PrimitiveTableBody>
+      </PrimitiveTable>
     </div>
   );
 }
 
-function PronominalsTable({
+function PronominalsPrimitiveTable({
   allowedPronouns,
   color,
   data = [],
@@ -313,24 +313,24 @@ function PronominalsTable({
 
   return (
     <Bleed mx={32}>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            {!isPurple && <TableHead></TableHead>}
-            <TableHead>EN</TableHead>
-            <TableHead>C-stem</TableHead>
-            <TableHead>A-stem</TableHead>
-            <TableHead>I-stem</TableHead>
-            <TableHead>E-stem / Λ-stem</TableHead>
-            <TableHead>O-stem / U-stem</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
+      <PrimitiveTable>
+        <PrimitiveTableHeader>
+          <PrimitiveTableRow>
+            {!isPurple && <PrimitiveTableHead></PrimitiveTableHead>}
+            <PrimitiveTableHead>EN</PrimitiveTableHead>
+            <PrimitiveTableHead>C-stem</PrimitiveTableHead>
+            <PrimitiveTableHead>A-stem</PrimitiveTableHead>
+            <PrimitiveTableHead>I-stem</PrimitiveTableHead>
+            <PrimitiveTableHead>E-stem / Λ-stem</PrimitiveTableHead>
+            <PrimitiveTableHead>O-stem / U-stem</PrimitiveTableHead>
+          </PrimitiveTableRow>
+        </PrimitiveTableHeader>
+        <PrimitiveTableBody>
           {rowsToUse.map((row, i) => (
-            <TableRow key={i}>
+            <PrimitiveTableRow key={i}>
               {/* @ts-expect-error To be addressed in LO-17 */}
-              {!isPurple && <TableCell>{PRONOUN_MAP_ONEIDA[row]}</TableCell>}
-              <TableCell>
+              {!isPurple && <PrimitiveTableCell>{PRONOUN_MAP_ONEIDA[row]}</PrimitiveTableCell>}
+              <PrimitiveTableCell>
                 {!isPurple
                   ? // @ts-expect-error To be addressed in LO-17
                     PRONOUN_MAP_EN[row]
@@ -338,35 +338,35 @@ function PronominalsTable({
                     arrayify(row.label).map((label, j) => (
                       <div key={j}>{label}</div>
                     ))}
-              </TableCell>
+              </PrimitiveTableCell>
               {stems.map((stem) => {
                 // @ts-expect-error To be addressed in LO-17
                 const datum = isPurple ? row : data[row];
                 const content = datum[stem] ?? datum.default;
                 return (
-                  <TableCell key={stem}>
+                  <PrimitiveTableCell key={stem}>
                     <Flex direction="column">
                       {/* @ts-expect-error To be addressed in LO-17 */}
                       {content.map((prefixArr: PrefixArray, i: number) => (
-                        <PronominalTableText
+                        <PronominalPrimitiveTableText
                           color={color}
                           entry={prefixArr}
                           key={i}
                         />
                       ))}
                     </Flex>
-                  </TableCell>
+                  </PrimitiveTableCell>
                 );
               })}
-            </TableRow>
+            </PrimitiveTableRow>
           ))}
-        </TableBody>
-      </Table>
+        </PrimitiveTableBody>
+      </PrimitiveTable>
     </Bleed>
   );
 }
 
-function PronominalTableText({
+function PronominalPrimitiveTableText({
   entry,
   color,
 }: {

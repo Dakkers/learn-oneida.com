@@ -1,7 +1,7 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Heading } from "@/design/components/heading";
-import { List } from "@/design/components/list";
-import { Text } from "@/design/components/text";
+import { List } from "@ukwehuwehneke/ohutsya";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "~/components/SectionHeading";
 
 export default function About() {

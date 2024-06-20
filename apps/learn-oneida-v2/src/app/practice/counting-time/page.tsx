@@ -1,5 +1,5 @@
-import { Flex } from "@/design/components/flex";
-import { Text } from "@/design/components/text";
+import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@/design/primitives/button";
 import { Link } from "@/design/primitives/link";
 import { MetaFunction } from "@remix-run/cloudflare";

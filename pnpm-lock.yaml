@@ -27,10 +27,10 @@ importers:
         specifier: 14.1.0
         version: 14.1.0(@babel/core@7.24.7)(react-dom@18.3.1)(react@18.3.1)
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@cloudflare/next-on-pages':
@@ -184,7 +184,7 @@ importers:
         specifier: ^0.303.0
         version: 0.303.0(react@18.3.1)
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1
       react-aria:
         specifier: ^3.33.1
@@ -193,7 +193,7 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1(react-dom@18.3.1)(react@18.3.1)
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       react-hook-form:
         specifier: ^7.49.2
@@ -286,6 +286,9 @@ importers:
 
   apps/learn-oneida-v2:
     dependencies:
+      '@hookform/resolvers':
+        specifier: ^3.3.4
+        version: 3.3.4(react-hook-form@7.49.2)
       '@ukwehuwehneke/ohutsya':
         specifier: workspace:*
         version: link:../../packages/ohutsya
@@ -304,6 +307,9 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-hook-form:
+        specifier: ^7.49.2
+        version: 7.49.2(react@18.3.1)
       tailwind-merge:
         specifier: ^2.2.0
         version: 2.3.0

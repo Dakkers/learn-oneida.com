@@ -1,3 +1,4 @@
+"use client"
 import { Link, List } from "@ukwehuwehneke/ohutsya";
 import React from "react";
 

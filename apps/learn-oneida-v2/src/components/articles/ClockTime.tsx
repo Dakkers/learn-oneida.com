@@ -1,9 +1,9 @@
-import { Flex } from "@/design/components/flex";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { Text } from "@/design/components/text";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "../SectionHeading";
 import { ArticleProps } from "./utils";
-import { List } from "@/design/components/list";
+import { List } from "@ukwehuwehneke/ohutsya";
 
 const simpleExamples = [
   ["1:00 a.m.", "úska niyohwistá·e astéhtsiʔ"],

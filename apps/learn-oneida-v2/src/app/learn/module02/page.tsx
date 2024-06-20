@@ -1,6 +1,6 @@
 import { Box } from "@/design/components/box";
-import { Notice } from "@/design/components/notice";
-import { Text } from "@/design/components/text";
+import { Notice } from "@ukwehuwehneke/ohutsya";
+import { Text } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
@@ -41,7 +41,7 @@ import {
   TextBreakdown,
 } from "~/components/TextBreakdown";
 import { PronominalColor } from "~/components/Pronominal";
-import { List } from "@/design/components/list";
+import { List } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "~/components/Letter";
 import _ from "lodash";
 import {

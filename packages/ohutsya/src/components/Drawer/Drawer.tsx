@@ -1,16 +1,16 @@
 import React from 'react';
-import {
-  Drawer as PrimitiveDrawer,
-  // DrawerPortal as PrimitiveDrawerPortal,
-  // DrawerOverlay as PrimitiveDrawerOverlay,
-  DrawerTrigger as PrimitiveDrawerTrigger,
-  // DrawerClose as PrimitiveDrawerClose,
-  DrawerContent as PrimitiveDrawerContent,
-  // DrawerHeader as PrimitiveDrawerHeader,
-  // DrawerFooter as PrimitiveDrawerFooter,
-  // DrawerTitle as PrimitiveDrawerTitle,
-  // DrawerDescription as PrimitiveDrawerDescription
-} from '../../primitives/drawer'
+// import {
+//   Drawer as PrimitiveDrawer,
+//   // DrawerPortal as PrimitiveDrawerPortal,
+//   // DrawerOverlay as PrimitiveDrawerOverlay,
+//   DrawerTrigger as PrimitiveDrawerTrigger,
+//   // DrawerClose as PrimitiveDrawerClose,
+//   DrawerContent as PrimitiveDrawerContent,
+//   // DrawerHeader as PrimitiveDrawerHeader,
+//   // DrawerFooter as PrimitiveDrawerFooter,
+//   // DrawerTitle as PrimitiveDrawerTitle,
+//   // DrawerDescription as PrimitiveDrawerDescription
+// } from '../../primitives/drawer'
 
 export interface DrawerProps {
   children: React.ReactNode;
@@ -20,20 +20,20 @@ export interface DrawerProps {
 
 export function Drawer ({
   children,
-  open,
-  onOpenChange,
+  // open,
+  // onOpenChange,
 }: DrawerProps) {
   const childrenArray = React.Children.toArray(children);
   const triggerChild = findChildWithSymbol(childrenArray, DrawerTriggerSymbol);
   const otherChildren = findOtherChildren(childrenArray, [DrawerTriggerSymbol]);
 
   return (
-    <PrimitiveDrawer open={open} onOpenChange={onOpenChange}>
+    <div /*  open={open} onOpenChange={onOpenChange} */ >
       {triggerChild}
-      <PrimitiveDrawerContent>
+      <div>
         {otherChildren}
-      </PrimitiveDrawerContent>
-    </PrimitiveDrawer>
+      </div>
+    </div>
   );
 }
 
@@ -43,9 +43,9 @@ Drawer.Trigger = function DrawerTrigger ({
   children: React.ReactNode;
 }) {
   return (
-    <PrimitiveDrawerTrigger>
+    <div>
       {children}
-    </PrimitiveDrawerTrigger>
+    </div>
   );
 }
 

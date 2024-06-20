@@ -1,32 +1,37 @@
+"use client"
+
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
-import "./globals.css";
 import '@ukwehuwehneke/ohutsya/lib/ohutsya.css'
+import "./../learn-oneida.css";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
 import { cn } from "@ukwehuwehneke/ohutsya";
 import { Navbar } from "@/components/Navbar";
+import { usePathname } from 'next/navigation'
 
 const notoSansFont = Noto_Sans({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Learn Oneida",
-  description: "Learn the Oneida language!",
-};
+// export const metadata: Metadata = {
+//   title: "Learn Oneida",
+//   description: "Learn the Oneida language!",
+// };
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isHomePage = true;
+  const blah = usePathname();
+  const isHomePage = blah === '/'
+  console.log(blah)
 
   return (
     <html lang="en">
       <body className={notoSansFont.className}>
         <TitleBar />
         <div className="bg-gray-100">
-          {/* <Navbar /> */}
+          <Navbar />
         </div>
         <div
           className={cn(
