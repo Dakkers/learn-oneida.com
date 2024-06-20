@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
-import '@ukwehuwehneke/ohutsya/lib/ohutsya.css'
+// import '@ukwehuwehneke/ohutsya/lib/ohutsya.css'
 import "./../learn-oneida.css";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";

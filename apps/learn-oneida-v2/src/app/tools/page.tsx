@@ -1,3 +1,5 @@
+"use client"
+
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 

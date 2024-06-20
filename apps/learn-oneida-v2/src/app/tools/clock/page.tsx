@@ -1,8 +1,8 @@
+"use client"
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Heading } from "@ukwehuwehneke/ohutsya";
-import { Select } from "@ukwehuwehneke/ohutsya";
-import { Separator } from "@/design/primitives/separator";
+import { Divider, Select } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import _ from "lodash";
@@ -75,7 +75,7 @@ export default function ToolsClock() {
         </Flex.Item>
       </Flex>
 
-      <Separator />
+      <Divider />
 
       <Text>Translations:</Text>
       <List>

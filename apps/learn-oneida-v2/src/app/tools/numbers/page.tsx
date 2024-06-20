@@ -1,7 +1,8 @@
+"use client"
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Input } from "@ukwehuwehneke/ohutsya";
-import { Separator } from "@/design/primitives/separator";
+import { Divider } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
@@ -49,7 +50,7 @@ export default function ToolsNumbers() {
           </Button>
         </Flex>
 
-        <Separator />
+        <Divider />
 
         <p>
           Translation: <b>{translatedValue}</b>
