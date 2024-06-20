@@ -1,3 +1,4 @@
+"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
@@ -20,7 +21,7 @@ import {
   QuizContainerContext,
   Settings,
 } from "~/components/practice/QuizContainer";
-import { Link } from "@remix-run/react";
+import { Link } from "@ukwehuwehneke/ohutsya";
 
 export const meta: any = () => {
   return [

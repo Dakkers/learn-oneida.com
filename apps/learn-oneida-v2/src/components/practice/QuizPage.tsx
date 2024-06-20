@@ -1,12 +1,12 @@
-import { RadioGroup } from "@/design/components/RadioGroup";
+import { RadioGroup } from "@ukwehuwehneke/ohutsya";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Select } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
-import { Input } from "@/design/primitives/input";
-import { cn } from "@/design/library/utils";
+import { Input } from "@ukwehuwehneke/ohutsya";
+import { cn } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import { CheckCircle2Icon, XCircleIcon } from "lucide-react";
 import React from "react";

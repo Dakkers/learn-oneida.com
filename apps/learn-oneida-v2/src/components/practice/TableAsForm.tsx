@@ -9,8 +9,8 @@ import {
   FormField,
   FormItem,
   FormMessage,
-} from "@/design/primitives/form";
-import { Input } from "@/design/primitives/input";
+} from "@ukwehuwehneke/ohutsya";
+import { Input } from "@ukwehuwehneke/ohutsya";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

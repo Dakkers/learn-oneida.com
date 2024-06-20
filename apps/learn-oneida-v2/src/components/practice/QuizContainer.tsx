@@ -1,10 +1,10 @@
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { useQuizContext } from "./Quiz";
-import { cn } from "@/design/library/utils";
+import { cn } from "@ukwehuwehneke/ohutsya";
 import React from "react";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { Input } from "@/design/primitives/input";
-import { RadioGroup } from "@/design/components/RadioGroup";
+import { Input } from "@ukwehuwehneke/ohutsya";
+import { RadioGroup } from "@ukwehuwehneke/ohutsya";
 import { Select } from "@ukwehuwehneke/ohutsya";
 
 export interface QuizOption {

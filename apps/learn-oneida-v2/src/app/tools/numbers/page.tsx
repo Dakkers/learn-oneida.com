@@ -1,6 +1,6 @@
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { Input } from "@/design/primitives/input";
+import { Input } from "@ukwehuwehneke/ohutsya";
 import { Separator } from "@/design/primitives/separator";
 
 import React from "react";

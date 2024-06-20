@@ -1,3 +1,4 @@
+"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
@@ -12,7 +13,7 @@ import {
   QuizContainerContext,
   Settings,
 } from "~/components/practice/QuizContainer";
-import { Link } from "@remix-run/react";
+import { Link } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "~/components/SectionHeading";
 
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";

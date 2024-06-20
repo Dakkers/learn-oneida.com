@@ -1,8 +1,8 @@
+"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { Link } from "@ukwehuwehneke/ohutsya";
-import { MetaFunction } from "@remix-run/cloudflare";
 import { shuffle } from "lodash";
 import { useMemo, useState } from "react";
 import { z } from "zod";

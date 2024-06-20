@@ -2,7 +2,7 @@ import { Separator } from "@/design/primitives/separator";
 import React from "react";
 import { useDrag, useDrop, type TextDropItem } from "react-aria";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { cn } from "@/design/library/utils";
+import { cn } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { arrayify } from "~/utils";
 import { LucideIcon } from "lucide-react";

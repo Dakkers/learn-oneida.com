@@ -1,4 +1,4 @@
-import { cn } from "@/design/library/utils";
+import { cn } from "@ukwehuwehneke/ohutsya";
 import { type ReactNode } from "react";
 
 export function PageWrapper({ children }: { children: ReactNode }) {
