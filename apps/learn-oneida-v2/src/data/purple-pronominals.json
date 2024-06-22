@@ -1,0 +1,468 @@
+[
+  {
+    "default": ["kuy"],
+    "label": "I → you",
+    "c": ["ku"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["k", { "text": "u", "type": "OP" }]
+      }
+    ]
+  },
+  {
+    "default": ["liy"],
+    "label": "I → him",
+    "c": ["li"],
+    "i": ["l"]
+  },
+  {
+    "default": ["khey"],
+    "label": ["I → her", "I → someone", "I → them"],
+    "c": ["khe"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["kh", { "text": "e", "type": "OP" }]
+      }
+    ]
+  },
+  {
+    "default": ["kn"],
+    "label": "I → you two",
+    "c": ["kni"],
+    "a": ["ky"]
+  },
+  {
+    "default": ["kw"],
+    "label": ["I → all of you", "They & I → you"],
+    "c": ["kwa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["kw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["ky"]
+  },
+  {
+    "default": ["tak"],
+    "label": ["You → me (command form)"],
+    "c": [
+      "tak",
+      {
+        "excp": "3",
+        "text": "take"
+      }
+    ],
+    "a": ["takw"]
+  },
+  {
+    "default": ["sk"],
+    "label": ["You → me"],
+    "c": [
+      "sk",
+      {
+        "excp": "3",
+        "text": "ske"
+      }
+    ],
+    "a": ["skw"]
+  },
+  {
+    "label": ["You → him"],
+    "default": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etsh"]
+      }
+    ],
+    "c": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etsh"]
+      },
+      {
+        "excp": ["2", "3"],
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etshe"]
+      }
+    ]
+  },
+  {
+    "default": ["shey"],
+    "label": ["You → her", "You → someone", "You → them"],
+    "c": ["she"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["sh", { "text": "e", "type": "OP" }]
+      }
+    ]
+  },
+  {
+    "default": ["takw"],
+    "label": ["You → them & I", "All of you → me"],
+    "c": ["takwa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["takw", { "text": "ʌ", "type": "OP" }]
+      }
+    ]
+  },
+  {
+    "default": ["takw"],
+    "label": ["All of you → me (command form)"],
+    "c": ["takwa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["takw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["taky"]
+  },
+  {
+    "label": ["You and I → him"],
+    "default": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etn"]
+      }
+    ],
+    "c": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etni"]
+      }
+    ],
+    "a": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "ety"]
+      }
+    ]
+  },
+  {
+    "label": [
+      "You and I → her",
+      "You all and I → her",
+      "You and I → someone",
+      "You all and I → someone",
+      "You and I → them",
+      "You all and I → them"
+    ],
+    "default": ["yethiy"],
+    "c": ["yethi"],
+    "i": ["yeth"]
+  },
+  {
+    "label": ["You two → me (command form)"],
+    "default": ["takn"],
+    "c": ["takni"],
+    "a": ["taky"]
+  },
+  {
+    "label": ["You two → me"],
+    "default": ["skn"],
+    "c": ["skni"],
+    "a": ["sky"]
+  },
+  {
+    "label": ["You two → him", "He → you two"],
+    "default": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etsn"]
+      }
+    ],
+    "c": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etsni"]
+      }
+    ],
+    "a": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etsy"]
+      }
+    ]
+  },
+  {
+    "label": ["You all & I → him"],
+    "default": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etw"]
+      }
+    ],
+    "c": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "etwa"]
+      }
+    ],
+    "i": [
+      {
+        "excp": ["1", "2"],
+        "breakdown": [
+          { "text": "h", "type": "RPL" },
+          "etw",
+          { "text": "ʌ", "type": "OP" }
+        ]
+      }
+    ],
+    "o": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "ety"]
+      }
+    ]
+  },
+  {
+    "default": ["skw"],
+    "label": ["All of you → me"],
+    "c": ["skwa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["skw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["sky"]
+  },
+  {
+    "default": ["hetsw"],
+    "label": ["All of you → him", "He → all of you"],
+    "c": ["hetswa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["hetsw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["hetsy"]
+  },
+  {
+    "default": ["lak"],
+    "label": ["He → me"],
+    "c": [
+      "lak",
+      {
+        "excp": "3",
+        "text": "lake"
+      }
+    ],
+    "a": ["lakw"],
+    "e": ["lakw"]
+  },
+  {
+    "label": ["He → you"],
+    "default": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "yay"]
+      }
+    ],
+    "c": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "ya"]
+      }
+    ],
+    "a": [
+      {
+        "excp": "2",
+        "breakdown": [{ "text": "h", "type": "RPL" }, "y"]
+      }
+    ],
+    "i": [
+      {
+        "excp": ["1", "2"],
+        "breakdown": [
+          { "text": "h", "type": "RPL" },
+          "y",
+          { "text": "ʌ", "type": "OP" }
+        ]
+      }
+    ]
+  },
+  {
+    "label": ["He → him"],
+    "default": [
+      {
+        "excp": "1",
+        "breakdown": ["l", { "text": "o", "type": "OP" }]
+      }
+    ],
+    "c": ["lo"],
+    "e": ["law"],
+    "o": ["la"]
+  },
+  {
+    "label": ["He → her", "He → someone", "He → them"],
+    "default": [
+      {
+        "excp": "1",
+        "breakdown": ["shak", { "text": "o", "type": "OP" }]
+      }
+    ],
+    "c": ["shako"],
+    "e": ["shakaw"],
+    "o": ["shaka"]
+  },
+  {
+    "label": ["He → you and I"],
+    "default": ["shukn"],
+    "c": ["shukni"],
+    "a": ["shuky"]
+  },
+  {
+    "label": ["He → you all and I"],
+    "default": ["shukw"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["shukw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "c": ["shukwa"],
+    "o": ["shuky"]
+  },
+  {
+    "default": ["yukw"],
+    "label": ["She → me", "They → me"],
+    "c": [
+      {
+        "excp": "1",
+        "breakdown": ["yuk", { "text": "e", "type": "OP" }]
+      }
+    ],
+    "i": ["yuk"],
+    "o": ["yuk"]
+  },
+  {
+    "default": ["yes"],
+    "label": ["She → you", "They → you"],
+    "c": ["yesa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["yes", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["yesay"]
+  },
+  {
+    "default": ["luw"],
+    "label": ["She → him", "They → him"],
+    "c": ["luwa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["luw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["luway"]
+  },
+  {
+    "default": ["yutat"],
+    "label": ["She → her", "They → her"],
+    "c": [
+      "yutat",
+      {
+        "excp": "3",
+        "text": "yutate"
+      }
+    ]
+  },
+  {
+    "default": ["kuw"],
+    "label": ["She → it"],
+    "c": ["kuwa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["kuw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["kuway"]
+  },
+  {
+    "default": ["yetshiy"],
+    "label": [
+      "She → you two",
+      "She → all of you",
+      "They → you two",
+      "They → all of you",
+      "You two → her",
+      "You two → them",
+      "All of you → her",
+      "All of you → them"
+    ],
+    "c": ["yetshi"],
+    "i": ["yetshi"]
+  },
+  {
+    "default": ["luwat"],
+    "label": ["She → them (males, mix)", "They → them (males, mix)"],
+    "c": ["luwati"],
+    "a": ["luwan"],
+    "o": ["luwan"]
+  },
+  {
+    "default": ["kuwat"],
+    "label": ["She → them (females)", "They → them (females)"],
+    "c": ["kuwati"],
+    "a": ["kuwan"],
+    "o": ["kuwan"]
+  },
+  {
+    "default": ["shakn"],
+    "label": ["Someone and I → him"],
+    "c": ["shakni"],
+    "a": ["shaky"]
+  },
+  {
+    "default": ["shakw"],
+    "label": ["They and I → him"],
+    "c": ["shakwa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["shakw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["shaky"]
+  },
+  {
+    "default": ["yakhiy"],
+    "label": [
+      "Someone and I → her",
+      "Someone and I → them",
+      "They and I → her",
+      "They and I → them"
+    ],
+    "c": ["yakhi"],
+    "i": ["yakh"]
+  },
+  {
+    "default": ["yukhiy"],
+    "label": ["They → you and I", "They → them and I"],
+    "c": ["yukhi"],
+    "i": ["yukh"]
+  },
+  {
+    "default": ["shakon"],
+    "label": ["They (males, mix) → her", "They (males, mix) → them"],
+    "c": ["shakoti"],
+    "i": ["shakot"]
+  },
+  {
+    "default": ["yakon"],
+    "label": ["They (males, mix) → her", "They (males, mix) → them"],
+    "c": ["yakoti"],
+    "i": ["yakot"]
+  }
+]

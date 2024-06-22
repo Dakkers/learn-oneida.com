@@ -1,5 +1,3 @@
-# I'm trying to run npm tsc
-
 name: main
 
 on:
@@ -22,6 +20,12 @@ jobs:
         with:
           node-version: '20.x'
 
-      - run: npm install
-      - run: npm run ci:format
-      - run: npx tsc
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - run: pnpm install
+
+      - run: pnpm run ci:format
+
+      - run: pnpm run typecheck

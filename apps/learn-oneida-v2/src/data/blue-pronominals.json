@@ -1,0 +1,125 @@
+{
+  "i": {
+    "default": ["wak"],
+    "c": [
+      "wak",
+      {
+        "excp": "3",
+        "breakdown": ["wake"]
+      }
+    ]
+  },
+  "u": {
+    "default": ["s"],
+    "c": ["sa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["s", { "text": "ʌ", "type": "OP" }]
+      }
+    ]
+  },
+  "m": {
+    "default": [
+      {
+        "excp": "1",
+        "breakdown": ["l", { "text": "o", "type": "OP" }]
+      }
+    ],
+    "c": ["lo"],
+    "e": ["law"],
+    "o": ["la"]
+  },
+  "f": {
+    "default": [
+      {
+        "excp": "1",
+        "breakdown": ["yak", { "text": "o", "type": "OP" }]
+      }
+    ],
+    "c": ["yako"],
+    "e": ["yakaw"],
+    "o": ["yaka"]
+  },
+  "it": {
+    "default": [
+      {
+        "excp": "1",
+        "breakdown": ["y", { "text": "o", "type": "OP" }]
+      }
+    ],
+    "c": ["yo"],
+    "e": ["yaw"],
+    "o": ["ya"]
+  },
+  "uni": {
+    "default": ["yukn"],
+    "c": ["yukni"],
+    "a": ["yuky"]
+  },
+  "soni": {
+    "default": ["yukn"],
+    "c": ["yukni"],
+    "a": ["yuky"]
+  },
+  "u2": {
+    "default": ["sn"],
+    "c": ["sni"],
+    "a": ["tsy"]
+  },
+  "2m": {
+    "default": ["lon"],
+    "c": ["loti"],
+    "i": ["lot"]
+  },
+  "2f": {
+    "default": ["yon"],
+    "c": ["yoti"],
+    "i": ["yot"]
+  },
+  "us": {
+    "default": ["yukw"],
+    "c": ["yukwa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["yukw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["yuky"]
+  },
+  "theyni": {
+    "default": ["yukw"],
+    "c": ["yukwa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["yukw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["yuky"]
+  },
+  "yall": {
+    "default": ["sw"],
+    "c": ["swa"],
+    "i": [
+      {
+        "excp": "1",
+        "breakdown": ["sw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": ["tsy"]
+  },
+  "ms": {
+    "default": ["lon"],
+    "c": ["loti"],
+    "i": ["lot"],
+    "a": ["lon"]
+  },
+  "fs": {
+    "default": ["yon"],
+    "c": ["yoti"],
+    "i": ["yot"],
+    "a": ["yon"]
+  }
+}
