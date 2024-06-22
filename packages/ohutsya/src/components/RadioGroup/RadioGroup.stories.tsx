@@ -8,8 +8,8 @@ export default {
 
 export const Basic: StoryFn<typeof RadioGroup> = (args) => (
   <RadioGroup {...args}>
-    <RadioGroup.Option value='1'>Option 1</RadioGroup.Option>
-    <RadioGroup.Option value='2'>Option 2</RadioGroup.Option>
-    <RadioGroup.Option value='3'>Option 3</RadioGroup.Option>
+    <RadioGroup.Option value="1">Option 1</RadioGroup.Option>
+    <RadioGroup.Option value="2">Option 2</RadioGroup.Option>
+    <RadioGroup.Option value="3">Option 3</RadioGroup.Option>
   </RadioGroup>
 );

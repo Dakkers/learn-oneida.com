@@ -10,18 +10,18 @@ export const Basic: StoryFn<typeof Table> = () => (
   <Table
     columns={[
       {
-        accessorKey: 'left',
-        header: 'Left'
+        accessorKey: "left",
+        header: "Left",
       },
       {
-        accessorKey: 'right',
-        header: 'Right'
+        accessorKey: "right",
+        header: "Right",
       },
     ]}
     data={[
-      { left: 'X=1', right: 'Y=1' },
-      { left: 'X=2', right: 'Y=2' },
-      { left: 'X=3', right: 'Y=3' },
+      { left: "X=1", right: "Y=1" },
+      { left: "X=2", right: "Y=2" },
+      { left: "X=3", right: "Y=3" },
     ]}
   />
 );

@@ -41,7 +41,9 @@ export function Table({
           <PrimitiveTableHeader>
             <PrimitiveTableRow>
               {columns.map((c) => (
-                <PrimitiveTableHead key={c.key ?? c.accessorKey}>{c.header}</PrimitiveTableHead>
+                <PrimitiveTableHead key={c.key ?? c.accessorKey}>
+                  {c.header}
+                </PrimitiveTableHead>
               ))}
             </PrimitiveTableRow>
           </PrimitiveTableHeader>
@@ -64,12 +66,12 @@ export function Table({
   );
 }
 
-Table.textArrayCell = (value: TextArrayProps['children']) => (
+Table.textArrayCell = (value: TextArrayProps["children"]) => (
   <Flex direction="column">
     <TextArray>{value}</TextArray>
   </Flex>
 );
-Table.textArrayCellBold = (value: TextArrayProps['children']) => (
+Table.textArrayCellBold = (value: TextArrayProps["children"]) => (
   <Flex direction="column">
     <TextArray bold>{value}</TextArray>
   </Flex>

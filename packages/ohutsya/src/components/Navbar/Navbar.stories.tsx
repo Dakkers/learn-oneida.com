@@ -6,7 +6,7 @@ export default {
   component: Navbar,
 } satisfies Meta<typeof Navbar>;
 
-const moduleNumbers = new Array(6).fill(0).map((_, i) => (i + 1))
+const moduleNumbers = new Array(6).fill(0).map((_, i) => i + 1);
 
 const tools: { title: string; href: string; description: string }[] = [
   {

@@ -1,4 +1,4 @@
-export { default as ReactFromModule } from 'react'
+export { default as ReactFromModule } from "react";
 
 export * from "./components";
 export * from "./internal/TextArray";

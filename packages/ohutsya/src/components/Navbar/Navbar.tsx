@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "../../primitives/navigation-menu"
+} from "../../primitives/navigation-menu";
 import { MenuIcon } from "lucide-react";
 import { Drawer } from "../Drawer";
 import { Flex } from "../Flex";
@@ -36,10 +36,12 @@ function NavbarMobile(props: NavbarProps) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const items = [
-    props.moduleNumbers ? {
-      href: "/learn",
-      text: "Learn",
-    } : null,
+    props.moduleNumbers
+      ? {
+          href: "/learn",
+          text: "Learn",
+        }
+      : null,
     {
       href: "/about",
       text: "About",
@@ -52,10 +54,12 @@ function NavbarMobile(props: NavbarProps) {
       href: "/practice",
       text: "Practice",
     },
-    props.tools ? {
-      href: "/tools",
-      text: "Tools",
-    } : null,
+    props.tools
+      ? {
+          href: "/tools",
+          text: "Tools",
+        }
+      : null,
   ].filter(Boolean);
 
   return (
@@ -114,7 +118,6 @@ function NavbarDesktop(props: NavbarProps) {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
         )}
 
         <NavigationMenuItem>
@@ -141,7 +144,11 @@ function NavbarDesktop(props: NavbarProps) {
             <NavigationMenuContent>
               <ul className="grid w-[320px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {props.tools.map((item) => (
-                  <ListItem href={item.href} key={item.title} title={item.title}>
+                  <ListItem
+                    href={item.href}
+                    key={item.title}
+                    title={item.title}
+                  >
                     {item.description}
                   </ListItem>
                 ))}

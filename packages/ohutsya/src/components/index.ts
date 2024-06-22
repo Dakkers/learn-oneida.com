@@ -1,4 +1,8 @@
-export { Accordion, type AccordionProps, type AccordionItemProps } from "./Accordion";
+export {
+  Accordion,
+  type AccordionProps,
+  type AccordionItemProps,
+} from "./Accordion";
 export { Bleed, type BleedProps } from "./Bleed";
 export { Box, type BoxProps } from "./Box";
 export { Button, type ButtonProps } from "./Button";

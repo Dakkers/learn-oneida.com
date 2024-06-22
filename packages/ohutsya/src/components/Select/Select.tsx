@@ -18,12 +18,7 @@ export interface SelectProps {
   value: string;
 }
 
-export function Select({
-  label,
-  onChange,
-  options,
-  value,
-}: SelectProps) {
+export function Select({ label, onChange, options, value }: SelectProps) {
   const id = useId();
 
   return (
