@@ -13,6 +13,7 @@
   "scripts": {
     "build-storybook": "storybook build",
     "build": "tsc && vite build",
+    "build:watch": "vite build --watch",
     "ci:format": "prettier ./src --check",
     "dev": "vite",
     "format:write": "prettier ./src --write",

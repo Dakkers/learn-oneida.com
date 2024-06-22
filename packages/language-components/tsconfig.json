@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "baseUrl": "./",
+    "build": true,
+    "composite": true,
+    "declaration": true,
+    "declarationDir": "./lib/types",
+    "declarationMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "noEmit": true,
+    "outDir": "lib/types",
+    "paths": {
+      "~/*": ["src/*"],
+      "@/*": ["src/*"],
+    },
+    "rootDir": "src",
+    "skipLibCheck": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/"]
+}

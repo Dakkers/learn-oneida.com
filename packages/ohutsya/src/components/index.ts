@@ -9,6 +9,7 @@ export { Flex, type FlexProps } from "./Flex";
 export { Heading, type HeadingProps } from "./Heading";
 export { HelpText, type HelpTextProps } from "./HelpText";
 export { List, type ListProps } from "./List";
+export { Navbar, type NavbarProps } from "./Navbar";
 export { Notice, type NoticeProps } from "./Notice";
 export { RadioGroup, type RadioGroupProps } from "./RadioGroup";
 export { Select, type SelectProps } from "./Select";
