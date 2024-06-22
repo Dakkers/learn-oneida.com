@@ -6,7 +6,7 @@ import { Heading } from "@ukwehuwehneke/ohutsya";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 import { DATA_DAYS_OF_WEEK } from "~/components/articles/DaysOfTheWeek";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Days of the week" },
     {

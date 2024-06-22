@@ -20,7 +20,7 @@ import {
   module6VerbTenseMap,
 } from "~/data/module06/activeVerbsList";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "All Paradigms" },
     { name: "description", content: "All paradigms for each module" },

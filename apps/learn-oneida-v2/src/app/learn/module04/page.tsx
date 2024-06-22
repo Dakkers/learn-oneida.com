@@ -56,7 +56,7 @@ import { PhoneNumbersArticle } from "~/components/articles/PhoneNumbers";
 import { ClockTimeArticle } from "~/components/articles/ClockTime";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Module 4" },
     { name: "description", content: "Module 4 of the Oneida curriculum" },

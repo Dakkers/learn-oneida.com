@@ -2,7 +2,7 @@
 import React from "react";
 import { GoodPeopleBadPeopleArticle } from "~/components/articles/GoodPeopleBadPeople";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Good people and bad people" },
     {

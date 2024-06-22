@@ -7,7 +7,7 @@ import { DATA_SEASONS } from "~/components/articles/Seasons";
 import { Flower2Icon, LeafIcon, SnowflakeIcon, SunIcon } from "lucide-react";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Seasons" },
     {

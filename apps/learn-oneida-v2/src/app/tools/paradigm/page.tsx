@@ -57,7 +57,7 @@ import { SectionHeading } from "~/components/SectionHeading";
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Paradigm Tester" },
     {

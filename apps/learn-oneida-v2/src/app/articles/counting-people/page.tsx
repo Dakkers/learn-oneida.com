@@ -2,7 +2,7 @@
 import React from "react";
 import { CountingPeopleArticle } from "~/components/articles/CountingPeople";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Counting people" },
     {

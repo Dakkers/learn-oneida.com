@@ -5,7 +5,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 
 import { SectionHeading } from "~/components/SectionHeading";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Tools" },
     { name: "description", content: "Tools provided by this website" },

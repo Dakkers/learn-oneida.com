@@ -23,7 +23,7 @@ import { TranslationExercisesSection } from "~/components/practice/TranslationEx
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { Module5VerbDatum, createModule5VerbsList } from "~/data/module05";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Module 5" },
     { name: "description", content: "Module 5 of the Oneida curriculum" },

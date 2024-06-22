@@ -21,7 +21,7 @@ import {
 } from "~/data/module05";
 import { Link } from "@ukwehuwehneke/ohutsya";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Tenses practice" },
     {

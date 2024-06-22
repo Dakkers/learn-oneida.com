@@ -9,7 +9,7 @@ import {
   EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Months" },
     {

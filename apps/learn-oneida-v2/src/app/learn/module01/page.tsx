@@ -22,7 +22,7 @@ import { GlottalStopArticle } from "~/components/articles/GlottalStop";
 import { LetterHArticle } from "~/components/articles/LetterH";
 import { WhisperedEndingsArticle } from "~/components/articles/WhisperedEndings";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Module 1" },
     { name: "description", content: "Module 1 of the Oneida curriculum" },

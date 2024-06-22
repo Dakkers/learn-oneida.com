@@ -19,7 +19,7 @@ import { createModule4Data } from "~/data/module04";
 import { Link } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "~/components/SectionHeading";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Tenses Conjugation for Verbs from Module 4" },
     {

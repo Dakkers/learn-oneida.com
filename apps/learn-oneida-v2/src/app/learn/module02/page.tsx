@@ -60,7 +60,7 @@ import { BeingDifferentArticle } from "~/components/articles/BeingDifferent";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Module 2" },
     { name: "description", content: "Module 2 of the Oneida curriculum" },

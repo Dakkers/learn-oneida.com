@@ -8,7 +8,7 @@ import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import { translateNumber } from "~/utils/numbers";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Numbers" },
     {

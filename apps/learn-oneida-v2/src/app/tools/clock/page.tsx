@@ -12,7 +12,7 @@ import { doTheTranslate } from "~/utils/time";
 import { SectionHeading } from "~/components/SectionHeading";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Clock Time" },
     {

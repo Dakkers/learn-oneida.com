@@ -10,7 +10,7 @@ import { SectionHeading } from "~/components/SectionHeading";
 import { createCountingTimeData } from "~/components/articles/CountingTime";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Practice Counting Time" },
     {

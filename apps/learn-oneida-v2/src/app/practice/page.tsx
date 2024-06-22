@@ -6,7 +6,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Practice" },
     {

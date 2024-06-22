@@ -36,7 +36,7 @@ import { convertBreakdownToPlainText } from "~/components/TextBreakdown";
 import { translatePhrase } from "~/utils";
 import { EnglishToOneidaQuiz } from "~/components/practice/EnglishToOneidaQuiz";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Being somewhere" },
     {

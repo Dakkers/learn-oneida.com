@@ -1,3 +1,4 @@
+"use client"
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import {
   AnswerMultipleChoiceButtons,

@@ -2,7 +2,7 @@
 import React from "react";
 import { CitiesArticle } from "~/components/articles/Cities";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Cities" },
     {

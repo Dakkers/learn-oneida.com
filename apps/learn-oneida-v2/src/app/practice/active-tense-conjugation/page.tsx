@@ -18,7 +18,7 @@ import {
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { Link } from "@ukwehuwehneke/ohutsya";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Tenses Conjugation for Active Verbs" },
     {

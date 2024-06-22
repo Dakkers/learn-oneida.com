@@ -23,7 +23,7 @@ import {
 } from "~/components/practice/QuizContainer";
 import { Link } from "@ukwehuwehneke/ohutsya";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Tense Identification" },
     {

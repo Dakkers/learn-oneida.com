@@ -1,9 +1,10 @@
+"use client"
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 
 import { SectionHeading } from "~/components/SectionHeading";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Learn" },
     { name: "description", content: "Learn using a structured curriculum" },

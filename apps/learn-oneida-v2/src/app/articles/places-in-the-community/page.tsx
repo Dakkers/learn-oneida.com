@@ -2,7 +2,7 @@
 import React from "react";
 import { PlacesInTheCommunityArticle } from "~/components/articles/PlacesInTheCommunity";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Places in the community" },
     {

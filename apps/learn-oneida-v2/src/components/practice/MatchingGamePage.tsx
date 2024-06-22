@@ -1,4 +1,6 @@
-import { Separator } from "@/design/primitives/separator";
+"use client"
+
+import { Divider } from "@ukwehuwehneke/ohutsya";
 import React from "react";
 import { useDrag, useDrop, type TextDropItem } from "react-aria";
 import { Flex } from "@ukwehuwehneke/ohutsya";
@@ -6,7 +8,6 @@ import { cn } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { arrayify } from "~/utils";
 import { LucideIcon } from "lucide-react";
-import { ClientOnly } from "remix-utils/client-only";
 import _ from "lodash";
 
 type Data = Array<{
@@ -66,8 +67,8 @@ export function MatchingGamePage({ data, getIcon }: MatchingGamePageProps) {
     >
       <Flex direction="column" gap={4}>
         <EnglishSection getIcon={getIcon} />
-        <Separator />
-        <ClientOnly>{() => <OneidaSection />}</ClientOnly>
+        <Divider />
+        <OneidaSection />
       </Flex>
     </MatchingGamePageContext.Provider>
   );

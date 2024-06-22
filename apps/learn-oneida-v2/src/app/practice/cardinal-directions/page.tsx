@@ -12,7 +12,7 @@ import {
 import { DATA_CARDINAL_DIRECTIONS } from "~/components/articles/CardinalDirections";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Cardinal Directions" },
     {

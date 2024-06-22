@@ -10,7 +10,7 @@ import {
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { arrayify } from "~/utils";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Places in the community" },
     {

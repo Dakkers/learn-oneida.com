@@ -2,7 +2,7 @@
 import React from "react";
 import { TimesOfDayArticle } from "~/components/articles/TimesOfDay";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Times of day" },
     {

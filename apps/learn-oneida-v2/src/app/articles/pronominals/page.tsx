@@ -2,7 +2,7 @@
 import React from "react";
 import { PronominalsArticle } from "~/components/articles/Pronominals";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Pronominals" },
     {

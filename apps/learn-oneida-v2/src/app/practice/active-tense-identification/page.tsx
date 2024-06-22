@@ -18,7 +18,7 @@ import { SectionHeading } from "~/components/SectionHeading";
 
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Tense Identification for Active Verbs" },
     {

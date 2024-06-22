@@ -34,7 +34,7 @@ import {
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { z } from "zod";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Practice Lists of Verbs" },
     {

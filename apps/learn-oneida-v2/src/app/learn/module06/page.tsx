@@ -107,7 +107,7 @@ const verbsWithParadigms = [
   },
 ] as const;
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Module 6" },
     { name: "description", content: "Module 6 of the Oneida curriculum" },

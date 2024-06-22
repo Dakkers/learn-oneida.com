@@ -2,7 +2,7 @@
 import React from "react";
 import { RepetitiveFeatureArticle } from "~/components/articles/RepetitiveFeature";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Repetitive Conjugation" },
     {

@@ -2,7 +2,7 @@
 import React from "react";
 import { AtSomeonesPlaceArticle } from "~/components/articles/AtSomeonesPlace";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "At Someone's Place" },
     {

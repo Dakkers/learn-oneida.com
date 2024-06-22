@@ -2,7 +2,7 @@
 import React from "react";
 import { CountingTimeArticle } from "~/components/articles/CountingTime";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Counting lengths of time" },
     {

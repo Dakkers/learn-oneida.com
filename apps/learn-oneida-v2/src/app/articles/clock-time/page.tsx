@@ -2,7 +2,7 @@
 import React from "react";
 import { ClockTimeArticle } from "~/components/articles/ClockTime";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Clock time" },
     {

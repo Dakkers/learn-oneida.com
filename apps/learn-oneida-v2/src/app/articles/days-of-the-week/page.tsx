@@ -2,7 +2,7 @@
 import React from "react";
 import { DaysOfTheWeekArticle } from "~/components/articles/DaysOfTheWeek";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Days of the week" },
     {

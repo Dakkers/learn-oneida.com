@@ -25,7 +25,7 @@ import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { TextArray } from "@ukwehuwehneke/ohutsya";
 
-export const meta: any = () => {
+const meta: any = () => {
   return [
     { title: "Module 3" },
     { name: "description", content: "Module 3 of the Oneida curriculum" },
