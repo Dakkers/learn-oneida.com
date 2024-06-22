@@ -6,7 +6,7 @@
     "build": "next build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "ci:format": "prettier ./app ./@ --check",
-    "cf:deploy": "echo hello && npx @cloudflare/next-on-pages@1",
+    "cf:deploy": "echo hello && pnpm run tailwind:build && npx @cloudflare/next-on-pages@1",
     "dev": "next dev",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
@@ -14,7 +14,9 @@
     "prepare": "husky install",
     "preview": "pnpm run pages:build && wrangler pages dev",
     "start": "next start",
-    "tailwind": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css --watch",
+    "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css",
+    "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css --watch",
+    "tailwind": "pnpm run tailwind",
     "typecheck": "tsc"
   },
   "dependencies": {
