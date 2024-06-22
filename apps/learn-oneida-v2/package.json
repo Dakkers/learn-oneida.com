@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "build:deps": "pnpm --filter \"@ukwehuwehneke/ohutsya\" build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "ci:format": "prettier ./app ./@ --check",
-    "cf:deploy": "echo hello && pnpm run tailwind:build && npx @cloudflare/next-on-pages@1",
+    "cf:deploy": "echo hello && pnpm run tailwind:build && pnpm run build:deps && npx @cloudflare/next-on-pages@1",
     "dev": "next dev",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
