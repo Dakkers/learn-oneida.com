@@ -1,3 +1,3 @@
-export * from './SectionHeading/SectionHeading'
+export * from './SectionHeading'
 export * from './TableWrapper'
 export * from './TextBreakdown'
