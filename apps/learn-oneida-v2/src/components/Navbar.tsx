@@ -35,6 +35,11 @@ const toolsItems: { title: string; href: string; description: string }[] = [
     href: "/tools/clock",
     description: "Translate a digital clock time into Oneida.",
   },
+  {
+    title: "Flashcards",
+    href: "/tools/flashcards",
+    description: "Quiz yourself on Oneida verbs.",
+  },
 ];
 
 export function Navbar() {

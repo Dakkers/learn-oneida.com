@@ -236,6 +236,7 @@ export type Module6VerbDatum = {
   key: Module6VerbKey;
   pfv: ParadigmData;
   pronouns?: Pronoun[];
+  root: string;
 };
 
 const mapping = {
