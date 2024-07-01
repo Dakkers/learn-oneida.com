@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Input } from "@ukwehuwehneke/ohutsya";

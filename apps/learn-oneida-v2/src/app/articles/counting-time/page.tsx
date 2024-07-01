@@ -1,4 +1,3 @@
-
 import React from "react";
 import { CountingTimeArticle } from "~/components/articles/CountingTime";
 

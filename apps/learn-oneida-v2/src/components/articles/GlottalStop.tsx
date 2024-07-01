@@ -14,10 +14,10 @@ export function GlottalStopArticle({ level = 1 }: ArticleProps) {
         Glottal Stops
       </SectionHeading>
       <Text>
-        A common feature of Onʌyoteʔa·ká· is the <strong>glottal stop</strong> indicated in
-        writing by an apostrophe (<Letter>&lsquo;</Letter>) or the symbol{" "}
-        <Letter>ʔ</Letter>. A glottal stop occurs when a speaker abruptly “cuts”
-        the end off a vowel by stopping air and sound coming out of their
+        A common feature of Onʌyoteʔa·ká· is the <strong>glottal stop</strong>{" "}
+        indicated in writing by an apostrophe (<Letter>&lsquo;</Letter>) or the
+        symbol <Letter>ʔ</Letter>. A glottal stop occurs when a speaker abruptly
+        “cuts” the end off a vowel by stopping air and sound coming out of their
         throat. We use glottal stops in speaking English all the time, but we
         are unaware of them and do not write them.
       </Text>

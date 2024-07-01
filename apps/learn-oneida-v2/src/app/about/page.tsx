@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Heading } from "@ukwehuwehneke/ohutsya";

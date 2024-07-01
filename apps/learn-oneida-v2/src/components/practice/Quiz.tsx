@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";

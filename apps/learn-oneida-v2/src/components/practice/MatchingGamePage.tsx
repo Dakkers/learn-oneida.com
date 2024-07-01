@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Divider } from "@ukwehuwehneke/ohutsya";
 import React from "react";

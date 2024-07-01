@@ -1,6 +1,6 @@
 "use client";
 
-import { Bleed, Box,Divider,Notice,Text } from "@ukwehuwehneke/ohutsya";
+import { Bleed, Box, Divider, Notice, Text } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { singlePronouns } from "~/utils";
@@ -99,7 +99,6 @@ export default function LearnModule01() {
       <Divider />
 
       <PronominalsArticle level={2} />
-
 
       <StressArticle level={2} />
 

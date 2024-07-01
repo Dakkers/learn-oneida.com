@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // import {
 //   Drawer as PrimitiveDrawer,
 //   // DrawerPortal as PrimitiveDrawerPortal,
@@ -18,7 +18,7 @@ export interface DrawerProps {
   onOpenChange: (val: boolean) => void;
 }
 
-export function Drawer ({
+export function Drawer({
   children,
   // open,
   // onOpenChange,
@@ -28,33 +28,32 @@ export function Drawer ({
   const otherChildren = findOtherChildren(childrenArray, [DrawerTriggerSymbol]);
 
   return (
-    <div /*  open={open} onOpenChange={onOpenChange} */ >
+    <div /*  open={open} onOpenChange={onOpenChange} */>
       {triggerChild}
-      <div>
-        {otherChildren}
-      </div>
+      <div>{otherChildren}</div>
     </div>
   );
 }
 
-Drawer.Trigger = function DrawerTrigger ({
-  children
+Drawer.Trigger = function DrawerTrigger({
+  children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <div>
-      {children}
-    </div>
-  );
-}
+  return <div>{children}</div>;
+};
 
-const DrawerTriggerSymbol = Symbol('Drawer.Trigger');
+const DrawerTriggerSymbol = Symbol("Drawer.Trigger");
 
-Object.assign(Drawer.Trigger, { [DrawerTriggerSymbol]: true })
+Object.assign(Drawer.Trigger, { [DrawerTriggerSymbol]: true });
 
-function findChildWithSymbol (children: React.ReactNode | React.ReactNode[], symbol: symbol) {
-  const stuff = Array.isArray(children) ? children : React.Children.toArray(children);
+function findChildWithSymbol(
+  children: React.ReactNode | React.ReactNode[],
+  symbol: symbol,
+) {
+  const stuff = Array.isArray(children)
+    ? children
+    : React.Children.toArray(children);
   return stuff.find((child) => hasSymbol(child, symbol));
 }
 
@@ -63,7 +62,14 @@ function hasSymbol(child: React.ReactNode, symbol: symbol) {
   return symbol in child && child[symbol] === true;
 }
 
-function findOtherChildren(children: React.ReactNode | React.ReactNode[], symbols: symbol[]) {
-  const stuff = Array.isArray(children) ? children : React.Children.toArray(children);
-  return stuff.filter((child) => !symbols.find((symbol) => hasSymbol(child, symbol)));
+function findOtherChildren(
+  children: React.ReactNode | React.ReactNode[],
+  symbols: symbol[],
+) {
+  const stuff = Array.isArray(children)
+    ? children
+    : React.Children.toArray(children);
+  return stuff.filter(
+    (child) => !symbols.find((symbol) => hasSymbol(child, symbol)),
+  );
 }

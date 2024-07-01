@@ -6,9 +6,6 @@ export interface HelpTextProps {
   intent?: Intent;
 }
 
-export function HelpText({
-  children,
-  intent = "secondary",
-}: HelpTextProps) {
+export function HelpText({ children, intent = "secondary" }: HelpTextProps) {
   return <InternalText intent={intent}>{children}</InternalText>;
 }

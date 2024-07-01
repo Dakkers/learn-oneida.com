@@ -1,8 +1,5 @@
-"use client"
-import {
-  TableWrapper,
-  TableWrapperProps,
-} from "@/components/TableWrapper";
+"use client";
+import { TableWrapper, TableWrapperProps } from "@/components/TableWrapper";
 import React from "react";
 import { SectionHeading } from "../SectionHeading";
 

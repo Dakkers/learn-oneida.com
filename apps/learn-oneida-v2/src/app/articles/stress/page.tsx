@@ -1,4 +1,3 @@
-
 import React from "react";
 import { StressArticle } from "~/components/articles/Stress";
 

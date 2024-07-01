@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { RadioGroup } from "@ukwehuwehneke/ohutsya";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";

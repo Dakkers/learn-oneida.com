@@ -1,4 +1,3 @@
-
 import React from "react";
 import { TimesOfDayArticle } from "~/components/articles/TimesOfDay";
 

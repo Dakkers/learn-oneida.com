@@ -1,4 +1,3 @@
-
 import React from "react";
 import { GoodPeopleBadPeopleArticle } from "~/components/articles/GoodPeopleBadPeople";
 

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { GlottalStopArticle } from "~/components/articles/GlottalStop";
 

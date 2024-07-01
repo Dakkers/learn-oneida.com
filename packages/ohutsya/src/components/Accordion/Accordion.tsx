@@ -1,25 +1,17 @@
-
 import {
   Accordion as PrimitiveAccordion,
   AccordionItem as PrimitiveAccordionItem,
   AccordionTrigger as PrimitiveAccordionTrigger,
-  AccordionContent as PrimitiveAccordionContent
+  AccordionContent as PrimitiveAccordionContent,
 } from "../../primitives/accordion";
 
 export interface AccordionProps {
   children: React.ReactNode;
-  type?: 'single' | 'multiple'
+  type?: "single" | "multiple";
 }
 
-export function Accordion ({
-  children,
-  type = 'single',
-}: AccordionProps) {
-  return (
-    <PrimitiveAccordion type={type}>
-      {children}
-    </PrimitiveAccordion>
-  )
+export function Accordion({ children, type = "single" }: AccordionProps) {
+  return <PrimitiveAccordion type={type}>{children}</PrimitiveAccordion>;
 }
 
 export interface AccordionItemProps {
@@ -28,7 +20,7 @@ export interface AccordionItemProps {
   title: React.ReactNode;
 }
 
-Accordion.Item = function AccordionItem ({
+Accordion.Item = function AccordionItem({
   children,
   id,
   title,
@@ -36,9 +28,7 @@ Accordion.Item = function AccordionItem ({
   return (
     <PrimitiveAccordionItem id={id} value={id}>
       <PrimitiveAccordionTrigger>{title}</PrimitiveAccordionTrigger>
-      <PrimitiveAccordionContent>
-        {children}
-      </PrimitiveAccordionContent>
+      <PrimitiveAccordionContent>{children}</PrimitiveAccordionContent>
     </PrimitiveAccordionItem>
-  )
-}
+  );
+};

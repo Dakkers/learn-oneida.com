@@ -5,11 +5,7 @@ export interface TextArrayProps extends TextProps {
   bold?: boolean;
 }
 
-export function TextArray({
-  bold,
-  children,
-  ...props
-}: TextArrayProps) {
+export function TextArray({ bold, children, ...props }: TextArrayProps) {
   const WrapperTag = bold ? "b" : React.Fragment;
   if (!Array.isArray(children)) {
     return (
