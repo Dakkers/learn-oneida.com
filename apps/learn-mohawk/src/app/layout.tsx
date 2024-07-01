@@ -10,10 +10,10 @@ import { usePathname } from "next/navigation";
 
 const notoSansFont = Noto_Sans({ subsets: ["latin"] });
 
-// export const metadata: Metadata = {
-//   title: "Learn Oneida",
-//   description: "Learn the Oneida language!",
-// };
+export const metadata: Metadata = {
+  title: "Learn Mohawk",
+  description: "Learn the Mohawk language!",
+};
 
 export default function RootLayout({
   children,

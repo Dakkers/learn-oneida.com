@@ -1,4 +1,3 @@
-
 import React from "react";
 import { CountingPeopleArticle } from "~/components/articles/CountingPeople";
 

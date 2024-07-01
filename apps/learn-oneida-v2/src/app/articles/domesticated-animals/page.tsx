@@ -1,4 +1,3 @@
-
 import React from "react";
 import { DomesticatedAnimalsArticle } from "~/components/articles/DomesticatedAnimals";
 

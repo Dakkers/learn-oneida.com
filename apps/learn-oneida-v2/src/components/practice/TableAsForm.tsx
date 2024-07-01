@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { BleedProps } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { RepetitiveFeatureArticle } from "~/components/articles/RepetitiveFeature";
 

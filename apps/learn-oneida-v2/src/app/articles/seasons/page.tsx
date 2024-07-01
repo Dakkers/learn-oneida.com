@@ -1,4 +1,3 @@
-
 import React from "react";
 import { SeasonsArticle } from "~/components/articles/Seasons";
 
