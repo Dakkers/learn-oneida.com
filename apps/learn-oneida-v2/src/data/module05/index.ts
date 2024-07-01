@@ -974,7 +974,7 @@ const emotionTenseData: Array<Partial<Module5VerbDatum>> = [
     en: "be overjoyed, high spirited",
     dict: [284],
     stem: "A stem",
-    root: ["-at- -unh- -a- -hel-"],
+    root: ["-atunhahel-"],
   },
   {
     category: "emotion",
@@ -982,7 +982,7 @@ const emotionTenseData: Array<Partial<Module5VerbDatum>> = [
     en: "be wanting, needing, desiring",
     dict: [280, 1257],
     stem: "te- + A stem",
-    root: [".atuhutsyoni-"],
+    root: ["te...atuhutsyoni-"],
   },
   {
     category: "emotion",

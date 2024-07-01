@@ -26,6 +26,10 @@ export default function Tools() {
       href: "/clock",
       label: "Clock Time Translator",
     },
+    {
+      href: "/flashcards",
+      label: "Flashcards",
+    },
   ];
 
   return (
