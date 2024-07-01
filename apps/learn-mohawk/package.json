@@ -13,6 +13,8 @@
     "prepare": "husky install",
     "preview": "pnpm run pages:build && wrangler pages dev",
     "start": "next start",
+    "tailwind": "pnpm run tailwind:watch",
+    "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/learn-mohawk.css",
     "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/learn-mohawk.css --watch",
     "typecheck": "tsc"
   },
