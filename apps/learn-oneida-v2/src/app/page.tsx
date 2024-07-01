@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { SectionHeading } from "~/components/SectionHeading";
 import { Box, Card, Flex, Link, Text } from "@ukwehuwehneke/ohutsya";
@@ -48,9 +48,9 @@ export default function Index() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-4">
           {modules.map((card, i) => (
             <Card className="p-6" key={i}>
-                <Text variant="titleM">
-                  {"title" in card ? card.title : `Module ${i}`}
-                </Text>
+              <Text variant="titleM">
+                {"title" in card ? card.title : `Module ${i}`}
+              </Text>
               <Box className="mt-2">
                 <Text>{card.desc}</Text>
               </Box>

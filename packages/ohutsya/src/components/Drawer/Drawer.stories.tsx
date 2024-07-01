@@ -13,13 +13,9 @@ export const Basic: StoryFn<typeof Drawer> = () => {
 
   return (
     <Drawer open={isOpen} onOpenChange={setIsOpen}>
-      <Drawer.Trigger>
-        Click Me
-      </Drawer.Trigger>
+      <Drawer.Trigger>Click Me</Drawer.Trigger>
 
-      <Box>
-        Drawer content
-      </Box>
+      <Box>Drawer content</Box>
     </Drawer>
   );
-}
+};

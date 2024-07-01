@@ -5,12 +5,16 @@ import {
   TextBreakdownSuffix,
 } from "~/components/TextBreakdown";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "~/utils";
-import { Flex, Text, Table, TableProps, TextArray } from '@ukwehuwehneke/ohutsya'
+import {
+  Flex,
+  Text,
+  Table,
+  TableProps,
+  TextArray,
+} from "@ukwehuwehneke/ohutsya";
 
 export function TableWrapper(props: TableProps) {
-  return (
-    <Table {...props} />
-  );
+  return <Table {...props} />;
 }
 
 TableWrapper.textArrayCell = (value: any) => (
@@ -112,26 +116,26 @@ const createPastTenseColumns = (
   typeFallback: BreakdownType,
   opts: CreatePastTenseColumnsOptions = {},
 ) => [
-    ...TableWrapper.columnsPronouns,
-    {
-      accessorKey: "breakdown",
-      cell: (value: BreakdownArray) => (
-        <TextBreakdown breakdown={value} typeFallback={typeFallback} />
-      ),
-      header: opts?.headerNow ?? "Now",
-    },
-    {
-      accessorKey: "breakdownPast",
-      cell: (value: BreakdownArray) => (
-        <TextBreakdown
-          breakdown={value}
-          suffix={opts.suffix}
-          typeFallback={typeFallback}
-        />
-      ),
-      header: opts?.headerPast ?? "Used to be",
-    },
-  ];
+  ...TableWrapper.columnsPronouns,
+  {
+    accessorKey: "breakdown",
+    cell: (value: BreakdownArray) => (
+      <TextBreakdown breakdown={value} typeFallback={typeFallback} />
+    ),
+    header: opts?.headerNow ?? "Now",
+  },
+  {
+    accessorKey: "breakdownPast",
+    cell: (value: BreakdownArray) => (
+      <TextBreakdown
+        breakdown={value}
+        suffix={opts.suffix}
+        typeFallback={typeFallback}
+      />
+    ),
+    header: opts?.headerPast ?? "Used to be",
+  },
+];
 
 TableWrapper.columnsParadigmRed = columnsParadigmRed;
 TableWrapper.columnsParadigmBlue = columnsParadigmBlue;

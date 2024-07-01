@@ -1,4 +1,3 @@
-
 import React from "react";
 import { AtSomeonesPlaceArticle } from "~/components/articles/AtSomeonesPlace";
 

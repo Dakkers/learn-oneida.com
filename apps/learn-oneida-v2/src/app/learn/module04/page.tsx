@@ -469,11 +469,11 @@ function AccordionWrapper({
       <Accordion type="multiple">
         {sections.map(([id, title, data]) => (
           <Accordion.Item id={id} key={id} title={title}>
-              <ParadigmTable
-                bleed={0}
-                columnVisibility={columnVisibility}
-                data={data}
-              />
+            <ParadigmTable
+              bleed={0}
+              columnVisibility={columnVisibility}
+              data={data}
+            />
           </Accordion.Item>
         ))}
       </Accordion>

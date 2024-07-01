@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
@@ -8,7 +8,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
 import { cn } from "@ukwehuwehneke/ohutsya";
 import { Navbar } from "@/components/Navbar";
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 
 const notoSansFont = Noto_Sans({ subsets: ["latin"] });
 
@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const blah = usePathname();
-  const isHomePage = blah === '/'
-  console.log(blah)
+  const isHomePage = blah === "/";
+  console.log(blah);
 
   return (
     <html lang="en">

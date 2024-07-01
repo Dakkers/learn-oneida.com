@@ -1,13 +1,11 @@
-"use client"
+"use client";
 
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { SectionHeading } from "~/components/SectionHeading";
-import {
-  createModule5VerbsList,
-} from "~/data/module05";
+import { createModule5VerbsList } from "~/data/module05";
 import { arrayify } from "~/utils";
 import { useInterval } from "usehooks-ts";
 import { Select } from "@ukwehuwehneke/ohutsya";
@@ -40,7 +38,7 @@ export default function ToolsFlashcards() {
       return _.shuffle(
         createModule5VerbsList().map((datum) => ({
           en: datum.en,
-          on: datum.root.join(' / '),
+          on: datum.root.join(" / "),
         })),
       );
     } else if (selectedModule === "m6") {

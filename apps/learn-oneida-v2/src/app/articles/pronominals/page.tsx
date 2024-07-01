@@ -1,4 +1,3 @@
-
 import React from "react";
 import { PronominalsArticle } from "~/components/articles/Pronominals";
 

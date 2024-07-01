@@ -6,10 +6,7 @@ export interface ListProps {
   ordered?: boolean;
 }
 
-export function List({
-  children,
-  ordered = false,
-}: ListProps) {
+export function List({ children, ordered = false }: ListProps) {
   const Tag = ordered ? "ol" : "ul";
   return (
     <Tag className={cn("list-outside", ordered ? "list-decimal" : "list-disc")}>

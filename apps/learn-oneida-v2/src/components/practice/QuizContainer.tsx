@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { useQuizContext } from "./Quiz";
 import { cn } from "@ukwehuwehneke/ohutsya";

@@ -229,7 +229,9 @@ function TableRowWrapper({
         <PrimitiveTableCell>{PRONOUN_MAP_EN[row.pronoun]}</PrimitiveTableCell>
       )}
       {colVisibility.pronounOneida && (
-        <PrimitiveTableCell>{PRONOUN_MAP_ONEIDA[row.pronoun]}</PrimitiveTableCell>
+        <PrimitiveTableCell>
+          {PRONOUN_MAP_ONEIDA[row.pronoun]}
+        </PrimitiveTableCell>
       )}
       {context.isTesting ? (
         <>
