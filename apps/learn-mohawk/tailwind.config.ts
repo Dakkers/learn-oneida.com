@@ -1,20 +1,22 @@
-import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
 
-const config: Config = {
+const ohutsyaTailwindConfig = require("../../packages/ohutsya/tailwind.config");
+
+const config = {
+  darkMode: ["class"],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
+    ...ohutsyaTailwindConfig.content.map(
+      (path: string) => `../../packages/ohutsya/${path}`,
+    ),
   ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
-  },
-  plugins: [],
+  prefix: "",
+  safelist: [...ohutsyaTailwindConfig.safelist],
+  theme: ohutsyaTailwindConfig.theme,
+  plugins: [...ohutsyaTailwindConfig.plugins, require("tailwindcss-animate")],
 };
-export default config;
+
+// console.log(config)
+
+module.exports = config;
