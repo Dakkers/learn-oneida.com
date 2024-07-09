@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
         ]
       },
       sourcemap: true,
-      target: ['es2015'],
+      target: ['es2021'],
     },
     publicDir: false,
   }

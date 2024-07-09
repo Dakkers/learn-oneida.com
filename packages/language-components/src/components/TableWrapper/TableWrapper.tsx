@@ -3,8 +3,8 @@ import {
   BreakdownType,
   TextBreakdown,
   TextBreakdownSuffix,
-} from "./TextBreakdown";
-import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "../utils";
+} from "./../TextBreakdown";
+import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "../../utils";
 import { Flex, Text, Table, TableProps, TextArray } from '@ukwehuwehneke/ohutsya'
 
 export function TableWrapper(props: TableProps) {
@@ -50,7 +50,7 @@ const createBreakdownCol = (
   header: options.header ?? "Translation",
 });
 
-const oneidaPronounColumns: TableWrapperProps["columns"] = [
+const oneidaPronounColumns: TableProps["columns"] = [
   {
     accessorKey: "pronoun",
     // @ts-expect-error To be addressed in LO-12
@@ -67,22 +67,22 @@ const oneidaPronounColumns: TableWrapperProps["columns"] = [
   },
 ];
 
-const columnsParadigmRed: TableWrapperProps["columns"] = [
+const columnsParadigmRed: TableProps["columns"] = [
   EnglishCol,
   // @ts-expect-error To be addressed in LO-12
   createBreakdownCol("PR"),
 ];
-const columnsParadigmBlue: TableWrapperProps["columns"] = [
+const columnsParadigmBlue: TableProps["columns"] = [
   EnglishCol,
   // @ts-expect-error To be addressed in LO-12
   createBreakdownCol("PB"),
 ];
-const columnsParadigmPurple: TableWrapperProps["columns"] = [
+const columnsParadigmPurple: TableProps["columns"] = [
   EnglishCol,
   // @ts-expect-error To be addressed in LO-12
   createBreakdownCol("PP"),
 ];
-const columnsEnglishTranslation: TableWrapperProps["columns"] = [
+const columnsEnglishTranslation: TableProps["columns"] = [
   EnglishCol,
   {
     accessorKey: "translation",
@@ -90,7 +90,7 @@ const columnsEnglishTranslation: TableWrapperProps["columns"] = [
     header: "Translation",
   },
 ];
-const columnsEnglishBreakdown: TableWrapperProps["columns"] = [
+const columnsEnglishBreakdown: TableProps["columns"] = [
   EnglishCol,
   {
     accessorKey: "breakdown",
@@ -117,7 +117,7 @@ const createPastTenseColumns = (
   typeFallback: BreakdownType,
   opts: CreatePastTenseColumnsOptions = {},
 ) => [
-    ...TableWrapper.columnsPronouns,
+    ...oneidaPronounColumns,
     {
       accessorKey: "breakdown",
       cell: (value: BreakdownArray) => (

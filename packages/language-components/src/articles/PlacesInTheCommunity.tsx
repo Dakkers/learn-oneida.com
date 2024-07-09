@@ -1,5 +1,5 @@
 import { TableWrapper, EnglishTranslationPairData } from "../components/TableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "../components/SectionHeading";
 import { ArticleProps } from "./utils";
 import { Flex } from '@ukwehuwehneke/ohutsya'
 
@@ -14,7 +14,7 @@ export function PlacesInTheCommunityArticle({ data, level = 1 }: PlacesInTheComm
         Places in the community
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishBreakdown}
         data={data}
       />
     </Flex>

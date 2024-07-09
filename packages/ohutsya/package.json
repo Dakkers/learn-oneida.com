@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "types": "lib/types/index.d.ts",
   "exports": {
     ".": {
-      "types": "./lib/index.d.ts",
+      "types": "./lib/types/index.d.ts",
       "import": "./lib/main.js"
     },
     "./lib/ohutsya.css": "./lib/ohutsya.css"
@@ -22,7 +23,8 @@
     "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/ohutsya.css",
     "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/ohutsya.css --watch",
     "tailwind": "pnpm run tailwind",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "typecheck:emit": "tsc -b --emitDeclarationOnly && tsc-alias"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
@@ -61,7 +63,8 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.303.0",
     "react-hook-form": "^7.49.2",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "tsc-alias": "^1.8.10"
   },
   "peerDependencies": {
     "react": "^18.3.1",
