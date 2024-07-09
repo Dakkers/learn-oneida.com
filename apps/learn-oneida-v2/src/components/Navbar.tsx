@@ -4,7 +4,6 @@ import * as React from "react";
 
 import {
   cn,
-  Drawer,
   Flex,
   NavigationMenu,
   NavigationMenuContent,
@@ -90,7 +89,7 @@ function NavbarMobile() {
     <Flex align="center" justify="center" p={2}>
       <Flex justify="center">
         <NavigationMenu>
-          <NavigationMenuList className="flex gap-2 bg-white w-full">
+          <NavigationMenuList className="flex gap-2">
             {items.map(({ icon: Icon, ...item}, i) => (
               <NavigationMenuItem key={i}>
                 <NavigationMenuLink
