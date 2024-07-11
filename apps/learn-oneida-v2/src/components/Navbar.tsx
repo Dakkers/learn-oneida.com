@@ -4,7 +4,6 @@ import * as React from "react";
 
 import {
   cn,
-  Drawer,
   Flex,
   NavigationMenu,
   NavigationMenuContent,
@@ -15,7 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
-import { MenuIcon } from "lucide-react";
+import { BookOpenTextIcon, InfoIcon, MenuIcon, NewspaperIcon, PencilIcon, WrenchIcon } from "lucide-react";
 
 const moduleNumbers = new Array(6).fill(0).map((_, i) => (i + 1).toString());
 
@@ -61,50 +60,49 @@ function NavbarMobile() {
   const items = [
     {
       href: "/learn",
+      icon: BookOpenTextIcon,
       text: "Learn",
     },
     {
       href: "/about",
+      icon: InfoIcon,
       text: "About",
     },
     {
       href: "/articles",
+      icon: NewspaperIcon,
       text: "Articles",
     },
     {
       href: "/practice",
+      icon: PencilIcon,
       text: "Practice",
     },
     {
       href: "/tools",
+      icon: WrenchIcon,
       text: "Tools",
     },
   ];
 
   return (
-    <Flex align="center" justify="end" p={2}>
-      <Drawer open={isOpen} onOpenChange={setIsOpen}>
-        <Drawer.Trigger>
-          <MenuIcon />
-        </Drawer.Trigger>
-
-        <Flex justify="center">
-          <NavigationMenu>
-            <NavigationMenuList className="flex-col">
-              {items.map((item, i) => (
-                <NavigationMenuItem key={i}>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle(true)}
-                    href={item.href}
-                  >
-                    {item.text}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </Flex>
-      </Drawer>
+    <Flex align="center" justify="center" p={2}>
+      <Flex justify="center">
+        <NavigationMenu>
+          <NavigationMenuList className="flex gap-2">
+            {items.map(({ icon: Icon, ...item}, i) => (
+              <NavigationMenuItem key={i}>
+                <NavigationMenuLink
+                  className={navigationMenuTriggerStyle(true)}
+                  href={item.href}
+                >
+                  <Icon />
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+      </Flex>
     </Flex>
   );
 }
