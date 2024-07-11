@@ -2,7 +2,7 @@
 
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Accordion, Flex } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";

@@ -1,6 +1,6 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
 import { Letter } from "../Letter";

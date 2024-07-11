@@ -3,7 +3,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 const dataCountingWeight = [
@@ -116,8 +116,8 @@ export function HeightWeightArticle({ level = 1 }: ArticleProps) {
       />
       <Text>Examples:</Text>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
-        data={dataExamples.map(TableWrapper.mapEnglishOneida)}
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={dataExamples.map(TableWrapper.mapEnglishAndTranslation)}
       />
     </Flex>
   );

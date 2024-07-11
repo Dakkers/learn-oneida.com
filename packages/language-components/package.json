@@ -1,8 +1,14 @@
 {
-  "name": "language-components",
+  "name": "@ukwehuwehneke/language-components",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "import": "./lib/main.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

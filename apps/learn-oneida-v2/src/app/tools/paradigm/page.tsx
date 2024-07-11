@@ -53,7 +53,7 @@ import {
 } from "~/utils";
 import sample from "lodash/sample";
 import { Select } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
 

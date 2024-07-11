@@ -9,10 +9,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../../primitives/navigation-menu";
-import { MenuIcon } from "lucide-react";
-import { Drawer } from "../Drawer";
 import { Flex } from "../Flex";
 import { cn } from "../../utils";
+import { BookOpenTextIcon, InfoIcon, NewspaperIcon, PencilIcon, WrenchIcon } from "lucide-react";
 
 export interface NavbarProps {
   moduleNumbers?: number[];
@@ -32,60 +31,53 @@ export function Navbar(props: NavbarProps) {
   );
 }
 
-function NavbarMobile(props: NavbarProps) {
-  const [isOpen, setIsOpen] = React.useState(false);
-
+function NavbarMobile() {
   const items = [
-    props.moduleNumbers
-      ? {
-          href: "/learn",
-          text: "Learn",
-        }
-      : null,
+    {
+      href: "/learn",
+      icon: BookOpenTextIcon,
+      text: "Learn",
+    },
     {
       href: "/about",
+      icon: InfoIcon,
       text: "About",
     },
     {
       href: "/articles",
+      icon: NewspaperIcon,
       text: "Articles",
     },
     {
       href: "/practice",
+      icon: PencilIcon,
       text: "Practice",
     },
-    props.tools
-      ? {
-          href: "/tools",
-          text: "Tools",
-        }
-      : null,
-  ].filter(Boolean);
+    {
+      href: "/tools",
+      icon: WrenchIcon,
+      text: "Tools",
+    },
+  ];
 
   return (
-    <Flex align="center" justify="end" p={2}>
-      <Drawer open={isOpen} onOpenChange={setIsOpen}>
-        <Drawer.Trigger>
-          <MenuIcon />
-        </Drawer.Trigger>
-
-        <Flex justify="center">
-          <NavigationMenu>
-            <NavigationMenuList className="flex-col">
-              {items.map((item, i) => (
-                <NavigationMenuItem key={i}>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle(true)}
-                    href={item!.href}
-                  >
-                    {item!.text}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </Flex>
-      </Drawer>
+    <Flex align="center" justify="center" p={2}>
+      <Flex justify="center">
+        <NavigationMenu>
+          <NavigationMenuList className="flex gap-2">
+            {items.map(({ icon: Icon, ...item }, i) => (
+              <NavigationMenuItem key={i}>
+                <NavigationMenuLink
+                  className={navigationMenuTriggerStyle(true)}
+                  href={item.href}
+                >
+                  <Icon />
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+      </Flex>
     </Flex>
   );
 }

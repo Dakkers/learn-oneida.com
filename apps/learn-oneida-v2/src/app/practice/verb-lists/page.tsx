@@ -25,7 +25,7 @@ import {
   createModule5VerbsList,
   module5VerbTenseMap,
 } from "~/data/module05";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import {
   MODULE_4_TENSE_LIST,
   Module4VerbTense,

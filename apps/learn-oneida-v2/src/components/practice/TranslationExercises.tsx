@@ -1,7 +1,7 @@
 "use client";
 import { TableWrapper, TableWrapperProps } from "@/components/TableWrapper";
 import React from "react";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 const oneidaToEnglishModule01 = [
   ["1", "Né· lokstʌ́ha lanú·wehseʔ oní né· khaleʔ akokstʌ́ha yenú·wehse̲ʔ"],

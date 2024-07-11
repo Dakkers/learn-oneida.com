@@ -1,6 +1,6 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import redPronominalsJson from "../../data/red-pronominals.json";
 import bluePronominalsJson from "../../data/blue-pronominals.json";

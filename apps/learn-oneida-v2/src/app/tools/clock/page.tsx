@@ -9,7 +9,7 @@ import _ from "lodash";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { doTheTranslate } from "~/utils/time";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 
 const meta: any = () => {

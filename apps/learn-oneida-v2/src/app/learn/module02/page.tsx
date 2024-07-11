@@ -51,7 +51,7 @@ import {
   FamilyTableOfContentItems,
 } from "~/components/articles/Family";
 import { ParadigmTable } from "~/components/ParadigmTable";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { LastNamesArticle } from "~/components/articles/LastNames";
 import { AboutSomeoneArticle } from "~/components/articles/AboutSomeone";
@@ -551,24 +551,24 @@ function PassedOnSection() {
 
 function DeceasedRelativesSection() {
   const data = [
-    { on: "aknulhaʔkʌ́", en: "my late mother" },
-    { on: "lakeʔnikʌ́", en: "my late father" },
-    { on: "aksotkʌ́", en: "my late grandmother" },
-    { on: "laksotkʌ́", en: "my late grandfather" },
-    { on: "yuknulhaʔkʌ́", en: "my late aunt" },
-    { on: "laknulhaʔkʌ́", en: "my late uncle" },
-    { on: "yukeʔkʌ́haʔkʌ́", en: "my late older sister" },
-    { on: "lakeʔkʌhaʔkʌ́", en: "my late older brother" },
-    { on: "kheʔkʌhaʔkʌ́", en: "my late younger sister(s)" },
-    { on: "liʔkʌhaʔkʌ́", en: "my late younger brother" },
-    { on: "kheyuhwatʌʔkʌ́", en: "my late niece(s) & nephew(s)" },
-    { on: "liyuhwatʌʔkʌ́", en: "my late nephew" },
-    { on: "kheyʌhaʔkʌ́", en: "my late daughter" },
-    { on: "liyʌhaʔkʌ́", en: "my late son" },
-    { on: "kheyatlehaʔkʌ́", en: "my late granddaughter(s) / grandchildren" },
-    { on: "liyatlehaʔkʌ́", en: "my late grandson" },
-    { on: "ukyalaʔsehaʔkʌ́", en: "my late cousin" },
-    { on: "ukyatʌloʔkʌ́", en: "my late friend" },
+    { translation: "aknulhaʔkʌ́", en: "my late mother" },
+    { translation: "lakeʔnikʌ́", en: "my late father" },
+    { translation: "aksotkʌ́", en: "my late grandmother" },
+    { translation: "laksotkʌ́", en: "my late grandfather" },
+    { translation: "yuknulhaʔkʌ́", en: "my late aunt" },
+    { translation: "laknulhaʔkʌ́", en: "my late uncle" },
+    { translation: "yukeʔkʌ́haʔkʌ́", en: "my late older sister" },
+    { translation: "lakeʔkʌhaʔkʌ́", en: "my late older brother" },
+    { translation: "kheʔkʌhaʔkʌ́", en: "my late younger sister(s)" },
+    { translation: "liʔkʌhaʔkʌ́", en: "my late younger brother" },
+    { translation: "kheyuhwatʌʔkʌ́", en: "my late niece(s) & nephew(s)" },
+    { translation: "liyuhwatʌʔkʌ́", en: "my late nephew" },
+    { translation: "kheyʌhaʔkʌ́", en: "my late daughter" },
+    { translation: "liyʌhaʔkʌ́", en: "my late son" },
+    { translation: "kheyatlehaʔkʌ́", en: "my late granddaughter(s) / grandchildren" },
+    { translation: "liyatlehaʔkʌ́", en: "my late grandson" },
+    { translation: "ukyalaʔsehaʔkʌ́", en: "my late cousin" },
+    { translation: "ukyatʌloʔkʌ́", en: "my late friend" },
   ];
 
   return (
@@ -613,7 +613,7 @@ function DeceasedRelativesSection() {
       <Text>
         Notice that, in many cases, accents, stresses, and lengths move places.
       </Text>
-      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={data} />
+      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={data} />
     </>
   );
 }
@@ -666,66 +666,66 @@ function YoungOldSection() {
 
 function NumbersSection() {
   const data = [
-    { en: "1", on: "úska" },
-    { en: "2", on: ["tékni", "tékeni̲"] },
-    { en: "3", on: "áhsʌ̲" },
-    { en: "4", on: "kayé" },
-    { en: "5", on: "wisk" },
-    { en: "6", on: "yá·yak" },
-    { en: "7", on: "tsyá·tak" },
-    { en: "8", on: "tékluʔ" },
-    { en: "9", on: "wá·tluʔ" },
-    { en: "10", on: "oyé·li̲" },
-    { en: "11", on: "úska yawʌ·lé·" },
-    { en: "12", on: "tékni yawʌ·lé·" },
-    { en: "13", on: "áhsʌ yawʌ·lé·" },
-    { en: "14", on: "kayé yawʌ·lé·" },
-    { en: "15", on: "wisk yawʌ·lé·" },
-    { en: "16", on: "yá·yak yawʌ·lé·" },
-    { en: "17", on: "tsyá·tak yawʌ·lé·" },
-    { en: "18", on: "tékluʔ yawʌ·lé·" },
-    { en: "19", on: "wá·tluʔ yawʌ·lé·" },
-    { en: "20", on: "tewáhsʌ" },
-    { en: "21", on: "tewáhsʌ úska" },
-    { en: "22", on: "tewáhsʌ tékni" },
-    { en: "30", on: "áhsʌ niwáhsʌ" },
-    { en: "40", on: "kayé niwáhsʌ" },
-    { en: "50", on: "wisk niwáhsʌ" },
-    { en: "60", on: "yá·yak niwáhsʌ" },
-    { en: "70", on: "tsyá·tak niwáhsʌ" },
-    { en: "80", on: "tékluʔ niwáhsʌ" },
-    { en: "90", on: "wá·tluʔ niwáhsʌ" },
-    { en: "99", on: "wá·tluʔ niwáhsʌ wá·tluʔ" },
-    { en: "100", on: "úska tewʌʔnyáweluʔ" },
-    { en: "101", on: "úska tewʌʔnyáweluʔ úska" },
-    { en: "110", on: "úska tewʌʔnyáweluʔ oyé·li" },
-    { en: "111", on: "úska tewʌʔnyáweluʔ úska yawʌ·lé" },
-    { en: "120", on: "úska tewʌʔnyáweluʔ tewáhsʌ" },
-    { en: "130", on: "úska tewʌʔnyáweluʔ áhsʌ niwáhsʌ" },
-    { en: "140", on: "úska tewʌʔnyáweluʔ kayé niwáhsʌ" },
-    { en: "150", on: "úska tewʌʔnyáweluʔ wisk niwáhsʌ" },
-    { en: "160", on: "úska tewʌʔnyáweluʔ yá·yak niwáhsʌ" },
-    { en: "170", on: "úska tewʌʔnyáweluʔ tsyá·tak niwáhsʌ" },
-    { en: "180", on: "úska tewʌʔnyáweluʔ tékluʔ niwáhsʌ" },
-    { en: "190", on: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ" },
-    { en: "199", on: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ" },
-    { en: "200", on: "tékni tewʌʔnyáweluʔ" },
-    { en: "201", on: "tékni tewʌʔnyáweluʔ úska" },
-    { en: "300", on: "áhsʌ tewʌʔnyáweluʔ" },
-    { en: "400", on: "kayé tewʌʔnyáweluʔ" },
-    { en: "500", on: "wisk tewʌʔnyáweluʔ" },
-    { en: "600", on: "yá·yak tewʌʔnyáweluʔ" },
-    { en: "700", on: "tsya·ták tewʌʔnyáweluʔ" },
-    { en: "800", on: "tékluʔ tewʌʔnyáweluʔ" },
-    { en: "900", on: "wá·tluʔ tewʌʔnyáweluʔ" },
-    { en: "999", on: "wá·tluʔ tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ" },
-    { en: "1000", on: "oyé·li tewʌʔnyáweluʔ" },
-    { en: "1001", on: "oyé·li tewʌʔnyáweluʔ úska" },
-    { en: "1111", on: "úska yawʌ·lé tewʌʔnyáweluʔ úska yawʌ·lé" },
-    { en: "1200", on: "tékni yawʌ·lé tewʌʔnyáweluʔ" },
-    { en: "1300", on: "áhsʌ yawʌ·lé tewʌʔnyáweluʔ" },
-    { en: "1999", on: "wá·tlu yawʌ·lé tewʌʔnyáweluʔ wá·tlu  niwáhsʌ wá·tlu" },
-    { en: "2000", on: "tewáhsʌ tewʌʔnyáweluʔ" },
+    { en: "1", translation: "úska" },
+    { en: "2", translation: ["tékni", "tékeni̲"] },
+    { en: "3", translation: "áhsʌ̲" },
+    { en: "4", translation: "kayé" },
+    { en: "5", translation: "wisk" },
+    { en: "6", translation: "yá·yak" },
+    { en: "7", translation: "tsyá·tak" },
+    { en: "8", translation: "tékluʔ" },
+    { en: "9", translation: "wá·tluʔ" },
+    { en: "10", translation: "oyé·li̲" },
+    { en: "11", translation: "úska yawʌ·lé·" },
+    { en: "12", translation: "tékni yawʌ·lé·" },
+    { en: "13", translation: "áhsʌ yawʌ·lé·" },
+    { en: "14", translation: "kayé yawʌ·lé·" },
+    { en: "15", translation: "wisk yawʌ·lé·" },
+    { en: "16", translation: "yá·yak yawʌ·lé·" },
+    { en: "17", translation: "tsyá·tak yawʌ·lé·" },
+    { en: "18", translation: "tékluʔ yawʌ·lé·" },
+    { en: "19", translation: "wá·tluʔ yawʌ·lé·" },
+    { en: "20", translation: "tewáhsʌ" },
+    { en: "21", translation: "tewáhsʌ úska" },
+    { en: "22", translation: "tewáhsʌ tékni" },
+    { en: "30", translation: "áhsʌ niwáhsʌ" },
+    { en: "40", translation: "kayé niwáhsʌ" },
+    { en: "50", translation: "wisk niwáhsʌ" },
+    { en: "60", translation: "yá·yak niwáhsʌ" },
+    { en: "70", translation: "tsyá·tak niwáhsʌ" },
+    { en: "80", translation: "tékluʔ niwáhsʌ" },
+    { en: "90", translation: "wá·tluʔ niwáhsʌ" },
+    { en: "99", translation: "wá·tluʔ niwáhsʌ wá·tluʔ" },
+    { en: "100", translation: "úska tewʌʔnyáweluʔ" },
+    { en: "101", translation: "úska tewʌʔnyáweluʔ úska" },
+    { en: "110", translation: "úska tewʌʔnyáweluʔ oyé·li" },
+    { en: "111", translation: "úska tewʌʔnyáweluʔ úska yawʌ·lé" },
+    { en: "120", translation: "úska tewʌʔnyáweluʔ tewáhsʌ" },
+    { en: "130", translation: "úska tewʌʔnyáweluʔ áhsʌ niwáhsʌ" },
+    { en: "140", translation: "úska tewʌʔnyáweluʔ kayé niwáhsʌ" },
+    { en: "150", translation: "úska tewʌʔnyáweluʔ wisk niwáhsʌ" },
+    { en: "160", translation: "úska tewʌʔnyáweluʔ yá·yak niwáhsʌ" },
+    { en: "170", translation: "úska tewʌʔnyáweluʔ tsyá·tak niwáhsʌ" },
+    { en: "180", translation: "úska tewʌʔnyáweluʔ tékluʔ niwáhsʌ" },
+    { en: "190", translation: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ" },
+    { en: "199", translation: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ" },
+    { en: "200", translation: "tékni tewʌʔnyáweluʔ" },
+    { en: "201", translation: "tékni tewʌʔnyáweluʔ úska" },
+    { en: "300", translation: "áhsʌ tewʌʔnyáweluʔ" },
+    { en: "400", translation: "kayé tewʌʔnyáweluʔ" },
+    { en: "500", translation: "wisk tewʌʔnyáweluʔ" },
+    { en: "600", translation: "yá·yak tewʌʔnyáweluʔ" },
+    { en: "700", translation: "tsya·ták tewʌʔnyáweluʔ" },
+    { en: "800", translation: "tékluʔ tewʌʔnyáweluʔ" },
+    { en: "900", translation: "wá·tluʔ tewʌʔnyáweluʔ" },
+    { en: "999", translation: "wá·tluʔ tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ" },
+    { en: "1000", translation: "oyé·li tewʌʔnyáweluʔ" },
+    { en: "1001", translation: "oyé·li tewʌʔnyáweluʔ úska" },
+    { en: "1111", translation: "úska yawʌ·lé tewʌʔnyáweluʔ úska yawʌ·lé" },
+    { en: "1200", translation: "tékni yawʌ·lé tewʌʔnyáweluʔ" },
+    { en: "1300", translation: "áhsʌ yawʌ·lé tewʌʔnyáweluʔ" },
+    { en: "1999", translation: "wá·tlu yawʌ·lé tewʌʔnyáweluʔ wá·tlu  niwáhsʌ wá·tlu" },
+    { en: "2000", translation: "tewáhsʌ tewʌʔnyáweluʔ" },
   ];
 
   return (
@@ -752,7 +752,7 @@ function NumbersSection() {
           rule above for the last 2 digits
         </List.Item>
       </List>
-      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={data} />
+      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={data} />
     </>
   );
 }
@@ -903,8 +903,8 @@ function ThingsThatAreTheSameSection() {
         Things that are the same
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
-        data={data.map(TableWrapper.mapEnglishOneida)}
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={data.map(TableWrapper.mapEnglishAndTranslation)}
       />
     </>
   );

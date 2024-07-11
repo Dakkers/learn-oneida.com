@@ -1,6 +1,6 @@
 import { cn } from "@ukwehuwehneke/ohutsya";
-import { arrayify } from "~/utils";
-import { whisperizeWord } from "~/utils/words";
+import { arrayify } from "../../utils";
+import { whisperizeWord } from "../../utils/words";
 
 export type BreakdownType =
   | "CIS"

@@ -14,7 +14,7 @@ export function PlacesInTheCommunityArticle({ data, level = 1 }: PlacesInTheComm
         Places in the community
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishBreakdown}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={data}
       />
     </Flex>

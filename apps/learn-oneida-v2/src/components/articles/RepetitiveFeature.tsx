@@ -1,6 +1,6 @@
 "use client";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
 import { TableWrapper } from "@/components/TableWrapper";

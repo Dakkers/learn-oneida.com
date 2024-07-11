@@ -1,14 +1,14 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 export const DATA_CARDINAL_DIRECTIONS = [
-  { en: "In the North", on: "otholé·ke", key: "north" },
-  { en: "In the East", on: "tsiʔ tkaké·tohse̲ʔ", key: "east" },
-  { en: "In the South", on: ["ʌ́tyʌ", "ʌtí nukwá·"], key: "south" },
-  { en: "In the West", on: "tsiʔ tetwatshʌ́thos", key: "west" },
+  { en: "In the North", translation: "otholé·ke", key: "north" },
+  { en: "In the East", translation: "tsiʔ tkaké·tohse̲ʔ", key: "east" },
+  { en: "In the South", translation: ["ʌ́tyʌ", "ʌtí nukwá·"], key: "south" },
+  { en: "In the West", translation: "tsiʔ tetwatshʌ́thos", key: "west" },
 ];
 
 export function CardinalDirectionsArticle({ level = 1 }: ArticleProps) {
@@ -18,7 +18,7 @@ export function CardinalDirectionsArticle({ level = 1 }: ArticleProps) {
         Cardinal Directions
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={DATA_CARDINAL_DIRECTIONS}
       />
     </Flex>
