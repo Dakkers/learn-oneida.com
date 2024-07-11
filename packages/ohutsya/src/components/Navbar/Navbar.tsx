@@ -22,7 +22,7 @@ export function Navbar(props: NavbarProps) {
   return (
     <div className="print:hidden">
       <div className="sm:hidden">
-        <NavbarMobile {...props} />
+        <NavbarMobile />
       </div>
       <div className="hidden sm:block">
         <NavbarDesktop {...props} />
