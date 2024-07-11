@@ -1,6 +1,7 @@
 import { TableWrapper, EnglishTranslationPairData } from "../components/TableWrapper";
 import { SectionHeading } from "../components/SectionHeading";
 import { ArticleProps } from "./utils";
+// @ts-expect-error TODO
 import { Flex } from '@ukwehuwehneke/ohutsya'
 
 export type PlacesInTheCommunityArticleProps = ArticleProps & {

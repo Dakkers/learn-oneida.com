@@ -5,6 +5,7 @@ import {
   TextBreakdownSuffix,
 } from "./../TextBreakdown";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "../../utils";
+// @ts-expect-error TODO
 import { Flex, Text, Table, TableProps, TextArray } from '@ukwehuwehneke/ohutsya'
 
 export function TableWrapper(props: TableProps) {
@@ -53,14 +54,12 @@ const createBreakdownCol = (
 const oneidaPronounColumns: TableProps["columns"] = [
   {
     accessorKey: "pronoun",
-    // @ts-expect-error To be addressed in LO-12
     cell: (value: Pronoun) => <Text>{PRONOUN_MAP_EN[value]}</Text>,
     header: "Pronoun (en)",
     key: "pronoun_en",
   },
   {
     accessorKey: "pronoun",
-    // @ts-expect-error To be addressed in LO-12
     cell: (value: Pronoun) => <Text>{PRONOUN_MAP_ONEIDA[value]}</Text>,
     header: "Pronoun",
     key: "pronoun_lang",
@@ -69,17 +68,14 @@ const oneidaPronounColumns: TableProps["columns"] = [
 
 const columnsParadigmRed: TableProps["columns"] = [
   EnglishCol,
-  // @ts-expect-error To be addressed in LO-12
   createBreakdownCol("PR"),
 ];
 const columnsParadigmBlue: TableProps["columns"] = [
   EnglishCol,
-  // @ts-expect-error To be addressed in LO-12
   createBreakdownCol("PB"),
 ];
 const columnsParadigmPurple: TableProps["columns"] = [
   EnglishCol,
-  // @ts-expect-error To be addressed in LO-12
   createBreakdownCol("PP"),
 ];
 const columnsEnglishTranslation: TableProps["columns"] = [
@@ -94,7 +90,6 @@ const columnsEnglishBreakdown: TableProps["columns"] = [
   EnglishCol,
   {
     accessorKey: "breakdown",
-    // @ts-expect-error TODO
     cell: (value: BreakdownArray) => (
       <TextBreakdown breakdown={value} wrap="nowrap" />
     ),
