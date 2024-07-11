@@ -17,7 +17,7 @@
     "start": "next start",
     "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css",
     "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css --watch",
-    "tailwind": "pnpm run tailwind",
+    "tailwind": "pnpm run tailwind:watch",
     "typecheck": "tsc"
   },
   "dependencies": {
