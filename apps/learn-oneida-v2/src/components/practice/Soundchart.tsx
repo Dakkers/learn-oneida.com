@@ -4,24 +4,16 @@ import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 
 const VOWELS = ['a', 'e', 'i', 'o', 'u', 'ʌ']
 const SINGLES = ['h', 'k', 'l', 'n', 's', 't', 'w', 'y']
-const TWOS = ['hl', 'hn', 'kh', 'kn', 'kw', 'ny', 'sh', 'sk', 'sl', 'sn', 'st', 'sw']
+const TWOS = ['hl', 'hn', 'kh', 'kn', 'kw', 'ly', 'ny', 'sh', 'sk', 'sl', 'sn', 'st', 'sw']
 const THREES = ['hwy', 'khl', 'khw', 'skw', 'sny', 'thl', 'tsy']
 const FOURS = ['tshy']
 
 const EXCEPTIONS = [
   'swo',
   'swu',
-]
-const EXCEPTIONS_DOUBLE_VOWELS = [
-  'ai',
-  'ia',
-  'io',
-  'iʌ',
-  'ea',
-  'ei',
-  'eo',
-  'eu',
-  'eʌ'
+  'skwo',
+  'skwu',
+  'snyu',
 ]
 
 export function Soundchart ({ level }: SectionHeadingProps) {
@@ -53,11 +45,59 @@ export function Soundchart ({ level }: SectionHeadingProps) {
         columns={createCols()}
         data={createArray(TWOS)}
       />
+
+      <SectionHeading level={level}>
+        Four letters
+      </SectionHeading>
+
+      <TableWrapper
+        columns={createCols()}
+        data={createArray(THREES)}
+      />
+
+      <SectionHeading level={level}>
+        Five letters
+      </SectionHeading>
+
+      <TableWrapper
+        columns={createCols()}
+        data={createArray(FOURS)}
+      />
+
+      <SectionHeading level={level}>
+        Double vowels
+      </SectionHeading>
+
+      <TableWrapper
+        columns={createCols()}
+        data={[
+          { a: '', e: 'hae', i: '', o: 'hao', u: 'hau', ʌ: '' },
+          { a: '', e: '', i: '', o: 'kao', u: 'hau', ʌ: '' },
+          { a: '', e: '', i: '', o: 'lao', u: 'lau', ʌ: '' },
+          { a: '', e: 'tae', i: '', o: '', u: 'tau', ʌ: '' },
+        ]}
+      />
+
+      <SectionHeading level={level}>
+        Other sounds
+      </SectionHeading>
+
+      <TableWrapper
+        columns={(new Array(4)).fill(0).map((val, index) => ({
+          accessorKey: `col${index}`,
+          cell: (val: string) => <TheCell text={val} />,
+        }))}
+        data={[
+          { col0: 'ya·a', col1: 'tu·u' },
+          { col0: 'akka', col1: 'ʌkkwi', col2: "ikko", col3: "ukko" },
+          { col0: 'kew', col1: 'tew' },
+        ]}
+      />
     </>
   )
 }
 
-function TheCell ({ text }) {
+function TheCell ({ text }: { text?: string }) {
   if (!text) {
     return <div></div>
   }
@@ -71,9 +111,9 @@ function TheCell ({ text }) {
   )
 }
 
-function createArray (stuff: string[]) {
-  return stuff.map((consonant) => Object.fromEntries(VOWELS.map((vowel) => {
-    const result = `${consonant}${vowel}`;
+function createArray (letters: string[]) {
+  return letters.map((letter) => Object.fromEntries(VOWELS.map((vowel) => {
+    const result = `${letter}${vowel}`;
     if (EXCEPTIONS.includes(result)) {
       return [vowel, '']
     }
@@ -84,7 +124,7 @@ function createArray (stuff: string[]) {
 function createCols () {
   return VOWELS.map((char) => ({
     accessorKey: char,
-    cell: (val) => <TheCell text={val} />,
+    cell: (val: string) => <TheCell text={val} />,
     header: () => <Flex justify='center'>{char}</Flex>,
   }))
 }
