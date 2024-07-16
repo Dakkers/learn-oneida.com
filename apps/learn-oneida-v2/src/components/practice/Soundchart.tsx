@@ -4,15 +4,28 @@ import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
 
 const VOWELS = ['a', 'e', 'i', 'o', 'u', 'ʌ']
 const SINGLES = ['h', 'k', 'l', 'n', 's', 't', 'w', 'y']
-const TWOS = ['hl', 'hn', 'kh', 'kn', 'kw', 'ly', 'ny', 'sh', 'sk', 'sl', 'sn', 'st', 'sw']
-const THREES = ['hwy', 'khl', 'khw', 'skw', 'sny', 'thl', 'tsy']
+const TWOS = ['hl', 'hn', 'hw', 'hy', 'kh', 'kl', 'kn', 'kw', 'ky', 'ly', 'ny', 'sh', 'sk', 'sl', 'sn', 'st', 'sw', 'sy', 'th', 'tk', 'tl', 'tn', 'ts', 'tw', 'ty']
+const THREES = ['hwy', 'khl', 'khn', 'khw', 'khy', 'skl', 'skw', 'sky', 'sny', 'thl', 'thn', 'thw', 'thy', 'tkw', 'tsh', 'tsy']
 const FOURS = ['tshy']
 
 const EXCEPTIONS = [
+  'wo',
+  'wu',
+  'yi',
+  'kyi',
+  'lyi',
+  'kwo',
+  'kwu',
   'swo',
   'swu',
+  'syi',
+  'two',
+  'twu',
+  'tyi',
   'skwo',
   'skwu',
+  'tkwo',
+  'tkwu',
   'snyu',
 ]
 
@@ -72,9 +85,12 @@ export function Soundchart ({ level }: SectionHeadingProps) {
         columns={createCols()}
         data={[
           { a: '', e: 'hae', i: '', o: 'hao', u: 'hau', ʌ: '' },
-          { a: '', e: '', i: '', o: 'kao', u: 'hau', ʌ: '' },
+          { a: '', e: '', i: '', o: 'kao', u: 'kau', ʌ: '' },
+          { a: '', e: '', i: '', o: '', u: 'kʌu', ʌ: '' },
           { a: '', e: '', i: '', o: 'lao', u: 'lau', ʌ: '' },
           { a: '', e: 'tae', i: '', o: '', u: 'tau', ʌ: '' },
+          { a: '', e: '', i: '', o: '', u: 'tʌu', ʌ: '' },
+          { a: '', e: '', i: '', o: '', u: 'wʌu', ʌ: '' },
         ]}
       />
 

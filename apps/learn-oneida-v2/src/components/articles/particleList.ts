@@ -122,7 +122,7 @@ export const particleList = [
     en: "but",
     examples: [
       {
-        oneida: "Laknú·wehseʔ niʔí· nók tsiʔ yah né· tehinú·wehse̲ʔ",
+        oneida: "Laknú·wehseʔ niʔí· nók tsiʔ yáh né· tehinú·wehse̲ʔ",
         en: "He likes me but I don't like him.",
       },
     ],
@@ -294,7 +294,7 @@ export const particleList = [
 
   {
     key: "more_than",
-    oneida: "sʌ́haʔ ... tsiʔ ni·yót né·",
+    oneida: "sʌ́haʔ ... tsiʔ ni·yót",
     en: "more than",
     examples: [
       {
@@ -310,7 +310,7 @@ export const particleList = [
     en: "still, yet, again",
     examples: [
       {
-        oneida: "Shekú yah teʔkhenú·wehseʔ né· akaulhá·",
+        oneida: "Shekú yáh teʔkhenú·wehseʔ né· akaulhá·",
         en: "I still don't like her.",
       },
     ],
@@ -353,7 +353,7 @@ export const particleList = [
     en: "true, it is true",
     examples: [
       {
-        oneida: "To·kʌ́skeʔ kʌ́ tsiʔ yah teʔsknúwehse̲ʔ",
+        oneida: "To·kʌ́skeʔ kʌ́ tsiʔ yáh teʔsknúwehse̲ʔ",
         en: "Is it true that you don't like me?",
       },
     ],
@@ -389,7 +389,7 @@ export const particleList = [
     en: "that, there, when, to, at",
     examples: [
       {
-        oneida: "Sanúhteʔ kʌ́ tsiʔ yah teʔyesanú·wehse̲ʔ",
+        oneida: "Sanúhteʔ kʌ́ tsiʔ yáh teʔyesanú·wehse̲ʔ",
         en: "Do you know that she doesn't like you?",
       },
       {
@@ -425,14 +425,14 @@ export const particleList = [
 
   {
     key: "no",
-    oneida: "tah",
+    oneida: "táh",
     en: "no",
     examples: [],
   },
 
   {
     key: "not_that_much",
-    oneida: "yah kiʔ sótsi",
+    oneida: "yáh kiʔ sótsi",
     en: "not that much, not so much",
     examples: [
       {
@@ -444,7 +444,7 @@ export const particleList = [
 
   {
     key: "nobody",
-    oneida: "yah úhkaʔ",
+    oneida: "yáh úhkaʔ",
     en: "no one, nobody",
     examples: [
       {
@@ -456,7 +456,7 @@ export const particleList = [
 
   {
     key: "nothing",
-    oneida: "yah náhteʔ",
+    oneida: "yáh náhteʔ",
     en: "nothing, not anything",
     examples: [],
   },
@@ -571,7 +571,7 @@ export const particleList = [
 
   {
     key: "never",
-    oneida: "yah newʌ·tú",
+    oneida: "yáh newʌ·tú",
     en: "never, impossible",
     examples: [
       {
