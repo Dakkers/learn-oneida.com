@@ -40,7 +40,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
 
   const morningPhrases = [
     { en: "(earlier) this morning", on: "sʌhaʔ astéhtsi̲ʔ" },
-    { en: ["early morning", "in the morning"], on: "astéhtsii̲" },
+    { en: ["early morning", "in the morning"], on: "astéhtsi̲" },
     { en: "the other morning", on: "oyá· tshitwastéhtsi̲ʔ" },
     { en: ["morning", "morning time"], on: "astehtsiwé·ke̲" },
   ];

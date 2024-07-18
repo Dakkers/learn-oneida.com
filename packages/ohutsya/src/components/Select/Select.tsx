@@ -1,12 +1,6 @@
-import { useId } from "react";
-import {
-  Select as SelectPrimitive,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../../primitives/select";
 import { FormElement } from "../../internal/FormElement";
+import { useControlStyles } from "../../design/controlStyles";
+import { cn } from "../../utils";
 
 export interface SelectProps {
   label?: string;
@@ -19,22 +13,21 @@ export interface SelectProps {
 }
 
 export function Select({ label, onChange, options, value }: SelectProps) {
-  const id = useId();
+  const styles = useControlStyles();
 
   return (
     <FormElement label={label}>
-      <SelectPrimitive onValueChange={onChange} value={value}>
-        <SelectTrigger className="w-full" id={id}>
-          <SelectValue placeholder="Select..." />
-        </SelectTrigger>
-        <SelectContent>
-          {options.map((opt) => (
-            <SelectItem key={opt.value} value={opt.value}>
-              {opt.label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </SelectPrimitive>
+      <select
+        className={cn(styles.baseStyle, styles.emphasisStyle, styles.sizeStyle, "px-2 rounded")}
+        onChange={(e) => onChange(e.target.value)}
+        value={value}
+      >
+        {options.map((opt) => (
+          <option key={opt.value} value={opt.value}>
+            {opt.label}
+          </option>
+        ))}
+      </select>
     </FormElement>
   );
 }

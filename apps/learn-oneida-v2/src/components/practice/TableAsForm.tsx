@@ -11,7 +11,7 @@ import {
   FormItem,
   FormMessage,
 } from "@ukwehuwehneke/ohutsya";
-import { Input } from "@ukwehuwehneke/ohutsya";
+import { TextInput } from "@ukwehuwehneke/ohutsya";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -78,7 +78,7 @@ export function TableAsForm({
             columns={[
               {
                 accessorKey: "en",
-                cell: TableWrapper.textArrayCellBold,
+                cell: TableWrapper.textArrayCell,
                 header: "Question",
               },
               {
@@ -91,14 +91,13 @@ export function TableAsForm({
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <Input
-                            autoComplete="off"
-                            className={
+                          <TextInput
+                            intent={
                               !(key in correctness)
                                 ? undefined
                                 : correctness[key]
-                                  ? "border-green-600"
-                                  : "border-red-600"
+                                  ? "positive"
+                                  : "negative"
                             }
                             placeholder="Type here..."
                             {...field}
@@ -111,7 +110,7 @@ export function TableAsForm({
                             Answer: {row.on}
                           </FormMessage>
                         ) : (
-                          <FormMessage />
+                            <FormMessage className="text-red-600" />
                         )}
                       </FormItem>
                     )}

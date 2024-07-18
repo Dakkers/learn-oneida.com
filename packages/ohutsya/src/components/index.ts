@@ -17,3 +17,4 @@ export { RadioGroup, type RadioGroupProps } from "./RadioGroup";
 export { Select, type SelectProps } from "./Select";
 export { Table, type TableProps } from "./Table";
 export { Text, type TextProps } from "./Text";
+export { TextInput, type TextInputProps } from "./TextInput";
