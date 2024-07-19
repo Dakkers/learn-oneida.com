@@ -118,7 +118,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       <Text>The new words above are:</Text>
       <List>
         <List.Item>
-          <b>yoʔkaláshʌ</b>: evening (right now)
+          <b>yoʔkaláshʌ̲</b>: evening (right now)
         </List.Item>
         <List.Item>
           <b>ʌyó·kalahwe</b>: this evening / tonight

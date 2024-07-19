@@ -64,7 +64,6 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "everything",
         "a_lot",
         "yes",
-        "yes",
         "so_then",
         "or",
         "question_indicator",

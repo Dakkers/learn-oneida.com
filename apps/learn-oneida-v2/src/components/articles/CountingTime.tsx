@@ -48,15 +48,15 @@ export function createCountingTimeData() {
       num: 2,
       minutes: "tewasliyetaʔk",
       hours: "tekahwistaʔeks",
-      days: "tewʌhnislaké",
-      nights: "tewahsu·táke",
+      days: "tewʌhnislakéˍ",
+      nights: "tewahsu·táke̲",
     },
     {
       num: 3,
       minutes: "áhsʌ niwasliyetaʔk",
       hours: "áhsʌ nikahwistaʔeks",
-      days: "áhsʌ niwʌhnislaké",
-      nights: "áhsʌ niwahsu·táke",
+      days: "áhsʌ niwʌhnislakéˍ",
+      nights: "áhsʌ niwahsu·táke̲",
     },
   ];
   const secondTable = [
@@ -68,15 +68,15 @@ export function createCountingTimeData() {
     },
     {
       num: 2,
-      weeks: "tewʌ·táke",
-      months: "tewʌhní·take",
-      years: "teyóhslakeʔ",
+      weeks: "tewʌ·táke̲",
+      months: "tewʌhní·take̲",
+      years: "teyóhslake̲ʔ",
     },
     {
       num: 3,
-      weeks: "áhsʌ niwʌ·táke",
-      months: "áhsʌ niwʌhní·take",
-      years: "áhsʌ niyóhslaké",
+      weeks: "áhsʌ niwʌ·táke̲",
+      months: "áhsʌ niwʌhní·take̲",
+      years: "áhsʌ niyóhslakéˍ",
     },
   ];
   return [firstTable, secondTable] as const;
