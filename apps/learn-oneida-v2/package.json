@@ -9,6 +9,7 @@
     "ci:format": "prettier ./app ./@ --check",
     "cf:deploy": "echo hello && pnpm --filter \"@ukwehuwehneke/ohutsya\" tailwind:build && pnpm run tailwind:build && pnpm run build:deps && npx @cloudflare/next-on-pages@1",
     "dev": "next dev",
+    "format:write": "prettier ./src --write",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "pages:deploy": "pnpm run pages:build && wrangler pages deploy",

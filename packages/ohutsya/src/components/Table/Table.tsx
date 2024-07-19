@@ -42,7 +42,7 @@ export function Table({
             <PrimitiveTableRow>
               {columns.map((c) => (
                 <PrimitiveTableHead key={c.key ?? c.accessorKey}>
-                  {typeof c.header === 'function' ? c.header() : c.header}
+                  {typeof c.header === "function" ? c.header() : c.header}
                 </PrimitiveTableHead>
               ))}
             </PrimitiveTableRow>

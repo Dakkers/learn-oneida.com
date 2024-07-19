@@ -18,9 +18,7 @@ const meta: any = () => {
 export default function PracticeSoundchart() {
   return (
     <>
-      <SectionHeading level={1}>
-        Sound Chart
-      </SectionHeading>
+      <SectionHeading level={1}>Sound Chart</SectionHeading>
 
       <Soundchart level={2} />
     </>

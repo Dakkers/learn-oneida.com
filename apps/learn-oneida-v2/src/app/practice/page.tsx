@@ -42,6 +42,10 @@ export default function Practice() {
       href: "/places",
       label: "Places in the community",
     },
+    {
+      href: "/soundchart",
+      label: "Sound chart",
+    },
     // {
     //   href: "/seasons",
     //   label: "Seasons",
