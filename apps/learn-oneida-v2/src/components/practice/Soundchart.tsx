@@ -120,7 +120,11 @@ function TheCell ({ text }: { text?: string }) {
 
   return (
     <button
-      className={cn("w-full border border-gray-400 rounded border-2 bg-gray-200 hover:bg-gray-300 h-[48px] ")}
+      className={cn("w-full border border-gray-400 rounded border-2 bg-gray-200 hover:bg-gray-300 h-[48px]")}
+      onClick={() => {
+        const music = new Audio(`/audio/soundchart/${text}.mp3`);
+        music.play();
+      }}
     >
       {text}
     </button>
