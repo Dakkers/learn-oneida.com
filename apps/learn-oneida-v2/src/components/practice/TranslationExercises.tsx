@@ -110,7 +110,7 @@ const oneidaToEnglishModule03 = [
     "Yáh úhkaʔ náhteʔ sʌ́haʔ luwanolukhwa thikʌ́ lanikʌhtlúha tsiʔ ni·yót niʔí·",
   ],
   ["15", "Sʌ́haʔ wahu·níseʔ yuknináskwayʌʔ tsiʔ ni·yót yuknikhsá·tayʌʔ"],
-  ["16", "E·so kʌ́ hyanolúkhwaʔ né· etshekstʌ́há"],
+  ["16", "E·so kʌ́ yanolúkhwaʔ né· etshekstʌ́há"],
   ["17", "Akwekú luwatinú·wehseʔ né· lotinyáhtʌ"],
   ["18", "Akwekú lotikhsá·tayʌʔ né· ukwatʌló·shuha, yáh niʔisé͟·"],
 ];

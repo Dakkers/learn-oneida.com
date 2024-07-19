@@ -874,7 +874,7 @@ export const particleList = [
 
   {
     key: "how_many_things",
-    oneida: "Tó· ni·kú",
+    oneida: "Tó· ni·kúˍ",
     en: "How many things / objects?",
     examples: [
       {
@@ -886,7 +886,7 @@ export const particleList = [
 
   {
     key: "how_many_of_us_inclusive",
-    oneida: "Tó· nitwatí",
+    oneida: "Tó· nitwatíˍ",
     en: "How many of us? (all of you & I)",
     examples: [
       {
@@ -898,7 +898,7 @@ export const particleList = [
 
   {
     key: "how_many_of_us_exclusive",
-    oneida: "Tó· niyakwatí",
+    oneida: "Tó· niyakwatíˍ",
     en: "How many of us? (they & I, not you)",
     examples: [
       {
@@ -910,7 +910,7 @@ export const particleList = [
 
   {
     key: "how_many_of_yall",
-    oneida: "Tó· niswatí",
+    oneida: "Tó· niswatíˍ",
     en: "How many of you all? (all of you)",
     examples: [
       {
@@ -922,7 +922,7 @@ export const particleList = [
 
   {
     key: "how_many_of_them_males",
-    oneida: "Tó· nihatí",
+    oneida: "Tó· nihatíˍ",
     en: "How many of them? (males, males and females)",
     examples: [
       {
@@ -934,7 +934,7 @@ export const particleList = [
 
   {
     key: "how_many_of_them_females",
-    oneida: "Tó· nikutí",
+    oneida: "Tó· nikutíˍ",
     en: "How many of them? (females)",
     examples: [
       {
