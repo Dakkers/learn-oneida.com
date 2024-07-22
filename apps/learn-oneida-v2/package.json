@@ -10,6 +10,7 @@
     "ci:build:deps": "pnpm --filter \"@ukwehuwehneke/ohutsya\" build && pnpm --filter \"@ukwehuwehneke/language-components\" build",
     "ci:tailwind": "pnpm --filter \"@ukwehuwehneke/ohutsya\" tailwind:build && pnpm run tailwind:build",
     "dev": "next dev",
+    "format:write": "prettier ./src --write",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "pages:deploy": "pnpm run pages:build && wrangler pages deploy",
