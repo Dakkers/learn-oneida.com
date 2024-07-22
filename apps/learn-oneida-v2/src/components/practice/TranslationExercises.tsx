@@ -63,9 +63,9 @@ const oneidaToEnglishModule02 = [
   ["18", "Yáh thaʔteyakyatatyʌtelí né· tsyalá·seʔ Wílo"],
   [
     "19",
-    "To niyohslaké sʌ́haʔ kʌʔnitho·yʌ · neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha",
+    "To niyohslaké sʌ́haʔ kʌʔnitho·yʌ · neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha̲",
   ],
-  ["20", "Akwekú kʌ́ shakoyʌtelí neʔn sheyatleʔokúha"],
+  ["20", "Akwekú kʌ́ shakoyʌtelí neʔn sheyatleʔokúha̲"],
 ];
 
 const englishToOneidaModule02 = [
@@ -93,17 +93,17 @@ const englishToOneidaModule02 = [
 
 const oneidaToEnglishModule03 = [
   ["1", "Lotikhsá·tayʌʔ kʌ́ né· akwekú sheyoʔokúha̲"],
-  ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwaʔ"],
+  ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwa̲ʔ"],
   ["3", "Yah só·tsiʔ tehlukweʔtiyó né·n etshuhwatʌ́ha̲"],
   ["4", "Úhkaʔ náhteʔ sninyakú"],
   ["5", "Tekniyáhse kʌ́ yakokhsá·tayʌʔ né· shekhstʌ́ha yutateʔkʌ́ha̲"],
   ["6", "Né· kʌ́ thikʌ́ lanikʌhtlúha né·n Wá·li akonikʌhtlú·tsliʔ"],
   ["7", "Tó· náheʔ onʌ tshaʔtehonatekháhsyu né·n Só·s luwayʌ́ha̲"],
-  ["8", "Yáh thaʔtehyatatnú·wehseʔ nok tsiʔ shekú ihnehse"],
+  ["8", "Yáh thaʔtehyatatnú·wehseʔ nok tsiʔ shekú ihnehse̲"],
   ["9", "Skayá·tat tá·thuní tekniyáhse síksik yakonáskwayʌ"],
   ["10", "Shekú yutatwʌni·yó· né· aolíwaʔ tsiʔ yáh teʔyakukweʔtiyó"],
   ["11", "Yáh úhkaʔ náhteʔ tehonanúhteʔ tsiʔ Onutaʔkeha·ká· nisuhutsyó·tʌʔ"],
-  ["12", "Tehnitsyalú kʌ́ lotikwáho né·n yesayʌ́ha"],
+  ["12", "Tehnitsyalú kʌ́ lotikwáho né·n yesayʌ́ha̲"],
   ["13", "Kutikwekú kʌ́ kutatwʌni·yó· né· kutiyaʔtaseʔshúha̲"],
   [
     "14",
