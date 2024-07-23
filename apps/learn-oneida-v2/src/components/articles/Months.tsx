@@ -66,12 +66,12 @@ export const DATA_MONTHS = [
 
 export function MonthsArticle({ level = 1 }: ArticleProps) {
   const monthsNext = [
-    { en: "next January", on: "Tʌyakohúhtyaʔks" },
-    { en: "next February", on: "Tshaʔtʌkohsélhaʔ" },
+    { en: "next January", translation: "Tʌyakohúhtyaʔks" },
+    { en: "next February", translation: "Tshaʔtʌkohsélhaʔ" },
   ];
   const monthsLast = [
-    { en: "last January", on: "Tshaʔteyakohúhtyaʔkskʌ́" },
-    { en: "last February", on: "Tshaʔtekohselhaʔkʌ́" },
+    { en: "last January", translation: "Tshaʔteyakohúhtyaʔkskʌ́" },
+    { en: "last February", translation: "Tshaʔtekohselhaʔkʌ́" },
   ];
 
   return (

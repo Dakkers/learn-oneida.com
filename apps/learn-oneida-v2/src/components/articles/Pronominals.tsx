@@ -30,13 +30,6 @@ import { Pronominal, PronominalColor } from "../Pronominal";
 import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 
-export const DATA_SEASONS = [
-  { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
-  { en: "Summer", on: "kwaʔkʌnhé·ke", key: "summer" },
-  { en: "Autumn", on: "kanʌná·ke", key: "fall" },
-  { en: "Winter", on: "kohslá·ke", key: "winter" },
-];
-
 export function PronominalsArticle({ level = 1 }: ArticleProps) {
   return (
     <Flex direction="column" gap={4}>
