@@ -271,37 +271,37 @@ export default function LearnModule04() {
       </Text>
       <AccordionWrapper
         sections={[
-          ["someone-is-here", "Someone is here", dataIsHere, "is here"],
-          ["someone-was-here", "Someone was here", dataWasHere, "was here"],
+          ["someone-is-here", "Someone is here", dataIsHere, "is_here"],
+          ["someone-was-here", "Someone was here", dataWasHere, "was_here"],
           [
             "someone-will-be-here",
             "Someone will be here",
             dataWillBeHere,
-            "will be here",
+            "will_be_here",
           ],
           [
             "someone-might-be-here",
             "Someone might be here",
             dataMightBeHere,
-            "might be here",
+            "might_be_here",
           ],
           [
             "someone-is-not-here",
             "Someone is not here",
             dataIsNotHere,
-            "is not here",
+            "is_not_here",
           ],
           [
             "someone-was-not-here",
             "Someone was not here",
             dataWasNotHere,
-            "was not here",
+            "was_not_here",
           ],
           [
             "someone-will-not-be-here",
             "Someone will not be here",
             dataWillNotBeHere,
-            "will not be here",
+            "will_not_be_here",
           ],
         ]}
       />
@@ -435,13 +435,13 @@ export default function LearnModule04() {
             "someone-doesnt-want",
             "Someone doesn't want",
             dataDontWant,
-            "doesnt want",
+            "doesnt_want",
           ],
           [
             "someone-used-to-want",
             "Someone used to want",
             dataUsedToWant,
-            "used to want",
+            "used_to_want",
           ],
           [
             "someone-didnt-used-to-want",

@@ -278,7 +278,7 @@ const columns = [
             {val}
 
             <PlayButton
-              filepath={`/audio/module04/time phrases/${determineAudioFileName(row.en, value, i)}.mp3`}
+              filepath={`/audio/module04/time_phrases/${determineAudioFileName(row.en, value, i)}.mp3`}
             />
           </Flex>
         ))}
