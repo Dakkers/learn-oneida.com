@@ -1,7 +1,7 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
@@ -85,7 +85,7 @@ const examplesList = [
     "I live at 1234 Oneida Road.",
     "1234 niwashe·tás Onʌyoteʔa·ká· yoha·té· tsiʔ tkí·tlu̲ʔ",
   ],
-].map(([en, on]) => ({ en, on }));
+].map(([en, translation]) => ({ en, translation }));
 
 export function PhoneNumbersArticle({ level = 1 }: ArticleProps) {
   return (
@@ -123,7 +123,7 @@ export function PhoneNumbersArticle({ level = 1 }: ArticleProps) {
         Examples
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={examplesList}
       />
     </Flex>

@@ -11,11 +11,11 @@
     "jsx": "react-jsx",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "noEmit": true,
     "outDir": "lib/types",
     "paths": {
       "~/*": ["src/*"],
       "@/*": ["src/*"],
+      "@ukwehuwehneke/*": ["../packages/*/src"]
     },
     "rootDir": "src",
     "skipLibCheck": true,
@@ -24,7 +24,6 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
 

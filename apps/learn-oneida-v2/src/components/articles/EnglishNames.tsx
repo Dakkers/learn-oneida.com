@@ -1,36 +1,36 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 const names = [
-  { on: "Alʌt", en: "Aaron" },
-  { on: "Á·kwilut", en: "Abraham" },
-  { on: "Tsiʔtwʌlu", en: "Albert" },
-  { on: "Tshyalé", en: "Charlie" },
-  { on: "Tá·wet", en: "David" },
-  { on: "Tysáts", en: "George" },
-  { on: "Tshéle", en: "Jerry" },
-  { on: "Sawatís", en: "John" },
-  { on: "Kénniha", en: "Kenny" },
-  { on: "Mathyu", en: "Matthew" },
-  { on: "Niklas", en: "Nicholas" },
-  { on: "Kwítel", en: "Peter" },
-  { on: "Litsyet", en: "Richard" },
-  { on: "Tu·wís", en: "Thomas" },
-  { on: "Wílo", en: "William" },
-  { on: "Klistí·n", en: ["Christine", "Kristin"] },
-  { on: "Tsiló·s", en: "Delores" },
-  { on: ["Aliskwe", "Alísakwe"], en: "Elizabeth" },
-  { on: "Katlí·n", en: "Katherine" },
-  { on: ["Kwáklit", "Kowáklit"], en: "Margret" },
-  { on: "Mahtih", en: "Martha" },
-  { on: "Wá·li", en: "Mary" },
-  { on: "Ní·ki", en: ["Nellie", "Amelia"] },
-  { on: "Lá·kel", en: "Rachel" },
-  { on: "Sá·l", en: "Sara" },
-  { on: "Só·s", en: "Susan" },
+  { translation: "Alʌt", en: "Aaron" },
+  { translation: "Á·kwilut", en: "Abraham" },
+  { translation: "Tsiʔtwʌlu", en: "Albert" },
+  { translation: "Tshyalé", en: "Charlie" },
+  { translation: "Tá·wet", en: "David" },
+  { translation: "Tysáts", en: "George" },
+  { translation: "Tshéle", en: "Jerry" },
+  { translation: "Sawatís", en: "John" },
+  { translation: "Kénniha", en: "Kenny" },
+  { translation: "Mathyu", en: "Matthew" },
+  { translation: "Niklas", en: "Nicholas" },
+  { translation: "Kwítel", en: "Peter" },
+  { translation: "Litsyet", en: "Richard" },
+  { translation: "Tu·wís", en: "Thomas" },
+  { translation: "Wílo", en: "William" },
+  { translation: "Klistí·n", en: ["Christine", "Kristin"] },
+  { translation: "Tsiló·s", en: "Delores" },
+  { translation: ["Aliskwe", "Alísakwe"], en: "Elizabeth" },
+  { translation: "Katlí·n", en: "Katherine" },
+  { translation: ["Kwáklit", "Kowáklit"], en: "Margret" },
+  { translation: "Mahtih", en: "Martha" },
+  { translation: "Wá·li", en: "Mary" },
+  { translation: "Ní·ki", en: ["Nellie", "Amelia"] },
+  { translation: "Lá·kel", en: "Rachel" },
+  { translation: "Sá·l", en: "Sara" },
+  { translation: "Só·s", en: "Susan" },
 ] as const;
 
 export function EnglishNamesArticle({ level = 1 }: ArticleProps) {
@@ -40,7 +40,7 @@ export function EnglishNamesArticle({ level = 1 }: ArticleProps) {
         English Names
       </SectionHeading>
       {/* @ts-expect-error To be addressed in LO-12 */}
-      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={names} />
+      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={names} />
     </Flex>
   );
 }

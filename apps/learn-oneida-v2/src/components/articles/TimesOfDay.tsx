@@ -2,125 +2,125 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
-  const dayPhʌases = [
-    { en: "day", on: "awʌhnísla̲ʔ̲" },
-    { en: "all day", on: "kwʌʔtáti̲ʔ" },
-    { en: "during the day", on: "tsiʔniwʌhnísles" },
-    { en: "this day", on: "Tó· niwʌhnisla·ké͟" },
-    { en: "daytime", on: "kwaʔté·ke̲" },
-    { en: "every day", on: "yaʔtewʌhnislaké͟" },
+  const dayPhrases = [
+    { en: "day", translation: "awʌhnísla̲ʔ̲" },
+    { en: "all day", translation: "kwʌʔtáti̲ʔ" },
+    { en: "during the day", translation: "tsiʔniwʌhnísles" },
+    { en: "this day", translation: "Tó· niwʌhnisla·ké͟" },
+    { en: "daytime", translation: "kwaʔté·ke̲" },
+    { en: "every day", translation: "yaʔtewʌhnislaké͟" },
   ];
 
   const eveningPhrases = [
     {
       en: ["evening", "early evening", "late afternoon"],
-      on: ["yoʔkaláshʌ̲", "yoʔkaláshu̲"],
+      translation: ["yoʔkaláshʌ̲", "yoʔkaláshu̲"],
     },
     {
       en: "when it was evening",
-      on: "tshiyoʔkaláshu̲",
+      translation: "tshiyoʔkaláshu̲",
     },
     {
       en: ["this evening", "tonight", "later this evening"],
-      on: "ʌyó·kalahweʔ",
+      translation: "ʌyó·kalahweʔ",
     },
   ];
 
   const monthPhrases = [
-    { en: "month", on: "awʌhní·taʔ" },
-    { en: "during the month", on: "tsiʔ niwʌhní·tes" },
-    { en: "last month", on: "swʌhniʔtatkʌ́" },
-    { en: "next month", on: "yʌswʌ́hniʔtat" },
-    { en: "how many months?", on: "Tó· niwʌhní·take̲ʔ" },
+    { en: "month", translation: "awʌhní·taʔ" },
+    { en: "during the month", translation: "tsiʔ niwʌhní·tes" },
+    { en: "last month", translation: "swʌhniʔtatkʌ́" },
+    { en: "next month", translation: "yʌswʌ́hniʔtat" },
+    { en: "how many months?", translation: "Tó· niwʌhní·take̲ʔ" },
   ];
 
   const morningPhrases = [
-    { en: "(earlier) this morning", on: "sʌhaʔ astéhtsi̲ʔ" },
-    { en: ["early morning", "in the morning"], on: "astéhtsi̲" },
-    { en: "the other morning", on: "oyá· tshitwastéhtsi̲ʔ" },
-    { en: ["morning", "morning time"], on: "astehtsiwé·ke̲" },
+    { en: "(earlier) this morning", translation: "sʌhaʔ astéhtsi̲ʔ" },
+    { en: ["early morning", "in the morning"], translation: "astéhtsi̲" },
+    { en: "the other morning", translation: "oyá· tshitwastéhtsi̲ʔ" },
+    { en: ["morning", "morning time"], translation: "astehtsiwé·ke̲" },
   ];
 
   const nightPhrases = [
-    { en: "night", on: "né· wahsuta·té͟·" },
-    { en: "night-time", on: "kwaʔshuté·ke̲" },
-    { en: "all night", on: "kwaʔshutátiʔ" },
-    { en: "during the night", on: "tsiʔ niwahsu·tés" },
-    { en: "every night", on: "yaʔtewahsu·táke̲" },
-    { en: "midnight", on: "ashú·tha" },
-    { en: "(when it got dark) last night", on: "kwaʔshu·té·" },
-    { en: ["this night", "tonight"], on: "kaʔi·kʌ́· wahsuta·té͟·" },
-    { en: "the other night", on: "oyá· tshitkwaʔshu·té·" },
-    { en: "how many nights?", on: "Tó· niwahsu·táke̲ʔ" },
-    { en: "when it gets dark", on: "tshityó·kalas" },
+    { en: "night", translation: "né· wahsuta·té͟·" },
+    { en: "night-time", translation: "kwaʔshuté·ke̲" },
+    { en: "all night", translation: "kwaʔshutátiʔ" },
+    { en: "during the night", translation: "tsiʔ niwahsu·tés" },
+    { en: "every night", translation: "yaʔtewahsu·táke̲" },
+    { en: "midnight", translation: "ashú·tha̲" },
+    { en: "(when it got dark) last night", translation: "kwaʔshu·téˍ·" },
+    { en: ["this night", "tonight"], translation: "kaʔi·kʌ́· wahsuta·té͟·" },
+    { en: "the other night", translation: "oyá· tshitkwaʔshu·téˍ·" },
+    { en: "how many nights?", translation: "Tó· niwahsu·táke̲ʔ" },
+    { en: "when it gets dark", translation: "tshityó·kalas" },
   ];
 
   const timePhrases = [
-    { en: "a long time", on: "wahu·níseʔ" },
-    { en: "a short time", on: "kʌʔ nikalí·wes" },
-    { en: "all the time", on: "yaʔteka·kú·te" },
-    { en: "how long of a time?", on: ["Tó· niwahu·niʔsé̲", "Tó· nahe"] },
+    { en: "a long time", translation: "wahu·níseʔ" },
+    { en: "a short time", translation: "kʌʔ nikalí·wes" },
+    { en: "all the time", translation: "yaʔteka·kú·te" },
+    { en: "how long of a time?", translation: ["Tó· niwahu·niʔsé̲", "Tó· nahe"] },
   ];
 
   const tomorrowPhrases = [
-    { en: "tomorrow", on: "ʌyólhʌne̲ʔ" },
-    { en: "tomorrow night", on: ["ʌyólhʌneʔ ʌyó·kalaweʔ"] },
-    { en: "tomorrow evening", on: ["ʌyólhʌneʔ yoʔkala·sneʔ"] },
-    { en: "the day after tomorrow", on: "oyá· yʌtsyólhʌneʔ" },
+    { en: "tomorrow", translation: "ʌyólhʌne̲ʔ" },
+    { en: "tomorrow night", translation: ["ʌyólhʌneʔ ʌyó·kalawe̲ʔ"] },
+    { en: "tomorrow evening", translation: ["ʌyólhʌneʔ yoʔkala·sne̲ʔ"] },
+    { en: "the day after tomorrow", translation: "oyá· yʌtsyólhʌneʔ" },
   ];
 
   const weekendPhrases = [
-    { en: "weekend", on: "yawʌtokta·u" },
-    { en: "this (coming) weekend", on: "ʌwʌtokta" },
-    { en: "this past weekend", on: "yautokta·u" },
+    { en: "weekend", translation: "yawʌtokta·u" },
+    { en: "this (coming) weekend", translation: "ʌwʌtokta" },
+    { en: "this past weekend", translation: "yautokta·u" },
   ];
 
   const weekPhrases = [
-    { en: "all week", on: "yaʔtewʌ·tá·ke̲" },
-    { en: "during the week", on: "tsiʔ niwʌ·tés" },
-    { en: "every week", on: "yaʔtewʌ·táke" },
-    { en: "last week", on: "swʌtatkʌ́" },
-    { en: "next week", on: "yʌswʌ·tát" },
-    { en: "how many weeks?", on: "Tó· niwʌ·táke̲" },
+    { en: "all week", translation: "yaʔtewʌ·tá·ke̲" },
+    { en: "during the week", translation: "tsiʔ niwʌ·tés" },
+    { en: "every week", translation: "yaʔtewʌ·táke" },
+    { en: "last week", translation: "swʌtatkʌ́" },
+    { en: "next week", translation: "yʌswʌ·tát" },
+    { en: "how many weeks?", translation: "Tó· niwʌ·táke̲" },
   ];
 
   const yearPhrases = [
-    { en: "all year", on: "ohslakwekúˍ" },
+    { en: "all year", translation: "ohslakwekúˍ" },
     {
       en: ["during the year", "through the year"],
-      on: "tsiʔ niyóhsles",
+      translation: "tsiʔ niyóhsles",
     },
-    { en: "every year", on: "nyaʔteyohsla·ké͟" },
-    { en: "last year", on: "tsyohslatkʌ́" },
-    { en: "next year", on: "yʌtsyohslá·te̲ʔ" },
-    { en: "the other year", on: "oyá· tshikohslá·ke̲" },
-    { en: "a particular year", on: "kaʔi·kʌ́· yohsla·téˍ·" },
-    { en: "how many years?", on: "Tó· niyohslaké̲" },
-    { en: "one year after another", on: "yohslaténi" },
+    { en: "every year", translation: "nyaʔteyohsla·ké͟" },
+    { en: "last year", translation: "tsyohslatkʌ́" },
+    { en: "next year", translation: "yʌtsyohslá·te̲ʔ" },
+    { en: "the other year", translation: "oyá· tshikohslá·ke̲" },
+    { en: "a particular year", translation: "kaʔi·kʌ́· yohsla·téˍ·" },
+    { en: "how many years?", translation: "Tó· niyohslaké̲" },
+    { en: "one year after another", translation: "yohslaténi" },
   ];
 
   const yesterdayPhrases = [
-    { en: "yesterday", on: "the·tʌ́ˍ·" },
-    { en: "the day before yesterday", on: "o·yá tshithe·tʌ́ˍ" },
+    { en: "yesterday", translation: "the·tʌ́ˍ·" },
+    { en: "the day before yesterday", translation: "o·yá tshithe·tʌ́ˍ" },
   ];
 
   const afternoonPhrases = [
-    { en: "afternoon", on: "yotukóhtu ʌt́i" },
-    { en: "noon", on: ["ʌ́ti", "ʌ́tyʌ ni·káleʔ"] },
+    { en: "afternoon", translation: "yotukóhtu ʌt́i" },
+    { en: "noon", translation: ["ʌ́ti", "ʌ́tyʌ ni·kále̲ʔ"] },
   ];
 
   const otherPhrases = [
-    { en: "always", on: "tyóhtkut" },
-    { en: "eclipse", on: "utʌhniʔtáhtuʔ" },
-    { en: "more often", on: "sʌ́haʔ yotká·teʔ" },
-    { en: "never", on: "yáh newʌtú" },
-    { en: ["now", "today"], on: ["nuʔú·wa̲ʔ", "nʌʔú·wa̲ʔ"] },
-    { en: "often", on: "yotká·teʔ" },
-    { en: "sometimes", on: "swatye·lʌ́" },
+    { en: "always", translation: "tyóhtkut" },
+    { en: "eclipse", translation: "utʌhniʔtáhtuʔ" },
+    { en: "more often", translation: "sʌ́haʔ yotká·teʔ" },
+    { en: "never", translation: "yáh newʌtú" },
+    { en: ["now", "today"], translation: ["nuʔú·wa̲ʔ", "nʌʔú·wa̲ʔ"] },
+    { en: "often", translation: "yotká·teʔ" },
+    { en: "sometimes", translation: "swatye·lʌ́" },
   ];
 
   return (
@@ -140,7 +140,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Times
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={timePhrases}
       />
 
@@ -151,8 +151,8 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Day, daytime
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
-        data={dayPhʌases}
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={dayPhrases}
       />
 
       <SectionHeading
@@ -162,7 +162,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Morning
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={morningPhrases}
       />
 
@@ -173,7 +173,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Afternoon
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={afternoonPhrases}
       />
 
@@ -184,7 +184,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Evening
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={eveningPhrases}
       />
 
@@ -195,7 +195,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Night
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={nightPhrases}
       />
 
@@ -206,7 +206,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Tomorrow
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={tomorrowPhrases}
       />
 
@@ -217,7 +217,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Yesterday
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={yesterdayPhrases}
       />
 
@@ -228,7 +228,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Week
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={weekPhrases}
       />
 
@@ -239,7 +239,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Weekend
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={weekendPhrases}
       />
 
@@ -250,7 +250,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Months
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={monthPhrases}
       />
 
@@ -261,7 +261,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Years
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={yearPhrases}
       />
 
@@ -272,7 +272,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
         Other Phrases
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={otherPhrases}
       />
     </Flex>

@@ -1,5 +1,8 @@
+"use client"
+
 import React from "react";
-import { PlacesInTheCommunityArticle } from "~/components/articles/PlacesInTheCommunity";
+import { PlacesInTheCommunityArticle } from "@ukwehuwehneke/language-components";
+import DATA_PLACES_IN_COMMUNITY from "@/data/module04/places-in-the-community";
 
 const meta: any = () => {
   return [
@@ -14,7 +17,7 @@ const meta: any = () => {
 export default function ArticlesPlacesInTheCommunity() {
   return (
     <div>
-      <PlacesInTheCommunityArticle />
+      <PlacesInTheCommunityArticle data={DATA_PLACES_IN_COMMUNITY} />
     </div>
   );
 }

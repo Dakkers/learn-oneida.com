@@ -1,6 +1,6 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import redPronominalsJson from "../../data/red-pronominals.json";
 import bluePronominalsJson from "../../data/blue-pronominals.json";
@@ -29,13 +29,6 @@ import {
 import { Pronominal, PronominalColor } from "../Pronominal";
 import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
-
-export const DATA_SEASONS = [
-  { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
-  { en: "Summer", on: "kwaʔkʌnhé·ke", key: "summer" },
-  { en: "Autumn", on: "kanʌná·ke", key: "fall" },
-  { en: "Winter", on: "kohslá·ke", key: "winter" },
-];
 
 export function PronominalsArticle({ level = 1 }: ArticleProps) {
   return (

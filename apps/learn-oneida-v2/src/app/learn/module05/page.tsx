@@ -7,7 +7,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";

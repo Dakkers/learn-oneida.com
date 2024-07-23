@@ -4,7 +4,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 export default function About() {
   return (

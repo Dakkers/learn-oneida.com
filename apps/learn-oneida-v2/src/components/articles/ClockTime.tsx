@@ -2,7 +2,7 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import { List } from "@ukwehuwehneke/ohutsya";
 
@@ -13,7 +13,7 @@ const simpleExamples = [
   ["1:00 p.m.", "úska niyohwistá·e yotukóhtu ʌ́ti"],
   ["7:00 p.m.", "tsyá·tak niyohwistá·e yotukóhtu ʌ́ti"],
   ["11:00 p.m.", "úska yawa·lé niyohwistá·e yotukóhtu ʌ́ti"],
-].map(([en, on]) => ({ en, on }));
+].map(([en, translation]) => ({ en, translation }));
 
 const minutesExamples = [
   ["2:05 a.m.", "wísk nikahí·kalake yotukóhtu tékni niyohwistá·e astéhtsiʔ"],
@@ -28,18 +28,18 @@ const minutesExamples = [
     "5:50 p.m.",
     "oye·lí· nikahí·kalake tyono·lúhe wísk niyohwistá·e yotukóhtu ʌ́ti",
   ],
-].map(([en, on]) => ({ en, on }));
+].map(([en, translation]) => ({ en, translation }));
 
 const eveningExamples = [
   ["8:00 p.m.", "téklu niyohwistá·e ʌyó·kalahweʔ"],
   ["9:00 p.m.", "wátlu niyohwistá·e yoʔkaláshʌ"],
   ["10:00 p.m.", "oye·lí· niyohwistá·e kwaʔashuté·ke"],
-].map(([en, on]) => ({ en, on }));
+].map(([en, translation]) => ({ en, translation }));
 
 const lastExamples = [
   ["2:05 p.m.", "ostúha yotukóhtu tékni niyohwistá·e yotukóhtu ʌ́ti"],
   ["4:55 p.m", "nʌ́ kiʔ thóha wísk niyohwistá·e yotukóhtu ʌ́ti"],
-].map(([en, on]) => ({ en, on }));
+].map(([en, translation]) => ({ en, translation }));
 
 export function ClockTimeArticle({ level = 1 }: ArticleProps) {
   return (
@@ -80,7 +80,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </Text>
 
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={simpleExamples}
       />
 
@@ -104,14 +104,14 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       <Text>If this is confusing, take a look at the examples below.</Text>
 
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={minutesExamples}
       />
 
       <Text>To make things even more confusing, you may instead hear:</Text>
 
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={eveningExamples}
       />
 
@@ -134,7 +134,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </Text>
 
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={lastExamples}
       />
     </Flex>

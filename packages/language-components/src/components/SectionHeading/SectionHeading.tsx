@@ -1,3 +1,4 @@
+// @ts-expect-error TODO
 import { Heading, HeadingProps } from "@ukwehuwehneke/ohutsya";
 
 export interface SectionHeadingProps

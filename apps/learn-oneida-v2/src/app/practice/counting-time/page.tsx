@@ -6,7 +6,7 @@ import { Link } from "@ukwehuwehneke/ohutsya";
 import { shuffle } from "lodash";
 import { useMemo, useState } from "react";
 import { z } from "zod";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createCountingTimeData } from "~/components/articles/CountingTime";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 

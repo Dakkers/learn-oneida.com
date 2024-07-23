@@ -1,6 +1,6 @@
 "use client";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { BreakdownArray } from "../TextBreakdown";

@@ -14,7 +14,7 @@ import {
   Settings,
 } from "~/components/practice/QuizContainer";
 import { Link } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 

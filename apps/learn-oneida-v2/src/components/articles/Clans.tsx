@@ -1,6 +1,6 @@
 "use client";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import {
@@ -51,7 +51,7 @@ export function ClansArticle({ level = 1 }: ArticleProps) {
         Clan Animals
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={[
           ["bear", "ohkwa·líˍ"],
           ["beaver", "tsyoní·tuʔ"],
@@ -62,7 +62,7 @@ export function ClansArticle({ level = 1 }: ArticleProps) {
           ["snipe", "tawístawiʔ"],
           ["turtle", "aʔno·wál"],
           ["wolf", "othayu·níˍ"],
-        ].map(([en, on]) => ({ en, on }))}
+        ].map(([en, translation]) => ({ en, translation }))}
       />
       <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
         Phrases
