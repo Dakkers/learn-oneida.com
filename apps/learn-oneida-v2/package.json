@@ -67,5 +67,8 @@
     "typescript": "^5.4.5",
     "vercel": "^34.2.7",
     "wrangler": "^3.60.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,css,md}": "pnpm run format:write"
   }
 }

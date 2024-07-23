@@ -18,6 +18,7 @@ export function TableWrapper(props: TableProps) {
   return <Table {...props} />;
 }
 
+// test
 TableWrapper.textArrayCell = (value: any) => (
   <Flex direction="column">
     <TextArray>{value}</TextArray>
