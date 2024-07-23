@@ -1,77 +1,77 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 export const DATA_MONTHS = [
   {
     en: "January",
-    on: "Teyakohúhtyaʔks",
-    translation: "Their ears are freezing",
+    translation: "Teyakohúhtyaʔks",
+    literal: "Their ears are freezing",
     key: "jan",
   },
   {
     en: "February",
-    on: "Tshaʔtekohsélhaʔ",
-    translation: "Half of winter",
+    translation: "Tshaʔtekohsélhaʔ",
+    literal: "Half of winter",
     key: "feb",
   },
   {
     en: "March",
-    on: "Tewʌhníslyaʔks",
-    translation: "The day is cut in two",
+    translation: "Tewʌhníslyaʔks",
+    literal: "The day is cut in two",
     key: "mar",
   },
   {
     en: "April",
-    on: "Wahsakayu·té·seʔ",
-    translation: "It's thundering",
+    translation: "Wahsakayu·té·seʔ",
+    literal: "It's thundering",
     key: "apr",
   },
-  { en: "May", on: "Latiyʌ́thos", translation: "They plant", key: "may" },
-  { en: "June", on: "Awʌhihteʔ", translation: " Strawberry", key: "jun" },
+  { en: "May", translation: "Latiyʌ́thos", literal: "They plant", key: "may" },
+  { en: "June", translation: "Awʌhihteʔ", literal: " Strawberry", key: "jun" },
   {
     en: "July",
-    on: "Ohyótsheliʔ",
-    translation: "Green string bean",
+    translation: "Ohyótsheliʔ",
+    literal: "Green string bean",
     key: "jul",
   },
-  { en: "August", on: "Onʌ́staseʔ", translation: "New corn", key: "aug" },
+  { en: "August", translation: "Onʌ́staseʔ", literal: "New corn", key: "aug" },
   {
     en: "September",
-    on: "Yeyʌthókwas",
-    translation: "Someone harvests",
+    translation: "Yeyʌthókwas",
+    literal: "Someone harvests",
     key: "sep",
   },
   {
     en: "October",
-    on: "Yutékhwayʌheʔ",
-    translation: "Someone stores food",
+    translation: "Yutékhwayʌheʔ",
+    literal: "Someone stores food",
     key: "oct",
   },
   {
     en: "November",
-    on: "Tehutʌnuhela·túheʔ",
-    translation: "They give thanks",
+    translation: "Tehutʌnuhela·túheʔ",
+    literal: "They give thanks",
     key: "nov",
   },
   {
     en: "December",
-    on: "Wahsu·tés",
-    translation: "It's a long night",
+    translation: "Wahsu·tés",
+    literal: "It's a long night",
     key: "dec",
   },
 ];
 
 export function MonthsArticle({ level = 1 }: ArticleProps) {
   const monthsNext = [
-    { en: "next January", on: "Tʌyakohúhtyaʔks" },
-    { en: "next February", on: "Tshaʔtʌkohsélhaʔ" },
+    { en: "next January", translation: "Tʌyakohúhtyaʔks" },
+    { en: "next February", translation: "Tshaʔtʌkohsélhaʔ" },
   ];
   const monthsLast = [
-    { en: "last January", on: "Tshaʔteyakohúhtyaʔkskʌ́" },
-    { en: "last February", on: "Tshaʔtekohselhaʔkʌ́" },
+    { en: "last January", translation: "Tshaʔteyakohúhtyaʔkskʌ́" },
+    { en: "last February", translation: "Tshaʔtekohselhaʔkʌ́" },
   ];
 
   return (
@@ -81,9 +81,9 @@ export function MonthsArticle({ level = 1 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         columns={[
-          ...TableWrapper.columnsEnglishOneida,
+          ...TableWrapper.columnsEnglishTranslation,
           {
-            accessorKey: "translation",
+            accessorKey: "literal",
             header: "Literal translation",
           },
         ]}
@@ -97,7 +97,7 @@ export function MonthsArticle({ level = 1 }: ArticleProps) {
         Last month
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={monthsLast}
       />
 
@@ -108,7 +108,7 @@ export function MonthsArticle({ level = 1 }: ArticleProps) {
         Next month
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={monthsNext}
       />
     </Flex>

@@ -37,7 +37,7 @@ import dataThought from "~/data/module04/thought";
 import { Accordion, Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "~/components/Letter";

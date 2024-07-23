@@ -1,7 +1,7 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
 
@@ -26,7 +26,7 @@ const LIST = [
   ["Townline Road", "Kanata·yʌ́· Yoha·té·"],
   ["Walker Road", "Walker Yoha·té·"],
   ["Williams Road", "Williams Yoha·té·"],
-].map(([en, on]) => ({ en, on }));
+].map(([en, translation]) => ({ en, translation }));
 
 export function RoadsArticle({ level = 1 }: ArticleProps) {
   return (
@@ -35,7 +35,7 @@ export function RoadsArticle({ level = 1 }: ArticleProps) {
         Roads
       </SectionHeading>
       <Text>These are roads in the Oneida of the Thames community.</Text>
-      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={LIST} />
+      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={LIST} />
     </Flex>
   );
 }

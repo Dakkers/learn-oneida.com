@@ -6,7 +6,7 @@ import { Button } from "@ukwehuwehneke/ohutsya";
 
 import { Fragment, useState } from "react";
 import { ParadigmTable } from "~/components/ParadigmTable";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { TextBreakdown } from "~/components/TextBreakdown";
 import {
   Module5VerbDatum,

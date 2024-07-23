@@ -2,7 +2,7 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 const CITIES_LIST = [
@@ -18,7 +18,7 @@ const CITIES_LIST = [
   ["Strathroy", "Ohkwalihné·"],
   ["Toronto", "Tsiʔ tkaluto"],
   ["Washington, D.C.", ["Kanatakalyáhsneʔ", "Lanatakalyashnekeʔ"]],
-].map(([en, on]) => ({ en, on }));
+].map(([en, translation]) => ({ en, translation }));
 
 export function CitiesArticle({ level = 1 }: ArticleProps) {
   return (
@@ -32,7 +32,7 @@ export function CitiesArticle({ level = 1 }: ArticleProps) {
         Oneida of the Thames community.
       </Text>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={CITIES_LIST}
       />
     </Flex>

@@ -1,29 +1,29 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 export const DATA_SEASONS = [
-  { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
-  { en: "Summer", on: "kwaʔkʌnhé·ke", key: "summer" },
-  { en: "Autumn", on: "kanʌná·ke", key: "fall" },
-  { en: "Winter", on: "kohslá·ke", key: "winter" },
+  { en: "Spring", translation: ["kukwi·té·", "kukwité·ne"], key: "spring" },
+  { en: "Summer", translation: "kwaʔkʌnhé·ke", key: "summer" },
+  { en: "Autumn", translation: "kanʌná·ke", key: "fall" },
+  { en: "Winter", translation: "kohslá·ke", key: "winter" },
 ];
 
 export function SeasonsArticle({ level = 1 }: ArticleProps) {
   const seasonsDuring = [
-    { en: "During the spring", on: "tsiʔ nikukwite·seʔ" },
-    { en: "During the summer", on: "tsiʔ niwaʔkʌ́nhes" },
-    { en: "During the autumn", on: "tshiʔtkanʌná·ke" },
-    { en: "During the winter", on: "tsiʔ niwakóhsles" },
+    { en: "During the spring", translation: "tsiʔ nikukwite·seʔ" },
+    { en: "During the summer", translation: "tsiʔ niwaʔkʌ́nhes" },
+    { en: "During the autumn", translation: "tshiʔtkanʌná·ke" },
+    { en: "During the winter", translation: "tsiʔ niwakóhsles" },
   ];
   const otherPhrases = [
-    { en: "Seasons", on: ["wakanhaténiʔ", "wakʌnhaténiʔ"] },
-    { en: "Last summer", on: "tshikwaʔkʌ́nheʔ" },
-    { en: "Each winter", on: "yaʔtewakohsláke" },
-    { en: "Last winter", on: "tshikohslá·ke" },
-    { en: "Wintertime", on: "kohslaʔké·ne" },
+    { en: "Seasons", translation: ["wakanhaténiʔ", "wakʌnhaténiʔ"] },
+    { en: "Last summer", translation: "tshikwaʔkʌ́nheʔ" },
+    { en: "Each winter", translation: "yaʔtewakohsláke" },
+    { en: "Last winter", translation: "tshikohslá·ke" },
+    { en: "Wintertime", translation: "kohslaʔké·ne" },
   ];
 
   return (
@@ -32,7 +32,7 @@ export function SeasonsArticle({ level = 1 }: ArticleProps) {
         Seasons
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={DATA_SEASONS}
       />
       <SectionHeading
@@ -42,7 +42,7 @@ export function SeasonsArticle({ level = 1 }: ArticleProps) {
         During a season
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={seasonsDuring}
       />
       <SectionHeading
@@ -52,7 +52,7 @@ export function SeasonsArticle({ level = 1 }: ArticleProps) {
         Other phrases
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={otherPhrases}
       />
     </Flex>

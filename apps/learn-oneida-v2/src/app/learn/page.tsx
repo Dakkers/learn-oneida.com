@@ -2,7 +2,7 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 const meta: any = () => {
   return [

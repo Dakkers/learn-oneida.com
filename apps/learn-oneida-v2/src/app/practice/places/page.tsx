@@ -3,12 +3,12 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
-import { DATA_PLACES_IN_COMMUNITY } from "~/components/articles/PlacesInTheCommunity";
 import {
   EnglishToOneidaQuiz,
   EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { arrayify } from "~/utils";
+import DATA_PLACES_IN_COMMUNITY from "@/data/module04/places-in-the-community";
 
 const meta: any = () => {
   return [
@@ -44,7 +44,7 @@ export default function PracticePlaces() {
 
     for (const datum of DATA) {
       resultEn.push({ key: datum.key, text: datum.en });
-      resultOn.push({ key: datum.key, text: arrayify(datum.on)[0] });
+      resultOn.push({ key: datum.key, text: arrayify(datum.translation)[0] });
     }
     return [resultEn, resultOn];
   }, []);

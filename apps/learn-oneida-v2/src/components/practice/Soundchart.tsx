@@ -1,6 +1,6 @@
 import { cn, Flex, Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "../TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
 
 const VOWELS = ["a", "e", "i", "o", "u", "ʌ"];
 const SINGLES = ["h", "k", "l", "n", "s", "t", "w", "y"];

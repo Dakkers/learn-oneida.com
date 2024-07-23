@@ -1,7 +1,7 @@
 "use client";
 import { TableWrapper, TableWrapperProps } from "@/components/TableWrapper";
 import React from "react";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 const oneidaToEnglishModule01 = [
   ["1", "Né· lokstʌ́ha lanú·wehseʔ uní né· khaleʔ akokstʌ́ha yenú·wehse̲ʔ"],
@@ -40,15 +40,15 @@ const englishToOneidaModule01 = [
 ];
 
 const oneidaToEnglishModule02 = [
-  ["1", "Akwekú neʔn teyakwatahnu·teleʔ yesanú·wehse̲ʔ"],
+  ["1", "Akwekú neʔn teyakwatahnu·téleʔ yesanú·wehse̲ʔ"],
   ["2", "Lawʌheyú kʌ́ neʔn Wílo lohsótha̲"],
   ["3", "Sheyʌtelí kʌ́ úhkaʔ ok náhteʔ neʔn lutátnuhkweʔ Tu·wís"],
   ["4", "Shekú kʌ́ tehnúnheʔ yesayoʔokúha̲"],
   ["5", "Yáh úhkaʔ teʔkheyʌtelí thikʌ́ lutátnuhkweʔ Tshyalé"],
   ["6", "Íhsi kʌ́ nú· né· oyé·li naʔtehaohsliyá·ku né· etsheʔkʌha̲"],
-  ["7", "Yáh tehyatátnuhkweʔ Tu·wís kháleʔ tsyalá·seʔ nok tsiʔ teshyatyelʌ́"],
+  ["7", "Yáh tehyatátnuhkweʔ Tu·wís kháleʔ tsyalá·seʔ nók tsiʔ teshyatyelʌ́"],
   ["8", "Smith kʌ́ tehnihsʌná·sleʔ né· Tshyalé luwayoʔokuha̲"],
-  ["9", "Náhteʔ ok kʌ́ sanuhte né· liʔkʌ́ha laolihwá·ke̲"],
+  ["9", "Náhteʔ ok kʌ́ sanúhte né· liʔkʌ́ha laolihwá·ke̲"],
   ["10", "Tó· sʌ́haʔ kʌʔnithoyʌ·ha né· Kwítel tsiʔ ni·yót niʔisé͟·"],
   [
     "11",
@@ -56,14 +56,14 @@ const oneidaToEnglishModule02 = [
   ],
   ["12", "Sʌ́haʔ kʌ́ kʌʔnitisayʌ́ha tsiʔ ni·yót swatʌloʔshúha̲"],
   ["13", "Yáh úhkaʔ náhteʔ teyuknú·wehseʔ né· yaʔníha laohwa·tsíle̲ʔ"],
-  ["14", "Tákʌʔ ʌshehlo·lí· yukeʔkʌha tsiʔ yakawʌheyú né· yonatʌ·ló͟·"],
-  ["15", "Yáh thaʔtetsitsyatyelʌ né· tsyalá·seʔ Kwítel"],
+  ["14", "Tákʌʔ ʌshehlo·lí· yukeʔkʌ́ha tsiʔ yakawʌheyú né· yonatʌ·ló͟·"],
+  ["15", "Yáh thaʔtetsitsyatyelʌ́ né· tsyalá·seʔ Kwítel"],
   ["16", "Shekú kʌ́ tehnúnheʔ né· Tá·wet luwayʌ́ha̲"],
   ["17", "Akwekú luwá·nuwehseʔ thikʌ́ lokstʌ́ha̲"],
   ["18", "Yáh thaʔteyakyatatyʌtelí né· tsyalá·seʔ Wílo"],
   [
     "19",
-    "To niyohslaké sʌ́haʔ kʌʔnitho·yʌ · neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha",
+    "To niyohslaké sʌ́haʔ kʌʔnitho·yʌ́· neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha",
   ],
   ["20", "Akwekú kʌ́ shakoyʌtelí neʔn sheyatleʔokúha"],
 ];
