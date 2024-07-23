@@ -31,9 +31,9 @@ export type BreakdownArray = Array<
   | [string]
   | [string, BreakdownType]
   | {
-    text: string;
-    type?: BreakdownType;
-  }
+      text: string;
+      type?: BreakdownType;
+    }
 >;
 
 export type TextBreakdownSuffix =
@@ -46,7 +46,7 @@ export type TextBreakdownSuffix =
   | "ake"
   | "áke";
 
-interface TextBreakdownProps {
+export interface TextBreakdownProps {
   as?: "span" | "div";
   breakdown: BreakdownArray;
   prefix?: BreakdownType;

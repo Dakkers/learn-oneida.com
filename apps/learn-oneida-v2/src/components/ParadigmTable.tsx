@@ -39,12 +39,15 @@ import {
   BreakdownType,
   TextBreakdown,
   TextBreakdownSuffix,
-} from "./TextBreakdown";
+} from "@ukwehuwehneke/language-components";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import _ from "lodash";
-import { sanitizeIrregularCharacters, whisperizeWord } from "~/utils/words";
+import {
+  sanitizeIrregularCharacters,
+  whisperizeWord,
+} from "@ukwehuwehneke/language-components";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),

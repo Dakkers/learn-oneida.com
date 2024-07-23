@@ -10,7 +10,7 @@ import {
   BreakdownArray,
   BreakdownType,
   TextBreakdown,
-} from "~/components/TextBreakdown";
+} from "@ukwehuwehneke/language-components";
 import {
   Module6VerbDatum,
   Module6VerbTense,

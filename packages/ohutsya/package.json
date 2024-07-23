@@ -68,5 +68,8 @@
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,css,md}": "pnpm run format:write"
   }
 }

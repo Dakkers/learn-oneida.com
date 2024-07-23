@@ -5,13 +5,17 @@ import {
   TextBreakdownSuffix,
 } from "./../TextBreakdown";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "../../utils";
-// @ts-expect-error TODO
-import { Flex, Text, Table, TableProps, TextArray } from '@ukwehuwehneke/ohutsya'
+import {
+  Flex,
+  Text,
+  Table,
+  TableProps,
+  TextArray,
+  // @ts-expect-error TODO
+} from "@ukwehuwehneke/ohutsya";
 
 export function TableWrapper(props: TableProps) {
-  return (
-    <Table {...props} />
-  );
+  return <Table {...props} />;
 }
 
 TableWrapper.textArrayCell = (value: any) => (
@@ -105,33 +109,33 @@ interface CreatePastTenseColumnsOptions {
 
 export type EnglishTranslationPairData = Array<{
   en: string | string[];
-  translation: string | string[]
-}>
+  translation: string | string[];
+}>;
 
 const createPastTenseColumns = (
   typeFallback: BreakdownType,
   opts: CreatePastTenseColumnsOptions = {},
 ) => [
-    ...oneidaPronounColumns,
-    {
-      accessorKey: "breakdown",
-      cell: (value: BreakdownArray) => (
-        <TextBreakdown breakdown={value} typeFallback={typeFallback} />
-      ),
-      header: opts?.headerNow ?? "Now",
-    },
-    {
-      accessorKey: "breakdownPast",
-      cell: (value: BreakdownArray) => (
-        <TextBreakdown
-          breakdown={value}
-          suffix={opts.suffix}
-          typeFallback={typeFallback}
-        />
-      ),
-      header: opts?.headerPast ?? "Used to be",
-    },
-  ];
+  ...oneidaPronounColumns,
+  {
+    accessorKey: "breakdown",
+    cell: (value: BreakdownArray) => (
+      <TextBreakdown breakdown={value} typeFallback={typeFallback} />
+    ),
+    header: opts?.headerNow ?? "Now",
+  },
+  {
+    accessorKey: "breakdownPast",
+    cell: (value: BreakdownArray) => (
+      <TextBreakdown
+        breakdown={value}
+        suffix={opts.suffix}
+        typeFallback={typeFallback}
+      />
+    ),
+    header: opts?.headerPast ?? "Used to be",
+  },
+];
 
 TableWrapper.columnsParadigmRed = columnsParadigmRed;
 TableWrapper.columnsParadigmBlue = columnsParadigmBlue;
@@ -145,4 +149,7 @@ TableWrapper.createPastTenseColumns = createPastTenseColumns;
 
 type MapperArgs = unknown | unknown[];
 TableWrapper.mapLeftRight = ([left, right]: MapperArgs[]) => ({ left, right });
-TableWrapper.mapEnglishAndTranslation = ([en, translation]: MapperArgs[]) => ({ en, translation });
+TableWrapper.mapEnglishAndTranslation = ([en, translation]: MapperArgs[]) => ({
+  en,
+  translation,
+});

@@ -41,7 +41,7 @@ import {
   BreakdownArray,
   BreakdownType,
   TextBreakdown,
-} from "~/components/TextBreakdown";
+} from "@ukwehuwehneke/language-components";
 import { PronominalColor } from "~/components/Pronominal";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "~/components/Letter";

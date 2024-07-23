@@ -6,7 +6,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { BreakdownArray } from "../TextBreakdown";
+import { BreakdownArray } from "@ukwehuwehneke/language-components";
 
 export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
   const goodPeopleData: Array<BreakdownArray[]> = [

@@ -1,5 +1,5 @@
 import { translateNumber } from "./numbers";
-import { unwhisperWord } from "./words";
+import { unwhisperWord } from "@ukwehuwehneke/language-components";
 
 const MIDNIGHT = "ahsútha";
 const BEFORE = "tyono·lúhe";

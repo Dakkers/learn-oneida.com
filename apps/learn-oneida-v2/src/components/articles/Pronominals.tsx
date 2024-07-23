@@ -30,7 +30,10 @@ import {
   pronouns,
 } from "~/utils";
 import { Pronominal, PronominalColor } from "../Pronominal";
-import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
+import {
+  BreakdownArray,
+  TextBreakdown,
+} from "@ukwehuwehneke/language-components";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 
 export function PronominalsArticle({ level = 1 }: ArticleProps) {

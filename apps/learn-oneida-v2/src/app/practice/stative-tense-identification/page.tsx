@@ -12,7 +12,7 @@ import {
   createModule5VerbsList,
   module5VerbTenseMap,
 } from "~/data/module05";
-import { convertBreakdownToPlainText } from "~/components/TextBreakdown";
+import { convertBreakdownToPlainText } from "@ukwehuwehneke/language-components";
 import _ from "lodash";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import {
