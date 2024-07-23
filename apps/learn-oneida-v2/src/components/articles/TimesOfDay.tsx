@@ -1,5 +1,5 @@
 "use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
@@ -7,10 +7,12 @@ import {
   SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
+import { PlayIcon } from "lucide-react";
+import { arrayify } from "@/utils";
 
 export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
   const dayPhrases = [
-    { en: "day", translation: "awʌhnísla̲ʔ̲" },
+    { en: "day", translation: "awʌhnísla̲ʔ" },
     { en: "all day", translation: "kwʌʔtáti̲ʔ" },
     { en: "during the day", translation: "tsiʔniwʌhnísles" },
     { en: "this day", translation: "Tó· niwʌhnisla·ké͟" },
@@ -29,7 +31,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
     },
     {
       en: ["this evening", "tonight", "later this evening"],
-      translation: "ʌyó·kalahweʔ",
+      translation: "ʌyó·kalahwe̲ʔ",
     },
   ];
 
@@ -63,20 +65,20 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
   ];
 
   const timePhrases = [
-    { en: "a long time", translation: "wahu·níseʔ" },
+    { en: "a long time", translation: "wahu·níse̲ʔ" },
     { en: "a short time", translation: "kʌʔ nikalí·wes" },
-    { en: "all the time", translation: "yaʔteka·kú·te" },
+    { en: "all the time", translation: "yaʔteka·kú·te̲" },
     {
       en: "how long of a time?",
-      translation: ["Tó· niwahu·niʔsé̲", "Tó· nahe"],
+      translation: ["Tó· niwahu·niʔsé̲", "Tó· náhe"],
     },
   ];
 
   const tomorrowPhrases = [
     { en: "tomorrow", translation: "ʌyólhʌne̲ʔ" },
-    { en: "tomorrow night", translation: ["ʌyólhʌneʔ ʌyó·kalawe̲ʔ"] },
-    { en: "tomorrow evening", translation: ["ʌyólhʌneʔ yoʔkala·sne̲ʔ"] },
-    { en: "the day after tomorrow", translation: "oyá· yʌtsyólhʌneʔ" },
+    { en: "tomorrow night", translation: "ʌyólhʌneʔ ʌyó·kalawe̲ʔ" },
+    { en: "tomorrow evening", translation: "ʌyólhʌneʔ yoʔkala·sne̲ʔ" },
+    { en: "the day after tomorrow", translation: "oyá· yʌtsyólhʌne̲ʔ" },
   ];
 
   const weekendPhrases = [
@@ -111,7 +113,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
 
   const yesterdayPhrases = [
     { en: "yesterday", translation: "the·tʌ́ˍ·" },
-    { en: "the day before yesterday", translation: "o·yá tshithe·tʌ́ˍ" },
+    { en: "the day before yesterday", translation: "oyá tshithe·tʌ́ˍ" },
   ];
 
   const afternoonPhrases = [
@@ -126,7 +128,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
     { en: "never", translation: "yáh newʌtú" },
     { en: ["now", "today"], translation: ["nuʔú·wa̲ʔ", "nʌʔú·wa̲ʔ"] },
     { en: "often", translation: "yotká·teʔ" },
-    { en: "sometimes", translation: "swatye·lʌ́" },
+    { en: "sometimes", translation: "swatye·lʌ́ˍ" },
   ];
 
   return (
@@ -145,10 +147,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Times
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={timePhrases}
-      />
+      <TableWrapper columns={columns} data={timePhrases} />
 
       <SectionHeading
         id="times-of-day-daytime"
@@ -156,10 +155,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Day, daytime
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={dayPhrases}
-      />
+      <TableWrapper columns={columns} data={dayPhrases} />
 
       <SectionHeading
         id="times-of-day-morning"
@@ -167,10 +163,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Morning
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={morningPhrases}
-      />
+      <TableWrapper columns={columns} data={morningPhrases} />
 
       <SectionHeading
         id="times-of-day-afternoon"
@@ -178,10 +171,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Afternoon
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={afternoonPhrases}
-      />
+      <TableWrapper columns={columns} data={afternoonPhrases} />
 
       <SectionHeading
         id="times-of-day-evening"
@@ -189,10 +179,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Evening
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={eveningPhrases}
-      />
+      <TableWrapper columns={columns} data={eveningPhrases} />
 
       <SectionHeading
         id="times-of-day-night"
@@ -200,10 +187,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Night
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={nightPhrases}
-      />
+      <TableWrapper columns={columns} data={nightPhrases} />
 
       <SectionHeading
         id="times-of-day-tomorrow"
@@ -211,10 +195,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Tomorrow
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={tomorrowPhrases}
-      />
+      <TableWrapper columns={columns} data={tomorrowPhrases} />
 
       <SectionHeading
         id="times-of-day-yesterday"
@@ -222,10 +203,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Yesterday
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={yesterdayPhrases}
-      />
+      <TableWrapper columns={columns} data={yesterdayPhrases} />
 
       <SectionHeading
         id="times-of-day-week"
@@ -233,10 +211,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Week
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={weekPhrases}
-      />
+      <TableWrapper columns={columns} data={weekPhrases} />
 
       <SectionHeading
         id="times-of-day-weekend"
@@ -244,10 +219,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Weekend
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={weekendPhrases}
-      />
+      <TableWrapper columns={columns} data={weekendPhrases} />
 
       <SectionHeading
         id="times-of-day-month"
@@ -255,10 +227,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Months
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={monthPhrases}
-      />
+      <TableWrapper columns={columns} data={monthPhrases} />
 
       <SectionHeading
         id="times-of-day-year"
@@ -266,10 +235,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Years
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={yearPhrases}
-      />
+      <TableWrapper columns={columns} data={yearPhrases} />
 
       <SectionHeading
         id="times-of-day-other"
@@ -277,10 +243,46 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Other Phrases
       </SectionHeading>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={otherPhrases}
-      />
+      <TableWrapper columns={columns} data={otherPhrases} />
     </Flex>
   );
 }
+
+const fixAudioFileName = (filename: string) =>
+  filename.replaceAll("(", "").replaceAll(")", "").replaceAll("?", "").replaceAll(' ', '_');
+
+const determineAudioFileName = (
+  phrase: string | string[],
+  translations: string | string[],
+  index: number,
+) => {
+  const name = fixAudioFileName(arrayify(phrase)[0]);
+  const hasMultiple = Array.isArray(translations);
+  const suffix = hasMultiple ? ` ${index + 1}` : "";
+  return `${name}${suffix}`;
+};
+
+const columns = [
+  TableWrapper.columnsEnglishTranslation[0],
+  {
+    ...TableWrapper.columnsEnglishTranslation[1],
+    cell: (
+      value: string | string[],
+      row: {
+        en: string | string[];
+      },
+    ) => (
+      <Flex direction="column" gap={2}>
+        {arrayify(value).map((val, i) => (
+          <Flex gap={4} key={i}>
+            {val}
+
+            <PlayButton
+              filepath={`/audio/module04/time_phrases/${determineAudioFileName(row.en, value, i)}.mp3`}
+            />
+          </Flex>
+        ))}
+      </Flex>
+    ),
+  },
+];
