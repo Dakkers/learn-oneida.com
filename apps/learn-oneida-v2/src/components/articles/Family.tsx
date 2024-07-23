@@ -48,7 +48,10 @@ import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
 import { PRONOUN_MAP_EN_POSSESSIVE, type Pronoun } from "~/utils";
 import { TableOfContents as TOC } from "../TableOfContents";
 import { Letter } from "../Letter";
-import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 
 export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
   return (

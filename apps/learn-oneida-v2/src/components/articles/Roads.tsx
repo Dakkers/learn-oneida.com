@@ -35,7 +35,10 @@ export function RoadsArticle({ level = 1 }: ArticleProps) {
         Roads
       </SectionHeading>
       <Text>These are roads in the Oneida of the Thames community.</Text>
-      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={LIST} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={LIST}
+      />
     </Flex>
   );
 }

@@ -565,7 +565,10 @@ function DeceasedRelativesSection() {
     { translation: "liyuhwatʌʔkʌ́", en: "my late nephew" },
     { translation: "kheyʌhaʔkʌ́", en: "my late daughter" },
     { translation: "liyʌhaʔkʌ́", en: "my late son" },
-    { translation: "kheyatlehaʔkʌ́", en: "my late granddaughter(s) / grandchildren" },
+    {
+      translation: "kheyatlehaʔkʌ́",
+      en: "my late granddaughter(s) / grandchildren",
+    },
     { translation: "liyatlehaʔkʌ́", en: "my late grandson" },
     { translation: "ukyalaʔsehaʔkʌ́", en: "my late cousin" },
     { translation: "ukyatʌloʔkʌ́", en: "my late friend" },
@@ -613,7 +616,10 @@ function DeceasedRelativesSection() {
       <Text>
         Notice that, in many cases, accents, stresses, and lengths move places.
       </Text>
-      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={data} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={data}
+      />
     </>
   );
 }
@@ -724,7 +730,10 @@ function NumbersSection() {
     { en: "1111", translation: "úska yawʌ·lé tewʌʔnyáweluʔ úska yawʌ·lé" },
     { en: "1200", translation: "tékni yawʌ·lé tewʌʔnyáweluʔ" },
     { en: "1300", translation: "áhsʌ yawʌ·lé tewʌʔnyáweluʔ" },
-    { en: "1999", translation: "wá·tlu yawʌ·lé tewʌʔnyáweluʔ wá·tlu  niwáhsʌ wá·tlu" },
+    {
+      en: "1999",
+      translation: "wá·tlu yawʌ·lé tewʌʔnyáweluʔ wá·tlu  niwáhsʌ wá·tlu",
+    },
     { en: "2000", translation: "tewáhsʌ tewʌʔnyáweluʔ" },
   ];
 
@@ -752,7 +761,10 @@ function NumbersSection() {
           rule above for the last 2 digits
         </List.Item>
       </List>
-      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={data} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={data}
+      />
     </>
   );
 }

@@ -27,7 +27,10 @@ export function AroundTheHouseArticle({ level = 1 }: { level?: 1 | 2 }) {
       <SectionHeading id="around-the-house" level={level}>
         Around the house
       </SectionHeading>
-      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={LIST} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={LIST}
+      />
     </Flex>
   );
 }
