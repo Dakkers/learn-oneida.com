@@ -1,9 +1,13 @@
 const DATA_PLACES_IN_COMMUNITY: Array<{
-key: string;
-en: string;
-translation: string | string[];
+  key: string;
+  en: string;
+  translation: string | string[];
 }> = [
-  { key: "ball_park", en: "at the ball park", translation: "tsiʔ tehuttsihkwaʔéktaʔ" },
+  {
+    key: "ball_park",
+    en: "at the ball park",
+    translation: "tsiʔ tehuttsihkwaʔéktaʔ",
+  },
   {
     key: "band_office",
     en: "at the band office",
@@ -27,7 +31,11 @@ translation: string | string[];
     en: "at the car wash",
     translation: "tsiʔ tyuteʔslehtohaleʔtákhwa",
   },
-  { key: "cemetery", en: "at the cemetery", translation: "tsiʔ thuwatiyaʔtataʔastha" },
+  {
+    key: "cemetery",
+    en: "at the cemetery",
+    translation: "tsiʔ thuwatiyaʔtataʔastha",
+  },
   { key: "church", en: "at the church", translation: "tsiʔ tyutlʌnayʌtákhwaʔ" },
   {
     key: "community_centre",
@@ -45,8 +53,16 @@ translation: string | string[];
     en: "at the dump / landfill",
     translation: ["tsiʔ yeyakotyéhtha", "tsiʔ yeyakotyéhtákhwaʔ"],
   },
-  { key: "fairgrounds", en: "at the fairgrounds", translation: "tsiʔ tethutkʌnyé·thaʔ" },
-  { key: "fire_station", en: "at the fire station", translation: "luhswaʔtné·ke" },
+  {
+    key: "fairgrounds",
+    en: "at the fairgrounds",
+    translation: "tsiʔ tethutkʌnyé·thaʔ",
+  },
+  {
+    key: "fire_station",
+    en: "at the fire station",
+    translation: "luhswaʔtné·ke",
+  },
   {
     key: "fitness_centre",
     en: "at the fitness centre",
@@ -62,7 +78,11 @@ translation: string | string[];
     en: "at the health centre",
     translation: "tsiʔ thuwatitsyʌtákhwa",
   },
-  { key: "hospital", en: "at the hospital", translation: "tsiʔ teyutateshnyé·thaʔ" },
+  {
+    key: "hospital",
+    en: "at the hospital",
+    translation: "tsiʔ teyutateshnyé·thaʔ",
+  },
   { key: "hotel", en: "at the hotel", translation: "tsiʔ teyetástaʔ" },
   { key: "jail", en: "at the jail", translation: "tsiʔ tyutatenhotú·khwaʔ" },
   {
@@ -98,10 +118,22 @@ translation: string | string[];
     en: "at the post office",
     translation: "tsiʔ tyehyatuhslayʌtakhwaʔ",
   },
-  { key: "radio_station", en: "at the radio station", translation: "tsiʔ thutlʌnóthaʔ" },
+  {
+    key: "radio_station",
+    en: "at the radio station",
+    translation: "tsiʔ thutlʌnóthaʔ",
+  },
   { key: "reserve", en: "on the reserve", translation: "ukwehuwé·ne" },
-  { key: "restaurant", en: "at the restaurant", translation: "tsiʔ tyutekhunyá·thaʔ" },
-  { key: "school", en: "at the school", translation: "tsiʔ tyutatlihunyʌní·thaʔ" },
+  {
+    key: "restaurant",
+    en: "at the restaurant",
+    translation: "tsiʔ tyutekhunyá·thaʔ",
+  },
+  {
+    key: "school",
+    en: "at the school",
+    translation: "tsiʔ tyutatlihunyʌní·thaʔ",
+  },
   { key: "store", en: "at the store", translation: "tsiʔ tyutʌhní·nuheʔ" },
   { key: "town", en: "in town", translation: "kanatá·ke" },
 ];

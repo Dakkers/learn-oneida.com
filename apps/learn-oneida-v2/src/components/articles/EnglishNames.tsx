@@ -40,7 +40,10 @@ export function EnglishNamesArticle({ level = 1 }: ArticleProps) {
         English Names
       </SectionHeading>
       {/* @ts-expect-error To be addressed in LO-12 */}
-      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={names} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={names}
+      />
     </Flex>
   );
 }

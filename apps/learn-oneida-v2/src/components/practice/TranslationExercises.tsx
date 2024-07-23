@@ -2,7 +2,7 @@
 import { TableWrapper, TableWrapperProps } from "@/components/TableWrapper";
 import React from "react";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { PlayIcon } from "lucide-react";
 
 const oneidaToEnglishModule01 = [
@@ -184,19 +184,19 @@ const englishToOneidaModule05 = [
   ],
 ];
 const oneidaToEnglishModule06 = [
-  ["1", "Yáh teʔwakekhuní nuʔú·waʔ, yáh náhteʔ teʔkatyélhaʔ"],
+  ["1", "Yáh teʔwakekhuní nuʔú·waʔ, yáh náhteʔ teʔkatyélha̲ʔ"],
   ["2", "Tá·t akenho·tú·, ʌhsatatewyʌnʌ·táneʔ kʌ́"],
-  ["3", "Yáh thayuníʔtayʌʔ tá·t ʌhatló·lokeʔ"],
-  ["4", "Waʔtkatohtálhoʔ né· tshahutyaʔtóhaleʔ"],
-  ["5", "Wahʌ́·luʔ kʌ́ tʌhya·túteʔ"],
-  ["6", "Waʔakyatslu·ní· né· ayukniyóʔtʌʔ átsteʔ"],
-  ["7", "Yáh tehakhlolí kanke tshihoyo·té̲·"],
-  ["8", "Wahshakotiyaʔtakénhaʔ akutinhotu·kó"],
-  ["9", "Waʔakwatkáhthoʔ né· shakoyoʔokúha tsiʔ nahútyele"],
-  ["10", "Yáh tehuwayaʔtakénhʌ latatlihunyʌ·níheʔ"],
-  ["11", "Thó naʔa·wʌ́neʔ tshiyokʌno·lʌ́"],
-  ["12", "Yáh tehonatahséhtu tshahʌníhstyá·keʔ"],
-  ["13", "Ahotinóhaleʔ kaló· tsiʔ niyo·lé nʌ· tshaʔokʌ·nóleʔ"],
+  // ["3", "Yáh thayuníʔtayʌʔ tá·t ʌhatló·loke̲ʔ"],
+  ["4", "Waʔtkatohtálhoʔ né· tshahutyaʔtóhale̲ʔ"],
+  ["5", "Wahʌ́·luʔ kʌ́ tʌhya·túte̲ʔ"],
+  ["6", "Waʔakyatslu·ní· né· ayukniyo·tʌ́· átste̲ʔ"],
+  ["7", "Yáh tehakhlolí kánke tshahoyo·té̲·"],
+  ["8", "Wahshakotiyaʔtakénhaʔ akutinhotu·kóˍ"],
+  ["9", "Waʔakwatkáhthoʔ né· shakoyoʔokúha tsiʔ nahútyele̲"],
+  ["10", "Yáh tehuwayaʔtakénhʌ ahatatlihunyʌ·ní"],
+  ["11", "Thó naʔa·wʌ́neʔ tshaʔokʌ·nóle̲ʔ"],
+  // ["12", "Yáh tehonatahséhtu tshahʌníhstyá·keʔ"],
+  ["13", "Ahatinóhaleʔ kaló· tsiʔ niyo·lé tshaʔokʌ·nóle̲ʔ"],
   ["14", "Satahúhsatat tsiʔ náhteʔ yu·tú·"],
   ["15", "Knú·wehseʔ kʌs katló·loks tsiʔ wataʔklókwas"],
 ];
@@ -233,19 +233,28 @@ function TranslationExerciseTable({
           cell: (value) => <span className="w-16">{value as string}</span>,
           header: "",
         },
-        { accessorKey: "question",
-          cell: (value: string, row) => (
+        {
+          accessorKey: "question",
+          cell: (
+            value: string,
+            row: {
+              hasAudio?: boolean;
+              module: string;
+              num: string;
+            },
+          ) => (
             <Flex gap={4}>
-              <span>{value} {console.log(row)}</span>
+              <span>{value}</span>
 
-              <button className="border border-gray-500 rounded w-[24px] h-[24px] flex justify-center items-center"
-                onClick={() => (new Audio('/'))}
-              >
-                <PlayIcon size={16} />
-              </button>
+              {row.hasAudio && (
+                <PlayButton
+                  filepath={`/audio/translation_exercises/module${row.module}/ex_${row.num}.mp3`}
+                />
+              )}
             </Flex>
           ),
-          header: "" },
+          header: "",
+        },
       ]}
       data={data}
     />
@@ -269,7 +278,10 @@ export function TranslationExercises({ group }: { group?: Group }) {
       ].map((value, index) => [(index + 1).toString(), value[1]]);
     }
     const mapping: Record<Group, (string | boolean)[][]> = {
-      module01: [...(oneidaToEnglishModule01.map((val) => [...val, true])), ...englishToOneidaModule01],
+      module01: [
+        ...oneidaToEnglishModule01.map((val) => [...val, true, "01"]),
+        ...englishToOneidaModule01,
+      ],
       module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
       module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
       module05: [...oneidaToEnglishModule05, ...englishToOneidaModule05],
@@ -280,7 +292,12 @@ export function TranslationExercises({ group }: { group?: Group }) {
 
   return (
     <TranslationExerciseTable
-      data={data.map(([num, question, hasAudio]) => ({ hasAudio: hasAudio ?? false, num, question, answer: "" }))}
+      data={data.map(([num, question, hasAudio, module]) => ({
+        hasAudio: hasAudio ?? false,
+        num,
+        question,
+        module,
+      }))}
     />
   );
 }

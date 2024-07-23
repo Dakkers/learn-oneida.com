@@ -3,7 +3,10 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 export function RelationshipsArticle({ level = 1 }: ArticleProps) {

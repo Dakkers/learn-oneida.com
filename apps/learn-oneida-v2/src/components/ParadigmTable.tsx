@@ -3,6 +3,7 @@
 import {
   Bleed,
   type BleedProps,
+  Box,
   Button,
   DropdownMenu,
   DropdownMenuContent,
@@ -16,6 +17,7 @@ import {
   FormMessage,
   Input,
   Notice,
+  PlayButton,
   PrimitiveTable,
   PrimitiveTableBody,
   PrimitiveTableCell,
@@ -53,6 +55,7 @@ const ParadigmTableContext =
 
 export function ParadigmTable({
   allowedPronouns = [],
+  audioFolder,
   bleed = {
     xs: 0,
     md: 16,
@@ -64,6 +67,7 @@ export function ParadigmTable({
   translationFn,
 }: {
   allowedPronouns?: Pronoun[];
+  audioFolder?: string;
   bleed?: BleedProps["mx"];
   columnVisibility?: Partial<ColumnVisibility>;
   data: ParadigmData;
@@ -170,6 +174,7 @@ export function ParadigmTable({
               <PrimitiveTableBody>
                 {rowsToShow.map((row, i) => (
                   <TableRowWrapper
+                    audioFolder={audioFolder}
                     key={i}
                     row={row}
                     typeFallback={data.type}
@@ -202,11 +207,13 @@ export function ParadigmTable({
 }
 
 function TableRowWrapper({
+  audioFolder,
   row,
   suffix,
   typeFallback,
   whispered = false,
 }: {
+  audioFolder?: string;
   row: Row;
   suffix?: TextBreakdownSuffix;
   typeFallback?: BreakdownType;
@@ -262,16 +269,22 @@ function TableRowWrapper({
       ) : (
         <>
           <PrimitiveTableCell>
-            {showBreakdown ? (
-              <TextBreakdown
-                breakdown={row.breakdown}
-                suffix={suffix}
-                typeFallback={typeFallback}
-                whispered={row.whispered ?? whispered ?? false}
-              />
-            ) : (
-              row.phrase
-            )}
+            <Flex gap={4}>
+              {showBreakdown ? (
+                <TextBreakdown
+                  breakdown={row.breakdown}
+                  suffix={suffix}
+                  typeFallback={typeFallback}
+                  whispered={row.whispered ?? whispered ?? false}
+                />
+              ) : (
+                row.phrase
+              )}
+
+              {audioFolder && (
+                <PlayButton filepath={`/audio/${audioFolder}/${row.pronoun}.mp3`} />
+              )}
+            </Flex>
           </PrimitiveTableCell>
           {colVisibility.translation && (
             <PrimitiveTableCell>{translatedPhrase}</PrimitiveTableCell>

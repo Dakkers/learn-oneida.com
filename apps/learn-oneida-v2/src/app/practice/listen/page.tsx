@@ -32,33 +32,33 @@ export default function PracticeListening() {
     ["13", "Kunú·wehseʔ niʔisé·, kwah né·n tsiʔ niyot niʔisé· sknú·wehse̲ʔ"],
     ["14", "Tokʌ́skeʔ kʌ́ tsiʔ lonúhteʔ oh náhteʔ yúkyats"],
     ["15", "Wé·ne tsiʔ yáh tehinú·wehseʔ thikʌ́ lú·kwe̲"],
-  ]
+  ];
 
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(0);
   const playAudioAtIndex = (i: number) => {
     const datum = data[i ?? index];
-    console.log(i ?? index)
-    const audio = new Audio(`/audio/translation_exercises/module01/ex_${datum[0]}.mp3`);
+    console.log(i ?? index);
+    const audio = new Audio(
+      `/audio/translation_exercises/module01/ex_${datum[0]}.mp3`,
+    );
     audio.play();
-  }
+  };
 
   return (
     <>
       <SectionHeading level={1}>Listening Practice</SectionHeading>
 
-      <Button onClick={() => {
-        const newIndex = _.random(0, 14, false)
-        setIndex(newIndex)
-        playAudioAtIndex(newIndex)
-      }}>
+      <Button
+        onClick={() => {
+          const newIndex = _.random(0, 14, false);
+          setIndex(newIndex);
+          playAudioAtIndex(newIndex);
+        }}
+      >
         Play Audio
       </Button>
-      <Button onClick={() => playAudioAtIndex(index)}>
-        Replay
-      </Button>
-      <Button onClick={() => window.alert(data[index][1])}>
-        Show Answer
-      </Button>
+      <Button onClick={() => playAudioAtIndex(index)}>Replay</Button>
+      <Button onClick={() => window.alert(data[index][1])}>Show Answer</Button>
     </>
   );
 }

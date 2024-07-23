@@ -25,7 +25,8 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
   if (shouldWhisper) {
     if (
       vowelsWhispered.includes(char) ||
-      vowelsWhisperedAccented.includes(char)
+      vowelsWhisperedAccented.includes(char) ||
+      char === WHISPER_CHAR
     ) {
       return word;
     }

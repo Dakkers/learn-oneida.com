@@ -1,7 +1,10 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
@@ -16,7 +19,7 @@ const dataAtSomeonesOwnHouse = createParadigmData(
       { breakdown: ["tsiʔ ", ["ti", "CIS"], { text: "s" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "h" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "yako" }, "yoʔtʌ́staʔ"] },
-      { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "y" }, "yoʔtʌ́staʔ"] },
+      { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "y" }, "oʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "yukni" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["ti", "CIS"], { text: "sni" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "yukwa" }, "yoʔtʌ́staʔ"] },

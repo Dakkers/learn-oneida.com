@@ -27,7 +27,10 @@ export function AtSomeonesPlaceArticle({ level = 1 }: ArticleProps) {
       <SectionHeading id="at-someones-place" level={level}>
         At someone&lsquo;s place
       </SectionHeading>
-      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={LIST} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={LIST}
+      />
     </Flex>
   );
 }
