@@ -1,7 +1,9 @@
 "use client";
 import { TableWrapper, TableWrapperProps } from "@/components/TableWrapper";
 import React from "react";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { Flex } from "@ukwehuwehneke/ohutsya";
+import { PlayIcon } from "lucide-react";
 
 const oneidaToEnglishModule01 = [
   ["1", "Né· lokstʌ́ha lanú·wehseʔ uní né· khaleʔ akokstʌ́ha yenú·wehse̲ʔ"],
@@ -40,15 +42,15 @@ const englishToOneidaModule01 = [
 ];
 
 const oneidaToEnglishModule02 = [
-  ["1", "Akwekú neʔn teyakwatahnu·teleʔ yesanú·wehse̲ʔ"],
+  ["1", "Akwekú neʔn teyakwatahnu·téleʔ yesanú·wehse̲ʔ"],
   ["2", "Lawʌheyú kʌ́ neʔn Wílo lohsótha̲"],
   ["3", "Sheyʌtelí kʌ́ úhkaʔ ok náhteʔ neʔn lutátnuhkweʔ Tu·wís"],
   ["4", "Shekú kʌ́ tehnúnheʔ yesayoʔokúha̲"],
   ["5", "Yáh úhkaʔ teʔkheyʌtelí thikʌ́ lutátnuhkweʔ Tshyalé"],
   ["6", "Íhsi kʌ́ nú· né· oyé·li naʔtehaohsliyá·ku né· etsheʔkʌha̲"],
-  ["7", "Yáh tehyatátnuhkweʔ Tu·wís kháleʔ tsyalá·seʔ nok tsiʔ teshyatyelʌ́"],
+  ["7", "Yáh tehyatátnuhkweʔ Tu·wís kháleʔ tsyalá·seʔ nók tsiʔ teshyatyelʌ́"],
   ["8", "Smith kʌ́ tehnihsʌná·sleʔ né· Tshyalé luwayoʔokuha̲"],
-  ["9", "Náhteʔ ok kʌ́ sanuhte né· liʔkʌ́ha laolihwá·ke̲"],
+  ["9", "Náhteʔ ok kʌ́ sanúhte né· liʔkʌ́ha laolihwá·ke̲"],
   ["10", "Tó· sʌ́haʔ kʌʔnithoyʌ·ha né· Kwítel tsiʔ ni·yót niʔisé͟·"],
   [
     "11",
@@ -56,16 +58,16 @@ const oneidaToEnglishModule02 = [
   ],
   ["12", "Sʌ́haʔ kʌ́ kʌʔnitisayʌ́ha tsiʔ ni·yót swatʌloʔshúha̲"],
   ["13", "Yáh úhkaʔ náhteʔ teyuknú·wehseʔ né· yaʔníha laohwa·tsíle̲ʔ"],
-  ["14", "Tákʌʔ ʌshehlo·lí· yukeʔkʌha tsiʔ yakawʌheyú né· yonatʌ·ló͟·"],
-  ["15", "Yáh thaʔtetsitsyatyelʌ né· tsyalá·seʔ Kwítel"],
+  ["14", "Tákʌʔ ʌshehlo·lí· yukeʔkʌ́ha tsiʔ yakawʌheyú né· yonatʌ·ló͟·"],
+  ["15", "Yáh thaʔtetsitsyatyelʌ́ né· tsyalá·seʔ Kwítel"],
   ["16", "Shekú kʌ́ tehnúnheʔ né· Tá·wet luwayʌ́ha̲"],
   ["17", "Akwekú luwá·nuwehseʔ thikʌ́ lokstʌ́ha̲"],
   ["18", "Yáh thaʔteyakyatatyʌtelí né· tsyalá·seʔ Wílo"],
   [
     "19",
-    "To niyohslaké sʌ́haʔ kʌʔnitho·yʌ · neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha̲",
+    "To niyohslaké sʌ́haʔ kʌʔnitho·yʌ́· neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha",
   ],
-  ["20", "Akwekú kʌ́ shakoyʌtelí neʔn sheyatleʔokúha̲"],
+  ["20", "Akwekú kʌ́ shakoyʌtelí neʔn sheyatleʔokúha"],
 ];
 
 const englishToOneidaModule02 = [
@@ -93,17 +95,17 @@ const englishToOneidaModule02 = [
 
 const oneidaToEnglishModule03 = [
   ["1", "Lotikhsá·tayʌʔ kʌ́ né· akwekú sheyoʔokúha̲"],
-  ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwa̲ʔ"],
+  ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwaʔ"],
   ["3", "Yah só·tsiʔ tehlukweʔtiyó né·n etshuhwatʌ́ha̲"],
   ["4", "Úhkaʔ náhteʔ sninyakú"],
   ["5", "Tekniyáhse kʌ́ yakokhsá·tayʌʔ né· shekhstʌ́ha yutateʔkʌ́ha̲"],
   ["6", "Né· kʌ́ thikʌ́ lanikʌhtlúha né·n Wá·li akonikʌhtlú·tsliʔ"],
   ["7", "Tó· náheʔ onʌ tshaʔtehonatekháhsyu né·n Só·s luwayʌ́ha̲"],
-  ["8", "Yáh thaʔtehyatatnú·wehseʔ nok tsiʔ shekú ihnehse̲"],
+  ["8", "Yáh thaʔtehyatatnú·wehseʔ nok tsiʔ shekú ihnehse"],
   ["9", "Skayá·tat tá·thuní tekniyáhse síksik yakonáskwayʌ"],
   ["10", "Shekú yutatwʌni·yó· né· aolíwaʔ tsiʔ yáh teʔyakukweʔtiyó"],
   ["11", "Yáh úhkaʔ náhteʔ tehonanúhteʔ tsiʔ Onutaʔkeha·ká· nisuhutsyó·tʌʔ"],
-  ["12", "Tehnitsyalú kʌ́ lotikwáho né·n yesayʌ́ha̲"],
+  ["12", "Tehnitsyalú kʌ́ lotikwáho né·n yesayʌ́ha"],
   ["13", "Kutikwekú kʌ́ kutatwʌni·yó· né· kutiyaʔtaseʔshúha̲"],
   [
     "14",
@@ -231,12 +233,19 @@ function TranslationExerciseTable({
           cell: (value) => <span className="w-16">{value as string}</span>,
           header: "",
         },
-        { accessorKey: "question", header: "" },
-        {
-          accessorKey: "answer",
-          cell: () => <span className="w-96">&nbsp;</span>,
-          header: "",
-        },
+        { accessorKey: "question",
+          cell: (value: string, row) => (
+            <Flex gap={4}>
+              <span>{value} {console.log(row)}</span>
+
+              <button className="border border-gray-500 rounded w-[24px] h-[24px] flex justify-center items-center"
+                onClick={() => (new Audio('/'))}
+              >
+                <PlayIcon size={16} />
+              </button>
+            </Flex>
+          ),
+          header: "" },
       ]}
       data={data}
     />
@@ -259,8 +268,8 @@ export function TranslationExercises({ group }: { group?: Group }) {
         ...englishToOneidaModule06,
       ].map((value, index) => [(index + 1).toString(), value[1]]);
     }
-    const mapping: Record<Group, string[][]> = {
-      module01: [...oneidaToEnglishModule01, ...englishToOneidaModule01],
+    const mapping: Record<Group, (string | boolean)[][]> = {
+      module01: [...(oneidaToEnglishModule01.map((val) => [...val, true])), ...englishToOneidaModule01],
       module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
       module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
       module05: [...oneidaToEnglishModule05, ...englishToOneidaModule05],
@@ -271,7 +280,7 @@ export function TranslationExercises({ group }: { group?: Group }) {
 
   return (
     <TranslationExerciseTable
-      data={data.map(([num, question]) => ({ num, question, answer: "" }))}
+      data={data.map(([num, question, hasAudio]) => ({ hasAudio: hasAudio ?? false, num, question, answer: "" }))}
     />
   );
 }
