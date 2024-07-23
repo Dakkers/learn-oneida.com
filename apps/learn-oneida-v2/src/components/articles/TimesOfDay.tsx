@@ -249,7 +249,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
 }
 
 const fixAudioFileName = (filename: string) =>
-  filename.replaceAll("(", "").replaceAll(")", "").replaceAll("?", "").replaceAll(' ', '_');
+  filename
+    .replaceAll("(", "")
+    .replaceAll(")", "")
+    .replaceAll("?", "")
+    .replaceAll(" ", "_");
 
 const determineAudioFileName = (
   phrase: string | string[],

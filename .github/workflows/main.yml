@@ -28,4 +28,6 @@ jobs:
 
       - run: pnpm run ci:format
 
-      - run: pnpm run typecheck
+      - run: pnpm --filter "@ukwehuwehneke/ohutsya" build
+
+      - run: pnpm --filter "@ukwehuwehneke/language-components" build

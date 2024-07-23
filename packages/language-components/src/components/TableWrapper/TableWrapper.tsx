@@ -5,13 +5,13 @@ import {
   TextBreakdownSuffix,
 } from "./../TextBreakdown";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "../../utils";
-// @ts-expect-error TODO
 import {
   Flex,
   Text,
   Table,
   TableProps,
   TextArray,
+  // @ts-expect-error TODO
 } from "@ukwehuwehneke/ohutsya";
 
 export function TableWrapper(props: TableProps) {

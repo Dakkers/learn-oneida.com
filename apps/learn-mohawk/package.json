@@ -5,8 +5,9 @@
   "scripts": {
     "build": "next build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
-    "ci:format": "prettier ./app ./@ --check",
+    "ci:format": "prettier ./src --check",
     "dev": "next dev",
+    "format:write": "prettier ./src --write",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "pages:deploy": "pnpm run pages:build && wrangler pages deploy",
