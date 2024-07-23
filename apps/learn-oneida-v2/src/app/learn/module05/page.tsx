@@ -15,7 +15,7 @@ import {
   BreakdownArray,
   BreakdownType,
   TextBreakdown,
-} from "~/components/TextBreakdown";
+} from "@ukwehuwehneke/language-components";
 import iheyuData from "~/data/iheyu";
 import smallData from "~/data/module05/kʌʔ_ni-a";
 import { HeightWeightArticle } from "~/components/articles/Weight";

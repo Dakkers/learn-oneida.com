@@ -1,1 +1,1 @@
-export * from './TextBreakdown';
+export * from "./TextBreakdown";

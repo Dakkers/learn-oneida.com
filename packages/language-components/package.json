@@ -10,12 +10,14 @@
     }
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "build-storybook": "storybook build",
     "build:watch": "vite build --watch",
+    "build": "tsc && vite build",
+    "ci:format": "prettier ./src --check",
+    "dev": "vite",
+    "format:write": "prettier ./src --write",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
@@ -29,6 +31,7 @@
     "@storybook/test": "^8.1.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "prettier": "^3.2.5",
     "storybook": "^8.1.9",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"

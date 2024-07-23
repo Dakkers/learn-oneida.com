@@ -21,7 +21,10 @@ export function CountriesArticle({ level = 1 }: ArticleProps) {
         Countries
       </SectionHeading>
       <Text>Some continents and other words are also included.</Text>
-      <TableWrapper columns={TableWrapper.columnsEnglishTranslation} data={LIST} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={LIST}
+      />
     </Flex>
   );
 }

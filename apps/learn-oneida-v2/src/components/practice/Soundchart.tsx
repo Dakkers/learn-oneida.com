@@ -1,6 +1,9 @@
 import { cn, Flex, Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "../TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 
 const VOWELS = ["a", "e", "i", "o", "u", "ʌ"];
 const SINGLES = ["h", "k", "l", "n", "s", "t", "w", "y"];
@@ -104,7 +107,7 @@ export function Soundchart({ level }: SectionHeadingProps) {
       <SectionHeading level={level}>Double vowels</SectionHeading>
 
       <TableWrapper
-        columns={[createCols()[1]].concat(createCols().slice(3,5))}
+        columns={[createCols()[1]].concat(createCols().slice(3, 5))}
         data={[
           { e: "hae", o: "hao", u: "hau" },
           { e: "", o: "kao", u: "kau" },

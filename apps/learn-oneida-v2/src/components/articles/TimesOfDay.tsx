@@ -2,7 +2,10 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
@@ -63,7 +66,10 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
     { en: "a long time", translation: "wahu·níseʔ" },
     { en: "a short time", translation: "kʌʔ nikalí·wes" },
     { en: "all the time", translation: "yaʔteka·kú·te" },
-    { en: "how long of a time?", translation: ["Tó· niwahu·niʔsé̲", "Tó· nahe"] },
+    {
+      en: "how long of a time?",
+      translation: ["Tó· niwahu·niʔsé̲", "Tó· nahe"],
+    },
   ];
 
   const tomorrowPhrases = [

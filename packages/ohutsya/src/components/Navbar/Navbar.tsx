@@ -11,7 +11,13 @@ import {
 } from "../../primitives/navigation-menu";
 import { Flex } from "../Flex";
 import { cn } from "../../utils";
-import { BookOpenTextIcon, InfoIcon, NewspaperIcon, PencilIcon, WrenchIcon } from "lucide-react";
+import {
+  BookOpenTextIcon,
+  InfoIcon,
+  NewspaperIcon,
+  PencilIcon,
+  WrenchIcon,
+} from "lucide-react";
 
 export interface NavbarProps {
   moduleNumbers?: number[];

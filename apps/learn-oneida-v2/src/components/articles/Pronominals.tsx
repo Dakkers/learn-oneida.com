@@ -1,6 +1,9 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading, SectionHeadingProps } from "@ukwehuwehneke/language-components";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import redPronominalsJson from "../../data/red-pronominals.json";
 import bluePronominalsJson from "../../data/blue-pronominals.json";
@@ -27,7 +30,10 @@ import {
   pronouns,
 } from "~/utils";
 import { Pronominal, PronominalColor } from "../Pronominal";
-import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
+import {
+  BreakdownArray,
+  TextBreakdown,
+} from "@ukwehuwehneke/language-components";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 
 export function PronominalsArticle({ level = 1 }: ArticleProps) {

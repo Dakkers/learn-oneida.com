@@ -1,1 +1,1 @@
-export * from './PlacesInTheCommunity'
+export * from "./PlacesInTheCommunity";
