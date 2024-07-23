@@ -282,7 +282,9 @@ function TableRowWrapper({
               )}
 
               {audioFolder && (
-                <PlayButton filepath={`/audio/${audioFolder}/${row.pronoun}.mp3`} />
+                <PlayButton
+                  filepath={`/audio/${audioFolder}/${row.pronoun}.mp3`}
+                />
               )}
             </Flex>
           </PrimitiveTableCell>

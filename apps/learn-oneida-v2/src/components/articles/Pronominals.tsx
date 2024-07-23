@@ -162,9 +162,8 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         <Letter>y</Letter>
         and <Letter>i</Letter>. The <Letter>t</Letter> disappears and is
         replaced by <Letter>h</Letter> when anything is attached in front of the
-        prefix. Example:{" "}
-        <b>tsyʌtelíˍ</b> and <b>yah tehsyʌtelíˍ</b>; <b>tsí·tlu̲ʔ</b> and{" "}
-        <b>yah tehsí·tlu̲ʔ</b>.
+        prefix. Example: <b>tsyʌtelíˍ</b> and <b>yah tehsyʌtelíˍ</b>;{" "}
+        <b>tsí·tlu̲ʔ</b> and <b>yah tehsí·tlu̲ʔ</b>.
       </Text>
 
       <Text variant="labelL">Exception 6</Text>

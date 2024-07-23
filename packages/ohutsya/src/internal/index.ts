@@ -1,3 +1,3 @@
-export * from './FormElement'
-export * from './InternalText'
-export * from './TextArray'
+export * from "./FormElement";
+export * from "./InternalText";
+export * from "./TextArray";
