@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Button, Text } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 
