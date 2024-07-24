@@ -18,7 +18,12 @@ export function Select({ label, onChange, options, value }: SelectProps) {
   return (
     <FormElement label={label}>
       <select
-        className={cn(styles.baseStyle, styles.emphasisStyle, styles.sizeStyle, "px-2 rounded")}
+        className={cn(
+          styles.baseStyle,
+          styles.emphasisStyle,
+          styles.sizeStyle,
+          "px-2 rounded",
+        )}
         onChange={(e) => onChange(e.target.value)}
         value={value}
       >

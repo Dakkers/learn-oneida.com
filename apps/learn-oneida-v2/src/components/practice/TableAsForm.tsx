@@ -110,7 +110,7 @@ export function TableAsForm({
                             Answer: {row.on}
                           </FormMessage>
                         ) : (
-                            <FormMessage className="text-red-600" />
+                          <FormMessage className="text-red-600" />
                         )}
                       </FormItem>
                     )}

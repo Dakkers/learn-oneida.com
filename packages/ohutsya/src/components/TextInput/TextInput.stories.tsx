@@ -7,7 +7,5 @@ export default {
 } satisfies Meta<typeof TextInput>;
 
 export const Basic: StoryFn<typeof TextInput> = (args) => (
-  <TextInput
-    {...args}
-  />
+  <TextInput {...args} />
 );
