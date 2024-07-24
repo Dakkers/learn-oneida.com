@@ -19,17 +19,17 @@ export const DATA_DAYS_OF_WEEK = [
 
 export function DaysOfTheWeekArticle({ level = 1 }: ArticleProps) {
   const daysSpecific = [
-    { en: "on Sunday", translation: "Yautatokʌhtu·neʔ" },
-    { en: "on Monday", translation: "Yautʌtaʔú·neʔ" },
+    { en: "on Sunday", translation: "Yautatokʌhtu·ne̲ʔ" },
+    { en: "on Monday", translation: "Yautʌtaʔú·ne̲ʔ" },
     { en: "on Tuesday", translation: "Teknihatútneʔ" },
     { en: "on Wednesday", translation: "Ahsʌhatútneʔ" },
     { en: "on Thursday", translation: "Kayelihatútneʔ" },
     { en: "on Friday", translation: "Wiskhatútneʔ" },
-    { en: "on Saturday", translation: "Ʌtaktáhneʔ" },
+    { en: "on Saturday", translation: "Ʌtaktáhne̲ʔ" },
   ];
   const daysLast = [
     { en: "last Sunday", translation: "tshawʌtatokʌ́htu" },
-    { en: "last Monday", translation: "tshawʌtʌ·táneʔ" },
+    { en: "last Monday", translation: "tshawʌtʌ·táne̲ʔ" },
     { en: "last Tuesday", translation: "tshaʔtekníhatuht" },
     { en: "last Wednesday", translation: "tshiwahsʌ́hatuht" },
     { en: "last Thursday", translation: "tshikayelíhatuht" },
@@ -38,8 +38,8 @@ export function DaysOfTheWeekArticle({ level = 1 }: ArticleProps) {
   ];
   const daysNext = [
     { en: "next Sunday", translation: "yʌswʌtatokʌ́htu" },
-    { en: "next Monday", translation: "oyá· yʌswʌtʌ·táneʔ" },
-    { en: "next Tuesday", translation: "oyá· nyaʔteskníhatuht" },
+    { en: "next Monday", translation: "oyá· yʌswʌtʌ·táne̲ʔ" },
+    { en: "next Tuesday", translation: "oyá· nyaʔtekníhatuht" },
     { en: "next Wednesday", translation: "oyá· nyaʔteswahsʌ́hatuht" },
     { en: "next Thursday", translation: "oyá· nyaʔteskayelíhatuht" },
     { en: "next Friday", translation: "oyá· yʌswískhatut" },

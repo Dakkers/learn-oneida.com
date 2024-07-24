@@ -97,7 +97,7 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
   ];
 
   const yearPhrases = [
-    { en: "all year", translation: "ohslakwekúˍ" },
+    { en: "all year", translation: "ohslakwekú̲" },
     {
       en: ["during the year", "through the year"],
       translation: "tsiʔ niyóhsles",

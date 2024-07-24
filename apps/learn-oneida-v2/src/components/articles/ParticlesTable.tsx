@@ -2,8 +2,9 @@
 import { TableWrapper } from "@/components/TableWrapper";
 import { particleList } from "./particleList";
 import React from "react";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
+import { arrayify } from "@/utils";
 
 type ParticlesGroup =
   | "module01"
@@ -21,7 +22,20 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
     () => [
       {
         accessorKey: "oneida",
-        cell: TableWrapper.textArrayCellBold,
+        cell: (value: string | string[], row) => (
+          <Flex direction="column" gap={2}>
+            {arrayify(value).map((val, i) => (
+              <Flex gap={4} key={i}>
+                {row.audioFile && (
+                  <PlayButton
+                    filepath={`/audio/particles/${group}/${row.audioFile}.mp3`}
+                  />
+                )}
+                {val}
+              </Flex>
+            ))}
+          </Flex>
+        ),
         header: "Oneida",
       },
       {
@@ -38,11 +52,11 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         ) => (
           <Flex direction="column" gap={4}>
             {(examples ?? []).map((ex, i) => (
-              <Flex direction="column" gap={0} key={i}>
-                <Text>
-                  <b>{ex.oneida}</b>
+              <Flex direction="column" gap={2} key={i}>
+                <Text>{ex.oneida}</Text>
+                <Text variant="bodyS">
+                  <i>{ex.en}</i>
                 </Text>
-                <Text>{ex.en}</Text>
               </Flex>
             ))}
           </Flex>
@@ -57,7 +71,7 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
     if (!group) {
       return particleList;
     }
-    const mapping: Record<ParticlesGroup, string[]> = {
+    const mapping: Record<ParticlesGroup, Array<string | string[]>> = {
       module01: [
         "just_like",
         "very_much",
@@ -104,15 +118,15 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
       ],
       module02: [
         "everyone",
-        "all_of_us",
+        "you_all_and_i",
         "they_and_i",
-        "all_yall",
-        "them_males",
-        "them_females",
+        "all_of_you",
+        "all_of_them_males",
+        "all_of_them_females",
         "that_2",
         "anything",
         "anyone",
-        "more_than",
+        "greater_than",
         "less_than",
         "just_only",
         "it_is_the_same",
@@ -126,17 +140,17 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "and_then",
         "before",
         "because",
-        "length_of_time",
-        "short_length_of_time",
+        "a_length_of_time",
+        "a_short_length_of_time",
         "now",
         "never",
-        "thanks_much",
-        "how_is_it_going",
+        "thanks",
+        "hows_it_going",
         "together",
         "different",
         "so",
         "until",
-        "acknowledgement",
+        "yo",
         "maybe",
       ],
       module04: [
@@ -149,17 +163,19 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "somewhere",
         "there",
         "when",
-        "when_2",
-        "when_3",
+        "when_prefix",
+        "when_nv",
         "where_2",
         "where_3",
+        "where_4",
+        "where_5",
         "hopefully",
         "it_is_important",
         "must",
         "necessary",
         "how_many_things",
-        "how_many_of_us_inclusive",
-        "how_many_of_us_exclusive",
+        "how_many_of_us",
+        "how_many_of_they_and_i",
         "how_many_of_yall",
         "how_many_of_them_males",
         "how_many_of_them_females",
@@ -178,7 +194,16 @@ export function ParticlesTable({ group }: ParticlesTableProps) {
         "in_a_while",
       ],
     };
-    return mapping[group].map((key) => particleList.find((p) => p.key === key));
+
+    return mapping[group].map((key) => {
+      const result = particleList.find((p) => p.key === key);
+      return {
+        ...result,
+        audioFile: ["module02", "module03", "module04"].includes(group)
+          ? key
+          : undefined,
+      };
+    });
   }, [group]);
 
   // @ts-expect-error To be addressed in LO-12

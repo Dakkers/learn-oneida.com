@@ -16,7 +16,7 @@ export const DATA_MONTHS = [
   },
   {
     en: "February",
-    translation: "Tshaʔtekohsélhaʔ",
+    translation: "Tshaʔtekohsélha̲ʔ",
     literal: "Half of winter",
     key: "feb",
   },
@@ -28,7 +28,7 @@ export const DATA_MONTHS = [
   },
   {
     en: "April",
-    translation: "Wahsakayu·té·seʔ",
+    translation: "Wahsakayu·té·se̲ʔ",
     literal: "It's thundering",
     key: "apr",
   },
@@ -36,11 +36,11 @@ export const DATA_MONTHS = [
   { en: "June", translation: "Awʌhihteʔ", literal: " Strawberry", key: "jun" },
   {
     en: "July",
-    translation: "Ohyótsheliʔ",
+    translation: "Ohyótsheli̲ʔ",
     literal: "Green string bean",
     key: "jul",
   },
-  { en: "August", translation: "Onʌ́staseʔ", literal: "New corn", key: "aug" },
+  { en: "August", translation: "Onʌ́stase̲ʔ", literal: "New corn", key: "aug" },
   {
     en: "September",
     translation: "Yeyʌthókwas",
@@ -55,7 +55,7 @@ export const DATA_MONTHS = [
   },
   {
     en: "November",
-    translation: "Tehutʌnuhela·túheʔ",
+    translation: "Tehutʌnuhela·túhe̲ʔ",
     literal: "They give thanks",
     key: "nov",
   },

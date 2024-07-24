@@ -27,7 +27,7 @@ export const particleList = [
     en: "everyone, everybody, everything",
     examples: [
       {
-        oneida: "Yah akwekú teʔsanúhte̲ʔ",
+        oneida: "Yáh akwekú teʔsanúhte̲ʔ",
         en: "You don't know everything.",
       },
       {
@@ -274,7 +274,7 @@ export const particleList = [
     en: "something else, anything else",
     examples: [
       {
-        oneida: "Yah náhteʔ ó·ya teyakonúhteʔ",
+        oneida: "Yáh náhteʔ ó·ya teyakonúhteʔ",
         en: "She doesn't know anything else.",
       },
     ],
@@ -365,7 +365,7 @@ export const particleList = [
     en: "if",
     examples: [
       {
-        oneida: "Yah teʔwakanúhteʔ tá·t Kwítel luwa·yáts né·n laulhá·",
+        oneida: "Yáh teʔwakanúhteʔ tá·t Kwítel luwa·yáts né·n laulhá·",
         en: "I don't know if his name is Peter.",
       },
     ],
@@ -377,7 +377,7 @@ export const particleList = [
     en: "or",
     examples: [
       {
-        oneida: "Yah teʔwakanúhteʔ tá·tkʌ Kwítel tá·thuni Tshyalé luwa·yáts",
+        oneida: "Yáh teʔwakanúhteʔ tá·tkʌ Kwítel tá·thuni Tshyalé luwa·yáts",
         en: "I don't know if his name is Peter or Charlie.",
       },
     ],
@@ -405,7 +405,7 @@ export const particleList = [
     en: "what (it is)",
     examples: [
       {
-        oneida: "Yah teʔwakanúhteʔ tsiʔ náhteʔ snú·wehse̲ʔ",
+        oneida: "Yáh teʔwakanúhteʔ tsiʔ náhteʔ snú·wehse̲ʔ",
         en: "I don't know what you like.",
       },
     ],
@@ -436,7 +436,7 @@ export const particleList = [
     en: "not that much, not so much",
     examples: [
       {
-        oneida: "Yah kiʔ sótsi tehetshnú·wehseʔ, wáhi",
+        oneida: "Yáh kiʔ sótsi tehetshnú·wehseʔ, wáhi",
         en: "You don't like him that much, do you?",
       },
     ],
@@ -448,7 +448,7 @@ export const particleList = [
     en: "no one, nobody",
     examples: [
       {
-        oneida: "Yah úhkaʔ tehuwanú·wehseʔ thikʌ́ lanikʌhtlúha",
+        oneida: "Yáh úhkaʔ tehuwanú·wehseʔ thikʌ́ lanikʌhtlúha",
         en: "No one likes that young man.",
       },
     ],
@@ -463,15 +463,15 @@ export const particleList = [
 
   {
     key: "not_true",
-    oneida: "Yah ... té·kʌ",
+    oneida: "Yáh ... té·kʌ",
     en: "not (a fact), not (true)",
     examples: [
       {
-        oneida: "Yah to·kʌ́skeʔ té·kʌ",
+        oneida: "Yáh to·kʌ́skeʔ té·kʌ",
         en: "That's not true.",
       },
       {
-        oneida: "Yah Wali té·kʌ",
+        oneida: "Yáh Wali té·kʌ",
         en: "That's not Mary.",
       },
     ],
@@ -534,7 +534,7 @@ export const particleList = [
   },
 
   {
-    key: "length_of_time",
+    key: "a_length_of_time",
     oneida: "tsiʔ náheʔ",
     en: "(a length of time)",
     examples: [
@@ -546,7 +546,7 @@ export const particleList = [
   },
 
   {
-    key: "short_length_of_time",
+    key: "a_short_length_of_time",
     oneida: "kʌʔ naheʔ",
     en: "a short length of time",
     examples: [
@@ -582,7 +582,7 @@ export const particleList = [
   },
 
   {
-    key: "thanks_much",
+    key: "thanks",
     oneida: "yawʌʔkó·",
     en: "Thank you",
     examples: [
@@ -594,7 +594,7 @@ export const particleList = [
   },
 
   {
-    key: "how_is_it_going",
+    key: "hows_it_going",
     oneida: "Oh niyotuháti",
     en: "How is it going?",
     examples: [
@@ -654,7 +654,7 @@ export const particleList = [
   },
 
   {
-    key: "acknowledgement",
+    key: "yo",
     oneida: "yo",
     en: "(an acknowledgement)",
     examples: [],
@@ -777,7 +777,7 @@ export const particleList = [
   },
 
   {
-    key: "when_2",
+    key: "when_prefix",
     oneida: "tshi-",
     en: "when",
     examples: [
@@ -789,7 +789,7 @@ export const particleList = [
   },
 
   {
-    key: "when_3",
+    key: "when_nv",
     oneida: "nʌ",
     en: "when",
     examples: [
@@ -802,7 +802,7 @@ export const particleList = [
 
   {
     key: "where_2",
-    oneida: "tsha nú· / tsiʔ nú· / thó nú·",
+    oneida: "tsha nú·",
     en: "where",
     examples: [
       {
@@ -814,7 +814,19 @@ export const particleList = [
 
   {
     key: "where_3",
-    oneida: "tshaʔ nú· / kátshaʔ nú·",
+    oneida: "tsiʔ nú·",
+    en: "where",
+  },
+
+  {
+    key: "where_4",
+    oneida: "thó nú·",
+    en: "where",
+  },
+
+  {
+    key: "where_5",
+    oneida: "kátshaʔ nú·",
     en: "where?",
     examples: [
       {
@@ -874,7 +886,7 @@ export const particleList = [
 
   {
     key: "how_many_things",
-    oneida: "Tó· ni·kúˍ",
+    oneida: "Tó· ni·kú̲",
     en: "How many things / objects?",
     examples: [
       {
@@ -885,7 +897,7 @@ export const particleList = [
   },
 
   {
-    key: "how_many_of_us_inclusive",
+    key: "how_many_of_us",
     oneida: "Tó· nitwatíˍ",
     en: "How many of us? (all of you & I)",
     examples: [
@@ -897,7 +909,7 @@ export const particleList = [
   },
 
   {
-    key: "how_many_of_us_exclusive",
+    key: "how_many_of_they_and_i",
     oneida: "Tó· niyakwatíˍ",
     en: "How many of us? (they & I, not you)",
     examples: [
@@ -946,23 +958,23 @@ export const particleList = [
 
   {
     key: "everyone",
-    oneida: "akwekúˍ",
+    oneida: "akwekú̲",
     en: "everyone, everything",
     examples: [
       {
-        oneida: "Akwekú knú·wehseʔ",
+        oneida: "Akwekú knú·wehse̲ʔ",
         en: "I like everything.",
       },
     ],
   },
 
   {
-    key: "all_of_us",
-    oneida: "twakwekúˍ",
+    key: "you_all_and_i",
+    oneida: "twakwekú̲",
     en: "you all and I",
     examples: [
       {
-        oneida: "Twakwekú yethiyʌtelí",
+        oneida: "Twakwekú yethiyʌtelíˍ",
         en: "We all know her.",
       },
     ],
@@ -970,47 +982,47 @@ export const particleList = [
 
   {
     key: "they_and_i",
-    oneida: "yakwakwekúˍ",
+    oneida: "yakwakwekú̲",
     en: "they and I",
     examples: [
       {
-        oneida: "Yakwakwekú yakwanú·wehseʔ",
+        oneida: "Yakwakwekú yakwanú·wehse̲ʔ",
         en: "They all & I like it.",
       },
     ],
   },
 
   {
-    key: "all_yall",
-    oneida: "swakwekúˍ",
+    key: "all_of_you",
+    oneida: "swakwekú̲",
     en: "all of you",
     examples: [
       {
-        oneida: "Swakwekú swanú·wehseʔ",
+        oneida: "Swakwekú swanú·wehse̲ʔ",
         en: "You all like it.",
       },
     ],
   },
 
   {
-    key: "them_males",
-    oneida: "latikwekúˍ",
+    key: "all_of_them_males",
+    oneida: "latikwekú̲",
     en: "all of them (males, males/females)",
     examples: [
       {
-        oneida: "Latikwekú yuknú·wehseʔ",
+        oneida: "Latikwekú yuknú·wehse̲ʔ",
         en: "They Ms all like me.",
       },
     ],
   },
 
   {
-    key: "them_females",
-    oneida: "kutikwekúˍ",
+    key: "all_of_them_females",
+    oneida: "kutikwekú̲",
     en: "all of them (females)",
     examples: [
       {
-        oneida: "Kutikwekú kutinú·wehse",
+        oneida: "Kutikwekú kutinú·wehse̲ʔ",
         en: "They Fs all like it.",
       },
     ],
@@ -1022,11 +1034,11 @@ export const particleList = [
     en: "that, there, that thing",
     examples: [
       {
-        oneida: "Thó ní· knú·wehseʔ",
+        oneida: "Thó ní· knú·wehse̲ʔ",
         en: "That's what I like.",
       },
       {
-        oneida: "Yáh thó tehokhstʌ ha",
+        oneida: "Yáh thó tehokhstʌ́ha",
         en: "He's not that old.",
       },
     ],
@@ -1034,11 +1046,11 @@ export const particleList = [
 
   {
     key: "anything",
-    oneida: "átiʔ náhteʔ",
+    oneida: "átiʔ náhte̲ʔ",
     en: "anything, whatever",
     examples: [
       {
-        oneida: "Áti náhteʔ ni·sé· snú·wehseʔ, né· ú·ni knú·wehseʔ",
+        oneida: "Áti náhteʔ ni·sé· snú·wehseʔ, né· ú·ni knú·wehse̲ʔ",
         en: "Whatever you like, I also like.",
       },
     ],
@@ -1050,19 +1062,19 @@ export const particleList = [
     en: "anyone, anybody, whoever",
     examples: [
       {
-        oneida: "Khenú·wehseʔ kwáh áti úhkaʔ isé· shenú·wehseʔ",
+        oneida: "Khenú·wehseʔ kwáh áti úhkaʔ isé· shenú·wehse̲ʔ",
         en: "I like whoever you like.",
       },
     ],
   },
 
   {
-    key: "more_than",
+    key: "greater_than",
     oneida: "íhsi nú·",
     en: "on the other side (of something), more than",
     examples: [
       {
-        oneida: "Íhsi nú· oyé·li naʔtehaohsliyá·ku",
+        oneida: "Íhsi nú· oyé·li naʔtehaohsliyá·ku̲",
         en: "He's more than ten years old.",
       },
     ],
@@ -1074,7 +1086,7 @@ export const particleList = [
     en: "on this side (of something), less than",
     examples: [
       {
-        oneida: "Kaló né· oyé·li naʔtehaohsliyá·ku",
+        oneida: "Kaló né· oyé·li naʔtehaohsliyá·ku̲",
         en: "He's less than ten years old.",
       },
     ],
@@ -1086,7 +1098,7 @@ export const particleList = [
     en: "just / only",
     examples: [
       {
-        oneida: "Né· ok oyé·li naʔtehaohsliyá·ku",
+        oneida: "Né· ok oyé·li naʔtehaohsliyá·ku̲",
         en: "He's just ten years old.",
       },
     ],
@@ -1098,7 +1110,7 @@ export const particleList = [
     en: "it is the same, they are the same",
     examples: [
       {
-        oneida: "Né· kʌ́ tshá·kat kaʔi·kʌ",
+        oneida: "Né· kʌ́ tshá·kat kaʔi·kʌ́ˍ",
         en: "Are these (things) the same?",
       },
     ],
@@ -1106,7 +1118,7 @@ export const particleList = [
 
   {
     key: "it_is_different",
-    oneida: "tekyattíhʌ",
+    oneida: "tekyattíhʌ̲",
     en: "it is different, it is uneven",
     examples: [
       {
@@ -1118,11 +1130,11 @@ export const particleList = [
 
   {
     key: "both",
-    oneida: "tetsyalú",
+    oneida: "tetsyalú̲",
     en: "both, either, neither",
     examples: [
       {
-        oneida: "Tetsyalú ni· knú·wehseʔ kaʔi·kʌ",
+        oneida: "Tetsyalú ni· knú·wehseʔ kaʔi·kʌ́ˍ",
         en: "I like both of these.",
       },
     ],
@@ -1134,7 +1146,7 @@ export const particleList = [
     en: "almost",
     examples: [
       {
-        oneida: "Thóha oyé·li naʔtehaohsliyá·ku",
+        oneida: "Thóha oyé·li naʔtehaohsliyá·ku̲",
         en: "He's almost ten years old.",
       },
     ],
@@ -1146,7 +1158,7 @@ export const particleList = [
     en: "How many/much?",
     examples: [
       {
-        oneida: "Tó· nisahwístayʌʔ",
+        oneida: "Tó· nisahwístayʌ̲ʔ",
         en: "How much money do you have?",
       },
     ],
@@ -1168,14 +1180,14 @@ export const particleList = [
 
   {
     key: "long_time",
-    oneida: "wahu·níseʔ",
+    oneida: "wahu·níse̲ʔ",
     en: "a long time",
     examples: [],
   },
 
   {
     key: "such_a_long_time",
-    oneida: "tsiʔ niwahu·níseʔ",
+    oneida: "tsiʔ niwahu·níse̲ʔ",
     en: "it was such a long time",
     examples: [],
   },

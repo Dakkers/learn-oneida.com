@@ -11,8 +11,8 @@ const simpleExamples = [
   ["7:00 a.m.", "tsyá·tak niyohwistá·e astehtsi"],
   ["11:00 a.m.", "úska yawa·lé niyohwistá·e astehtsi"],
   ["1:00 p.m.", "úska niyohwistá·e yotukóhtu ʌ́ti"],
-  ["7:00 p.m.", "tsyá·tak niyohwistá·e yotukóhtu ʌ́ti"],
-  ["11:00 p.m.", "úska yawa·lé niyohwistá·e yotukóhtu ʌ́ti"],
+  ["4:00 p.m.", "kayé niyohwistá·e yotukóhtu ʌ́ti"],
+  ["5:00 p.m.", "wísk yawa·lé niyohwistá·e yotukóhtu ʌ́ti"],
 ].map(([en, translation]) => ({ en, translation }));
 
 const minutesExamples = [
@@ -74,9 +74,8 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </List>
       <Text>
         So if someone asks you what time it is, and it&lsquo;s midnight or noon,
-        you can simply say
-        <b>ahsútha</b> or <b>ʌtí</b>, respectively. Now, let&lsquo;s look at a
-        couple simple examples:
+        you can simply say <b>ahsútha</b> or <b>ʌtí</b>, respectively. Now,
+        let&lsquo;s look at a couple simple examples:
       </Text>
 
       <TableWrapper
