@@ -7,7 +7,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
@@ -15,7 +15,7 @@ import {
   BreakdownArray,
   BreakdownType,
   TextBreakdown,
-} from "~/components/TextBreakdown";
+} from "@ukwehuwehneke/language-components";
 import iheyuData from "~/data/iheyu";
 import smallData from "~/data/module05/kʌʔ_ni-a";
 import { HeightWeightArticle } from "~/components/articles/Weight";

@@ -1,9 +1,15 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
+import {
+  BreakdownArray,
+  TextBreakdown,
+} from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 export function RelationshipsArticle({ level = 1 }: ArticleProps) {
@@ -240,7 +246,7 @@ function OldManWomanTable({ level = 2 }: ArticleProps) {
       <TableWrapper
         columns={[
           // @ts-expect-error To be addressed in LO-12
-          ...TableWrapper.columnsPronouns,
+          ...TableWrapper.columnsOneidaPronouns,
           {
             accessorKey: "oldMan",
             // @ts-expect-error To be addressed in LO-12
@@ -328,7 +334,7 @@ function BoyfriendGirlfriendTable({ level = 2 }: ArticleProps) {
       <TableWrapper
         columns={[
           // @ts-expect-error To be addressed in LO-12
-          ...TableWrapper.columnsPronouns,
+          ...TableWrapper.columnsOneidaPronouns,
           {
             accessorKey: "boyfriend",
             // @ts-expect-error To be addressed in LO-12

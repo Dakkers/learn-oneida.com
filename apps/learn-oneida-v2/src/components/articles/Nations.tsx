@@ -3,7 +3,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import { Pronoun } from "~/utils";
 
@@ -12,80 +12,80 @@ const allowedPronouns: Pronoun[] = ["i", "u", "m", "f"];
 const NATIONS_LIST = [
   {
     en: "Mohawk",
-    on: "Kanyʌʔkeha·ká·",
-    translation: "flint",
+    translation: "Kanyʌʔkeha·ká·",
+    literal: "flint",
     key: "mohawk",
   },
   {
     en: "Oneida",
-    on: "Onʌyoʔteʔa·ká·",
-    translation: "standing stone",
+    translation: "Onʌyoʔteʔa·ká·",
+    literal: "standing stone",
     key: "oneida",
   },
   {
     en: "Onondaga",
-    on: "Onutaʔkeha·ká·",
-    translation: "hills",
+    translation: "Onutaʔkeha·ká·",
+    literal: "hills",
     key: "onondaga",
   },
   {
     en: "Cayuga",
-    on: "Kayukeʔa·ká·",
-    translation: "great swamp / pipe",
+    translation: "Kayukeʔa·ká·",
+    literal: "great swamp / pipe",
     key: "cayuga",
   },
   {
     en: "Seneca",
-    on: "Tsiʔtwanaʔa·ká·",
-    translation: "great hill / mountain",
+    translation: "Tsiʔtwanaʔa·ká·",
+    literal: "great hill / mountain",
     key: "seneca",
   },
   {
     en: "Tuscarora",
-    on: "Taskaló·lu",
-    translation: "hemp / shirt",
+    translation: "Taskaló·lu",
+    literal: "hemp / shirt",
     key: "tuscarora",
   },
   {
     en: "Ojibway",
-    on: "Latitwaʔkánhaʔ",
-    translation: "(unknown)",
+    translation: "Latitwaʔkánhaʔ",
+    literal: "(unknown)",
     key: "ojibway",
   },
   {
     en: "Algonquin",
-    on: "Latilu·táks",
-    translation: "They eat trees",
+    translation: "Latilu·táks",
+    literal: "They eat trees",
     key: "algonquin",
   },
   {
     en: "Cree",
-    on: "Kalhakuhlonú",
-    translation: "People of the forest (?)",
+    translation: "Kalhakuhlonú",
+    literal: "People of the forest (?)",
     key: "cree",
   },
   {
     en: "Huron",
-    on: "Thotinutáthe",
-    translation: "They're making buttermilk",
+    translation: "Thotinutáthe",
+    literal: "They're making buttermilk",
     key: "huron",
   },
   {
     en: "Inuit",
-    on: "Otholeʔkehlo·nú",
-    translation: "People of the north",
+    translation: "Otholeʔkehlo·nú",
+    literal: "People of the north",
     key: "inuit",
   },
   {
     en: "American",
-    on: "Ostohlonuʔkeha·ká",
-    translation: "(unknown)",
+    translation: "Ostohlonuʔkeha·ká",
+    literal: "(unknown)",
     key: "american",
   },
   {
     en: "French-Canadian",
-    on: "Walé·lu",
-    translation: "(unknown)",
+    translation: "Walé·lu",
+    literal: "(unknown)",
     key: "french-canadian",
   },
 ];
@@ -124,9 +124,9 @@ export function NationsArticle({ level = 1 }: ArticleProps) {
       </Text>
       <TableWrapper
         columns={[
-          ...TableWrapper.columnsEnglishOneida,
+          ...TableWrapper.columnsEnglishTranslation,
           {
-            accessorKey: "translation",
+            accessorKey: "literal",
             header: "Literal translation",
           },
         ]}

@@ -1,10 +1,14 @@
 "use client";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
 import { TableWrapper } from "@/components/TableWrapper";
-import { BreakdownArray, BreakdownType, TextBreakdown } from "../TextBreakdown";
+import {
+  BreakdownArray,
+  BreakdownType,
+  TextBreakdown,
+} from "@ukwehuwehneke/language-components";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {

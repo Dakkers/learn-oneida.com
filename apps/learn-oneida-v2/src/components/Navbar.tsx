@@ -14,7 +14,14 @@ import {
   navigationMenuTriggerStyle,
 } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
-import { BookOpenTextIcon, InfoIcon, MenuIcon, NewspaperIcon, PencilIcon, WrenchIcon } from "lucide-react";
+import {
+  BookOpenTextIcon,
+  InfoIcon,
+  MenuIcon,
+  NewspaperIcon,
+  PencilIcon,
+  WrenchIcon,
+} from "lucide-react";
 
 const moduleNumbers = new Array(6).fill(0).map((_, i) => (i + 1).toString());
 
@@ -90,7 +97,7 @@ function NavbarMobile() {
       <Flex justify="center">
         <NavigationMenu>
           <NavigationMenuList className="flex gap-2">
-            {items.map(({ icon: Icon, ...item}, i) => (
+            {items.map(({ icon: Icon, ...item }, i) => (
               <NavigationMenuItem key={i}>
                 <NavigationMenuLink
                   className={navigationMenuTriggerStyle(true)}

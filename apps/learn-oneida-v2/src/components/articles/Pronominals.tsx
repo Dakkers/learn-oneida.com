@@ -1,6 +1,9 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import redPronominalsJson from "../../data/red-pronominals.json";
 import bluePronominalsJson from "../../data/blue-pronominals.json";
@@ -27,15 +30,11 @@ import {
   pronouns,
 } from "~/utils";
 import { Pronominal, PronominalColor } from "../Pronominal";
-import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
+import {
+  BreakdownArray,
+  TextBreakdown,
+} from "@ukwehuwehneke/language-components";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
-
-export const DATA_SEASONS = [
-  { en: "Spring", on: ["kukwi·té·", "kukwité·ne"], key: "spring" },
-  { en: "Summer", on: "kwaʔkʌnhé·ke", key: "summer" },
-  { en: "Autumn", on: "kanʌná·ke", key: "fall" },
-  { en: "Winter", on: "kohslá·ke", key: "winter" },
-];
 
 export function PronominalsArticle({ level = 1 }: ArticleProps) {
   return (
@@ -166,9 +165,8 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         <Letter>y</Letter>
         and <Letter>i</Letter>. The <Letter>t</Letter> disappears and is
         replaced by <Letter>h</Letter> when anything is attached in front of the
-        prefix. Example:
-        <b>tsyʌtelíˍ</b> and <b>yah tehsyʌtelíˍ</b>; <b>tsí·tlu̲ʔ</b> and{" "}
-        <b>yah tehsí·tlu̲ʔ</b>.
+        prefix. Example: <b>tsyʌtelíˍ</b> and <b>yah tehsyʌtelíˍ</b>;{" "}
+        <b>tsí·tlu̲ʔ</b> and <b>yah tehsí·tlu̲ʔ</b>.
       </Text>
 
       <Text variant="labelL">Exception 6</Text>

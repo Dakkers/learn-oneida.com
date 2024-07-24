@@ -1,7 +1,7 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 const LIST = [
   ["attic, in the", "tkanʌstó·teʔ"],
@@ -19,7 +19,7 @@ const LIST = [
   ["yard, in the", "tewatʌʔʌlá·lu·heʔ"],
   ["yard, in the back", "onakʌ tyohutsyote"],
   ["yard, in the front ", "ohʌtu tyohuysyote"],
-].map(([en, on]) => ({ en, on }));
+].map(([en, translation]) => ({ en, translation }));
 
 export function AroundTheHouseArticle({ level = 1 }: { level?: 1 | 2 }) {
   return (
@@ -27,7 +27,10 @@ export function AroundTheHouseArticle({ level = 1 }: { level?: 1 | 2 }) {
       <SectionHeading id="around-the-house" level={level}>
         Around the house
       </SectionHeading>
-      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={LIST} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={LIST}
+      />
     </Flex>
   );
 }

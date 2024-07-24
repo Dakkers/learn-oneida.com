@@ -1,4 +1,4 @@
-import { unwhisperWord } from "./words";
+import { unwhisperWord } from "@ukwehuwehneke/language-components";
 
 export function translateNumber(value: string): string {
   if (!value) {

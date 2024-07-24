@@ -11,8 +11,8 @@ import {
   BreakdownArray,
   BreakdownType,
   TextBreakdown,
-} from "~/components/TextBreakdown";
-import { SectionHeading } from "~/components/SectionHeading";
+} from "@ukwehuwehneke/language-components";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { GoodPeopleBadPeopleArticle } from "~/components/articles/GoodPeopleBadPeople";
 import { RepetitiveFeatureArticle } from "~/components/articles/RepetitiveFeature";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";

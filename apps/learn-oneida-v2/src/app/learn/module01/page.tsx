@@ -13,7 +13,7 @@ import { PeopleArticle } from "~/components/articles/People";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Letter } from "~/components/Letter";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { PronominalsArticle } from "~/components/articles/Pronominals";

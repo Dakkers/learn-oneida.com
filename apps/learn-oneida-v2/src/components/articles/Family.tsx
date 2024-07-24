@@ -44,11 +44,17 @@ import friendsJson from "../../data/family/plural/friends.json";
 
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
+import {
+  BreakdownArray,
+  TextBreakdown,
+} from "@ukwehuwehneke/language-components";
 import { PRONOUN_MAP_EN_POSSESSIVE, type Pronoun } from "~/utils";
 import { TableOfContents as TOC } from "../TableOfContents";
 import { Letter } from "../Letter";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 
 export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
   return (

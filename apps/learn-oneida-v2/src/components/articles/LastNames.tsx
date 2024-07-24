@@ -1,7 +1,10 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 
@@ -29,7 +32,7 @@ const examplesList = [
     "McCartney, Lennon, Harrison & Starr are the last names of the Beatles",
     "McCartney, Lennon, Harrison & Starr né· tehatihsʌná·seleʔ Beatles",
   ],
-].map(TableWrapper.mapEnglishOneida);
+].map(TableWrapper.mapEnglishAndTranslation);
 
 export function LastNamesArticle({ level = 1 }: ArticleProps) {
   return (
@@ -46,7 +49,7 @@ export function LastNamesArticle({ level = 1 }: ArticleProps) {
         Examples
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={examplesList}
       />
     </Flex>
