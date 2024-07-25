@@ -74,9 +74,8 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </List>
       <Text>
         So if someone asks you what time it is, and it&lsquo;s midnight or noon,
-        you can simply say
-        <b>ahsútha</b> or <b>ʌtí</b>, respectively. Now, let&lsquo;s look at a
-        couple simple examples:
+        you can simply say <b>ahsútha</b> or <b>ʌtí</b>, respectively. Now,
+        let&lsquo;s look at a couple simple examples:
       </Text>
 
       <TableWrapper

@@ -7,7 +7,6 @@ import {
   SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
-import { PlayIcon } from "lucide-react";
 import { arrayify } from "@/utils";
 
 export function TimesOfDayArticle({ level = 1 }: ArticleProps) {

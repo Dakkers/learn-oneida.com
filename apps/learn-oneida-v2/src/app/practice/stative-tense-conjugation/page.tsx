@@ -40,7 +40,7 @@ export default function PracticeTenseConjugation() {
   const verbOptions = React.useMemo(
     () =>
       createModule5VerbsList().map((datum) => ({
-        label: `${arrayify(datum.root)[0]} (${datum.en})`,
+        label: `${arrayify(datum.root)[0]}`,
         value: datum.key,
       })),
     [],
