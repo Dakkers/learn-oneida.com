@@ -5,167 +5,167 @@ const data: ParadigmData = {
   phrases: [
     {
       pronoun: "i",
-      phrase: "kúnheʔ",
+      phrase: "kúnhe̲ʔ",
       breakdown: [
         {
           text: "k",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "u",
-      phrase: "súnheʔ",
+      phrase: "súnhe̲ʔ",
       breakdown: [
         {
           text: "s",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "m",
-      phrase: "lúnheʔ",
+      phrase: "lúnhe̲ʔ",
       breakdown: [
         {
           text: "l",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "f",
-      phrase: "yakúnheʔ",
+      phrase: "yakúnhe̲ʔ",
       breakdown: [
         {
           text: "yak",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "it",
-      phrase: "yúnheʔ",
+      phrase: "yúnhe̲ʔ",
       breakdown: [
         {
           text: "y",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "uni",
-      phrase: "tnúnheʔ",
+      phrase: "tnúnhe̲ʔ",
       breakdown: [
         {
           text: "tn",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "soni",
-      phrase: "yaknúnheʔ",
+      phrase: "yaknúnhe̲ʔ",
       breakdown: [
         {
           text: "yakn",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "u2",
-      phrase: "snúnheʔ",
+      phrase: "snúnhe̲ʔ",
       breakdown: [
         {
           text: "sn",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "2m",
-      phrase: "núnheʔ",
+      phrase: "núnhe̲ʔ",
       breakdown: [
         {
           text: "n",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "2f",
-      phrase: "knúnheʔ",
+      phrase: "knúnhe̲ʔ",
       breakdown: [
         {
           text: "kn",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "us",
-      phrase: "tyúnheʔ",
+      phrase: "tyúnhe̲ʔ",
       breakdown: [
         {
           text: "ty",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "theyni",
-      phrase: "yakyúnheʔ",
+      phrase: "yakyúnhe̲ʔ",
       breakdown: [
         {
           text: "yaky",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "yall",
-      phrase: "tsyúnheʔ",
+      phrase: "tsyúnhe̲ʔ",
       breakdown: [
         {
           text: "tsy",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "ms",
-      phrase: "lʌnúnheʔ",
+      phrase: "lʌnúnhe̲ʔ",
       breakdown: [
         {
           text: "lʌn",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
     {
       pronoun: "fs",
-      phrase: "kunúnheʔ",
+      phrase: "kunúnhe̲ʔ",
       breakdown: [
         {
           text: "kun",
           type: "PR",
         },
-        { text: "únheʔ" },
+        { text: "únhe̲ʔ" },
       ],
     },
   ],
