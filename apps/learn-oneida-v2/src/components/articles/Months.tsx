@@ -33,7 +33,7 @@ export const DATA_MONTHS = [
     key: "apr",
   },
   { en: "May", translation: "Latiyʌ́thos", literal: "They plant", key: "may" },
-  { en: "June", translation: "Awʌhihteʔ", literal: " Strawberry", key: "jun" },
+  { en: "June", translation: "Awʌhihte̲ʔ", literal: "Strawberry", key: "jun" },
   {
     en: "July",
     translation: "Ohyótsheli̲ʔ",
@@ -49,7 +49,7 @@ export const DATA_MONTHS = [
   },
   {
     en: "October",
-    translation: "Yutékhwayʌheʔ",
+    translation: "Yutékhwayʌhe̲ʔ",
     literal: "Someone stores food",
     key: "oct",
   },
@@ -84,13 +84,16 @@ export function MonthsArticle({ level = 1 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         columns={[
-          ...TableWrapper.columnsEnglishTranslation,
+          ...TableWrapper.columnsEnglishAudio,
           {
             accessorKey: "literal",
             header: "Literal translation",
           },
         ]}
-        data={DATA_MONTHS}
+        data={DATA_MONTHS.map((m) => ({
+          ...m,
+          audioFile: `module04/months/${m.en.toLowerCase()}.mp3`,
+        }))}
       />
 
       <SectionHeading
