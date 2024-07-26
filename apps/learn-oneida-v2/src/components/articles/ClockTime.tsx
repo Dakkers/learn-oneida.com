@@ -6,40 +6,61 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import { List } from "@ukwehuwehneke/ohutsya";
 
+const getAudioFolder = (name: string) => `module04/clock_time/${name}.mp3`;
+const mapUtil = ([en, translation, audioFile]: string[]) => ({
+  en,
+  translation,
+  audioFile: getAudioFolder(audioFile),
+});
+
 const simpleExamples = [
-  ["1:00 a.m.", "úska niyohwistá·e astéhtsiʔ"],
-  ["7:00 a.m.", "tsyá·tak niyohwistá·e astehtsi"],
-  ["11:00 a.m.", "úska yawa·lé niyohwistá·e astehtsi"],
-  ["1:00 p.m.", "úska niyohwistá·e yotukóhtu ʌ́ti"],
-  ["4:00 p.m.", "kayé niyohwistá·e yotukóhtu ʌ́ti"],
-  ["5:00 p.m.", "wísk yawa·lé niyohwistá·e yotukóhtu ʌ́ti"],
-].map(([en, translation]) => ({ en, translation }));
+  ["1:00 a.m.", "úska niyohwistá·e astéhtsi̲ʔ", "100_am"],
+  ["7:00 a.m.", "tsyá·tak niyohwistá·e astéhtsi̲ʔ", "700_am"],
+  ["11:00 a.m.", "úska yawa·lé niyohwistá·e astéhtsi̲ʔ", "1100_am"],
+  ["1:00 p.m.", "úska niyohwistá·e yotukóhtu ʌ́ti", "100_pm"],
+  ["4:00 p.m.", "kayé niyohwistá·e yotukóhtu ʌ́ti", "400_pm"],
+  ["5:00 p.m.", "wísk yawa·lé niyohwistá·e yotukóhtu ʌ́ti", "500_pm"],
+].map(mapUtil);
 
 const minutesExamples = [
-  ["2:05 a.m.", "wísk nikahí·kalake yotukóhtu tékni niyohwistá·e astéhtsiʔ"],
-  ["3:30 a.m.", "tshaʔtewahsʌnʌ́ áhsʌ niyohwistá·e astéhtsiʔ"],
-  ["4:50 a.m.", "oye·lí· nikahí·kalake tyono·lúhe wísk niyohwistá·e astéhtsiʔ"],
+  [
+    "2:05 a.m.",
+    "wísk nikahí·kalake yotukóhtu tékni niyohwistá·e astéhtsi̲ʔ",
+    "205_am",
+  ],
+  ["3:30 a.m.", "tshaʔtewahsʌnʌ́ áhsʌ niyohwistá·e astéhtsi̲ʔ", "330_am"],
+  [
+    "4:50 a.m.",
+    "oye·lí· nikahí·kalake tyono·lúhe wísk niyohwistá·e astéhtsi̲ʔ",
+    "450_am",
+  ],
   [
     "2:05 p.m.",
     "wísk nikahí·kalake yotukóhtu tékni niyohwistá·e yotukóhtu ʌ́ti",
+    "205_pm",
   ],
-  ["3:30 p.m.", "tshaʔtewahsʌnʌ́ áhsʌ niyohwistá·e yotukóhtu ʌ́ti"],
+  ["3:30 p.m.", "tshaʔtewahsʌnʌ́ áhsʌ niyohwistá·e yotukóhtu ʌ́ti", "330_pm"],
   [
     "5:50 p.m.",
     "oye·lí· nikahí·kalake tyono·lúhe wísk niyohwistá·e yotukóhtu ʌ́ti",
+    "550_pm",
   ],
-].map(([en, translation]) => ({ en, translation }));
+].map(mapUtil);
 
 const eveningExamples = [
-  ["8:00 p.m.", "téklu niyohwistá·e ʌyó·kalahweʔ"],
-  ["9:00 p.m.", "wátlu niyohwistá·e yoʔkaláshʌ"],
-  ["10:00 p.m.", "oye·lí· niyohwistá·e kwaʔashuté·ke"],
-].map(([en, translation]) => ({ en, translation }));
+  ["8:00 p.m.", "téklu niyohwistá·e ʌyó·kalahweʔ", "800_pm"],
+  ["9:00 p.m.", "wátlu niyohwistá·e yoʔkaláshʌ", "900_pm"],
+  ["10:00 p.m.", "oye·lí· niyohwistá·e kwaʔashuté·ke", "1000_pm"],
+].map(mapUtil);
 
 const lastExamples = [
-  ["2:05 p.m.", "ostúha yotukóhtu tékni niyohwistá·e yotukóhtu ʌ́ti"],
-  ["4:55 p.m", "nʌ́ kiʔ thóha wísk niyohwistá·e yotukóhtu ʌ́ti"],
-].map(([en, translation]) => ({ en, translation }));
+  [
+    "2:05 p.m.",
+    "ostúha yotukóhtu tékni niyohwistá·e yotukóhtu ʌ́ti",
+    "205_pm_ostuha",
+  ],
+  ["4:55 p.m.", "nʌ́ kiʔ thóha wísk niyohwistá·e yotukóhtu ʌ́ti", "455_pm"],
+].map(mapUtil);
 
 export function ClockTimeArticle({ level = 1 }: ArticleProps) {
   return (
@@ -59,7 +80,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
           midnight: <b>ahsútha</b>
         </List.Item>
         <List.Item>
-          morning: <b>astéhtsiʔ</b>
+          morning: <b>astéhtsi̲ʔ</b>
         </List.Item>
         <List.Item>
           before: <b>tyono·lúhe</b> OR <b>kalo tsiʔ niyo·lé·</b> OR{" "}
@@ -79,7 +100,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </Text>
 
       <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
+        columns={TableWrapper.columnsEnglishAudio}
         data={simpleExamples}
       />
 
@@ -103,14 +124,14 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       <Text>If this is confusing, take a look at the examples below.</Text>
 
       <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
+        columns={TableWrapper.columnsEnglishAudio}
         data={minutesExamples}
       />
 
       <Text>To make things even more confusing, you may instead hear:</Text>
 
       <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
+        columns={TableWrapper.columnsEnglishAudio}
         data={eveningExamples}
       />
 
@@ -133,7 +154,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </Text>
 
       <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
+        columns={TableWrapper.columnsEnglishAudio}
         data={lastExamples}
       />
     </Flex>

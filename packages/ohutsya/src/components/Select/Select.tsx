@@ -3,6 +3,7 @@ import { useControlStyles } from "../../design/controlStyles";
 import { cn } from "../../utils";
 
 export interface SelectProps {
+  disabled?: boolean;
   label?: string;
   onChange: (value: string) => void;
   options: Array<{
@@ -12,19 +13,35 @@ export interface SelectProps {
   value: string;
 }
 
-export function Select({ label, onChange, options, value }: SelectProps) {
-  const styles = useControlStyles();
+export function Select({
+  disabled = false,
+  label,
+  onChange,
+  options,
+  value,
+}: SelectProps) {
+  const styles = useControlStyles({ disabled });
 
   return (
     <FormElement label={label}>
       <select
+        aria-disabled={disabled ? "true" : undefined}
         className={cn(
           styles.baseStyle,
           styles.emphasisStyle,
           styles.sizeStyle,
           "px-2 rounded",
         )}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(e) => {
+          if (!disabled) {
+            onChange(e.target.value);
+          }
+        }}
+        onMouseDown={(e) => {
+          if (disabled) {
+            e.preventDefault();
+          }
+        }}
         value={value}
       >
         {options.map((opt) => (
