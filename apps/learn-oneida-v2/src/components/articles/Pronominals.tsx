@@ -101,13 +101,13 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         Subjective (Red) Pronominals
       </SectionHeading>
       <Text>
-        The Primitivetable below displays the full list of subjective (red)
-        pronominals. Each column represents a different &quot;stem&quot;, which
-        is the first letter in a root word. For example, the root word{" "}
-        <b>nuwehseʔ</b> (&quot;to like&quot;) starts with the letter
-        &quot;N&quot; which is a consonant, so we use the &quot;C-stem&quot;
-        column. The root word <b>attokhaʔ</b> (&quot;to be wise&quot;) starts
-        with the letter &quot;A&quot;, so we use the &quot;A-stem&quot; column.
+        The table below displays the full list of subjective (red) pronominals.
+        Each column represents a different &quot;stem&quot;, which is the first
+        letter in a root word. For example, the root word <b>nuwehseʔ</b>{" "}
+        (&quot;to like&quot;) starts with the letter &quot;N&quot; which is a
+        consonant, so we use the &quot;C-stem&quot; column. The root word{" "}
+        <b>attokhaʔ</b> (&quot;to be wise&quot;) starts with the letter
+        &quot;A&quot;, so we use the &quot;A-stem&quot; column.
       </Text>
       <Text>
         Attaching &quot;k&quot; to the start of the root word <b>nuwehseʔ</b>{" "}
@@ -116,8 +116,8 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         gives us <b>lattókhaʔ</b> wich means &quot;he is wise&quot;.
       </Text>
       <Text>
-        The small numbers in the Primitivetable cells represent exceptions —
-        Oneida is full of them!
+        The small numbers in the table cells represent exceptions — Oneida is
+        full of them!
       </Text>
       {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsPrimitiveTable color="red" data={redPronominalsJson} />
@@ -162,19 +162,18 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
       <Text variant="labelL">Exception 5</Text>
       <Text>
         The prefix <code>ts</code> is attached to all roots beginning with{" "}
-        <Letter>y</Letter>
-        and <Letter>i</Letter>. The <Letter>t</Letter> disappears and is
-        replaced by <Letter>h</Letter> when anything is attached in front of the
-        prefix. Example: <b>tsyʌtelíˍ</b> and <b>yah tehsyʌtelíˍ</b>;{" "}
-        <b>tsí·tlu̲ʔ</b> and <b>yah tehsí·tlu̲ʔ</b>.
+        <Letter>y</Letter> and <Letter>i</Letter>. The <Letter>t</Letter>{" "}
+        disappears and is replaced by <Letter>h</Letter> when anything is
+        attached in front of the prefix. Example: <b>tsyʌtelíˍ</b> and{" "}
+        <b>yah tehsyʌtelíˍ</b>; <b>tsí·tlu̲ʔ</b> and <b>yah tehsí·tlu̲ʔ</b>.
       </Text>
 
       <Text variant="labelL">Exception 6</Text>
       <Text>
         The prefix <Letter>it</Letter> is attached to all roots beginning with{" "}
-        <Letter>hs</Letter> and the <Letter>i</Letter>
-        disappears when anything is attached in front of the prefix. Example:{" "}
-        <b>íthsaʔas</b> and <b>yah tethsáʔas</b>
+        <Letter>hs</Letter> and the <Letter>i</Letter> disappears when anything
+        is attached in front of the prefix. Example: <b>íthsaʔas</b> and{" "}
+        <b>yah tethsáʔas</b>
       </Text>
 
       <Divider />
@@ -186,8 +185,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         Objective (blue) Pronominals
       </SectionHeading>
       <Text>
-        The Primitivetable below displays the full list of objective (blue)
-        pronominals.
+        The table below displays the full list of objective (blue) pronominals.
       </Text>
       {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsPrimitiveTable color="blue" data={bluePronominalsJson} />
@@ -199,8 +197,8 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         Purple Pronominals
       </SectionHeading>
       <Text>
-        The Primitivetable below displays the full list of purple pronominals.
-        These do not have an English counterpart.
+        The table below displays the full list of purple pronominals. These do
+        not have an English counterpart.
       </Text>
       {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsPrimitiveTable color="purple" data={purplePronominalsJson} />

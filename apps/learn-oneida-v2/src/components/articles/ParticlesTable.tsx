@@ -49,14 +49,22 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
             en: string;
             translation: string;
           }>,
+          row: any,
         ) => (
           <Flex direction="column" gap={4}>
             {(examples ?? []).map((ex, i) => (
-              <Flex direction="column" gap={2} key={i}>
-                <Text>{ex.translation}</Text>
-                <Text variant="bodyS">
-                  <i>{ex.en}</i>
-                </Text>
+              <Flex gap={2} align="start">
+                {["module01", "module02", "module03"].includes(group) && (
+                  <PlayButton
+                    filepath={`/audio/particle_examples/${group}/${row.key}${examples.length > 1 ? `_${i + 1}` : ""}.mp3`}
+                  />
+                )}
+                <Flex direction="column" gap={1} key={i}>
+                  <Text>{ex.translation}</Text>
+                  <Text variant="bodyS">
+                    <i>{ex.en}</i>
+                  </Text>
+                </Flex>
               </Flex>
             ))}
           </Flex>
@@ -128,7 +136,7 @@ export function getParticlesForGroup(group: ParticlesGroup) {
       "all_of_you",
       "all_of_them_males",
       "all_of_them_females",
-      "that_2",
+      "tho",
       "anything",
       "anyone",
       "greater_than",

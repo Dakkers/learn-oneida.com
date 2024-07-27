@@ -438,7 +438,7 @@ export const particleList = [
     en: "not that much, not so much",
     examples: [
       {
-        translation: "Yáh kiʔ sótsi tehetshnú·wehseʔ, wáhi",
+        translation: "Yáh kiʔ sótsi tehetshnú·wehseʔ, wáhi̲",
         en: "You don't like him that much, do you?",
       },
     ],
@@ -450,7 +450,7 @@ export const particleList = [
     en: "no one, nobody",
     examples: [
       {
-        translation: "Yáh úhkaʔ tehuwanú·wehseʔ thikʌ́ lanikʌhtlúha",
+        translation: "Yáh úhkaʔ tehuwanú·wehseʔ thikʌ́ lanikʌhtlúha̲",
         en: "No one likes that young man.",
       },
     ],
@@ -503,7 +503,7 @@ export const particleList = [
     en: "and then",
     examples: [
       {
-        oneida:
+        translation:
           "Yakonaskwayʌ·táhkweʔ takóhs khaleʔ nʌ́ yakonaskwayʌ·táhkweʔ é·lhal",
         en: "She had a cat and then she had a dog.",
       },
@@ -516,7 +516,7 @@ export const particleList = [
     en: "before",
     examples: [
       {
-        oneida:
+        translation:
           "Yakonaskwayʌ·táhkweʔ takóhs kaló· tsiʔ niyo·lé· yakonaskwayʌ·táhkweʔ é·lhal",
         en: "She had a cat before she had a dog.",
       },
@@ -529,7 +529,7 @@ export const particleList = [
     en: "because",
     examples: [
       {
-        translation: "Yáh tehotinya·kú né· tsiʔ yáh thaʔtehyatatnolúkhwaʔ",
+        translation: "Yáh tehotinya·kú né· tsiʔ yáh thaʔtehyatatnolúkhwa̲ʔ",
         en: "They're not married because they don't love one another.",
       },
     ],
@@ -541,7 +541,7 @@ export const particleList = [
     en: "(a length of time)",
     examples: [
       {
-        translation: "Tewáhsʌ niyohslaké tsiʔ náheʔ wakenyakú",
+        translation: "Tewáhsʌ niyohslaké tsiʔ náheʔ wakenyakúˍ",
         en: "I've been married for twenty years.",
       },
     ],
@@ -553,7 +553,7 @@ export const particleList = [
     en: "a short length of time",
     examples: [
       {
-        translation: "Kʌʔ náheʔ yakonyakú·neʔ",
+        translation: "Kʌʔ náheʔ yakonyakú·ne̲ʔ",
         en: "She was married for just a short time.",
       },
     ],
@@ -565,7 +565,7 @@ export const particleList = [
     en: "now / today",
     examples: [
       {
-        translation: "Tehonatekháhsyu nuʔú·waʔ",
+        translation: "Tehonatekháhsyu nuʔú·wa̲ʔ",
         en: "They're separated now.",
       },
     ],
@@ -577,7 +577,7 @@ export const particleList = [
     en: "never, impossible",
     examples: [
       {
-        translation: "Yáh né· newʌ·tú tesanyakú",
+        translation: "Yáh né· newʌ·tú tesanyakúˍ",
         en: "You've never been married.",
       },
     ],
@@ -601,7 +601,7 @@ export const particleList = [
     en: "How is it going?",
     examples: [
       {
-        translation: "Oh niyotuháti neʔn sahsótha",
+        translation: "Oh niyotuháti neʔn sahsótha̲",
         en: "How's your grandmother doing?",
       },
     ],
@@ -699,7 +699,7 @@ export const particleList = [
     en: "anyplace, wherever",
     examples: [
       {
-        oneida:
+        translation:
           "Áti kwáh tsyoʔk nú· nʌhsé·shekeʔ, thó kyu ní· nú· sʌ́· thó yʌké·sheke̲ʔ",
         en: "Wherever you're going to be, I will be there too.",
       },
@@ -1031,7 +1031,7 @@ export const particleList = [
   },
 
   {
-    key: "that_2",
+    key: "tho",
     translation: "thó",
     en: "that, there, that thing",
     examples: [
