@@ -7,6 +7,7 @@ import {
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "../../utils";
 import {
   Flex,
+  PlayButton,
   Text,
   Table,
   TableProps,
@@ -101,6 +102,27 @@ const columnsEnglishBreakdown: TableProps["columns"] = [
   },
 ];
 
+const audioCell = (
+  value: string,
+  row: {
+    audioFile: string;
+  },
+) => (
+  <Flex gap={4}>
+    {value}
+
+    <PlayButton filepath={`/audio/${row.audioFile}`} />
+  </Flex>
+);
+
+const columnsEnglishAudio = [
+  columnsEnglishTranslation[0],
+  {
+    ...columnsEnglishTranslation[1],
+    cell: audioCell,
+  },
+];
+
 interface CreatePastTenseColumnsOptions {
   headerNow?: string;
   headerPast?: string;
@@ -146,6 +168,8 @@ TableWrapper.columnsOneidaPronouns = oneidaPronounColumns;
 TableWrapper.createTextBreakdownColumn = createBreakdownCol;
 TableWrapper.englishColumn = EnglishCol;
 TableWrapper.createPastTenseColumns = createPastTenseColumns;
+TableWrapper.columnsEnglishAudio = columnsEnglishAudio;
+TableWrapper.audioCell = audioCell;
 
 type MapperArgs = unknown | unknown[];
 TableWrapper.mapLeftRight = ([left, right]: MapperArgs[]) => ({ left, right });

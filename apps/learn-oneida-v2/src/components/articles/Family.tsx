@@ -55,6 +55,7 @@ import {
   SectionHeading,
   SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
+import { ParadigmTable } from "../ParadigmTable";
 
 export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
   return (
@@ -183,9 +184,9 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       >
         Family
       </SectionHeading>
-      <RelativesTable
-        datasets={[{ data: familyJson, en: "family", oneida: "hwa·tsíleʔ" }]}
-        pronouns={[
+
+      <ParadigmTable
+        allowedPronouns={[
           "i",
           "u",
           "m",
@@ -198,6 +199,9 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
           "ms",
           "fs",
         ]}
+        audioFolder="module02/family"
+        columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
+        data={familyJson}
       />
 
       <SectionHeading

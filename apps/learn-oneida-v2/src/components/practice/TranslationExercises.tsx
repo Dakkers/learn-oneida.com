@@ -152,15 +152,15 @@ const englishToOneidaModule03 = [
 ];
 
 const oneidaToEnglishModule05 = [
-  ["1", "Teyukwaʔnikú·lhaleʔ né· tsiʔ shekú yáh teʔyakoyé·ʔu"],
+  ["1", "Teyukwaʔnikú·lhaleʔ né· tsiʔ shekú yáh teʔyakoyé·u"],
   ["2", "Sʌ́haʔ aukyeshúhakeʔ tá·t a·ukwatlaʔswiyóhakeʔ"],
-  ["3", "Yáh teʔyohste·líst tsiʔ nihoti·wʌ́"],
-  ["4", "Yáh tewakatshanuní tá·t yáh teʔsatekhu·niheʔ"],
+  ["3", "Yáh teʔyohste·líst tsiʔ nihoti·wʌ́ˍ"],
+  ["4", "Yáh tewakatshanuní tá·t yáh teʔsatekhu·nihe̲ʔ"],
   ["5", "Yonaʔkunyáht né· tsiʔ oʔslu·ní· ok tho thotiyo·té·"],
-  ["6", "Yakonyaʔtáthʌs ne tsiʔ só·tsiʔ wahu·níseʔ yakóthaleʔ"],
-  ["7", "E·só· sʌ́haʔ yakoyaʔtákstehkweʔ tsí ni·yóht kheʔkʌ·ha̲"],
+  ["6", "Yakonyaʔtáthʌs ne tsiʔ só·tsiʔ wahu·níseʔ yakóthale̲ʔ"],
+  ["7", "E·só· sʌ́haʔ yakoyaʔtákstehkweʔ tsí ni·yóht kheʔkʌ́·ha̲"],
   ["8", "Yakoslʌ́htalahse né· tsiʔ yutuhkályaʔks"],
-  ["9", "Loʔnikuhlowanʌ́ nok tsiʔ ostúha tehanahalawʌ́lyeheʔ"],
+  ["9", "Loʔnikuhlowanʌ́ nok tsiʔ ostúha tehanahalawʌ́lyehe̲ʔ"],
   ["10", "Yáh teʔwakatshanú·ni né·tsiʔ nihʌnʌtó·le̲ʔ"],
   ["11", "Yakotsiʔyóha kháleʔ yáh teʔ yakotaʔkalité·"],
   ["12", "Yáh kʌ́ teʔsanehlákwas tsiʔ tehonatekháshyu"],
@@ -196,9 +196,9 @@ const oneidaToEnglishModule06 = [
   ["10", "Yáh tehuwayaʔtakénhʌ ahatatlihunyʌ·ní"],
   ["11", "Thó naʔa·wʌ́neʔ tshaʔokʌ·nóle̲ʔ"],
   // ["12", "Yáh tehonatahséhtu tshahʌníhstyá·keʔ"],
-  ["13", "Ahatinóhaleʔ kaló· tsiʔ niyo·lé tshaʔokʌ·nóle̲ʔ"],
-  ["14", "Satahúhsatat tsiʔ náhteʔ yu·tú·"],
-  ["15", "Knú·wehseʔ kʌs katló·loks tsiʔ wataʔklókwas"],
+  ["13", "Ahatisletóhaleʔ kaló· tsiʔ niyo·lé ʌyokʌ·nóle̲ʔ"],
+  ["14", "Satahúhsatat tsiʔ náhteʔ yu·tú·he̲"],
+  ["15", "Knú·wehseʔ kʌs akatló·loke nʌ wataʔklókwas"],
 ];
 const englishToOneidaModule06 = [
   ["1", "We (you and I) should wake up and get ready before noon."],

@@ -33,16 +33,18 @@ const sizeMap: Record<Size, string> = {
 } as const;
 
 export function useControlStyles({
+  disabled = false,
   emphasis = "outline",
   intent = "secondary",
   size = "md",
 }: {
+  disabled?: boolean;
   emphasis?: Emphasis;
   intent?: Intent;
   size?: Size;
 } = {}) {
   return {
-    baseStyle: cn("border-[1px] rounded"),
+    baseStyle: cn("border-[1px] rounded", disabled && "cursor-not-allowed"),
     emphasisStyle: cn(
       emphasisMap[emphasis],
       emphasisIntentMap[emphasis][intent],
