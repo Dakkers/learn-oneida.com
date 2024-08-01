@@ -196,7 +196,7 @@ const oneidaToEnglishModule06 = [
   ["10", "Yáh tehuwayaʔtakénhʌ ahatatlihunyʌ·ní"],
   ["11", "Thó naʔa·wʌ́neʔ tshaʔokʌ·nóle̲ʔ"],
   // ["12", "Yáh tehonatahséhtu tshahʌníhstyá·keʔ"],
-  ["13", "Ahatisletóhaleʔ kaló· tsiʔ niyo·lé ʌyokʌ·nóle̲ʔ"],
+  ["13", "Ahatisletóhaleʔ kaló· tsiʔ niyo·lé tshaʔokʌ·nóle̲ʔ"],
   ["14", "Satahúhsatat tsiʔ náhteʔ yu·tú·he̲"],
   ["15", "Knú·wehseʔ kʌs akatló·loke nʌ wataʔklókwas"],
 ];
@@ -285,7 +285,14 @@ export function TranslationExercises({ group }: { group?: Group }) {
       module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
       module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
       module05: [...oneidaToEnglishModule05, ...englishToOneidaModule05],
-      module06: [...oneidaToEnglishModule06, ...englishToOneidaModule06],
+      module06: [
+        ...oneidaToEnglishModule06.map((val) => [
+          ...val,
+          !["14", "15"].includes(val[0]),
+          "06",
+        ]),
+        ...englishToOneidaModule06,
+      ],
     };
     return mapping[group];
   }, [group]);
