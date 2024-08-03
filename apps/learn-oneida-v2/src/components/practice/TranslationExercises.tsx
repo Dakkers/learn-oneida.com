@@ -325,3 +325,19 @@ export function TranslationExercisesSection({
     </>
   );
 }
+
+export function getTranslationExercisesForModule(
+  module: "module01" | "module02" | "module03" | "module05" | "module06",
+) {
+  return module === "module01"
+    ? oneidaToEnglishModule01
+    : module === "module02"
+      ? oneidaToEnglishModule02
+      : module === "module03"
+        ? oneidaToEnglishModule03
+        : module === "module05"
+          ? oneidaToEnglishModule05
+          : module === "module06"
+            ? oneidaToEnglishModule06
+            : [];
+}

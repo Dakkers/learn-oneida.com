@@ -129,6 +129,9 @@ importers:
       '@ukwehuwehneke/ohutsya':
         specifier: workspace:*
         version: link:../../packages/ohutsya
+      '@wavesurfer/react':
+        specifier: ^1.0.7
+        version: 1.0.7(react@18.3.1)(wavesurfer.js@7.8.2)
       clsx:
         specifier: ^2.1.0
         version: 2.1.1
@@ -162,6 +165,9 @@ importers:
       usehooks-ts:
         specifier: ^3.1.0
         version: 3.1.0(react@18.3.1)
+      wavesurfer.js:
+        specifier: ^7.8.2
+        version: 7.8.2
     devDependencies:
       '@cloudflare/next-on-pages':
         specifier: ^1.11.3
@@ -7474,6 +7480,16 @@ packages:
       loupe: 2.3.7
       pretty-format: 29.7.0
     dev: true
+
+  /@wavesurfer/react@1.0.7(react@18.3.1)(wavesurfer.js@7.8.2):
+    resolution: {integrity: sha512-Bw2rd2zqVL1ERy8N9mciacbQW3N5Gn9oRjhq3kjqgtLeE8a1WSTU+4kU0E37541jf432eNZ8lNzuodFFSiNccw==}
+    peerDependencies:
+      react: ^18.2.0
+      wavesurfer.js: '>=7.7.14'
+    dependencies:
+      react: 18.3.1
+      wavesurfer.js: 7.8.2
+    dev: false
 
   /@web3-storage/multipart-parser@1.0.0:
     resolution: {integrity: sha512-BEO6al7BYqcnfX15W2cnGR+Q566ACXAT9UQykORCWW80lmkpWsnEob6zJS1ZVBKsSJC8+7vJkHwlp+lXG1UCdw==}
@@ -15530,6 +15546,10 @@ packages:
       glob-to-regexp: 0.4.1
       graceful-fs: 4.2.11
     dev: true
+
+  /wavesurfer.js@7.8.2:
+    resolution: {integrity: sha512-tcQrhtILu7lOy4ZkfkqFjjv+fK4dDVNoEF4vh79W5RtkLjByCt7jqcneEG1lf+6XMBXyWE5AHQ8bAE/Ch4HdtQ==}
+    dev: false
 
   /wcwidth@1.0.1:
     resolution: {integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==}
