@@ -300,6 +300,9 @@ function Player({
       }
       onPlay(false);
       setDuration(audioDuration);
+      if (autoplay) {
+        ws.playPause();
+      }
     },
     [autoplay],
   );
@@ -319,7 +322,6 @@ function Player({
   return (
     <>
       <WavesurferPlayer
-        autoplay={autoplay}
         height={100}
         onReady={onReady}
         onPlay={() => onPlay(true)}
