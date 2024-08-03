@@ -220,7 +220,7 @@ export default function PracticeListening() {
 
             <Box pt={4}>
               <Player
-                audioFile={`/audio/${currentDatum.audioFile}`}
+                audioFile={`/audio${currentDatum.audioFile}`}
                 autoplay
                 onPlay={setIsPlaying}
                 wavesurferRef={wavesurferRef}
