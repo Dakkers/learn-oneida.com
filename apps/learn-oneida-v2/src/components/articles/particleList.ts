@@ -90,7 +90,7 @@ export const particleList = [
     en: "this",
     examples: [
       {
-        translation: "Akwekú kʌ́ latinú·wehseʔ kaʔi·kʌ́· lotikhstʌʔokúha",
+        translation: "Akwekú kʌ́ latinú·wehseʔ kaʔi·kʌ́· lotikhstʌʔokúha̲",
         en: "Do all of the old men like this?",
       },
     ],
@@ -621,7 +621,7 @@ export const particleList = [
 
   {
     key: "different",
-    translation: "tekyattíhʌ",
+    translation: "tekyattíhʌ̲",
     en: "different, two things are different",
     examples: [
       {
@@ -768,7 +768,7 @@ export const particleList = [
 
   {
     key: "when",
-    translation: "Kánke",
+    translation: "kánke",
     en: "when?",
     examples: [
       {

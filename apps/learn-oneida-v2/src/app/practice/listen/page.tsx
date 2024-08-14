@@ -84,6 +84,32 @@ export default function PracticeListening() {
     },
     {
       getData: () => {
+        const data = getParticlesForGroup(subcategory);
+        const result = [];
+        for (const datum of data) {
+          const examples = datum.examples ?? [];
+          for (let i = 0; i < examples.length; i++) {
+            const filepath = `/particle_examples/${subcategory}/${datum.key}${examples.length > 1 ? `_${i + 1}` : ""}.mp3`;
+            result.push({
+              audioFile: filepath,
+              en: examples[i].en,
+              translation: examples[i].translation,
+            });
+          }
+        }
+        return result;
+      },
+      label: "Particle example sentences",
+      sub: [
+        // { label: "All", value: "all" },
+        { label: "Module 1", value: "module01" },
+        { label: "Module 2", value: "module02" },
+        { label: "Module 3", value: "module03" },
+      ],
+      value: "particle_examples",
+    },
+    {
+      getData: () => {
         const result = [];
         const data = createTimesOfDayData();
 
@@ -365,7 +391,7 @@ function setupModule4Data(keyGroups: string[]) {
   const thoughtKeys = ["data-thought"];
   const wantKeys = [
     "data-want",
-    "data-dont-want",
+    "data-doesnt-want",
     "data-used-to-want",
     // "data-didnt-used-to-want",
   ];
