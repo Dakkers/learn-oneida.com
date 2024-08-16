@@ -40,6 +40,9 @@ import {
 import {
   BreakdownArray,
   BreakdownType,
+  convertBreakdownToPlainText,
+  dualicPronouns,
+  pluralPronouns,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
 import { PronominalColor } from "~/components/Pronominal";
@@ -285,6 +288,55 @@ function ReflexiveSection() {
 }
 
 function ReciprocalSection() {
+  const pronounSubset = [...dualicPronouns, ...pluralPronouns];
+
+  const knowData = [
+    [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["h", "RPL"], ["y"], ["atat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["ky"], ["atat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["twa"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["yakwa"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["swa"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["hu"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["ku"], ["tat", "REFL"], "yʌtelíˍ"],
+  ];
+
+  const likeData = [
+    [["te", "REFL"], ["ty"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["hy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["ky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["twa"], ["tat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["yakw"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["swa"], ["tat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["hu"], ["tat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["ku"], ["tat", "REFL"], "nú·wehse̲ʔ"],
+  ];
+
+  const loveData = [
+    [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["h", "RPL"], ["y"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["ky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["twa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["yakw"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["swa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["hu"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["ku"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
+  ];
+
+  const formatBreakdownsToPhrases = (data: Array<string | string[]>[]) => ({
+    phrases: data.map((breakdown, i) => ({
+      breakdown,
+      phrase: convertBreakdownToPlainText(breakdown),
+      pronoun: pronounSubset[i],
+    })),
+  });
+
   return (
     <>
       <SectionHeading id="reciprocal" level={2}>
@@ -313,10 +365,10 @@ function ReciprocalSection() {
         color="red"
         enData={PRONOUN_MAP_EN}
         headerText="... {{verb}} oneself"
-        keys={[...pronouns]}
-        knowData={magicalThing(yʌteliRefl)}
-        likeData={magicalThing(nuwehseRefl)}
-        loveData={magicalThing(nolukhwaRefl)}
+        keys={[...pronounSubset]}
+        knowData={formatBreakdownsToPhrases(knowData)}
+        likeData={formatBreakdownsToPhrases(likeData)}
+        loveData={formatBreakdownsToPhrases(loveData)}
       />
     </>
   );
@@ -928,16 +980,3 @@ const getBreakdown = (data, key) =>
     // @ts-expect-error To be addressed in LO-21
     (p: SomethingElseEntirely) => p.key === key || p.pronoun === key,
   )?.breakdown;
-
-// @ts-expect-error To be addressed in LO-21
-function magicalThing(data) {
-  const result = _.cloneDeep(data);
-  for (const phrase of result.phrases) {
-    const breakdown = phrase.breakdown;
-    if (breakdown[0].type === "RPL") {
-      breakdown.splice(0, 1);
-    }
-    breakdown.unshift({ text: "te", type: "RECP" });
-  }
-  return result;
-}
