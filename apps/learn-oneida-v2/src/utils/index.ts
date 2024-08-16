@@ -47,11 +47,11 @@ export const PRONOUN_MAP_ONEIDA: Record<Pronoun, string> = {
   u2: "tesniyáhse",
   "2m": "tehniyáhse",
   "2f": "tekniyáhse",
-  us: "twakweku",
-  theyni: "yakwakweku",
-  yall: "swakweku",
-  ms: "latikweku",
-  fs: "kutikweku",
+  us: "twakwekú",
+  theyni: "yakwakwekú",
+  yall: "swakwekú",
+  ms: "latikwekú",
+  fs: "kutikwekú",
 };
 
 export const PRONOUN_MAP_EN: Record<Pronoun, string> = {

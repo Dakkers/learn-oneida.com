@@ -2,7 +2,10 @@
 
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Accordion, Flex } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "@ukwehuwehneke/language-components";
+import {
+  convertBreakdownToPlainText,
+  SectionHeading,
+} from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
@@ -46,6 +49,15 @@ const tenseBreakdownMap: Record<Module6VerbTense, BreakdownArray> = {
   hab: ["tsiʔ ", ["ni", "PTV"], ["k"], "atyélhaʔ"],
   ifut: [["n", "PTV"], ["a", "IFUT"], ["k"], "átyele̲ʔ"],
   pfv: [["ni", "PTV"], ["wak", "PB"], "átyele̲ʔ"],
+};
+
+const tenseLiteralBreakdownMap: Record<Module6VerbTense, BreakdownArray> = {
+  cmd: ["shehlo·líˍ"],
+  def: ["utu·kohte"],
+  fut: ["ʌskahawíhte"],
+  hab: ["tsiʔ ni", ["k", "PR"], "atyélhaʔ"],
+  ifut: ["teyotuhutsyóhu"],
+  pfv: ["yotukóhtu"],
 };
 
 const columnVisibility = {
@@ -194,7 +206,11 @@ function StativeVsActiveSection() {
 
       <TableWrapper
         columns={[
-          { ...TableWrapper.englishColumn, accessorKey: "tense" },
+          {
+            ...TableWrapper.englishColumn,
+            accessorKey: "tense",
+            header: "Tense",
+          },
           // @ts-expect-error LO-12
           TableWrapper.createTextBreakdownColumn("PB"),
           TableWrapper.englishColumn,
@@ -241,59 +257,63 @@ function StativeVsActiveSection() {
 
       <TableWrapper
         columns={[
-          { ...TableWrapper.englishColumn, accessorKey: "tense" },
+          {
+            ...TableWrapper.englishColumn,
+            accessorKey: "tense",
+            header: "Tense",
+          },
           // @ts-expect-error LO-12
           TableWrapper.createTextBreakdownColumn("PR"),
           TableWrapper.englishColumn,
         ]}
         data={[
           {
-            tense: "Habitual",
+            tense: "Active Habitual",
             en: "I cook",
             breakdown: cookVerbDatum.hab.phrases[0].breakdown,
           },
           {
-            tense: "Habitual Past",
+            tense: "Active Habitual Past",
             en: "I used to cook",
             breakdown: [["ke"], "khu·ní", ["hahkweʔ", "PAST"]],
           },
           {
-            tense: "Habitual Future",
+            tense: "Active Habitual Future",
             en: "I will keep on cooking",
             breakdown: [["ʌ", "FUT"], ["ke"], "khu·ní", ["hekeʔ", "FUT"]],
           },
           {
-            tense: "Definite Past",
+            tense: "Active Definite Past",
             en: "I cooked",
             breakdown: cookVerbDatum.def.phrases[0].breakdown,
           },
           {
-            tense: "Indefinite Future",
+            tense: "Active Indefinite Future",
             en: "I might cook",
             breakdown: cookVerbDatum.ifut.phrases[0].breakdown,
           },
           {
-            tense: "Definite Future",
+            tense: "Active Definite Future",
             en: "I will cook",
             breakdown: cookVerbDatum.fut.phrases[0].breakdown,
           },
           {
-            tense: "Perfective",
+            tense: "Active Perfective",
             en: "I have cooked",
             breakdown: [["wake", "PB"], "khuní"],
           },
           {
-            tense: "Progressive",
+            tense: "Active Progressive",
             en: "I am going along cooking",
             breakdown: [["wake", "PB"], "khuni", ["háti", "PAST"]],
           },
           {
-            tense: "Perfective Past",
+            tense: "Active Perfective Past",
             en: "I had cooked",
             breakdown: [["wake", "PB"], "khuni·", ["hné·", "PAST"]],
           },
           {
-            tense: "Perfective Indefinite",
+            tense: "Active Perfective Indefinite",
             en: "I should have cooked",
             breakdown: [
               ["a", "IFUT"],
@@ -303,15 +323,14 @@ function StativeVsActiveSection() {
             ],
           },
           {
-            tense: "Command",
+            tense: "Active Command",
             en: "Cook!",
-
             breakdown: cookVerbDatum.cmd!.phrases[0].breakdown,
           },
         ]}
       />
 
-      <Text>This module will cover these 6:</Text>
+      <Text>This module will cover these six:</Text>
 
       <List>
         <List.Item>Habitual</List.Item>
@@ -344,11 +363,59 @@ function OneidaTermsForTenses() {
         Oneida terms to describe the different tenses.
       </Text>
 
+      <SectionHeading level={3}>Attempts at literal terms</SectionHeading>
+
+      <Text>
+        Below are the best attempts at &quot;literal&quot; terms for the tenses.
+      </Text>
+
+      <TableWrapper
+        columns={[
+          {
+            ...TableWrapper.englishColumn,
+            accessorKey: "tense",
+            header: "Tense",
+          },
+          // @ts-expect-error LO-12
+          TableWrapper.createTextBreakdownColumn("PR"),
+        ]}
+        data={[
+          {
+            breakdown: tenseLiteralBreakdownMap.hab,
+            tense: "Habitual",
+          },
+          {
+            breakdown: tenseLiteralBreakdownMap.def,
+            tense: "Definite (Past)",
+          },
+          {
+            breakdown: tenseLiteralBreakdownMap.ifut,
+            tense: "Indefinite (Future)",
+          },
+          {
+            breakdown: tenseLiteralBreakdownMap.fut,
+            tense: "Future",
+          },
+          {
+            breakdown: tenseLiteralBreakdownMap.pfv,
+            tense: "Perfective",
+          },
+          {
+            breakdown: tenseLiteralBreakdownMap.cmd,
+            tense: "Command",
+          },
+        ]}
+      />
+
       <SectionHeading level={3}>It is happening</SectionHeading>
 
       <TableWrapper
         columns={[
-          { ...TableWrapper.englishColumn, accessorKey: "tense" },
+          {
+            ...TableWrapper.englishColumn,
+            accessorKey: "tense",
+            header: "Tense",
+          },
           // @ts-expect-error LO-12
           TableWrapper.createTextBreakdownColumn("PB"),
           TableWrapper.englishColumn,
@@ -396,7 +463,11 @@ function OneidaTermsForTenses() {
 
       <TableWrapper
         columns={[
-          { ...TableWrapper.englishColumn, accessorKey: "tense" },
+          {
+            ...TableWrapper.englishColumn,
+            accessorKey: "tense",
+            header: "Tense",
+          },
           // @ts-expect-error LO-12
           TableWrapper.createTextBreakdownColumn("PR"),
           TableWrapper.englishColumn,
@@ -497,7 +568,7 @@ function HowConstructedSection() {
               <TextArray>
                 {tenseMap[key]}
                 <TextBreakdown
-                  breakdown={tenseBreakdownMap[row.key]}
+                  breakdown={tenseLiteralBreakdownMap[row.key]}
                   typeFallback="PR"
                 />
               </TextArray>
@@ -613,6 +684,7 @@ function ExamplesSection() {
       key: "pfv",
       tense: "Perfective",
       en: "I have cooked",
+      breakdown: cookVerbDatum.pfv.phrases[0].breakdown,
       negation: ["Yáh teʔ", ["wake", "PB"], "khu·ní·"],
       negationEn: "I have not cooked",
       desc: [
@@ -639,16 +711,14 @@ function ExamplesSection() {
           {
             accessorKey: "key",
             // @ts-expect-error To be addressed
-            cell: (key: Module6VerbTense, row: (typeof data)[0]) => (
+            cell: (key: Module6VerbTense) => (
               <TextArray>
                 <span className="underline">{tenseMap[key]}</span>
                 <TextBreakdown
-                  breakdown={tenseBreakdownMap[key]}
+                  breakdown={tenseLiteralBreakdownMap[key]}
                   typeFallback="PR"
                   wrap="nowrap"
                 />
-                <div></div>
-                {row.en}
               </TextArray>
             ),
             header: "Tense",
@@ -662,6 +732,21 @@ function ExamplesSection() {
               </Flex>
             ),
             header: "Description",
+          },
+          {
+            accessorKey: "breakdown",
+            // @ts-expect-error To be addressed
+            cell: (breakdown: BreakdownArray, row: (typeof data)[0]) => (
+              <TextArray>
+                <TextBreakdown
+                  breakdown={breakdown}
+                  typeFallback="PR"
+                  wrap="nowrap"
+                />
+                {row.en}
+              </TextArray>
+            ),
+            header: "Word",
           },
           {
             accessorKey: "negation",
@@ -737,7 +822,10 @@ function DailyActivitiesSection() {
                     {
                       accessorKey: "tense",
                       // @ts-expect-error To be fixed in LO-12
-                      cell: (value: keyof typeof tenseMap) => tenseMap[value],
+                      cell: (value: keyof typeof tenseMap) =>
+                        convertBreakdownToPlainText(
+                          tenseLiteralBreakdownMap[value],
+                        ),
                       header: "Tense",
                     },
                     {

@@ -4,7 +4,7 @@ import { pronouns } from "~/utils";
 export default createParadigmData(
   {
     translation: "{{pronoun}} work",
-    type: "PR",
+    type: "PB",
     phrases: [
       {
         breakdown: [["wak"], "yó·tʌhseʔ"],

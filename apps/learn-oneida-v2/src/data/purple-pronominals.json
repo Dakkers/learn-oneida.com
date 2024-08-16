@@ -127,13 +127,13 @@
     "default": [
       {
         "excp": "2",
-        "breakdown": [{ "text": "h", "type": "RPL" }, "etn"]
+        "breakdown": [{ "text": "h", "type": "RPL" }, "ethn"]
       }
     ],
     "c": [
       {
         "excp": "2",
-        "breakdown": [{ "text": "h", "type": "RPL" }, "etni"]
+        "breakdown": [{ "text": "h", "type": "RPL" }, "ethni"]
       }
     ],
     "a": [
@@ -194,13 +194,13 @@
     "default": [
       {
         "excp": "2",
-        "breakdown": [{ "text": "h", "type": "RPL" }, "etw"]
+        "breakdown": [{ "text": "h", "type": "RPL" }, "ethw"]
       }
     ],
     "c": [
       {
         "excp": "2",
-        "breakdown": [{ "text": "h", "type": "RPL" }, "etwa"]
+        "breakdown": [{ "text": "h", "type": "RPL" }, "ethwa"]
       }
     ],
     "i": [
@@ -208,7 +208,7 @@
         "excp": ["1", "2"],
         "breakdown": [
           { "text": "h", "type": "RPL" },
-          "etw",
+          "ethw",
           { "text": "ʌ", "type": "OP" }
         ]
       }
@@ -408,15 +408,17 @@
     "default": ["luwat"],
     "label": ["She → them (males, mix)", "They → them (males, mix)"],
     "c": ["luwati"],
-    "a": ["luwan"],
-    "o": ["luwan"]
+    "a": ["luwʌn"],
+    "e": ["luwʌn"],
+    "o": ["luwʌn"]
   },
   {
     "default": ["kuwat"],
     "label": ["She → them (females)", "They → them (females)"],
     "c": ["kuwati"],
-    "a": ["kuwan"],
-    "o": ["kuwan"]
+    "a": ["kuwʌn"],
+    "e": ["kuwʌn"],
+    "o": ["kuwʌn"]
   },
   {
     "default": ["shakn"],
