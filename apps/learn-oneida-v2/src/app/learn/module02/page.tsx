@@ -864,7 +864,7 @@ function DialogueSection() {
     [
       "Tetsitsyatyelʌ́ kʌ́ neʔn yahsó tha",
       [
-        "Tah. Yah thaʔtetsyakyatyelʌ́ˍ",
+        "Táh. Yáh thaʔtetsyakyatyelʌ́ˍ",
         "Íhsi né· wisk niwáhsʌ niyohslaké sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó t niʔí·",
       ],
     ],
@@ -887,15 +887,15 @@ function DialogueSection() {
   const part3: DialogueTableData = [
     [
       "Sʌ́haʔ kʌ́ akokstʌ́haʔ né· ukyalaséha Kowáklit tsiʔ ni·yó t neʔn tsyalá·séʔ Tu·wís",
-      "Tah. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó ht né· tsyalá·seʔ Kowáklit",
+      "Táh. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó ht né· tsyalá·seʔ Kowáklit",
     ],
     [
       "Kayé kʌ́ niwáhsʌ naʔtehaohsliyá·ku̲",
-      ["Tah. Yah tho tehokstʌ́ha̲ʔ", "Áhsʌ ok niwáhsʌ wá·tlu naʔtehaohsliyá·ku̲"],
+      ["Táh. Yáh tho tehokstʌ́ha̲ʔ", "Áhsʌ ok niwáhsʌ wá·tlu naʔtehaohsliyá·ku̲"],
     ],
     [
       "Sanú hteʔ kʌ́ tó· naʔteyakaohsliyá·ku né· ukyalasé Kowáklit",
-      "Tah. Yah tewakánuhteʔ, uhkaʔ náhteʔ né· akonulhá·",
+      "Táh. Yáh tewakánuhteʔ, uhkaʔ náhteʔ né· akonulhá·",
     ],
     [
       "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
@@ -903,7 +903,7 @@ function DialogueSection() {
     ],
     [
       "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yó t niʔí·",
-      "Yah yeksá· té·kʌ, wáhi̲",
+      "Yáh yeksá· té·kʌ, wáhi̲",
     ],
     ["To·kʌ́skeʔ kʌ́", "ʌ́·"],
   ];
