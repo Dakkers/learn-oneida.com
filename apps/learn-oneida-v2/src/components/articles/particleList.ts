@@ -481,7 +481,7 @@ export const particleList = [
 
   {
     key: "no_way",
-    translation: "Ta·im",
+    translation: "Ta·ím",
     en: "no way (slang)",
     examples: [],
   },
