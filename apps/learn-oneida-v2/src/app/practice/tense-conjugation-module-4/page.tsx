@@ -86,7 +86,7 @@ export default function PracticeTenseConjugation() {
     } else if (word === "want-think") {
       return [
         "data-want",
-        "data-dont-want",
+        "data-doesnt-want",
         "data-used-to-want",
         "data-didnt-used-to-want",
         "data-thought",

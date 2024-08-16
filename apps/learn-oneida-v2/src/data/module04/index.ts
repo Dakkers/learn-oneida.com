@@ -235,7 +235,7 @@ export function createModule4Data() {
     {
       data: dataDontWant,
       en: "Someone doesn't want",
-      key: "data-dont-want",
+      key: "data-doesnt-want",
       negated: true,
       tense: "prs",
     },
