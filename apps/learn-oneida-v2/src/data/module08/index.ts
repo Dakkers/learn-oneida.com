@@ -9,7 +9,7 @@ export function createModule8CharacteristicsList() {
     withNoun: [["ka", "PR"], ["yal", "NOUN"], "owanʌ́"],
     haveNoun: [["wak", "PB"], ["yal", "NOUN"], "owanʌ́"],
     haveNounPlural: [["wak", "PB"], ["yal", "NOUN"], "owa·nʌ́·", ["seʔ", "CL"]],
-    verbPast: [["k", "PR"], "VERBROOT", ["kweʔ", "PAST"]],
+    verbPast: [["k", "PR"], "wanʌ·", ["hné·", "PAST"]],
     withNounPast: [["ka", "PR"], ["yal", "NOUN"], "owanʌ·", ["hné·", "PAST"]],
     haveNounPast: [["wak", "PB"], ["yal", "NOUN"], "owanʌ·", ["hné·", "PAST"]],
     haveNounPastPlural: [
@@ -642,27 +642,27 @@ export function createModule8CharacteristicsList() {
 }
 
 export function getEnglishTranslation(datum, key) {
-  let blah = "";
+  let result = "";
   if (key === "verb") {
-    blah = `it is {{WORD}}`;
+    result = `it is {{WORD}}`;
   } else if (key === "verbNegated") {
-    blah = `it is not {{WORD}}`;
+    result = `it is not {{WORD}}`;
   } else if (key === "withNoun") {
-    blah = `it is {{A}} {{WORD}} bag`;
+    result = `it is {{A}} {{WORD}} bag`;
   } else if (key === "haveNoun") {
-    blah = `I have {{A}} {{WORD}} bag`;
+    result = `I have {{A}} {{WORD}} bag`;
   } else if (key === "haveNounPlural") {
-    blah = `I have {{WORD}} bags`;
+    result = `I have {{WORD}} bags`;
   } else if (key === "verbPast") {
-    blah = `it used to be {{WORD}}`;
+    result = `it used to be {{WORD}}`;
   } else if (key === "withNounPast") {
-    blah = `it used to be {{A}} {{WORD}} bag`;
+    result = `it used to be {{A}} {{WORD}} bag`;
   } else if (key === "haveNounPast") {
-    blah = `I used to have {{A}} {{WORD}} bag`;
+    result = `I used to have {{A}} {{WORD}} bag`;
   } else if (key === "haveNounPastPlural") {
-    blah = `I used to have  {{WORD}} bags`;
+    result = `I used to have  {{WORD}} bags`;
   }
-  return blah
+  return result
     .replace("{{WORD}}", datum.en)
     .replace(
       "{{A}}",
