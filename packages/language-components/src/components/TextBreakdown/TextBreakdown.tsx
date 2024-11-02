@@ -4,8 +4,11 @@ import { arrayify } from "../../utils";
 import { whisperizeWord } from "../../utils/words";
 
 export type BreakdownType =
+  | "ASP" // aspect suffix
   | "CIS"
+  | "CL" // clitic
   | "DEF"
+  | "DER" // derivational
   | "DUAL"
   | "EP"
   | "FUT"
@@ -13,12 +16,14 @@ export type BreakdownType =
   | "IFUT"
   | "JOIN"
   | "OP"
+  | "NOUN"
   | "PAST"
   | "PB"
   | "PFV"
   | "PLB"
   | "PP"
   | "PR"
+  | "PREP" // prepronominal
   | "PTV"
   | "RECP"
   | "REFL"
@@ -133,14 +138,17 @@ function InnerText({
 }
 
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
+  ASP: "text-lime-500",
   CIS: "text-lime-500",
   DEF: "text-emerald-400",
+  DER: "text-yellow-500",
   DUAL: "text-lime-500",
   EP: "text-gray-400",
   FUT: "text-emerald-400",
   HAB: "text-emerald-400",
   IFUT: "text-emerald-400",
   JOIN: "text-yellow-400",
+  NOUN: "text-orange-500",
   OP: "underline decoration-wavy decoration-black",
   PAST: "text-emerald-400",
   PB: "text-blue-600",
@@ -148,6 +156,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   PLB: "text-cyan-400",
   PP: "text-violet-500",
   PR: "text-red-600",
+  PREP: "text-lime-500",
   PTV: "text-lime-500",
   RECP: "text-green-700",
   REFL: "text-green-700",

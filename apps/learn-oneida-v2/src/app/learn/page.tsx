@@ -12,7 +12,7 @@ const meta: any = () => {
 };
 
 export default function Learn() {
-  const modules = [1, 2, 3, 4, 5, 6];
+  const modules = [1, 2, 3, 4, 5, 6, 7];
 
   return (
     <Flex direction="column" gap={4}>

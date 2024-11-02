@@ -21,9 +21,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const blah = usePathname();
-  const isHomePage = blah === "/";
-  console.log(blah);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   return (
     <html lang="en">

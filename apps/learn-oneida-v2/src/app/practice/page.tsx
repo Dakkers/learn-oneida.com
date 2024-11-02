@@ -39,6 +39,10 @@ export default function Practice() {
     //   label: "Months of the year",
     // },
     {
+      href: "/noun-identification-module-7",
+      label: "Noun Identification (Module 7)",
+    },
+    {
       href: "/places",
       label: "Places in the community",
     },
