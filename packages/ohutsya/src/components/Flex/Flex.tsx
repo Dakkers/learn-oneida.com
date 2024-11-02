@@ -26,7 +26,7 @@ export interface FlexProps extends PaddingProps {
   as?: "div" | "span";
   children: React.ReactNode;
   direction?: Direction | Responsive<Direction>;
-  gap?: Gap;
+  gap?: Gap | Responsive<Gap>;
   height?: "fill";
   justify?: JustifyContent;
   wrap?: boolean;
@@ -60,7 +60,7 @@ export function Flex({
           direction,
           (val) => `flex-${val === "column" ? "col" : "row"}`,
         ),
-        gap && gapMap.get(gap),
+        responsiveClassName(gap, "gap-"),
         height === "fill" ? "h-full" : undefined,
         justify && justifyContentMap[justify],
         wrap && "flex-wrap",
