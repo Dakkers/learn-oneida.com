@@ -140,6 +140,7 @@ function InnerText({
 const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   ASP: "text-lime-500",
   CIS: "text-lime-500",
+  CL: "text-emerald-500",
   DEF: "text-emerald-400",
   DER: "text-yellow-500",
   DUAL: "text-lime-500",
