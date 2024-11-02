@@ -27,6 +27,10 @@ export default function Practice() {
     //   label: "Cardinal Directions",
     // },
     {
+      href: "/characteristic-identification-module-8",
+      label: "Characteristic Identification (Module 8)",
+    },
+    {
       href: "/counting-time",
       label: "Counting time",
     },
@@ -41,10 +45,6 @@ export default function Practice() {
     {
       href: "/noun-identification-module-7",
       label: "Noun Identification (Module 7)",
-    },
-    {
-      href: "/object-characteristics-module-8",
-      label: "Object Characteristics (Module 8)",
     },
     {
       href: "/places",

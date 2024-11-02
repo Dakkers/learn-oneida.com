@@ -43,7 +43,7 @@ export default function PracticeNounIdentificationModule7() {
   return (
     <Flex direction="column" gap={4}>
       <Heading level={1} variant="headlineL">
-        Practice your knowledge of nouns from module 7
+        Practice identifying nouns from module 7
       </Heading>
 
       <EnglishToOneidaQuiz

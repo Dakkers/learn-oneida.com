@@ -58,7 +58,7 @@ export default function PracticeObjectCharacteristicsModule8() {
   return (
     <Flex direction="column" gap={4}>
       <Heading level={1} variant="headlineL">
-        Practice object characteristics from module 8
+        Practice identifying characteristics from module 8
       </Heading>
 
       <EnglishToOneidaQuiz
