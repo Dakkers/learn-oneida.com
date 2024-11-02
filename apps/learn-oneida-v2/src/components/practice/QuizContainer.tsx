@@ -43,7 +43,10 @@ export function Settings({
     <Flex
       align={{ sm: "start" }}
       direction={{ xs: "column", sm: "row" }}
-      gap={2}
+      gap={{
+        xs: 2,
+        md: 4,
+      }}
     >
       {enableLanguageSetting && (
         <RadioGroup
