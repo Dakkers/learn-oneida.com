@@ -43,6 +43,10 @@ export default function Practice() {
       label: "Noun Identification (Module 7)",
     },
     {
+      href: "/object-characteristics-module-8",
+      label: "Object Characteristics (Module 8)",
+    },
+    {
       href: "/places",
       label: "Places in the community",
     },
