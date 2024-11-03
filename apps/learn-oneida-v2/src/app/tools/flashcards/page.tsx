@@ -4,7 +4,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule5VerbsList } from "~/data/module05";
 import { arrayify } from "~/utils";
 import { useInterval } from "usehooks-ts";

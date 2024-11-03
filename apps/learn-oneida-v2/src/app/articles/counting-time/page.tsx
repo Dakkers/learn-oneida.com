@@ -12,9 +12,5 @@ const meta: any = () => {
 };
 
 export default function ArticlesCountingTime() {
-  return (
-    <div>
-      <CountingTimeArticle />
-    </div>
-  );
+  return <CountingTimeArticle />;
 }

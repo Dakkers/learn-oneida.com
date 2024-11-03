@@ -44,11 +44,18 @@ import friendsJson from "../../data/family/plural/friends.json";
 
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { BreakdownArray, TextBreakdown } from "../TextBreakdown";
+import {
+  BreakdownArray,
+  TextBreakdown,
+} from "@ukwehuwehneke/language-components";
 import { PRONOUN_MAP_EN_POSSESSIVE, type Pronoun } from "~/utils";
 import { TableOfContents as TOC } from "../TableOfContents";
 import { Letter } from "../Letter";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
+import { ParadigmTable } from "../ParadigmTable";
 
 export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
   return (
@@ -177,9 +184,9 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       >
         Family
       </SectionHeading>
-      <RelativesTable
-        datasets={[{ data: familyJson, en: "family", oneida: "hwa·tsíleʔ" }]}
-        pronouns={[
+
+      <ParadigmTable
+        allowedPronouns={[
           "i",
           "u",
           "m",
@@ -192,6 +199,9 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
           "ms",
           "fs",
         ]}
+        audioFolder="module02/family"
+        columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
+        data={familyJson}
       />
 
       <SectionHeading

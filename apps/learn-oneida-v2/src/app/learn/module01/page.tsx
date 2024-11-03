@@ -13,7 +13,7 @@ import { PeopleArticle } from "~/components/articles/People";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Letter } from "~/components/Letter";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { PronominalsArticle } from "~/components/articles/Pronominals";
@@ -224,7 +224,7 @@ function DialogueSection() {
     ],
     [
       { one: "Tá·wet kʌ́ neʔn laulhá·", en: "Is he David?" },
-      { one: "Λ́·, Tá·wet nen laulhá·", en: "Yes. He is David." },
+      { one: "Λ́·, Tá·wet neʔn laulhá·", en: "Yes. He is David." },
     ],
     [
       { one: "Klistí·n kʌ́ neʔn akaulhá·", en: "Is she Christine?" },
@@ -253,28 +253,28 @@ function DialogueSection() {
     [
       { one: "Wá·li kʌ́ niʔí·", en: "Am I Mary?" },
       {
-        one: ["Tah", "Yah Wá·li té·kʌ nisé·", "Só·s niʔisé͟·"],
+        one: ["Táh", "Yáh Wá·li té·kʌ nisé·", "Só·s niʔisé͟·"],
         en: "No. You're not Mary. You are Susan.",
       },
     ],
     [
       { one: "Tshyalé kʌ́ niʔisé͟·", en: "Are you Charlie?" },
       {
-        one: ["Tah", "Yah Tshyalé té·kʌ niʔí·", "Wá·li niʔí·"],
+        one: ["Táh", "Yáh Tshyalé té·kʌ niʔí·", "Wá·li niʔí·"],
         en: "No. I'm not Charlie. I'm Mary.",
       },
     ],
     [
       { one: "Wílo kʌ́ neʔn laulhá·", en: "Is he William?" },
       {
-        one: ["Tah", "Yah Wílo té:kʌ neʔn laulhá·", "Tá·wet neʔn laulhá·"],
+        one: ["Táh", "Yáh Wílo té·kʌ neʔn laulhá·", "Tá·wet neʔn laulhá·"],
         en: "No. He's not William. He's David.",
       },
     ],
     [
       { one: "Lá·kel kʌ́ neʔn akaulhá·", en: "Is she Rachel?" },
       {
-        one: ["Tah", "Yah Lá·kel té:kʌ neʔn akaulhá·", "Só·s neʔn akaulhá··"],
+        one: ["Táh", "Yáh Lá·kel té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá··"],
         en: "No. She's not Rachel. She's Susan.",
       },
     ],
@@ -283,28 +283,28 @@ function DialogueSection() {
     [
       { one: "Í· kʌ́ neʔn Wá·li", en: "Am I Mary?" },
       {
-        one: ["Tah", "Yah Wá·li té·kʌ niʔisé͟·", "Só·s ni·sé·"],
+        one: ["Táh", "Yáh Wá·li té·kʌ niʔisé͟·", "Só·s ni·sé·"],
         en: "No. You're not Mary. You're Susan.",
       },
     ],
     [
       { one: "Isé· kʌ́ neʔn Tu·wís", en: "Are you Thomas?" },
       {
-        one: ["Tah", "Yah Tu·wís té·kʌ niʔí·", "Wílo niʔí·"],
+        one: ["Táh", "Yáh Tu·wís té·kʌ niʔí·", "Wílo niʔí·"],
         en: "No. I'm not Thomas. I'm William.",
       },
     ],
     [
       { one: "Laulhá· kʌ́ neʔn Tshyalé", en: "Is he Charlie?" },
       {
-        one: ["Tah", "Yah Tshyalé té·kʌ neʔn laulhá·", "Ta·wet neʔn laulhá·"],
+        one: ["Táh", "Yáh Tshyalé té·kʌ neʔn laulhá·", "Ta·wet neʔn laulhá·"],
         en: "No. He's not Charlie. He's David.",
       },
     ],
     [
       { one: "Akaulhá· kʌ́ neʔn Ní·ki", en: "Is she Amelia?" },
       {
-        one: ["Tah", "Yah Ní·ki té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá·"],
+        one: ["Táh", "Yáh Ní·ki té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá·"],
         en: "No. She's not Amelia. She's Susan.",
       },
     ],
@@ -483,7 +483,7 @@ function DialogueSection() {
         en: "Who do you like more than the Beatles?",
       },
       {
-        one: "Yah úhkaʔ náhteʔ sʌ́haʔ teʔkhenú·wehseʔ tsiʔ ni·yót né· Beatles",
+        one: "Yáh úhkaʔ náhteʔ sʌ́haʔ teʔkhenú·wehseʔ tsiʔ ni·yót né· Beatles",
         en: "Thereʔs no one I like more than the Beatles.",
       },
     ],
@@ -493,7 +493,7 @@ function DialogueSection() {
         en: "Do you like the Beach Boys more than the Beatles?",
       },
       {
-        one: "Tah. Yah sʌ́haʔ tekhenú·wehseʔ né· Beach Boys tsiʔ ni·yót né· Beatles",
+        one: "Táh. Yáh sʌ́haʔ tekhenú·wehseʔ né· Beach Boys tsiʔ ni·yót né· Beatles",
         en: "No. I donʔt like the Beach Boys more than the Beatles.",
       },
     ],
@@ -533,7 +533,7 @@ function DialogueSection() {
         en: "Do those children know what those old womenʔs names are?",
       },
       {
-        one: "Tah. Yah tehonanúhteʔ né· thikʌ́ latiksaʔshúha oh náhte kuwati·yáts thikʌ́ otikhstʌʔokúha̲",
+        one: "Táh. Yáh tehonanúhteʔ né· thikʌ́ latiksaʔshúha oh náhte kuwati·yáts thikʌ́ otikhstʌʔokúha̲",
         en: "No. Those children donʔt know what those old womenʔs names are.",
       },
     ],
@@ -543,7 +543,7 @@ function DialogueSection() {
         en: "Does he know what your name is?",
       },
       {
-        one: "Tah. Yah tehonúhteʔ náhte ní· yúkyats",
+        one: "Táh. Yáh tehonúhteʔ náhte ní· yúkyats",
         en: "No. He doesnʔt know what my name is.",
       },
     ],
@@ -579,8 +579,8 @@ function DialogueSection() {
     [
       {
         one: [
-          "Tah",
-          "Yah Lá·kel teyúkyats",
+          "Táh",
+          "Yáh Lá·kel teyúkyats",
           "Thikʌ akokstʌ́·haʔ neʔn Lá·kel yutátyats",
         ],
         en: "No. My name is not Rachel. That old woman is the one named Rachel.",
@@ -590,8 +590,8 @@ function DialogueSection() {
     [
       {
         one: [
-          "Tah",
-          "Yah oni Kowáklit teyúkyats",
+          "Táh",
+          "Yáh oni Kowáklit teyúkyats",
           "Thikʌ yeksá· neʔn Kowáklit yutátyats",
         ],
         en: "No. Margaret isnʔt my name either. That girlʔs name is Margaret.",

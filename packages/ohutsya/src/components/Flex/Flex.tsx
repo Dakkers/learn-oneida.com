@@ -26,7 +26,7 @@ export interface FlexProps extends PaddingProps {
   as?: "div" | "span";
   children: React.ReactNode;
   direction?: Direction | Responsive<Direction>;
-  gap?: Gap;
+  gap?: Gap | Responsive<Gap>;
   height?: "fill";
   justify?: JustifyContent;
   wrap?: boolean;
@@ -60,7 +60,7 @@ export function Flex({
           direction,
           (val) => `flex-${val === "column" ? "col" : "row"}`,
         ),
-        gap && gapMap.get(gap),
+        responsiveClassName(gap, "gap-"),
         height === "fill" ? "h-full" : undefined,
         justify && justifyContentMap[justify],
         wrap && "flex-wrap",
@@ -85,18 +85,6 @@ Flex.Item = function FlexItem({
 }: FlexItemProps) {
   return <Tag className={cn(grow && growMap.get(grow))}>{children}</Tag>;
 };
-
-const gapMap = new Map([
-  [0, "gap-0"],
-  [1, "gap-1"],
-  [2, "gap-2"],
-  [3, "gap-3"],
-  [4, "gap-4"],
-  [5, "gap-5"],
-  [6, "gap-6"],
-  [7, "gap-7"],
-  [8, "gap-8"],
-]);
 
 const growMap = new Map([
   [0, "grow-0"],

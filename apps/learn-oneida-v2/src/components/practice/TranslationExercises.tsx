@@ -1,24 +1,26 @@
 "use client";
 import { TableWrapper, TableWrapperProps } from "@/components/TableWrapper";
 import React from "react";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
+import { PlayIcon } from "lucide-react";
 
 const oneidaToEnglishModule01 = [
-  ["1", "Né· lokstʌ́ha lanú·wehseʔ oní né· khaleʔ akokstʌ́ha yenú·wehse̲ʔ"],
-  ["2", "Yah kʌ́ tesanúhteʔ oh náhte yutátyats né· thikʌ́ yeksá·"],
+  ["1", "Né· lokstʌ́ha lanú·wehseʔ uní né· khaleʔ akokstʌ́ha yenú·wehse̲ʔ"],
+  ["2", "Yáh kʌ́ tesanúhteʔ oh náhte yutátyats né· thikʌ́ yeksá·"],
   ["3", "Kutikwekú kutiksaʔshúha luwanú·wehseʔ né· laulhá·"],
   ["4", "Kwítel kʌ́ luwa·yáts thikʌ́ laksá·"],
   ["5", "Sʌ́haʔ yakninú·wehseʔ ne thí·kʌ̲"],
-  ["6", "Yah tehonúhteʔ tsiʔ náhteʔ luwati·yáts thikʌ́ latiksaʔshúha̲ʔ"],
-  ["7", "Yah ki só·tsiʔ tehinú·wehseʔ Wílo"],
-  ["8", "Akwekú shakonú·wehseʔ ne thikʌ́ lokstʌ́ha,nok tsiʔ yah neʔn Wá·li"],
+  ["6", "Yáh tehonúhteʔ tsiʔ náhteʔ luwati·yáts thikʌ́ latiksaʔshúha̲ʔ"],
+  ["7", "Yáh ki só·tsiʔ tehinú·wehseʔ Wílo"],
+  ["8", "Akwekú shakonú·wehseʔ ne thikʌ́ lokstʌ́ha, nok tsiʔ yah neʔn Wá·li"],
   ["9", "Sanúhteʔ kʌ́ úhkaʔ náhteʔ yenú·wehseʔ kaʔí·kʌ̲"],
   ["10", "Sʌ́haʔ snú·wehseʔ kaʔi·kʌ́· tsiʔ ni·yóht thikʌ́, wáhi̲"],
-  ["11", "Yah kʌ́ tehninú·wehse̲ʔ (tehniyáhse)"],
+  ["11", "Yáh kʌ́ tehninú·wehse̲ʔ"],
   ["12", "Wakanúhteʔ tsiʔ shukwanú·wehseʔ thikʌ́ lokstʌ́ha̲"],
   ["13", "Kunú·wehseʔ niʔisé·, kwah né·n tsiʔ niyot niʔisé· sknú·wehse̲ʔ"],
   ["14", "Tokʌ́skeʔ kʌ́ tsiʔ lonúhteʔ oh náhteʔ yúkyats"],
-  ["15", "Wé·ne tsiʔ yah tehinú·wehseʔ thikʌ́ lú·kwe̲"],
+  ["15", "Wé·ne tsiʔ yáh tehinú·wehseʔ thikʌ́ lú·kwe̲"],
 ];
 
 const englishToOneidaModule01 = [
@@ -40,30 +42,30 @@ const englishToOneidaModule01 = [
 ];
 
 const oneidaToEnglishModule02 = [
-  ["1", "Akwekú neʔn teyakwatahnu·teleʔ yesanú·wehse̲ʔ"],
+  ["1", "Akwekú neʔn teyakwatahnu·téleʔ yesanú·wehse̲ʔ"],
   ["2", "Lawʌheyú kʌ́ neʔn Wílo lohsótha̲"],
   ["3", "Sheyʌtelí kʌ́ úhkaʔ ok náhteʔ neʔn lutátnuhkweʔ Tu·wís"],
   ["4", "Shekú kʌ́ tehnúnheʔ yesayoʔokúha̲"],
-  ["5", "Yah úhkaʔ teʔkheyʌtelí thikʌ́ lutátnuhkweʔ Tshyalé"],
+  ["5", "Yáh úhkaʔ teʔkheyʌtelí thikʌ́ lutátnuhkweʔ Tshyalé"],
   ["6", "Íhsi kʌ́ nú· né· oyé·li naʔtehaohsliyá·ku né· etsheʔkʌha̲"],
-  ["7", "Yah tehyatátnuhkweʔ Tu·wís kháleʔ tsyalá·seʔ nok tsiʔ teshyatyelʌ́"],
+  ["7", "Yáh tehyatátnuhkweʔ Tu·wís kháleʔ tsyalá·seʔ nók tsiʔ teshyatyelʌ́"],
   ["8", "Smith kʌ́ tehnihsʌná·sleʔ né· Tshyalé luwayoʔokuha̲"],
-  ["9", "Náhteʔ ok kʌ́ sanuhte né· liʔkʌ́ha laolihwá·ke̲"],
+  ["9", "Náhteʔ ok kʌ́ sanúhte né· liʔkʌ́ha laolihwá·ke̲"],
   ["10", "Tó· sʌ́haʔ kʌʔnithoyʌ·ha né· Kwítel tsiʔ ni·yót niʔisé͟·"],
   [
     "11",
     "Latikwekú kaló nʌʔ né· oyé·li naʔtehonohsliyá·ku neʔn luwatiyʌʔokúha̲",
   ],
   ["12", "Sʌ́haʔ kʌ́ kʌʔnitisayʌ́ha tsiʔ ni·yót swatʌloʔshúha̲"],
-  ["13", "Yah úhkaʔ náhteʔ teyuknú·wehseʔ né· yaʔníha laohwa·tsíle̲ʔ"],
-  ["14", "Tákʌʔ ʌshehlo·lí· yukeʔkʌha tsiʔ yakawʌheyú né· yonatʌ·ló͟·"],
-  ["15", "Yah thaʔtetsitsyatyelʌ né· tsyalá·seʔ Kwítel"],
+  ["13", "Yáh úhkaʔ náhteʔ teyuknú·wehseʔ né· yaʔníha laohwa·tsíle̲ʔ"],
+  ["14", "Tákʌʔ ʌshehlo·lí· yukeʔkʌ́ha tsiʔ yakawʌheyú né· yonatʌ·ló͟·"],
+  ["15", "Yáh thaʔtetsitsyatyelʌ́ né· tsyalá·seʔ Kwítel"],
   ["16", "Shekú kʌ́ tehnúnheʔ né· Tá·wet luwayʌ́ha̲"],
   ["17", "Akwekú luwá·nuwehseʔ thikʌ́ lokstʌ́ha̲"],
-  ["18", "Yah thaʔteyakyatatyʌtelí né· tsyalá·seʔ Wílo"],
+  ["18", "Yáh thaʔteyakyatatyʌtelí né· tsyalá·seʔ Wílo"],
   [
     "19",
-    "To niyohslaké sʌ́haʔ kʌʔnitho·yʌ · neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha",
+    "To niyohslaké sʌ́haʔ kʌʔnitho·yʌ́· neʔn yanulhá· tsiʔ ni·yót neʔn yaʔníha",
   ],
   ["20", "Akwekú kʌ́ shakoyʌtelí neʔn sheyatleʔokúha"],
 ];
@@ -94,7 +96,7 @@ const englishToOneidaModule02 = [
 const oneidaToEnglishModule03 = [
   ["1", "Lotikhsá·tayʌʔ kʌ́ né· akwekú sheyoʔokúha̲"],
   ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwaʔ"],
-  ["3", "Yah só·tsiʔ tehlukweʔtiyó né·n etshuhwatʌ́ha̲"],
+  ["3", "Yáh só·tsiʔ tehlukweʔtiyó né·n etshuhwatʌ́ha̲"],
   ["4", "Úhkaʔ náhteʔ sninyakú"],
   ["5", "Tekniyáhse kʌ́ yakokhsá·tayʌʔ né· shekhstʌ́ha yutateʔkʌ́ha̲"],
   ["6", "Né· kʌ́ thikʌ́ lanikʌhtlúha né·n Wá·li akonikʌhtlú·tsliʔ"],
@@ -110,7 +112,7 @@ const oneidaToEnglishModule03 = [
     "Yáh úhkaʔ náhteʔ sʌ́haʔ luwanolukhwa thikʌ́ lanikʌhtlúha tsiʔ ni·yót niʔí·",
   ],
   ["15", "Sʌ́haʔ wahu·níseʔ yuknináskwayʌʔ tsiʔ ni·yót yuknikhsá·tayʌʔ"],
-  ["16", "E·so kʌ́ hyanolúkhwaʔ né· etshekstʌ́há"],
+  ["16", "E·so kʌ́ yanolúkhwaʔ né· etshekstʌ́há"],
   ["17", "Akwekú luwatinú·wehseʔ né· lotinyáhtʌ"],
   ["18", "Akwekú lotikhsá·tayʌʔ né· ukwatʌló·shuha, yáh niʔisé͟·"],
 ];
@@ -150,15 +152,15 @@ const englishToOneidaModule03 = [
 ];
 
 const oneidaToEnglishModule05 = [
-  ["1", "Teyukwaʔnikú·lhaleʔ né· tsiʔ shekú yáh teʔyakoyé·ʔu"],
+  ["1", "Teyukwaʔnikú·lhaleʔ né· tsiʔ shekú yáh teʔyakoyé·u"],
   ["2", "Sʌ́haʔ aukyeshúhakeʔ tá·t a·ukwatlaʔswiyóhakeʔ"],
-  ["3", "Yáh teʔyohste·líst tsiʔ nihoti·wʌ́"],
-  ["4", "Yáh tewakatshanuní tá·t yáh teʔsatekhu·niheʔ"],
+  ["3", "Yáh teʔyohste·líst tsiʔ nihoti·wʌ́ˍ"],
+  ["4", "Yáh tewakatshanuní tá·t yáh teʔsatekhu·nihe̲ʔ"],
   ["5", "Yonaʔkunyáht né· tsiʔ oʔslu·ní· ok tho thotiyo·té·"],
-  ["6", "Yakonyaʔtáthʌs ne tsiʔ só·tsiʔ wahu·níseʔ yakóthaleʔ"],
-  ["7", "E·só· sʌ́haʔ yakoyaʔtákstehkweʔ tsí ni·yóht kheʔkʌ·ha̲"],
+  ["6", "Yakonyaʔtáthʌs ne tsiʔ só·tsiʔ wahu·níseʔ yakóthale̲ʔ"],
+  ["7", "E·só· sʌ́haʔ yakoyaʔtákstehkweʔ tsí ni·yóht kheʔkʌ́·ha̲"],
   ["8", "Yakoslʌ́htalahse né· tsiʔ yutuhkályaʔks"],
-  ["9", "Loʔnikuhlowanʌ́ nok tsiʔ ostúha tehanahalawʌ́lyeheʔ"],
+  ["9", "Loʔnikuhlowanʌ́ nok tsiʔ ostúha tehanahalawʌ́lyehe̲ʔ"],
   ["10", "Yáh teʔwakatshanú·ni né·tsiʔ nihʌnʌtó·le̲ʔ"],
   ["11", "Yakotsiʔyóha kháleʔ yáh teʔ yakotaʔkalité·"],
   ["12", "Yáh kʌ́ teʔsanehlákwas tsiʔ tehonatekháshyu"],
@@ -182,21 +184,21 @@ const englishToOneidaModule05 = [
   ],
 ];
 const oneidaToEnglishModule06 = [
-  ["1", "Yáh teʔwakekhuní nuʔú·waʔ, yáh náhteʔ teʔkatyélhaʔ"],
+  ["1", "Yáh teʔwakekhuní nuʔú·waʔ, yáh náhteʔ teʔkatyélha̲ʔ"],
   ["2", "Tá·t akenho·tú·, ʌhsatatewyʌnʌ·táneʔ kʌ́"],
-  ["3", "Yáh thayuníʔtayʌʔ tá·t ʌhatló·lokeʔ"],
-  ["4", "Waʔtkatohtálhoʔ né· tshahutyaʔtóhaleʔ"],
-  ["5", "Wahʌ́·luʔ kʌ́ tʌhya·túteʔ"],
-  ["6", "Waʔakyatslu·ní· né· ayukniyóʔtʌʔ átsteʔ"],
-  ["7", "Yáh tehakhlolí kanke tshihoyo·té̲·"],
-  ["8", "Wahshakotiyaʔtakénhaʔ akutinhotu·kó"],
-  ["9", "Waʔakwatkáhthoʔ né· shakoyoʔokúha tsiʔ nahútyele"],
-  ["10", "Yáh tehuwayaʔtakénhʌ latatlihunyʌ·níheʔ"],
-  ["11", "Thó naʔa·wʌ́neʔ tshiyokʌno·lʌ́"],
-  ["12", "Yáh tehonatahséhtu tshahʌníhstyá·keʔ"],
-  ["13", "Ahotinóhaleʔ kaló· tsiʔ niyo·lé nʌ· tshaʔokʌ·nóleʔ"],
-  ["14", "Satahúhsatat tsiʔ náhteʔ yu·tú·"],
-  ["15", "Knú·wehseʔ kʌs katló·loks tsiʔ wataʔklókwas"],
+  // ["3", "Yáh thayuníʔtayʌʔ tá·t ʌhatló·loke̲ʔ"],
+  ["4", "Waʔtkatohtálhoʔ né· tshahutyaʔtóhale̲ʔ"],
+  ["5", "Wahʌ́·luʔ kʌ́ tʌhya·túte̲ʔ"],
+  ["6", "Waʔakyatslu·ní· né· ayukniyo·tʌ́· átste̲ʔ"],
+  ["7", "Yáh tehakhlolí kánke tshahoyo·té̲·"],
+  ["8", "Wahshakotiyaʔtakénhaʔ akutinhotu·kóˍ"],
+  ["9", "Waʔakwatkáhthoʔ né· shakoyoʔokúha tsiʔ nahútyele̲"],
+  ["10", "Yáh tehuwayaʔtakénhʌ ahatatlihunyʌ·ní"],
+  ["11", "Thó naʔa·wʌ́neʔ tshaʔokʌ·nóle̲ʔ"],
+  // ["12", "Yáh tehonatahséhtu tshahʌníhstyá·keʔ"],
+  ["13", "Ahatisletóhaleʔ kaló· tsiʔ niyo·lé tshaʔokʌ·nóle̲ʔ"],
+  ["14", "Satahúhsatat tsiʔ náhteʔ yu·tú·he̲"],
+  ["15", "Knú·wehseʔ kʌs akatló·loke nʌ wataʔklókwas"],
 ];
 const englishToOneidaModule06 = [
   ["1", "We (you and I) should wake up and get ready before noon."],
@@ -231,10 +233,26 @@ function TranslationExerciseTable({
           cell: (value) => <span className="w-16">{value as string}</span>,
           header: "",
         },
-        { accessorKey: "question", header: "" },
         {
-          accessorKey: "answer",
-          cell: () => <span className="w-96">&nbsp;</span>,
+          accessorKey: "question",
+          cell: (
+            value: string,
+            row: {
+              hasAudio?: boolean;
+              module: string;
+              num: string;
+            },
+          ) => (
+            <Flex gap={4}>
+              <span>{value}</span>
+
+              {row.hasAudio && (
+                <PlayButton
+                  filepath={`/audio/translation_exercises/module${row.module}/ex_${row.num}.mp3`}
+                />
+              )}
+            </Flex>
+          ),
           header: "",
         },
       ]}
@@ -259,19 +277,34 @@ export function TranslationExercises({ group }: { group?: Group }) {
         ...englishToOneidaModule06,
       ].map((value, index) => [(index + 1).toString(), value[1]]);
     }
-    const mapping: Record<Group, string[][]> = {
-      module01: [...oneidaToEnglishModule01, ...englishToOneidaModule01],
+    const mapping: Record<Group, (string | boolean)[][]> = {
+      module01: [
+        ...oneidaToEnglishModule01.map((val) => [...val, true, "01"]),
+        ...englishToOneidaModule01,
+      ],
       module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
       module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
       module05: [...oneidaToEnglishModule05, ...englishToOneidaModule05],
-      module06: [...oneidaToEnglishModule06, ...englishToOneidaModule06],
+      module06: [
+        ...oneidaToEnglishModule06.map((val) => [
+          ...val,
+          !["14", "15"].includes(val[0]),
+          "06",
+        ]),
+        ...englishToOneidaModule06,
+      ],
     };
     return mapping[group];
   }, [group]);
 
   return (
     <TranslationExerciseTable
-      data={data.map(([num, question]) => ({ num, question, answer: "" }))}
+      data={data.map(([num, question, hasAudio, module]) => ({
+        hasAudio: hasAudio ?? false,
+        num,
+        question,
+        module,
+      }))}
     />
   );
 }
@@ -291,4 +324,20 @@ export function TranslationExercisesSection({
       <TranslationExercises group={group} />
     </>
   );
+}
+
+export function getTranslationExercisesForModule(
+  module: "module01" | "module02" | "module03" | "module05" | "module06",
+) {
+  return module === "module01"
+    ? oneidaToEnglishModule01
+    : module === "module02"
+      ? oneidaToEnglishModule02
+      : module === "module03"
+        ? oneidaToEnglishModule03
+        : module === "module05"
+          ? oneidaToEnglishModule05
+          : module === "module06"
+            ? oneidaToEnglishModule06
+            : [];
 }

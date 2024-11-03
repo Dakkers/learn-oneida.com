@@ -107,7 +107,7 @@ function updateParticleListFile (data, examples) {
     JSON.stringify(
       {
         key: data.key,
-        oneida: formatOneida(data.oneida),
+        translation: formatOneida(data.oneida),
         en: formatEnglish(data.english),
         examples: Array.isArray(examples) ? examples : Object.values(examples),
       },

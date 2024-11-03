@@ -1,7 +1,7 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 const LIST = [
@@ -19,7 +19,7 @@ const LIST = [
   ["my friend's place", "ukyatʌló·ke·ne"],
   ["David's place", "Tawétné·ke·"],
   ["Mary's place", "Walíné·ke·"],
-].map(([en, on]) => ({ en, on }));
+].map(([en, translation]) => ({ en, translation }));
 
 export function AtSomeonesPlaceArticle({ level = 1 }: ArticleProps) {
   return (
@@ -27,7 +27,10 @@ export function AtSomeonesPlaceArticle({ level = 1 }: ArticleProps) {
       <SectionHeading id="at-someones-place" level={level}>
         At someone&lsquo;s place
       </SectionHeading>
-      <TableWrapper columns={TableWrapper.columnsEnglishOneida} data={LIST} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishTranslation}
+        data={LIST}
+      />
     </Flex>
   );
 }

@@ -37,7 +37,7 @@ import dataThought from "~/data/module04/thought";
 import { Accordion, Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
-import { SectionHeading } from "~/components/SectionHeading";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "~/components/Letter";
@@ -271,16 +271,37 @@ export default function LearnModule04() {
       </Text>
       <AccordionWrapper
         sections={[
-          ["someone-is-here", "Someone is here", dataIsHere],
-          ["someone-was-here", "Someone was here", dataWasHere],
-          ["someone-will-be-here", "Someone will be here", dataWillBeHere],
-          ["someone-might-be-here", "Someone might be here", dataMightBeHere],
-          ["someone-is-not-here", "Someone is not here", dataIsNotHere],
-          ["someone-was-not-here", "Someone was not here", dataWasNotHere],
+          ["someone-is-here", "Someone is here", dataIsHere, "is_here"],
+          ["someone-was-here", "Someone was here", dataWasHere, "was_here"],
+          [
+            "someone-will-be-here",
+            "Someone will be here",
+            dataWillBeHere,
+            "will_be_here",
+          ],
+          [
+            "someone-might-be-here",
+            "Someone might be here",
+            dataMightBeHere,
+            "might_be_here",
+          ],
+          [
+            "someone-is-not-here",
+            "Someone is not here",
+            dataIsNotHere,
+            "is_not_here",
+          ],
+          [
+            "someone-was-not-here",
+            "Someone was not here",
+            dataWasNotHere,
+            "was_not_here",
+          ],
           [
             "someone-will-not-be-here",
             "Someone will not be here",
             dataWillNotBeHere,
+            "will_not_be_here",
           ],
         ]}
       />
@@ -409,15 +430,25 @@ export default function LearnModule04() {
       </SectionHeading>
       <AccordionWrapper
         sections={[
-          ["someone-wants", "Someone wants", dataWant],
-          ["someone-doesnt-want", "Someone doesn't want", dataDontWant],
-          ["someone-used-to-want", "Someone used to want", dataUsedToWant],
+          ["someone-wants", "Someone wants", dataWant, "want"],
+          [
+            "someone-doesnt-want",
+            "Someone doesn't want",
+            dataDontWant,
+            "doesnt_want",
+          ],
+          [
+            "someone-used-to-want",
+            "Someone used to want",
+            dataUsedToWant,
+            "used_to_want",
+          ],
           [
             "someone-didnt-used-to-want",
             "Someone didn't used to want",
             dataDidntUsedToWant,
           ],
-          ["someone-thought", "Someone thought", dataThought],
+          ["someone-thought", "Someone thought", dataThought, "thought"],
         ]}
       />
 
@@ -456,7 +487,9 @@ export default function LearnModule04() {
 function AccordionWrapper({
   sections,
 }: {
-  sections: Array<[string, string, ParadigmData]>;
+  sections: Array<
+    [string, string, ParadigmData] | [string, string, ParadigmData, string]
+  >;
 }) {
   return (
     <Bleed
@@ -467,9 +500,10 @@ function AccordionWrapper({
       }}
     >
       <Accordion type="multiple">
-        {sections.map(([id, title, data]) => (
+        {sections.map(([id, title, data, audioFolder]) => (
           <Accordion.Item id={id} key={id} title={title}>
             <ParadigmTable
+              audioFolder={audioFolder ? `module04/${audioFolder}` : undefined}
               bleed={0}
               columnVisibility={columnVisibility}
               data={data}

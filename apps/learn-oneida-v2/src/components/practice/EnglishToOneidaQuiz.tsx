@@ -14,7 +14,10 @@ import React from "react";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
-import { sanitizeIrregularCharacters } from "~/utils/words";
+import {
+  sanitizeIrregularCharacters,
+  standardizeCharacters,
+} from "@ukwehuwehneke/language-components";
 
 export interface EnglishToOneidaQuizProps {
   englishOptions: QuizOption[];
@@ -235,14 +238,16 @@ export function useEnglishToOneidaResultChecker({
     const listToUse =
       q.type === "english_to_oneida" ? oneidaOptions : englishOptions;
     const correctAnswerObj = listToUse.find((obj) => obj.key === q.key);
+    const correctAnswer = (correctAnswerObj?.text ?? "").toLowerCase();
 
     let isCorrect = false;
     let selectedAnswer = userAnswer;
 
     if (context.answerSetting === "text") {
       isCorrect =
-        sanitizeIrregularCharacters(userAnswer) ===
-        sanitizeIrregularCharacters(correctAnswerObj?.text ?? "");
+        standardizeCharacters(
+          sanitizeIrregularCharacters(userAnswer.toLowerCase()),
+        ) === standardizeCharacters(sanitizeIrregularCharacters(correctAnswer));
     } else {
       const selectedAnswerObj = listToUse.find((obj) => obj.key === userAnswer);
       isCorrect = q.key === selectedAnswer;
@@ -250,7 +255,7 @@ export function useEnglishToOneidaResultChecker({
     }
 
     return {
-      correctAnswer: correctAnswerObj?.text ?? "",
+      correctAnswer,
       isCorrect,
       question: q.text,
       selectedAnswer,

@@ -2,12 +2,12 @@ import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
   translation: "{{pronoun}} are cousins",
-  type: "PB",
+  type: "PLB",
   phrases: [
     {
       pronoun: "soni",
       phrase: "ukyalá·seʔ",
-      breakdown: [{ text: "uk" }, "alá·seʔ"],
+      breakdown: [{ text: "uky" }, "alá·seʔ"],
     },
     {
       pronoun: "u2",
@@ -17,12 +17,12 @@ const data: ParadigmData = {
     {
       pronoun: "2m",
       phrase: "lonalá·seʔ",
-      breakdown: [{ text: "lon" }, "alá·seʔ"],
+      breakdown: [{ text: "lon", type: "PB" }, "alá·seʔ"],
     },
     {
       pronoun: "2f",
       phrase: "yonalá·seʔ",
-      breakdown: [{ text: "yon" }, "alá·seʔ"],
+      breakdown: [{ text: "yon", type: "PB" }, "alá·seʔ"],
     },
     {
       pronoun: "us",

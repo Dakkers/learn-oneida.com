@@ -79,6 +79,7 @@ export function TextBreakdown({
           const isPastTense =
             (["kweʔ", "hkweʔ", "hné·", "hneʔ"].includes(part) && isLastPart) ||
             (["tshi", "tshaʔ"].includes(part) && i === 0);
+
           return (
             <InnerText
               {...innerTextProps}

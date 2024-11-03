@@ -6,8 +6,8 @@ import { Link } from "@ukwehuwehneke/ohutsya";
 import { shuffle } from "lodash";
 import { useMemo, useState } from "react";
 import { z } from "zod";
-import { SectionHeading } from "~/components/SectionHeading";
-import { createCountingTimeData } from "~/components/articles/CountingTime";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { createCountingTimeDataLegacy } from "~/components/articles/CountingTime";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 
 const meta: any = () => {
@@ -20,9 +20,9 @@ const meta: any = () => {
   ];
 };
 
-export default function PracticeMonths() {
+export default function PracticeCountingTime() {
   const rows = useMemo(() => {
-    const [firstTable, secondTable] = createCountingTimeData();
+    const [firstTable, secondTable] = createCountingTimeDataLegacy();
     const result = [];
     for (const item of firstTable) {
       for (const key of ["minutes", "hours", "days", "nights"] as const) {

@@ -43,7 +43,7 @@ export default createParadigmData(
         breakdown: ["yáh teʔ", ["sn"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh te", ["n"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: ["yáh te", ["hn"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
         breakdown: ["yáh teʔ", ["kn"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
@@ -66,7 +66,7 @@ export default createParadigmData(
       {
         breakdown: [
           "yáh te",
-          ["lʌ·n"],
+          ["hʌ·n"],
           "élh",
           ["a", "JOIN"],
           ["hkweʔ", "PAST"],

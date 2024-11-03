@@ -11,8 +11,8 @@ import {
   BreakdownArray,
   BreakdownType,
   TextBreakdown,
-} from "~/components/TextBreakdown";
-import { SectionHeading } from "~/components/SectionHeading";
+} from "@ukwehuwehneke/language-components";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { GoodPeopleBadPeopleArticle } from "~/components/articles/GoodPeopleBadPeople";
 import { RepetitiveFeatureArticle } from "~/components/articles/RepetitiveFeature";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
@@ -24,6 +24,7 @@ import { NationsArticle } from "~/components/articles/Nations";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { TextArray } from "@ukwehuwehneke/ohutsya";
+import { Letter } from "@/components/Letter";
 
 const meta: any = () => {
   return [
@@ -54,7 +55,10 @@ export default function LearnModule03() {
               label="Something used to be the case"
               value="used-to-be"
             />
-            <TOC.Item label="When something was the case" value="when" />
+            <TOC.Item
+              label="When something was the case"
+              value="past-tense-when"
+            />
           </TOC.Section>
         </TOC.Item>
 
@@ -142,6 +146,14 @@ const pastTenseColumns = [
 function PastTenseSection() {
   return (
     <>
+      <SectionHeading id="past-tense" level={2}>
+        Past Tense
+      </SectionHeading>
+      <Text>
+        The past tense in Oneida can be communicated using either prefixes or
+        suffixes on words.
+      </Text>
+
       <PastTenseIntroduction />
       <PastTenseUsedToBe />
       <PastTenseWhen />
@@ -273,7 +285,20 @@ function PastTenseIntroduction() {
   ];
 
   return (
-    <TableWrapper columns={TableWrapper.columnsEnglishBreakdown} data={data} />
+    <>
+      <SectionHeading id="past-tense-intro" level={3}>
+        Introduction
+      </SectionHeading>
+      <Text>
+        We&lsquo;ll start with common suffixes <Letter>hne</Letter> and{" "}
+        <Letter>kweʔ</Letter>. Note that sometimes the suffix replaces the last
+        syllable, whereas in other cases it is a new syllable added to the end.
+      </Text>
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishBreakdown}
+        data={data}
+      />
+    </>
   );
 }
 
@@ -283,7 +308,7 @@ function PastTenseUsedToBe() {
       en: ["I am a child", "I was / used to be a child"],
       one: [
         [{ text: "ke" }, "khsá·"],
-        [{ text: "ke" }, "khsahné·"],
+        [{ text: "ke" }, "khsa", "hné·"],
       ],
       type: "PR",
     },
@@ -419,14 +444,25 @@ function PastTenseUsedToBe() {
     },
   ];
 
-  // @ts-expect-error To be addressed in LO-12
-  return <TableWrapper columns={pastTenseColumns} data={data} />;
+  return (
+    <>
+      <SectionHeading id="used-to-be" level={3}>
+        Something used to be the case
+      </SectionHeading>
+      <Text>
+        Here are some more examples of when something used to be the case.
+      </Text>
+
+      {/* @ts-expect-error To be addressed in LO-12 */}
+      <TableWrapper columns={pastTenseColumns} data={data} />
+    </>
+  );
 }
 
 function PastTenseWhen() {
   const data = [
     {
-      en: ["I am a child", "when I was / used to be a child"],
+      en: ["I am a child", "When I was / used to be a child"],
       one: [
         [{ text: "k" }, "ekhsá·"],
         ["tshi", { text: "k" }, "ekhsá·"],
@@ -434,7 +470,7 @@ function PastTenseWhen() {
       type: "PR",
     },
     {
-      en: ["I am a young man", "when I was / used to be a young man"],
+      en: ["I am a young man", "When I was / used to be a young man"],
       one: [
         [{ text: "k" }, "nikʌ́htluʔ"],
         ["tshi", { text: "k" }, "nikʌh́tluʔ"],
@@ -442,7 +478,7 @@ function PastTenseWhen() {
       type: "PR",
     },
     {
-      en: ["I am a young woman", "when I was / used to be a young woman"],
+      en: ["I am a young woman", "When I was / used to be a young woman"],
       one: [
         [{ text: "k" }, "yá·taseha̲"],
         ["tshi", { text: "k" }, "yá·taséha̲"],
@@ -450,7 +486,7 @@ function PastTenseWhen() {
       type: "PR",
     },
     {
-      en: ["I am free / single", "when I was free / single"],
+      en: ["I am free / single", "When I was free / single"],
       one: [
         [{ text: "k" }, "atatwʌni·yó̲·"],
         ["tshi", { text: "k" }, "atatwʌni·yó̲·"],
@@ -458,7 +494,7 @@ function PastTenseWhen() {
       type: "PR",
     },
     {
-      en: ["I am engaged (to someone)", "when I was engaged (to someone)"],
+      en: ["I am engaged (to someone)", "When I was engaged (to someone)"],
       one: [
         [{ text: "yukni" }, "nyákheʔ"],
         ["tshi", { text: "yukni" }, "nyákheʔ"],
@@ -468,7 +504,7 @@ function PastTenseWhen() {
     {
       en: [
         "I am in a relationship (with someone)",
-        "when I was in a relationship (with someone)",
+        "When I was in a relationship (with someone)",
       ],
       one: [
         [{ text: "yákn" }, "ehse̲"],
@@ -477,7 +513,7 @@ function PastTenseWhen() {
       type: "PR",
     },
     {
-      en: ["I am married", "when I was married"],
+      en: ["I am married", "When I was married"],
       one: [
         [{ text: "wake" }, "nyákuʔ"],
         ["tshi", { text: "wake" }, "nyákuʔ"],
@@ -485,7 +521,7 @@ function PastTenseWhen() {
       type: "PB",
     },
     {
-      en: ["I am married (to someone)", "when I was married (to someone)"],
+      en: ["I am married (to someone)", "When I was married (to someone)"],
       one: [
         [{ text: "yukni" }, "nyákuʔ"],
         ["tshi", { text: "yukni" }, "nyá·kuʔ"],
@@ -495,16 +531,16 @@ function PastTenseWhen() {
     {
       en: [
         "I am separated (from someone)",
-        "when I was separated (from someone)",
+        "When I was separated (from someone)",
       ],
       one: [
         ["te", { text: "yukya" }, "tekháshyuʔ"],
-        ["tshaʔ", " te", { text: "yukya" }, "tekháshyuʔ"],
+        ["tshaʔ", "te", { text: "yukya" }, "tekháshyuʔ"],
       ],
       type: "PB",
     },
     {
-      en: ["I love her / them", "when I loved her / them"],
+      en: ["I love her / them", "When I loved her / them"],
       one: [
         ["khe", "nolúkhwa̲ʔ"],
         ["tshi", { text: "khe" }, "nolúkhwa̲ʔ"],
@@ -512,7 +548,7 @@ function PastTenseWhen() {
       type: "PB",
     },
     {
-      en: ["I am 20 years old", "when I was / used to be 20 years old"],
+      en: ["I am 20 years old", "When I was / used to be 20 years old"],
       one: [
         ["tewáhsʌ naʔte", { text: "wak" }, "ohsliyá·ku̲"],
         [
@@ -528,7 +564,19 @@ function PastTenseWhen() {
   ];
 
   // @ts-expect-error To be addressed in LO-12
-  return <TableWrapper columns={pastTenseColumns} data={data} />;
+  return (
+    <>
+      <SectionHeading id="past-tense-when" level={3}>
+        Something used to be the case
+      </SectionHeading>
+      <Text>
+        Now, here are examples of when something was the case. This is
+        communicated using a pre-pronominal prefix.
+      </Text>
+
+      <TableWrapper columns={pastTenseColumns} data={data} />
+    </>
+  );
 }
 
 interface WeirdRow {
@@ -569,12 +617,14 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <TextArray>
+              <div>
                 <TextBreakdown
                   breakdown={[...row.col0, "ksá·t", ...row.col2, ...row.col3]}
                 />
-                <span>(I have a child)</span>
-              </TextArray>
+                <Text variant="bodyS">
+                  <i>(I have a child)</i>
+                </Text>
+              </div>
             ),
           },
           {
@@ -583,7 +633,7 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <TextArray>
+              <div>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -592,8 +642,10 @@ function HavingConjugations() {
                     "·",
                   ].concat([{ text: "yʌ́·", type: "REP" }])}
                 />
-                <span>(I have a baby)</span>
-              </TextArray>
+                <Text variant="bodyS">
+                  <i>(I have a baby)</i>
+                </Text>
+              </div>
             ),
           },
           {
@@ -602,14 +654,16 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <TextArray>
+              <div>
                 <TextBreakdown
                   breakdown={[...row.col0, "náskw", ...row.col2].concat([
                     { text: "yʌʔ", type: "REP" },
                   ])}
                 />
-                <span>(I have an animal)</span>
-              </TextArray>
+                <Text variant="bodyS">
+                  <i>(I have an animal)</i>
+                </Text>
+              </div>
             ),
           },
           {
@@ -618,7 +672,7 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <TextArray>
+              <div>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -627,8 +681,10 @@ function HavingConjugations() {
                     "·",
                   ].concat([{ text: "yʌ́·", type: "REP" }])}
                 />
-                <span>(I have a boyfriend)</span>
-              </TextArray>
+                <Text variant="bodyS">
+                  <i>(I have a boyfriend)</i>
+                </Text>
+              </div>
             ),
           },
           {
@@ -637,7 +693,7 @@ function HavingConjugations() {
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
             result: (row: WeirdRow) => (
-              <TextArray>
+              <div>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -646,8 +702,10 @@ function HavingConjugations() {
                     "·",
                   ].concat([{ text: "yʌ́·", type: "REP" }])}
                 />
-                <span>(I have a girlfriend)</span>
-              </TextArray>
+                <Text variant="bodyS">
+                  <i>(I have a girlfriend)</i>
+                </Text>
+              </div>
             ),
           },
         ]}
@@ -678,7 +736,7 @@ function HavingConjugations() {
             col4: [{ text: "a", type: "JOIN" }],
             col5: [{ text: "hkweʔ", type: "PAST" }],
             result: (row: WeirdRow) => (
-              <TextArray>
+              <div>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -689,8 +747,10 @@ function HavingConjugations() {
                     ...row.col5,
                   ]}
                 />
-                <span>(I used to have an animal)</span>
-              </TextArray>
+                <Text variant="bodyS">
+                  <i>(I used to have an animal)</i>
+                </Text>
+              </div>
             ),
           },
         ]}
@@ -708,7 +768,7 @@ function HavingConjugations() {
             col1: ["naskw"],
             col2: [{ text: "iyo", type: "REP" }],
             result: (row: WeirdRow) => (
-              <TextArray>
+              <div>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -716,8 +776,10 @@ function HavingConjugations() {
                     { text: "i·yó", type: "REP" },
                   ]}
                 />
-                <span>(I have a good animal)</span>
-              </TextArray>
+                <Text variant="bodyS">
+                  <i>(I have a good animal)</i>
+                </Text>
+              </div>
             ),
           },
         ]}
@@ -741,7 +803,7 @@ function HavingConjugations() {
             col2: [{ text: "iyo", type: "REP" }],
             col3: [{ text: "hne", type: "PAST" }],
             result: (row: WeirdRow) => (
-              <TextArray>
+              <div>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -751,8 +813,10 @@ function HavingConjugations() {
                     "hné·",
                   ]}
                 />
-                <span>(I used to have a good animal)</span>
-              </TextArray>
+                <Text variant="bodyS">
+                  <i>(I used to have a good animal)</i>
+                </Text>
+              </div>
             ),
           },
           {
@@ -761,7 +825,7 @@ function HavingConjugations() {
             col2: [{ text: "aksʌ", type: "REP" }],
             col3: [{ text: "hne", type: "PAST" }],
             result: (row: WeirdRow) => (
-              <TextArray>
+              <div>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
@@ -771,8 +835,10 @@ function HavingConjugations() {
                     "hné·",
                   ]}
                 />
-                <span>(I used to have a bad animal)</span>
-              </TextArray>
+                <Text variant="bodyS">
+                  <i>(I used to have a bad animal)</i>
+                </Text>
+              </div>
             ),
           },
         ]}

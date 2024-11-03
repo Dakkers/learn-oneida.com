@@ -34,7 +34,7 @@ export default function RootLayout({
         <div
           className={cn(
             "mx-auto flex flex-col gap-4 p-4 md:p-8",
-            useLargeWidth ? "max-w-5xl" : "max-w-lg",
+            useLargeWidth ? "max-w-5xl" : "max-w-2xl",
           )}
         >
           {children}

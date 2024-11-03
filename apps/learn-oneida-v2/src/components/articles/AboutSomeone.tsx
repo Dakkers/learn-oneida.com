@@ -1,7 +1,10 @@
 "use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
-import { SectionHeading, SectionHeadingProps } from "../SectionHeading";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 import { singlePronouns } from "~/utils";
@@ -36,7 +39,7 @@ const examplesList = [
     "I don't like anything about them.",
     "Yáh náhteʔ né· teʔknú·wehseʔ lonulhá· laotilihwá·ke̲",
   ],
-].map(TableWrapper.mapEnglishOneida);
+].map(TableWrapper.mapEnglishAndTranslation);
 
 export function AboutSomeoneArticle({ level = 1 }: ArticleProps) {
   return (
@@ -53,7 +56,7 @@ export function AboutSomeoneArticle({ level = 1 }: ArticleProps) {
         Examples
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishOneida}
+        columns={TableWrapper.columnsEnglishTranslation}
         data={examplesList}
       />
     </Flex>

@@ -4,25 +4,29 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "build:deps": "pnpm --filter \"@ukwehuwehneke/ohutsya\" build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
-    "ci:format": "prettier ./app ./@ --check",
-    "cf:deploy": "echo hello && pnpm --filter \"@ukwehuwehneke/ohutsya\" tailwind:build && pnpm run tailwind:build && pnpm run build:deps && npx @cloudflare/next-on-pages@1",
+    "cf:deploy": "pnpm run ci:tailwind && pnpm run ci:build:deps && npx @cloudflare/next-on-pages@1",
+    "ci:format": "prettier ./src --check",
+    "ci:build:deps": "pnpm --filter \"@ukwehuwehneke/ohutsya\" build && pnpm --filter \"@ukwehuwehneke/language-components\" build",
+    "ci:tailwind": "pnpm --filter \"@ukwehuwehneke/ohutsya\" tailwind:build && pnpm run tailwind:build",
     "dev": "next dev",
+    "format:write": "prettier ./src --write",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "pages:deploy": "pnpm run pages:build && wrangler pages deploy",
     "prepare": "husky install",
     "preview": "pnpm run pages:build && wrangler pages dev",
     "start": "next start",
+    "tailwind": "pnpm run tailwind:watch",
     "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css",
     "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css --watch",
-    "tailwind": "pnpm run tailwind",
     "typecheck": "tsc"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
+    "@ukwehuwehneke/language-components": "workspace:*",
     "@ukwehuwehneke/ohutsya": "workspace:*",
+    "@wavesurfer/react": "^1.0.7",
     "clsx": "^2.1.0",
     "lucide-react": "^0.303.0",
     "next": "14.1.0",
@@ -33,7 +37,8 @@
     "react-hook-form": "^7.49.2",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
-    "usehooks-ts": "^3.1.0"
+    "usehooks-ts": "^3.1.0",
+    "wavesurfer.js": "^7.8.2"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.11.3",
@@ -64,5 +69,8 @@
     "typescript": "^5.4.5",
     "vercel": "^34.2.7",
     "wrangler": "^3.60.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,css,md}": "pnpm run format:write"
   }
 }

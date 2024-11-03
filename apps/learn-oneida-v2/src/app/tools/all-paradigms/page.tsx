@@ -6,8 +6,8 @@ import { Button } from "@ukwehuwehneke/ohutsya";
 
 import { Fragment, useState } from "react";
 import { ParadigmTable } from "~/components/ParadigmTable";
-import { SectionHeading } from "~/components/SectionHeading";
-import { TextBreakdown } from "~/components/TextBreakdown";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { TextBreakdown } from "@ukwehuwehneke/language-components";
 import {
   Module5VerbDatum,
   MODULE_5_VERB_TENSE_LIST,
