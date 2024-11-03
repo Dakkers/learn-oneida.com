@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const useLargeWidth = ['/', '/articles/kanuhwelatuksla'].includes(pathname);
+  const useLargeWidth = ["/", "/articles/kanuhwelatuksla"].includes(pathname);
 
   return (
     <html lang="en">
