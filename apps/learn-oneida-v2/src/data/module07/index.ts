@@ -1238,3 +1238,43 @@ export function createModule7NounsList() {
     nounWord,
   ];
 }
+
+export function getEnglishTranslation(datum, key) {
+  let result = "";
+  if (key === "single") {
+    result = `it is {{A}} {{WORD}}`;
+  } else if (key === "plural") {
+    result = `they are {{WORD}}s`;
+  } else if (key === "have") {
+    result = `I have {{A}} {{WORD}}`;
+  } else if (key === "havePlural") {
+    result = `I have {{WORD}}s`;
+  } else if (key === "good") {
+    result = `it is a good {{WORD}}`;
+  } else if (key === "goodPlural") {
+    result = `they are good {{WORD}}s`;
+  } else if (key === "haveGood") {
+    result = `I have a good {{WORD}}`;
+  } else if (key === "haveGoodPlural") {
+    result = `I have good {{WORD}}s`;
+  } else if (key === "big") {
+    result = `it is {{A}} big {{WORD}}`;
+  } else if (key === "bigPlural") {
+    result = `they are big {{WORD}}s`;
+  } else if (key === "count1") {
+    result = `1 {{WORD}}`;
+  } else if (key === "count2") {
+    result = `2 {{WORD}}s`;
+  } else if (key === "count3") {
+    result = `3 {{WORD}}s`;
+  }
+
+  return result
+    .replace("{{WORD}}", datum.en.toLowerCase())
+    .replace(
+      "{{A}}",
+      ["a", "e", "i", "o", "u"].find((vowel) => datum.en.startsWith(vowel))
+        ? "an"
+        : "a",
+    );
+}
