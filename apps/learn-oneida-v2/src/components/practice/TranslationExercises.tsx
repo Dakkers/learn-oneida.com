@@ -96,7 +96,7 @@ const englishToOneidaModule02 = [
 const oneidaToEnglishModule03 = [
   ["1", "Lotikhsá·tayʌʔ kʌ́ né· akwekú sheyoʔokúha̲"],
   ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwaʔ"],
-  ["3", "Yah só·tsiʔ tehlukweʔtiyó né·n etshuhwatʌ́ha̲"],
+  ["3", "Yáh só·tsiʔ tehlukweʔtiyó né·n etshuhwatʌ́ha̲"],
   ["4", "Úhkaʔ náhteʔ sninyakú"],
   ["5", "Tekniyáhse kʌ́ yakokhsá·tayʌʔ né· shekhstʌ́ha yutateʔkʌ́ha̲"],
   ["6", "Né· kʌ́ thikʌ́ lanikʌhtlúha né·n Wá·li akonikʌhtlú·tsliʔ"],

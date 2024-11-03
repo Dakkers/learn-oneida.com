@@ -40,6 +40,9 @@ import {
 import {
   BreakdownArray,
   BreakdownType,
+  convertBreakdownToPlainText,
+  dualicPronouns,
+  pluralPronouns,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
 import { PronominalColor } from "~/components/Pronominal";
@@ -285,6 +288,55 @@ function ReflexiveSection() {
 }
 
 function ReciprocalSection() {
+  const pronounSubset = [...dualicPronouns, ...pluralPronouns];
+
+  const knowData = [
+    [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["h", "RPL"], ["y"], ["atat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["ky"], ["atat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["twa"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["yakwa"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["swa"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["hu"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["ku"], ["tat", "REFL"], "yʌtelíˍ"],
+  ];
+
+  const likeData = [
+    [["te", "REFL"], ["ty"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["hy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["ky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["twa"], ["tat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["yakw"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["swa"], ["tat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["hu"], ["tat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["ku"], ["tat", "REFL"], "nú·wehse̲ʔ"],
+  ];
+
+  const loveData = [
+    [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["h", "RPL"], ["y"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["ky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["twa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["yakw"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["swa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["hu"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["ku"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
+  ];
+
+  const formatBreakdownsToPhrases = (data: Array<string | string[]>[]) => ({
+    phrases: data.map((breakdown, i) => ({
+      breakdown,
+      phrase: convertBreakdownToPlainText(breakdown),
+      pronoun: pronounSubset[i],
+    })),
+  });
+
   return (
     <>
       <SectionHeading id="reciprocal" level={2}>
@@ -313,10 +365,10 @@ function ReciprocalSection() {
         color="red"
         enData={PRONOUN_MAP_EN}
         headerText="... {{verb}} oneself"
-        keys={[...pronouns]}
-        knowData={magicalThing(yʌteliRefl)}
-        likeData={magicalThing(nuwehseRefl)}
-        loveData={magicalThing(nolukhwaRefl)}
+        keys={[...pronounSubset]}
+        knowData={formatBreakdownsToPhrases(knowData)}
+        likeData={formatBreakdownsToPhrases(likeData)}
+        loveData={formatBreakdownsToPhrases(loveData)}
       />
     </>
   );
@@ -812,7 +864,7 @@ function DialogueSection() {
     [
       "Tetsitsyatyelʌ́ kʌ́ neʔn yahsó tha",
       [
-        "Tah. Yah thaʔtetsyakyatyelʌ́ˍ",
+        "Táh. Yáh thaʔtetsyakyatyelʌ́ˍ",
         "Íhsi né· wisk niwáhsʌ niyohslaké sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó t niʔí·",
       ],
     ],
@@ -835,15 +887,15 @@ function DialogueSection() {
   const part3: DialogueTableData = [
     [
       "Sʌ́haʔ kʌ́ akokstʌ́haʔ né· ukyalaséha Kowáklit tsiʔ ni·yó t neʔn tsyalá·séʔ Tu·wís",
-      "Tah. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó ht né· tsyalá·seʔ Kowáklit",
+      "Táh. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó ht né· tsyalá·seʔ Kowáklit",
     ],
     [
       "Kayé kʌ́ niwáhsʌ naʔtehaohsliyá·ku̲",
-      ["Tah. Yah tho tehokstʌ́ha̲ʔ", "Áhsʌ ok niwáhsʌ wá·tlu naʔtehaohsliyá·ku̲"],
+      ["Táh. Yáh tho tehokstʌ́ha̲ʔ", "Áhsʌ ok niwáhsʌ wá·tlu naʔtehaohsliyá·ku̲"],
     ],
     [
       "Sanú hteʔ kʌ́ tó· naʔteyakaohsliyá·ku né· ukyalasé Kowáklit",
-      "Tah. Yah tewakánuhteʔ, uhkaʔ náhteʔ né· akonulhá·",
+      "Táh. Yáh tewakánuhteʔ, uhkaʔ náhteʔ né· akonulhá·",
     ],
     [
       "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
@@ -851,7 +903,7 @@ function DialogueSection() {
     ],
     [
       "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yó t niʔí·",
-      "Yah yeksá· té·kʌ, wáhi̲",
+      "Yáh yeksá· té·kʌ, wáhi̲",
     ],
     ["To·kʌ́skeʔ kʌ́", "ʌ́·"],
   ];
@@ -928,16 +980,3 @@ const getBreakdown = (data, key) =>
     // @ts-expect-error To be addressed in LO-21
     (p: SomethingElseEntirely) => p.key === key || p.pronoun === key,
   )?.breakdown;
-
-// @ts-expect-error To be addressed in LO-21
-function magicalThing(data) {
-  const result = _.cloneDeep(data);
-  for (const phrase of result.phrases) {
-    const breakdown = phrase.breakdown;
-    if (breakdown[0].type === "RPL") {
-      breakdown.splice(0, 1);
-    }
-    breakdown.unshift({ text: "te", type: "RECP" });
-  }
-  return result;
-}
