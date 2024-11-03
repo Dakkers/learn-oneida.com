@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
+  const useLargeWidth = ["/", "/articles/kanuhwelatuksla"].includes(pathname);
 
   return (
     <html lang="en">
@@ -34,7 +34,7 @@ export default function RootLayout({
         <div
           className={cn(
             "mx-auto flex flex-col gap-4 p-4 md:p-8",
-            isHomePage ? "max-w-5xl" : "max-w-2xl",
+            useLargeWidth ? "max-w-5xl" : "max-w-2xl",
           )}
         >
           {children}
