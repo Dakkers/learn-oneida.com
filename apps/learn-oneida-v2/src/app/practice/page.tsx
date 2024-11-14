@@ -38,6 +38,10 @@ export default function Practice() {
       href: "/counting-time",
       label: "Counting time",
     },
+    {
+      href: "/food-identification-module-9",
+      label: "Food Identification (Module 9)",
+    },
     // {
     //   href: "/days-of-the-week",
     //   label: "Days of the week",
