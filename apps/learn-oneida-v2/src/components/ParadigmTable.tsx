@@ -37,6 +37,7 @@ import {
 import {
   BreakdownArray,
   BreakdownType,
+  standardizeCharacters,
   TextBreakdown,
   TextBreakdownSuffix,
 } from "@ukwehuwehneke/language-components";
@@ -100,7 +101,7 @@ export function ParadigmTable({
       if (phraseObj) {
         if (
           !value ||
-          sanitizeIrregularCharacters(value) !==
+          sanitizeIrregularCharacters(standardizeCharacters(value)) !==
             sanitizeIrregularCharacters(phraseObj.phrase)
         ) {
           hasErrors = true;
