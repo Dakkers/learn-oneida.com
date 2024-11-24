@@ -469,7 +469,7 @@ export function createModule6VerbList() {
     },
     {
       key: "eatAMeal",
-      root: "-atkhuni",
+      root: "-atkhuni-",
     },
     {
       en: "get dressed, fixed up",
@@ -608,20 +608,31 @@ export function createModule6VerbList() {
 export function createModule6VerbListFlat() {
   const resultingList = createModule6VerbList();
   const flattenedResult = [];
-  for (const tense of MODULE_6_VERB_TENSE_LIST) {
-    for (const v of resultingList) {
-      if (tense === "cmd" && v.exceptions?.includes(EXCEPTION_NO_COMMAND)) {
-        continue;
-      }
-      flattenedResult.push({
-        ...v[tense],
-        en: `${v.en} (${module6VerbTenseMap[tense]})`,
-        key: `${v.key}-${tense}`,
-        tense,
-      });
-    }
+  for (const v of resultingList) {
+    flattenedResult.push(...flattenVerbDatum(v));
   }
   return flattenedResult.sort(sorter);
+}
+
+export function flattenVerbDatum(
+  v: Pick<
+    Module6VerbDatum,
+    "cmd" | "exceptions" | "def" | "key" | "en" | "fut" | "hab" | "ifut" | "pfv"
+  >,
+) {
+  const result = [];
+  for (const tense of MODULE_6_VERB_TENSE_LIST) {
+    if (tense === "cmd" && v.exceptions?.includes(EXCEPTION_NO_COMMAND)) {
+      continue;
+    }
+    result.push({
+      ...v[tense],
+      en: `${v.en} (${module6VerbTenseMap[tense]})`,
+      key: `${v.key}-${tense}`,
+      tense,
+    });
+  }
+  return result;
 }
 
 const sorter = (

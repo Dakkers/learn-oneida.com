@@ -10,31 +10,31 @@ export default createParadigmData(
         breakdown: [["k"], "atekhu·níheʔ"],
       },
       {
-        breakdown: [["se"], "khu·níheʔ"],
+        breakdown: [["s"], "atekhu·níheʔ"],
       },
       {
         breakdown: [["l"], "atekhu·níheʔ"],
       },
       {
-        breakdown: [["ye"], "khu·níheʔ"],
+        breakdown: [["yu"], "tekhu·níheʔ"],
       },
       {
-        breakdown: [["ka"], "khu·níheʔ"],
+        breakdown: [["w"], "atekhu·níheʔ"],
       },
       {
-        breakdown: [["tni"], "khu·níheʔ"],
+        breakdown: [["ty"], "atekhu·níheʔ"],
       },
       {
-        breakdown: [["yakni"], "khu·níheʔ"],
+        breakdown: [["yaky"], "atekhu·níheʔ"],
       },
       {
-        breakdown: [["sni"], "khu·níheʔ"],
+        breakdown: [["tsy"], "atekhu·níheʔ"],
       },
       {
-        breakdown: [["ni"], "khu·níheʔ"],
+        breakdown: [["hy"], "atekhu·níheʔ"],
       },
       {
-        breakdown: [["kni"], "khu·níheʔ"],
+        breakdown: [["ky"], "atekhu·níheʔ"],
       },
       {
         breakdown: [["tw"], "atekhu·níheʔ"],
@@ -43,13 +43,13 @@ export default createParadigmData(
         breakdown: [["yakw"], "atekhu·níheʔ"],
       },
       {
-        breakdown: [["swa"], "khu·níheʔ"],
+        breakdown: [["sw"], "atekhu·níheʔ"],
       },
       {
-        breakdown: [["lati"], "khu·níheʔ"],
+        breakdown: [["lu"], "tekhu·níheʔ"],
       },
       {
-        breakdown: [["kuti"], "khu·níheʔ"],
+        breakdown: [["ku"], "tekhu·níheʔ"],
       },
     ],
   },

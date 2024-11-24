@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["ke"], "khu·ní·"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atekhu·ní·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hse"], "khu·ní·"],
+        breakdown: [["wa", "DEF"], ["hse"], "atekhu·ní·"],
       },
       {
         breakdown: [["wa", "DEF"], ["h"], "atekhu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["e"], "khu·ní·"],
+        breakdown: [["waʔ", "DEF"], ["u"], "tekhu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ka"], "khu·ní·"],
+        breakdown: [["u"], "tekhu·ní·"],
       },
       {
-        breakdown: [["we", "DEF"], ["tni"], "khu·ní·"],
+        breakdown: [["we", "DEF"], ["ty"], "atekhu·ní·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["aky"], "atekhu·ní·"],
       },
       {
-        breakdown: [["we", "DEF"], ["sni"], "khu·ní·"],
+        breakdown: [["we", "DEF"], ["tsy"], "atekhu·ní·"],
       },
       {
-        breakdown: [["wa", "DEF"], ["hni"], "khu·ní·"],
+        breakdown: [["wa", "DEF"], ["hy"], "atekhu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kni"], "khu·ní·"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atekhu·ní·"],
       },
       {
-        breakdown: [["we", "DEF"], ["twa"], "khu·ní·"],
+        breakdown: [["we", "DEF"], ["tw"], "atekhu·ní·"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["akw"], "atekhu·ní·"],
       },
       {
-        breakdown: [["we", "DEF"], ["sw"], "khu·ní·"],
+        breakdown: [["we", "DEF"], ["sw"], "atekhu·ní·"],
       },
       {
         breakdown: [["wa", "DEF"], ["hu"], "tekhu·ní·"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["kuti"], "khu·ní·"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "tekhu·ní·"],
       },
     ],
   },

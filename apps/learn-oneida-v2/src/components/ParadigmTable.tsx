@@ -24,6 +24,7 @@ import {
   PrimitiveTableHead,
   PrimitiveTableHeader,
   PrimitiveTableRow,
+  TextInput,
 } from "@ukwehuwehneke/ohutsya";
 import { Settings } from "lucide-react";
 import React from "react";
@@ -256,8 +257,7 @@ function TableRowWrapper({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input
-                      autoComplete="off"
+                    <TextInput
                       placeholder="Type here..."
                       {...field}
                       value={field.value ?? ""}

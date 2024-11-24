@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["ke"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atekhu·ní·"],
       },
       {
         breakdown: [["ʌ", "FUT"], ["hs"], "atekhu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ha"], "tekhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["h"], "atekhu·ní·"],
       },
       {
-        breakdown: [["aʌ", "FUT"], ["yu"], "tekhu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "tekhu·ní·"],
       },
       {
-        breakdown: [["aʌ", "FUT"], ["ka"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atekhu·ní·"],
       },
       {
-        breakdown: [["a·ʌ", "FUT"], ["tni"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atekhu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakni"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atekhu·ní·"],
       },
       {
-        breakdown: [["a·ʌ", "FUT"], ["sni"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atekhu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hni"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atekhu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kni"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atekhu·ní·"],
       },
       {
-        breakdown: [["a·ʌ", "FUT"], ["twa"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atekhu·ní·"],
       },
       {
         breakdown: [["ʌ", "FUT"], ["yakw"], "atekhu·ní·"],
       },
       {
-        breakdown: [["a·ʌ", "FUT"], ["swa"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atekhu·ní·"],
       },
       {
         breakdown: [["ʌ", "FUT"], ["hu"], "tekhu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kuti"], "khu·ní·"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "atekhu·ní·"],
       },
     ],
   },
