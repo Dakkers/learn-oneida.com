@@ -44,7 +44,10 @@ export function useControlStyles({
   size?: Size;
 } = {}) {
   return {
-    baseStyle: cn("border-[1px] rounded", disabled && "cursor-not-allowed"),
+    baseStyle: cn(
+      "border-[1px] rounded placeholder-gray-500::placeholder",
+      disabled && "cursor-not-allowed",
+    ),
     emphasisStyle: cn(
       emphasisMap[emphasis],
       emphasisIntentMap[emphasis][intent],

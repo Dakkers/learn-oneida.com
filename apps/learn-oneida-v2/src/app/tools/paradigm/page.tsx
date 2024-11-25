@@ -56,6 +56,7 @@ import { Select } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
+import { createModule9VerbListFlat } from "~/data/module09";
 
 const meta: any = () => {
   return [
@@ -119,6 +120,7 @@ export default function ToolsParadigm() {
     ["otshyus", dataOtshyusJson],
     ["ʌtole", dataΛtoleJson],
     ...createModule6VerbListFlat().map((v) => [v.key, v]),
+    ...createModule9VerbListFlat().map((v) => [v.key, v]),
     ...module4Options.map((item) => [item[0], item[1]]),
   ]);
 
@@ -146,6 +148,10 @@ export default function ToolsParadigm() {
         { label: "pull someting out", value: "otshyus" },
         { label: "reside some place", value: "i_tlu" },
         ...createModule6VerbListFlat().map((datum) => ({
+          label: datum.en,
+          value: datum.key,
+        })),
+        ...createModule9VerbListFlat().map((datum) => ({
           label: datum.en,
           value: datum.key,
         })),

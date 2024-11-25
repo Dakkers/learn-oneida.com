@@ -39,6 +39,10 @@ export default function Practice() {
       label: "Counting time",
     },
     {
+      href: "/food-characteristics-module-9",
+      label: "Food Characteristics (Module 9)",
+    },
+    {
       href: "/food-identification-module-9",
       label: "Food Identification (Module 9)",
     },

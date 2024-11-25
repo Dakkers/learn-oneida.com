@@ -7,12 +7,12 @@ import {
   EnglishToOneidaQuiz,
   EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
-import { createModule9FoodLists } from "@/data/module09";
+import { createModule9FoodCharacteristics } from "@/data/module09";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 const meta: any = () => {
   return [
-    { title: "Food identification (module 9)" },
+    { title: "Food characteristics (module 9)" },
     {
       name: "description",
       content: "Quiz your Oneida knowledge by picking the right translation!",
@@ -27,14 +27,12 @@ export default function PracticeFoodIdentificationModule9() {
   ] = React.useMemo(() => {
     const resultEn = [];
     const resultOn = [];
-    const list = createModule9FoodLists();
+    const list = createModule9FoodCharacteristics();
 
     for (const datum of list) {
       const key = datum.key;
-      if (datum.singular) {
-        resultOn.push({ key, text: datum.singular[0] });
-        resultEn.push({ key, text: datum.en[0] });
-      }
+      resultOn.push({ key, text: datum.one[0] });
+      resultEn.push({ key, text: datum.en[0] });
     }
     return [resultEn, resultOn];
   }, []);
@@ -42,7 +40,7 @@ export default function PracticeFoodIdentificationModule9() {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading level={1}>
-        Practice identifying food from module 9
+        Practice identifying food characteristics from module 9
       </SectionHeading>
 
       <EnglishToOneidaQuiz

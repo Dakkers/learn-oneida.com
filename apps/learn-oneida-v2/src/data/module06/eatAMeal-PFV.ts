@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wake"], "khuní"],
+        breakdown: [["wak"], "atekhuní"],
       },
       {
-        breakdown: [["sa"], "khuní"],
+        breakdown: [["s"], "atekhuní"],
       },
       {
         breakdown: [["lo"], "tekhuní"],
       },
       {
-        breakdown: [["yako"], "khuní"],
+        breakdown: [["yako"], "tekhuní"],
       },
       {
-        breakdown: [["yo"], "khuní"],
+        breakdown: [["yo"], "tekhuní"],
       },
       {
-        breakdown: [["yukni"], "khuní"],
+        breakdown: [["yuky"], "atekhuní"],
       },
       {
-        breakdown: [["yukni"], "khuní"],
+        breakdown: [["yuky"], "atekhuní"],
       },
       {
-        breakdown: [["sni"], "khuní"],
+        breakdown: [["tsy"], "atekhuní"],
       },
       {
-        breakdown: [["loti"], "khuní"],
+        breakdown: [["lon"], "atekhuní"],
       },
       {
-        breakdown: [["yoti"], "khuní"],
+        breakdown: [["yon"], "atekhuní"],
       },
       {
         breakdown: [["yukw"], "atekhuní"],
       },
       {
-        breakdown: [["yukwa"], "khuní"],
+        breakdown: [["yukw"], "atekhuní"],
       },
       {
-        breakdown: [["swa"], "khuní"],
+        breakdown: [["sw"], "atekhuní"],
       },
       {
-        breakdown: [["loti"], "khuní"],
+        breakdown: [["lon"], "atekhuní"],
       },
       {
-        breakdown: [["yoti"], "khuní"],
+        breakdown: [["yon"], "atekhuní"],
       },
     ],
   },

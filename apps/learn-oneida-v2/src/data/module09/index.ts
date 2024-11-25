@@ -1,11 +1,28 @@
-interface Datum {
+import {
+  flattenVerbDatum,
+  Module6VerbDatum,
+} from "../module06/activeVerbsList";
+import eatCmdData from "./eat-CMD";
+import eatDefData from "./eat-DEF";
+import eatFutData from "./eat-FUT";
+import eatHabData from "./eat-HAB";
+import eatIfutData from "./eat-IFUT";
+import eatPfvData from "./eat-PFV";
+
+interface FoodDatum {
   en: string[];
   key: string;
   singular: string[] | null;
   plural: string[] | null;
 }
 
-export function createModule9FoodLists(): Datum[] {
+interface CharacteristicDatum {
+  en: string[];
+  key: string;
+  one: string[];
+}
+
+export function createModule9FoodLists(): FoodDatum[] {
   const objApple = {
     en: ["apple"],
     key: "Apple",
@@ -779,4 +796,212 @@ export function createModule9FoodLists(): Datum[] {
     objWater,
     objWine,
   ];
+}
+
+export function createModule9FoodCharacteristics(): CharacteristicDatum[] {
+  const objBaked = {
+    en: ["baked", "fried", "BBQ", "roasted"],
+    key: "Baked",
+    one: ["waté·skute’"],
+  };
+  const objBitter = {
+    en: ["bitter", "sour"],
+    key: "Bitter",
+    one: ["teyotská·laht"],
+  };
+  const objBoiled = {
+    en: ["boiled"],
+    key: "Boiled",
+    one: ["kalihá·tu"],
+  };
+  const objBurnt = {
+    en: ["burnt"],
+    key: "Burnt",
+    one: ["yotsha’áhtu"],
+  };
+  const objClean = {
+    en: ["clean"],
+    key: "Clean",
+    one: ["teyohtotálhu"],
+  };
+  const objCooked = {
+    en: ["cooked"],
+    key: "Cooked",
+    one: ["yo·lí"],
+  };
+  const objCool = {
+    en: ["cool", "cold"],
+    key: "Cool",
+    one: ["yowísto"],
+  };
+  const objDelicious = {
+    en: ["delicious"],
+    key: "Delicious",
+    one: ["yawéku’"],
+  };
+  const objFattening = {
+    en: ["fattening"],
+    key: "Fattening",
+    one: ["yole’sʌhsluní"],
+  };
+  const objFried = {
+    en: ["fried", "deep-fried"],
+    key: "Fried",
+    one: ["kʌ·yé·ke kalíhtu"],
+  };
+  const objFrozen = {
+    en: ["frozen"],
+    key: "Frozen",
+    one: ["yowislatú"],
+  };
+  const objAppetizing = {
+    en: ["appetizing"],
+    key: "Appetizing",
+    one: ["watkathosliyó"],
+  };
+  const objGreasy = {
+    en: ["greasy"],
+    key: "Greasy",
+    one: ["yoye·nále’", "yoyenʌ́sku"],
+  };
+  const objHot = {
+    en: ["hot"],
+    key: "Hot",
+    one: ["yo’talíhʌ"],
+  };
+  const objLeftovers = {
+    en: ["leftovers"],
+    key: "Leftovers",
+    one: ["yotatʌlú"],
+  };
+  const objMouldy = {
+    en: ["mouldy"],
+    key: "Mouldy",
+    one: ["yonuhwélhote’", "oskʌ́·lha"],
+  };
+  const objRaw = {
+    en: ["raw"],
+    key: "Raw",
+    one: ["yáh te’yolí"],
+  };
+  const objRoasted = {
+    en: ["roasted", "fried"],
+    key: "Roasted",
+    one: ["waté·skute’"],
+  };
+  const objRotten = {
+    en: ["rotten", "spoiled"],
+    key: "Rotten",
+    one: ["yohetkwa’ú", "yáh te’kakhwiyo"],
+  };
+  const objSalty = {
+    en: ["salty"],
+    key: "Salty",
+    one: ["teyohyotsístale’"],
+  };
+  const objSmellingBad = {
+    en: ["bad-smelling"],
+    key: "SmellingBad",
+    one: ["waslákhsʌ’"],
+  };
+  const objSmellingGood = {
+    en: ["good-smelling"],
+    key: "SmellingGood",
+    one: ["wasláku", "wʌsliyó"],
+  };
+  const objTheWayItSmells = {
+    en: ["the way it smells"],
+    key: "TheWayItSmells",
+    one: ["niwahsló·tʌ"],
+  };
+  const objSpicy = {
+    en: ["spicy"],
+    key: "Spicy",
+    one: ["teyothská·lat"],
+  };
+  const objStrongSmell = {
+    en: ["strong smell"],
+    key: "StrongSmell",
+    one: ["wasla’sátste’"],
+  };
+  const objStrongTaste = {
+    en: ["strong taste"],
+    key: "StrongTaste",
+    one: ["kaku’sla’sátste’"],
+  };
+  const objSweet = {
+    en: ["sweet", "sugary"],
+    key: "Sweet",
+    one: ["teyonutaklí·tslale’"],
+  };
+  const objDisgusting = {
+    en: ["disgusting", "unappetizing"],
+    key: "Disgusting",
+    one: ["yokwít"],
+  };
+  const objWatery = {
+    en: ["watery"],
+    key: "Watery",
+    one: ["tekahnekayéstu"],
+  };
+  return [
+    objBaked,
+    objBitter,
+    objBoiled,
+    objBurnt,
+    objClean,
+    objCooked,
+    objCool,
+    objDelicious,
+    objFattening,
+    objFried,
+    objFrozen,
+    objAppetizing,
+    objGreasy,
+    objHot,
+    objLeftovers,
+    objMouldy,
+    objRaw,
+    objRoasted,
+    objRotten,
+    objSalty,
+    objSmellingBad,
+    objSmellingGood,
+    objTheWayItSmells,
+    objSpicy,
+    objStrongSmell,
+    objStrongTaste,
+    objSweet,
+    objDisgusting,
+    objWatery,
+  ];
+}
+
+interface Module9VerbDatum extends Omit<Module6VerbDatum, "key"> {
+  key: "eat";
+}
+
+export function createModule9VerbList(): Module9VerbDatum[] {
+  return [
+    {
+      en: "eat something",
+      key: "eat",
+      root: "-ek-",
+      cmd: eatCmdData,
+      def: eatDefData,
+      fut: eatFutData,
+      hab: eatHabData,
+      ifut: eatIfutData,
+      pfv: eatPfvData,
+    },
+  ];
+}
+
+export function createModule9VerbListFlat() {
+  const resultingList = createModule9VerbList();
+  const flattenedResult = [];
+  for (const v of resultingList) {
+    flattenedResult.push(...flattenVerbDatum(v));
+  }
+  return flattenedResult;
 }
