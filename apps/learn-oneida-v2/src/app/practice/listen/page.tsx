@@ -23,7 +23,7 @@ import {
   createTimesOfDayData,
   determineTimesOfDayAudioFileName,
 } from "@/components/articles/TimesOfDay";
-import { arrayify } from "@/utils";
+import { arrayify } from "@ukwehuwehneke/language-components";
 
 const meta: any = () => {
   return [

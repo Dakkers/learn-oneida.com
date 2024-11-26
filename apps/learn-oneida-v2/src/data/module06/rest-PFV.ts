@@ -1,11 +1,11 @@
 import { createParadigmData } from "~/components/ParadigmTable";
-import { pronouns } from "~/utils";
+import { pronouns } from "@ukwehuwehneke/language-components";
 
 // Yes, there is a glottal at the end of a perfective!
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} {{refVerbPast}} rested",
+    translation: "{{pronoun}} {{refVerb}} resting",
     type: "PB",
     phrases: [
       {

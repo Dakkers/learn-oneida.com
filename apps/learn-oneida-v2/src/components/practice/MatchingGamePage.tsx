@@ -6,7 +6,7 @@ import { useDrag, useDrop, type TextDropItem } from "react-aria";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { cn } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { arrayify } from "~/utils";
+import { arrayify } from "@ukwehuwehneke/language-components";
 import { LucideIcon } from "lucide-react";
 import _ from "lodash";
 

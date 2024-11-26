@@ -31,10 +31,9 @@ import React from "react";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
-  Pronoun,
+  type Pronoun,
   pronouns,
-  translatePhrase,
-} from "~/utils";
+} from "@ukwehuwehneke/language-components";
 import {
   BreakdownArray,
   BreakdownType,
@@ -48,6 +47,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import _ from "lodash";
 import {
   sanitizeIrregularCharacters,
+  translatePhrase,
   whisperizeWord,
 } from "@ukwehuwehneke/language-components";
 

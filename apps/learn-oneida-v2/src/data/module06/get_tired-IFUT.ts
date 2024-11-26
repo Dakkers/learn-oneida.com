@@ -1,55 +1,55 @@
 import { createParadigmData } from "~/components/ParadigmTable";
-import { pronouns } from "~/utils";
+import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} might get tired",
+    translation: "{{pronoun}} might get dead-tired",
     type: "PR",
     phrases: [
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["k"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["k"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["hse"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["hse"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["ha"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["ha"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["ye"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["ye"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["ka"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["ka"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a·e", "IFUT"], ["tni"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a·e", "IFUT"], ["tni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["yakni"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["yakni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a·e", "IFUT"], ["sni"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a·e", "IFUT"], ["sni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["hni"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["hni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["kni"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["kni"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a·e", "IFUT"], ["twa"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a·e", "IFUT"], ["twa"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["yakwa"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["yakwa"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a·e", "IFUT"], ["swa"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a·e", "IFUT"], ["swa"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["hati"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["hati"], "hwishʌ́heyeʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["kuti"], "khwishʌ́heyeʔ"],
+        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["kuti"], "hwishʌ́heyeʔ"],
       },
     ],
   },

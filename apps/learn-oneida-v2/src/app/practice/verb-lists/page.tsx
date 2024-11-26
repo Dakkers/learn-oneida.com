@@ -8,10 +8,9 @@ import { Button } from "@ukwehuwehneke/ohutsya";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
-  Pronoun,
+  type Pronoun,
   pronouns,
-  translatePhrase,
-} from "~/utils";
+} from "@ukwehuwehneke/language-components";
 import {
   MODULE_6_VERB_TENSE_LIST,
   Module6VerbTense,
@@ -25,7 +24,10 @@ import {
   createModule5VerbsList,
   module5VerbTenseMap,
 } from "~/data/module05";
-import { SectionHeading } from "@ukwehuwehneke/language-components";
+import {
+  SectionHeading,
+  translatePhrase,
+} from "@ukwehuwehneke/language-components";
 import {
   MODULE_4_TENSE_LIST,
   Module4VerbTense,

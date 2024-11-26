@@ -6,7 +6,11 @@ import { Heading } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Select } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
-import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "~/utils";
+import {
+  PRONOUN_MAP_EN,
+  PRONOUN_MAP_ONEIDA,
+  type Pronoun,
+} from "@ukwehuwehneke/language-components";
 import { z } from "zod";
 import {
   MODULE_6_VERB_TENSE_LIST,

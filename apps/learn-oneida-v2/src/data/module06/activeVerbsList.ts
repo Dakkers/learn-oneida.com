@@ -176,7 +176,7 @@ import workFutData from "./work-FUT";
 import workHabData from "./work-HAB";
 import workIfutData from "./work-IFUT";
 import workPfvData from "./work-PFV";
-import { Pronoun, pronouns } from "~/utils";
+import { type Pronoun, pronouns } from "@ukwehuwehneke/language-components";
 import _ from "lodash";
 
 const EXCEPTION_IT_ONLY = 1;

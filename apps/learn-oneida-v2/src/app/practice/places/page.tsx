@@ -7,7 +7,7 @@ import {
   EnglishToOneidaQuiz,
   EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
-import { arrayify } from "~/utils";
+import { arrayify } from "@ukwehuwehneke/language-components";
 import DATA_PLACES_IN_COMMUNITY from "@/data/module04/places-in-the-community";
 
 const meta: any = () => {

@@ -2,7 +2,7 @@ import { createParadigmData } from "~/components/ParadigmTable";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} rains",
+    translation: "{{pronoun}} keeps raining",
     type: "PB",
     phrases: [
       {

@@ -7,7 +7,7 @@ import {
   SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
-import { arrayify } from "@/utils";
+import { arrayify } from "@ukwehuwehneke/language-components";
 
 export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
   const data = createTimesOfDayData();

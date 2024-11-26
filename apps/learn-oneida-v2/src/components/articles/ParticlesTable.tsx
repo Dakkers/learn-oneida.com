@@ -4,7 +4,7 @@ import { particleList } from "./particleList";
 import React from "react";
 import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { arrayify } from "@/utils";
+import { arrayify } from "@ukwehuwehneke/language-components";
 
 type ParticlesGroup =
   | "module01"

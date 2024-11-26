@@ -1,9 +1,9 @@
 import { createParadigmData } from "~/components/ParadigmTable";
-import { pronouns } from "~/utils";
+import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} cook",
+    translation: "{{pronoun}} {{refVerb}} cooking",
     type: "PR",
     phrases: [
       {

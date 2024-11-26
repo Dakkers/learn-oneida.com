@@ -25,10 +25,10 @@ import {
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
-  Pronoun,
+  type Pronoun,
   arrayify,
   pronouns,
-} from "~/utils";
+} from "@ukwehuwehneke/language-components";
 import { Pronominal, PronominalColor } from "../Pronominal";
 import {
   BreakdownArray,

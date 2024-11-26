@@ -19,7 +19,7 @@ import { AnyZodObject, z } from "zod";
 import {
   sanitizeIrregularCharacters,
   standardizeCharacters,
-} from "~/utils/words";
+} from "@ukwehuwehneke/language-components";
 
 type FormRow = Record<string, unknown> & {
   en: string;

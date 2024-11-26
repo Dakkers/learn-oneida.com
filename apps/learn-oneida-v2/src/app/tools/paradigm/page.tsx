@@ -46,11 +46,11 @@ import dataThought from "~/data/module04/thought";
 
 import { ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
 import {
-  Pronoun,
+  type Pronoun,
   dualicPronouns,
   pluralPronouns,
   singlePronouns,
-} from "~/utils";
+} from "@ukwehuwehneke/language-components";
 import sample from "lodash/sample";
 import { Select } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";

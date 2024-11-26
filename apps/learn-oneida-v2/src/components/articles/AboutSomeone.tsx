@@ -7,7 +7,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
-import { singlePronouns } from "~/utils";
+import { singlePronouns } from "@ukwehuwehneke/language-components";
 
 const data = createParadigmData(
   {

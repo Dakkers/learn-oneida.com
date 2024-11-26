@@ -48,7 +48,10 @@ import {
   BreakdownArray,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
-import { PRONOUN_MAP_EN_POSSESSIVE, type Pronoun } from "~/utils";
+import {
+  PRONOUN_MAP_EN_POSSESSIVE,
+  type Pronoun,
+} from "@ukwehuwehneke/language-components";
 import { TableOfContents as TOC } from "../TableOfContents";
 import { Letter } from "../Letter";
 import {
