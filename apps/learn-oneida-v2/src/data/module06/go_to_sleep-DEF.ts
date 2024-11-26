@@ -13,13 +13,13 @@ export default createParadigmData(
         breakdown: [["we", "DEF"], ["sʌ"], "·táweʔ"],
       },
       {
-        breakdown: [["wa", "DEF"], ["ho"], "i·táweʔ"],
+        breakdown: [["wa", "DEF"], ["ho"], "·táweʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ako"], "i·táweʔ"],
+        breakdown: [["waʔ", "DEF"], ["ako"], "·táweʔ"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["o"], "i·táweʔ"],
+        breakdown: [["waʔ", "DEF"], ["o"], "·táweʔ"],
       },
       {
         breakdown: [["waʔ", "DEF"], ["ukn"], "i·táweʔ"],
