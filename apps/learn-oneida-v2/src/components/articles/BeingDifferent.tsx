@@ -4,7 +4,10 @@ import { TableWrapper } from "@/components/TableWrapper";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
-import { dualicPronouns, pluralPronouns } from "~/utils";
+import {
+  dualicPronouns,
+  pluralPronouns,
+} from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
 const data = createParadigmData(

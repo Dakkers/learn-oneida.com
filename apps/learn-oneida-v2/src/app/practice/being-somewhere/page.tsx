@@ -32,8 +32,10 @@ import dataMightLiveThere from "~/data/module04/might-live-there";
 import dataDoesntLiveThere from "~/data/module04/doesnt-live-there";
 import dataDidntUsedToLiveThere from "~/data/module04/didnt-used-to-live-there";
 import dataWillNotLiveThere from "~/data/module04/will-not-live-there";
-import { convertBreakdownToPlainText } from "@ukwehuwehneke/language-components";
-import { translatePhrase } from "~/utils";
+import {
+  convertBreakdownToPlainText,
+  translatePhrase,
+} from "@ukwehuwehneke/language-components";
 import { EnglishToOneidaQuiz } from "~/components/practice/EnglishToOneidaQuiz";
 
 const meta: any = () => {

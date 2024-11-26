@@ -36,7 +36,7 @@ import {
   PRONOUN_MAP_EN_OBJECTIVE,
   PURPLES_MAP,
   pronouns,
-} from "~/utils";
+} from "@ukwehuwehneke/language-components";
 import {
   BreakdownArray,
   BreakdownType,

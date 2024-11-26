@@ -2,7 +2,7 @@ import { createParadigmData } from "~/components/ParadigmTable";
 
 export default createParadigmData(
   {
-    translation: "Watch something!",
+    translation: "Watch!",
     type: "PR",
     phrases: [
       {

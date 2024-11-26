@@ -2,22 +2,23 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Select } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
-  Pronoun,
+  type Pronoun,
   pronouns,
-  translatePhrase,
-} from "~/utils";
+} from "@ukwehuwehneke/language-components";
 import { z } from "zod";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { createModule4Data } from "~/data/module04";
 import { Link } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "@ukwehuwehneke/language-components";
+import {
+  SectionHeading,
+  translatePhrase,
+} from "@ukwehuwehneke/language-components";
 
 const meta: any = () => {
   return [

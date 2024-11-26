@@ -1,9 +1,9 @@
 import { createParadigmData } from "~/components/ParadigmTable";
-import { pronouns } from "~/utils";
+import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} will look at something",
+    translation: "{{pronoun}} will look",
     type: "PR",
     phrases: [
       {

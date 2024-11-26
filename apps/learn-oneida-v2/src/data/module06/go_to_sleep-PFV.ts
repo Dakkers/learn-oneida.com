@@ -1,19 +1,19 @@
 import { createParadigmData } from "~/components/ParadigmTable";
-import { pronouns } from "~/utils";
+import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} {{refVerbPast}} slept",
+    translation: "{{pronoun}} {{refVerbPast}} gone to sleep",
     type: "PB",
     phrases: [
       {
         breakdown: [["wak"], "itá·u"],
       },
       {
-        breakdown: [["sʌ"], "itá·u"],
+        breakdown: [["sʌ"], "tá·u"],
       },
       {
-        breakdown: [["lo"], "itá·u"],
+        breakdown: [["lo"], "tá·u"],
       },
       {
         breakdown: [["yako"], "tá·u"],

@@ -3,7 +3,7 @@
 import { Bleed, Box, Divider, Notice, Text } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
-import { singlePronouns } from "~/utils";
+import { singlePronouns } from "@ukwehuwehneke/language-components";
 import yatsJson from "~/data/yats";
 import anuhteJson from "~/data/anuhte";
 import { EnglishNamesArticle } from "~/components/articles/EnglishNames";

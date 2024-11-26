@@ -11,7 +11,7 @@ import {
   PRONOUN_MAP_ONEIDA,
   arrayify,
   pronouns,
-} from "~/utils";
+} from "@ukwehuwehneke/language-components";
 import { z } from "zod";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import {

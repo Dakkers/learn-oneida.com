@@ -29,7 +29,7 @@ import { List } from "@ukwehuwehneke/ohutsya";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { TextArray } from "@ukwehuwehneke/ohutsya";
-import { pronouns } from "~/utils";
+import { pronouns } from "@ukwehuwehneke/language-components";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 
