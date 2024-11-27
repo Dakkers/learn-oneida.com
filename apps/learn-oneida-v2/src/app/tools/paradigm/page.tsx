@@ -2,7 +2,7 @@
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import dataAttokhaJson from "~/data/attokha";
 import dataEhsaksJson from "~/data/ehsak";
 import dataΛtoleJson from "~/data/ʌtole";
@@ -57,6 +57,12 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
 import { createModule9VerbListFlat } from "~/data/module09";
+import {
+  ReadonlyURLSearchParams,
+  usePathname,
+  useRouter,
+  useSearchParams,
+} from "next/navigation";
 
 const meta: any = () => {
   return [
@@ -69,6 +75,11 @@ const meta: any = () => {
 };
 
 export default function ToolsParadigm() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const wordSearchParam = searchParams.get("word") ?? "like-red";
+
   const module4Options: Array<[string, ParadigmData, string]> = useMemo(
     () => [
       ["is-here", dataIsHere, "is here"],
@@ -124,6 +135,9 @@ export default function ToolsParadigm() {
     ...module4Options.map((item) => [item[0], item[1]]),
   ]);
 
+  const defaultKey =
+    wordSearchParam in dataToUse ? wordSearchParam : "like-red";
+
   const translatorFns = {
     i_tlu: ({ pronoun }: { pronoun: Pronoun }) => ({
       verb: ["it", "m", "f"].includes(pronoun) ? "resides" : "reside",
@@ -133,10 +147,10 @@ export default function ToolsParadigm() {
     }),
   } as const;
 
-  const [word, setWord] = React.useState<keyof typeof dataToUse>("like-red");
-  const [paradigm, setParadigm] = React.useState("all");
-  const [hasStarted, setHasStarted] = React.useState(false);
-  const [allowedPronouns, setAllowedPronouns] = React.useState<Pronoun[]>([]);
+  const [word, setWord] = useState<keyof typeof dataToUse>(defaultKey);
+  const [paradigm, setParadigm] = useState("all");
+  const [hasStarted, setHasStarted] = useState(false);
+  const [allowedPronouns, setAllowedPronouns] = useState<Pronoun[]>([]);
 
   const wordOptions = useMemo(
     () =>
@@ -148,7 +162,7 @@ export default function ToolsParadigm() {
         { label: "pull someting out", value: "otshyus" },
         { label: "reside some place", value: "i_tlu" },
         ...createModule6VerbListFlat().map((datum) => ({
-          label: datum.en,
+          label: datum.enShort ?? datum.en,
           value: datum.key,
         })),
         ...createModule9VerbListFlat().map((datum) => ({
@@ -174,6 +188,9 @@ export default function ToolsParadigm() {
           onChange={(value) => {
             setWord(value as keyof typeof dataToUse);
             setHasStarted(false);
+            router.replace(
+              pathname + "?" + createQueryString(searchParams, "word", value),
+            );
           }}
           options={wordOptions}
           // @ts-expect-error TODO: fix this type error
@@ -239,4 +256,15 @@ export default function ToolsParadigm() {
       )}
     </>
   );
+}
+
+function createQueryString(
+  params: ReadonlyURLSearchParams,
+  name: string,
+  value: string,
+) {
+  const result = new URLSearchParams(params.toString());
+  result.set(name, value);
+
+  return result.toString();
 }

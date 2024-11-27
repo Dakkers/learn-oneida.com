@@ -229,6 +229,7 @@ export type Module6VerbDatum = {
   cmd: ParadigmData | null;
   def: ParadigmData;
   en: string;
+  enShort?: string;
   exceptions?: number[];
   fut: ParadigmData;
   hab: ParadigmData;
@@ -434,6 +435,7 @@ export const module6VerbTenseMap: Record<Module6VerbTense, string> = {
 export function createModule6VerbList() {
   const activeVerbsList: {
     en?: string;
+    enShort?: string;
     exceptions?: number[];
     key: Module6VerbKey;
     pronouns?: Pronoun[];
@@ -441,11 +443,13 @@ export function createModule6VerbList() {
   }[] = [
     {
       en: "answer, reply",
+      enShort: "answer",
       key: "answer",
       root: "-lihwaʔslakw-",
     },
     {
       en: "bathe, wash one's body",
+      enShort: "bathe",
       key: "bathe",
       root: "-atyaʔtohale-",
     },
@@ -473,16 +477,18 @@ export function createModule6VerbList() {
     },
     {
       en: "get dressed, fixed up",
+      enShort: "get dressed",
       key: "getDressedUp",
       root: "-atsluni-",
     },
     {
       en: "get (raise) self up",
+      enShort: "get up",
       key: "getSelfUp",
       root: "-atketsw-",
     },
     {
-      en: "tired, get",
+      en: "get dead-tired",
       key: "getTired",
       root: "te...hwishʌheyu-",
     },
@@ -500,6 +506,7 @@ export function createModule6VerbList() {
     },
     {
       key: "hideOneself",
+      enShort: "hide",
       root: "-atahseht-",
     },
     {
@@ -508,6 +515,7 @@ export function createModule6VerbList() {
     },
     {
       en: "look (at something)",
+      enShort: "look",
       key: "lookAtSomething",
       root: "-atkatho-",
     },
@@ -517,6 +525,7 @@ export function createModule6VerbList() {
     },
     {
       en: "prepare oneself, get oneself ready",
+      enShort: "prepare oneself",
       key: "prepareOneself",
       root: "-atatewynʌta-",
     },
@@ -551,10 +560,12 @@ export function createModule6VerbList() {
     },
     {
       key: "tidySomethingUp",
+      enShort: "tidy up",
       root: "te...atohtalho-",
     },
     {
       en: "understand, grasp",
+      enShort: "understand",
       key: "understand",
       root: "-ʔnikuhlayʌta-",
     },
@@ -568,10 +579,12 @@ export function createModule6VerbList() {
     },
     {
       key: "washSomething",
+      enShort: "wash",
       root: "-nohale-",
     },
     {
       key: "watchSomething",
+      enShort: "watch",
       root: "-atlohlok-",
     },
     {
@@ -584,7 +597,7 @@ export function createModule6VerbList() {
 
   for (const v of activeVerbsList) {
     const item: Partial<Module6VerbDatum> = {
-      ..._.pick(v, ["en", "exceptions", "key", "root"]),
+      ..._.pick(v, ["en", "enShort", "exceptions", "key", "root"]),
     };
     item.en = v.en ?? _.startCase(_.camelCase(v.key)).toLowerCase();
     item.pronouns = v.exceptions?.includes(EXCEPTION_IT_ONLY)
@@ -628,6 +641,9 @@ export function flattenVerbDatum(
     result.push({
       ...v[tense],
       en: `${v.en} (${module6VerbTenseMap[tense]})`,
+      enShort: v.enShort
+        ? `${v.enShort} (${module6VerbTenseMap[tense]})`
+        : null,
       key: `${v.key}-${tense}`,
       tense,
     });
