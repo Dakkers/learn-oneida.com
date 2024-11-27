@@ -63,6 +63,7 @@ import {
   useRouter,
   useSearchParams,
 } from "next/navigation";
+import { Suspense } from "react";
 
 const meta: any = () => {
   return [
@@ -175,7 +176,7 @@ export default function ToolsParadigm() {
   );
 
   return (
-    <>
+    <Suspense>
       <SectionHeading level={1}>Paradigm Tester</SectionHeading>
 
       <Flex
@@ -254,7 +255,7 @@ export default function ToolsParadigm() {
           translationFn={translatorFns[word]}
         />
       )}
-    </>
+    </Suspense>
   );
 }
 
