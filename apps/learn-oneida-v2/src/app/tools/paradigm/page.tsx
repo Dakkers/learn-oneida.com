@@ -75,7 +75,7 @@ const meta: any = () => {
   ];
 };
 
-export default function ToolsParadigm() {
+function ToolsParadigmInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -176,7 +176,7 @@ export default function ToolsParadigm() {
   );
 
   return (
-    <Suspense>
+    <>
       <SectionHeading level={1}>Paradigm Tester</SectionHeading>
 
       <Flex
@@ -255,6 +255,14 @@ export default function ToolsParadigm() {
           translationFn={translatorFns[word]}
         />
       )}
+    </>
+  );
+}
+
+export default function ToolsParadigm() {
+  return (
+    <Suspense>
+      <ToolsParadigmInner />
     </Suspense>
   );
 }
