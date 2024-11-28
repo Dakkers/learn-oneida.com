@@ -49,7 +49,7 @@ export default createParadigmData(
         breakdown: [["ʌ", "FUT"], ["hu"], "tekhu·ní·"],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ktekhu·ní·"]],
+        breakdown: [["ʌ", "FUT"], ["ku"], "tekhu·ní·"],
       },
     ],
   },
