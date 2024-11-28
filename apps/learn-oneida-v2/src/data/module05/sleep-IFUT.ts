@@ -13,43 +13,43 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["hs"], "itáhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ho"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["ho"], "táhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yako"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yako"], "táhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yo"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yo"], "táhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukn"], "itáhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukni"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukn"], "itáhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["sni"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["sn"], "itáhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hot"], "itáhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yot"], "itáhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukwʌ"], "táhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yukwa"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yukwʌ"], "táhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["swa"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["swʌ"], "táhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hoti"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["hot"], "itáhs", ["hekeʔ", "IFUT"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yoti"], "itáhs", ["hekeʔ", "IFUT"]],
+        breakdown: [["a", "IFUT"], ["yot"], "itáhs", ["hekeʔ", "IFUT"]],
       },
     ],
   },

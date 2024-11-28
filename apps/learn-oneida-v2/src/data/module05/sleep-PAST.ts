@@ -10,46 +10,46 @@ export default createParadigmData(
         breakdown: [["wak"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["sʌ"], "tá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["lo"], "tá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["yako"], "tá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["yo"], "tá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["yukn"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["yukn"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["sn"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["lot"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["yot"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["yukwʌ"], "tá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["yukwʌ"], "tá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["swʌ"], "tá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["lot"], "itá·s", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "itá·s", ["kweʔ", "PAST"]],
+        breakdown: [["yot"], "itá·s", ["kweʔ", "PAST"]],
       },
     ],
   },

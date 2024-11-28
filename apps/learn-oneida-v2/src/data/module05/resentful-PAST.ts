@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["wak"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sa"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["sa"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["lo"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["lo"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yako"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yako"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yo"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yo"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yukni"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukni"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yukni"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["sni"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["sni"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["loti"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yoti"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yukwa"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yukwa"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yukwa"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["swa"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["swa"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["loti"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["loti"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["yoti"], "shwaʔtaníhe", ["a", "JOIN"], ["hkweʔ", "PAST"]],
+        breakdown: [["yoti"], "shwaʔtaníh", ["a", "JOIN"], ["hkweʔ", "PAST"]],
       },
     ],
   },

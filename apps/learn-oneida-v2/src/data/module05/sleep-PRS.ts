@@ -3,53 +3,53 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} {{refVerb}} sleep",
+    translation: "{{pronoun}} {{refVerb}} sleeping",
     type: "PB",
     phrases: [
       {
         breakdown: [["wak"], "i·tá·s"],
       },
       {
-        breakdown: [["sa"], "i·tá·s"],
+        breakdown: [["sʌ"], "·tá·s"],
       },
       {
-        breakdown: [["lo"], "i·tá·s"],
+        breakdown: [["lo"], "·tá·s"],
       },
       {
-        breakdown: [["yako"], "i·tá·s"],
+        breakdown: [["yako"], "·tá·s"],
       },
       {
-        breakdown: [["yo"], "i·tá·s"],
+        breakdown: [["yo"], "·tá·s"],
       },
       {
-        breakdown: [["yukni"], "i·tá·s"],
+        breakdown: [["yukn"], "i·tá·s"],
       },
       {
-        breakdown: [["yukni"], "i·tá·s"],
+        breakdown: [["yukn"], "i·tá·s"],
       },
       {
-        breakdown: [["sni"], "i·tá·s"],
+        breakdown: [["sn"], "i·tá·s"],
       },
       {
-        breakdown: [["loti"], "i·tá·s"],
+        breakdown: [["lot"], "i·tá·s"],
       },
       {
-        breakdown: [["yoti"], "i·tá·s"],
+        breakdown: [["yot"], "i·tá·s"],
       },
       {
-        breakdown: [["yukwa"], "i·tá·s"],
+        breakdown: [["yukwʌ"], "·tá·s"],
       },
       {
-        breakdown: [["yukwa"], "i·tá·s"],
+        breakdown: [["yukwʌ"], "·tá·s"],
       },
       {
-        breakdown: [["swa"], "i·tá·s"],
+        breakdown: [["swʌ"], "·tá·s"],
       },
       {
-        breakdown: [["loti"], "i·tá·s"],
+        breakdown: [["lot"], "i·tá·s"],
       },
       {
-        breakdown: [["yoti"], "i·tá·s"],
+        breakdown: [["yot"], "i·tá·s"],
       },
     ],
   },

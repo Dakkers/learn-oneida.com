@@ -19,7 +19,7 @@ export default createParadigmData(
         breakdown: [["te", "DUAL"], ["hs"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["lo"], "ʔnikuhlyaʔkú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["ho"], "ʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
         breakdown: [["te", "DUAL"], ["yako"], "ʔnikuhlyaʔkú", ["neʔ", "PAST"]],
@@ -37,7 +37,7 @@ export default createParadigmData(
         breakdown: [["te", "DUAL"], ["sn"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["lon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["hon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
         breakdown: [["te", "DUAL"], ["yon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
@@ -52,7 +52,7 @@ export default createParadigmData(
         breakdown: [["te", "DUAL"], ["sw"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["lon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
+        breakdown: [["te", "DUAL"], ["hon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
       },
       {
         breakdown: [["te", "DUAL"], ["yon"], "aʔnikuhlyaʔkú", ["neʔ", "PAST"]],
