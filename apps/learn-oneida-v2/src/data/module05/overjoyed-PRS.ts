@@ -13,13 +13,13 @@ export default createParadigmData(
         breakdown: [["hs"], "atunháheleʔ"],
       },
       {
-        breakdown: [["ho"], "atunháheleʔ"],
+        breakdown: [["ho"], "tunháheleʔ"],
       },
       {
-        breakdown: [["yako"], "atunháheleʔ"],
+        breakdown: [["yako"], "tunháheleʔ"],
       },
       {
-        breakdown: [["yo"], "atunháheleʔ"],
+        breakdown: [["yo"], "tunháheleʔ"],
       },
       {
         breakdown: [["yuky"], "atunháheleʔ"],

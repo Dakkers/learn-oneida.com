@@ -13,6 +13,7 @@ export default createParadigmData(
         breakdown: [["wá", "DEF"], ["hs"], "ekeʔ"],
       },
       {
+        // Correct
         breakdown: [["wá·", "DEF"], ["l"], "ekeʔ"],
       },
       {

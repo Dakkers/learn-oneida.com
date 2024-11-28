@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: ["kʌʔ ni", ["hs"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", ["l"], "á·"],
+        breakdown: ["kʌʔ nih", ["l"], "á·"],
       },
       {
         breakdown: ["kʌʔ ni", ["yu"], "á·"],
@@ -46,10 +46,10 @@ export default createParadigmData(
         breakdown: ["kʌʔ ni", ["sw"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", ["lu"], "á·"],
+        breakdown: ["kʌʔ ni", ["lʌn"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", ["ku"], "á·"],
+        breakdown: ["kʌʔ ni", ["kun"], "á·"],
       },
     ],
   },

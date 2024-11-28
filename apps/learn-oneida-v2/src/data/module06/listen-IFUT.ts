@@ -19,7 +19,7 @@ export default createParadigmData(
         breakdown: [["a·", "IFUT"], ["yu"], "tahúhsatateʔ"],
       },
       {
-        breakdown: [["a·", "IFUT"], ["u"], "atahúhsatateʔ"],
+        breakdown: [["a·", "IFUT"], ["u"], "tahúhsatateʔ"],
       },
       {
         breakdown: [["a·e", "IFUT"], ["ty"], "atahúhsatateʔ"],

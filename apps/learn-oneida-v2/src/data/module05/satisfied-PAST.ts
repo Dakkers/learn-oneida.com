@@ -19,7 +19,7 @@ export default createParadigmData(
         breakdown: [["ti", "CIS"], ["sa"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["lo"], "ʔnikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["ho"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
         breakdown: [["t", "CIS"], ["yako"], "ʔnikuhliyo", ["hné·", "PAST"]],
@@ -37,7 +37,7 @@ export default createParadigmData(
         breakdown: [["ti", "CIS"], ["sni"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["loti"], "ʔnikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["hoti"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
         breakdown: [["t", "CIS"], ["yoti"], "ʔnikuhliyo", ["hné·", "PAST"]],
@@ -52,7 +52,7 @@ export default createParadigmData(
         breakdown: [["ti", "CIS"], ["swa"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["t", "CIS"], ["loti"], "ʔnikuhliyo", ["hné·", "PAST"]],
+        breakdown: [["t", "CIS"], ["hoti"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
       {
         breakdown: [["t", "CIS"], ["yoti"], "ʔnikuhliyo", ["hné·", "PAST"]],
