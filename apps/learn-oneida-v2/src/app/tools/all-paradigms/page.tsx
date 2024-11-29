@@ -101,24 +101,27 @@ function Module6Paradigms() {
       {createModule6VerbList().map((v) => (
         <Fragment key={v.key}>
           <SectionHeading level={2}>{v.en}</SectionHeading>
-          {MODULE_6_VERB_TENSE_LIST.map((t) => (
-            <>
-              <SectionHeading level={3} key={t}>
-                {v.en} — {module6VerbTenseMap[t]}
-              </SectionHeading>
+          {MODULE_6_VERB_TENSE_LIST.map(
+            (t) =>
+              v[t] && (
+                <>
+                  <SectionHeading level={3} key={t}>
+                    {v.en} — {module6VerbTenseMap[t]}
+                  </SectionHeading>
 
-              <div style={{ pageBreakAfter: "always" }}>
-                <ParadigmTable
-                  columnVisibility={{
-                    pronounOneida: true,
-                    pronounEnglish: false,
-                    translation: true,
-                  }}
-                  data={v[t]!}
-                />
-              </div>
-            </>
-          ))}
+                  <div style={{ pageBreakAfter: "always" }}>
+                    <ParadigmTable
+                      columnVisibility={{
+                        pronounOneida: true,
+                        pronounEnglish: false,
+                        translation: true,
+                      }}
+                      data={v[t]}
+                    />
+                  </div>
+                </>
+              ),
+          )}
         </Fragment>
       ))}
     </>
