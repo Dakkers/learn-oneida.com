@@ -22,13 +22,13 @@ export default createParadigmData(
         breakdown: [["t", "DUAL"], ["a", "IFUT"], ["w"], "atohtálhoʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["ty"], "atohtálhoʔ"],
+        breakdown: [["t", "DUAL"], ["e", "IFUT"], ["ty"], "atohtálhoʔ"],
       },
       {
         breakdown: [["t", "DUAL"], ["a", "IFUT"], ["yakn"], "atohtálhoʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["tsy"], "atohtálhoʔ"],
+        breakdown: [["t", "DUAL"], ["e", "IFUT"], ["tsy"], "atohtálhoʔ"],
       },
       {
         breakdown: [["t", "DUAL"], ["a", "IFUT"], ["hy"], "atohtálhoʔ"],
@@ -37,13 +37,13 @@ export default createParadigmData(
         breakdown: [["t", "DUAL"], ["a", "IFUT"], ["ky"], "atohtálhoʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["tw"], "atohtálhoʔ"],
+        breakdown: [["t", "DUAL"], ["e", "IFUT"], ["tw"], "atohtálhoʔ"],
       },
       {
         breakdown: [["t", "DUAL"], ["a", "IFUT"], ["yakw"], "atohtálhoʔ"],
       },
       {
-        breakdown: [["t", "DUAL"], ["a", "IFUT"], ["sw"], "atohtálhoʔ"],
+        breakdown: [["t", "DUAL"], ["e", "IFUT"], ["sw"], "atohtálhoʔ"],
       },
       {
         breakdown: [["t", "DUAL"], ["a", "IFUT"], ["hu"], "tohtálhoʔ"],

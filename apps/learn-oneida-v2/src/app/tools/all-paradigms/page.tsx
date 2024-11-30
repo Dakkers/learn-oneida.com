@@ -112,7 +112,7 @@ function Module6Paradigms() {
                   <div style={{ pageBreakAfter: "always" }}>
                     <ParadigmTable
                       columnVisibility={{
-                        pronounOneida: true,
+                        pronounOneida: false,
                         pronounEnglish: false,
                         translation: true,
                       }}

@@ -22,13 +22,13 @@ export default createParadigmData(
         breakdown: [["t", "CIS"], ["a", "DEF"], ["ka"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["t", "CIS"], ["a", "DEF"], ["tni"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["e", "DEF"], ["tni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["t", "CIS"], ["a", "DEF"], ["akni"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["yakni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["t", "CIS"], ["a", "DEF"], ["sni"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["e", "DEF"], ["sni"], "lihwaʔsla·kó·"],
       },
       {
         breakdown: [["t", "CIS"], ["a", "DEF"], ["hni"], "lihwaʔsla·kó·"],
@@ -37,13 +37,13 @@ export default createParadigmData(
         breakdown: [["t", "CIS"], ["a", "DEF"], ["kni"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["t", "CIS"], ["a", "DEF"], ["twa"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["e", "DEF"], ["twa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["t", "CIS"], ["a", "DEF"], ["akwa"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["a", "DEF"], ["yakwa"], "lihwaʔsla·kó·"],
       },
       {
-        breakdown: [["t", "CIS"], ["a", "DEF"], ["swa"], "lihwaʔsla·kó·"],
+        breakdown: [["t", "CIS"], ["e", "DEF"], ["swa"], "lihwaʔsla·kó·"],
       },
       {
         breakdown: [["t", "CIS"], ["a", "DEF"], ["hati"], "lihwaʔsla·kó·"],
