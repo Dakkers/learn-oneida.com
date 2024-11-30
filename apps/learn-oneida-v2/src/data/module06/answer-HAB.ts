@@ -10,7 +10,7 @@ export default createParadigmData(
         breakdown: [["t", "CIS"], ["k"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["te", "CIS"], ["s"], "lihwaʔslákwa", ["s", "HAB"]],
+        breakdown: [["te", "CIS"], ["hs"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
         breakdown: [["t", "CIS"], ["ha"], "lihwaʔslákwa", ["s", "HAB"]],
@@ -40,10 +40,10 @@ export default createParadigmData(
         breakdown: [["te", "CIS"], ["twa"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["te", "CIS"], ["yakwa"], "lihwaʔslákwa", ["s", "HAB"]],
+        breakdown: [["t", "CIS"], ["yakwa"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["swa"], "lihwaʔslákwa", ["s", "HAB"]],
+        breakdown: [["te", "CIS"], ["swa"], "lihwaʔslákwa", ["s", "HAB"]],
       },
       {
         breakdown: [["t", "CIS"], ["hati"], "lihwaʔslákwa", ["s", "HAB"]],
