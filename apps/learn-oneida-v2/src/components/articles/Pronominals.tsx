@@ -172,8 +172,8 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
       <Text>
         The prefix <Letter>it</Letter> is attached to all roots beginning with{" "}
         <Letter>hs</Letter> and the <Letter>i</Letter> disappears when anything
-        is attached in front of the prefix. Example: <b>íthsaʔas</b> and{" "}
-        <b>yah tethsáʔas</b>
+        is attached in front of the prefix. Example: <b>ítshaʔas</b> and{" "}
+        <b>yah tetsháʔas</b>. Additionally, the {"h"} shifts over.
       </Text>
 
       <Divider />

@@ -334,9 +334,10 @@
     "default": ["yukw"],
     "label": ["She → me", "They → me"],
     "c": [
+      "yuk",
       {
-        "excp": "1",
-        "breakdown": ["yuk", { "text": "e", "type": "OP" }]
+        "excp": "3",
+        "text": "yuke"
       }
     ],
     "i": ["yuk"],

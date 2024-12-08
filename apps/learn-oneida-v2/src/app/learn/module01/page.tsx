@@ -133,16 +133,14 @@ export default function LearnModule01() {
       <Text>
         A paradigm table for <Letter>yats</Letter> looks like this:
       </Text>
-      <Bleed mx={32}>
-        <ParadigmTable
-          allowedPronouns={[...singlePronouns, "ms", "fs"]}
-          columnVisibility={{
-            pronounEnglish: false,
-            pronounOneida: false,
-          }}
-          data={yatsJson}
-        />
-      </Bleed>
+      <ParadigmTable
+        allowedPronouns={[...singlePronouns, "ms", "fs"]}
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={yatsJson}
+      />
       <Notice intent="primary">
         In this curriculum, the word &quot;paradigm&quot; refers to a list of
         conjugations for a given root word. When you get a grasp of the
@@ -158,18 +156,16 @@ export default function LearnModule01() {
         <Letter>anuhteʔ</Letter> and it uses blue pronominals. It means &quot;to
         know something&quot;. Here&lsquo;s the paradigm table:
       </Text>
-      <Bleed mx={32}>
-        <ParadigmTable
-          columnVisibility={{
-            pronounEnglish: false,
-            pronounOneida: false,
-          }}
-          data={anuhteJson}
-          translationFn={({ pronoun }) => ({
-            verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
-          })}
-        />
-      </Bleed>
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={anuhteJson}
+        translationFn={({ pronoun }) => ({
+          verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
+        })}
+      />
 
       <SectionHeading id="particles" level={2}>
         Particles
@@ -274,7 +270,7 @@ function DialogueSection() {
     [
       { one: "Lá·kel kʌ́ neʔn akaulhá·", en: "Is she Rachel?" },
       {
-        one: ["Táh", "Yáh Lá·kel té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá··"],
+        one: ["Táh", "Yáh Lá·kel té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá·"],
         en: "No. She's not Rachel. She's Susan.",
       },
     ],
@@ -385,32 +381,32 @@ function DialogueSection() {
   const part8: DialogueTableData = [
     [
       { one: "Úhkaʔ náhteʔ khenú·wehseʔ", en: "Who do I like?" },
-      { one: "Í· sknú·wehseʔ", en: "You like me." },
+      { one: "Í· sknú·wehse̲ʔ", en: "You like me." },
     ],
-    [null, { one: "Kwítel etsnú·wehseʔ", en: "You like Peter." }],
-    [null, { one: "Klistí·n shenú·wehseʔ", en: "You like Kristin." }],
-    [null, { one: "Beatles shenú·wehseʔ", en: "You like the Beatles." }],
+    [null, { one: "Kwítel etsnú·wehse̲ʔ", en: "You like Peter." }],
+    [null, { one: "Klistí·n shenú·wehse̲ʔ", en: "You like Kristin." }],
+    [null, { one: "Beatles shenú·wehse̲ʔ", en: "You like the Beatles." }],
 
     [
-      { one: "Úhkaʔ náhteʔ shenú·wehseʔ", en: "Who do you like?" },
-      { one: "Isé· kunú·wehseʔ", en: "I like you." },
+      { one: "Úhkaʔ náhteʔ shenú·wehse̲ʔ", en: "Who do you like?" },
+      { one: "Isé· kunú·wehse̲ʔ", en: "I like you." },
     ],
-    [null, { one: "Kwítel linú·wehseʔ", en: "I like Peter." }],
-    [null, { one: "Klistí·n khenú·wehseʔ", en: "I like Kristin." }],
-    [null, { one: "Beatles khenú·wehseʔ", en: "I like the Beatles." }],
-    [null, { one: "Akwekú khenú·wehseʔ", en: "I like everyone." }],
+    [null, { one: "Kwítel linú·wehse̲ʔ", en: "I like Peter." }],
+    [null, { one: "Klistí·n khenú·wehse̲ʔ", en: "I like Kristin." }],
+    [null, { one: "Beatles khenú·wehse̲ʔ", en: "I like the Beatles." }],
+    [null, { one: "Akwekú khenú·wehse̲ʔ", en: "I like everyone." }],
     [
       null,
       {
-        one: "Háti úhkaʔ ok náhteʔ niʔisé· shenú·wehseʔ, í· khenú·wehseʔ",
+        one: "Háti úhkaʔ ok náhteʔ niʔisé· shenú·wehseʔ, í· khenú·wehse̲ʔ",
         en: "Anyone you like, I like them too.",
       },
     ],
 
     [
-      { one: "Úhkaʔ oyá· shenú·wehseʔ", en: "Who else do you like?" },
+      { one: "Úhkaʔ oyá· shenú·wehse̲ʔ", en: "Who else do you like?" },
       {
-        one: "Rolling Stones ú·niʔ khenú·wehseʔ",
+        one: "Rolling Stones ú·niʔ khenú·wehse̲ʔ",
         en: "I also like the Rolling Stones.",
       },
     ],
@@ -419,7 +415,7 @@ function DialogueSection() {
       { one: "Úhkaʔ shakonú·wehseʔ né· Kwítel", en: "Who does Peter like?" },
       { one: "Í· laknú·wehseʔ né· Kwítel", en: "Peter likes me." },
     ],
-    [null, { one: "I·sé· yanú·wehseʔ né· Kwítel", en: "Peter likes you." }],
+    [null, { one: "I·sé· yanú·wehse̲ʔ né· Kwítel", en: "Peter likes you." }],
 
     [
       {
@@ -443,15 +439,15 @@ function DialogueSection() {
   ];
   const part9: DialogueTableData = [
     [
-      { one: "Náhte snú·wehseʔ", en: "What do you like?" },
-      { one: "Kaʔikʌ́ knú·wehseʔ", en: "I like this." },
+      { one: "Náhte snú·wehse̲ʔ", en: "What do you like?" },
+      { one: "Kaʔikʌ́ knú·wehse̲ʔ", en: "I like this." },
     ],
-    [null, { one: "Thikʌ́· knú·wehseʔ", en: "I like that." }],
-    [null, { one: "Akwekú knú·wehseʔ", en: "I like everything." }],
+    [null, { one: "Thikʌ́· knú·wehse̲ʔ", en: "I like that." }],
+    [null, { one: "Akwekú knú·wehse̲ʔ", en: "I like everything." }],
     [
       null,
       {
-        one: "Háti náhte ne·n isé· snú·wehseʔ, í· ú·ni knú·wehseʔ",
+        one: "Háti náhte ne·n isé· snú·wehseʔ, í· ú·ni knú·wehse̲ʔ",
         en: "Whatever you like, I also like.",
       },
     ],
