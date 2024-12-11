@@ -934,7 +934,7 @@ function ThingsThatAreTheSameSection() {
   const data = [
     ["They are the same", "Né· tshá·kat"],
     ["Are they the same?", "Né· kʌ́ tshá·kat"],
-    ["They are not the same", "yah né· tshá·kat té·kʌ"],
+    ["They are not the same", "yáh né· tshá·kat té·kʌ"],
     ["Someone and I are the same age", "tshaʔteyuknohsliyá·ku"],
     ["You two are the same age", "tshaʔtesnohsliyá·ku"],
     ["We are all the same age", "tshaʔteyukyohsliyá·ku"],

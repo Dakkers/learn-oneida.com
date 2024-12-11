@@ -630,8 +630,18 @@ export function createModule6VerbListFlat() {
 export function flattenVerbDatum(
   v: Pick<
     Module6VerbDatum,
-    "cmd" | "exceptions" | "def" | "key" | "en" | "fut" | "hab" | "ifut" | "pfv"
-  >,
+    | "cmd"
+    | "exceptions"
+    | "def"
+    | "en"
+    | "enShort"
+    | "fut"
+    | "hab"
+    | "ifut"
+    | "pfv"
+  > & {
+    key: string;
+  },
 ) {
   const result = [];
   for (const tense of MODULE_6_VERB_TENSE_LIST) {

@@ -16,7 +16,7 @@ export function LetterHArticle({ level = 1 }: ArticleProps) {
         An important feature of Onʌyoteʔa·ká· is the letter H, which works the
         same way as it does in English, with breath coming out of a
         speaker&lsquo;s throat but no sound. English speakers are not aware of
-        how many times they say an H when they speak, and they donʔt write all
+        how many times they say an H when they speak, and they don't write all
         the Hs they say. For example, they say an H (a breath but no sound) in
         the words “king,” “queen,” “top”, and “tie” but they don&lsquo;t hear
         the H and they don&lsquo;t write it.

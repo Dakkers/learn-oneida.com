@@ -1378,17 +1378,27 @@ export function createModule5VerbsList(shouldSort = false) {
 export function createModule5VerbsListFlat() {
   const resultingList = createModule5VerbsList();
   const flattenedResult = [];
-  for (const tense of MODULE_5_VERB_TENSE_LIST) {
-    for (const v of resultingList) {
-      flattenedResult.push({
-        ...v[tense],
-        en: `${v.en} (${module5VerbTenseMap[tense]})`,
-        key: `${v.key}-${tense}`,
-        tense,
-      });
-    }
+  for (const v of resultingList) {
+    flattenedResult.push(...flattenVerbDatum(v));
   }
   return flattenedResult.sort(sorter);
+}
+
+export function flattenVerbDatum(
+  v: Pick<Module5VerbDatum, "cmd" | "en" | "fut" | "prs" | "ifut" | "past"> & {
+    key: string;
+  },
+) {
+  const flattenedResult = [];
+  for (const tense of MODULE_5_VERB_TENSE_LIST) {
+    flattenedResult.push({
+      ...v[tense],
+      en: `${v.en} (${module5VerbTenseMap[tense]})`,
+      key: `${v.key}-${tense}`,
+      tense,
+    });
+  }
+  return flattenedResult;
 }
 
 const sorter = (

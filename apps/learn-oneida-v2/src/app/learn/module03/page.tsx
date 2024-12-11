@@ -337,7 +337,7 @@ function PastTenseUsedToBe() {
       one: [
         [{ text: "k" }, "atatwʌni·yó̲·"],
         [{ text: "k" }, "atatwʌni·yo", "hné·"],
-        ["yah teʔ", { text: "k" }, "atatwʌni·yo", "hné·"],
+        ["yáh teʔ", { text: "k" }, "atatwʌni·yo", "hné·"],
       ],
       type: "PB",
     },
@@ -927,7 +927,7 @@ function DialogueSection() {
       ["Yáh teʔsukweʔtiyó niʔisé͟·", "Tho wakanúhte̲ʔ"],
     ],
     [
-      "Yaweluhátiʔ tsiʔ yah teshakoyʌtelí né·n shakoyoʔokúha, yáh tehuwanú·wehseʔ",
+      "Yaweluhátiʔ tsiʔ yáh teshakoyʌtelí né·n shakoyoʔokúha, yáh tehuwanú·wehseʔ",
       [
         "Yaweluhátiʔ tó· nihokhsá·tayʌʔ, yáh úhkaʔ teʔsukwé·tayʌʔ ne·n yesanolúkhwaʔ",
         "Né· ok tewáhsʌ nikutí takós sanáhskwayʌʔ kháleʔ yáh teʔyesanú·wehseʔ",

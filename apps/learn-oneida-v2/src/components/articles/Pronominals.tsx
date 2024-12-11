@@ -140,13 +140,13 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         The <Letter>h</Letter> is not written or pronounced when nothing is
         attached in front of the pronominal. However, when anything is attached
         to the front of the pronominal, the <Letter>h</Letter> is written and
-        pronounced. Example: <b>snú·wehse̲ʔ</b> and <b>yah tehsnú·wehse̲ʔ</b>.
+        pronounced. Example: <b>snú·wehse̲ʔ</b> and <b>yáh tehsnú·wehse̲ʔ</b>.
       </Text>
 
       <Text variant="labelL">Exception 3</Text>
       <Text>
         The letter <Letter>e</Letter> only appears on root words that begin with
-        a double consonant.
+        a double consonant or a glottal stop.
       </Text>
       <Notice intent="warning">Examples are needed for this exception.</Notice>
 
@@ -156,7 +156,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         syllable roots. The <Letter>i</Letter> in <Letter>ik</Letter> is used
         only occasionally. The <Letter>i</Letter> disappears when anything is
         attached in front of the prefix. Example: <b>íkyʌheʔ</b> and{" "}
-        <b>yah té·kyʌheʔ</b>.
+        <b>yáh té·kyʌheʔ</b>.
       </Text>
 
       <Text variant="labelL">Exception 5</Text>
@@ -165,15 +165,15 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         <Letter>y</Letter> and <Letter>i</Letter>. The <Letter>t</Letter>{" "}
         disappears and is replaced by <Letter>h</Letter> when anything is
         attached in front of the prefix. Example: <b>tsyʌtelíˍ</b> and{" "}
-        <b>yah tehsyʌtelíˍ</b>; <b>tsí·tlu̲ʔ</b> and <b>yah tehsí·tlu̲ʔ</b>.
+        <b>yáh tehsyʌtelíˍ</b>; <b>tsí·tlu̲ʔ</b> and <b>yáh tehsí·tlu̲ʔ</b>.
       </Text>
 
       <Text variant="labelL">Exception 6</Text>
       <Text>
         The prefix <Letter>it</Letter> is attached to all roots beginning with{" "}
         <Letter>hs</Letter> and the <Letter>i</Letter> disappears when anything
-        is attached in front of the prefix. Example: <b>íthsaʔas</b> and{" "}
-        <b>yah tethsáʔas</b>
+        is attached in front of the prefix. Example: <b>ítshaʔas</b> and{" "}
+        <b>yáh tetsháʔas</b>. Additionally, the {"h"} shifts over.
       </Text>
 
       <Divider />

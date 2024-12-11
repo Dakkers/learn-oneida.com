@@ -579,7 +579,7 @@ function NegatingStativeVerbsSection() {
         en: "I am happy",
       },
       {
-        on: ["yah teʔ", ["wak"], "atshanuní"],
+        on: ["yáh teʔ", ["wak"], "atshanuní"],
         en: "I am not happy",
       },
     ],
@@ -589,7 +589,7 @@ function NegatingStativeVerbsSection() {
         en: "I was happy",
       },
       {
-        on: ["yah teʔ", ["wak"], "atshanuni·", ["hné·", "PAST"]],
+        on: ["yáh teʔ", ["wak"], "atshanuni·", ["hné·", "PAST"]],
         en: "I was not happy",
       },
     ],
@@ -599,7 +599,7 @@ function NegatingStativeVerbsSection() {
         en: "I will be happy",
       },
       {
-        on: ["yah th", ["a", "IFUT"], ["·ukw"], "atshanuní", "hakeʔ"],
+        on: ["yáh th", ["a", "IFUT"], ["·ukw"], "atshanuní", "hakeʔ"],
         en: "I would not be happy",
       },
     ],
@@ -609,7 +609,7 @@ function NegatingStativeVerbsSection() {
         en: "I would be happy",
       },
       {
-        on: ["yah th", ["a", "IFUT"], ["·ukw"], "atshanuní", "hakeʔ"],
+        on: ["yáh th", ["a", "IFUT"], ["·ukw"], "atshanuní", "hakeʔ"],
         en: "I would not be happy",
       },
     ],

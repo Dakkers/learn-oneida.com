@@ -47,7 +47,7 @@ export const particleList = [
     en: "a lot",
     examples: [
       {
-        translation: "Esó· yukhinú·wehseʔ thikʌ́ akokhstʌ́ha",
+        translation: "Esó· yukhinú·wehseʔ thikʌ́ akokhstʌ́ha̲",
         en: "That old woman likes us a lot.",
       },
     ],
@@ -141,11 +141,11 @@ export const particleList = [
   },
   {
     key: "also",
-    translation: "ó·ni",
+    translation: "uní",
     en: "also, too, as well as, either",
     examples: [
       {
-        translation: "Yeyaʔtaséha ó·ni yesanú·wehse̲ʔ",
+        translation: "Yeyaʔtaséha uní yesanú·wehse̲ʔ",
         en: "The young woman also likes you.",
       },
     ],
@@ -275,7 +275,7 @@ export const particleList = [
     en: "something else, anything else",
     examples: [
       {
-        translation: "Yáh náhteʔ ó·ya teyakonúhteʔ",
+        translation: "Yáh náhteʔ ó·ya teyakonúhte̲ʔ",
         en: "She doesn't know anything else.",
       },
     ],
@@ -395,7 +395,7 @@ export const particleList = [
         en: "Do you know that she doesn't like you?",
       },
       {
-        translation: "Knú·wehseʔ tsiʔ isé· sknú·wehseʔ.",
+        translation: "Knú·wehseʔ tsiʔ isé· sknú·wehse̲ʔ.",
         en: "I like it that you like me.",
       },
     ],
