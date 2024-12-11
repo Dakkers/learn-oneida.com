@@ -64,6 +64,7 @@ import {
   useSearchParams,
 } from "next/navigation";
 import { Suspense } from "react";
+import { createModule10VerbListFlat } from "@/data/module10";
 
 const meta: any = () => {
   return [
@@ -133,6 +134,7 @@ function ToolsParadigmInner() {
     ["ʌtole", dataΛtoleJson],
     ...createModule6VerbListFlat().map((v) => [v.key, v]),
     ...createModule9VerbListFlat().map((v) => [v.key, v]),
+    ...createModule10VerbListFlat().map((v) => [v.key, v]),
     ...module4Options.map((item) => [item[0], item[1]]),
   ]);
 
@@ -167,6 +169,10 @@ function ToolsParadigmInner() {
           value: datum.key,
         })),
         ...createModule9VerbListFlat().map((datum) => ({
+          label: datum.en,
+          value: datum.key,
+        })),
+        ...createModule10VerbListFlat().map((datum) => ({
           label: datum.en,
           value: datum.key,
         })),

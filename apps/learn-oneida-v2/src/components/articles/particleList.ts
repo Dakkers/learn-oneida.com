@@ -141,11 +141,11 @@ export const particleList = [
   },
   {
     key: "also",
-    translation: "ó·ni",
+    translation: "uní",
     en: "also, too, as well as, either",
     examples: [
       {
-        translation: "Yeyaʔtaséha ó·ni yesanú·wehse̲ʔ",
+        translation: "Yeyaʔtaséha uní yesanú·wehse̲ʔ",
         en: "The young woman also likes you.",
       },
     ],

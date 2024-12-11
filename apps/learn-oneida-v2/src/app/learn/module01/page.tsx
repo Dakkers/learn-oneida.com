@@ -490,7 +490,7 @@ function DialogueSection() {
       },
       {
         one: "Táh. Yáh sʌ́haʔ tekhenú·wehseʔ né· Beach Boys tsiʔ ni·yót né· Beatles",
-        en: "No. I donʔt like the Beach Boys more than the Beatles.",
+        en: "No. I don't like the Beach Boys more than the Beatles.",
       },
     ],
     [
@@ -509,7 +509,7 @@ function DialogueSection() {
         en: "Who else do you like more than Stephen Harper?",
       },
       {
-        one: "Tom Porter óni sʌ́haʔ linú·wehseʔ tsiʔ ni·yót né·n Stephen Harper",
+        one: "Tom Porter uní sʌ́haʔ linú·wehseʔ tsiʔ ni·yót né·n Stephen Harper",
         en: "I also like Tom Porter more than Stephen Harper.",
       },
     ],
@@ -530,7 +530,7 @@ function DialogueSection() {
       },
       {
         one: "Táh. Yáh tehonanúhteʔ né· thikʌ́ latiksaʔshúha oh náhte kuwati·yáts thikʌ́ otikhstʌʔokúha̲",
-        en: "No. Those children donʔt know what those old womenʔs names are.",
+        en: "No. Those children don't know what those old womenʔs names are.",
       },
     ],
     [
@@ -593,7 +593,7 @@ function DialogueSection() {
         en: "No. Margaret isnʔt my name either. That girlʔs name is Margaret.",
       },
       {
-        one: "Tá·t yah Lá·kel tathu·ní· yah Kowáklit teyesa·yáts nahte káti yesa·yáts",
+        one: "Tá·t yáh Lá·kel tathu·ní· yáh Kowáklit teyesa·yáts nahte káti yesa·yáts",
         en: "If your name is not Rachel or Margaret, then what is your name?",
       },
     ],

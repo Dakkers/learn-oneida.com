@@ -93,7 +93,8 @@
   },
   "soni": {
     "default": ["yakn"],
-    "c": ["yakni"]
+    "c": ["yakni"],
+    "a": ["yaky"]
   },
   "u2": {
     "default": ["sn"],

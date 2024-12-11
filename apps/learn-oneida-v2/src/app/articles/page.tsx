@@ -104,6 +104,10 @@ export default function Articles() {
       label: "Seasons",
     },
     {
+      href: "/kanuhwelatuksla",
+      label: "Thanksgiving Address",
+    },
+    {
       href: "/times-of-day",
       label: "Times of day",
     },

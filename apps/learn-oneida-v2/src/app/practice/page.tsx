@@ -39,6 +39,10 @@ export default function Practice() {
       label: "Counting time",
     },
     {
+      href: "/environment-nouns-module-10",
+      label: "Environment Noun Identification (Module 10)",
+    },
+    {
       href: "/food-characteristics-module-9",
       label: "Food Characteristics (Module 9)",
     },

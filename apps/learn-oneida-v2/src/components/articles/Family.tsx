@@ -281,9 +281,13 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       />
       <RelativesTable
         datasets={[
-          { data: siblingsJson, en: "siblings", oneida: "ʔkʌʔokuha" },
-          { data: cousinsJson, en: "cousins", oneida: "ʔkʌʔokuha" },
-          { data: friendsJson, en: "friends", oneida: "nulha·shuha" },
+          {
+            data: siblingsJson,
+            en: "siblings",
+            oneida: "te...atahnuteleʔshuha",
+          },
+          { data: cousinsJson, en: "cousins", oneida: "alaʔsé·shuha" },
+          { data: friendsJson, en: "friends", oneida: "atʌloʔslaʔshúha" },
         ]}
         // @ts-expect-error To be addressed in LO-16
         pronouns={["i", "u", "m", "f", "she_her"]}

@@ -8,7 +8,7 @@ export default createParadigmData(
     phrases: [
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -18,7 +18,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -28,7 +28,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -38,7 +38,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -48,7 +48,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -58,7 +58,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["e", "IFUT"],
@@ -68,7 +68,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -78,7 +78,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["e", "IFUT"],
@@ -88,7 +88,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -98,7 +98,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -108,7 +108,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["e", "IFUT"],
@@ -118,7 +118,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -128,7 +128,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["e", "IFUT"],
@@ -138,7 +138,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],
@@ -148,7 +148,7 @@ export default createParadigmData(
       },
       {
         breakdown: [
-          "yah th",
+          "yáh th",
           ["u", "IFUT"],
           ["t", "CIS"],
           ["a", "IFUT"],

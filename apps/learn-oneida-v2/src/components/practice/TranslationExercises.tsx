@@ -13,7 +13,7 @@ const oneidaToEnglishModule01 = [
   ["5", "Sʌ́haʔ yakninú·wehseʔ ne thí·kʌ̲"],
   ["6", "Yáh tehonúhteʔ tsiʔ náhteʔ luwati·yáts thikʌ́ latiksaʔshúha̲ʔ"],
   ["7", "Yáh ki só·tsiʔ tehinú·wehseʔ Wílo"],
-  ["8", "Akwekú shakonú·wehseʔ ne thikʌ́ lokstʌ́ha, nok tsiʔ yah neʔn Wá·li"],
+  ["8", "Akwekú shakonú·wehseʔ ne thikʌ́ lokstʌ́ha, nok tsiʔ yáh neʔn Wá·li"],
   ["9", "Sanúhteʔ kʌ́ úhkaʔ náhteʔ yenú·wehseʔ kaʔí·kʌ̲"],
   ["10", "Sʌ́haʔ snú·wehseʔ kaʔi·kʌ́· tsiʔ ni·yóht thikʌ́, wáhi̲"],
   ["11", "Yáh kʌ́ tehninú·wehse̲ʔ"],
@@ -89,7 +89,7 @@ const englishToOneidaModule02 = [
   ["36", "Are you related to that young good- looking woman named Kathy?"],
   ["37", "How many of his kids are still alive?"],
   ["38", "Who do you look like in your family?"],
-  ["39", "She doesn't know me but she still hates me."],
+  ["39", "She doesn't know me but she still doesn't like me."],
   ["40", "Do my parents and your parents know one another?"],
 ];
 
@@ -128,7 +128,7 @@ const englishToOneidaModule03 = [
   ["23", "Both his parents are of the Bear Clan."],
   ["24", "I don't know anyone who is Cree."],
   ["25", "My wife and I aren't married but we have ten kids."],
-  ["26", "My cousin's wife and I used to hate each other."],
+  ["26", "My cousin's wife and I used to like each other."],
   ["27", "How many kids does your older sister have?"],
   ["28", "How long have Thomas's parents been married?"],
   ["29", "My cousin Peter used to have three cows and one horse."],
@@ -143,12 +143,12 @@ const englishToOneidaModule03 = [
     "The Oneida Homemakers are good people, the Oneida Choir and I love them a lot.",
   ],
   ["34", "Do you and your old lady love one another?"],
-  ["35", "Peter hates it that we are not in a relationship now."],
+  ["35", "Peter doesn't like that we are not in a relationship now."],
   ["36", "Amelia and her husband have six girls."],
   ["37", "She used to have two lambs."],
   ["38", "They were engaged. They're married now."],
   ["39", "All of my friends are still single."],
-  ["40", "My nephew is a rotten kid but I don't hate him."],
+  ["40", "My nephew is a rotten kid but I like him."],
 ];
 
 const oneidaToEnglishModule05 = [
