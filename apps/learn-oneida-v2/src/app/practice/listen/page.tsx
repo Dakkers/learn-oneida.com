@@ -14,10 +14,9 @@ import {
 import { Box, Button, Card, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import { getParticlesForGroup } from "@/components/articles/ParticlesTable";
-import { flushSync } from "react-dom";
 import { getTranslationExercisesForModule } from "@/components/practice/TranslationExercises";
 import WaveSurfer from "wavesurfer.js";
-import WavesurferPlayer, { WavesurferProps } from "@wavesurfer/react";
+import WavesurferPlayer from "@wavesurfer/react";
 import { createModule4Data } from "@/data/module04";
 import {
   createTimesOfDayData,
@@ -41,6 +40,23 @@ type Data = Array<{
   translation: string;
 }>;
 
+type ModuleNumber =
+  | "module01"
+  | "module02"
+  | "module03"
+  | "module04"
+  | "module05"
+  | "module06";
+
+const MODULES_LIST: Array<{ label: string; value: ModuleNumber }> = [
+  { label: "Module 1", value: "module01" },
+  { label: "Module 2", value: "module02" },
+  { label: "Module 3", value: "module03" },
+  { label: "Module 4", value: "module04" },
+  { label: "Module 5", value: "module05" },
+  { label: "Module 6", value: "module06" },
+];
+
 export default function PracticeListening() {
   const categories: Array<{
     getData: () => Data;
@@ -49,9 +65,13 @@ export default function PracticeListening() {
     value: string;
   }> = [
     {
-      getData: () => {
-        return setupModule4Data(["here"]);
-      },
+      getData: () => getAllAudioForModule(subcategory),
+      label: "All audio from module",
+      sub: MODULES_LIST,
+      value: "all_audio_from_module",
+    },
+    {
+      getData: () => setupModule4Data(["here"]),
       label: "Being somewhere",
       sub: [
         // { label: "Being at home", value: "being_at_home" },
@@ -65,14 +85,7 @@ export default function PracticeListening() {
     //   value: "living_somewhere",
     // },
     {
-      getData: () => {
-        const data = getParticlesForGroup(subcategory);
-        return data.map((datum) => ({
-          audioFile: `/particles/${subcategory}/${datum.key}.mp3`,
-          en: datum.en,
-          translation: datum.translation,
-        }));
-      },
+      getData: () => formatParticleAudioFiles(subcategory),
       label: "Particles",
       sub: [
         // { label: "All", value: "all" },
@@ -80,25 +93,10 @@ export default function PracticeListening() {
         { label: "Module 3", value: "module03" },
         { label: "Module 4", value: "module04" },
       ],
-      value: "particles",
+      value: "particle_example_sentences",
     },
     {
-      getData: () => {
-        const data = getParticlesForGroup(subcategory);
-        const result = [];
-        for (const datum of data) {
-          const examples = datum.examples ?? [];
-          for (let i = 0; i < examples.length; i++) {
-            const filepath = `/particle_examples/${subcategory}/${datum.key}${examples.length > 1 ? `_${i + 1}` : ""}.mp3`;
-            result.push({
-              audioFile: filepath,
-              en: examples[i].en,
-              translation: examples[i].translation,
-            });
-          }
-        }
-        return result;
-      },
+      getData: () => formatParticleExampleAudioFiles(subcategory),
       label: "Particle example sentences",
       sub: [
         // { label: "All", value: "all" },
@@ -106,7 +104,13 @@ export default function PracticeListening() {
         { label: "Module 2", value: "module02" },
         { label: "Module 3", value: "module03" },
       ],
-      value: "particle_examples",
+      value: "particle_example_sentences",
+    },
+    {
+      getData: () => getSentenceAudioForModule(subcategory),
+      label: "Sentences from module",
+      sub: MODULES_LIST,
+      value: "sentences_from_module",
     },
     {
       getData: () => {
@@ -137,14 +141,7 @@ export default function PracticeListening() {
       value: "times_of_day",
     },
     {
-      getData: () => {
-        const data = getTranslationExercisesForModule(subcategory);
-        return data.map((datum) => ({
-          audioFile: `/translation_exercises/${subcategory}/ex_${datum[0]}.mp3`,
-          en: "",
-          translation: datum[1],
-        }));
-      },
+      getData: () => formatTranslationExerciseAudioFiles(subcategory),
       label: "Translation exercises",
       sub: [
         // { label: "All", value: "all" },
@@ -154,16 +151,12 @@ export default function PracticeListening() {
       value: "exercises",
     },
     {
-      getData: () => {
-        return setupModule4Data(["thought"]);
-      },
+      getData: () => setupModule4Data(["thought"]),
       label: "Thought",
       value: "thought",
     },
     {
-      getData: () => {
-        return setupModule4Data(["want"]);
-      },
+      getData: () => setupModule4Data(["want"]),
       label: "Wanting something to happen",
       value: "wanting",
     },
@@ -420,4 +413,57 @@ function setupModule4Data(keyGroups: string[]) {
     }
   }
   return result;
+}
+
+function formatTranslationExerciseAudioFiles(module: ModuleNumber) {
+  if (["module02", "module03", "module04", "module05"].includes(module)) {
+    return [];
+  }
+  return getTranslationExercisesForModule(module).map((datum) => ({
+    audioFile: `/translation_exercises/${module}/ex_${datum[0]}.mp3`,
+    en: "",
+    translation: datum[1],
+  }));
+}
+
+function formatParticleAudioFiles(module: ModuleNumber) {
+  return getParticlesForGroup(module).map((datum) => ({
+    audioFile: `/particles/${module}/${datum.key}.mp3`,
+    en: datum.en,
+    translation: datum.translation,
+  }));
+}
+
+function formatParticleExampleAudioFiles(module: ModuleNumber) {
+  if (["module04", "module05", "module06"].includes(module)) {
+    return [];
+  }
+  const data = getParticlesForGroup(module);
+  const result = [];
+  for (const datum of data) {
+    const examples = datum.examples ?? [];
+    for (let i = 0; i < examples.length; i++) {
+      const filepath = `/particle_examples/${module}/${datum.key}${examples.length > 1 ? `_${i + 1}` : ""}.mp3`;
+      result.push({
+        audioFile: filepath,
+        en: examples[i].en,
+        translation: examples[i].translation,
+      });
+    }
+  }
+  return result;
+}
+
+function getSentenceAudioForModule(module: ModuleNumber) {
+  return [
+    ...formatParticleExampleAudioFiles(module),
+    ...formatTranslationExerciseAudioFiles(module),
+  ];
+}
+
+function getAllAudioForModule(module: ModuleNumber) {
+  return [
+    ...formatParticleAudioFiles(module),
+    ...getSentenceAudioForModule(module),
+  ];
 }

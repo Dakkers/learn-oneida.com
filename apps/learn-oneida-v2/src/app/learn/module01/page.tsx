@@ -567,7 +567,7 @@ function DialogueSection() {
   const part11: DialogueTableData = [
     [
       {
-        one: "Skyʌtelí kʌ́ náhte ni yúkyats",
+        one: "Sanúhteʔ kʌ́ náhte ni yúkyats",
         en: "Do you know what my name is?",
       },
       { one: "Lá·kel kʌ́ yesa·yáts", en: "Is your name Rachel?" },
