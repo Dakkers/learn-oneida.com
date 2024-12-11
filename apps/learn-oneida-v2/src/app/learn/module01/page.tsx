@@ -415,7 +415,7 @@ function DialogueSection() {
       { one: "Úhkaʔ shakonú·wehseʔ né· Kwítel", en: "Who does Peter like?" },
       { one: "Í· laknú·wehseʔ né· Kwítel", en: "Peter likes me." },
     ],
-    [null, { one: "I·sé· yanú·wehse̲ʔ né· Kwítel", en: "Peter likes you." }],
+    [null, { one: "I·sé· yanú·wehseʔ né· Kwítel", en: "Peter likes you." }],
 
     [
       {
@@ -525,7 +525,7 @@ function DialogueSection() {
     ],
     [
       {
-        one: "Lonanúhteʔ kʌ́ né· thikʌ́ latiksaʔshuha oh náhte kuwatí·yats né· thikʌ́ otikhstʌʔokúha̲",
+        one: "Lonanúhteʔ kʌ́ né· thikʌ́ latiksaʔshúha oh náhte kuwatí·yats né· thikʌ́ otikhstʌʔokúha̲",
         en: "Do those children know what those old womenʔs names are?",
       },
       {
@@ -600,7 +600,7 @@ function DialogueSection() {
     [
       { one: "Aliskwet niyúkyats", en: "My name is Elizabeth" },
       {
-        one: "Onʌ kuyʌtelí náhte yesa·yáts",
+        one: "Onʌ wakanúhteʔ náhte yesa·yáts",
         en: "Now I know what your name is.",
       },
     ],

@@ -6,44 +6,44 @@ const data: ParadigmData = {
   phrases: [
     {
       pronoun: "i",
-      phrase: "liyatleʔslʌ́·tuheʔ",
-      breakdown: [{ text: "liy" }, "atleʔslʌ́·tuheʔ"],
+      phrase: "liyatleʔslʌ́·tuhe̲ʔ",
+      breakdown: [{ text: "liy" }, "atleʔslʌ́·tuhe̲ʔ"],
     },
     {
       pronoun: "u",
-      phrase: "hetshatleʔslʌ́·tuheʔ",
+      phrase: "hetshatleʔslʌ́·tuhe̲ʔ",
       breakdown: [
         { text: "h", type: "RPL" },
         { text: "etsh" },
-        "atleʔslʌ́·tuheʔ",
+        "atleʔslʌ́·tuhe̲ʔ",
       ],
     },
     {
       pronoun: "m",
-      phrase: "lotleʔslʌ́·tuheʔ",
-      breakdown: [{ text: "lo" }, "tleʔslʌ́·tuheʔ"],
+      phrase: "lotleʔslʌ́·tuhe̲ʔ",
+      breakdown: [{ text: "lo" }, "tleʔslʌ́·tuhe̲ʔ"],
     },
     {
       pronoun: "f",
-      phrase: "luwatleʔslʌ́·tuheʔ",
-      breakdown: [{ text: "luw" }, "atleʔslʌ́·tuheʔ"],
+      phrase: "luwatleʔslʌ́·tuhe̲ʔ",
+      breakdown: [{ text: "luw" }, "atleʔslʌ́·tuhe̲ʔ"],
     },
     {
       pronoun: "us",
-      phrase: "ethyatleʔslʌ́·tuheʔ",
+      phrase: "ethyatleʔslʌ́·tuhe̲ʔ",
       breakdown: [
         { text: "h", type: "RPL" },
         { text: "ethy" },
-        "atleʔslʌ́·tuheʔ",
+        "atleʔslʌ́·tuhe̲ʔ",
       ],
     },
     {
       pronoun: "yall",
-      phrase: "hetshyatleʔslʌ́·tuheʔ",
+      phrase: "hetshyatleʔslʌ́·tuhe̲ʔ",
       breakdown: [
         { text: "h", type: "RPL" },
         { text: "etshy" },
-        "atleʔslʌ́·tuheʔ",
+        "atleʔslʌ́·tuhe̲ʔ",
       ],
     },
   ],
