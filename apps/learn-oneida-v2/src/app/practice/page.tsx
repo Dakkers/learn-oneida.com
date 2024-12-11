@@ -50,6 +50,10 @@ export default function Practice() {
       href: "/food-identification-module-9",
       label: "Food Identification (Module 9)",
     },
+    {
+      href: "/listen",
+      label: "Listening Practice",
+    },
     // {
     //   href: "/days-of-the-week",
     //   label: "Days of the week",

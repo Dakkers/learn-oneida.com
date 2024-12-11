@@ -90,23 +90,36 @@ export function Soundchart({ level }: SectionHeadingProps) {
 
       <SectionHeading level={level}>Two letters</SectionHeading>
 
-      <TableWrapper columns={createCols()} data={createArray(SINGLES)} />
+      <TableWrapper
+        bleed={0}
+        columns={createCols()}
+        data={createArray(SINGLES)}
+      />
 
       <SectionHeading level={level}>Three letters</SectionHeading>
 
-      <TableWrapper columns={createCols()} data={createArray(TWOS)} />
+      <TableWrapper bleed={0} columns={createCols()} data={createArray(TWOS)} />
 
       <SectionHeading level={level}>Four letters</SectionHeading>
 
-      <TableWrapper columns={createCols()} data={createArray(THREES)} />
+      <TableWrapper
+        bleed={0}
+        columns={createCols()}
+        data={createArray(THREES)}
+      />
 
       <SectionHeading level={level}>Five letters</SectionHeading>
 
-      <TableWrapper columns={createCols()} data={createArray(FOURS)} />
+      <TableWrapper
+        bleed={0}
+        columns={createCols()}
+        data={createArray(FOURS)}
+      />
 
       <SectionHeading level={level}>Double vowels</SectionHeading>
 
       <TableWrapper
+        bleed={0}
         columns={[createCols()[1]].concat(createCols().slice(3, 5))}
         data={[
           { e: "hae", o: "hao", u: "hau" },
@@ -122,6 +135,7 @@ export function Soundchart({ level }: SectionHeadingProps) {
       <SectionHeading level={level}>Other sounds</SectionHeading>
 
       <TableWrapper
+        bleed={0}
         columns={new Array(4).fill(0).map((val, index) => ({
           accessorKey: `col${index}`,
           cell: (val: string) => <TheCell text={val} />,
