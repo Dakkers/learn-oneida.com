@@ -22,7 +22,7 @@ const data: ParadigmData = {
     {
       pronoun: "f",
       phrase: "utatnulhá·",
-      breakdown: [{ text: "utat", type: "PB" }, "nulhá·"],
+      breakdown: [{ text: "utat" }, "nulhá·"],
     },
     {
       pronoun: "us",

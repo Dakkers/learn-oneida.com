@@ -6,33 +6,33 @@ const data: ParadigmData = {
   phrases: [
     {
       pronoun: "soni",
-      phrase: "ukyatʌ·lóˍ",
-      breakdown: [{ text: "uky" }, "atʌ·lóˍ"],
+      phrase: "ukyatʌ·ló̲",
+      breakdown: [{ text: "uky" }, "atʌ·ló̲"],
     },
     {
       pronoun: "u2",
-      phrase: "tsyatʌ·lóˍ",
-      breakdown: [{ text: "tsy" }, "atʌ·lóˍ"],
+      phrase: "tsyatʌ·ló̲",
+      breakdown: [{ text: "tsy" }, "atʌ·ló̲"],
     },
     {
       pronoun: "2m",
-      phrase: "lonatʌ·lóˍ",
-      breakdown: [{ text: "lon" }, "atʌ·lóˍ"],
+      phrase: "lonatʌ·ló̲",
+      breakdown: [{ text: "lon" }, "atʌ·ló̲"],
     },
     {
       pronoun: "2f",
-      phrase: "yonatʌ·lóˍ",
-      breakdown: [{ text: "yon" }, "atʌ·lóˍ"],
+      phrase: "yonatʌ·ló̲",
+      breakdown: [{ text: "yon" }, "atʌ·ló̲"],
     },
     {
       pronoun: "us",
-      phrase: "ukwatʌ·lóˍ",
-      breakdown: [{ text: "ukw" }, "atʌ·lóˍ"],
+      phrase: "ukwatʌ·ló̲",
+      breakdown: [{ text: "ukw" }, "atʌ·ló̲"],
     },
     {
       pronoun: "yall",
-      phrase: "swatʌ·lóˍ",
-      breakdown: [{ text: "sw" }, "atʌ·lóˍ"],
+      phrase: "swatʌ·ló̲",
+      breakdown: [{ text: "sw" }, "atʌ·ló̲"],
     },
   ],
 };

@@ -5,92 +5,92 @@
   "phrases": [
     {
       "pronoun": "uni",
-      "phrase": "tetyatahnu·téleʔ",
+      "phrase": "tetyatahnu·téle̲ʔ",
       "breakdown": [
         { "text": "ty" },
         { "text": "ata", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     },
     {
       "pronoun": "soni",
-      "phrase": "teyakyatahnu·téleʔ",
+      "phrase": "teyakyatahnu·téle̲ʔ",
       "breakdown": [
         { "text": "yaky" },
         { "text": "ata", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     },
     {
       "pronoun": "u2",
-      "phrase": "tetsyatahnu·téleʔ",
+      "phrase": "tetsyatahnu·téle̲ʔ",
       "breakdown": [
         { "text": "tsy" },
         { "text": "ata", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     },
     {
       "pronoun": "2m",
-      "phrase": "tehyatahnu·téleʔ",
+      "phrase": "tehyatahnu·téle̲ʔ",
       "breakdown": [
         { "text": "hy" },
         { "text": "ata", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     },
     {
       "pronoun": "2f",
-      "phrase": "tekyatahnu·téleʔ",
+      "phrase": "tekyatahnu·téle̲ʔ",
       "breakdown": [
         { "text": "ky" },
         { "text": "ata", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     },
     {
       "pronoun": "us",
-      "phrase": "tetwatahnu·téleʔ",
+      "phrase": "tetwatahnu·téle̲ʔ",
       "breakdown": [
         { "text": "tw" },
         { "text": "ata", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     },
     {
       "pronoun": "theyni",
-      "phrase": "teyakwatahnu·téleʔ",
+      "phrase": "teyakwatahnu·téle̲ʔ",
       "breakdown": [
         { "text": "yakw" },
         { "text": "ata", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     },
     {
       "pronoun": "yall",
-      "phrase": "teswatathnu·téleʔ",
+      "phrase": "teswatathnu·téle̲ʔ",
       "breakdown": [
         { "text": "sw" },
         { "text": "atat", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     },
     {
       "pronoun": "ms",
-      "phrase": "tehutahnu·téleʔ",
+      "phrase": "tehutahnu·téle̲ʔ",
       "breakdown": [
         { "text": "hu" },
         { "text": "ta", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     },
     {
       "pronoun": "fs",
-      "phrase": "tekutahnu·téleʔ",
+      "phrase": "tekutahnu·téle̲ʔ",
       "breakdown": [
         { "text": "ku" },
         { "text": "ta", "type": "REFL" },
-        "hnu·téleʔ"
+        "hnu·téle̲ʔ"
       ]
     }
   ]

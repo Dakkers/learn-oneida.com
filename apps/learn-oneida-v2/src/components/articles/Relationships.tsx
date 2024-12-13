@@ -113,7 +113,7 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={createColumns("PR", { suffix: "kwe" })}
+        columns={createColumns("PR", { suffix: "kwe̲" })}
         data={rows}
       />
     </>
@@ -179,7 +179,7 @@ function EngagedTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={createColumns("PB", { suffix: "hkwe" })}
+        columns={createColumns("PB", { suffix: "hkwe̲" })}
         data={rows}
       />
     </>

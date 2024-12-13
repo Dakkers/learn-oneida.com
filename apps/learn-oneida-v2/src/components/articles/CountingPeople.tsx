@@ -73,11 +73,11 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       <List>
         {[
           ["one boy", "shayá·tat laksá·"],
-          ["three girls", "áhsʌ nikutí kutikhsa’shúha"],
-          ["two young men", "tehniyáhse tehninikʌhtlúha"],
-          ["one young woman", "tsyeyá·tat yeyá·tase"],
-          ["three adults", "áhsʌ nihatí lʌnukwé·"],
-          ["two older women", "tehniyáhse yotikhstʌ́ha"],
+          ["three girls", "áhsʌ nikutí kutikhsaʔshúha̲"],
+          ["two young men", "tehniyáhse tehninikʌhtlúha̲"],
+          ["one young woman", "tsyeyá·tat yeyá·taseha̲"],
+          ["three adults", "áhsʌ nihatí lʌnukwé̲·"],
+          ["two older women", "tehniyáhse yotikhstʌ́ha̲"],
         ].map(([left, right], i) => (
           <List.Item key={i}>
             {left} — <b>{right}</b>

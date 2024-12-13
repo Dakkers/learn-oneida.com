@@ -133,27 +133,27 @@ const dataAdolescents = [
 const dataAdults = [
   {
     en: "Man",
-    breakdown: [{ text: "l" }, "u·kwéˍ·"],
+    breakdown: [{ text: "l" }, "u·kwé̲·"],
   },
   {
     en: ["Men (2)", "Man and woman"],
-    breakdown: [["te", "DUAL"], { text: "hn" }, "u·kwéˍ·"],
+    breakdown: [["te", "DUAL"], { text: "hn" }, "u·kwé̲·"],
   },
   {
     en: ["Men (3+)", "Mix of men and women"],
-    breakdown: [{ text: "lʌn" }, "u·kwéˍ·"],
+    breakdown: [{ text: "lʌn" }, "u·kwé̲·"],
   },
   {
     en: "Woman",
-    breakdown: [{ text: "yak" }, "u·kwéˍ·"],
+    breakdown: [{ text: "yak" }, "u·kwé̲·"],
   },
   {
     en: "Women (2)",
-    breakdown: [["te", "DUAL"], { text: "kn" }, "u·kwéˍ·"],
+    breakdown: [["te", "DUAL"], { text: "kn" }, "u·kwé̲·"],
   },
   {
     en: ["Women (3+)"],
-    breakdown: [{ text: "kun" }, "u·kwéˍ·"],
+    breakdown: [{ text: "kun" }, "u·kwé̲·"],
   },
 ];
 

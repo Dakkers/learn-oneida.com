@@ -13,7 +13,7 @@ const data = createParadigmData(
     translation: "{{pronounPossessive}} last name",
     type: "PR",
     phrases: [
-      { breakdown: [["te", "DUAL"], { text: "k" }, "ʌná·se·le̲ʔ"] },
+      { breakdown: [["te", "DUAL"], { text: "k" }, "hsʌná·se·le̲ʔ"] },
       { breakdown: [["te", "DUAL"], { text: "ts" }, "ʌná·se·le̲ʔ"] },
       { breakdown: [["te", "DUAL"], { text: "ha" }, "hsʌná·se·le̲ʔ"] },
       { breakdown: [["te", "DUAL"], { text: "ye" }, "hsʌná·se·le̲ʔ"] },
@@ -24,13 +24,13 @@ const data = createParadigmData(
 );
 
 const examplesList = [
-  ["Is Smith your last name?", "Smith kʌ́ tetsʌná·se·leʔ"],
-  ["Smith is not my last name", "Yáh Smith thaʔtekhsʌná·se·leʔ"],
+  ["Is Smith your last name?", "Smith kʌ́ tetsʌná·se·le̲ʔ"],
+  ["Smith is not my last name", "Yáh Smith thaʔtekhsʌná·se·le̲ʔ"],
   ["Jackson is 50 Cent's last name", "Jackson né· tehahsʌná·seleʔ 50 Cent"],
   ["Knowles is Beyonce's last name", "Knowles né· teyehsʌná·seleʔ Beyonce"],
   [
-    "McCartney, Lennon, Harrison & Starr are the last names of the Beatles",
-    "McCartney, Lennon, Harrison & Starr né· tehatihsʌná·seleʔ Beatles",
+    "McCartney, Lennon, Harrison and Starr are the last names of the Beatles",
+    "McCartney, Lennon, Harrison kháleʔ Starr né· tehatihsʌná·seleʔ Beatles",
   ],
 ].map(TableWrapper.mapEnglishAndTranslation);
 

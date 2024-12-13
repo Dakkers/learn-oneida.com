@@ -13,7 +13,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 const data = createParadigmData(
   {
     translation: "{{pronoun}} look alike",
-    type: "PLB",
+    type: "PR",
     phrases: [
       {
         breakdown: [

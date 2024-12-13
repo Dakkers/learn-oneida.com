@@ -52,7 +52,7 @@ const tenseBreakdownMap: Record<Module6VerbTense, BreakdownArray> = {
 };
 
 const tenseLiteralBreakdownMap: Record<Module6VerbTense, BreakdownArray> = {
-  cmd: ["shehlo·líˍ"],
+  cmd: ["shehlo·lí̲"],
   def: ["utu·kohte"],
   fut: ["ʌskahawíhte"],
   hab: ["tsiʔ ni", ["k", "PR"], "atyélhaʔ"],

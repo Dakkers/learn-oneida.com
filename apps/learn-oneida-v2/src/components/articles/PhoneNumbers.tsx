@@ -69,11 +69,11 @@ const examplesList = [
   ],
   [
     "What's the phone number where you live?",
-    "Tó· niwashe·tás né· teyethalákhwaʔ isé· sawʌ́ tsiʔ tisatʌtíˍ",
+    "Tó· niwashe·tás né· teyethalákhwaʔ isé· sawʌ́ tsiʔ tisatʌtí̲",
   ],
   [
     "The phone number where I live is 445-1234.",
-    "445-1234 teyethalákhwaʔ niwashe·tás tsiʔ twakatʌtíˍ",
+    "445-1234 teyethalákhwaʔ niwashe·tás tsiʔ twakatʌtí̲",
   ],
   [
     "What's the phone number at your house?",

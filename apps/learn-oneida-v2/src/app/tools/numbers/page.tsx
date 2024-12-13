@@ -5,8 +5,8 @@ import { Input } from "@ukwehuwehneke/ohutsya";
 import { Divider } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 import { translateNumber } from "~/utils/numbers";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 const meta: any = () => {
   return [
@@ -24,9 +24,7 @@ export default function ToolsNumbers() {
 
   return (
     <div>
-      <Heading level={1} variant="headlineL">
-        Numbers
-      </Heading>
+      <SectionHeading level={1}>Numbers</SectionHeading>
 
       <p className="mt-8 mb-4">
         <b>NOTE:</b> This page is still under construction! Only numbers up to

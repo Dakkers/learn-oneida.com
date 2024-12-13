@@ -164,8 +164,8 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         The prefix <code>ts</code> is attached to all roots beginning with{" "}
         <Letter>y</Letter> and <Letter>i</Letter>. The <Letter>t</Letter>{" "}
         disappears and is replaced by <Letter>h</Letter> when anything is
-        attached in front of the prefix. Example: <b>tsyʌtelíˍ</b> and{" "}
-        <b>yáh tehsyʌtelíˍ</b>; <b>tsí·tlu̲ʔ</b> and <b>yáh tehsí·tlu̲ʔ</b>.
+        attached in front of the prefix. Example: <b>tsyʌtelí̲</b> and{" "}
+        <b>yáh tehsyʌtelí̲</b>; <b>tsí·tlu̲ʔ</b> and <b>yáh tehsí·tlu̲ʔ</b>.
       </Text>
 
       <Text variant="labelL">Exception 6</Text>

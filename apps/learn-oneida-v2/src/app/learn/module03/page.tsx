@@ -169,7 +169,7 @@ function PastTenseIntroduction() {
     },
     {
       en: "I used to like it",
-      breakdown: [{ text: "k", type: "PR" }, "nú·wehs", "kweʔ"],
+      breakdown: [{ text: "k", type: "PR" }, "nú·wehs", "kwe̲ʔ"],
     },
     {
       en: "it likes me",
@@ -177,7 +177,7 @@ function PastTenseIntroduction() {
     },
     {
       en: "it used to like me",
-      breakdown: [{ text: "wak", type: "PB" }, "nú·wehs", "kweʔ"],
+      breakdown: [{ text: "wak", type: "PB" }, "nú·wehs", "kwe̲ʔ"],
     },
     {
       en: "I like you",
@@ -185,7 +185,7 @@ function PastTenseIntroduction() {
     },
     {
       en: "I used to like you",
-      breakdown: [{ text: "ku", type: "PP" }, "nú·wehs", "kweʔ"],
+      breakdown: [{ text: "ku", type: "PP" }, "nú·wehs", "kwe̲ʔ"],
     },
     {
       en: "I love it",
@@ -193,15 +193,15 @@ function PastTenseIntroduction() {
     },
     {
       en: "I used to love it",
-      breakdown: [{ text: "k", type: "PR" }, "nolúkhwa", "hkweʔ"],
+      breakdown: [{ text: "k", type: "PR" }, "nolúkhwa", "hkwe̲ʔ"],
     },
     {
-      en: "it losé me",
+      en: "it loves me",
       breakdown: [{ text: "wak", type: "PB" }, "nolúkhwa̲"],
     },
     {
       en: "it used to love me",
-      breakdown: [{ text: "wak", type: "PB" }, "nolúkhwa", "hkweʔ"],
+      breakdown: [{ text: "wak", type: "PB" }, "nolúkhwa", "hkwe̲ʔ"],
     },
     {
       en: "I love you",
@@ -209,11 +209,11 @@ function PastTenseIntroduction() {
     },
     {
       en: "I used to love you",
-      breakdown: [{ text: "ku", type: "PP" }, "nolúkhwa", "hkweʔ"],
+      breakdown: [{ text: "ku", type: "PP" }, "nolúkhwa", "hkwe̲ʔ"],
     },
     {
       en: "I know it",
-      breakdown: [{ text: "k", type: "PR" }, "yʌtelíˍ"],
+      breakdown: [{ text: "k", type: "PR" }, "yʌtelí̲"],
     },
     {
       en: "I used to know it",
@@ -221,7 +221,7 @@ function PastTenseIntroduction() {
     },
     {
       en: "it knows me",
-      breakdown: [{ text: "wak", type: "PB" }, "yʌtelíˍ"],
+      breakdown: [{ text: "wak", type: "PB" }, "yʌtelí̲"],
     },
     {
       en: "it used to know me",
@@ -229,7 +229,7 @@ function PastTenseIntroduction() {
     },
     {
       en: "I know you",
-      breakdown: [{ text: "ku", type: "PP" }, "yʌtelíˍ"],
+      breakdown: [{ text: "ku", type: "PP" }, "yʌtelí̲"],
     },
     {
       en: "I used to know you",
@@ -250,7 +250,7 @@ function PastTenseIntroduction() {
         { text: "k", type: "PR" },
         { text: "atat", type: "REFL" },
         "nú·wehs",
-        "kweʔ",
+        "kwe̲ʔ",
       ],
     },
 
@@ -270,17 +270,17 @@ function PastTenseIntroduction() {
         { text: "ty", type: "PR" },
         { text: "atat", type: "REFL" },
         "nú·wehs",
-        "kweʔ",
+        "kwe̲ʔ",
       ],
     },
 
     {
       en: "I know",
-      breakdown: [{ text: "wak", type: "PR" }, "anúhteʔ"],
+      breakdown: [{ text: "wak", type: "PR" }, "anúhte̲ʔ"],
     },
     {
       en: "I used to know",
-      breakdown: [{ text: "wak", type: "PR" }, "anúhte", "hkweʔ"],
+      breakdown: [{ text: "wak", type: "PR" }, "anúhte", "hkwe̲ʔ"],
     },
   ];
 
@@ -348,7 +348,7 @@ function PastTenseUsedToBe() {
       ],
       one: [
         [{ text: "yukni" }, "nyákheʔ"],
-        [{ text: "yukni" }, "nyákhe", "hkweʔ"],
+        [{ text: "yukni" }, "nyákhe", "hkwe̲ʔ"],
       ],
       type: "PR",
     },
@@ -359,7 +359,7 @@ function PastTenseUsedToBe() {
       ],
       one: [
         [{ text: "yákn" }, "ehse̲"],
-        [{ text: "yákn" }, "eh", "skweʔ"],
+        [{ text: "yákn" }, "eh", "skwe̲ʔ"],
       ],
       type: "PR",
     },
@@ -391,7 +391,7 @@ function PastTenseUsedToBe() {
       en: ["my name is ...", "my name was / used to be ..."],
       one: [
         ["... ní·", { text: "yúk" }, "yats"],
-        ["... ní·", { text: "yúk" }, "yat", "skweʔ"],
+        ["... ní·", { text: "yúk" }, "yat", "skwe̲ʔ"],
       ],
       type: "PP",
     },
@@ -403,8 +403,8 @@ function PastTenseUsedToBe() {
       ],
       one: [
         [{ text: "khe" }, "nú·wehse̲ʔ"],
-        [{ text: "khe" }, "nú·weh", "skweʔ"],
-        ["yáh teʔ", { text: "khe" }, "nú·weh", "skweʔ"],
+        [{ text: "khe" }, "nú·weh", "skwe̲ʔ"],
+        ["yáh teʔ", { text: "khe" }, "nú·weh", "skwe̲ʔ"],
       ],
       type: "PP",
     },
@@ -416,8 +416,8 @@ function PastTenseUsedToBe() {
       ],
       one: [
         [{ text: "khe" }, "nolúkhwa̲ʔ"],
-        [{ text: "khe" }, "nolúkhwa", "hkweʔ"],
-        ["yáh te", { text: "khe" }, "nolúkhwa", "hkweʔ"],
+        [{ text: "khe" }, "nolúkhwa", "hkwe̲ʔ"],
+        ["yáh te", { text: "khe" }, "nolúkhwa", "hkwe̲ʔ"],
       ],
       type: "PP",
     },
@@ -437,8 +437,8 @@ function PastTenseUsedToBe() {
       ],
       one: [
         [{ text: "wak" }, "anúhte̲ʔ"],
-        [{ text: "wak" }, "anúhte", "hkweʔ"],
-        ["yáh teʔ", { text: "wak" }, "anúhte", "hkweʔ"],
+        [{ text: "wak" }, "anúhte", "hkwe̲ʔ"],
+        ["yáh teʔ", { text: "wak" }, "anúhte", "hkwe̲ʔ"],
       ],
       type: "PB",
     },
@@ -609,10 +609,7 @@ function HavingConjugations() {
         ])}
         data={[
           {
-            col0: [
-              { text: "wak", type: "PB" },
-              { text: "e", type: "EP" },
-            ],
+            col0: [{ text: "wake", type: "PB" }],
             col1: ["ksaʔt"],
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌ", type: "REP" }],
@@ -726,10 +723,7 @@ function HavingConjugations() {
         ])}
         data={[
           {
-            col0: [
-              { text: "wak", type: "PB" },
-              { text: "e", type: "EP" },
-            ],
+            col0: [{ text: "wake", type: "PB" }],
             col1: ["naskw"],
             col2: [{ text: "a", type: "JOIN" }],
             col3: [{ text: "yʌʔt", type: "REP" }],
@@ -881,15 +875,84 @@ const createColsLol = (cols: string[]) => {
 };
 
 function DialogueSection() {
+  const part1: DialogueTableData = [
+    ["Lonyákheʔ kʌ́ Brad Pitt", "Táh, lonyá·ku nuʔú·wa̲ʔ"],
+    ["Úhkaʔ náhteʔ lotinyakú·", "Angelina Jolie lotinyakú"],
+    ["Yáh teʔwakanúhtehkweʔ", "ʌ́·, to·kʌ́skeʔ"],
+    [
+      "Lotiwila·yʌ́· kʌ́",
+      ["ʌ́·", "Yá·yak nihotiwila·yʌ·, kayé·li nihá·ti kháleʔ tehní·khʌʔ"],
+    ],
+    [
+      "Yáh kʌ́ tehotinyakú·neʔ Jennifer Aniston",
+      ["ʌ́·", "Lotinyakú·neʔ nók tsiʔ tehonatekháhsyu nuʔú·wa̲ʔ"],
+    ],
+    ["Yutatwʌni·yó kʌ́ nuʔú·wa̲ʔ", "Yáh tetsyutatwʌni·yó· nuʔú·wa̲ʔ"],
+    [
+      "Yakonyakú kʌ́",
+      [
+        "ʌ́·",
+        "Tsyakonyakú á·le",
+        "Lotinyakú né· shayá·tat né·n Justin Theroux luwa·yáts",
+      ],
+    ],
+    [
+      "Úhkaʔ náhteʔ oyá· tehotinyakú·neʔ Brad",
+      "Yáh tehotinyakú·neʔ Gwyneth Paltrow nók tsiʔ lotinyákhehkwe̲ʔ",
+    ],
+    [
+      "Yutatwʌni·yó· kʌ́ nuʔú·waʔ neʔn Gwyneth",
+      [
+        "Táh",
+        "Lotinyákhehkwe ne Brad, neʔ thó·neʔ ihnéhskweʔ neʔn Ben Affleck neʔ thó·neʔ oyé·li niyohslaké tsiʔ náheʔ lotinyakú·neʔ né· Chris Martin",
+        "Tehniyáhse tehotiwila·yʌ́·",
+        "Shayá·tat né·n Moses luwa·yáts kháleʔ tsyeyá·tat né·n Apple yutátyats",
+        "Tehonatekháhsyu nuʔú·waʔ kháleʔ ihnehseʔ né· shayá·tat neʔn Brad Falchuk luwa·yáts",
+      ],
+    ],
+    [
+      ["Ok né·n Ben Affleck", "Laukwé·tayʌʔ kʌ́né·n yakukwé· nuʔú·wa̲ʔ"],
+      [
+        "E·só· nikutí kunukwé· laukweʔtayʌ·táhkweʔ né· Ben",
+        "Jennifer Lopez sʌ· ihnehskwe kh ́ áleʔ lotinyákhehkwe̲ʔ",
+      ],
+    ],
+    [
+      "J-Lo kʌ́ sʌ́· loneʔkʌ́",
+      [
+        "Táh",
+        "Yáh newʌ·tú tehotinyákuʔ né· J-Lo",
+        "Tehonatekháhsyu nók tsiʔ lotinyakúhneʔ né· Jennifer Garner, oyé·li niyohslaké nikalì·wes",
+        "Áhsʌ nihotiwila·yʌ·, shayá·tat kháleʔ tekniyáhse̲",
+      ],
+    ],
+    [
+      "Shekú kʌ́ lotinyakú",
+      ["Táh, tehonatekháhsyu", "Yatatwʌni·yó· né· tehnitsyalú̲"],
+    ],
+    [
+      ["Ok né·n Ben lonatʌ·ló Matt Damon", "Oh niyohtuhátiʔ né·n laulhá·"],
+      "Áhsʌ nikutí lʌné·skweʔ (Minnie Driver, Winona Ryder kháleʔ tsyeyá·tat oyá·) kaló· tsiʔ niyo·lé· nihotinyakú né·n ló·ne· oyé·li niyohslaké tsiʔ náhe",
+    ],
+    [
+      "Ok né·n Angelina Jolie uhka náhteʔ ihnéhskwe né· kaló· tsiʔ niyo·lé· né·n Brad",
+      [
+        "Lotinyakú·neʔ ne Billy Bob Thornton kháleʔ oyá· shayá·tat",
+        "Kháleʔ kaló· tsiʔ niyo·lé· lotinyakú·neʔ né· Billy Bob, yáh ki tsyohslaké tsiʔ náheʔ iknéhskweʔ ne tsyeyá·tat yakú·kwe̲ʔ",
+      ],
+    ],
+    ["Yáh náhteʔ teʔwakanúhtehkweʔ thikʌ̲̲́", "Nʌ ki né· sanúhte̲ʔ"],
+  ];
+
   const part2: DialogueTableData = [
     ["To·kʌ́skeʔ kʌ́ sanyákheʔ", ["ʌ́·, to·kʌ́skeʔ", "Tu·wís yukninyákheʔ"]],
     [
       ["Tu·wís kʌ́", "Lotinyakú né· So·s"],
-      "Lotinyakú·neʔ nok tsiʔ tehonatekháhsyu nuʔú·waʔ",
+      "Lotinyakú·neʔ nók tsiʔ tehonatekháhsyu nuʔú·wa̲ʔ",
     ],
     [
       "Tó· nahe tshatehonatekháhsyu",
-      "Yáh tewahu·níseʔ nok tsiʔ latatwʌni·yó nuʔú·waʔ",
+      "Yáh tewahu·níseʔ nók tsiʔ latatwʌni·yó nuʔú·wa̲ʔ",
     ],
     [
       "Yáh kʌ́ tehotinyaku·né· kaló· tsiʔ niyo·lé· waʔhotinyakeʔ So·s",
@@ -911,30 +974,30 @@ function DialogueSection() {
       ["Tsiʔ nihsekhsá·", "Yukninyákheʔ kháleʔ yáh niʔisé͟·"],
     ],
     [
-      "Etshlihwanu·tú·seʔ tó· nihotikhsá·tayʌʔ oskánhe né·n oyá· yakúkwe",
+      "Etshlihwanu·tú·seʔ tó· nihotikhsá·tayʌʔ oskánhe né·n oyá· yakú·kwe̲",
       "Yáh tehokhsá·tayʌʔ",
     ],
-    ["Yáh e·só· tehetshyʌtelí, wahíˍ", "Wakanúhteʔ tsiʔ laknolúkhwa̲ʔ"],
+    ["Yáh e·só· tehetshyʌtelí, wahí̲", "Wakanúhteʔ tsiʔ laknolúkhwa̲ʔ"],
     [
       [
         "Yáh kʌ́ teʔsanúhteʔ tsiʔ áhsʌ nikutí kunukwé· lotinyakú·neʔ",
         "Kháleʔ oyé·li nihokhsá·tayʌʔ",
       ],
-      ["Yáh to·kʌ́skeʔ té·kʌ", "Ne ok tewáhsʌ úskah niyohslaké nitho·yʌ́·"],
+      ["Yáh to·kʌ́skeʔ té·kʌ", "Ne ok tewáhsʌ úskah niyohslaké nithoyʌ́·ha"],
     ],
     [
       "Sanúhteʔ kʌ́ tsiʔ nihatikhsaʔtáksʌs ne shakoyoʔokúha̲",
       ["Yáh teʔsukweʔtiyó niʔisé͟·", "Tho wakanúhte̲ʔ"],
     ],
     [
-      "Yaweluhátiʔ tsiʔ yáh teshakoyʌtelí né·n shakoyoʔokúha, yáh tehuwanú·wehseʔ",
+      "Yaweluhátiʔ tsiʔ yáh teshakoyʌtelí né·n shakoyoʔokúha, yáh tehuwanú·wehse̲ʔ",
       [
-        "Yaweluhátiʔ tó· nihokhsá·tayʌʔ, yáh úhkaʔ teʔsukwé·tayʌʔ ne·n yesanolúkhwaʔ",
-        "Né· ok tewáhsʌ nikutí takós sanáhskwayʌʔ kháleʔ yáh teʔyesanú·wehseʔ",
+        "Yaweluhátiʔ tó· nihokhsá·tayʌʔ, yáh úhkaʔ teʔsukwé·tayʌʔ ne·n yesanolúkhwa̲ʔ",
+        "Né· ok tewáhsʌ nikutí takós sanáhskwayʌʔ kháleʔ yáh teʔyesanú·wehse̲ʔ",
       ],
     ],
     [
-      "Sanúhteʔ kʌ́ tsiʔ yáh tehonúhteʔ oh náhteʔ tethsʌná·sleʔ",
+      "Sanúhteʔ kʌ́ tsiʔ yáh tehonúhteʔ oh náhteʔ tethsʌná·sle̲ʔ",
       "Sʌ́haʔ e·só· takhló·li̲",
     ],
   ];
@@ -947,7 +1010,7 @@ function DialogueSection() {
       <SectionHeading id="dialogue-ex1" level={3}>
         Example 1
       </SectionHeading>
-      <Text>(Not yet available)</Text>
+      <DialogueTable data={part1} />
       <SectionHeading id="dialogue-ex2" level={3}>
         Example 2
       </SectionHeading>

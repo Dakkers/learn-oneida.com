@@ -190,64 +190,64 @@ function StativeVerbExamples() {
     { breakdown: ["kʌʔ ni·yót"], en: "This is how (it is)", type: "" },
 
     {
-      breakdown: ["oh niyoht", { text: "ú·ne̲ʔ̲", type: "PAST" }],
+      breakdown: ["oh niyoht", { text: "ú·ne̲ʔ", type: "PAST" }],
       en: "How (was it)?",
       type: "Past",
     },
     {
-      breakdown: ["tsiʔ niyoht", { text: "ú·ne̲ʔ̲", type: "PAST" }],
+      breakdown: ["tsiʔ niyoht", { text: "ú·ne̲ʔ", type: "PAST" }],
       en: "How (it was)",
       type: "",
     },
     {
-      breakdown: ["tho niyoht", { text: "ú·ne̲ʔ̲", type: "PAST" }],
+      breakdown: ["tho niyoht", { text: "ú·ne̲ʔ", type: "PAST" }],
       en: "That is how (it was)",
       type: "",
     },
     {
-      breakdown: ["kʌʔ niyoht", { text: "ú·ne̲ʔ̲", type: "PAST" }],
+      breakdown: ["kʌʔ niyoht", { text: "ú·ne̲ʔ", type: "PAST" }],
       en: "This is how (it was)",
       type: "",
     },
 
     {
-      breakdown: ["oh n", FUT, "yoht", { text: "úhake̲ʔ̲", type: "FUT" }],
+      breakdown: ["oh n", FUT, "yoht", { text: "úhake̲ʔ", type: "FUT" }],
       en: "How (will it be)?",
       type: "Future",
     },
     {
-      breakdown: ["tsiʔ n", FUT, "yoht", { text: "úhake̲ʔ̲", type: "FUT" }],
+      breakdown: ["tsiʔ n", FUT, "yoht", { text: "úhake̲ʔ", type: "FUT" }],
       en: "How (it will be)",
       type: "",
     },
     {
-      breakdown: ["tho n", FUT, "yoht", { text: "úhake̲ʔ̲", type: "FUT" }],
+      breakdown: ["tho n", FUT, "yoht", { text: "úhake̲ʔ", type: "FUT" }],
       en: "That is how (it will be)",
       type: "",
     },
     {
-      breakdown: ["kʌʔ n", FUT, "yoht", { text: "úhake̲ʔ̲", type: "FUT" }],
+      breakdown: ["kʌʔ n", FUT, "yoht", { text: "úhake̲ʔ", type: "FUT" }],
       en: "This is how (it will be)",
       type: "",
     },
 
     {
-      breakdown: ["oh n", IFUT, "yoht", "úhake̲ʔ̲"],
+      breakdown: ["oh n", IFUT, "yoht", "úhake̲ʔ"],
       en: "How (would it be)?",
       type: "Conditional",
     },
     {
-      breakdown: ["tsiʔ n", IFUT, "yoht", "úhake̲ʔ̲"],
+      breakdown: ["tsiʔ n", IFUT, "yoht", "úhake̲ʔ"],
       en: "How (it would be)",
       type: "",
     },
     {
-      breakdown: ["tho n", IFUT, "yoht", "úhake̲ʔ̲"],
+      breakdown: ["tho n", IFUT, "yoht", "úhake̲ʔ"],
       en: "That is how (it would be)",
       type: "",
     },
     {
-      breakdown: ["kʌʔ n", IFUT, "yoht", "úhake̲ʔ̲"],
+      breakdown: ["kʌʔ n", IFUT, "yoht", "úhake̲ʔ"],
       en: "This is how (it would be)",
       type: "",
     },
