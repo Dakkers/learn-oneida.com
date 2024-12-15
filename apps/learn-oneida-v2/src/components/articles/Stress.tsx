@@ -83,10 +83,10 @@ export function StressArticle({ level = 1 }: ArticleProps) {
       <Text>
         Although people from the southern U.S. use long vowels in their speech,
         English speakers in most of the U.S. and Canada do not. They speak using
-        short stress on basically all their words. This contrasts with
-        Onʌyoteʔa·ká· which frequently uses long stress to properly say a word.
-        This means that students will have to begin using long stress much more
-        often. Onʌyoteʔa·ká· spoken with only short, stressed vowels sounds
+        short stress on basically all their words. This contrasts with Oneida
+        which frequently uses long stress to properly say a word. This means
+        that students will have to begin using long stress much more often.
+        Oneida spoken with only short, stressed vowels sounds
         &quot;American.&quot;
       </Text>
       <Text>
@@ -100,9 +100,9 @@ export function StressArticle({ level = 1 }: ArticleProps) {
         particles, or whole words to convey emphasis or emotion because these
         are conveyed through word choice or word order. In English, speakers
         raise their inflection to change a statement into a question, as in:
-        &quot;He likes her.&quot; versus &quot;He likes her?&quot;.
-        Onʌyoteʔa·ká· speakers should not raise their inflection when asking
-        questions, as in: <b>Shakonú·wehseʔ kʌ́ né· akaulhá·</b>
+        &quot;He likes her.&quot; versus &quot;He likes her?&quot;. Oneida
+        speakers should not raise their inflection when asking questions, as in:{" "}
+        <b>Shakonú·wehseʔ kʌ́ né· akaulhá·</b>
       </Text>
 
       <SectionHeading

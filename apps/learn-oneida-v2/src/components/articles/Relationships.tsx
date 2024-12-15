@@ -66,7 +66,7 @@ function MarriedTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={createColumns("PB", { suffix: "hne" })}
+        columns={createColumns("PB", { suffix: "hne" }).slice(1)}
         data={rows}
       />
     </>
@@ -113,7 +113,7 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={createColumns("PR", { suffix: "kwe̲" })}
+        columns={createColumns("PR", { suffix: "kwe̲" }).slice(1)}
         data={rows}
       />
     </>
@@ -149,7 +149,7 @@ function SeparatedTable({ level = 2 }: ArticleProps) {
           headerNow: "Separated",
           headerPast: "Reconciled",
           suffix: "hne",
-        })}
+        }).slice(1)}
         data={rows}
       />
     </>
@@ -179,7 +179,7 @@ function EngagedTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={createColumns("PB", { suffix: "hkwe̲" })}
+        columns={createColumns("PB", { suffix: "hkwe̲" }).slice(1)}
         data={rows}
       />
     </>
@@ -210,7 +210,7 @@ function SingleTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={createColumns("PR", { suffix: "hne" })}
+        columns={createColumns("PR", { suffix: "hne" }).slice(1)}
         data={rows}
       />
     </>
@@ -245,8 +245,7 @@ function OldManWomanTable({ level = 2 }: ArticleProps) {
       </Text>
       <TableWrapper
         columns={[
-          // @ts-expect-error To be addressed in LO-12
-          ...TableWrapper.columnsOneidaPronouns,
+          TableWrapper.columnsOneidaPronouns[1],
           {
             accessorKey: "oldMan",
             // @ts-expect-error To be addressed in LO-12
@@ -334,7 +333,7 @@ function BoyfriendGirlfriendTable({ level = 2 }: ArticleProps) {
       <TableWrapper
         columns={[
           // @ts-expect-error To be addressed in LO-12
-          ...TableWrapper.columnsOneidaPronouns,
+          TableWrapper.columnsOneidaPronouns[1],
           {
             accessorKey: "boyfriend",
             // @ts-expect-error To be addressed in LO-12

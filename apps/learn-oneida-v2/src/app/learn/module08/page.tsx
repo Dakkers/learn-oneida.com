@@ -80,7 +80,6 @@ function AllNouns() {
 function DatumTable({ datum }) {
   return (
     <TableWrapper
-      bleed={0}
       columns={[
         TableWrapper.englishColumn,
         // @ts-expect-error LO-12

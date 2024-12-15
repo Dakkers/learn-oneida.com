@@ -83,7 +83,17 @@ export function TextBreakdown({
 
         if (typeof part === "string") {
           const isPastTense =
-            (["kweʔ", "hkweʔ", "hné·", "hneʔ"].includes(part) && isLastPart) ||
+            ([
+              "kweʔ",
+              "hkweʔ",
+              "hné·",
+              "hneʔ",
+              "kwe̲",
+              "kwe̲ʔ",
+              "hkwe̲",
+              "hkwe̲ʔ",
+            ].includes(part) &&
+              isLastPart) ||
             (["tshi", "tshaʔ"].includes(part) && i === 0);
           return (
             <InnerText
@@ -187,7 +197,7 @@ function getSuffixArr(suffix: TextBreakdownSuffix | undefined) {
                   ? "akeʔ"
                   : suffix === "áke"
                     ? "ákeʔ"
-                    : undefined;
+                    : suffix;
 
   if (!text) {
     return [];

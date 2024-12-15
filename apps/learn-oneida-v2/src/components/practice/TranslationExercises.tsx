@@ -51,7 +51,7 @@ const oneidaToEnglishModule02 = [
   ["7", "Yáh tehyatátnuhkweʔ Tu·wís kháleʔ tsyalá·seʔ nók tsiʔ teshyatyelʌ́"],
   ["8", "Smith kʌ́ tehnihsʌná·sleʔ né· Tshyalé luwayoʔokuha̲"],
   ["9", "Náhteʔ ok kʌ́ sanúhte né· liʔkʌ́ha laolihwá·ke̲"],
-  ["10", "Tó· sʌ́haʔ kʌʔnithoyʌ·ha né· Kwítel tsiʔ ni·yót niʔisé͟·"],
+  ["10", "Tó· sʌ́haʔ kʌʔnithoyʌ·ha né· Kwítel tsiʔ ni·yót niʔisé̲·"],
   [
     "11",
     "Latikwekú kaló nʌʔ né· oyé·li naʔtehonohsliyá·ku neʔn luwatiyʌʔokúha̲",
@@ -114,7 +114,7 @@ const oneidaToEnglishModule03 = [
   ["15", "Sʌ́haʔ wahu·níseʔ yuknináskwayʌʔ tsiʔ ni·yót yuknikhsá·tayʌʔ"],
   ["16", "E·so kʌ́ yanolúkhwaʔ né· etshekstʌ́ha̲"],
   ["17", "Akwekú luwatinú·wehseʔ né· lotinyáhtʌ"],
-  ["18", "Akwekú lotikhsá·tayʌʔ né· ukwatʌló·shuha, yáh niʔisé͟·"],
+  ["18", "Akwekú lotikhsá·tayʌʔ né· ukwatʌló·shuha, yáh niʔisé̲·"],
 ];
 
 const englishToOneidaModule03 = [

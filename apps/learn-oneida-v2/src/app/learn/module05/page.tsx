@@ -388,13 +388,13 @@ function VerbSectionItem({
 function OtherStativeVerbs() {
   const data = [
     {
-      en: "bad / poor condition",
+      en: "in bad / poor condition",
       breakdown: [["w", "PR"], "ahétkʌʔ"],
       breakdownPast: [["w", "PR"], "ahétkʌ́·", { text: "ne·", type: "PAST" }],
     },
 
     {
-      en: "be lonesome",
+      en: "lonesome",
       breakdown: [{ text: "yaw" }, "ʌtúnyaʔt"],
       breakdownPast: [
         { text: "yaw" },
@@ -409,12 +409,12 @@ function OtherStativeVerbs() {
       breakdownPast: [["te", "DUAL"], ["yo"], "ʔnikuhlyaʔk", ["ú·neʔ", "PAST"]],
     },
     {
-      en: "be pitiful",
+      en: "pitiful",
       breakdown: [["yo"], "tʌ·láht"],
       breakdownPast: [["yo"], "tʌlat", ["hné·", "PAST"]],
     },
     {
-      en: "sad, low spirits",
+      en: "sad, low-spirited",
       breakdown: [["t", "CIS"], ["yo"], "ʔnikuhlʌ́·u"],
       breakdownPast: [["t", "CIS"], ["yo"], "ʔnikuhlʌ", ["u·ne", "PAST"]],
     },
@@ -424,24 +424,24 @@ function OtherStativeVerbs() {
       breakdownPast: [["yo"], "tehát", ["kwe", "PAST"]],
     },
     {
-      en: "straighten out, mediate",
+      en: "straightened out, mediated",
       breakdown: [["t", "CIS"], ["yo"], "lihwakwalíhsyu"],
       breakdownPast: [["t", "CIS"], ["yo"], "lihwakwalihsyú", ["hneʔ", "PAST"]],
     },
     {
-      en: "it is good",
+      en: "good",
       breakdown: [["yo"], "yánleʔ"],
       breakdownPast: [["yo"], "yanlé", ["hkweʔ", "PAST"]],
     },
     {
-      en: "funny, be amusing",
+      en: "funny, amusing",
       breakdown: [["yo"], "ste·líst"],
       breakdownPast: [["yo"], "stelist", ["ú·neʔ", "PAST"]],
     },
     {
       en: "a cause for happiness",
       breakdown: [["yo"], "tshanúnyaʔt"],
-      breakdownPast: [["yo"], "tshanunyá·t", ["a", "EP"], ["hkwe", "PAST"]],
+      breakdownPast: [["yo"], "tshanunyá·t", ["a", "JOIN"], ["hkwe", "PAST"]],
     },
     {
       en: "pleasant, enjoyable",
@@ -451,10 +451,10 @@ function OtherStativeVerbs() {
     {
       en: "amusing, entertaining",
       breakdown: [["yo"], "ʔnikuhlólyaʔt"],
-      breakdownPast: [["yo"], "ʔnikuhlolyá·t", ["a", "EP"], ["hkwe", "PAST"]],
+      breakdownPast: [["yo"], "ʔnikuhlolyá·t", ["a", "JOIN"], ["hkwe", "PAST"]],
     },
     {
-      en: "interesting, pull the mind",
+      en: "interesting",
       breakdown: [["t", "CIS"], ["yo"], "ʔnikuhlati·lúteʔ"],
       breakdownPast: [
         ["t", "CIS"],
@@ -471,16 +471,16 @@ function OtherStativeVerbs() {
     {
       en: "amazing, surprising, awesome",
       breakdown: [["yo"], "nehlákwaʔt"],
-      breakdownPast: [["yo"], "nehlakwa·t", ["á", "EP"], ["hkwe", "PAST"]],
+      breakdownPast: [["yo"], "nehlakwa·t", ["á", "JOIN"], ["hkwe", "PAST"]],
     },
     {
-      en: "awful, mess(e.g.the weather)",
+      en: "awful, mess (e.g.the weather)",
       breakdown: [["te", "DUAL"], ["yo"], "tanú·yanit"],
       breakdownPast: [
         "te",
         ["yo"],
         "tanuyani·t",
-        ["á", "EP"],
+        ["á", "JOIN"],
         ["hkweʔ", "PAST"],
       ],
     },
@@ -497,7 +497,7 @@ function OtherStativeVerbs() {
     {
       en: "disgraceful",
       breakdown: [["yo"], "kʌ́·lat"],
-      breakdownPast: [["yo"], "kʌla·t", ["á", "EP"], ["hkweʔ", "PAST"]],
+      breakdownPast: [["yo"], "kʌla·t", ["á", "JOIN"], ["hkweʔ", "PAST"]],
     },
     {
       en: "maddening, upsetting",
@@ -512,7 +512,7 @@ function OtherStativeVerbs() {
     {
       en: "dead tired, weary, exhausted",
       breakdown: ["teyohwishʌhe·yát"],
-      breakdownPast: ["teyohwishʌheyu·t", ["á", "EP"], ["hkweʔ", "PAST"]],
+      breakdownPast: ["teyohwishʌheyu·t", ["á", "JOIN"], ["hkweʔ", "PAST"]],
     },
     {
       en: "bothersome",

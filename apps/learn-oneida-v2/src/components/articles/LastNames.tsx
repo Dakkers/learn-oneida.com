@@ -40,7 +40,7 @@ export function LastNamesArticle({ level = 1 }: ArticleProps) {
       <SectionHeading id="last-names" level={level}>
         Last Names
       </SectionHeading>
-      <ParadigmTable data={data} />
+      <ParadigmTable columnVisibility={{ pronounEnglish: false }} data={data} />
 
       <SectionHeading
         id="last-names-examples"

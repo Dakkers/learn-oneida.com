@@ -70,9 +70,21 @@ export function ClansArticle({ level = 1 }: ArticleProps) {
       <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
         Phrases
       </SectionHeading>
-      <ParadigmTable allowedPronouns={allowedPronouns} data={dataBears} />
-      <ParadigmTable allowedPronouns={allowedPronouns} data={dataTurtles} />
-      <ParadigmTable allowedPronouns={allowedPronouns} data={dataWolves} />
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={{ pronounEnglish: false }}
+        data={dataBears}
+      />
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={{ pronounEnglish: false }}
+        data={dataTurtles}
+      />
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={{ pronounEnglish: false }}
+        data={dataWolves}
+      />
     </Flex>
   );
 }

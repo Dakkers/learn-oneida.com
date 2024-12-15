@@ -14,18 +14,18 @@ export function GlottalStopArticle({ level = 1 }: ArticleProps) {
         Glottal Stops
       </SectionHeading>
       <Text>
-        A common feature of Onʌyoteʔa·ká· is the <strong>glottal stop</strong>{" "}
+        A common feature of Oneida is the <strong>glottal stop</strong>{" "}
         indicated in writing by an apostrophe (<Letter>&lsquo;</Letter>) or the
         symbol <Letter>ʔ</Letter>. A glottal stop occurs when a speaker abruptly
-        “cuts” the end off a vowel by stopping air and sound coming out of their
-        throat. We use glottal stops in speaking English all the time, but we
-        are unaware of them and do not write them.
+        &quot;cuts&quot; the end off a vowel by stopping air and sound coming
+        out of their throat. We use glottal stops in speaking English all the
+        time, but we are unaware of them and do not write them.
       </Text>
       <Text>
-        Example: When saying “no,” people sometimes say “uh-unh.” (The glottal
-        stop occurs after the “uh” and before the “unh.”) Many people also
-        glottalize the double-t in words like kitten, so that they say “kiʔten.”
-        Examples of Onʌyoteʔa·ká· words with glottal stops are:
+        Example: In English, &quot;uh-oh.&quot; has a glottal stop. The glottal
+        stop occurs after the &quot;uh&quot; and before the &quot;oh.&quot; Many
+        people also glottalize the double-t in words like kitten, so that they
+        say &quot;kiʔten.&quot; Examples of Oneida words with glottal stops are:
       </Text>
       <List>
         <List.Item>oʔwá·luʔ</List.Item>

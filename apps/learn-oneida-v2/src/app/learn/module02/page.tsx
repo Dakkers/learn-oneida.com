@@ -294,7 +294,7 @@ function ReciprocalSection() {
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["h", "RPL"], ["y"], ["atat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["hy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["ky"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["twa"], ["tat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["yakwa"], ["tat", "REFL"], "yʌtelí̲"],
@@ -320,7 +320,7 @@ function ReciprocalSection() {
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["h", "RPL"], ["y"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["hy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["ky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["twa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["yakw"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
@@ -855,7 +855,7 @@ function DialogueSection() {
     ],
     ["To·kʌ́skeʔ kʌ́ tho naʔtehaohsliyá·ku̲", "ʌ́·, tho naʔtehaohsliyá·ku̲"],
     [
-      "Úhkaʔ náhteʔ sheyʌtelí né·n sʌ́haʔ kʌʔ nityako·yʌ́·",
+      "Úhkaʔ náhteʔ sheyʌtelí né·n sʌ́haʔ kʌʔ nityakoyʌ́ha̲",
       [
         "Sʌ́haʔ kʌʔnithoyʌ́·ha loʔniha̲",
         "Íhsi nú· né· téklu niwáhsʌ naʔtehaohsliyá·ku̲",
@@ -899,7 +899,7 @@ function DialogueSection() {
     ],
     [
       "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
-      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔisé͟·",
+      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔisé̲·",
     ],
     [
       "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yót niʔí·",

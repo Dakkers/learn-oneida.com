@@ -971,7 +971,7 @@ function DialogueSection() {
     ],
     [
       "ʌ́· kháleʔ yáh teʔyukninyákheʔ úhkaʔ náhteʔ ok né·n tshaʔteyukniʔtaló·tʌ̲ʔ",
-      ["Tsiʔ nihsekhsá·", "Yukninyákheʔ kháleʔ yáh niʔisé͟·"],
+      ["Tsiʔ nihsekhsá·", "Yukninyákheʔ kháleʔ yáh niʔisé̲·"],
     ],
     [
       "Etshlihwanu·tú·seʔ tó· nihotikhsá·tayʌʔ oskánhe né·n oyá· yakú·kwe̲",
@@ -987,7 +987,7 @@ function DialogueSection() {
     ],
     [
       "Sanúhteʔ kʌ́ tsiʔ nihatikhsaʔtáksʌs ne shakoyoʔokúha̲",
-      ["Yáh teʔsukweʔtiyó niʔisé͟·", "Tho wakanúhte̲ʔ"],
+      ["Yáh teʔsukweʔtiyó niʔisé̲·", "Tho wakanúhte̲ʔ"],
     ],
     [
       "Yaweluhátiʔ tsiʔ yáh teshakoyʌtelí né·n shakoyoʔokúha, yáh tehuwanú·wehse̲ʔ",

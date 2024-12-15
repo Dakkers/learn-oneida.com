@@ -40,13 +40,13 @@ const dataAtSomeonesOwnWork = createParadigmData(
       { breakdown: ["tsiʔ ", ["ti", "CIS"], { text: "s" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "h" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "yako" }, "yoʔtʌ́staʔ"] },
-      { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "y" }, "yoʔtʌ́staʔ"] },
+      { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "yo" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "yukni" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["ti", "CIS"], { text: "sni" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "yukwa" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["ti", "CIS"], { text: "swa" }, "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "hoti" }, "yoʔtʌ́staʔ"] },
-      { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "yot" }, "yoʔtʌ́staʔ"] },
+      { breakdown: ["tsiʔ ", ["t", "CIS"], { text: "yoti" }, "yoʔtʌ́staʔ"] },
     ],
   },
   pronounsBlue,
@@ -86,7 +86,7 @@ const examplesList = [
   ["What's your address (at your house)?", "Tó· niwashe·tás tsiʔ tisanúhsote̲ʔ"],
   [
     "I live at 1234 Oneida Road.",
-    "1234 niwashe·tás Onʌyoteʔa·ká· yoha·té· tsiʔ tkí·tlu̲ʔ",
+    "1234 niwashe·tás Oneida yoha·té· tsiʔ tkí·tlu̲ʔ",
   ],
 ].map(([en, translation]) => ({ en, translation }));
 
@@ -109,7 +109,10 @@ export function PhoneNumbersArticle({ level = 1 }: ArticleProps) {
       >
         At Someone&lsquo;s House
       </SectionHeading>
-      <ParadigmTable data={dataAtSomeonesOwnHouse} />
+      <ParadigmTable
+        columnVisibility={{ pronounEnglish: false }}
+        data={dataAtSomeonesOwnHouse}
+      />
 
       <SectionHeading
         id="at-someones-work"
@@ -117,7 +120,10 @@ export function PhoneNumbersArticle({ level = 1 }: ArticleProps) {
       >
         At Someone&lsquo;s Work
       </SectionHeading>
-      <ParadigmTable data={dataAtSomeonesOwnWork} />
+      <ParadigmTable
+        columnVisibility={{ pronounEnglish: false }}
+        data={dataAtSomeonesOwnWork}
+      />
 
       <SectionHeading
         id="phone-number-examples"

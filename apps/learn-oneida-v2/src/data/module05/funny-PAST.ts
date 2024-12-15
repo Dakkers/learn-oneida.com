@@ -7,7 +7,7 @@ export default createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], ["e", "EP"], "ste·lihstú·", ["neʔ", "PAST"]],
+        breakdown: [["wake"], "ste·lihstú·", ["neʔ", "PAST"]],
       },
       {
         breakdown: [["sa"], "ste·lihstú·", ["neʔ", "PAST"]],

@@ -11,7 +11,7 @@ import { singlePronouns } from "@ukwehuwehneke/language-components";
 
 const data = createParadigmData(
   {
-    translation: "About {{pronoun}}",
+    translation: "About {{pronounObjective}}",
     type: "PLB",
     phrases: [
       { breakdown: [{ text: "ak" }, "lihwá·ke̲"] },
@@ -47,7 +47,7 @@ export function AboutSomeoneArticle({ level = 1 }: ArticleProps) {
       <SectionHeading id="about-someone" level={level}>
         About Someone
       </SectionHeading>
-      <ParadigmTable data={data} />
+      <ParadigmTable columnVisibility={{ pronounEnglish: false }} data={data} />
 
       <SectionHeading
         id="about-someone-examples"

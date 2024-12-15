@@ -107,7 +107,7 @@ export function BeingDifferentArticle({ level = 1 }: ArticleProps) {
         Being Different
       </SectionHeading>
       <Text>These words make use of the semi-reflexive feature.</Text>
-      <ParadigmTable data={data} />
+      <ParadigmTable columnVisibility={{ pronounEnglish: false }} data={data} />
     </Flex>
   );
 }

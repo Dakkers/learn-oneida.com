@@ -213,14 +213,14 @@ export function createTimesOfDayData() {
   ];
 
   const nightPhrases = [
-    { en: "night", translation: "né· wahsuta·té͟·" },
+    { en: "night", translation: "né· wahsuta·té̲·" },
     { en: "night-time", translation: "kwaʔshuté·ke̲" },
     { en: "all night", translation: "kwaʔshutátiʔ" },
     { en: "during the night", translation: "tsiʔ niwahsu·tés" },
     { en: "every night", translation: "yaʔtewahsu·táke̲" },
     { en: "midnight", translation: "ashú·tha̲" },
     { en: "(when it got dark) last night", translation: "kwaʔshu·té̲·" },
-    { en: ["this night", "tonight"], translation: "kaʔi·kʌ́· wahsuta·té͟·" },
+    { en: ["this night", "tonight"], translation: "kaʔi·kʌ́· wahsuta·té̲·" },
     { en: "the other night", translation: "oyá· tshitkwaʔshu·té̲·" },
     { en: "how many nights?", translation: "Tó· niwahsu·táke̲ʔ" },
     { en: "when it gets dark", translation: "tshityó·kalas" },
