@@ -6,52 +6,52 @@ const data: ParadigmData = {
   phrases: [
     {
       pronoun: "uni",
-      phrase: "tetyatátnuhkwe̲ʔ",
+      phrase: "tyatátnuhkwe̲ʔ",
       breakdown: [{ text: "ty" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "soni",
-      phrase: "teyakyatátnuhkwe̲ʔ",
+      phrase: "yakyatátnuhkwe̲ʔ",
       breakdown: [{ text: "yaky" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "u2",
-      phrase: "tetsyatátnuhkwe̲ʔ",
+      phrase: "tsyatátnuhkwe̲ʔ",
       breakdown: [{ text: "tsy" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "2m",
-      phrase: "tehyatátnuhkwe̲ʔ",
+      phrase: "hyatátnuhkwe̲ʔ",
       breakdown: [{ text: "hy" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "2f",
-      phrase: "tekyatátnuhkwe̲ʔ",
+      phrase: "kyatátnuhkwe̲ʔ",
       breakdown: [{ text: "ky" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "us",
-      phrase: "tetwatátnuhkwe̲ʔ",
+      phrase: "twatátnuhkwe̲ʔ",
       breakdown: [{ text: "tw" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "theyni",
-      phrase: "teyakwatátnuhkwe̲ʔ",
+      phrase: "yakwatátnuhkwe̲ʔ",
       breakdown: [{ text: "yakw" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "yall",
-      phrase: "teswatátnuhkwe̲ʔ",
+      phrase: "swatátnuhkwe̲ʔ",
       breakdown: [{ text: "sw" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "ms",
-      phrase: "tehutátnuhkwe̲ʔ",
+      phrase: "lutátnuhkwe̲ʔ",
       breakdown: [{ text: "lu" }, { text: "tát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "fs",
-      phrase: "tekutátnuhkwe̲ʔ",
+      phrase: "kutátnuhkwe̲ʔ",
       breakdown: [{ text: "ku" }, { text: "tát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
   ],
