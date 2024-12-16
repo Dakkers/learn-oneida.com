@@ -9,8 +9,7 @@ export default createParadigmData(
       {
         breakdown: [
           ["a·", "IFUT"],
-          ["uk"],
-          ["e", "EP"],
+          ["uke"],
           "ʔnikuhlatshanítu",
           ["hakeʔ", "IFUT"],
         ],

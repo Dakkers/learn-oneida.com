@@ -11,7 +11,7 @@ const data: ParadigmData = {
     },
     {
       pronoun: "u",
-      phrase: "hetshʔkʌ́ha̲",
+      phrase: "hetsheʔkʌ́ha̲",
       breakdown: [{ text: "h", type: "RPL" }, { text: "etshe" }, "ʔkʌ́ha̲"],
     },
     {

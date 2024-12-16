@@ -25,17 +25,17 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     standalone: ["kahuwe·yá·"],
     onNoun: "kahuweyá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tkahu·wáyʌ"],
+    whereTheNoun: ["tsiʔ tkahu·wáyʌ"],
   };
   const objBoard = {
     key: "Board",
     en: ["board", "floor"],
     root: ["-shuʼkal-"],
     dict: [661, 910],
-    standalone: ["oshú·kale’"],
-    onNoun: "oshu’kalá·ke",
+    standalone: ["oshú·kaleʔ"],
+    onNoun: "oshuʔkalá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tkashu’ka·láyʌ", "tsi’ tkashú·kalote’"],
+    whereTheNoun: ["tsiʔ tkashuʔka·láyʌ", "tsiʔ tkashú·kaloteʔ"],
   };
   const objBridge = {
     key: "Bridge",
@@ -45,7 +45,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     standalone: ["waskóhu"],
     onNoun: "askwá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ twahskóhu"],
+    whereTheNoun: ["tsiʔ twahskóhu"],
   };
   const objBush = {
     key: "Bush",
@@ -55,57 +55,57 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     standalone: ["oska·wá·"],
     onNoun: "oskawá·ke",
     inNoun: "oskawá·ku",
-    whereTheNoun: ["tsi’ twaska·wáyʌ’"],
+    whereTheNoun: ["tsiʔ twaska·wáyʌʔ"],
   };
   const objCloud = {
     key: "Cloud",
     en: ["cloud"],
     root: ["-ahtsiʼkl-"],
     dict: [939],
-    standalone: ["ohtsí·kla’"],
-    onNoun: "ohtsi’kla·ke",
-    inNoun: "ohtsi’klo·kú",
-    whereTheNoun: ["tsi’ tyotsí·kle’"],
+    standalone: ["ohtsí·klaʔ"],
+    onNoun: "ohtsiʔkla·ke",
+    inNoun: "ohtsiʔklo·kú",
+    whereTheNoun: ["tsiʔ tyotsí·kleʔ"],
   };
   const objDirt = {
     key: "Dirt",
     en: ["dirt", "dust", "ash", "soil"],
     root: ["-aʼkʌhl-"],
     dict: [315],
-    standalone: ["o’kʌ·lá’"],
+    standalone: ["oʔkʌ·láʔ"],
     onNoun: null,
-    inNoun: "o’kʌhlá·ke",
-    whereTheNoun: ["tsi’ twa’kʌ·láyʌ̲’"],
+    inNoun: "oʔkʌhlá·ke",
+    whereTheNoun: ["tsiʔ twaʔkʌ·láyʌ̲ʔ"],
   };
   const objDitch = {
     key: "Ditch",
     en: ["ditch"],
     root: ["-naʼtsl-"],
     dict: [568],
-    standalone: ["kaná·tsli’"],
+    standalone: ["kaná·tsliʔ"],
     onNoun: null,
     inNoun: "kaná·tslaku",
-    whereTheNoun: ["tsi’ tkana·tsláyʌ’"],
+    whereTheNoun: ["tsiʔ tkana·tsláyʌʔ"],
   };
   const objDoor = {
     key: "Door",
     en: ["door"],
     root: ["-nhoh-"],
     dict: [586],
-    standalone: ["kanhóha̲’"],
+    standalone: ["kanhóha̲ʔ"],
     onNoun: "kanhohá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tyonhoká·lute’"],
+    whereTheNoun: ["tsiʔ tyonhoká·luteʔ"],
   };
   const objFence = {
     key: "Fence",
     en: ["fence"],
     root: ["-atʌʼʌhl-"],
     dict: [991],
-    standalone: ["atʌ’ʌ́·la’"],
-    onNoun: "atʌ’ʌhlá·ke",
+    standalone: ["atʌʔʌ́·laʔ"],
+    onNoun: "atʌʔʌhlá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ twatʌ’ʌ·lote’"],
+    whereTheNoun: ["tsiʔ twatʌʔʌ·loteʔ"],
   };
   const objField = {
     key: "Field",
@@ -115,27 +115,27 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     standalone: ["kahʌ·tá·yʌ·"],
     onNoun: null,
     inNoun: "kahʌtá·ke",
-    whereTheNoun: ["tsi’ tkahʌ·tá·yʌ’"],
+    whereTheNoun: ["tsiʔ tkahʌ·tá·yʌʔ"],
   };
   const objForest = {
     key: "Forest",
     en: ["forest", "woods"],
     root: ["-lh-"],
     dict: [517],
-    standalone: ["kálha’"],
+    standalone: ["kálhaʔ"],
     onNoun: null,
     inNoun: "kalhakú",
-    whereTheNoun: ["tsi’ tkalhá·yʌ"],
+    whereTheNoun: ["tsiʔ tkalhá·yʌ"],
   };
   const objGrass = {
     key: "Grass",
     en: ["grass", "straw", "hay", "weeds"],
     root: ["-anekl-", "-ʌnekl-"],
     dict: [1026],
-    standalone: ["onékli’"],
+    standalone: ["onékliʔ"],
     onNoun: "oneklá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tyotaneklú·ni", "tsi’tyoneklú·ni"],
+    whereTheNoun: ["tsiʔ tyotaneklú·ni", "tsiʔtyoneklú·ni"],
   };
   const objHill = {
     key: "Hill",
@@ -143,69 +143,69 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     root: ["-nutahal-"],
     dict: [1040],
     standalone: ["onu·táhlha·"],
-    onNoun: "onutahalá·ke’",
+    onNoun: "onutahalá·keʔ",
     inNoun: null,
-    whereTheNoun: ["tsi’ tyonu·tóte’"],
+    whereTheNoun: ["tsiʔ tyonu·tóteʔ"],
   };
   const objLake = {
     key: "Lake",
     en: ["lake"],
     root: ["-nyatal-"],
     dict: [1065],
-    standalone: ["kanya·tále’"],
+    standalone: ["kanya·táleʔ"],
     onNoun: "kanyatalá·ke",
     inNoun: "kanya·taláku",
-    whereTheNoun: ["tsi’ tkanyatalá·yʌ"],
+    whereTheNoun: ["tsiʔ tkanyatalá·yʌ"],
   };
   const objLand = {
     key: "Land",
     en: ["land", "earth", "ground"],
     root: ["-hutsy-"],
     dict: [1066],
-    standalone: ["ohútsya’"],
+    standalone: ["ohútsyaʔ"],
     onNoun: "ohutsyá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tyohutsya·té·", "tsi’ yuhwʌtsya·té·"],
+    whereTheNoun: ["tsiʔ tyohutsya·té·", "tsiʔ yuhwʌtsya·té·"],
   };
   const objLeaf = {
     key: "Leaf",
     en: ["leaf"],
     root: ["-nlaht-"],
     dict: [1069],
-    standalone: ["ónlahte’"],
+    standalone: ["ónlahteʔ"],
     onNoun: "onlahtá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tkanlahtá·yʌ’"],
+    whereTheNoun: ["tsiʔ tkanlahtá·yʌʔ"],
   };
   const objMountain = {
     key: "Mountain",
     en: ["mountain", "rock"],
     root: ["-itstʌhl-"],
     dict: [1156],
-    standalone: ["otstʌ́·la’"],
+    standalone: ["otstʌ́·laʔ"],
     onNoun: "otstʌhlá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tkʌtstʌ·lóte"],
+    whereTheNoun: ["tsiʔ tkʌtstʌ·lóte"],
   };
   const objMud = {
     key: "Mud",
     en: ["mud"],
     root: ["-nawaʼtst-"],
     dict: [556],
-    standalone: ["onawá·tsta’"],
+    standalone: ["onawá·tstaʔ"],
     onNoun: null,
-    inNoun: "onawa’tstá·ke",
-    whereTheNoun: ["tsi’ tkanawatstá·yʌ"],
+    inNoun: "onawaʔtstá·ke",
+    whereTheNoun: ["tsiʔ tkanawatstá·yʌ"],
   };
   const objRafters = {
     key: "Rafters",
     en: ["rafters"],
     root: ["-nʌst-"],
     dict: [1145],
-    standalone: ["kanʌ́sta’"],
+    standalone: ["kanʌ́staʔ"],
     onNoun: null,
-    inNoun: "kanʌ́stote’",
-    whereTheNoun: ["tsi’ tkanʌ́sto·te’"],
+    inNoun: "kanʌ́stoteʔ",
+    whereTheNoun: ["tsiʔ tkanʌ́sto·teʔ"],
   };
   const objRapids = {
     key: "Rapids",
@@ -215,47 +215,47 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     standalone: ["kahna·wá·"],
     onNoun: "kahnawá·ke",
     inNoun: "kahnawá·ku",
-    whereTheNoun: ["tsi’ tkahna·wá·yʌ’"],
+    whereTheNoun: ["tsiʔ tkahna·wá·yʌʔ"],
   };
   const objRiver = {
     key: "River",
     en: ["river"],
     root: ["-wyhuh-"],
     dict: [778, 1154],
-    standalone: ["kawyhúha’"],
+    standalone: ["kawyhúhaʔ"],
     onNoun: "kawyhuhá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tkawyhuhaté", "tsi’ tkawyhuhatáti’"],
+    whereTheNoun: ["tsiʔ tkawyhuhaté", "tsiʔ tkawyhuhatátiʔ"],
   };
   const objRoad = {
     key: "Road",
     en: ["road", "street"],
     root: ["-hah-"],
     dict: [1154],
-    standalone: ["oháha’"],
+    standalone: ["oháhaʔ"],
     onNoun: "owahá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tyohá·te·"],
+    whereTheNoun: ["tsiʔ tyohá·te·"],
   };
   const objRoof = {
     key: "Roof",
     en: ["roof", "porch", "deck", "shanty", "hut"],
     root: ["-askw-"],
     dict: [121],
-    standalone: ["áskwa’"],
+    standalone: ["áskwaʔ"],
     onNoun: "askwá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ twahskwahé·le’"],
+    whereTheNoun: ["tsiʔ twahskwahé·leʔ"],
   };
   const objSand = {
     key: "Sand",
     en: ["sand"],
     root: ["-ʼnehsaluhkw-"],
     dict: [1162],
-    standalone: ["o’nehsalúhkwa’"],
-    onNoun: "o’nehsaluhkwá·ke",
+    standalone: ["oʔnehsalúhkwaʔ"],
+    onNoun: "oʔnehsaluhkwá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tka’nehsaluhkwá·yʌ"],
+    whereTheNoun: ["tsiʔ tkaʔnehsaluhkwá·yʌ"],
   };
   const objSky = {
     key: "Sky",
@@ -265,25 +265,25 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     standalone: ["kaluyá·ke"],
     onNoun: null,
     inNoun: "kaluhyá·ke",
-    whereTheNoun: ["tsi’ kaluhyá·ke·"],
+    whereTheNoun: ["tsiʔ kaluhyá·ke·"],
   };
   const objSnow = {
     key: "Snow",
     en: ["snow"],
     root: ["-nyʌht-"],
     dict: [627],
-    standalone: ["ónyʌhte’"],
+    standalone: ["ónyʌhteʔ"],
     onNoun: "onyʌhtá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tkanye·yʌ́·", "tsi’ tkanyʌtá·yʌ"],
+    whereTheNoun: ["tsiʔ tkanye·yʌ́·", "tsiʔ tkanyʌtá·yʌ"],
   };
   const objSnowflake = {
     key: "Snowflake",
     en: ["snowflake"],
     root: ["-aʼkl-"],
     dict: [317],
-    standalone: ["ó·kla’"],
-    onNoun: "o’klá·ke’",
+    standalone: ["ó·klaʔ"],
+    onNoun: "oʔklá·keʔ",
     inNoun: null,
     whereTheNoun: null,
   };
@@ -295,7 +295,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     standalone: ["kana·wá·"],
     onNoun: "kana·wáke",
     inNoun: "kana·wáku",
-    whereTheNoun: ["tsi’ tkanawá·yʌ’"],
+    whereTheNoun: ["tsiʔ tkanawá·yʌʔ"],
   };
   const objTown = {
     key: "Town",
@@ -305,37 +305,37 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     standalone: ["kana·tá·yʌ"],
     onNoun: null,
     inNoun: "kanatá·ke",
-    whereTheNoun: ["tsi’ tkanatá·yʌ̲·"],
+    whereTheNoun: ["tsiʔ tkanatá·yʌ̲·"],
   };
   const objTree = {
     key: "Tree",
     en: ["tree", "log", "tree trunk"],
     root: ["-lut-"],
     dict: [542],
-    standalone: ["ka·lúte’"],
+    standalone: ["ka·lúteʔ"],
     onNoun: "kalutá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tkalu·táyʌ̲’"],
+    whereTheNoun: ["tsiʔ tkalu·táyʌ̲ʔ"],
   };
   const objWall = {
     key: "Wall",
     en: ["wall"],
     root: ["-hsuht-"],
     dict: [1256],
-    standalone: ["ahsúhta’"],
+    standalone: ["ahsúhtaʔ"],
     onNoun: "ahsuhtá·ke",
     inNoun: null,
-    whereTheNoun: ["tsi’ tkahsuhtó·te̲’"],
+    whereTheNoun: ["tsiʔ tkahsuhtó·te̲ʔ"],
   };
   const objWind = {
     key: "Wind",
     en: ["wind", "air"],
     root: ["-wel-"],
     dict: [1265],
-    standalone: ["ówela’"],
+    standalone: ["ówelaʔ"],
     onNoun: null,
     inNoun: "kawelá·ku",
-    whereTheNoun: ["tsi’ tyowe·lóte̲’"],
+    whereTheNoun: ["tsiʔ tyowe·lóte̲ʔ"],
   };
 
   return [

@@ -27,8 +27,8 @@ export function createCountingTimeData() {
     ["2 hours", "tekahwístaʔeks"],
     ["3 hours", "áhsʌ nikahwístaʔeks"],
     ["1 day", "swʌhníslat"],
-    ["2 days", "tewʌhnislakéˍ"],
-    ["3 days", "áhsʌ niwʌhnislakéˍ"],
+    ["2 days", "tewʌhnislaké̲"],
+    ["3 days", "áhsʌ niwʌhnislaké̲"],
     ["1 night", "swahsu·tát"],
     ["2 nights", "tewahsu·táke̲"],
     ["3 nights", "áhsʌ niwahsu·táke̲"],
@@ -40,7 +40,7 @@ export function createCountingTimeData() {
     ["3 months", "áhsʌ niwʌhní·take̲"],
     ["1 year", "tsyóhslat"],
     ["2 years", "teyóhslake̲ʔ"],
-    ["3 years", "áhsʌ niyóhslakéˍ"],
+    ["3 years", "áhsʌ niyóhslaké̲"],
   ].map(([en, translation]) => ({
     en,
     translation,
@@ -62,14 +62,14 @@ export function createCountingTimeDataLegacy() {
       num: 2,
       minutes: "tewasliyetaʔk",
       hours: "tekahwistaʔeks",
-      days: "tewʌhnislakéˍ",
+      days: "tewʌhnislaké̲",
       nights: "tewahsu·táke̲",
     },
     {
       num: 3,
       minutes: "áhsʌ niwasliyetaʔk",
       hours: "áhsʌ nikahwistaʔeks",
-      days: "áhsʌ niwʌhnislakéˍ",
+      days: "áhsʌ niwʌhnislaké̲",
       nights: "áhsʌ niwahsu·táke̲",
     },
   ];
@@ -90,7 +90,7 @@ export function createCountingTimeDataLegacy() {
       num: 3,
       weeks: "áhsʌ niwʌ·táke̲",
       months: "áhsʌ niwʌhní·take̲",
-      years: "áhsʌ niyóhslakéˍ",
+      years: "áhsʌ niyóhslaké̲",
     },
   ];
   return [firstTable, secondTable] as const;

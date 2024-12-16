@@ -13,7 +13,7 @@ export default createParadigmData(
         breakdown: [["hs"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
-        breakdown: [["h"], "únhe", ["hkweʔ", "PAST"]],
+        breakdown: [["l"], "únhe", ["hkweʔ", "PAST"]],
       },
       {
         breakdown: [["yak"], "únhe", ["hkweʔ", "PAST"]],

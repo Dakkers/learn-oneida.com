@@ -16,7 +16,7 @@ export default createParadigmData(
         breakdown: [["l"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["yu"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
+        breakdown: [["yu"], ["tat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
         breakdown: [["w"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
@@ -46,10 +46,10 @@ export default createParadigmData(
         breakdown: [["sw"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["lu"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
+        breakdown: [["lu"], ["tat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
       {
-        breakdown: [["ku"], ["atat", "REFL"], "ewyʌnʌ·tá·seʔ"],
+        breakdown: [["ku"], ["tat", "REFL"], "ewyʌnʌ·tá·seʔ"],
       },
     ],
   },

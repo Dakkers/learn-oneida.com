@@ -6,33 +6,33 @@ const data: ParadigmData = {
   phrases: [
     {
       pronoun: "i",
-      phrase: "yuknulhaʔshúha",
-      breakdown: [{ text: "yuk" }, "nulhaʔshúha"],
+      phrase: "yuknulhaʔshúha̲",
+      breakdown: [{ text: "yuk" }, "nulhaʔshúha̲"],
     },
     {
       pronoun: "u",
-      phrase: "yesanulhaʔshúha",
-      breakdown: [{ text: "yesa" }, "nulhaʔshúha"],
+      phrase: "yesanulhaʔshúha̲",
+      breakdown: [{ text: "yesa" }, "nulhaʔshúha̲"],
     },
     {
       pronoun: "m",
-      phrase: "luwanulhaʔshúha",
-      breakdown: [{ text: "luwa" }, "nulhaʔshúha"],
+      phrase: "luwanulhaʔshúha̲",
+      breakdown: [{ text: "luwa" }, "nulhaʔshúha̲"],
     },
     {
       pronoun: "f",
-      phrase: "shakotinulhaʔshúha",
-      breakdown: [{ text: "shakoti" }, "nulhaʔshúha"],
+      phrase: "shakotinulhaʔshúha̲",
+      breakdown: [{ text: "shakoti" }, "nulhaʔshúha̲"],
     },
     {
       pronoun: "us",
-      phrase: "yukhinulhaʔshúha",
-      breakdown: [{ text: "yukhi" }, "nulhaʔshúha"],
+      phrase: "yukhinulhaʔshúha̲",
+      breakdown: [{ text: "yukhi" }, "nulhaʔshúha̲"],
     },
     {
       pronoun: "yall",
-      phrase: "yetshinulhaʔshúha",
-      breakdown: [{ text: "yetshi" }, "nulhaʔshúha"],
+      phrase: "yetshinulhaʔshúha̲",
+      breakdown: [{ text: "yetshi" }, "nulhaʔshúha̲"],
     },
   ],
 };

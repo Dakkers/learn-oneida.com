@@ -23,15 +23,7 @@ export interface TableProps {
   data: Array<Row>;
 }
 
-export function Table({
-  bleed = {
-    xs: 0,
-    md: 16,
-    lg: 32,
-  },
-  columns,
-  data,
-}: TableProps) {
+export function Table({ bleed = 0, columns, data }: TableProps) {
   const hasHeader = !!columns.find((col) => !!col.header);
 
   return (

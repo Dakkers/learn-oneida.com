@@ -5,40 +5,40 @@
         "Tákʌʔ ",
         { "text": "ʌ", "type": "FUT" },
         { "text": "sk" },
-        "hlo·li̲´"
+        "hlo·lí̲"
       ],
       "key": "you_me",
-      "phrase": "Tákʌʔ ʌskhlo·li̲´·"
+      "phrase": "Tákʌʔ ʌskhlo·lí̲·"
     },
     {
       "breakdown": [
         "Tákʌʔ ",
         { "text": "ʌ", "type": "FUT" },
         { "text": "skwa" },
-        "hlo·li̲´"
+        "hlo·lí̲"
       ],
       "key": "you_us_exclusive",
-      "phrase": "Tákʌʔ ʌskwahlo·li̲´·"
+      "phrase": "Tákʌʔ ʌskwahlo·lí̲·"
     },
     {
       "breakdown": [
         "Tákʌʔ ",
         { "text": "ʌ", "type": "FUT" },
         { "text": "she" },
-        "hlo·li̲´"
+        "hlo·lí̲"
       ],
       "key": "you_her",
-      "phrase": "Tákʌʔ ʌshehlo·li̲´·"
+      "phrase": "Tákʌʔ ʌshehlo·lí̲·"
     },
     {
       "breakdown": [
         "Tákʌʔ ",
         { "text": "ʌ", "type": "FUT" },
         { "text": "hets" },
-        "hlo·li̲´"
+        "hlo·lí̲"
       ],
       "key": "you_him",
-      "phrase": "Tákʌʔ ʌhetshlo·li̲´·"
+      "phrase": "Tákʌʔ ʌhetshlo·lí̲·"
     }
   ],
   "translation": "{{subject}} tell {{object}}",

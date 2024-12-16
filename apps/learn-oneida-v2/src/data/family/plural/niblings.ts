@@ -6,33 +6,33 @@ const data: ParadigmData = {
   phrases: [
     {
       pronoun: "i",
-      phrase: "kheyuhwatʌʔokuha",
-      breakdown: [{ text: "khey" }, "uhwatʌʔokuha"],
+      phrase: "kheyuhwatʌʔokuha̲",
+      breakdown: [{ text: "khey" }, "uhwatʌʔokuha̲"],
     },
     {
       pronoun: "u",
-      phrase: "sheyuhwatʌʔokuha",
-      breakdown: [{ text: "shey" }, "uhwatʌʔokuha"],
+      phrase: "sheyuhwatʌʔokuha̲",
+      breakdown: [{ text: "shey" }, "uhwatʌʔokuha̲"],
     },
     {
       pronoun: "m",
-      phrase: "shakonuhwatʌʔokuha",
-      breakdown: [{ text: "shakon" }, "uhwatʌʔokuha"],
+      phrase: "shakonuhwatʌʔokuha̲",
+      breakdown: [{ text: "shakon" }, "uhwatʌʔokuha̲"],
     },
     {
       pronoun: "f",
-      phrase: "utatyuhwatʌʔokuha",
-      breakdown: [{ text: "utaty" }, "uhwatʌʔokuha"],
+      phrase: "utatyuhwatʌʔokuha̲",
+      breakdown: [{ text: "utaty" }, "uhwatʌʔokuha̲"],
     },
     {
       pronoun: "us",
-      phrase: "yethiyuhwatʌʔokuha",
-      breakdown: [{ text: "yethiy" }, "uhwatʌʔokuha"],
+      phrase: "yethiyuhwatʌʔokuha̲",
+      breakdown: [{ text: "yethiy" }, "uhwatʌʔokuha̲"],
     },
     {
       pronoun: "yall",
-      phrase: "yetshiyuhwatʌʔokuha",
-      breakdown: [{ text: "yetshiy" }, "uhwatʌʔokuha"],
+      phrase: "yetshiyuhwatʌʔokuha̲",
+      breakdown: [{ text: "yetshiy" }, "uhwatʌʔokuha̲"],
     },
   ],
 };

@@ -190,10 +190,10 @@ function DialogueSection() {
   const part1: DialogueTableData = [
     [
       { one: "Úhkaʔ náhteʔ niʔí·", en: "Who am I?" },
-      { one: "Kwítel niʔisé͟·", en: "You are Peter." },
+      { one: "Kwítel niʔisé̲·", en: "You are Peter." },
     ],
     [
-      { one: "Úhkaʔ náhteʔ niʔisé͟·", en: "Who are you?" },
+      { one: "Úhkaʔ náhteʔ niʔisé̲·", en: "Who are you?" },
       { one: "Wá·li niʔí·", en: "I am Mary." },
     ],
     [
@@ -212,10 +212,10 @@ function DialogueSection() {
   const part2: DialogueTableData = [
     [
       { one: "Tshyalé kʌ́ niʔí·", en: "Am I Charlie?" },
-      { one: "Λ́·, Tshyalé niʔisé͟·", en: "Yes. You are Charlie" },
+      { one: "Λ́·, Tshyalé niʔisé̲·", en: "Yes. You are Charlie" },
     ],
     [
-      { one: "Wá·li kʌ́ niʔisé͟·", en: "Are you Mary?" },
+      { one: "Wá·li kʌ́ niʔisé̲·", en: "Are you Mary?" },
       { one: "Λ́·, Wá·li niʔí·", en: "Yes. I am Mary." },
     ],
     [
@@ -249,12 +249,12 @@ function DialogueSection() {
     [
       { one: "Wá·li kʌ́ niʔí·", en: "Am I Mary?" },
       {
-        one: ["Táh", "Yáh Wá·li té·kʌ nisé·", "Só·s niʔisé͟·"],
+        one: ["Táh", "Yáh Wá·li té·kʌ nisé·", "Só·s niʔisé̲·"],
         en: "No. You're not Mary. You are Susan.",
       },
     ],
     [
-      { one: "Tshyalé kʌ́ niʔisé͟·", en: "Are you Charlie?" },
+      { one: "Tshyalé kʌ́ niʔisé̲·", en: "Are you Charlie?" },
       {
         one: ["Táh", "Yáh Tshyalé té·kʌ niʔí·", "Wá·li niʔí·"],
         en: "No. I'm not Charlie. I'm Mary.",
@@ -279,7 +279,7 @@ function DialogueSection() {
     [
       { one: "Í· kʌ́ neʔn Wá·li", en: "Am I Mary?" },
       {
-        one: ["Táh", "Yáh Wá·li té·kʌ niʔisé͟·", "Só·s ni·sé·"],
+        one: ["Táh", "Yáh Wá·li té·kʌ niʔisé̲·", "Só·s ni·sé·"],
         en: "No. You're not Mary. You're Susan.",
       },
     ],
@@ -308,7 +308,7 @@ function DialogueSection() {
   const part6: DialogueTableData = [
     [
       { one: "Sknú·wehseʔ kʌ́ niʔí·", en: "Do you like me?" },
-      { one: "Λ́·, kunú·wehseʔ niʔisé͟·", en: "Yes, I like you." },
+      { one: "Λ́·, kunú·wehseʔ niʔisé̲·", en: "Yes, I like you." },
     ],
     [
       null,
@@ -415,7 +415,7 @@ function DialogueSection() {
       { one: "Úhkaʔ shakonú·wehseʔ né· Kwítel", en: "Who does Peter like?" },
       { one: "Í· laknú·wehseʔ né· Kwítel", en: "Peter likes me." },
     ],
-    [null, { one: "I·sé· yanú·wehse̲ʔ né· Kwítel", en: "Peter likes you." }],
+    [null, { one: "I·sé· yanú·wehseʔ né· Kwítel", en: "Peter likes you." }],
 
     [
       {
@@ -525,7 +525,7 @@ function DialogueSection() {
     ],
     [
       {
-        one: "Lonanúhteʔ kʌ́ né· thikʌ́ latiksaʔshuha oh náhte kuwatí·yats né· thikʌ́ otikhstʌʔokúha̲",
+        one: "Lonanúhteʔ kʌ́ né· thikʌ́ latiksaʔshúha oh náhte kuwatí·yats né· thikʌ́ otikhstʌʔokúha̲",
         en: "Do those children know what those old womenʔs names are?",
       },
       {
@@ -577,7 +577,7 @@ function DialogueSection() {
         one: [
           "Táh",
           "Yáh Lá·kel teyúkyats",
-          "Thikʌ akokstʌ́·haʔ neʔn Lá·kel yutátyats",
+          "Thikʌ́ akokstʌ́·haʔ neʔn Lá·kel yutátyats",
         ],
         en: "No. My name is not Rachel. That old woman is the one named Rachel.",
       },
@@ -588,7 +588,7 @@ function DialogueSection() {
         one: [
           "Táh",
           "Yáh oni Kowáklit teyúkyats",
-          "Thikʌ yeksá· neʔn Kowáklit yutátyats",
+          "Thikʌ́ yeksá· neʔn Kowáklit yutátyats",
         ],
         en: "No. Margaret isnʔt my name either. That girlʔs name is Margaret.",
       },
@@ -600,7 +600,7 @@ function DialogueSection() {
     [
       { one: "Aliskwet niyúkyats", en: "My name is Elizabeth" },
       {
-        one: "Onʌ kuyʌtelí náhte yesa·yáts",
+        one: "Onʌ wakanúhteʔ náhte yesa·yáts",
         en: "Now I know what your name is.",
       },
     ],

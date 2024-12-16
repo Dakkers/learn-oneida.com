@@ -19,11 +19,11 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
           TableWrapper.createTextBreakdownColumn("PR"),
         ]}
         data={[
-          ["one human being", ["ts", { text: "y" }, "ukwe·tát"]],
-          ["two human beings", [["te", "DUAL"], { text: "y" }, "ukwe·tákeʔ"]],
-          ["three human beings", ["áhsʌ ni", { text: "y" }, "ukwe·tákeʔ"]],
-          ["four human beings", ["kayé ni", { text: "y" }, "ukwe·tákeʔ"]],
-          ["five human beings", ["wísk ni", { text: "y" }, "ukwe·tákeʔ"]],
+          ["one human being", ["ts", ["y"], "ukwe·tát"]],
+          ["two human beings", [["te", "DUAL"], ["y"], "ukwe·tákeʔ"]],
+          ["three human beings", ["áhsʌ ni", ["y"], "ukwe·tákeʔ"]],
+          ["four human beings", ["kayé ni", ["y"], "ukwe·tákeʔ"]],
+          ["five human beings", ["wísk ni", ["y"], "ukwe·tákeʔ"]],
         ].map(([en, breakdown]) => ({ en, breakdown }))}
       />
 
@@ -42,42 +42,26 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
           }),
         ]}
         data={[
-          [
-            "one",
-            ["s", { text: "ha" }, "yá·tat"],
-            ["ts", { text: "ye" }, "yá·tat"],
-          ],
+          ["one", ["s", ["ha"], "yá·tat"], ["ts", ["ye"], "yá·tat"]],
           [
             "two",
-            [["te", "DUAL"], { text: "hni" }, "yáhse"],
-            [["te", "DUAL"], { text: "kni" }, "yáhse"],
+            [["te", "DUAL"], ["hni"], "yáhse"],
+            [["te", "DUAL"], ["kni"], "yáhse"],
           ],
-          [
-            "three",
-            ["áhsʌ ni", { text: "hati" }],
-            ["áhsʌ ni", { text: "kuti" }],
-          ],
-          [
-            "four",
-            ["kayé ni", { text: "hati" }],
-            ["kayé ni", { text: "kuti" }],
-          ],
-          [
-            "five",
-            ["wísk ni", { text: "hati" }],
-            ["wísk ni", { text: "kuti" }],
-          ],
+          ["three", ["áhsʌ ni", ["hati"]], ["áhsʌ ni", ["hati"]]],
+          ["four", ["kayé ni", ["hati"]], ["kayé ni", ["hati"]]],
+          ["five", ["wísk ni", { text: "hati" }], ["wísk ni", ["hati"]]],
         ].map(([en, male, female]) => ({ en, male, female }))}
       />
       <Text>Some concrete examples:</Text>
       <List>
         {[
           ["one boy", "shayá·tat laksá·"],
-          ["three girls", "áhsʌ nikutí kutikhsa’shúha"],
-          ["two young men", "tehniyáhse tehninikʌhtlúha"],
-          ["one young woman", "tsyeyá·tat yeyá·tase"],
-          ["three adults", "áhsʌ nihatí lʌnukwé·"],
-          ["two older women", "tehniyáhse yotikhstʌ́ha"],
+          ["three girls", "áhsʌ nikutí kutikhsaʔshúha̲"],
+          ["two young men", "tehniyáhse tehninikʌhtlúha̲"],
+          ["one young woman", "tsyeyá·tat yeyá·taseha̲"],
+          ["three adults", "áhsʌ nihatí lʌnukwé̲·"],
+          ["two older women", "tehniyáhse yotikhstʌ́ha̲"],
         ].map(([left, right], i) => (
           <List.Item key={i}>
             {left} — <b>{right}</b>

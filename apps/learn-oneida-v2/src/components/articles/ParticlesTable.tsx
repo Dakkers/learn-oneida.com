@@ -80,7 +80,17 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
   }, [group]);
 
   // @ts-expect-error To be addressed in LO-12
-  return <TableWrapper columns={columns} data={data} />;
+  return (
+    <TableWrapper
+      bleed={{
+        xs: 0,
+        md: 16,
+        lg: 32,
+      }}
+      columns={columns}
+      data={data}
+    />
+  );
 }
 
 export function getParticlesForGroup(group: ParticlesGroup) {

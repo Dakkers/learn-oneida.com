@@ -56,7 +56,7 @@ export function ClansArticle({ level = 1 }: ArticleProps) {
       <TableWrapper
         columns={TableWrapper.columnsEnglishTranslation}
         data={[
-          ["bear", "ohkwa·líˍ"],
+          ["bear", "ohkwa·lí̲"],
           ["beaver", "tsyoní·tuʔ"],
           ["deer", "oskʌnu·tú·"],
           ["eel", "tawelú·ko"],
@@ -64,15 +64,27 @@ export function ClansArticle({ level = 1 }: ArticleProps) {
           ["heron", "ohá·kwalut"],
           ["snipe", "tawístawiʔ"],
           ["turtle", "aʔno·wál"],
-          ["wolf", "othayu·níˍ"],
+          ["wolf", "othayu·ní̲"],
         ].map(([en, translation]) => ({ en, translation }))}
       />
       <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
         Phrases
       </SectionHeading>
-      <ParadigmTable allowedPronouns={allowedPronouns} data={dataBears} />
-      <ParadigmTable allowedPronouns={allowedPronouns} data={dataTurtles} />
-      <ParadigmTable allowedPronouns={allowedPronouns} data={dataWolves} />
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={{ pronounEnglish: false }}
+        data={dataBears}
+      />
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={{ pronounEnglish: false }}
+        data={dataTurtles}
+      />
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={{ pronounEnglish: false }}
+        data={dataWolves}
+      />
     </Flex>
   );
 }

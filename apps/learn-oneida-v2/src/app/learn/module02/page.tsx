@@ -182,13 +182,13 @@ export default function LearnModule02() {
       </SectionHeading>
       <ParticlesTable group="module02" />
 
-      <DialogueSection />
       <LastNamesArticle level={2} />
       <AboutSomeoneArticle level={2} />
       <SimilarInAppearanceArticle level={2} />
       <ThingsThatAreTheSameSection />
       <BeingDifferentArticle level={2} />
 
+      <DialogueSection />
       <TranslationExercisesSection group="module02" />
     </>
   );
@@ -291,16 +291,16 @@ function ReciprocalSection() {
   const pronounSubset = [...dualicPronouns, ...pluralPronouns];
 
   const knowData = [
-    [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelíˍ"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelíˍ"],
-    [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelíˍ"],
-    [["te", "REFL"], ["h", "RPL"], ["y"], ["atat", "REFL"], "yʌtelíˍ"],
-    [["te", "REFL"], ["ky"], ["atat", "REFL"], "yʌtelíˍ"],
-    [["te", "REFL"], ["twa"], ["tat", "REFL"], "yʌtelíˍ"],
-    [["te", "REFL"], ["yakwa"], ["tat", "REFL"], "yʌtelíˍ"],
-    [["te", "REFL"], ["swa"], ["tat", "REFL"], "yʌtelíˍ"],
-    [["te", "REFL"], ["hu"], ["tat", "REFL"], "yʌtelíˍ"],
-    [["te", "REFL"], ["ku"], ["tat", "REFL"], "yʌtelíˍ"],
+    [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["hy"], ["atat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["ky"], ["atat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["twa"], ["tat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["yakwa"], ["tat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["swa"], ["tat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["hu"], ["tat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["ku"], ["tat", "REFL"], "yʌtelí̲"],
   ];
 
   const likeData = [
@@ -320,7 +320,7 @@ function ReciprocalSection() {
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["h", "RPL"], ["y"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["hy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["ky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["twa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["yakw"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
@@ -470,14 +470,14 @@ function CommandsSection() {
       </Text>
       <List>
         <List.Item>
-          <b>hlo·li̲ʔ̲·</b> — to tell someone
+          <b>hlo·li̲ʔ</b> — to tell someone
         </List.Item>
         <List.Item>
           <b>liwanu·túse̲</b> — to ask someone
         </List.Item>
       </List>
       <SectionHeading id="commands-tell" level={3}>
-        <b>hlo·li̲ʔ̲·</b> — to tell someone
+        <b>hlo·li̲ʔ·</b> — to tell someone
       </SectionHeading>
       <CommandsTable data={hloliData} verb="tell" />
       <SectionHeading id="commands-ask" level={3}>
@@ -499,7 +499,7 @@ function NegatedCommandsSection() {
         pronominals are different.
       </Text>
       <SectionHeading id="negated-commands-tell" level={3}>
-        <b>Takʌ ...hlo·li̲’̲·</b> — don&lsquo;t tell someone
+        <b>Takʌ ...hlo·li̲ʔ</b> — don&lsquo;t tell someone
       </SectionHeading>
       <CommandsTable data={hloliNegatedData} negated verb="tell" />
       <SectionHeading id="negated-commands-ask" level={3}>
@@ -731,62 +731,62 @@ function NumbersSection() {
     { en: "5", translation: "wisk" },
     { en: "6", translation: "yá·yak" },
     { en: "7", translation: "tsyá·tak" },
-    { en: "8", translation: "tékluʔ" },
-    { en: "9", translation: "wá·tluʔ" },
+    { en: "8", translation: "téklu̲ʔ" },
+    { en: "9", translation: "wá·tlu̲ʔ" },
     { en: "10", translation: "oyé·li̲" },
-    { en: "11", translation: "úska yawʌ·lé·" },
-    { en: "12", translation: "tékni yawʌ·lé·" },
-    { en: "13", translation: "áhsʌ yawʌ·lé·" },
-    { en: "14", translation: "kayé yawʌ·lé·" },
-    { en: "15", translation: "wisk yawʌ·lé·" },
-    { en: "16", translation: "yá·yak yawʌ·lé·" },
-    { en: "17", translation: "tsyá·tak yawʌ·lé·" },
-    { en: "18", translation: "tékluʔ yawʌ·lé·" },
-    { en: "19", translation: "wá·tluʔ yawʌ·lé·" },
-    { en: "20", translation: "tewáhsʌ" },
+    { en: "11", translation: "úska yawʌ·lé̲·" },
+    { en: "12", translation: "tékni yawʌ·lé̲·" },
+    { en: "13", translation: "áhsʌ yawʌ·lé̲·" },
+    { en: "14", translation: "kayé yawʌ·lé̲·" },
+    { en: "15", translation: "wisk yawʌ·lé̲·" },
+    { en: "16", translation: "yá·yak yawʌ·lé̲·" },
+    { en: "17", translation: "tsyá·tak yawʌ·lé̲·" },
+    { en: "18", translation: "tékluʔ yawʌ·lé̲·" },
+    { en: "19", translation: "wá·tluʔ yawʌ·lé̲·" },
+    { en: "20", translation: "tewáhsʌ̲" },
     { en: "21", translation: "tewáhsʌ úska" },
     { en: "22", translation: "tewáhsʌ tékni" },
-    { en: "30", translation: "áhsʌ niwáhsʌ" },
-    { en: "40", translation: "kayé niwáhsʌ" },
-    { en: "50", translation: "wisk niwáhsʌ" },
-    { en: "60", translation: "yá·yak niwáhsʌ" },
-    { en: "70", translation: "tsyá·tak niwáhsʌ" },
-    { en: "80", translation: "tékluʔ niwáhsʌ" },
-    { en: "90", translation: "wá·tluʔ niwáhsʌ" },
-    { en: "99", translation: "wá·tluʔ niwáhsʌ wá·tluʔ" },
-    { en: "100", translation: "úska tewʌʔnyáweluʔ" },
+    { en: "30", translation: "áhsʌ niwáhsʌ̲" },
+    { en: "40", translation: "kayé niwáhsʌ̲" },
+    { en: "50", translation: "wisk niwáhsʌ̲" },
+    { en: "60", translation: "yá·yak niwáhsʌ̲" },
+    { en: "70", translation: "tsyá·tak niwáhsʌ̲" },
+    { en: "80", translation: "tékluʔ niwáhsʌ̲" },
+    { en: "90", translation: "wá·tluʔ niwáhsʌ̲" },
+    { en: "99", translation: "wá·tluʔ niwáhsʌ wá·tlu̲ʔ" },
+    { en: "100", translation: "úska tewʌʔnyáwelu̲ʔ" },
     { en: "101", translation: "úska tewʌʔnyáweluʔ úska" },
     { en: "110", translation: "úska tewʌʔnyáweluʔ oyé·li" },
     { en: "111", translation: "úska tewʌʔnyáweluʔ úska yawʌ·lé" },
-    { en: "120", translation: "úska tewʌʔnyáweluʔ tewáhsʌ" },
-    { en: "130", translation: "úska tewʌʔnyáweluʔ áhsʌ niwáhsʌ" },
-    { en: "140", translation: "úska tewʌʔnyáweluʔ kayé niwáhsʌ" },
-    { en: "150", translation: "úska tewʌʔnyáweluʔ wisk niwáhsʌ" },
-    { en: "160", translation: "úska tewʌʔnyáweluʔ yá·yak niwáhsʌ" },
-    { en: "170", translation: "úska tewʌʔnyáweluʔ tsyá·tak niwáhsʌ" },
-    { en: "180", translation: "úska tewʌʔnyáweluʔ tékluʔ niwáhsʌ" },
-    { en: "190", translation: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ" },
-    { en: "199", translation: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ" },
-    { en: "200", translation: "tékni tewʌʔnyáweluʔ" },
+    { en: "120", translation: "úska tewʌʔnyáweluʔ tewáhsʌ̲" },
+    { en: "130", translation: "úska tewʌʔnyáweluʔ áhsʌ niwáhsʌ̲" },
+    { en: "140", translation: "úska tewʌʔnyáweluʔ kayé niwáhsʌ̲" },
+    { en: "150", translation: "úska tewʌʔnyáweluʔ wisk niwáhsʌ̲" },
+    { en: "160", translation: "úska tewʌʔnyáweluʔ yá·yak niwáhsʌ̲" },
+    { en: "170", translation: "úska tewʌʔnyáweluʔ tsyá·tak niwáhsʌ̲" },
+    { en: "180", translation: "úska tewʌʔnyáweluʔ tékluʔ niwáhsʌ̲" },
+    { en: "190", translation: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ̲" },
+    { en: "199", translation: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tlu̲ʔ" },
+    { en: "200", translation: "tékni tewʌʔnyáwelu̲ʔ" },
     { en: "201", translation: "tékni tewʌʔnyáweluʔ úska" },
-    { en: "300", translation: "áhsʌ tewʌʔnyáweluʔ" },
-    { en: "400", translation: "kayé tewʌʔnyáweluʔ" },
-    { en: "500", translation: "wisk tewʌʔnyáweluʔ" },
-    { en: "600", translation: "yá·yak tewʌʔnyáweluʔ" },
-    { en: "700", translation: "tsya·ták tewʌʔnyáweluʔ" },
-    { en: "800", translation: "tékluʔ tewʌʔnyáweluʔ" },
-    { en: "900", translation: "wá·tluʔ tewʌʔnyáweluʔ" },
-    { en: "999", translation: "wá·tluʔ tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ" },
-    { en: "1000", translation: "oyé·li tewʌʔnyáweluʔ" },
+    { en: "300", translation: "áhsʌ tewʌʔnyáwelu̲ʔ" },
+    { en: "400", translation: "kayé tewʌʔnyáwelu̲ʔ" },
+    { en: "500", translation: "wisk tewʌʔnyáwelu̲ʔ" },
+    { en: "600", translation: "yá·yak tewʌʔnyáwelu̲ʔ" },
+    { en: "700", translation: "tsya·ták tewʌʔnyáwelu̲ʔ" },
+    { en: "800", translation: "tékluʔ tewʌʔnyáwelu̲ʔ" },
+    { en: "900", translation: "wá·tluʔ tewʌʔnyáwelu̲ʔ" },
+    { en: "999", translation: "wá·tluʔ tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tlu̲ʔ" },
+    { en: "1000", translation: "oyé·li tewʌʔnyáwelu̲ʔ" },
     { en: "1001", translation: "oyé·li tewʌʔnyáweluʔ úska" },
     { en: "1111", translation: "úska yawʌ·lé tewʌʔnyáweluʔ úska yawʌ·lé" },
-    { en: "1200", translation: "tékni yawʌ·lé tewʌʔnyáweluʔ" },
-    { en: "1300", translation: "áhsʌ yawʌ·lé tewʌʔnyáweluʔ" },
+    { en: "1200", translation: "tékni yawʌ·lé tewʌʔnyáwelu̲ʔ" },
+    { en: "1300", translation: "áhsʌ yawʌ·lé tewʌʔnyáwelu̲ʔ" },
     {
       en: "1999",
-      translation: "wá·tlu yawʌ·lé tewʌʔnyáweluʔ wá·tlu  niwáhsʌ wá·tlu",
+      translation: "wá·tlu yawʌ·lé tewʌʔnyáweluʔ wá·tlu  niwáhsʌ wá·tlu̲",
     },
-    { en: "2000", translation: "tewáhsʌ tewʌʔnyáweluʔ" },
+    { en: "2000", translation: "tewáhsʌ tewʌʔnyáwelu̲ʔ" },
   ];
 
   return (
@@ -800,16 +800,16 @@ function NumbersSection() {
       </Text>
       <List>
         <List.Item>
-          11 - 19: the second digit comes first, followed by <b>yawa·lé·</b>
+          11 - 19: the second digit comes first, followed by <b>yawa·lé̲·</b>
         </List.Item>
         <List.Item>
-          21 - 29: <b>tewahsʌ</b> then the second digit
+          21 - 29: <b>tewáhsʌ̲</b> then the second digit
         </List.Item>
         <List.Item>
-          30 - 99: the first digit, <b>niwáhsʌ</b>, then the second digit
+          30 - 99: the first digit, <b>niwáhsʌ̲</b>, then the second digit
         </List.Item>
         <List.Item>
-          100 - 9999: the number of 100s, <b>tewʌʔnyáweluʔ</b>, then follow the
+          100 - 9999: the number of 100s, <b>tewʌʔnyáwelu̲ʔ</b>, then follow the
           rule above for the last 2 digits
         </List.Item>
       </List>
@@ -851,58 +851,58 @@ function DialogueSection() {
   const part1: DialogueTableData = [
     [
       "Tó· naʔtehaohsliyá·ku neʔn yaʔníha̲",
-      "Thó ha wisk niwáhsʌ naʔtehaohsliyá·ku lakeʔníha̲",
+      "Thóha wisk niwáhsʌ naʔtehaohsliyá·ku lakeʔníha̲",
     ],
     ["To·kʌ́skeʔ kʌ́ tho naʔtehaohsliyá·ku̲", "ʌ́·, tho naʔtehaohsliyá·ku̲"],
     [
-      "Úhkaʔ náhteʔ sheyʌtelí né·n sʌ́haʔ kʌʔnityako·yʌ́·",
+      "Úhkaʔ náhteʔ sheyʌtelí né·n sʌ́haʔ kʌʔ nityakoyʌ́ha̲",
       [
-        "Sʌ́haʔ kʌʔnitho·yʌ́· loʔniha̲",
+        "Sʌ́haʔ kʌʔnithoyʌ́·ha loʔniha̲",
         "Íhsi nú· né· téklu niwáhsʌ naʔtehaohsliyá·ku̲",
       ],
     ],
     [
-      "Tetsitsyatyelʌ́ kʌ́ neʔn yahsó tha",
+      "Tetsitsyatyelʌ́ kʌ́ neʔn yahsótha̲",
       [
-        "Táh. Yáh thaʔtetsyakyatyelʌ́ˍ",
-        "Íhsi né· wisk niwáhsʌ niyohslaké sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó t niʔí·",
+        "Táh. Yáh thaʔtetsyakyatyelʌ̲̲́",
+        "Íhsi né· wisk niwáhsʌ niyohslaké sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót niʔí·",
       ],
     ],
     [
       "Shakoyʌtelí kʌ́ akhwa·tsíle̲",
-      "Táh, né· ok laulhá laohwa·tsíleʔ shakoyʌtelíˍ",
+      "Táh, né· ok laulhá laohwa·tsíleʔ shakoyʌtelí̲",
     ],
   ];
   const part2: DialogueTableData = [
     [
       [
-        "Úhkaʔ náhteʔ sʌ́haʔ kʌʔnityakoyʌhaʔné· yesayʌʔokuha̲",
+        "Úhkaʔ náhteʔ sʌ́haʔ kʌʔ nityakoyʌhaʔ né· yesayʌʔokuha̲",
         "Yaʔníha kʌ́ katʌ sanulhá·",
       ],
       "Lakeʔníha sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót neʔn aknulhá·",
     ],
     ["Tó· nikú sʌ́haʔ lokstʌ́ha̲ʔ", "Tewáhsʌ niyohslaké sʌ́haʔ lokstʌ́ha̲ʔ"],
-    ["E·só· sʌ́haʔ lokstʌ́ha̲, wáhi̲", "ʌ́·"],
+    ["E·só· sʌ́haʔ lokstʌ́haʔ, wáhi̲", "ʌ́·"],
   ];
   const part3: DialogueTableData = [
     [
-      "Sʌ́haʔ kʌ́ akokstʌ́haʔ né· ukyalaséha Kowáklit tsiʔ ni·yó t neʔn tsyalá·séʔ Tu·wís",
-      "Táh. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó ht né· tsyalá·seʔ Kowáklit",
+      "Sʌ́haʔ kʌ́ akokstʌ́haʔ né· ukyalaséha Kowáklit tsiʔ ni·yót neʔn tsyalá·séʔ Tu·wís",
+      "Táh. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót né· tsyalá·seʔ Kowáklit",
     ],
     [
       "Kayé kʌ́ niwáhsʌ naʔtehaohsliyá·ku̲",
       ["Táh. Yáh tho tehokstʌ́ha̲ʔ", "Áhsʌ ok niwáhsʌ wá·tlu naʔtehaohsliyá·ku̲"],
     ],
     [
-      "Sanú hteʔ kʌ́ tó· naʔteyakaohsliyá·ku né· ukyalasé Kowáklit",
+      "Sanúhteʔ kʌ́ tó· naʔteyakaohsliyá·ku né· ukyalasé Kowáklit",
       "Táh. Yáh tewakánuhteʔ, uhkaʔ náhteʔ né· akonulhá·",
     ],
     [
       "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
-      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔisé͟·",
+      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔisé̲·",
     ],
     [
-      "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yó t niʔí·",
+      "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yót niʔí·",
       "Yáh yeksá· té·kʌ, wáhi̲",
     ],
     ["To·kʌ́skeʔ kʌ́", "ʌ́·"],
@@ -935,31 +935,31 @@ function ThingsThatAreTheSameSection() {
     ["They are the same", "Né· tshá·kat"],
     ["Are they the same?", "Né· kʌ́ tshá·kat"],
     ["They are not the same", "yáh né· tshá·kat té·kʌ"],
-    ["Someone and I are the same age", "tshaʔteyuknohsliyá·ku"],
-    ["You two are the same age", "tshaʔtesnohsliyá·ku"],
-    ["We are all the same age", "tshaʔteyukyohsliyá·ku"],
-    ["You all are the same age", "tshaʔtetsyohsliyá·ku"],
-    ["They Ms are the same age", "tshaʔtehonohsliyá·ku"],
-    ["They Fs are the same age", "tshaʔteyonohsliyá·ku"],
-    ["You and I have the same last name", "tshaʔteyót tsiʔ tetnihsʌná·se·leʔ"],
+    ["Someone and I are the same age", "tshaʔteyuknohsliyá·ku̲"],
+    ["You two are the same age", "tshaʔtesnohsliyá·ku̲"],
+    ["We are all the same age", "tshaʔteyukyohsliyá·ku̲"],
+    ["You all are the same age", "tshaʔtetsyohsliyá·ku̲"],
+    ["They Ms are the same age", "tshaʔtehonohsliyá·ku̲"],
+    ["They Fs are the same age", "tshaʔteyonohsliyá·ku̲"],
+    ["You and I have the same last name", "tshaʔteyót tsiʔ tetnihsʌná·se·le̲ʔ"],
     [
       "Someone and I have the same last name",
-      "tshaʔteyót tsiʔ teʔyaknihsʌná·se·leʔ",
+      "tshaʔteyót tsiʔ teʔyaknihsʌná·se·le̲ʔ",
     ],
-    ["You two have the same last name", "tshaʔteyót tsiʔ tehsnihsʌná·se·leʔ"],
-    ["Two males have the same last name", "tshaʔteyót tsiʔ tehnihsʌná·se·leʔ"],
+    ["You two have the same last name", "tshaʔteyót tsiʔ tehsnihsʌná·se·le̲ʔ"],
+    ["Two males have the same last name", "tshaʔteyót tsiʔ tehnihsʌná·se·le̲ʔ"],
     [
       "Two females have the same last name",
-      "tshaʔteyót tsiʔ teknihsʌná·se·leʔ",
+      "tshaʔteyót tsiʔ teknihsʌná·se·le̲ʔ",
     ],
-    ["We all have the same last name", "tshaʔteyót tsiʔ tetwahsʌná·se·leʔ"],
+    ["We all have the same last name", "tshaʔteyót tsiʔ tetwahsʌná·se·le̲ʔ"],
     [
       "They and l have the same last name",
-      "tshaʔteyót tsiʔ teyakwahsʌná·se·leʔ",
+      "tshaʔteyót tsiʔ teyakwahsʌná·se·le̲ʔ",
     ],
-    ["You all have the same last name", "tshaʔteyót tsiʔ tehswahsʌná·se·leʔ"],
-    ["They Ms have the same last name", "tshaʔteyót tsiʔ tehatihsʌná·se·leʔ"],
-    ["They Fs have the same last name", "tshaʔteyót tsiʔ tekutihsʌná·se·leʔ"],
+    ["You all have the same last name", "tshaʔteyót tsiʔ tehswahsʌná·se·le̲ʔ"],
+    ["They Ms have the same last name", "tshaʔteyót tsiʔ tehatihsʌná·se·le̲ʔ"],
+    ["They Fs have the same last name", "tshaʔteyót tsiʔ tekutihsʌná·se·le̲ʔ"],
   ];
   return (
     <>

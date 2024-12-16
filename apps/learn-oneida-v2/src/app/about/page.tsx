@@ -1,7 +1,6 @@
 "use client";
 
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
@@ -23,6 +22,14 @@ export default function About() {
         maintained with community input in mind.
       </Text>
 
+      <SectionHeading level={2}>Contributors</SectionHeading>
+
+      <Text>
+        The audio on this website has been painstakingly recorded by faithkeeper
+        and second-language speaker Kaʼshatstʌhslahawi from Oneida-Wisconsin.
+        Her time and commitment to helping us is greatly appreciated!
+      </Text>
+
       <SectionHeading level={2}>Land Acknowledgement</SectionHeading>
 
       <Text>
@@ -32,13 +39,11 @@ export default function About() {
         by Anishinabe, Haudenosaunee, Attiwonderonk (Neutral) peoples.
       </Text>
 
-      <SectionHeading level={2}>Team</SectionHeading>
+      <SectionHeading level={2}>The Anowal Software Team</SectionHeading>
 
       <List>
         <List.Item>Dakota St. Laurent - Founder and Lead Developer</List.Item>
-        <List.Item>
-          Belle Pensamiento - Ethics Consultant and Developer
-        </List.Item>
+        <List.Item>Belle Pensamiento - Ethics Consultant</List.Item>
       </List>
 
       <SectionHeading level={2}>Join our mailing list</SectionHeading>
@@ -57,7 +62,7 @@ export default function About() {
       <SectionHeading level={2}>Contact us</SectionHeading>
 
       <Text>
-        Questions? Found some Typos? Want to see more features? Email &nbsp;
+        Questions? Found some Typos? Want to see more features? Email{" "}
         <a
           className="underline text-blue-600"
           href="mailto:belle@anowal-software.com"

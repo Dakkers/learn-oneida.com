@@ -227,7 +227,7 @@ export const particleList = [
         en: "Who is that man?",
       },
       {
-        translation: "Sanúhteʔ kʌ́ úhkaʔ náhteʔ thikʌ́ˍ",
+        translation: "Sanúhteʔ kʌ́ úhkaʔ náhteʔ thikʌ̲̲́",
         en: "Do you know who that is?",
       },
     ],
@@ -504,7 +504,7 @@ export const particleList = [
     examples: [
       {
         translation:
-          "Yakonaskwayʌ·táhkweʔ takóhs khaleʔ nʌ́ yakonaskwayʌ·táhkweʔ é·lhal",
+          "Yakonaskwayʌ·táhkweʔ takóhs kháleʔ nʌ́ yakonaskwayʌ·táhkweʔ é·lhal",
         en: "She had a cat and then she had a dog.",
       },
     ],
@@ -541,7 +541,7 @@ export const particleList = [
     en: "(a length of time)",
     examples: [
       {
-        translation: "Tewáhsʌ niyohslaké tsiʔ náheʔ wakenyakúˍ",
+        translation: "Tewáhsʌ niyohslaké tsiʔ náheʔ wakenyakú̲",
         en: "I've been married for twenty years.",
       },
     ],
@@ -577,7 +577,7 @@ export const particleList = [
     en: "never, impossible",
     examples: [
       {
-        translation: "Yáh né· newʌ·tú tesanyakúˍ",
+        translation: "Yáh né· newʌ·tú tesanyakú̲",
         en: "You've never been married.",
       },
     ],
@@ -589,7 +589,7 @@ export const particleList = [
     en: "Thank you",
     examples: [
       {
-        translation: "Yawʌʔkó· tsiʔ wesake·tóteʔ",
+        translation: "Yawʌʔkó· tsiʔ wesake·tóte̲ʔ",
         en: "Thanks for coming.",
       },
     ],
@@ -675,7 +675,7 @@ export const particleList = [
     en: "all over",
     examples: [
       {
-        translation: "Kwáh ok tsyoʔk nú· yehé·lehskwe kwaʔshu·téˍ·",
+        translation: "Kwáh ok tsyoʔk nú· yehé·lehskwe kwaʔshu·té̲·",
         en: "He was all over last night.",
       },
     ],
@@ -687,7 +687,7 @@ export const particleList = [
     en: "all over town",
     examples: [
       {
-        translation: "Kwáh ok tsyoʔk nú· kanatá·ke yehé·lehskwe kwaʔshu·téˍ·",
+        translation: "Kwáh ok tsyoʔk nú· kanatá·ke yehé·lehskwe kwaʔshu·té̲·",
         en: "He was all over town last night.",
       },
     ],
@@ -736,7 +736,7 @@ export const particleList = [
     en: "no place / nowhere",
     examples: [
       {
-        translation: "Yáh kánikʌ thyeyáknehskweʔ kwaʔshu·téˍ·",
+        translation: "Yáh kánikʌ thyeyáknehskweʔ kwaʔshu·té̲·",
         en: "S.o. & I were not anywhere last night. (We didn't go anywhere.)",
       },
     ],
@@ -760,7 +760,7 @@ export const particleList = [
     en: "there",
     examples: [
       {
-        translation: "Thó kʌ́ yehélehseʔ tsiʔ thoyo·téˍ·",
+        translation: "Thó kʌ́ yehélehseʔ tsiʔ thoyo·té̲·",
         en: "Is he at work?",
       },
     ],
@@ -892,7 +892,7 @@ export const particleList = [
     en: "How many things / objects?",
     examples: [
       {
-        translation: "Tó· ni·kú snú·wehseʔ thi·kʌ́ˍ",
+        translation: "Tó· ni·kú snú·wehseʔ thi·kʌ̲̲́",
         en: "How many of those do you like?",
       },
     ],
@@ -900,7 +900,7 @@ export const particleList = [
 
   {
     key: "how_many_of_us",
-    translation: "Tó· nitwatíˍ",
+    translation: "Tó· nitwatí̲",
     en: "How many of us? (all of you & I)",
     examples: [
       {
@@ -912,7 +912,7 @@ export const particleList = [
 
   {
     key: "how_many_of_they_and_i",
-    translation: "Tó· niyakwatíˍ",
+    translation: "Tó· niyakwatí̲",
     en: "How many of us? (they & I, not you)",
     examples: [
       {
@@ -924,7 +924,7 @@ export const particleList = [
 
   {
     key: "how_many_of_yall",
-    translation: "Tó· niswatíˍ",
+    translation: "Tó· niswatí̲",
     en: "How many of you all? (all of you)",
     examples: [
       {
@@ -936,7 +936,7 @@ export const particleList = [
 
   {
     key: "how_many_of_them_males",
-    translation: "Tó· nihatíˍ",
+    translation: "Tó· nihatí̲",
     en: "How many of them? (males, males and females)",
     examples: [
       {
@@ -948,7 +948,7 @@ export const particleList = [
 
   {
     key: "how_many_of_them_females",
-    translation: "Tó· nikutíˍ",
+    translation: "Tó· nikutí̲",
     en: "How many of them? (females)",
     examples: [
       {
@@ -976,7 +976,7 @@ export const particleList = [
     en: "you all and I",
     examples: [
       {
-        translation: "Twakwekú yethiyʌtelíˍ",
+        translation: "Twakwekú yethiyʌtelí̲",
         en: "We all know her.",
       },
     ],
@@ -1040,7 +1040,7 @@ export const particleList = [
         en: "That's what I like.",
       },
       {
-        translation: "Yáh thó tehokhstʌ́ha",
+        translation: "Yáh thó tehokhstʌ́ha̲",
         en: "He's not that old.",
       },
     ],
@@ -1112,7 +1112,7 @@ export const particleList = [
     en: "it is the same, they are the same",
     examples: [
       {
-        translation: "Né· kʌ́ tshá·kat kaʔi·kʌ́ˍ",
+        translation: "Né· kʌ́ tshá·kat kaʔi·kʌ̲̲́",
         en: "Are these (things) the same?",
       },
     ],
@@ -1136,7 +1136,7 @@ export const particleList = [
     en: "both, either, neither",
     examples: [
       {
-        translation: "Tetsyalú ni· knú·wehseʔ kaʔi·kʌ́ˍ",
+        translation: "Tetsyalú ni· knú·wehseʔ kaʔi·kʌ̲̲́",
         en: "I like both of these.",
       },
     ],

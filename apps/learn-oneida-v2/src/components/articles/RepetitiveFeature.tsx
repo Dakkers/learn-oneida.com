@@ -48,8 +48,8 @@ export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
     {
       en: ["He doesn't know me", "He doesn't know me anymore"],
       one: [
-        ["yáh te", { text: "hak" }, "yʌtelíˍ"],
-        ["yáh te", { text: "s", type: "REP" }, { text: "hak" }, "yʌtelíˍ"],
+        ["yáh te", { text: "hak" }, "yʌtelí̲"],
+        ["yáh te", { text: "s", type: "REP" }, { text: "hak" }, "yʌtelí̲"],
       ],
       type: "PP",
     },
@@ -85,8 +85,8 @@ export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
     {
       en: ["He loves her/them", "He loves her/them again"],
       one: [
-        [{ text: "shako" }, "nolúkhwa̲ʔ̲"],
-        [{ text: "se", type: "REP" }, { text: "shako" }, "nolúkhwa̲ʔ̲"],
+        [{ text: "shako" }, "nolúkhwa̲ʔ"],
+        [{ text: "se", type: "REP" }, { text: "shako" }, "nolúkhwa̲ʔ"],
       ],
       type: "PP",
     },
@@ -120,8 +120,8 @@ export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
     {
       en: ["He loves her/them", "He loves her/them again"],
       one: [
-        [{ text: "yesa" }, "nolúkhwa̲ʔ̲"],
-        [{ text: "ts", type: "REP" }, { text: "yesa" }, "nolúkhwa̲ʔ̲"],
+        [{ text: "yesa" }, "nolúkhwa̲ʔ"],
+        [{ text: "ts", type: "REP" }, { text: "yesa" }, "nolúkhwa̲ʔ"],
       ],
       type: "PP",
     },
