@@ -22,7 +22,7 @@ export default function About() {
         maintained with community input in mind.
       </Text>
 
-      <SectionHeading>Contributors</SectionHeading>
+      <SectionHeading level={2}>Contributors</SectionHeading>
 
       <Text>
         The audio on this website has been painstakingly recorded by faithkeeper
