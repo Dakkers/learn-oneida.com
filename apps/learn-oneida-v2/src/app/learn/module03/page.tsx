@@ -878,7 +878,7 @@ function DialogueSection() {
   const part1: DialogueTableData = [
     ["Lonyákheʔ kʌ́ Brad Pitt", "Táh, lonyá·ku nuʔú·wa̲ʔ"],
     ["Úhkaʔ náhteʔ lotinyakú·", "Angelina Jolie lotinyakú"],
-    ["Yáh teʔwakanúhtehkweʔ", "ʌ́·, to·kʌ́skeʔ"],
+    ["Yáh teʔwakanúhtehkwe̲ʔ", "ʌ́·, to·kʌ́skeʔ"],
     [
       "Lotiwila·yʌ́· kʌ́",
       ["ʌ́·", "Yá·yak nihotiwila·yʌ·, kayé·li nihá·ti kháleʔ tehní·khʌʔ"],
@@ -958,7 +958,7 @@ function DialogueSection() {
       "Yáh kʌ́ tehotinyaku·né· kaló· tsiʔ niyo·lé· waʔhotinyakeʔ So·s",
       [
         "Kʌʔ ok naheʔ",
-        "Katlí·n né·n lotinyakú·neʔ kháleʔ yáh só·tsiʔ teyakukweʔtiyó",
+        "Katlí·n né·n lotinyakú·neʔ kháleʔ yáh só·tsiʔ teyakukweʔtiyó̲",
       ],
     ],
     [
@@ -983,7 +983,7 @@ function DialogueSection() {
         "Yáh kʌ́ teʔsanúhteʔ tsiʔ áhsʌ nikutí kunukwé· lotinyakú·neʔ",
         "Kháleʔ oyé·li nihokhsá·tayʌʔ",
       ],
-      ["Yáh to·kʌ́skeʔ té·kʌ", "Ne ok tewáhsʌ úskah niyohslaké nithoyʌ́·ha"],
+      ["Yáh to·kʌ́skeʔ té·kʌ", "Ne ok tewáhsʌ úskah niyohslaké nithoyʌ́·ha̲"],
     ],
     [
       "Sanúhteʔ kʌ́ tsiʔ nihatikhsaʔtáksʌs ne shakoyoʔokúha̲",
