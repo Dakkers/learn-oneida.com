@@ -864,7 +864,7 @@ function DialogueSection() {
     [
       "Tetsitsyatyelʌ́ kʌ́ neʔn yahsó tha",
       [
-        "Táh. Yáh thaʔtetsyakyatyelʌ́ˍ",
+        "Táh. Yáh thaʔtetsyakyatyelʌ̲̲́",
         "Íhsi né· wisk niwáhsʌ niyohslaké sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yó t niʔí·",
       ],
     ],

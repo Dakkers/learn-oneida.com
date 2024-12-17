@@ -227,7 +227,7 @@ export const particleList = [
         en: "Who is that man?",
       },
       {
-        translation: "Sanúhteʔ kʌ́ úhkaʔ náhteʔ thikʌ́ˍ",
+        translation: "Sanúhteʔ kʌ́ úhkaʔ náhteʔ thikʌ̲̲́",
         en: "Do you know who that is?",
       },
     ],
@@ -892,7 +892,7 @@ export const particleList = [
     en: "How many things / objects?",
     examples: [
       {
-        translation: "Tó· ni·kú snú·wehseʔ thi·kʌ́ˍ",
+        translation: "Tó· ni·kú snú·wehseʔ thi·kʌ̲̲́",
         en: "How many of those do you like?",
       },
     ],
@@ -1112,7 +1112,7 @@ export const particleList = [
     en: "it is the same, they are the same",
     examples: [
       {
-        translation: "Né· kʌ́ tshá·kat kaʔi·kʌ́ˍ",
+        translation: "Né· kʌ́ tshá·kat kaʔi·kʌ̲̲́",
         en: "Are these (things) the same?",
       },
     ],
@@ -1136,7 +1136,7 @@ export const particleList = [
     en: "both, either, neither",
     examples: [
       {
-        translation: "Tetsyalú ni· knú·wehseʔ kaʔi·kʌ́ˍ",
+        translation: "Tetsyalú ni· knú·wehseʔ kaʔi·kʌ̲̲́",
         en: "I like both of these.",
       },
     ],

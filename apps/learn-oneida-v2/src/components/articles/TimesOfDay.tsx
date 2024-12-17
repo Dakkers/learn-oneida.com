@@ -274,8 +274,8 @@ export function createTimesOfDayData() {
   ];
 
   const yesterdayPhrases = [
-    { en: "yesterday", translation: "the·tʌ́ˍ·" },
-    { en: "the day before yesterday", translation: "oyá tshithe·tʌ́ˍ" },
+    { en: "yesterday", translation: "the·tʌ̲̲́·" },
+    { en: "the day before yesterday", translation: "oyá tshithe·tʌ̲̲́" },
   ];
 
   const afternoonPhrases = [
@@ -290,7 +290,7 @@ export function createTimesOfDayData() {
     { en: "never", translation: "yáh newʌtú" },
     { en: ["now", "today"], translation: ["nuʔú·wa̲ʔ", "nʌʔú·wa̲ʔ"] },
     { en: "often", translation: "yotká·teʔ" },
-    { en: "sometimes", translation: "swatye·lʌ́ˍ" },
+    { en: "sometimes", translation: "swatye·lʌ̲̲́" },
   ];
 
   const result = {

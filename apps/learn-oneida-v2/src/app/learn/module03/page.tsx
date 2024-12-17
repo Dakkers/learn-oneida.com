@@ -276,11 +276,11 @@ function PastTenseIntroduction() {
 
     {
       en: "I know",
-      breakdown: [{ text: "wak", type: "PR" }, "anúhteʔ"],
+      breakdown: [{ text: "wak", type: "PB" }, "anúhteʔ"],
     },
     {
       en: "I used to know",
-      breakdown: [{ text: "wak", type: "PR" }, "anúhte", "hkweʔ"],
+      breakdown: [{ text: "wak", type: "PB" }, "anúhte", "hkweʔ"],
     },
   ];
 
@@ -339,7 +339,7 @@ function PastTenseUsedToBe() {
         [{ text: "k" }, "atatwʌni·yo", "hné·"],
         ["yáh teʔ", { text: "k" }, "atatwʌni·yo", "hné·"],
       ],
-      type: "PB",
+      type: "PR",
     },
     {
       en: [
@@ -350,7 +350,7 @@ function PastTenseUsedToBe() {
         [{ text: "yukni" }, "nyákheʔ"],
         [{ text: "yukni" }, "nyákhe", "hkweʔ"],
       ],
-      type: "PR",
+      type: "PB",
     },
     {
       en: [
@@ -542,10 +542,10 @@ function PastTenseWhen() {
     {
       en: ["I love her / them", "When I loved her / them"],
       one: [
-        ["khe", "nolúkhwa̲ʔ"],
+        [["khe"], "nolúkhwa̲ʔ"],
         ["tshi", { text: "khe" }, "nolúkhwa̲ʔ"],
       ],
-      type: "PB",
+      type: "PR",
     },
     {
       en: ["I am 20 years old", "When I was / used to be 20 years old"],
