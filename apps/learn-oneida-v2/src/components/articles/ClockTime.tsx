@@ -74,7 +74,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </Text>
       <List>
         <List.Item>
-          noon: <b>ʌ́tyʌ ni·kále̲ʔ̲</b> OR <b>ʌtí</b>
+          noon: <b>ʌ́tyʌ ni·kále̲ʔ</b> OR <b>ʌtí</b>
         </List.Item>
         <List.Item>
           midnight: <b>ahsútha</b>

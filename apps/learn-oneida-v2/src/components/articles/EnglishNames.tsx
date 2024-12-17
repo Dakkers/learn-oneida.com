@@ -39,7 +39,6 @@ export function EnglishNamesArticle({ level = 1 }: ArticleProps) {
       <SectionHeading id="english-names" level={level}>
         English Names
       </SectionHeading>
-      {/* @ts-expect-error To be addressed in LO-12 */}
       <TableWrapper
         columns={TableWrapper.columnsEnglishTranslation}
         data={names}

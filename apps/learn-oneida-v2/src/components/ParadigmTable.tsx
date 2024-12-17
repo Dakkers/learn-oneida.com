@@ -61,11 +61,7 @@ const ParadigmTableContext =
 export function ParadigmTable({
   allowedPronouns = [],
   audioFolder,
-  bleed = {
-    xs: 0,
-    md: 16,
-    lg: 32,
-  },
+  bleed = 0,
   columnVisibility = {},
   data,
   isTesting = false,

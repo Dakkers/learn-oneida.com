@@ -5,28 +5,28 @@
   "phrases": [
     {
       "pronoun": "i",
-      "phrase": "yakwatahnuteleʔshú·ha",
-      "breakdown": [{ "text": "yakw" }, "atahnuteleʔshú·ha"]
+      "phrase": "yakwatahnuteleʔshú·ha̲",
+      "breakdown": [{ "text": "yakw" }, "atahnuteleʔshú·ha̲"]
     },
     {
       "pronoun": "u",
-      "phrase": "swatahnuteleʔshú·ha",
-      "breakdown": [{ "text": "sw" }, "atahnuteleʔshú·ha"]
+      "phrase": "swatahnuteleʔshú·ha̲",
+      "breakdown": [{ "text": "sw" }, "atahnuteleʔshú·ha̲"]
     },
     {
       "pronoun": "m",
-      "phrase": "hutahnuteleʔshú·ha",
-      "breakdown": [{ "text": "hu" }, "tahnuteleʔshú·ha"]
+      "phrase": "hutahnuteleʔshú·ha̲",
+      "breakdown": [{ "text": "hu" }, "tahnuteleʔshú·ha̲"]
     },
     {
       "pronoun": "f",
-      "phrase": "hutahnuteleʔshú·ha",
-      "breakdown": [{ "text": "hu" }, "tahnuteleʔshú·ha"]
+      "phrase": "hutahnuteleʔshú·ha̲",
+      "breakdown": [{ "text": "hu" }, "tahnuteleʔshú·ha̲"]
     },
     {
       "pronoun": "she_her",
-      "phrase": "kutahnuteleʔshú·ha",
-      "breakdown": [{ "text": "ku" }, "tahnuteleʔshú·ha"]
+      "phrase": "kutahnuteleʔshú·ha̲",
+      "breakdown": [{ "text": "ku" }, "tahnuteleʔshú·ha̲"]
     }
   ]
 }

@@ -78,108 +78,108 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
 
 const dataChildren = [
   {
-    en: "Boy",
+    en: "1 boy",
     breakdown: [{ text: "la" }, "ksá·"],
   },
   {
-    en: ["Boys (2)", "Boy and girl"],
+    en: ["2 boys", "1 boy + 1 girl"],
     breakdown: [["te", "DUAL"], { text: "hni" }, "ksá·"],
   },
   {
-    en: ["Boys (3+)", "Mix of boys and girls"],
+    en: ["3+ boys", "Mix of boys and girls"],
     breakdown: [{ text: "lati" }, "ksaʔshúha̲"],
   },
   {
-    en: "Girl",
+    en: "1 girl",
     breakdown: [{ text: "ye" }, "ksá·"],
   },
   {
-    en: "Girls (2)",
+    en: "2 girls",
     breakdown: [["te", "DUAL"], { text: "kni" }, "ksá·"],
   },
   {
-    en: ["Girls (3+)"],
+    en: ["3+ girls"],
     breakdown: [{ text: "kuti" }, "ksaʔshúha̲"],
   },
 ];
 
 const dataAdolescents = [
   {
-    en: "Young man",
+    en: "1 young man",
     breakdown: [{ text: "la" }, "nikʌtlúha̲"],
   },
   {
-    en: ["Young men (2)"],
+    en: ["2 young men"],
     breakdown: [["te", "DUAL"], { text: "hni" }, "nikʌtlúha̲"],
   },
   {
-    en: ["Young men (3+)"],
+    en: ["3+ young men"],
     breakdown: [{ text: "lati" }, "nikʌtluʔokúha̲"],
   },
   {
-    en: "Young woman",
+    en: "1 young woman",
     breakdown: [{ text: "ye" }, "yaʔtaséha̲"],
   },
   {
-    en: "Young women (2)",
+    en: "2 young women",
     breakdown: [["te", "DUAL"], { text: "kni" }, "yaʔtaséha̲"],
   },
   {
-    en: ["Young women (3+)"],
+    en: ["3+ young women"],
     breakdown: [{ text: "kuti" }, "yaʔtaseʔokúha̲"],
   },
 ];
 
 const dataAdults = [
   {
-    en: "Man",
-    breakdown: [{ text: "l" }, "u·kwéˍ·"],
+    en: "1 man",
+    breakdown: [{ text: "l" }, "u·kwé̲·"],
   },
   {
-    en: ["Men (2)", "Man and woman"],
-    breakdown: [["te", "DUAL"], { text: "hn" }, "u·kwéˍ·"],
+    en: ["2 men", "1 man + 1 woman"],
+    breakdown: [["te", "DUAL"], { text: "hn" }, "u·kwé̲·"],
   },
   {
-    en: ["Men (3+)", "Mix of men and women"],
-    breakdown: [{ text: "lʌn" }, "u·kwéˍ·"],
+    en: ["3 men", "Mix of men and women"],
+    breakdown: [{ text: "lʌn" }, "u·kwé̲·"],
   },
   {
-    en: "Woman",
-    breakdown: [{ text: "yak" }, "u·kwéˍ·"],
+    en: "1 woman",
+    breakdown: [{ text: "yak" }, "u·kwé̲·"],
   },
   {
-    en: "Women (2)",
-    breakdown: [["te", "DUAL"], { text: "kn" }, "u·kwéˍ·"],
+    en: "2 women",
+    breakdown: [["te", "DUAL"], { text: "kn" }, "u·kwé̲·"],
   },
   {
-    en: ["Women (3+)"],
-    breakdown: [{ text: "kun" }, "u·kwéˍ·"],
+    en: ["3+ women"],
+    breakdown: [{ text: "kun" }, "u·kwé̲·"],
   },
 ];
 
 const dataOlderPeople = [
   {
-    en: "Older man",
+    en: "1 older man",
     breakdown: [{ text: "lo" }, "kstʌ́ha̲"],
   },
   {
-    en: ["Older men (2)", "Older man and older woman"],
+    en: ["2 older men", "1 older man + 1 older woman"],
     breakdown: [{ text: "loti" }, "kstʌ́ha̲"],
   },
   {
-    en: ["Older men (3+)", "Mix of older men and older women"],
+    en: ["3+ older men", "Mix of older men and older women"],
     breakdown: [{ text: "loti" }, "kstʌhokúha̲"],
   },
   {
-    en: "Older woman",
+    en: "1 older woman",
     breakdown: [{ text: "ako", type: "PLB" }, "kstʌ́ha̲"],
   },
   {
-    en: "Older women (2)",
+    en: "2 older women",
     breakdown: [{ text: "yoti" }, "kstʌ́ha̲"],
   },
   {
-    en: ["Older women (3+)"],
+    en: ["3+ older women"],
     breakdown: [{ text: "yoti" }, "kstʌhokúha̲"],
   },
 ];

@@ -3,9 +3,11 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
-import { SectionHeading } from "@ukwehuwehneke/language-components";
+import {
+  type Pronoun,
+  SectionHeading,
+} from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
-import { Pronoun } from "~/utils";
 
 const allowedPronouns: Pronoun[] = ["i", "u", "m", "f"];
 
@@ -94,16 +96,16 @@ const dataNations = createParadigmData(
   {
     phrases: [
       {
-        breakdown: [`Onʌyoteʔa·ká· ni`, { text: "wak" }, "uhutsyó·tʌ̲ʔ"],
+        breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "wak" }, "uhutsyó·tʌ̲ʔ"],
       },
       {
-        breakdown: [`Onʌyoteʔa·ká· ni`, { text: "s" }, "uhutsyó·tʌ̲ʔ"],
+        breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "s" }, "uhutsyó·tʌ̲ʔ"],
       },
       {
-        breakdown: [`Onʌyoteʔa·ká· ni`, { text: "ha" }, "uhutsyó·tʌ̲ʔ"],
+        breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "ha" }, "uhutsyó·tʌ̲ʔ"],
       },
       {
-        breakdown: [`Onʌyoteʔa·ká· ni`, { text: "yaka" }, "uhutsyó·tʌ̲ʔ"],
+        breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "yaka" }, "uhutsyó·tʌ̲ʔ"],
       },
     ],
     translation: "{{pronoun}} {{refVerb}} an Oneida",
@@ -133,7 +135,11 @@ export function NationsArticle({ level = 1 }: ArticleProps) {
         data={NATIONS_LIST}
       />
       <Text>Here are a couple examples that you can use in sentences:</Text>
-      <ParadigmTable allowedPronouns={allowedPronouns} data={dataNations} />
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={{ pronounEnglish: false }}
+        data={dataNations}
+      />
     </Flex>
   );
 }

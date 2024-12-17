@@ -110,7 +110,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={TableWrapper.createPastTenseColumns("PR")}
+        columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
         data={goodPeopleData.map(mapper)}
       />
       <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
@@ -118,7 +118,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={TableWrapper.createPastTenseColumns("PR")}
+        columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
         data={badPeopleData.map(mapper)}
       />
       <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
@@ -126,7 +126,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={TableWrapper.createPastTenseColumns("PR")}
+        columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
         data={goodKidsData.map(mapper)}
       />
       <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
@@ -134,7 +134,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error To be addressed in LO-12
-        columns={TableWrapper.createPastTenseColumns("PR")}
+        columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
         data={badKidsData.map(mapper)}
       />
     </Flex>

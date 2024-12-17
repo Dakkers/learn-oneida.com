@@ -4,77 +4,77 @@
   "phrases": [
     {
       "key": "i_you",
-      "phrase": "kuyʌtelíˍ",
-      "breakdown": [{ "text": "ku" }, "yʌtelíˍ"]
+      "phrase": "kuyʌtelí̲",
+      "breakdown": [{ "text": "ku" }, "yʌtelí̲"]
     },
     {
       "key": "i_him",
-      "phrase": "liyʌtelíˍ",
-      "breakdown": [{ "text": "li" }, "yʌtelíˍ"]
+      "phrase": "liyʌtelí̲",
+      "breakdown": [{ "text": "li" }, "yʌtelí̲"]
     },
     {
       "key": "i_her",
-      "phrase": "kheyʌtelíˍ",
-      "breakdown": [{ "text": "khe" }, "yʌtelíˍ"]
+      "phrase": "kheyʌtelí̲",
+      "breakdown": [{ "text": "khe" }, "yʌtelí̲"]
     },
     {
       "key": "you_me",
-      "phrase": "skyʌtelíˍ",
-      "breakdown": [{ "text": "sk" }, "yʌtelíˍ"]
+      "phrase": "skyʌtelí̲",
+      "breakdown": [{ "text": "sk" }, "yʌtelí̲"]
     },
     {
       "key": "you_him",
-      "phrase": "etshyʌtelíˍ",
+      "phrase": "etshyʌtelí̲",
       "breakdown": [
         { "text": "h", "type": "RPL" },
         { "text": "etsh" },
-        "yʌtelíˍ"
+        "yʌtelí̲"
       ]
     },
     {
       "key": "you_her",
-      "phrase": "sheyʌtelíˍ",
-      "breakdown": [{ "text": "she" }, "yʌtelíˍ"]
+      "phrase": "sheyʌtelí̲",
+      "breakdown": [{ "text": "she" }, "yʌtelí̲"]
     },
     {
       "key": "he_me",
-      "phrase": "lakyʌtelíˍ",
-      "breakdown": [{ "text": "lak" }, "yʌtelíˍ"]
+      "phrase": "lakyʌtelí̲",
+      "breakdown": [{ "text": "lak" }, "yʌtelí̲"]
     },
     {
       "key": "he_you",
-      "phrase": "yayʌtelíˍ",
-      "breakdown": [{ "text": "ya" }, "yʌtelíˍ"]
+      "phrase": "yayʌtelí̲",
+      "breakdown": [{ "text": "ya" }, "yʌtelí̲"]
     },
     {
       "key": "he_him",
-      "phrase": "loyʌtelíˍ",
-      "breakdown": [{ "text": "lo" }, "yʌtelíˍ"]
+      "phrase": "loyʌtelí̲",
+      "breakdown": [{ "text": "lo" }, "yʌtelí̲"]
     },
     {
       "key": "he_her",
-      "phrase": "shakoyʌtelíˍ",
-      "breakdown": [{ "text": "shako" }, "yʌtelíˍ"]
+      "phrase": "shakoyʌtelí̲",
+      "breakdown": [{ "text": "shako" }, "yʌtelí̲"]
     },
     {
       "key": "she_me",
-      "phrase": "yukyʌtelíˍ",
-      "breakdown": [{ "text": "yuk" }, "yʌtelíˍ"]
+      "phrase": "yukyʌtelí̲",
+      "breakdown": [{ "text": "yuk" }, "yʌtelí̲"]
     },
     {
       "key": "she_you",
-      "phrase": "yesayʌtelíˍ",
-      "breakdown": [{ "text": "yesa" }, "yʌtelíˍ"]
+      "phrase": "yesayʌtelí̲",
+      "breakdown": [{ "text": "yesa" }, "yʌtelí̲"]
     },
     {
       "key": "she_him",
-      "phrase": "luwayʌtelíˍ",
-      "breakdown": [{ "text": "luwa" }, "yʌtelíˍ"]
+      "phrase": "luwayʌtelí̲",
+      "breakdown": [{ "text": "luwa" }, "yʌtelí̲"]
     },
     {
       "key": "she_her",
-      "phrase": "yutatyʌtelíˍ",
-      "breakdown": [{ "text": "yutat" }, "yʌtelíˍ"]
+      "phrase": "yutatyʌtelí̲",
+      "breakdown": [{ "text": "yutat" }, "yʌtelí̲"]
     }
   ]
 }

@@ -213,15 +213,15 @@ export function createTimesOfDayData() {
   ];
 
   const nightPhrases = [
-    { en: "night", translation: "né· wahsuta·té͟·" },
+    { en: "night", translation: "né· wahsuta·té̲·" },
     { en: "night-time", translation: "kwaʔshuté·ke̲" },
     { en: "all night", translation: "kwaʔshutátiʔ" },
     { en: "during the night", translation: "tsiʔ niwahsu·tés" },
     { en: "every night", translation: "yaʔtewahsu·táke̲" },
     { en: "midnight", translation: "ashú·tha̲" },
-    { en: "(when it got dark) last night", translation: "kwaʔshu·téˍ·" },
-    { en: ["this night", "tonight"], translation: "kaʔi·kʌ́· wahsuta·té͟·" },
-    { en: "the other night", translation: "oyá· tshitkwaʔshu·téˍ·" },
+    { en: "(when it got dark) last night", translation: "kwaʔshu·té̲·" },
+    { en: ["this night", "tonight"], translation: "kaʔi·kʌ́· wahsuta·té̲·" },
+    { en: "the other night", translation: "oyá· tshitkwaʔshu·té̲·" },
     { en: "how many nights?", translation: "Tó· niwahsu·táke̲ʔ" },
     { en: "when it gets dark", translation: "tshityó·kalas" },
   ];
@@ -268,7 +268,7 @@ export function createTimesOfDayData() {
     { en: "last year", translation: "tsyohslatkʌ́" },
     { en: "next year", translation: "yʌtsyohslá·te̲ʔ" },
     { en: "the other year", translation: "oyá· tshikohslá·ke̲" },
-    { en: "a particular year", translation: "kaʔi·kʌ́· yohsla·téˍ·" },
+    { en: "a particular year", translation: "kaʔi·kʌ́· yohsla·té̲·" },
     { en: "how many years?", translation: "Tó· niyohslaké̲" },
     { en: "one year after another", translation: "yohslaténi" },
   ];
