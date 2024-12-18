@@ -545,7 +545,7 @@ function PastTenseWhen() {
         [["khe"], "nolúkhwa̲ʔ"],
         ["tshi", { text: "khe" }, "nolúkhwa̲ʔ"],
       ],
-      type: "PR",
+      type: "PP",
     },
     {
       en: ["I am 20 years old", "When I was / used to be 20 years old"],
