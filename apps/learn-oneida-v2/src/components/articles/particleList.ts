@@ -17,7 +17,7 @@ export const particleList = [
     examples: [
       {
         translation:
-          "Kwáh i·kʌ́ tsiʔ kninú·wehseʔ kaʔi·kʌ́· né· Só·s khále Alísakwet",
+          "Kwáh i·kʌ́ tsiʔ kninú·wehseʔ kaʔi·kʌ́· né· Só·s khále Alísakwe",
         en: "Susan and Elizabeth like this very much.",
       },
     ],
@@ -60,7 +60,7 @@ export const particleList = [
   },
   {
     key: "so_then",
-    translation: "kátiʔ, ok né·n",
+    translation: ["kátiʔ", "ok né·n"],
     en: "so then",
     examples: [
       {
@@ -86,7 +86,7 @@ export const particleList = [
   },
   {
     key: "this",
-    translation: "kaʔi·kʌ́͟͟·",
+    translation: "kaʔi·kʌ̲̲́·",
     en: "this",
     examples: [
       {
@@ -185,7 +185,7 @@ export const particleList = [
   },
   {
     key: "a_little_bit",
-    translation: "ostú·ha",
+    translation: "ostú·ha̲",
     en: "a little bit",
     examples: [
       {
@@ -287,7 +287,7 @@ export const particleList = [
     en: "more",
     examples: [
       {
-        translation: "Sʌ́haʔ kʌ́ yenú·wehseʔ né· kaʔi·kʌ́͟͟",
+        translation: "Sʌ́haʔ kʌ́ yenú·wehseʔ né· kaʔi·kʌ̲̲́",
         en: "Does she like this more?",
       },
     ],
@@ -331,11 +331,11 @@ export const particleList = [
 
   {
     key: "that",
-    translation: "thikʌ́͟͟",
+    translation: "thikʌ̲̲́",
     en: "that, that one, that thing",
     examples: [
       {
-        translation: "Swanú·wehseʔ kʌ́ thikʌ́͟͟",
+        translation: "Swanú·wehseʔ kʌ́ thikʌ̲̲́",
         en: "Do you all like that?",
       },
     ],
@@ -350,7 +350,7 @@ export const particleList = [
 
   {
     key: "true",
-    translation: "to·kʌśkeʔ",
+    translation: "to·kʌśke̲ʔ",
     en: "true, it is true",
     examples: [
       {
