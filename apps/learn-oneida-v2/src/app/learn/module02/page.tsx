@@ -1,6 +1,6 @@
 "use client";
 
-import { Box } from "@ukwehuwehneke/ohutsya";
+import { Box, Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
@@ -35,6 +35,7 @@ import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_EN_OBJECTIVE,
   PURPLES_MAP,
+  arrayify,
   pronouns,
 } from "@ukwehuwehneke/language-components";
 import {
@@ -725,6 +726,16 @@ function YoungOldSection() {
 }
 
 function NumbersSection() {
+  const audioExceptions = [
+    "160",
+    "170",
+    "180",
+    "190",
+    "600",
+    "700",
+    "800",
+    "900",
+  ];
   const data = [
     { en: "1", translation: "úska" },
     { en: "2", translation: ["tékeni̲", "tékni"] },
@@ -733,8 +744,8 @@ function NumbersSection() {
     { en: "5", translation: "wisk" },
     { en: "6", translation: "yá·yak" },
     { en: "7", translation: "tsyá·tak" },
-    { en: "8", translation: ["téklu̲ʔ"] },
-    { en: "9", translation: ["wá·tlu̲ʔ"] },
+    { en: "8", translation: ["tékelu̲ʔ", "tékluʔ"] },
+    { en: "9", translation: ["wá·telu̲ʔ", "wá·tluʔ"] },
     { en: "10", translation: "oyé·li̲" },
     { en: "11", translation: "úska yawʌ·lé̲·" },
     { en: "12", translation: "tékni yawʌ·lé̲·" },
@@ -747,7 +758,7 @@ function NumbersSection() {
     { en: "19", translation: "wá·tluʔ yawʌ·lé̲·" },
     { en: "20", translation: "tewáhsʌ̲" },
     { en: "21", translation: "tewáhsʌ úska" },
-    { en: "22", translation: "tewáhsʌ tékni" },
+    { en: "22", translation: ["tewáhsʌ tékeni̲", "tewáhsʌ tékni"] },
     { en: "30", translation: "áhsʌ niwáhsʌ̲" },
     { en: "40", translation: "kayé niwáhsʌ̲" },
     { en: "50", translation: "wisk niwáhsʌ̲" },
@@ -755,11 +766,14 @@ function NumbersSection() {
     { en: "70", translation: "tsyá·tak niwáhsʌ̲" },
     { en: "80", translation: "tékluʔ niwáhsʌ̲" },
     { en: "90", translation: "wá·tluʔ niwáhsʌ̲" },
-    { en: "99", translation: "wá·tluʔ niwáhsʌ wá·tlu̲ʔ" },
+    {
+      en: "99",
+      translation: ["wá·tluʔ niwáhsʌ wá·telu̲ʔ", "wá·tluʔ niwáhsʌ wá·tluʔ"],
+    },
     { en: "100", translation: "úska tewʌʔnyáwelu̲ʔ" },
     { en: "101", translation: "úska tewʌʔnyáweluʔ úska" },
-    { en: "110", translation: "úska tewʌʔnyáweluʔ oyé·li" },
-    { en: "111", translation: "úska tewʌʔnyáweluʔ úska yawʌ·lé" },
+    { en: "110", translation: "úska tewʌʔnyáweluʔ oyé·li̲" },
+    { en: "111", translation: "úska tewʌʔnyáweluʔ úska yawʌ·lé̲·" },
     { en: "120", translation: "úska tewʌʔnyáweluʔ tewáhsʌ̲" },
     { en: "130", translation: "úska tewʌʔnyáweluʔ áhsʌ niwáhsʌ̲" },
     { en: "140", translation: "úska tewʌʔnyáweluʔ kayé niwáhsʌ̲" },
@@ -768,7 +782,13 @@ function NumbersSection() {
     { en: "170", translation: "úska tewʌʔnyáweluʔ tsyá·tak niwáhsʌ̲" },
     { en: "180", translation: "úska tewʌʔnyáweluʔ tékluʔ niwáhsʌ̲" },
     { en: "190", translation: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ̲" },
-    { en: "199", translation: "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tlu̲ʔ" },
+    {
+      en: "199",
+      translation: [
+        "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·telu̲ʔ",
+        "úska tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ",
+      ],
+    },
     { en: "200", translation: "tékni tewʌʔnyáwelu̲ʔ" },
     { en: "201", translation: "tékni tewʌʔnyáweluʔ úska" },
     { en: "300", translation: "áhsʌ tewʌʔnyáwelu̲ʔ" },
@@ -778,18 +798,30 @@ function NumbersSection() {
     { en: "700", translation: "tsya·ták tewʌʔnyáwelu̲ʔ" },
     { en: "800", translation: "tékluʔ tewʌʔnyáwelu̲ʔ" },
     { en: "900", translation: "wá·tluʔ tewʌʔnyáwelu̲ʔ" },
-    { en: "999", translation: "wá·tluʔ tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tlu̲ʔ" },
+    {
+      en: "999",
+      translation: [
+        "wá·tluʔ tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·telu̲ʔ",
+        "wá·tluʔ tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ",
+      ],
+    },
     { en: "1000", translation: "oyé·li tewʌʔnyáwelu̲ʔ" },
     { en: "1001", translation: "oyé·li tewʌʔnyáweluʔ úska" },
-    { en: "1111", translation: "úska yawʌ·lé tewʌʔnyáweluʔ úska yawʌ·lé" },
-    { en: "1200", translation: "tékni yawʌ·lé tewʌʔnyáwelu̲ʔ" },
-    { en: "1300", translation: "áhsʌ yawʌ·lé tewʌʔnyáwelu̲ʔ" },
+    { en: "1111", translation: "úska yawʌ·lé· tewʌʔnyáweluʔ úska yawʌ·lé̲·" },
+    { en: "1200", translation: "tékni yawʌ·lé· tewʌʔnyáwelu̲ʔ" },
+    { en: "1300", translation: "áhsʌ yawʌ·lé· tewʌʔnyáwelu̲ʔ" },
     {
       en: "1999",
-      translation: "wá·tlu yawʌ·lé tewʌʔnyáweluʔ wá·tlu  niwáhsʌ wá·tlu̲",
+      translation: [
+        "wá·tluʔ yawʌ·lé tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·telu̲ʔ",
+        "wá·tluʔ yawʌ·lé tewʌʔnyáweluʔ wá·tluʔ niwáhsʌ wá·tluʔ",
+      ],
     },
     { en: "2000", translation: "tewáhsʌ tewʌʔnyáwelu̲ʔ" },
   ];
+
+  const getSuffix = (val: string | string[], i: number) =>
+    !Array.isArray(val) ? "" : i === 0 ? "_pp" : "";
 
   return (
     <>
@@ -816,7 +848,27 @@ function NumbersSection() {
         </List.Item>
       </List>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
+        columns={[
+          TableWrapper.columnsEnglishTranslation[0],
+          {
+            accessorKey: "translation",
+            cell: (value: string | string[], row: any) => (
+              <Flex direction="column" gap={2}>
+                {arrayify(value).map((val, i) => (
+                  <Flex gap={2}>
+                    <b>{val}</b>
+                    {!audioExceptions.includes(row.en) && (
+                      <PlayButton
+                        filepath={`/audio/module02/numbers/${row.en}${getSuffix(value, i)}.mp3`}
+                      />
+                    )}
+                  </Flex>
+                ))}
+              </Flex>
+            ),
+            header: "Translation",
+          },
+        ]}
         data={data}
       />
     </>
@@ -851,64 +903,93 @@ function AgeSection() {
 
 function DialogueSection() {
   const part1: DialogueTableData = [
-    [
-      "Tó· naʔtehaohsliyá·ku neʔn yaʔníha̲",
-      "Thóha wisk niwáhsʌ naʔtehaohsliyá·ku lakeʔníha̲",
-    ],
-    ["To·kʌ́skeʔ kʌ́ tho naʔtehaohsliyá·ku̲", "ʌ́·, tho naʔtehaohsliyá·ku̲"],
-    [
-      "Úhkaʔ náhteʔ sheyʌtelí né·n sʌ́haʔ kʌʔ nityakoyʌ́ha̲",
-      [
-        "Sʌ́haʔ kʌʔnithoyʌ́·ha loʔniha̲",
+    {
+      one: "Tó· naʔtehaohsliyá·ku neʔn yaʔníha̲",
+    },
+    {
+      one: "Thóha wisk niwáhsʌ naʔtehaohsliyá·ku lakeʔníha̲",
+    },
+    { one: "To·kʌ́skeʔ kʌ́ tho naʔtehaohsliyá·ku̲" },
+    { one: "ʌ́·, tho naʔtehaohsliyá·ku̲" },
+    {
+      one: "Úhkaʔ náhteʔ sheyʌtelí né·n sʌ́haʔ kʌʔ nityakoyʌ́ha̲",
+    },
+    {
+      one: [
+        "Sʌ́haʔ kʌʔ nithoyʌ́·ha loʔniha̲",
         "Íhsi nú· né· téklu niwáhsʌ naʔtehaohsliyá·ku̲",
       ],
-    ],
-    [
-      "Tetsitsyatyelʌ́ kʌ́ neʔn yahsótha̲",
-      [
+    },
+    {
+      one: "Tetsitsyatyelʌ́ kʌ́ neʔn yahsótha̲",
+    },
+    {
+      one: [
         "Táh. Yáh thaʔtetsyakyatyelʌ̲̲́",
         "Íhsi né· wisk niwáhsʌ niyohslaké sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót niʔí·",
       ],
-    ],
-    [
-      "Shakoyʌtelí kʌ́ akhwa·tsíle̲",
-      "Táh, né· ok laulhá laohwa·tsíleʔ shakoyʌtelí̲",
-    ],
+    },
+    {
+      one: "Shakoyʌtelí kʌ́ akhwa·tsíle̲",
+    },
+    {
+      one: "Táh, né· ok laulhá laohwa·tsíleʔ shakoyʌtelí̲",
+    },
   ];
   const part2: DialogueTableData = [
-    [
-      [
+    {
+      one: [
         "Úhkaʔ náhteʔ sʌ́haʔ kʌʔ nityakoyʌhaʔ né· yesayʌʔokuha̲",
         "Yaʔníha kʌ́ katʌ sanulhá·",
       ],
-      "Lakeʔníha sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót neʔn aknulhá·",
-    ],
-    ["Tó· nikú sʌ́haʔ lokstʌ́ha̲ʔ", "Tewáhsʌ niyohslaké sʌ́haʔ lokstʌ́ha̲ʔ"],
-    ["E·só· sʌ́haʔ lokstʌ́haʔ, wáhi̲", "ʌ́·"],
+    },
+    {
+      one: "Lakeʔníha sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót neʔn aknulhá·",
+    },
+    { one: "Tó· nikú sʌ́haʔ lokstʌ́ha̲ʔ" },
+    { one: "Tewáhsʌ niyohslaké sʌ́haʔ lokstʌ́ha̲ʔ" },
+    { one: "E·só· sʌ́haʔ lokstʌ́haʔ, wáhi̲" },
+    { one: "ʌ́·", hasAudio: false },
   ];
   const part3: DialogueTableData = [
-    [
-      "Sʌ́haʔ kʌ́ akokstʌ́haʔ né· ukyalaséha Kowáklit tsiʔ ni·yót neʔn tsyalá·séʔ Tu·wís",
-      "Táh. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót né· tsyalá·seʔ Kowáklit",
-    ],
-    [
-      "Kayé kʌ́ niwáhsʌ naʔtehaohsliyá·ku̲",
-      ["Táh. Yáh tho tehokstʌ́ha̲ʔ", "Áhsʌ ok niwáhsʌ wá·tlu naʔtehaohsliyá·ku̲"],
-    ],
-    [
-      "Sanúhteʔ kʌ́ tó· naʔteyakaohsliyá·ku né· ukyalasé Kowáklit",
-      "Táh. Yáh tewakánuhteʔ, uhkaʔ náhteʔ né· akonulhá·",
-    ],
-    [
-      "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
-      "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔisé̲·",
-    ],
-    [
-      "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yót niʔí·",
-      "Yáh yeksá· té·kʌ, wáhi̲",
-    ],
-    ["To·kʌ́skeʔ kʌ́", "ʌ́·"],
+    {
+      one: "Sʌ́haʔ kʌ́ akokstʌ́haʔ né· ukyalaséha Kowáklit tsiʔ ni·yót neʔn tsyalá·séʔ Tu·wís",
+    },
+    {
+      one: "Táh. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót né· tsyalá·seʔ Kowáklit",
+    },
+    {
+      one: "Kayé kʌ́ niwáhsʌ naʔtehaohsliyá·ku̲",
+    },
+    {
+      one: [
+        "Táh. Yáh tho tehokstʌ́ha̲ʔ",
+        "Áhsʌ ok niwáhsʌ wá·tlu naʔtehaohsliyá·ku̲",
+      ],
+    },
+    {
+      one: "Sanúhteʔ kʌ́ tó· naʔteyakaohsliyá·ku né· ukyalasé Kowáklit",
+    },
+    {
+      one: "Táh. Yáh tewakánuhteʔ, uhkaʔ náhteʔ né· akonulhá·",
+    },
+    {
+      one: "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
+    },
+    {
+      one: "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔisé̲·",
+    },
+    {
+      one: "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yót niʔí·",
+    },
+    {
+      one: "Yáh yeksá· té·kʌ, wáhi̲",
+    },
+    { one: "To·kʌ́skeʔ kʌ́", hasAudio: false },
+    { one: "ʌ́·", hasAudio: false },
   ];
+
+  const mapper = (row) => ({ ...row, hasAudio: row.hasAudio ?? true });
 
   return (
     <>
@@ -919,15 +1000,24 @@ function DialogueSection() {
       <SectionHeading id="dialogue-ex1" level={3}>
         Example 1
       </SectionHeading>
-      <DialogueTable data={part1} />
+      <DialogueTable
+        audioFolder="module02/dialogue/part1"
+        data={part1.map(mapper)}
+      />
       <SectionHeading id="dialogue-ex2" level={3}>
         Example 2
       </SectionHeading>
-      <DialogueTable data={part2} />
+      <DialogueTable
+        audioFolder="module02/dialogue/part2"
+        data={part2.map(mapper)}
+      />
       <SectionHeading id="dialogue-ex3" level={3}>
         Example 3
       </SectionHeading>
-      <DialogueTable data={part3} />
+      <DialogueTable
+        audioFolder="module02/dialogue/part3"
+        data={part3.map(mapper)}
+      />
     </>
   );
 }
