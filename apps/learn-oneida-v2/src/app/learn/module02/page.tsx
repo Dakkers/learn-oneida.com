@@ -970,12 +970,10 @@ function ThingsThatAreTheSameSection() {
       </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsEnglishAudio}
-        data={data
-          .map(TableWrapper.mapEnglishAndTranslation)
-          .map((row, i) => ({
-            ...row,
-            audioFile: `module02/things_that_are_the_same/${i + 1}.mp3`,
-          }))}
+        data={data.map(TableWrapper.mapEnglishAndTranslation).map((row, i) => ({
+          ...row,
+          audioFile: `module02/things_that_are_the_same/${i + 1}.mp3`,
+        }))}
       />
     </>
   );
