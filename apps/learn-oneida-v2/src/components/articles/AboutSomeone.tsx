@@ -3,7 +3,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
@@ -39,7 +39,12 @@ const examplesList = [
     "I don't like anything about them.",
     "Yáh náhteʔ né· teʔknú·wehseʔ lonulhá· laotilihwá·ke̲",
   ],
-].map(TableWrapper.mapEnglishAndTranslation);
+]
+  .map(TableWrapper.mapEnglishAndTranslation)
+  .map((row, i) => ({
+    ...row,
+    audioFile: `module02/about_examples/${i + 1}.mp3`,
+  }));
 
 export function AboutSomeoneArticle({ level = 1 }: ArticleProps) {
   return (
@@ -47,7 +52,11 @@ export function AboutSomeoneArticle({ level = 1 }: ArticleProps) {
       <SectionHeading id="about-someone" level={level}>
         About Someone
       </SectionHeading>
-      <ParadigmTable columnVisibility={{ pronounEnglish: false }} data={data} />
+      <ParadigmTable
+        audioFolder="module02/about"
+        columnVisibility={{ pronounEnglish: false }}
+        data={data}
+      />
 
       <SectionHeading
         id="about-someone-examples"
@@ -56,7 +65,7 @@ export function AboutSomeoneArticle({ level = 1 }: ArticleProps) {
         Examples
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
+        columns={TableWrapper.columnsEnglishAudio}
         data={examplesList}
       />
     </Flex>

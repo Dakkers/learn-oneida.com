@@ -1,7 +1,7 @@
 import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
-  translation: "{{pronoun}} {{refVerb}} X years old",
+  translation: "{{pronoun}} {{refVerb}} ... years old",
   type: "PB",
   phrases: [
     {

@@ -687,6 +687,7 @@ function YoungOldSection() {
         and uses blue pronominals.
       </Text>
       <ParadigmTable
+        audioFolder="module02/old"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -707,6 +708,7 @@ function YoungOldSection() {
         pronominal.
       </Text>
       <ParadigmTable
+        audioFolder="module02/young"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -725,14 +727,14 @@ function YoungOldSection() {
 function NumbersSection() {
   const data = [
     { en: "1", translation: "úska" },
-    { en: "2", translation: ["tékni", "tékeni̲"] },
+    { en: "2", translation: ["tékeni̲", "tékni"] },
     { en: "3", translation: "áhsʌ̲" },
     { en: "4", translation: "kayé" },
     { en: "5", translation: "wisk" },
     { en: "6", translation: "yá·yak" },
     { en: "7", translation: "tsyá·tak" },
-    { en: "8", translation: "téklu̲ʔ" },
-    { en: "9", translation: "wá·tlu̲ʔ" },
+    { en: "8", translation: ["téklu̲ʔ"] },
+    { en: "9", translation: ["wá·tlu̲ʔ"] },
     { en: "10", translation: "oyé·li̲" },
     { en: "11", translation: "úska yawʌ·lé̲·" },
     { en: "12", translation: "tékni yawʌ·lé̲·" },
@@ -828,11 +830,11 @@ function AgeSection() {
         naʔ te...ohsliyá·ku̲ — (to be) an age
       </SectionHeading>
       <Text>
-        In Oneida, the more literal translation to say &quot;I am X years
-        old&quot; is &quot;I have crossed X winters&quot;. The root word is has
-        an O-stem and uses blue pronominals.
+        In Oneida, the more literal translation to say &quot;I am ... years
+        old&quot; is &quot;I have crossed X winters&quot;.
       </Text>
       <ParadigmTable
+        audioFolder="module02/age"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -967,8 +969,13 @@ function ThingsThatAreTheSameSection() {
         Things that are the same
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={data.map(TableWrapper.mapEnglishAndTranslation)}
+        columns={TableWrapper.columnsEnglishAudio}
+        data={data
+          .map(TableWrapper.mapEnglishAndTranslation)
+          .map((row, i) => ({
+            ...row,
+            audioFile: `module02/things_that_are_the_same/${i + 1}.mp3`,
+          }))}
       />
     </>
   );

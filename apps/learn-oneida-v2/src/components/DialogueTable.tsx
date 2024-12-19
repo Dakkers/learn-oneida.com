@@ -33,7 +33,7 @@ export function DialogueTable({ data }: { data: DialogueTableData }) {
 
 function TableCell(value: Cell) {
   return (
-    <Flex direction="column" gap={2}>
+    <Flex direction="column" gap={4}>
       <TextArray>
         {Array.isArray(value) || typeof value === "string" || value === null
           ? value
