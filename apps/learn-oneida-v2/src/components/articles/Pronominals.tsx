@@ -1,5 +1,5 @@
 "use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
   SectionHeadingProps,
@@ -36,16 +36,14 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 
-export function PronominalsArticle({ level = 1 }: ArticleProps) {
+export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
+  const level = (_level + 1) as SectionHeadingProps["level"];
   return (
     <Flex direction="column" gap={4}>
-      <SectionHeading id="pronominals" level={level}>
+      <SectionHeading id="pronominals" level={_level}>
         Pronominals
       </SectionHeading>
-      <SectionHeading
-        id="english-pronouns"
-        level={(level + 1) as SectionHeadingProps["level"]}
-      >
+      <SectionHeading id="english-pronouns" level={level}>
         English Pronouns
       </SectionHeading>
       <Text>
@@ -57,10 +55,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         Oneida has two kinds of pronouns: <b>standalone</b> and <b>bound</b>.
       </Text>
 
-      <SectionHeading
-        id="standalone-pronouns"
-        level={(level + 1) as SectionHeadingProps["level"]}
-      >
+      <SectionHeading id="standalone-pronouns" level={level}>
         Standalone Pronouns
       </SectionHeading>
       <Text>
@@ -68,10 +63,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         sentence. The standalone pronouns are:
       </Text>
       <FreestandingPronounsSection />
-      <SectionHeading
-        id="bound-pronouns"
-        level={(level + 1) as SectionHeadingProps["level"]}
-      >
+      <SectionHeading id="bound-pronouns" level={level}>
         Bound Pronouns
       </SectionHeading>
       <Text>
@@ -94,10 +86,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         an abbreviation of &quot;pronominal prefix&quot;.
       </Notice>
 
-      <SectionHeading
-        id="red-pronominals"
-        level={(level + 1) as SectionHeadingProps["level"]}
-      >
+      <SectionHeading id="red-pronominals" level={level}>
         Subjective (Red) Pronominals
       </SectionHeading>
       <Text>
@@ -132,7 +121,8 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         word is <b>attokhaʔ</b>. The translation for &quot;she is wise&quot;
         without this replacement rule would be <b>yuattokhaʔ</b>.{" "}
         <Letter>yua</Letter> is not a sound in Oneida so we instead change it to{" "}
-        <Letter>yu</Letter>. Therefore the translation is <b>yuttókhaʔ</b>.
+        <Letter>yu</Letter>. Therefore the translation is <b>yuttókhaʔ</b>.{" "}
+        <ExcpPlay num="1" />
       </Text>
 
       <Text variant="labelL">Exception 2</Text>
@@ -140,7 +130,8 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         The <Letter>h</Letter> is not written or pronounced when nothing is
         attached in front of the pronominal. However, when anything is attached
         to the front of the pronominal, the <Letter>h</Letter> is written and
-        pronounced. Example: <b>snú·wehse̲ʔ</b> and <b>yáh tehsnú·wehse̲ʔ</b>.
+        pronounced. Example: <b>snú·wehse̲ʔ</b> <ExcpPlay num="2-1" /> and{" "}
+        <b>yáh tehsnú·wehse̲ʔ</b>. <ExcpPlay num="2-2" />
       </Text>
 
       <Text variant="labelL">Exception 3</Text>
@@ -155,8 +146,8 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         The <Letter>ik</Letter> prefix is attached to most (but not all) single
         syllable roots. The <Letter>i</Letter> in <Letter>ik</Letter> is used
         only occasionally. The <Letter>i</Letter> disappears when anything is
-        attached in front of the prefix. Example: <b>íkyʌheʔ</b> and{" "}
-        <b>yáh té·kyʌheʔ</b>.
+        attached in front of the prefix. Example: <b>íkyʌheʔ</b>{" "}
+        <ExcpPlay num="4-1" /> and <b>yáh té·kyʌheʔ</b>. <ExcpPlay num="4-2" />
       </Text>
 
       <Text variant="labelL">Exception 5</Text>
@@ -164,24 +155,31 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
         The prefix <code>ts</code> is attached to all roots beginning with{" "}
         <Letter>y</Letter> and <Letter>i</Letter>. The <Letter>t</Letter>{" "}
         disappears and is replaced by <Letter>h</Letter> when anything is
-        attached in front of the prefix. Example: <b>tsyʌtelí̲</b> and{" "}
-        <b>yáh tehsyʌtelí̲</b>; <b>tsí·tlu̲ʔ</b> and <b>yáh tehsí·tlu̲ʔ</b>.
+        attached in front of the prefix. Examples:
       </Text>
+      <List>
+        <List.Item>
+          <b>tsyʌtelí̲</b> <ExcpPlay num="5-1" /> &nbsp; vs. &nbsp;{" "}
+          <b>yáh tehsyʌtelí̲</b> <ExcpPlay num="5-2" />
+        </List.Item>
+        <List.Item>
+          <b>tsí·tlu̲ʔ</b> <ExcpPlay num="5-3" /> &nbsp; vs. &nbsp;{" "}
+          <b>yáh tehsí·tlu̲ʔ</b> <ExcpPlay num="5-4" />
+        </List.Item>
+      </List>
 
       <Text variant="labelL">Exception 6</Text>
       <Text>
         The prefix <Letter>it</Letter> is attached to all roots beginning with{" "}
         <Letter>hs</Letter> and the <Letter>i</Letter> disappears when anything
-        is attached in front of the prefix. Example: <b>ítshaʔas</b> and{" "}
-        <b>yáh tetsháʔas</b>. Additionally, the {"h"} shifts over.
+        is attached in front of the prefix. Example: <b>ítshaʔas</b>{" "}
+        <ExcpPlay num="6-1" /> and <b>yáh tetsháʔas</b>. <ExcpPlay num="6-2" />{" "}
+        Additionally, the {"h"} shifts over.
       </Text>
 
       <Divider />
 
-      <SectionHeading
-        id="blue-pronominals"
-        level={(level + 1) as SectionHeadingProps["level"]}
-      >
+      <SectionHeading id="blue-pronominals" level={level}>
         Objective (blue) Pronominals
       </SectionHeading>
       <Text>
@@ -190,10 +188,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
       {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsPrimitiveTable color="blue" data={bluePronominalsJson} />
 
-      <SectionHeading
-        id="purple-pronominals"
-        level={(level + 1) as SectionHeadingProps["level"]}
-      >
+      <SectionHeading id="purple-pronominals" level={level}>
         Purple Pronominals
       </SectionHeading>
       <Text>
@@ -203,10 +198,7 @@ export function PronominalsArticle({ level = 1 }: ArticleProps) {
       {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsPrimitiveTable color="purple" data={purplePronominalsJson} />
 
-      <SectionHeading
-        id="lightblue-pronominals"
-        level={(level + 1) as SectionHeadingProps["level"]}
-      >
+      <SectionHeading id="lightblue-pronominals" level={level}>
         Possessive (light blue) Pronominals
       </SectionHeading>
       <PronominalsPrimitiveTable
@@ -444,4 +436,8 @@ function Footnotes({ nums: _nums }: { nums: FootnoteNumbers }) {
       ))}
     </Flex>
   );
+}
+
+function ExcpPlay({ num }: { num: string }) {
+  return <PlayButton filepath={`/audio/module01/exceptions/excp_${num}.mp3`} />;
 }

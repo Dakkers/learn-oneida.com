@@ -19,6 +19,22 @@ export function TableWrapper(props: TableProps) {
   return <Table {...props} />;
 }
 
+interface BreakdownColOptions {
+  accessorKey?: string;
+  header?: string;
+}
+
+interface CreatePastTenseColumnsOptions {
+  headerNow?: string;
+  headerPast?: string;
+  suffix?: TextBreakdownSuffix;
+}
+
+export type EnglishTranslationPairData = Array<{
+  en: string | string[];
+  translation: string | string[];
+}>;
+
 TableWrapper.textArrayCell = (value: any) => (
   <Flex direction="column">
     <TextArray>{value}</TextArray>
@@ -36,25 +52,31 @@ const EnglishCol = {
   header: "English",
 };
 
-interface BreakdownColOptions {
-  accessorKey?: string;
-  header?: string;
-}
-
-const createBreakdownCol = (
+function createBreakdownCol(
   typeFallback?: BreakdownType,
   options: BreakdownColOptions = {},
-) => ({
-  accessorKey: options.accessorKey ?? "breakdown",
-  cell: (value: BreakdownArray) => (
-    <TextBreakdown
-      breakdown={value}
-      typeFallback={typeFallback}
-      wrap="nowrap"
-    />
-  ),
-  header: options.header ?? "Translation",
-});
+) {
+  return {
+    accessorKey: options.accessorKey ?? "breakdown",
+    cell: (
+      value: BreakdownArray,
+      row: {
+        audioFile: string;
+      },
+    ) => (
+      <Flex gap={2}>
+        <TextBreakdown
+          breakdown={value}
+          typeFallback={typeFallback}
+          wrap="nowrap"
+        />
+
+        {row.audioFile && <PlayButton filepath={`/audio/${row.audioFile}`} />}
+      </Flex>
+    ),
+    header: options.header ?? "Translation",
+  };
+}
 
 const oneidaPronounColumns: TableProps["columns"] = [
   {
@@ -122,17 +144,6 @@ const columnsEnglishAudio = [
     cell: audioCell,
   },
 ];
-
-interface CreatePastTenseColumnsOptions {
-  headerNow?: string;
-  headerPast?: string;
-  suffix?: TextBreakdownSuffix;
-}
-
-export type EnglishTranslationPairData = Array<{
-  en: string | string[];
-  translation: string | string[];
-}>;
 
 const createPastTenseColumns = (
   typeFallback: BreakdownType,
