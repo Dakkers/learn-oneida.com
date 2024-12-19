@@ -4,52 +4,52 @@
   "phrases": [
     {
       "pronoun": "i",
-      "phrase": "ukwatʌloʔslaʔshúha",
+      "phrase": "ukwatʌloʔslaʔshúha̲",
       "breakdown": [
         { "text": "ukw" },
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
-        "ʔshúha"
+        "ʔshúha̲"
       ]
     },
     {
       "pronoun": "u",
-      "phrase": "swatʌloʔslaʔshúha",
+      "phrase": "swatʌloʔslaʔshúha̲",
       "breakdown": [
         { "text": "sw" },
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
-        "ʔshúha"
+        "ʔshúha̲"
       ]
     },
     {
       "pronoun": "m",
-      "phrase": "lonatʌloʔslaʔshúha",
+      "phrase": "lonatʌloʔslaʔshúha̲",
       "breakdown": [
         { "text": "lon" },
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
-        "ʔshúha"
+        "ʔshúha̲"
       ]
     },
     {
       "pronoun": "f",
-      "phrase": "lonatʌloʔslaʔshúha",
+      "phrase": "lonatʌloʔslaʔshúha̲",
       "breakdown": [
         { "text": "lon" },
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
-        "ʔshúha"
+        "ʔshúha̲"
       ]
     },
     {
       "pronoun": "she_her",
-      "phrase": "onatʌloʔslaʔshúha",
+      "phrase": "onatʌloʔslaʔshúha̲",
       "breakdown": [
         { "text": "on" },
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
-        "ʔshúha"
+        "ʔshúha̲"
       ]
     }
   ]

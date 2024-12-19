@@ -13,7 +13,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 const data = createParadigmData(
   {
     translation: "{{pronoun}} look alike",
-    type: "PLB",
+    type: "PR",
     phrases: [
       {
         breakdown: [
@@ -97,7 +97,11 @@ export function SimilarInAppearanceArticle({ level = 1 }: ArticleProps) {
         Similar in Appearance
       </SectionHeading>
       <Text>These words make use of the semi-reflexive feature.</Text>
-      <ParadigmTable data={data} />
+      <ParadigmTable
+        audioFolder="module02/look_alike"
+        columnVisibility={{ pronounEnglish: false }}
+        data={data}
+      />
     </Flex>
   );
 }

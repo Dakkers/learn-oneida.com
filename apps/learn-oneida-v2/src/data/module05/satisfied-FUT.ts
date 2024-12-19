@@ -10,8 +10,7 @@ export default createParadigmData(
         breakdown: [
           ["ʌ", "FUT"],
           ["t", "CIS"],
-          ["wak"],
-          ["e", "EP"],
+          ["wake"],
           "nikuhliyó",
           ["hakeʔ", "FUT"],
         ],

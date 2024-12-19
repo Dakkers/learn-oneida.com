@@ -20,7 +20,7 @@ const LIST = [
   ["Longhouse Road", "Kanúhses Yoha·té·"],
   ["Nicholas Road", "Nicholas Yoha·té·"],
   ["Old Trail Road", "Ohahaʔka·yú Yoha·té·"],
-  ["Oneida Road", "Onʌyoteʔa·ká· Yoha·té·"],
+  ["Oneida Road", "Oneida Yoha·té·"],
   ["Pheasant Drive", "Pheasant Yoha·té·"],
   ["River Road", "Kawyhuhakta Yoha·té·"],
   ["Townline Road", "Kanata·yʌ́· Yoha·té·"],

@@ -32,13 +32,13 @@ export function DialogueTable({ data }: { data: DialogueTableData }) {
 }
 
 function TableCell(value: Cell) {
-  if (value === null || typeof value === "string" || Array.isArray(value)) {
-    return TableWrapper.textArrayCell(value);
-  }
-
   return (
-    <Flex direction="column" gap={1}>
-      <TextArray>{value.one}</TextArray>
+    <Flex direction="column" gap={4}>
+      <TextArray>
+        {Array.isArray(value) || typeof value === "string" || value === null
+          ? value
+          : value.one}
+      </TextArray>
     </Flex>
   );
 }

@@ -11,6 +11,7 @@ export default {
       /flex-row/,
       /flex-col/,
       /items-+/,
+      /gap-+/,
       /-?m-+/,
       /-?mx-+/,
       /-?my-+/,

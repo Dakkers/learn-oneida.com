@@ -306,6 +306,11 @@ function RelativesTable({
 }) {
   return (
     <TableWrapper
+      bleed={{
+        xs: 0,
+        md: 16,
+        lg: 32,
+      }}
       columns={[
         {
           accessorKey: "pronoun",

@@ -27,7 +27,7 @@ export function createModule9FoodLists(): FoodDatum[] {
     en: ["apple"],
     key: "Apple",
     singular: ["swahyo·wáne"],
-    plural: ["swahyo·wánʌse’"],
+    plural: ["swahyo·wánʌseʔ"],
   };
   const objBreakfast = {
     en: ["(eating) breakfast"],
@@ -38,8 +38,8 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objBagel = {
     en: ["bagel"],
     key: "Bagel",
-    singular: ["yona’talaká·lute’"],
-    plural: ["yona’tlakalu·tú"],
+    singular: ["yonaʔtalaká·luteʔ"],
+    plural: ["yonaʔtlakalu·tú"],
   };
   const objBanana = {
     en: ["banana"],
@@ -50,104 +50,104 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objBean = {
     en: ["bean"],
     key: "Bean",
-    singular: ["ohyóhtsli’"],
-    plural: ["E·só· ohyóhtsli’shúha̲"],
+    singular: ["ohyóhtsliʔ"],
+    plural: ["E·só· ohyóhtsliʔshúha̲"],
   };
   const objBeanYellowEye = {
     en: ["bean yellow eye"],
     key: "BeanYellowEye",
-    singular: ["otsí·nkwala’ oká·la’ osahé·ta̲’"],
-    plural: ["otsí·nkwala’ oká·la’ osahe·ta’shúha̲"],
+    singular: ["otsí·nkwalaʔ oká·laʔ osahé·ta̲ʔ"],
+    plural: ["otsí·nkwalaʔ oká·laʔ osahe·taʔshúha̲"],
   };
   const objBeanSoup = {
     en: ["bean soup"],
     key: "BeanSoup",
-    singular: ["osahé·ta’ ohnekákli’"],
-    plural: ["osahé·ta’ ohnekákli’shúha"],
+    singular: ["osahé·taʔ ohnekákliʔ"],
+    plural: ["osahé·taʔ ohnekákliʔshúha"],
   };
   const objBeet = {
     en: ["beet"],
     key: "Beet",
-    singular: ["onikwʌhtala’ nikahtehló·tʌ"],
-    plural: ["onikwʌhtala’ nikahtehló·tʌhse̲’"],
+    singular: ["onikwʌhtalaʔ nikahtehló·tʌ"],
+    plural: ["onikwʌhtalaʔ nikahtehló·tʌhse̲ʔ"],
   };
   const objBlackberry = {
     en: ["blackberry"],
     key: "Blackberry",
-    singular: ["shá·yese̲’"],
-    plural: ["shá·yese’ kahikokúha̲"],
+    singular: ["shá·yese̲ʔ"],
+    plural: ["shá·yeseʔ kahikokúha̲"],
   };
   const objBlackRaspberry = {
     en: ["black raspberry", "black cap"],
     key: "BlackRaspberry",
     singular: ["teyothutá·ktu", "teyothʌtá·ktu"],
-    plural: ["teyothʌ’ta’ktúni"],
+    plural: ["teyothʌʔtaʔktúni"],
   };
   const objBlueberry = {
     en: ["blueberry"],
     key: "Blueberry",
-    singular: ["otstókhwi’", "otstókwi’"],
-    plural: ["otstokhwi’shúha̲"],
+    singular: ["otstókhwiʔ", "otstókwiʔ"],
+    plural: ["otstokhwiʔshúha̲"],
   };
   const objBreadBaked = {
     en: ["baked bread"],
     key: "BreadBaked",
-    singular: ["watná·talute̲’"],
-    plural: ["watna’talut’thokúha̲"],
+    singular: ["watná·talute̲ʔ"],
+    plural: ["watnaʔtalutʔthokúha̲"],
   };
   const objBreadCrust = {
     en: ["bread crust"],
     key: "BreadCrust",
-    singular: ["o’nuwa·tsíste̲’", "o’nowa·tsíste̲’"],
-    plural: ["o’nuwatsistokúha̲"],
+    singular: ["oʔnuwa·tsíste̲ʔ", "oʔnowa·tsíste̲ʔ"],
+    plural: ["oʔnuwatsistokúha̲"],
   };
   const objBreadFried = {
     en: ["frybread"],
     key: "BreadFried",
-    singular: ["kʌyé·ke watna’talu·tákwe̲’"],
-    plural: ["yawe’towanʌ́kʌyé·ke watna’talu·tákwe̲’"],
+    singular: ["kʌyé·ke watnaʔtalu·tákwe̲ʔ"],
+    plural: ["yaweʔtowanʌ́kʌyé·ke watnaʔtalu·tákwe̲ʔ"],
   };
   const objBroccoli = {
     en: ["broccoli"],
     key: "Broccoli",
-    singular: ["otsi’tsyakáhte̲’"],
-    plural: ["otsi’tsyaka’te’shúha̲"],
+    singular: ["otsiʔtsyakáhte̲ʔ"],
+    plural: ["otsiʔtsyakaʔteʔshúha̲"],
   };
   const objBroth = {
     en: ["broth", "watery soup"],
     key: "Broth",
-    singular: ["ohnekákli’"],
-    plural: ["ohnekakli’shúha̲"],
+    singular: ["ohnekákliʔ"],
+    plural: ["ohnekakliʔshúha̲"],
   };
   const objButternutSquash = {
     en: ["butternut", "squash"],
     key: "ButternutSquash",
-    singular: ["tsyohsó·kwes onu’úsli’"],
-    plural: ["tsyohsó·kwes onu’usli’shúha̲"],
+    singular: ["tsyohsó·kwes onuʔúsliʔ"],
+    plural: ["tsyohsó·kwes onuʔusliʔshúha̲"],
   };
   const objCabbage = {
     en: ["cabbage"],
     key: "Cabbage",
-    singular: ["onlahtakáhtu’ onu·tsi ̲́"],
-    plural: ["onlahtakáhtu’ onutsi’shúha̲"],
+    singular: ["onlahtakáhtuʔ onu·tsi ̲́"],
+    plural: ["onlahtakáhtuʔ onutsiʔshúha̲"],
   };
   const objCarrot = {
     en: ["carrot"],
     key: "Carrot",
-    singular: ["katsi’nkwala’hú’tsi’ nikahtehló·tʌ̲"],
-    plural: ["katsi’nkwala’hú’tsi’ nikahtehló·tʌhse̲’"],
+    singular: ["katsiʔnkwalaʔhúʔtsiʔ nikahtehló·tʌ̲"],
+    plural: ["katsiʔnkwalaʔhúʔtsiʔ nikahtehló·tʌhse̲ʔ"],
   };
   const objCatFood = {
     en: ["cat food"],
     key: "CatFood",
-    singular: ["takóhs a·ókhwa̲’"],
-    plural: ["takóhs aotikhwa’shúha̲"],
+    singular: ["takóhs a·ókhwa̲ʔ"],
+    plural: ["takóhs aotikhwaʔshúha̲"],
   };
   const objCelery = {
     en: ["celery"],
     key: "Celery",
     singular: null,
-    plural: ["ohstawina’shúha̲"],
+    plural: ["ohstawinaʔshúha̲"],
   };
   const objCheese = {
     en: ["cheese"],
@@ -159,7 +159,7 @@ export function createModule9FoodLists(): FoodDatum[] {
     en: ["cherry"],
     key: "Cherry",
     singular: ["é·li"],
-    plural: ["eli’shúha̲"],
+    plural: ["eliʔshúha̲"],
   };
   const objCherryWildBlack = {
     en: ["wild black cherry"],
@@ -170,98 +170,98 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objChicken = {
     en: ["chicken meat"],
     key: "Chicken",
-    singular: ["kitkit o’wálu̲’"],
-    plural: ["kitkit o’wala’shúha̲"],
+    singular: ["kitkit oʔwálu̲ʔ"],
+    plural: ["kitkit oʔwalaʔshúha̲"],
   };
   const objChineseFood = {
     en: ["chinese food"],
     key: "ChineseFood",
-    singular: ["tehatikahlati·lúte’ laotíkhwa’"],
-    plural: ["tehatikahlati·lúte’ laotikhwa’shúha̲"],
+    singular: ["tehatikahlati·lúteʔ laotíkhwaʔ"],
+    plural: ["tehatikahlati·lúteʔ laotikhwaʔshúha̲"],
   };
   const objCoffee = {
     en: ["coffee"],
     key: "Coffee",
-    singular: ["ohsahe’tákli’"],
-    plural: ["ohsahe’takli’okúha̲"],
+    singular: ["ohsaheʔtákliʔ"],
+    plural: ["ohsaheʔtakliʔokúha̲"],
   };
   const objCookie = {
     en: ["cookie"],
     key: "Cookie",
     singular: ["khéksu·wé̲·"],
-    plural: ["kheksuwe’shúha̲"],
+    plural: ["kheksuweʔshúha̲"],
   };
   const objFruitCore = {
     en: ["fruit core"],
     key: "FruitCore",
-    singular: ["ohá·ta̲’"],
-    plural: ["ohata’okúha̲"],
+    singular: ["ohá·ta̲ʔ"],
+    plural: ["ohataʔokúha̲"],
   };
   const objCornSoup = {
     en: ["corn soup"],
     key: "CornSoup",
     singular: ["ola·ná̲·"],
-    plural: ["olana’shúha̲"],
+    plural: ["olanaʔshúha̲"],
   };
   const objCorn = {
     en: ["corn", "flint corn"],
     key: "Corn",
-    singular: ["onʌsta’u·wé·"],
-    plural: ["onʌsta’uwe’okúha̲"],
+    singular: ["onʌstaʔu·wé·"],
+    plural: ["onʌstaʔuweʔokúha̲"],
   };
   const objCornBread = {
     en: ["corn bread"],
     key: "CornBread",
-    singular: ["kanʌstóhale̲’"],
-    plural: ["kanʌstohale’okúha̲"],
+    singular: ["kanʌstóhale̲ʔ"],
+    plural: ["kanʌstohaleʔokúha̲"],
   };
   const objCornDried = {
     en: ["dried corn"],
     key: "CornDried",
-    singular: ["kanʌsta’thá·tu", "kanʌhʌ·ta’"],
-    plural: ["kanʌsta’tha’thokúha̲", "kanʌhʌta’okúha̲"],
+    singular: ["kanʌstaʔthá·tu", "kanʌhʌ·taʔ"],
+    plural: ["kanʌstaʔthaʔthokúha̲", "kanʌhʌtaʔokúha̲"],
   };
   const objCornMeal = {
     en: ["corn meal"],
     key: "CornMeal",
-    singular: ["osekwálha’"],
-    plural: ["osekwalha’shúha̲"],
+    singular: ["osekwálhaʔ"],
+    plural: ["osekwalhaʔshúha̲"],
   };
   const objCornSweet = {
     en: ["sweet corn"],
     key: "CornSweet",
-    singular: ["o·nʌ́ste’"],
-    plural: ["onʌstase’shúha̲"],
+    singular: ["o·nʌ́steʔ"],
+    plural: ["onʌstaseʔshúha̲"],
   };
   const objCracker = {
     en: ["cracker"],
     key: "Cracker",
-    singular: ["yona’talastáthʌ"],
-    plural: ["yona’talastathʌ́hslu"],
+    singular: ["yonaʔtalastáthʌ"],
+    plural: ["yonaʔtalastathʌ́hslu"],
   };
   const objCucumber = {
     en: ["cucumber", "squash"],
     key: "Cucumber",
-    singular: ["onu’úsli’"],
-    plural: ["onu’úsli’shúha’"],
+    singular: ["onuʔúsliʔ"],
+    plural: ["onuʔúsliʔshúhaʔ"],
   };
   const objDogFood = {
     en: ["dog food"],
     key: "DogFood",
-    singular: ["é·lhal a·ókhwa̲’"],
-    plural: ["é·lhal aotikhwa’shúha"],
+    singular: ["é·lhal a·ókhwa̲ʔ"],
+    plural: ["é·lhal aotikhwaʔshúha"],
   };
   const objDough = {
     en: ["dough", "cream", "paste"],
     key: "Dough",
-    singular: ["oshé·lha’", "ohshé·lhe’", "ohshé·lhi’"],
-    plural: ["ohshelhi’shúha̲"],
+    singular: ["oshé·lhaʔ", "ohshé·lheʔ", "ohshé·lhiʔ"],
+    plural: ["ohshelhiʔshúha̲"],
   };
   const objDoughnut = {
     en: ["doughnut"],
     key: "Doughnut",
     singular: ["oyá·n"],
-    plural: ["yawe’towanʌ́oyá·n"],
+    plural: ["yaweʔtowanʌ́oyá·n"],
   };
   const objElderberry = {
     en: ["elderberry"],
@@ -272,44 +272,44 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objEggshell = {
     en: ["eggshell"],
     key: "Eggshell",
-    singular: ["ola·wíste’"],
-    plural: ["olawiste’okúha̲"],
+    singular: ["ola·wísteʔ"],
+    plural: ["olawisteʔokúha̲"],
   };
   const objFlour = {
     en: ["flour"],
     key: "Flour",
-    singular: ["othé·tsli’"],
-    plural: ["othe’sli’shúha̲"],
+    singular: ["othé·tsliʔ"],
+    plural: ["otheʔsliʔshúha̲"],
   };
   const objFriedFood = {
     en: ["fried food"],
     key: "FriedFood",
-    singular: ["kʌyé·ke kalihtu kakhwa’"],
-    plural: ["kʌyé·ke kalihtu kakhwa’shúha̲"],
+    singular: ["kʌyé·ke kalihtu kakhwaʔ"],
+    plural: ["kʌyé·ke kalihtu kakhwaʔshúha̲"],
   };
   const objBakedPotato = {
     en: ["baked potato", "fried potato"],
     key: "BakedPotato",
-    singular: ["wathnana’túta·kwe̲’"],
-    plural: ["wathnana’tutahkwe’okúha̲"],
+    singular: ["wathnanaʔtúta·kwe̲ʔ"],
+    plural: ["wathnanaʔtutahkweʔokúha̲"],
   };
   const objFruit = {
     en: ["fruit"],
     key: "Fruit",
     singular: null,
-    plural: ["kahikhokúha̲’"],
+    plural: ["kahikhokúha̲ʔ"],
   };
   const objFruitJuice = {
     en: ["fruit juice", "apple cider", "strawberry drink"],
     key: "FruitJuice",
-    singular: ["tewahyolala·kú", "ohyákli’"],
-    plural: ["tewahyalolalaku’okúha̲", "ohyakli’shúha̲"],
+    singular: ["tewahyolala·kú", "ohyákliʔ"],
+    plural: ["tewahyalolalakuʔokúha̲", "ohyakliʔshúha̲"],
   };
   const objGrape = {
     en: ["grape"],
     key: "Grape",
-    singular: ["o’nʌhalhkó·"],
-    plural: ["o’nʌhalhko’wátshu"],
+    singular: ["oʔnʌhalhkó·"],
+    plural: ["oʔnʌhalhkoʔwátshu"],
   };
   const objGravy = {
     en: ["gravy", "grease", "oil", "fat"],
@@ -320,20 +320,20 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objHamburger = {
     en: ["hamburger", "ground meat"],
     key: "Hamburger",
-    singular: ["teka’wahlahlíhtu"],
-    plural: ["awʌhetsha’shúha̲"],
+    singular: ["tekaʔwahlahlíhtu"],
+    plural: ["awʌhetshaʔshúha̲"],
   };
   const objHotdog = {
     en: ["hotdog", "baloney", "sausage"],
     key: "Hotdog",
-    singular: ["awʌhétsha̲’"],
-    plural: ["awʌhetsha’shúha̲"],
+    singular: ["awʌhétsha̲ʔ"],
+    plural: ["awʌhetshaʔshúha̲"],
   };
   const objIceCream = {
     en: ["ice cream"],
     key: "IceCream",
-    singular: ["yoshe’lhawísto̲"],
-    plural: ["yo’shelhawisto’okúha̲"],
+    singular: ["yosheʔlhawísto̲"],
+    plural: ["yoʔshelhawistoʔokúha̲"],
   };
   const objJam = {
     en: ["jam", "preserve"],
@@ -345,127 +345,127 @@ export function createModule9FoodLists(): FoodDatum[] {
     en: ["junk food"],
     key: "JunkFood",
     singular: ["kakhwáksʌ"],
-    plural: ["kakhwaksʌ’okúha̲"],
+    plural: ["kakhwaksʌʔokúha̲"],
   };
   const objLard = {
     en: ["lard", "animal fat"],
     key: "Lard",
-    singular: ["oyá·taku", "oya’takʌ·láte’"],
-    plural: ["oya’taku’shúha̲", "oya’takʌlate’okúha̲"],
+    singular: ["oyá·taku", "oyaʔtakʌ·láteʔ"],
+    plural: ["oyaʔtakuʔshúha̲", "oyaʔtakʌlateʔokúha̲"],
   };
   const objLasagna = {
     en: ["lasagna"],
     key: "Lasagna",
-    singular: ["tekalakwistá·sle’"],
-    plural: ["tekalakwistasle’okúha̲"],
+    singular: ["tekalakwistá·sleʔ"],
+    plural: ["tekalakwistasleʔokúha̲"],
   };
   const objLemon = {
     en: ["lemon", "sour fruit"],
     key: "Lemon",
     singular: ["teyohyahyó·tsis"],
-    plural: ["teyohyahyo’tsistáni"],
+    plural: ["teyohyahyoʔtsistáni"],
   };
   const objLettuce = {
     en: ["lettuce"],
     key: "Lettuce",
-    singular: ["onlahtakáhtu’", "untlahtakáhtu’"],
-    plural: ["onlahtakahtu’okúha̲"],
+    singular: ["onlahtakáhtuʔ", "untlahtakáhtuʔ"],
+    plural: ["onlahtakahtuʔokúha̲"],
   };
   const objLime = {
     en: ["lime"],
     key: "Lime",
     singular: ["teyohyahyó·tsis awʌ·la"],
-    plural: ["teyohyahyo’tsistáni awʌ·la"],
+    plural: ["teyohyahyoʔtsistáni awʌ·la"],
   };
   const objLiquor = {
     en: ["liquor", "wine", "beer"],
     key: "Liquor",
-    singular: ["ohne·káˍ·"],
-    plural: ["ohneka’okúha̲"],
+    singular: ["ohne·ká̲·"],
+    plural: ["ohnekaʔokúha̲"],
   };
   const objMacaroni = {
     en: ["macaroni"],
     key: "Macaroni",
     singular: null,
-    plural: ["oholo’ta’shúha"],
+    plural: ["oholoʔtaʔshúha"],
   };
   const objMapleSyrup = {
     en: ["maple syrup"],
     key: "MapleSyrup",
-    singular: ["wáhta’ ohsés"],
+    singular: ["wáhtaʔ ohsés"],
     plural: null,
   };
   const objMushroom = {
     en: ["mushroom"],
     key: "Mushroom",
-    singular: ["onláhsa’"],
-    plural: ["onláhsa’shuha̲"],
+    singular: ["onláhsaʔ"],
+    plural: ["onláhsaʔshuha̲"],
   };
   const objOatmeal = {
     en: ["oatmeal", "cornmush", "pudding"],
     key: "Oatmeal",
-    singular: ["onu·tála̲’", "ohshélha̲"],
-    plural: ["onutala’shúhá̲", "ohshelha’shúha̲"],
+    singular: ["onu·tála̲ʔ", "ohshélha̲"],
+    plural: ["onutalaʔshúhá̲", "ohshelhaʔshúha̲"],
   };
   const objOnion = {
     en: ["onion (bulb)"],
     key: "Onion",
     singular: ["á·nuk"],
-    plural: ["a’nukokúha̲"],
+    plural: ["aʔnukokúha̲"],
   };
   const objOnionLeek = {
     en: ["onion", "leek"],
     key: "OnionLeek",
-    singular: ["a’nukkó·"],
-    plural: ["a’nukkowátshu"],
+    singular: ["aʔnukkó·"],
+    plural: ["aʔnukkowátshu"],
   };
   const objOrange = {
     en: ["orange"],
     key: "Orange",
-    singular: ["katsí·nkwala’hutsi niwahyó·tʌ̲"],
-    plural: ["katsí·nkwala’hutsi niwahyó·tʌhse̲’"],
+    singular: ["katsí·nkwalaʔhutsi niwahyó·tʌ̲"],
+    plural: ["katsí·nkwalaʔhutsi niwahyó·tʌhse̲ʔ"],
   };
   const objPancake = {
     en: ["pancake"],
     key: "Pancake",
-    singular: ["onikóksli’"],
-    plural: ["onikoksli’shúha̲"],
+    singular: ["onikóksliʔ"],
+    plural: ["onikoksliʔshúha̲"],
   };
   const objPea = {
     en: ["green pea"],
     key: "Pea",
-    singular: ["teyotshahe’takwe’nu·ni"],
-    plural: ["teyotshahe’takwe’nunyáni"],
+    singular: ["teyotshaheʔtakweʔnu·ni"],
+    plural: ["teyotshaheʔtakweʔnunyáni"],
   };
   const objPeach = {
     en: ["peach"],
     key: "Peach",
-    singular: ["yonuhwé·lhote’ káhik"],
-    plural: ["yonuhwé·lhote’ kahik’okúha̲"],
+    singular: ["yonuhwé·lhoteʔ káhik"],
+    plural: ["yonuhwé·lhoteʔ kahikʔokúha̲"],
   };
   const objPeanutButter = {
     en: ["peanut butter"],
     key: "PeanutButter",
-    singular: ["kashokwalíhtu", "ohsó·kwa’ kaselhúni’̲"],
-    plural: ["kahsokwalihtu’okúha̲"],
+    singular: ["kashokwalíhtu", "ohsó·kwaʔ kaselhúniʔ̲"],
+    plural: ["kahsokwalihtuʔokúha̲"],
   };
   const objPear = {
     en: ["pear"],
     key: "Pear",
-    singular: ["yotshe’tʌ́·tuhe̲’"],
-    plural: ["yotshe’tʌtuhe’táni"],
+    singular: ["yotsheʔtʌ́·tuhe̲ʔ"],
+    plural: ["yotsheʔtʌtuheʔtáni"],
   };
   const objPeeling = {
     en: ["peeling (egg, potato, cucumber)"],
     key: "Peeling",
-    singular: ["olá·wiste̲’"],
-    plural: ["ola’wiste’okúha̲"],
+    singular: ["olá·wiste̲ʔ"],
+    plural: ["olaʔwisteʔokúha̲"],
   };
   const objPickle = {
     en: ["pickle"],
     key: "Pickle",
-    singular: ["teyonu’uslahyó·tsis"],
-    plural: ["teyonu’uslahyo’tsistáni"],
+    singular: ["teyonuʔuslahyó·tsis"],
+    plural: ["teyonuʔuslahyoʔtsistáni"],
   };
   const objPie = {
     en: ["pie"],
@@ -476,14 +476,14 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objPizza = {
     en: ["pizza"],
     key: "Pizza",
-    singular: ["tekana’talakwʌhtu"],
-    plural: ["tekana’talakwʌhtutáni"],
+    singular: ["tekanaʔtalakwʌhtu"],
+    plural: ["tekanaʔtalakwʌhtutáni"],
   };
   const objPlum = {
     en: ["wild plum"],
     key: "Plum",
-    singular: ["wíhsu’"],
-    plural: ["wihsu’okúha̲"],
+    singular: ["wíhsuʔ"],
+    plural: ["wihsuʔokúha̲"],
   };
   const objPopcorn = {
     en: ["popcorn"],
@@ -500,20 +500,20 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objPumpkin = {
     en: ["pumpkin", "watermelon"],
     key: "Pumpkin",
-    singular: ["onu’usla’kó·"],
-    plural: ["onu’usla’wátshu"],
+    singular: ["onuʔuslaʔkó·"],
+    plural: ["onuʔuslaʔwátshu"],
   };
   const objRadish = {
     en: ["radish"],
     key: "Radish",
-    singular: ["ohtehlakáhtu’"],
-    plural: ["ohtehlakahta’shúha̲"],
+    singular: ["ohtehlakáhtuʔ"],
+    plural: ["ohtehlakahtaʔshúha̲"],
   };
   const objRaspberry = {
     en: ["raspberry"],
     key: "Raspberry",
     singular: ["tsyohtahkwaká·yu"],
-    plural: ["tsyohtahkwakayu’shúha̲"],
+    plural: ["tsyohtahkwakayuʔshúha̲"],
   };
   const objRhubarb = {
     en: ["rhubarb"],
@@ -525,19 +525,19 @@ export function createModule9FoodLists(): FoodDatum[] {
     en: ["rice"],
     key: "Rice",
     singular: null,
-    plural: ["watnʌ’ú·kwas", "watnʌ’ʌkwáts"],
+    plural: ["watnʌʔú·kwas", "watnʌʔʌkwáts"],
   };
   const objSaladBean = {
     en: ["bean salad"],
     key: "SaladBean",
-    singular: ["tekasahe’tayéstu"],
-    plural: ["tekasahe’tayestáni"],
+    singular: ["tekasaheʔtayéstu"],
+    plural: ["tekasaheʔtayestáni"],
   };
   const objSaladEgg = {
     en: ["egg salad"],
     key: "SaladEgg",
-    singular: ["teka’nhuhsayéhstu"],
-    plural: ["teka’nhuhsayestáni"],
+    singular: ["tekaʔnhuhsayéhstu"],
+    plural: ["tekaʔnhuhsayestáni"],
   };
   const objSaladFruit = {
     en: ["fruit salad"],
@@ -554,8 +554,8 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objSaladPotato = {
     en: ["potato salad"],
     key: "SaladPotato",
-    singular: ["tekahnana’tayéhstu"],
-    plural: ["tekahnana’tayestáni"],
+    singular: ["tekahnanaʔtayéhstu"],
+    plural: ["tekahnanaʔtayestáni"],
   };
   const objSalt = {
     en: ["salt"],
@@ -566,20 +566,20 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objSaltedPork = {
     en: ["salted pork"],
     key: "SaltedPork",
-    singular: ["teyo’wahlahyó·tsis"],
-    plural: ["teyo’wahlahyo’tsistáni"],
+    singular: ["teyoʔwahlahyó·tsis"],
+    plural: ["teyoʔwahlahyoʔtsistáni"],
   };
   const objSandwich = {
     en: ["sandwich"],
     key: "Sandwich",
-    singular: ["tekana’talá·sle’"],
-    plural: ["tekana’talasle’okúha̲"],
+    singular: ["tekanaʔtalá·sleʔ"],
+    plural: ["tekanaʔtalasleʔokúha̲"],
   };
   const objSandwichEgg = {
     en: ["egg sandwich"],
     key: "SandwichEgg",
-    singular: ["ka’nhuhsó·lu"],
-    plural: ["ka’nhuhsolókhu"],
+    singular: ["kaʔnhuhsó·lu"],
+    plural: ["kaʔnhuhsolókhu"],
   };
   const objSconedog = {
     en: ["sconedog"],
@@ -590,38 +590,38 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objSoda = {
     en: ["soda", "pop", "koolaid"],
     key: "Soda",
-    singular: ["kahnekáku’"],
-    plural: ["kahnekake’shúha̲"],
+    singular: ["kahnekákuʔ"],
+    plural: ["kahnekakeʔshúha̲"],
   };
   const objSpaghetti = {
     en: ["spaghetti"],
     key: "Spaghetti",
     singular: null,
-    plural: ["a’ahsliyeta’shúha̲’"],
+    plural: ["aʔahsliyetaʔshúha̲ʔ"],
   };
   const objSpice = {
     en: ["spice"],
     key: "Spice",
-    singular: ["yutekhwaku’uhstákhwa’"],
-    plural: ["yutekhwaku’uhstakhwa’shúha̲"],
+    singular: ["yutekhwakuʔuhstákhwaʔ"],
+    plural: ["yutekhwakuʔuhstakhwaʔshúha̲"],
   };
   const objStrawberry = {
     en: ["strawberry"],
     key: "Strawberry",
-    singular: ["awʌ́hihte̲’"],
+    singular: ["awʌ́hihte̲ʔ"],
     plural: ["awʌhihthokúha̲"],
   };
   const objSugarSubstitute = {
     en: ["sugar substitute"],
     key: "SugarSubstitute",
-    singular: ["teskyanutakli’tslatyelʌ́"],
-    plural: ["teskyanutakli’tslatyelʌ’shúha̲"],
+    singular: ["teskyanutakliʔtslatyelʌ́"],
+    plural: ["teskyanutakliʔtslatyelʌʔshúha̲"],
   };
   const objSweetTreat = {
     en: ["sweet treat"],
     key: "SweetTreat",
-    singular: ["teyonutaklí’tslale’"],
-    plural: ["teyonutakli’tslale’shúha̲"],
+    singular: ["teyonutaklíʔtslaleʔ"],
+    plural: ["teyonutakliʔtslaleʔshúha̲"],
   };
   const objTea = {
     en: ["tea"],
@@ -632,44 +632,44 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objToast = {
     en: ["toast"],
     key: "Toast",
-    singular: ["watna’talathsa’áhtu"],
-    plural: ["watna’talatsha’ahtáni"],
+    singular: ["watnaʔtalathsaʔáhtu"],
+    plural: ["watnaʔtalatshaʔahtáni"],
   };
   const objTomato = {
     en: ["tomato"],
     key: "Tomato",
     singular: null,
-    plural: ["tewahyakháni’"],
+    plural: ["tewahyakhániʔ"],
   };
   const objTurkey = {
     en: ["turkey meat"],
     key: "Turkey",
-    singular: ["skawilo·wáne’ o’walu"],
-    plural: ["skawilo·wáne’ o’walokuha̲"],
+    singular: ["skawilo·wáneʔ oʔwalu"],
+    plural: ["skawilo·wáneʔ oʔwalokuha̲"],
   };
   const objTurnip = {
     en: ["turnip"],
     key: "Turnip",
-    singular: ["otsíhkwa̲’"],
-    plural: ["otsihkwa’shúha̲"],
+    singular: ["otsíhkwa̲ʔ"],
+    plural: ["otsihkwaʔshúha̲"],
   };
   const objVegetables = {
     en: ["vegetables"],
     key: "Vegetables",
     singular: null,
-    plural: ["ohʌtase’shúha̲"],
+    plural: ["ohʌtaseʔshúha̲"],
   };
   const objVinegar = {
     en: ["vinegar", "lemonade"],
     key: "Vinegar",
     singular: ["teyohnekahyó·tsis"],
-    plural: ["teyohnekahyo’tsistáni"],
+    plural: ["teyohnekahyoʔtsistáni"],
   };
   const objWalnut = {
     en: ["walnut"],
     key: "Walnut",
-    singular: ["teyotsho’kwakwe’núni"],
-    plural: ["teyotsho’kwakwe’nunyáni"],
+    singular: ["teyotshoʔkwakweʔnúni"],
+    plural: ["teyotshoʔkwakweʔnunyáni"],
   };
   const objWater = {
     en: ["water"],
@@ -680,8 +680,8 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objWine = {
     en: ["wine", "beer"],
     key: "Wine",
-    singular: ["otsí·tsya’"],
-    plural: ["otsi’tsya’shúha̲", "otsi’tsya’okúha̲"],
+    singular: ["otsí·tsyaʔ"],
+    plural: ["otsiʔtsyaʔshúha̲", "otsiʔtsyaʔokúha̲"],
   };
 
   return [
@@ -802,7 +802,7 @@ export function createModule9FoodCharacteristics(): CharacteristicDatum[] {
   const objBaked = {
     en: ["baked", "fried", "BBQ", "roasted"],
     key: "Baked",
-    one: ["waté·skute’"],
+    one: ["waté·skuteʔ"],
   };
   const objBitter = {
     en: ["bitter", "sour"],
@@ -817,7 +817,7 @@ export function createModule9FoodCharacteristics(): CharacteristicDatum[] {
   const objBurnt = {
     en: ["burnt"],
     key: "Burnt",
-    one: ["yotsha’áhtu"],
+    one: ["yotshaʔáhtu"],
   };
   const objClean = {
     en: ["clean"],
@@ -837,12 +837,12 @@ export function createModule9FoodCharacteristics(): CharacteristicDatum[] {
   const objDelicious = {
     en: ["delicious"],
     key: "Delicious",
-    one: ["yawéku’"],
+    one: ["yawékuʔ"],
   };
   const objFattening = {
     en: ["fattening"],
     key: "Fattening",
-    one: ["yole’sʌhsluní"],
+    one: ["yoleʔsʌhsluní"],
   };
   const objFried = {
     en: ["fried", "deep-fried"],
@@ -862,12 +862,12 @@ export function createModule9FoodCharacteristics(): CharacteristicDatum[] {
   const objGreasy = {
     en: ["greasy"],
     key: "Greasy",
-    one: ["yoye·nále’", "yoyenʌ́sku"],
+    one: ["yoye·náleʔ", "yoyenʌ́sku"],
   };
   const objHot = {
     en: ["hot"],
     key: "Hot",
-    one: ["yo’talíhʌ"],
+    one: ["yoʔtalíhʌ"],
   };
   const objLeftovers = {
     en: ["leftovers"],
@@ -877,32 +877,32 @@ export function createModule9FoodCharacteristics(): CharacteristicDatum[] {
   const objMouldy = {
     en: ["mouldy"],
     key: "Mouldy",
-    one: ["yonuhwélhote’", "oskʌ́·lha"],
+    one: ["yonuhwélhoteʔ", "oskʌ́·lha"],
   };
   const objRaw = {
     en: ["raw"],
     key: "Raw",
-    one: ["yáh te’yolí"],
+    one: ["yáh teʔyolí"],
   };
   const objRoasted = {
     en: ["roasted", "fried"],
     key: "Roasted",
-    one: ["waté·skute’"],
+    one: ["waté·skuteʔ"],
   };
   const objRotten = {
     en: ["rotten", "spoiled"],
     key: "Rotten",
-    one: ["yohetkwa’ú", "yáh te’kakhwiyo"],
+    one: ["yohetkwaʔú", "yáh teʔkakhwiyo"],
   };
   const objSalty = {
     en: ["salty"],
     key: "Salty",
-    one: ["teyohyotsístale’"],
+    one: ["teyohyotsístaleʔ"],
   };
   const objSmellingBad = {
     en: ["bad-smelling"],
     key: "SmellingBad",
-    one: ["waslákhsʌ’"],
+    one: ["waslákhsʌʔ"],
   };
   const objSmellingGood = {
     en: ["good-smelling"],
@@ -922,17 +922,17 @@ export function createModule9FoodCharacteristics(): CharacteristicDatum[] {
   const objStrongSmell = {
     en: ["strong smell"],
     key: "StrongSmell",
-    one: ["wasla’sátste’"],
+    one: ["waslaʔsátsteʔ"],
   };
   const objStrongTaste = {
     en: ["strong taste"],
     key: "StrongTaste",
-    one: ["kaku’sla’sátste’"],
+    one: ["kakuʔslaʔsátsteʔ"],
   };
   const objSweet = {
     en: ["sweet", "sugary"],
     key: "Sweet",
-    one: ["teyonutaklí·tslale’"],
+    one: ["teyonutaklí·tslaleʔ"],
   };
   const objDisgusting = {
     en: ["disgusting", "unappetizing"],

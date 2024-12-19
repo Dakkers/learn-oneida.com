@@ -16,10 +16,10 @@ export default createParadigmData(
         breakdown: [["a", "IFUT"], ["h"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a·", "IFUT"], ["yu"], ["atat", "REFL"], "lihúniʔ"],
+        breakdown: [["a·", "IFUT"], ["yu"], ["tat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a·", "IFUT"], ["u"], ["atat", "REFL"], "lihúniʔ"],
+        breakdown: [["a·", "IFUT"], ["u"], ["tat", "REFL"], "lihúniʔ"],
       },
       {
         breakdown: [["a·e", "IFUT"], ["ty"], ["atat", "REFL"], "lihúniʔ"],
@@ -46,10 +46,10 @@ export default createParadigmData(
         breakdown: [["a·e", "IFUT"], ["sw"], ["atat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["hu"], ["atat", "REFL"], "lihúniʔ"],
+        breakdown: [["a", "IFUT"], ["hu"], ["tat", "REFL"], "lihúniʔ"],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], ["atat", "REFL"], "lihúniʔ"],
+        breakdown: [["a", "IFUT"], ["ku"], ["tat", "REFL"], "lihúniʔ"],
       },
     ],
   },

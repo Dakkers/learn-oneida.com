@@ -14,10 +14,10 @@ export function translateNumber(value: string): string {
     [5, "wísk"],
     [6, "yá·yak"],
     [7, "tsyá·tak"],
-    [8, "tékluʔ"],
-    [9, "wá·tluʔ"],
+    [8, "téklu̲ʔ"],
+    [9, "wá·tlu̲ʔ"],
     [10, "oyé·li̲"],
-    [20, "tewáhsʌ"],
+    [20, "tewáhsʌ̲"],
   ]);
 
   const digit = val % 10;

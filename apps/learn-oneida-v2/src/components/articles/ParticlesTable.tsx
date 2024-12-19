@@ -28,7 +28,7 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
               <Flex gap={4} key={i}>
                 {row.audioFile && (
                   <PlayButton
-                    filepath={`/audio/particles/${group}/${row.audioFile}.mp3`}
+                    filepath={`/audio/particles/${group}/${row.key}${Array.isArray(value) ? `_${i + 1}` : ""}.mp3`}
                   />
                 )}
                 {val}
@@ -80,7 +80,17 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
   }, [group]);
 
   // @ts-expect-error To be addressed in LO-12
-  return <TableWrapper columns={columns} data={data} />;
+  return (
+    <TableWrapper
+      bleed={{
+        xs: 0,
+        md: 16,
+        lg: 32,
+      }}
+      columns={columns}
+      data={data}
+    />
+  );
 }
 
 export function getParticlesForGroup(group: ParticlesGroup) {
@@ -212,7 +222,9 @@ export function getParticlesForGroup(group: ParticlesGroup) {
     const result = particleList.find((p) => p.key === key);
     return {
       ...result,
-      audioFile: ["module02", "module03", "module04"].includes(group)
+      audioFile: ["module01", "module02", "module03", "module04"].includes(
+        group,
+      )
         ? key
         : undefined,
     };

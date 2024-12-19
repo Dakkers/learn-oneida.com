@@ -492,19 +492,12 @@ function AccordionWrapper({
   >;
 }) {
   return (
-    <Bleed
-      mx={{
-        xs: 0,
-        md: 16,
-        lg: 32,
-      }}
-    >
+    <Bleed>
       <Accordion type="multiple">
         {sections.map(([id, title, data, audioFolder]) => (
           <Accordion.Item id={id} key={id} title={title}>
             <ParadigmTable
               audioFolder={audioFolder ? `module04/${audioFolder}` : undefined}
-              bleed={0}
               columnVisibility={columnVisibility}
               data={data}
             />
