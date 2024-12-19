@@ -5,8 +5,11 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
 import { Letter } from "../Letter";
 import { List } from "@ukwehuwehneke/ohutsya";
+import { ListOfWords } from "../ListOfWords";
 
 export function LetterHArticle({ level = 1 }: ArticleProps) {
+  const list1 = ["khenú·wehse̲ʔ", "thikʌ̲̲́"];
+
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="letter-h" level={level}>
@@ -24,19 +27,16 @@ export function LetterHArticle({ level = 1 }: ArticleProps) {
       <Text>
         In Oneida we write all the Hs that follow Ks and Ts. Example:{" "}
       </Text>
-      <List>
-        <List.Item>khenú·wehseʔ</List.Item>
-        <List.Item>thikʌ́</List.Item>
-      </List>
+      <ListOfWords filepathBase="/module01/letter_h" offset={1} words={list1} />
       <Text>
         We also write most of the Hs that occur after a vowel and before a
         consonant. Examples:
       </Text>
-      <List>
-        <List.Item>yehyatúkhwa̲ʔ</List.Item>
-        <List.Item>onikwʌ́htalaʔ</List.Item>
-        <List.Item>kanúhsaʔ</List.Item>
-      </List>
+      <ListOfWords
+        filepathBase="/module01/letter_h"
+        offset={1 + list1.length}
+        words={["yehyatúkhwa̲ʔ", "onikwʌ́htala̲ʔ", "kanúhsaʔ"]}
+      />
       <Text>
         Not all of the Hs that are spoken in a word get written by all speakers,
         however. It seems to be a matter of personal preference.

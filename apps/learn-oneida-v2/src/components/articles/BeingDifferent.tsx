@@ -16,84 +16,34 @@ const data = createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "ty" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["ty"], ["at", "SRFL"], "tíhʌ"],
       },
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "yaky" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["yaky"], ["at", "SRFL"], "tíhʌ"],
       },
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "tsy" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["tsy"], ["at", "SRFL"], "tíhʌ"],
       },
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "hy" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["hy"], ["at", "SRFL"], "tíhʌ"],
       },
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "ky" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["ky"], ["at", "SRFL"], "tíhʌ"],
       },
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "tw" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["tw"], ["at", "SRFL"], "tíhʌ"],
       },
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "yakw" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["yakw"], ["at", "SRFL"], "tíhʌ"],
       },
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "sw" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["sw"], ["at", "SRFL"], "tíhʌ"],
       },
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "hu" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["hu"], ["t", "SRFL"], "tíhʌ"],
       },
       {
-        breakdown: [
-          ["te", "DUAL"],
-          { text: "ku" },
-          { text: "at", type: "SRFL" },
-          "tíhʌ",
-        ],
+        breakdown: [["te", "DUAL"], ["ku"], ["t", "SRFL"], "tíhʌ"],
       },
     ],
   },
@@ -107,7 +57,11 @@ export function BeingDifferentArticle({ level = 1 }: ArticleProps) {
         Being Different
       </SectionHeading>
       <Text>These words make use of the semi-reflexive feature.</Text>
-      <ParadigmTable columnVisibility={{ pronounEnglish: false }} data={data} />
+      <ParadigmTable
+        audioFolder="module02/being_different"
+        columnVisibility={{ pronounEnglish: false }}
+        data={data}
+      />
     </Flex>
   );
 }

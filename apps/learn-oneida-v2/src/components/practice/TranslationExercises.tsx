@@ -95,15 +95,15 @@ const englishToOneidaModule02 = [
 
 const oneidaToEnglishModule03 = [
   ["1", "Lotikhsá·tayʌʔ kʌ́ né· akwekú sheyoʔokúha̲"],
-  ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwaʔ"],
+  ["2", "Sukwé·tayʌʔ kʌ́́ ukha ok yesanolukhwa̲ʔ"],
   ["3", "Yáh só·tsiʔ tehlukweʔtiyó né·n etshuhwatʌ́ha̲"],
   ["4", "Úhkaʔ náhteʔ sninyakú"],
   ["5", "Tekniyáhse kʌ́ yakokhsá·tayʌʔ né· shekhstʌ́ha yutateʔkʌ́ha̲"],
   ["6", "Né· kʌ́ thikʌ́ lanikʌhtlúha né·n Wá·li akonikʌhtlú·tsliʔ"],
   ["7", "Tó· náheʔ onʌ tshaʔtehonatekháhsyu né·n Só·s luwayʌ́ha̲"],
-  ["8", "Yáh thaʔtehyatatnú·wehseʔ nók tsiʔ shekú ihnehse"],
-  ["9", "Skayá·tat tá·thuní tekniyáhse síksik yakonáskwayʌ"],
-  ["10", "Shekú yutatwʌni·yó· né· aolíwaʔ tsiʔ yáh teʔyakukweʔtiyó"],
+  ["8", "Yáh thaʔtehyatatnú·wehseʔ nók tsiʔ shekú ihnehse̲"],
+  ["9", "Skayá·tat tá·thuní tekniyáhse síksik yakonáskwayʌ̲"],
+  ["10", "Shekú yutatwʌni·yó· né· aolíwaʔ tsiʔ yáh teʔyakukweʔtiyó̲"],
   ["11", "Yáh úhkaʔ náhteʔ tehonanúhteʔ tsiʔ Onutaʔkeha·ká· nisuhutsyó·ta̲ʔ"],
   ["12", "Tehnitsyalú kʌ́ lotikwáho né·n yesayʌ́ha̲"],
   ["13", "Kutikwekú kʌ́ kutatwʌni·yó· né· kutiyaʔtaseʔshúha̲"],
@@ -282,7 +282,10 @@ export function TranslationExercises({ group }: { group?: Group }) {
         ...oneidaToEnglishModule01.map((val) => [...val, true, "01"]),
         ...englishToOneidaModule01,
       ],
-      module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
+      module02: [
+        ...oneidaToEnglishModule02.map((val) => [...val, true, "02"]),
+        ...englishToOneidaModule02,
+      ],
       module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
       module05: [...oneidaToEnglishModule05, ...englishToOneidaModule05],
       module06: [

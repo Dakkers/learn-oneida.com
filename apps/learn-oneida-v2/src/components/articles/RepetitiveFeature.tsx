@@ -73,12 +73,7 @@ export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
       en: ["You like it", "You like it again"],
       one: [
         [{ text: "s" }, "nú·wehse̲"],
-        [
-          { text: "se", type: "REP" },
-          { text: "h", type: "RPL" },
-          { text: "s" },
-          "nú·wehse̲",
-        ],
+        [{ text: "se", type: "REP" }, { text: "hs" }, "nú·wehse̲"],
       ],
       type: "PR",
     },
@@ -131,7 +126,7 @@ export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
         ["yáh te", { text: "sni" }, "nyákuʔ"],
         ["yáh te", { text: "tsi", type: "REP" }, { text: "sni" }, "nyákuʔ"],
       ],
-      type: "PR",
+      type: "PB",
     },
     {
       en: ["Are you two single?", "Are you two single again?"],

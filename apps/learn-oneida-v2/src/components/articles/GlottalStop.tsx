@@ -1,13 +1,21 @@
 "use client";
 
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
 import { Letter } from "../Letter";
 import { List } from "@ukwehuwehneke/ohutsya";
+import { ListOfWords } from "../ListOfWords";
 
 export function GlottalStopArticle({ level = 1 }: ArticleProps) {
+  const list1 = [
+    "oʔwá·lu̲ʔ",
+    "oʔsluniʔkéha̲",
+    "otsiʔnowʌ̲̲́",
+    "kátsheʔ",
+    "otsí·tsyaʔ",
+  ];
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="glottal" level={level}>
@@ -27,23 +35,25 @@ export function GlottalStopArticle({ level = 1 }: ArticleProps) {
         people also glottalize the double-t in words like kitten, so that they
         say &quot;kiʔten.&quot; Examples of Oneida words with glottal stops are:
       </Text>
-      <List>
-        <List.Item>oʔwá·luʔ</List.Item>
-        <List.Item>oʔsluniʔkéha</List.Item>
-        <List.Item>otsiʔnowʌ́</List.Item>
-        <List.Item>kátsheʔ</List.Item>
-        <List.Item>otsí·tsyaʔ</List.Item>
-      </List>
+      <ListOfWords
+        filepathBase="/module01/glottal_stops"
+        offset={1}
+        words={list1}
+      />
       <Text>
         Sometimes a vowel with a glottal stop is given a short or a long stress.
         Examples:
       </Text>
-      <List>
-        <List.Item>wakyo·té·</List.Item>
-        <List.Item>ká·khaleʔ</List.Item>
-        <List.Item>laksá·</List.Item>
-        <List.Item>kanutó·tsliʔ</List.Item>
-      </List>
+      <ListOfWords
+        filepathBase="/module01/glottal_stops"
+        offset={1 + list1.length}
+        words={[
+          "wakyo·té̲·",
+          "ká·khale̲ʔ",
+          "laksá·",
+          "kanutó·tse̲lʔ / kanutó·tsliʔ",
+        ]}
+      />
     </Flex>
   );
 }

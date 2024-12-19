@@ -276,11 +276,11 @@ function PastTenseIntroduction() {
 
     {
       en: "I know",
-      breakdown: [{ text: "wak", type: "PR" }, "anúhte̲ʔ"],
+      breakdown: [{ text: "wak", type: "PB" }, "anúhte̲ʔ"],
     },
     {
       en: "I used to know",
-      breakdown: [{ text: "wak", type: "PR" }, "anúhte", "hkwe̲ʔ"],
+      breakdown: [{ text: "wak", type: "PB" }, "anúhte", "hkwe̲ʔ"],
     },
   ];
 
@@ -339,7 +339,7 @@ function PastTenseUsedToBe() {
         [{ text: "k" }, "atatwʌni·yo", "hné·"],
         ["yáh teʔ", { text: "k" }, "atatwʌni·yo", "hné·"],
       ],
-      type: "PB",
+      type: "PR",
     },
     {
       en: [
@@ -350,7 +350,7 @@ function PastTenseUsedToBe() {
         [{ text: "yukni" }, "nyákheʔ"],
         [{ text: "yukni" }, "nyákhe", "hkwe̲ʔ"],
       ],
-      type: "PR",
+      type: "PB",
     },
     {
       en: [
@@ -542,10 +542,10 @@ function PastTenseWhen() {
     {
       en: ["I love her / them", "When I loved her / them"],
       one: [
-        ["khe", "nolúkhwa̲ʔ"],
+        [["khe"], "nolúkhwa̲ʔ"],
         ["tshi", { text: "khe" }, "nolúkhwa̲ʔ"],
       ],
-      type: "PB",
+      type: "PP",
     },
     {
       en: ["I am 20 years old", "When I was / used to be 20 years old"],
@@ -878,7 +878,7 @@ function DialogueSection() {
   const part1: DialogueTableData = [
     ["Lonyákheʔ kʌ́ Brad Pitt", "Táh, lonyá·ku nuʔú·wa̲ʔ"],
     ["Úhkaʔ náhteʔ lotinyakú·", "Angelina Jolie lotinyakú"],
-    ["Yáh teʔwakanúhtehkweʔ", "ʌ́·, to·kʌ́skeʔ"],
+    ["Yáh teʔwakanúhtehkwe̲ʔ", "ʌ́·, to·kʌ́skeʔ"],
     [
       "Lotiwila·yʌ́· kʌ́",
       ["ʌ́·", "Yá·yak nihotiwila·yʌ·, kayé·li nihá·ti kháleʔ tehní·khʌʔ"],
@@ -958,7 +958,7 @@ function DialogueSection() {
       "Yáh kʌ́ tehotinyaku·né· kaló· tsiʔ niyo·lé· waʔhotinyakeʔ So·s",
       [
         "Kʌʔ ok naheʔ",
-        "Katlí·n né·n lotinyakú·neʔ kháleʔ yáh só·tsiʔ teyakukweʔtiyó",
+        "Katlí·n né·n lotinyakú·neʔ kháleʔ yáh só·tsiʔ teyakukweʔtiyó̲",
       ],
     ],
     [
@@ -983,7 +983,7 @@ function DialogueSection() {
         "Yáh kʌ́ teʔsanúhteʔ tsiʔ áhsʌ nikutí kunukwé· lotinyakú·neʔ",
         "Kháleʔ oyé·li nihokhsá·tayʌʔ",
       ],
-      ["Yáh to·kʌ́skeʔ té·kʌ", "Ne ok tewáhsʌ úskah niyohslaké nithoyʌ́·ha"],
+      ["Yáh to·kʌ́skeʔ té·kʌ", "Ne ok tewáhsʌ úskah niyohslaké nithoyʌ́·ha̲"],
     ],
     [
       "Sanúhteʔ kʌ́ tsiʔ nihatikhsaʔtáksʌs ne shakoyoʔokúha̲",

@@ -97,7 +97,11 @@ export function SimilarInAppearanceArticle({ level = 1 }: ArticleProps) {
         Similar in Appearance
       </SectionHeading>
       <Text>These words make use of the semi-reflexive feature.</Text>
-      <ParadigmTable columnVisibility={{ pronounEnglish: false }} data={data} />
+      <ParadigmTable
+        audioFolder="module02/look_alike"
+        columnVisibility={{ pronounEnglish: false }}
+        data={data}
+      />
     </Flex>
   );
 }

@@ -32,7 +32,12 @@ const examplesList = [
     "McCartney, Lennon, Harrison and Starr are the last names of the Beatles",
     "McCartney, Lennon, Harrison kháleʔ Starr né· tehatihsʌná·seleʔ Beatles",
   ],
-].map(TableWrapper.mapEnglishAndTranslation);
+]
+  .map(TableWrapper.mapEnglishAndTranslation)
+  .map((row, i) => ({
+    ...row,
+    audioFile: `module02/last_name_examples/${i + 1}.mp3`,
+  }));
 
 export function LastNamesArticle({ level = 1 }: ArticleProps) {
   return (
@@ -40,7 +45,11 @@ export function LastNamesArticle({ level = 1 }: ArticleProps) {
       <SectionHeading id="last-names" level={level}>
         Last Names
       </SectionHeading>
-      <ParadigmTable columnVisibility={{ pronounEnglish: false }} data={data} />
+      <ParadigmTable
+        audioFolder="module02/last_names"
+        columnVisibility={{ pronounEnglish: false }}
+        data={data}
+      />
 
       <SectionHeading
         id="last-names-examples"
@@ -49,7 +58,7 @@ export function LastNamesArticle({ level = 1 }: ArticleProps) {
         Examples
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
+        columns={TableWrapper.columnsEnglishAudio}
         data={examplesList}
       />
     </Flex>
