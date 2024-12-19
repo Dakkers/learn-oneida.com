@@ -3,11 +3,143 @@ import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
 
 export function PeopleArticle({ level = 1 }: ArticleProps) {
+  const dataChildren = [
+    {
+      en: "1 boy",
+      breakdown: [["la"], "ksá·"],
+      pronoun: "m",
+    },
+    {
+      en: ["2 boys", "1 boy + 1 girl"],
+      breakdown: [["te", "DUAL"], ["hni"], "ksá·"],
+      pronoun: "2m",
+    },
+    {
+      en: ["3+ boys", "Mix of boys and girls"],
+      breakdown: [["lati"], "ksaʔshúha̲"],
+      pronoun: "ms",
+    },
+    {
+      en: "1 girl",
+      breakdown: [["ye"], "ksá·"],
+      pronoun: "f",
+    },
+    {
+      en: "2 girls",
+      breakdown: [["te", "DUAL"], ["kni"], "ksá·"],
+      pronoun: "2f",
+    },
+    {
+      en: ["3+ girls"],
+      breakdown: [["kuti"], "ksaʔshúha̲"],
+      pronoun: "fs",
+    },
+  ];
+
+  const dataAdolescents = [
+    {
+      en: "1 young man",
+      breakdown: [["la"], "nikʌtlúha̲"],
+      pronoun: "m",
+    },
+    {
+      en: ["2 young men"],
+      breakdown: [["te", "DUAL"], ["hni"], "nikʌtlúha̲"],
+      pronoun: "2m",
+    },
+    {
+      en: ["3+ young men"],
+      breakdown: [["lati"], "nikʌtluʔokúha̲"],
+      pronoun: "ms",
+    },
+    {
+      en: "1 young woman",
+      breakdown: [["ye"], "yaʔtaséha̲"],
+      pronoun: "f",
+    },
+    {
+      en: "2 young women",
+      breakdown: [["te", "DUAL"], ["kni"], "yaʔtaséha̲"],
+      pronoun: "2f",
+    },
+    {
+      en: ["3+ young women"],
+      breakdown: [["kuti"], "yaʔtaseʔokúha̲"],
+      pronoun: "fs",
+    },
+  ];
+
+  const dataAdults = [
+    {
+      en: "1 man",
+      breakdown: [["l"], "u·kwé̲·"],
+      pronoun: "m",
+    },
+    {
+      en: ["2 men", "1 man + 1 woman"],
+      breakdown: [["te", "DUAL"], ["hn"], "u·kwé̲·"],
+      pronoun: "2m",
+    },
+    {
+      en: ["3 men", "Mix of men and women"],
+      breakdown: [["lʌn"], "u·kwé̲·"],
+      pronoun: "ms",
+    },
+    {
+      en: "1 woman",
+      breakdown: [["yak"], "u·kwé̲·"],
+      pronoun: "f",
+    },
+    {
+      en: "2 women",
+      breakdown: [["te", "DUAL"], ["kn"], "u·kwé̲·"],
+      pronoun: "2f",
+    },
+    {
+      en: ["3+ women"],
+      breakdown: [["kun"], "u·kwé̲·"],
+      pronoun: "fs",
+    },
+  ];
+
+  const dataOlderPeople = [
+    {
+      en: "1 older man",
+      breakdown: [["lo"], "kstʌ́ha̲"],
+      pronoun: "m",
+    },
+    {
+      en: ["2 older men", "1 older man + 1 older woman"],
+      breakdown: [["loti"], "kstʌ́ha̲"],
+      pronoun: "2m",
+    },
+    {
+      en: ["3+ older men", "Mix of older men and older women"],
+      breakdown: [["loti"], "kstʌhokúha̲"],
+      pronoun: "ms",
+    },
+    {
+      en: "1 older woman",
+      breakdown: [["ako"], "kstʌ́ha̲"],
+      pronoun: "f",
+    },
+    {
+      en: "2 older women",
+      breakdown: [["yoti"], "kstʌ́ha̲"],
+      pronoun: "2f",
+    },
+    {
+      en: ["3+ older women"],
+      breakdown: [["yoti"], "kstʌhokúha̲"],
+      pronoun: "fs",
+    },
+  ];
+
   return (
     <>
       <SectionHeading id="people-article" level={level}>
@@ -29,7 +161,10 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsParadigmRed}
-        data={dataChildren}
+        data={dataChildren.map((val) => ({
+          ...val,
+          audioFile: `module01/children/${val.pronoun}.mp3`,
+        }))}
       />
 
       <SectionHeading
@@ -40,7 +175,10 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsParadigmRed}
-        data={dataAdolescents}
+        data={dataAdolescents.map((val) => ({
+          ...val,
+          audioFile: `module01/adolescents/${val.pronoun}.mp3`,
+        }))}
       />
 
       <SectionHeading
@@ -51,7 +189,10 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         columns={TableWrapper.columnsParadigmRed}
-        data={dataAdults}
+        data={dataAdults.map((val) => ({
+          ...val,
+          audioFile: `module01/adults/${val.pronoun}.mp3`,
+        }))}
       />
 
       <SectionHeading
@@ -70,116 +211,11 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
       </Text>
       <TableWrapper
         columns={TableWrapper.columnsParadigmBlue}
-        data={dataOlderPeople}
+        data={dataOlderPeople.map((val) => ({
+          ...val,
+          audioFile: `module01/older_people/${val.pronoun}.mp3`,
+        }))}
       />
     </>
   );
 }
-
-const dataChildren = [
-  {
-    en: "1 boy",
-    breakdown: [{ text: "la" }, "ksá·"],
-  },
-  {
-    en: ["2 boys", "1 boy + 1 girl"],
-    breakdown: [["te", "DUAL"], { text: "hni" }, "ksá·"],
-  },
-  {
-    en: ["3+ boys", "Mix of boys and girls"],
-    breakdown: [{ text: "lati" }, "ksaʔshúha̲"],
-  },
-  {
-    en: "1 girl",
-    breakdown: [{ text: "ye" }, "ksá·"],
-  },
-  {
-    en: "2 girls",
-    breakdown: [["te", "DUAL"], { text: "kni" }, "ksá·"],
-  },
-  {
-    en: ["3+ girls"],
-    breakdown: [{ text: "kuti" }, "ksaʔshúha̲"],
-  },
-];
-
-const dataAdolescents = [
-  {
-    en: "1 young man",
-    breakdown: [{ text: "la" }, "nikʌtlúha̲"],
-  },
-  {
-    en: ["2 young men"],
-    breakdown: [["te", "DUAL"], { text: "hni" }, "nikʌtlúha̲"],
-  },
-  {
-    en: ["3+ young men"],
-    breakdown: [{ text: "lati" }, "nikʌtluʔokúha̲"],
-  },
-  {
-    en: "1 young woman",
-    breakdown: [{ text: "ye" }, "yaʔtaséha̲"],
-  },
-  {
-    en: "2 young women",
-    breakdown: [["te", "DUAL"], { text: "kni" }, "yaʔtaséha̲"],
-  },
-  {
-    en: ["3+ young women"],
-    breakdown: [{ text: "kuti" }, "yaʔtaseʔokúha̲"],
-  },
-];
-
-const dataAdults = [
-  {
-    en: "1 man",
-    breakdown: [{ text: "l" }, "u·kwé̲·"],
-  },
-  {
-    en: ["2 men", "1 man + 1 woman"],
-    breakdown: [["te", "DUAL"], { text: "hn" }, "u·kwé̲·"],
-  },
-  {
-    en: ["3 men", "Mix of men and women"],
-    breakdown: [{ text: "lʌn" }, "u·kwé̲·"],
-  },
-  {
-    en: "1 woman",
-    breakdown: [{ text: "yak" }, "u·kwé̲·"],
-  },
-  {
-    en: "2 women",
-    breakdown: [["te", "DUAL"], { text: "kn" }, "u·kwé̲·"],
-  },
-  {
-    en: ["3+ women"],
-    breakdown: [{ text: "kun" }, "u·kwé̲·"],
-  },
-];
-
-const dataOlderPeople = [
-  {
-    en: "1 older man",
-    breakdown: [{ text: "lo" }, "kstʌ́ha̲"],
-  },
-  {
-    en: ["2 older men", "1 older man + 1 older woman"],
-    breakdown: [{ text: "loti" }, "kstʌ́ha̲"],
-  },
-  {
-    en: ["3+ older men", "Mix of older men and older women"],
-    breakdown: [{ text: "loti" }, "kstʌhokúha̲"],
-  },
-  {
-    en: "1 older woman",
-    breakdown: [{ text: "ako", type: "PLB" }, "kstʌ́ha̲"],
-  },
-  {
-    en: "2 older women",
-    breakdown: [{ text: "yoti" }, "kstʌ́ha̲"],
-  },
-  {
-    en: ["3+ older women"],
-    breakdown: [{ text: "yoti" }, "kstʌhokúha̲"],
-  },
-];
