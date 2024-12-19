@@ -77,7 +77,7 @@ export default function LearnModule01() {
         <TOC.Item.Phrase
           label="to know, to be in the know"
           word="anúhteʔ"
-          value="anúhte"
+          value="anuhte"
         />
 
         <TOC.Item label="Particles" value="particles" />
@@ -135,6 +135,7 @@ export default function LearnModule01() {
       </Text>
       <ParadigmTable
         allowedPronouns={[...singlePronouns, "ms", "fs"]}
+        audioFolder="module01/yats"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -157,6 +158,7 @@ export default function LearnModule01() {
         know something&quot;. Here&lsquo;s the paradigm table:
       </Text>
       <ParadigmTable
+        audioFolder="module01/anuhte"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -238,7 +240,7 @@ function DialogueSection() {
     ],
     [
       { one: "Laulhá· kʌ́ neʔn Tá·wet", en: "Is he David?" },
-      { one: "Λ́·, laulhá· né·", en: "Yes, he is David." },
+      { one: "Λ́·, laulhá· né· Tá·wet", en: "Yes, he is David." },
     ],
     [
       { one: "Akaulhá· kʌ́ neʔn Ní·ki", en: "Is she Amelia?" },

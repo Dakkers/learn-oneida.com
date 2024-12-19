@@ -380,7 +380,7 @@ export function createModule9FoodLists(): FoodDatum[] {
   const objLiquor = {
     en: ["liquor", "wine", "beer"],
     key: "Liquor",
-    singular: ["ohne·káˍ·"],
+    singular: ["ohne·ká̲·"],
     plural: ["ohnekaʔokúha̲"],
   };
   const objMacaroni = {

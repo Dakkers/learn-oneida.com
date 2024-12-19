@@ -282,7 +282,10 @@ export function TranslationExercises({ group }: { group?: Group }) {
         ...oneidaToEnglishModule01.map((val) => [...val, true, "01"]),
         ...englishToOneidaModule01,
       ],
-      module02: [...oneidaToEnglishModule02, ...englishToOneidaModule02],
+      module02: [
+        ...oneidaToEnglishModule02.map((val) => [...val, true, "02"]),
+        ...englishToOneidaModule02,
+      ],
       module03: [...oneidaToEnglishModule03, ...englishToOneidaModule03],
       module05: [...oneidaToEnglishModule05, ...englishToOneidaModule05],
       module06: [

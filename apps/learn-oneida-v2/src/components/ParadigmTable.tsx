@@ -231,6 +231,19 @@ function TableRowWrapper({
     context.translationFn,
   );
 
+  const audioFilenamePronoun =
+    typeFallback !== "PB"
+      ? row.pronoun
+      : row.pronoun === "theyni"
+        ? "us"
+        : row.pronoun === "soni"
+          ? "uni"
+          : row.pronoun === "ms"
+            ? "2m"
+            : row.pronoun === "fs"
+              ? "2f"
+              : row.pronoun;
+
   return (
     <PrimitiveTableRow>
       {colVisibility.pronounEnglish && (
@@ -283,7 +296,7 @@ function TableRowWrapper({
 
               {audioFolder && (
                 <PlayButton
-                  filepath={`/audio/${audioFolder}/${row.pronoun}.mp3`}
+                  filepath={`/audio/${audioFolder}/${audioFilenamePronoun}.mp3`}
                 />
               )}
             </Flex>
