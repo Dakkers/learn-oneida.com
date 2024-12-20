@@ -120,18 +120,16 @@ export function StressArticle({ level = 1 }: ArticleProps) {
       >
         Where stress occurs
       </SectionHeading>
-      <Text>
-        There are two rules regarding stress:
-        <List ordered>
-          <List.Item>
-            Every word that has more than one vowel / syllable has a stress
-            (accent).
-          </List.Item>
-          <List.Item>
-            Only one vowel / syllable in a word can be stressed.
-          </List.Item>
-        </List>
-      </Text>
+      <Text>There are two rules regarding stress:</Text>
+      <List ordered>
+        <List.Item>
+          Every word that has more than one vowel / syllable has a stress
+          (accent).
+        </List.Item>
+        <List.Item>
+          Only one vowel / syllable in a word can be stressed.
+        </List.Item>
+      </List>
       <Text>
         The most frequent placement for stress is on the second-to-last syllable
         of a word, for example <b>niwáhsʌ</b>.{" "}
