@@ -2,7 +2,7 @@ import { createParadigmData } from "~/components/ParadigmTable";
 
 export default createParadigmData(
   {
-    translation: "Be like the taste!",
+    translation: "Like the taste!",
     type: "PB",
     phrases: [
       {

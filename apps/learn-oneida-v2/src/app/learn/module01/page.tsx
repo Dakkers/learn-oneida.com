@@ -1,6 +1,13 @@
 "use client";
 
-import { Bleed, Box, Divider, Notice, Text } from "@ukwehuwehneke/ohutsya";
+import {
+  Bleed,
+  Box,
+  Divider,
+  Link,
+  Notice,
+  Text,
+} from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { singlePronouns } from "@ukwehuwehneke/language-components";
@@ -33,27 +40,32 @@ export default function LearnModule01() {
   return (
     <>
       <SectionHeading level={1}>Module 1</SectionHeading>
-      <Box py={4}>
-        <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
-        </Notice>
-      </Box>
-
-      <Text>In this module, we&lsquo;ll cover the following:</Text>
 
       <TOC>
+        <TOC.Item label="Introduction" value="intro" />
         <TOC.Item label="Pronominals" value="pronominals">
           <TOC.Section>
-            <TOC.Item label="English" value="english-pronouns" />
-            <TOC.Item label="Free-standing" value="standalone-pronouns" />
-            <TOC.Item label="Bound" value="bound-pronouns" />
-            <TOC.Item label="Subjective (Red)" value="red-pronominals" />
-            <TOC.Item label="Objective (Blue)" value="blue-pronominals" />
-            <TOC.Item label='"The Purples"' value="purple-pronominals" />
-            <TOC.Item
-              label="Possessive (Light Blue)"
-              value="lightblue-pronominals"
-            />
+            <TOC.Item label="English Pronouns" value="english-pronouns" />
+            <TOC.Item label="Standalone Pronouns" value="standalone-pronouns" />
+            <TOC.Item label="Bound Pronouns" value="bound-pronouns" />
+            <TOC.Section>
+              <TOC.Item
+                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subjective Pronominals (Red)"
+                value="subjective"
+              />
+              <TOC.Item
+                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Objective Pronominals (Blue)"
+                value="objective"
+              />
+              <TOC.Item
+                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Person-to-Person Pronominals (Purple)"
+                value="person-to-person"
+              />
+              <TOC.Item
+                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Possessive Pronominals (Light Blue)"
+                value="objective"
+              />
+            </TOC.Section>
           </TOC.Section>
         </TOC.Item>
 
@@ -97,6 +109,16 @@ export default function LearnModule01() {
       </TOC>
 
       <Divider />
+
+      <SectionHeading id="intro" level={2}>
+        Introduction
+      </SectionHeading>
+
+      <Text>
+        This module assumes a knowledge of the terms "pronominal", "root word",
+        "stem", and "paradigm", all of which are discussed on the{" "}
+        <Link href="/learn/intro">introduction page</Link>.
+      </Text>
 
       <PronominalsArticle level={2} />
 
@@ -142,12 +164,6 @@ export default function LearnModule01() {
         }}
         data={yatsJson}
       />
-      <Notice intent="primary">
-        In this curriculum, the word &quot;paradigm&quot; refers to a list of
-        conjugations for a given root word. When you get a grasp of the
-        different pronominals, you will be able to recall paradigms much more
-        easily.
-      </Notice>
 
       <SectionHeading id="anuhte" level={2}>
         anuhte — to know, to be in the know

@@ -184,6 +184,10 @@ TableWrapper.audioCell = audioCell;
 
 type MapperArgs = unknown | unknown[];
 TableWrapper.mapLeftRight = ([left, right]: MapperArgs[]) => ({ left, right });
+TableWrapper.mapTranslationAndEnglish = ([translation, en]: MapperArgs[]) => ({
+  en,
+  translation,
+});
 TableWrapper.mapEnglishAndTranslation = ([en, translation]: MapperArgs[]) => ({
   en,
   translation,
