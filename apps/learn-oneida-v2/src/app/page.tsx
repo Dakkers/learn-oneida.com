@@ -5,14 +5,15 @@ import { Box, Card, Flex, Link, Text } from "@ukwehuwehneke/ohutsya";
 
 export default function Index() {
   const modules: {
+    href?: string;
     title?: string;
     active?: boolean;
     desc: string;
   }[] = [
     {
+      desc: 'New to Oneida? Not sure what a "root word" is? Start here! This page will introduce you to all of the terminology that will get you going on your language-learning journey.',
+      href: "/introduction",
       title: "Introduction",
-      desc: "Coming soon...",
-      active: false,
     },
     {
       desc: "Pronominals aplenty! This module introduces you to pronominal prefixes, their exceptions when conjugating, some intracacies of the language, people, English names, and a couple verbs.",
@@ -57,7 +58,13 @@ export default function Index() {
 
               {(card.active ?? true) && (
                 <Flex justify="end" pt={4}>
-                  <Link href={`/learn/module${i.toString().padStart(2, "0")}`}>
+                  <Link
+                    href={
+                      card.href
+                        ? `/learn${card.href}`
+                        : `/learn/module${i.toString().padStart(2, "0")}`
+                    }
+                  >
                     Learn
                   </Link>
                 </Flex>

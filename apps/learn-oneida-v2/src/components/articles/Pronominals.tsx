@@ -450,12 +450,12 @@ function ExceptionsSection({ level }: { level: number }) {
         root word.
       </Text>
       <Text>
-        As an example, let&lsquo;s look at the A-stem column, where the root
-        word is <b>attokhaʔ</b>. The translation for &quot;she is wise&quot;
-        without this replacement rule would be <b>yuattokhaʔ</b>.{" "}
-        <Letter>yua</Letter> is not a sound in Oneida so we instead change it to{" "}
-        <Letter>yu</Letter>. Therefore the translation is <b>yuttókhaʔ</b>.{" "}
-        <ExcpPlay num="1" />
+        As an example, let&lsquo;s look at the A-stem column in the red
+        pronominals table, and use the root word <b>attokhaʔ</b>. The
+        translation for &quot;she is wise&quot; without this replacement rule
+        would be <b>yuattokhaʔ</b>. <Letter>yua</Letter> is not a sound in
+        Oneida so we instead change it to <Letter>yu</Letter>. Therefore the
+        translation is <b>yuttókhaʔ</b>. <ExcpPlay num="1" />
       </Text>
 
       <SectionHeading level={level + 1}>Exception 2</SectionHeading>
