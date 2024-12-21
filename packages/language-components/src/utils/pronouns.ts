@@ -155,24 +155,30 @@ export const PURPLES_MAP = {
   i_you: "I → you",
   i_him: "I → him",
   i_her: "I → her",
-  i_u2: "I → you two",
-  i_yall: "I → All of you",
 
   you_me: "You → me",
   you_him: "You → him",
   you_her: "You → her",
-  you_theyni: "You → them & I",
 
   he_me: "He → me",
   he_you: "He → you",
   he_him: "He → him",
   he_her: "He → her",
-  he_u2: "He → you two",
 
   she_me: "She → me",
   she_you: "She → you",
   she_him: "She → him",
   she_her: "She → her",
+};
+
+export const PURPLES_MAP_FULL = {
+  ...PURPLES_MAP,
+  i_u2: "I → you two",
+  i_yall: "I → All of you",
+
+  you_theyni: "You → them & I",
+
+  he_u2: "He → you two",
 
   uni_him: "You & I → him",
 
