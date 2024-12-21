@@ -28,6 +28,7 @@ import { StressArticle } from "~/components/articles/Stress";
 import { GlottalStopArticle } from "~/components/articles/GlottalStop";
 import { LetterHArticle } from "~/components/articles/LetterH";
 import { WhisperedEndingsArticle } from "~/components/articles/WhisperedEndings";
+import { PrepausalEndingsArticle } from "@/components/articles/PrepausalEndings";
 
 const meta: any = () => {
   return [
@@ -40,6 +41,11 @@ export default function LearnModule01() {
   return (
     <>
       <SectionHeading level={1}>Module 1</SectionHeading>
+
+      <Notice intent="negative">
+        This page is undergoing a rewrite of sorts. There is missing content and
+        other content is subject to change.
+      </Notice>
 
       <TOC>
         <TOC.Item label="Introduction" value="intro" />
@@ -78,19 +84,15 @@ export default function LearnModule01() {
           </TOC.Section>
         </TOC.Item>
 
-        <TOC.Item label="Glottal stops" value="glottal" />
-        <TOC.Item label="The letter H" value="letter-h" />
-        <TOC.Item label="Whispered endings" value="whispered-endings" />
+        <TOC.Item label="Glottal Stops" value="glottal" />
+        <TOC.Item label="The Letter H" value="letter-h" />
+        <TOC.Item label="Prepausal Endings" value="prepausal-endings" />
         <TOC.Item.Phrase
           label="to call someone by a name"
           word="yats"
           value="yats"
         />
-        <TOC.Item.Phrase
-          label="to know, to be in the know"
-          word="anúhteʔ"
-          value="anuhte"
-        />
+        <TOC.Item.Phrase label="to know" word="anuhte" value="anuhte" />
 
         <TOC.Item label="Particles" value="particles" />
 
@@ -117,7 +119,7 @@ export default function LearnModule01() {
       <Text>
         This module assumes a knowledge of the terms "pronominal", "root word",
         "stem", and "paradigm", all of which are discussed on the{" "}
-        <Link href="/learn/intro">introduction page</Link>.
+        <Link href="/learn/introduction">introduction page</Link>.
       </Text>
 
       <PronominalsArticle level={2} />
@@ -128,69 +130,20 @@ export default function LearnModule01() {
 
       <LetterHArticle level={2} />
 
-      <WhisperedEndingsArticle level={2} />
+      <PrepausalEndingsArticle level={2} />
 
-      <SectionHeading id="yats" level={2}>
-        yats — my name is...
-      </SectionHeading>
-      <Text>
-        Let&lsquo;s learn our first phrase!{" "}
-        <b>
-          Bob ni· <Pronominal color="p">yuk</Pronominal>yáts
-        </b>{" "}
-        translates to &quot;Bob is my name&quot;. It actually more literally
-        translates to &quot;They call me Bob&quot;. Notice the purple text in
-        the phrase, <Letter>yuk</Letter>. This is from our Purple Pronominals
-        table. <Letter>yats</Letter> is the root word and because it begins with
-        a consonant, we can look for &quot;yuk&quot; in the table under the
-        C-stem column to find that it corresponds to &quot;They → me&quot;.
-      </Text>
-      <Text>
-        <Letter>yats</Letter> is an example of a word that &quot;uses purple
-        pronominals&quot;. Different root words in Oneida use different color
-        pronominals. Some words, such as <b>nú·wehseʔ</b>, can use multiple
-        different color pronominals. Different colors can change the meaning of
-        a root word. We&lsquo;ll learn more about this in module 2.
-      </Text>
-      <Text>
-        A paradigm table for <Letter>yats</Letter> looks like this:
-      </Text>
-      <ParadigmTable
-        allowedPronouns={[...singlePronouns, "ms", "fs"]}
-        audioFolder="module01/yats"
-        columnVisibility={{
-          pronounEnglish: false,
-          pronounOneida: false,
-        }}
-        data={yatsJson}
-      />
-
-      <SectionHeading id="anuhte" level={2}>
-        anuhte — to know, to be in the know
-      </SectionHeading>
-      <Text>
-        Let&lsquo;s learn another phrase! The root word is{" "}
-        <Letter>anuhteʔ</Letter> and it uses blue pronominals. It means &quot;to
-        know something&quot;. Here&lsquo;s the paradigm table:
-      </Text>
-      <ParadigmTable
-        audioFolder="module01/anuhte"
-        columnVisibility={{
-          pronounEnglish: false,
-          pronounOneida: false,
-        }}
-        data={anuhteJson}
-        translationFn={({ pronoun }) => ({
-          verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
-        })}
-      />
+      <NameSection />
+      <KnowSection />
 
       <SectionHeading id="particles" level={2}>
         Particles
       </SectionHeading>
       <Text>
-        In this curriculum, particles refer to words that are common in
-        dialogue.
+        Particles are words that can only occur in one form. They cannot be
+        conjugated in any way. Particles can be tricky, as different particles
+        combined together may form a new particle with a distinct meaning. For
+        example, <b>náhteʔ</b> means "what", <b>ok</b> means "just", but{" "}
+        <b>náhteʔ ok</b> means "something".
       </Text>
       <ParticlesTable group="module01" />
 
@@ -597,6 +550,74 @@ function DialogueSection() {
         Example 11
       </SectionHeading>
       <DialogueTable data={part11} />
+    </>
+  );
+}
+
+function NameSection() {
+  return (
+    <>
+      <SectionHeading id="yats" level={2}>
+        yat — be named
+      </SectionHeading>
+
+      <Text>
+        The root word, <Letter>-yat-</Letter>, means "to be named". It is a
+        C-stem (becuase the first letter is a consonant) that uses purple
+        pronominals.
+      </Text>
+
+      <ParadigmTable
+        allowedPronouns={[...singlePronouns, "ms", "fs"]}
+        audioFolder="module01/yats"
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={yatsJson}
+      />
+
+      <Text>
+        As a concrete example, the phrase{" "}
+        <b>
+          Bob ni· <Pronominal color="p">yuk</Pronominal>yáts
+        </b>{" "}
+        translates to &quot;Bob is my name&quot;. Using the purple pronominals
+        table above, one can see <Letter>yuk</Letter> in the C-stem column
+        corresponds to the direction &quot;They → me&quot;. Thus, this phrase
+        can literaly be translated as "They name me Bob". Colloquially we
+        translate this as "They call me Bob".
+      </Text>
+
+      <Text>
+        Some root words can only take certain kinds of pronominals (e.g. purple,
+        red, blue), while other root words can use multiple.
+      </Text>
+    </>
+  );
+}
+
+function KnowSection() {
+  return (
+    <>
+      <SectionHeading id="anuhte" level={2}>
+        anuhte — to know
+      </SectionHeading>
+      <Text>
+        The root word, <Letter>-anuht(e)-</Letter>, means "to know". It is an
+        A-stem (becuase the first letter is "A") that uses blue pronominals.
+      </Text>
+      <ParadigmTable
+        audioFolder="module01/anuhte"
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={anuhteJson}
+        translationFn={({ pronoun }) => ({
+          verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
+        })}
+      />
     </>
   );
 }
