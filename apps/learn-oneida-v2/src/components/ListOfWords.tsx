@@ -5,7 +5,7 @@ export function ListOfWords({
   offset = 0,
   words,
 }: {
-  filepathBase: string;
+  filepathBase?: string;
   offset?: number;
   words: string[];
 }) {
@@ -15,7 +15,11 @@ export function ListOfWords({
         <List.Item key={i}>
           <Flex gap={2}>
             {w}{" "}
-            <PlayButton filepath={`/audio${filepathBase}/${i + offset}.mp3`} />
+            {filepathBase && (
+              <PlayButton
+                filepath={`/audio${filepathBase}/${i + offset}.mp3`}
+              />
+            )}
           </Flex>
         </List.Item>
       ))}

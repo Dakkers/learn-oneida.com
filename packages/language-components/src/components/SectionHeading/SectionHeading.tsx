@@ -3,7 +3,7 @@ import { Heading, HeadingProps } from "@ukwehuwehneke/ohutsya";
 
 export interface SectionHeadingProps
   extends Partial<Pick<HeadingProps, "align" | "children" | "id" | "intent">> {
-  level: 1 | 2 | 3;
+  level: 1 | 2 | 3 | 4;
 }
 
 export function SectionHeading({
@@ -16,6 +16,7 @@ export function SectionHeading({
     1: "headlineL",
     2: "headlineS",
     3: "titleM",
+    4: "titleS",
   } as const;
 
   return (

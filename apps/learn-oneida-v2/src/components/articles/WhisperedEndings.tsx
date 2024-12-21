@@ -12,12 +12,12 @@ export function WhisperedEndingsArticle({ level = 1 }: ArticleProps) {
         Whispered Endings
       </SectionHeading>
       <Text>
-        This is a very unique feature of Onʌyoteʔa·ká where the last syllable of
-        a word is actually whispered. This occurs only on words that are
-        prepausal (but it doesn&lsquo;t always occur on prepausal words). A
-        prepausal word is a word that occurs at the end of a sentence or is the
-        only word in a sentence. This is written using an underline under the
-        vowel that is whispered, for example <b>áhsʌ̲</b>.
+        This is a very unique feature of Oneida where the last syllable of a
+        word is actually whispered. This occurs only on words that are prepausal
+        (but it doesn&lsquo;t always occur on prepausal words). A prepausal word
+        is a word that occurs at the end of a sentence or is the only word in a
+        sentence. This is written using an underline under the vowel that is
+        whispered, for example <b>áhsʌ̲</b>.
       </Text>
       <Text>
         The alternative to prepausal is medial. You may see the abbreviations PF

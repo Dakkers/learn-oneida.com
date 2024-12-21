@@ -9,6 +9,15 @@ if (process.env.NODE_ENV === 'development') {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  redirects: async () => {
+    return [
+      {
+        source: '/articles/whispered-endings',
+        destination: '/articles/prepausal-endings#prepausal-whispered',
+        permanent: false,
+      },
+    ]
+  },
   typescript: {
     ignoreBuildErrors: true
   }

@@ -131,6 +131,7 @@ function NavbarDesktop() {
           <NavigationMenuTrigger>Learn</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex flex-col w-[240px] gap-3 p-4 ">
+              <ListItem href={`/learn/introduction`} title="Introduction" />
               {moduleNumbers.map((num) => (
                 <ListItem
                   href={`/learn/module${num.padStart(2, "0")}`}

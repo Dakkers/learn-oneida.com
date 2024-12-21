@@ -165,7 +165,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   PB: "text-blue-600",
   PFV: "text-emerald-400",
   PLB: "text-cyan-400",
-  PP: "text-violet-500",
+  PP: "text-violet-700",
   PR: "text-red-600",
   PREP: "text-lime-500",
   PTV: "text-lime-500",

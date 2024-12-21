@@ -16,7 +16,7 @@ const meta: any = () => {
 export default function Articles() {
   const articlesLinguistics = [
     ["/glottal-stop", "Glottal Stop"],
-    ["/pronominals", "Pronominals"],
+    ["/prepausal-endings", "Prepausal Endings"],
     ["/repetitive-conjugation", "Repetitive Conjugation"],
     ["/stress", "Stress and Accents"],
     ["/letter-h", "The Letter H"],

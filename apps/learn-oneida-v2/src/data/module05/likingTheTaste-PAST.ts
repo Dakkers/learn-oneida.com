@@ -3,7 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} used to be like the taste",
+    translation: "{{pronoun}} used to like the taste",
     type: "PB",
     phrases: [
       {

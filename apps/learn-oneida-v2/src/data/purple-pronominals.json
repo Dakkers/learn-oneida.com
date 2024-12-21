@@ -100,13 +100,19 @@
     ]
   },
   {
-    "default": ["takw"],
+    "default": ["skw"],
     "label": ["You → them & I", "All of you → me"],
-    "c": ["takwa"],
+    "c": ["skwa"],
     "i": [
       {
         "excp": "1",
-        "breakdown": ["takw", { "text": "ʌ", "type": "OP" }]
+        "breakdown": ["skw", { "text": "ʌ", "type": "OP" }]
+      }
+    ],
+    "o": [
+      {
+        "excp": "2",
+        "breakdown": ["sky"]
       }
     ]
   },

@@ -1,85 +1,59 @@
-import { ParadigmData } from "~/components/ParadigmTable";
+import { pronouns } from "@ukwehuwehneke/language-components";
+import { createParadigmData, ParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  translation: "{{pronoun}} {{verb}} it",
-  type: "PB",
-  phrases: [
-    {
-      pronoun: "i",
-      phrase: "waknú·wehse̲ʔ",
-      breakdown: [{ text: "wak" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "u",
-      phrase: "sanú·wehse̲ʔ",
-      breakdown: [{ text: "sa" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "m",
-      phrase: "lonú·wehse̲ʔ",
-      breakdown: [{ text: "lo" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "f",
-      phrase: "yakonú·wehse̲ʔ",
-      breakdown: [{ text: "yako" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "it",
-      phrase: "yonú·wehse̲ʔ",
-      breakdown: [{ text: "yo" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "uni",
-      phrase: "yukninú·wehse̲ʔ",
-      breakdown: [{ text: "yukni" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "soni",
-      phrase: "yukninú·wehse̲ʔ",
-      breakdown: [{ text: "yukni" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "u2",
-      phrase: "sninú·wehse̲ʔ",
-      breakdown: [{ text: "sni" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "2m",
-      phrase: "lotinú·wehse̲ʔ",
-      breakdown: [{ text: "loti" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "2f",
-      phrase: "yotinú·wehse̲ʔ",
-      breakdown: [{ text: "yoti" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "us",
-      phrase: "yukwanú·wehse̲ʔ",
-      breakdown: [{ text: "yukwa" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "theyni",
-      phrase: "yukwanú·wehse̲ʔ",
-      breakdown: [{ text: "yukwa" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "swanú·wehse̲ʔ",
-      breakdown: [{ text: "swa" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "ms",
-      phrase: "lotinú·wehse̲ʔ",
-      breakdown: [{ text: "loti" }, "nú·wehse̲ʔ"],
-    },
-    {
-      pronoun: "fs",
-      phrase: "yotinú·wehse̲ʔ",
-      breakdown: [{ text: "yoti" }, "nú·wehse̲ʔ"],
-    },
-  ],
-};
+const data: ParadigmData = createParadigmData(
+  {
+    translation: "{{pronoun}} {{verb}} it",
+    type: "PB",
+    phrases: [
+      {
+        breakdown: [["wak"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["sa"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["lo"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["yako"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["yo"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["yukni"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["yukni"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["sni"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["loti"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["yoti"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["yukwa"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["yukwa"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["swa"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["loti"], "nú·wehse̲ʔ"],
+      },
+      {
+        breakdown: [["yoti"], "nú·wehse̲ʔ"],
+      },
+    ],
+  },
+  pronouns,
+);
 
 export default data;

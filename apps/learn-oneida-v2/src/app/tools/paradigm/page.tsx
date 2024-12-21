@@ -7,7 +7,7 @@ import dataAttokhaJson from "~/data/attokha";
 import dataEhsaksJson from "~/data/ehsak";
 import dataΛtoleJson from "~/data/ʌtole";
 import dataItluJson from "~/data/itlu";
-import dataOtshyusJson from "~/data/otshyus";
+import dataPulling from "~/data/module01/pullingOut-HAB";
 import dataLikeRedJson from "~/data/nuwehse-red";
 
 import dataIsHere from "~/data/module04/is-here";
@@ -130,7 +130,7 @@ function ToolsParadigmInner() {
     ["ehsaks", dataEhsaksJson],
     ["i_tlu", dataItluJson],
     ["like-red", dataLikeRedJson],
-    ["otshyus", dataOtshyusJson],
+    ["otshyus", dataPulling],
     ["ʌtole", dataΛtoleJson],
     ...createModule6VerbListFlat().map((v) => [v.key, v]),
     ...createModule9VerbListFlat().map((v) => [v.key, v]),
