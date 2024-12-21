@@ -1,85 +1,59 @@
-import { ParadigmData } from "~/components/ParadigmTable";
+import { pronouns } from "@ukwehuwehneke/language-components";
+import { createParadigmData, ParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  translation: "{{pronoun}} {{refVerb}} wise",
-  type: "PR",
-  phrases: [
-    {
-      pronoun: "i",
-      phrase: "kattókhaʔ",
-      breakdown: [{ text: "k" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "u",
-      phrase: "sattókhaʔ",
-      breakdown: [{ text: "s" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "m",
-      phrase: "lattókhaʔ",
-      breakdown: [{ text: "l" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "f",
-      phrase: "yuttókhaʔ",
-      breakdown: [{ text: "yu" }, "ttókhaʔ"],
-    },
-    {
-      pronoun: "it",
-      phrase: "wattókhaʔ",
-      breakdown: [{ text: "w" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "uni",
-      phrase: "tyattókhaʔ",
-      breakdown: [{ text: "ty" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "soni",
-      phrase: "yakyattókhaʔ",
-      breakdown: [{ text: "yaky" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "u2",
-      phrase: "tsyattókhaʔ",
-      breakdown: [{ text: "tsy" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "2m",
-      phrase: "hyattókhaʔ",
-      breakdown: [{ text: "hy" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "2f",
-      phrase: "kyattókhaʔ",
-      breakdown: [{ text: "ky" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "us",
-      phrase: "twattókhaʔ",
-      breakdown: [{ text: "tw" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "theyni",
-      phrase: "yakwattókhaʔ",
-      breakdown: [{ text: "yakw" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "swattókhaʔ",
-      breakdown: [{ text: "sw" }, "attókhaʔ"],
-    },
-    {
-      pronoun: "ms",
-      phrase: "luttókhaʔ",
-      breakdown: [{ text: "lu" }, "ttókhaʔ"],
-    },
-    {
-      pronoun: "fs",
-      phrase: "kuttókhaʔ",
-      breakdown: [{ text: "ku" }, "ttókhaʔ"],
-    },
-  ],
-};
+const data: ParadigmData = createParadigmData(
+  {
+    translation: "{{pronoun}} {{refVerb}} wise",
+    type: "PR",
+    phrases: [
+      {
+        breakdown: [["k"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["s"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["l"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["yu"], "ttókhaʔ"],
+      },
+      {
+        breakdown: [["w"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["ty"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["yaky"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["tsy"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["hy"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["ky"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["tw"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["yakw"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["sw"], "attókhaʔ"],
+      },
+      {
+        breakdown: [["lu"], "ttókhaʔ"],
+      },
+      {
+        breakdown: [["ku"], "ttókhaʔ"],
+      },
+    ],
+  },
+  pronouns,
+);
 
 export default data;

@@ -155,17 +155,47 @@ export const PURPLES_MAP = {
   i_you: "I → you",
   i_him: "I → him",
   i_her: "I → her",
+
   you_me: "You → me",
   you_him: "You → him",
   you_her: "You → her",
+
   he_me: "He → me",
   he_you: "He → you",
   he_him: "He → him",
   he_her: "He → her",
+
   she_me: "She → me",
   she_you: "She → you",
   she_him: "She → him",
   she_her: "She → her",
+};
+
+export const PURPLES_MAP_FULL = {
+  ...PURPLES_MAP,
+  i_u2: "I → you two",
+  i_yall: "I → All of you",
+
+  you_theyni: "You → them & I",
+
+  he_u2: "He → you two",
+
+  uni_him: "You & I → him",
+
+  u2_me: "You two → me",
+  u2_him: "You two → him",
+
+  us_her: "All of us → her",
+  us_him: "All of us → him",
+
+  theyni_you: "They & I → you",
+
+  yall_me: "All of you → me",
+  yall_her: "All of you → her",
+
+  cmd_you_me: "You → me (command)",
+  cmd_yall_me: "All of you → me (command)",
+  cmd_u2_me: "You two → me (command)",
 };
 
 export const isPlural = (pronoun: Pronoun) => pluralPronouns.includes(pronoun);
