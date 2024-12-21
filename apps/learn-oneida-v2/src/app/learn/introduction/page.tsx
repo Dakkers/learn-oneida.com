@@ -21,7 +21,7 @@ import dataLikeRedJson from "~/data/nuwehse-red";
 const meta: any = () => {
   return [
     { title: "Introduction" },
-    { name: "description", content: "Module 1 of the Oneida curriculum" },
+    { name: "description", content: "Introduction to the Oneida curriculum" },
   ];
 };
 
@@ -36,14 +36,16 @@ export default function LearnIntroduction() {
       </Box>
 
       <TOC>
-        <TOC.Item label="TODO 1" value="todo">
+        <TOC.Item label="Orthography" value="orthography" />
+        <TOC.Item label="Terminology" value="terminology">
           <TOC.Section>
-            <TOC.Item label="TODO 1.1" value="todo1-1" />
-            <TOC.Item label="TODO 1.2" value="todo1-2" />
+            <TOC.Item label="Root Words" value="root-words" />
+            <TOC.Item label="Pronominal Prefixes" value="pronominals" />
           </TOC.Section>
         </TOC.Item>
 
-        <TOC.Item label="TODO 2" value="todo-2" />
+        <TOC.Item label="Paradigms" value="paradigms" />
+        <TOC.Item label="What's Next?" value="whats-next" />
       </TOC>
 
       <Divider />
@@ -122,7 +124,61 @@ export default function LearnIntroduction() {
         respectively.
       </Text>
 
-      <SectionHeading level={2}>Orthography</SectionHeading>
+      <OrthographySection />
+
+      <SectionHeading id="terminology" level={2}>
+        Terminology
+      </SectionHeading>
+
+      <Text>
+        Before beginning module 1, there are some terms worth clarifying here.
+        Almost all words in Oneida are comprised of three components:
+      </Text>
+
+      <List ordered>
+        <List.Item>A root word</List.Item>
+        <List.Item>A pronominal prefix</List.Item>
+        <List.Item>An aspect suffix</List.Item>
+      </List>
+
+      <Text>Below, the first two terms will be discussed.</Text>
+
+      <RootWordsSection />
+      <PronominalsSection />
+
+      <ParadigmsSection />
+
+      <SectionHeading id="whats-next" level={2}>
+        What's Next?
+      </SectionHeading>
+
+      <Text>
+        To recap, before beginning module one, it is imperative you understand
+        the following:
+      </Text>
+
+      <List>
+        <List.Item>The orthography (writing system) of Oneida</List.Item>
+        <List.Item>How letters are pronounced</List.Item>
+        <List.Item>
+          The terms "root word", "pronominal", "paradigm", "stem"
+        </List.Item>
+        <List.Item>How to identify the stem of a root word</List.Item>
+      </List>
+
+      <Text>
+        Click <Link href="/learn/module01">here</Link> to continue to module 1!
+      </Text>
+    </>
+  );
+}
+
+function OrthographySection() {
+  return (
+    <>
+      <SectionHeading id="orthography" level={2}>
+        Orthography
+      </SectionHeading>
 
       <Text>
         The first thing to learn is Oneida's writing system. There are 6 vowels
@@ -225,25 +281,13 @@ export default function LearnIntroduction() {
         using the <Link href="/practice/soundchart">sound chart</Link>. Being
         familiar with these sounds is the first step to learning Oneida.
       </Text>
+    </>
+  );
+}
 
-      <SectionHeading id="terminology" level={2}>
-        Terminology
-      </SectionHeading>
-
-      <Text>
-        Before beginning module 1, there are some terms worth clarifying here.
-      </Text>
-
-      <Text>Almost all words in Oneida are comprised of three components:</Text>
-
-      <List ordered>
-        <List.Item>A root word</List.Item>
-        <List.Item>A pronominal prefix</List.Item>
-        <List.Item>An aspect suffix</List.Item>
-      </List>
-
-      <Text>Below, the first two terms will be discussed.</Text>
-
+function RootWordsSection() {
+  return (
+    <>
       <SectionHeading id="root-words" level={3}>
         Root Words
       </SectionHeading>
@@ -282,18 +326,50 @@ export default function LearnIntroduction() {
         reiterate: you can't use this root word on its own! However, to become a
         proficient speaker, you need to be able to identify root words in
         conversation and in writing, and also conjugate root words
-        appropriately.
+        appropriately. Below is another example:
       </Text>
 
-      <Text>TODO - Show an example for nouns (nuhs)</Text>
+      <List>
+        <List.Item>
+          <b>aknúhsaʔ</b> - my house
+        </List.Item>
+        <List.Item>
+          <b>sanúhsaʔ</b> - your house
+        </List.Item>
+        <List.Item>
+          <b>laonúhsaʔ</b> - his house
+        </List.Item>
+        <List.Item>
+          <b>akonúhsaʔ</b> - her house
+        </List.Item>
+      </List>
 
+      <Text>
+        In this case, the root is <Letter>nuhs</Letter> which means "house".
+      </Text>
+
+      <Text>
+        Learning the language using root words is known as the "root word
+        method". More information can be found about that{" "}
+        <Link href="https://onkwawenna.info/programs/root-word-method-2/">
+          here
+        </Link>
+        .
+      </Text>
+    </>
+  );
+}
+
+function PronominalsSection() {
+  return (
+    <>
       <SectionHeading id="pronominals" level={3}>
         Pronominal Prefixes
       </SectionHeading>
 
       <Text>
         Pronominal prefixes, often referred to as simply pronominals, are the
-        components of a larger word that convey who is involved. Using the word
+        components of a larger word that convey who is involved. Using the word{" "}
         <Letter>khuni</Letter> again as an example:
       </Text>
 
@@ -342,8 +418,8 @@ export default function LearnIntroduction() {
         Even though the root words are very similar, the prefixes differ. This
         is because these root words begin with different letters, which are
         called <b>stems</b>. There are seven stems: one for each vowel, and one
-        additional one that is used for consonants (called a C-stem). Below are
-        examples of each.
+        additional stem that is used for consonants (called the C-stem). Below
+        are examples of each.
       </Text>
 
       <List>
@@ -373,7 +449,13 @@ export default function LearnIntroduction() {
       </List>
 
       <Text>Root words apply to both nouns and verbs.</Text>
+    </>
+  );
+}
 
+function ParadigmsSection() {
+  return (
+    <>
       <SectionHeading id="paradigms" level={2}>
         Paradigms
       </SectionHeading>
