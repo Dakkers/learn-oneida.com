@@ -11,7 +11,6 @@ import {
   Table,
   TableProps,
   TextArray,
-  // @ts-expect-error TODO
 } from "@ukwehuwehneke/ohutsya";
 
 export function TableWrapper(props: TableProps) {
@@ -80,12 +79,14 @@ function createBreakdownCol(
 const oneidaPronounColumns: TableProps["columns"] = [
   {
     accessorKey: "pronoun",
+    // @ts-expect-error TODO
     cell: (value: Pronoun) => <TextArray>{PRONOUN_MAP_EN[value]}</TextArray>,
     header: "Pronoun (en)",
     key: "pronoun_en",
   },
   {
     accessorKey: "pronoun",
+    // @ts-expect-error TODO
     cell: (value: Pronoun) => (
       <TextArray>{PRONOUN_MAP_ONEIDA[value]}</TextArray>
     ),
@@ -96,14 +97,17 @@ const oneidaPronounColumns: TableProps["columns"] = [
 
 const columnsParadigmRed: TableProps["columns"] = [
   EnglishCol,
+  // @ts-expect-error TODO
   createBreakdownCol("PR"),
 ];
 const columnsParadigmBlue: TableProps["columns"] = [
   EnglishCol,
+  // @ts-expect-error TODO
   createBreakdownCol("PB"),
 ];
 const columnsParadigmPurple: TableProps["columns"] = [
   EnglishCol,
+  // @ts-expect-error TODO
   createBreakdownCol("PP"),
 ];
 const columnsEnglishTranslation: TableProps["columns"] = [
@@ -118,6 +122,7 @@ const columnsEnglishBreakdown: TableProps["columns"] = [
   EnglishCol,
   {
     accessorKey: "breakdown",
+    // @ts-expect-error TODO
     cell: (value: BreakdownArray) => (
       <TextBreakdown breakdown={value} wrap="nowrap" />
     ),
