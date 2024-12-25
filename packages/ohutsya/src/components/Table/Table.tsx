@@ -17,7 +17,7 @@ export interface TableProps {
   columns: Array<{
     accessorKey: string;
     cell?: (value?: unknown, row?: Row) => React.ReactNode;
-    header: React.ReactNode | (() => React.ReactNode);
+    header?: React.ReactNode | (() => React.ReactNode);
     key?: string;
   }>;
   data: Array<Row>;
@@ -34,7 +34,9 @@ export function Table({ bleed = 0, columns, data }: TableProps) {
             <PrimitiveTableRow>
               {columns.map((c) => (
                 <PrimitiveTableHead key={c.key ?? c.accessorKey}>
-                  {typeof c.header === "function" ? c.header() : c.header}
+                  {typeof c.header === "function"
+                    ? c.header()
+                    : c.header ?? null}
                 </PrimitiveTableHead>
               ))}
             </PrimitiveTableRow>

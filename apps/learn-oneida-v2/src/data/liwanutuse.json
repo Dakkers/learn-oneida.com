@@ -5,26 +5,22 @@
     {
       "key": "u_i",
       "phrase": "takliʔwanu·túse̲·",
-      "breakdown": [{ "text": "tak" }, "liʔwanu·túse̲"]
+      "breakdown": [["tak"], "liʔwanu·túse̲"]
     },
     {
       "key": "u_theyni",
       "phrase": "takwaliʔwanu·túse̲·",
-      "breakdown": [{ "text": "takwa" }, "liʔwanu·túse̲"]
+      "breakdown": [["takwa"], "liʔwanu·túse̲"]
     },
     {
       "key": "u_f",
       "phrase": "sheliʔwanu·túse̲·",
-      "breakdown": [{ "text": "she" }, "liʔwanu·túse̲"]
+      "breakdown": [["she"], "liʔwanu·túse̲"]
     },
     {
       "key": "u_m",
       "phrase": "etsliʔwanu·túse̲·",
-      "breakdown": [
-        { "text": "h", "type": "RPL" },
-        { "text": "ets" },
-        "liʔwanu·túse̲"
-      ]
+      "breakdown": [["h", "RPL"], ["ets"], "liʔwanu·túse̲"]
     }
   ]
 }

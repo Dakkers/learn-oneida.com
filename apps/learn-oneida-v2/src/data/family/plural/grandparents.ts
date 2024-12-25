@@ -7,32 +7,32 @@ const data: ParadigmData = {
     {
       pronoun: "i",
       phrase: "yukhsótha̲",
-      breakdown: [{ text: "yuk" }, "hsótha̲"],
+      breakdown: [["yuk"], "hsótha̲"],
     },
     {
       pronoun: "u",
       phrase: "yesahsótha̲",
-      breakdown: [{ text: "yesa" }, "hsótha̲"],
+      breakdown: [["yesa"], "hsótha̲"],
     },
     {
       pronoun: "m",
       phrase: "luwahsótha̲",
-      breakdown: [{ text: "luwa" }, "hsótha̲"],
+      breakdown: [["luwa"], "hsótha̲"],
     },
     {
       pronoun: "f",
       phrase: "shakotihsótha̲",
-      breakdown: [{ text: "shakoti" }, "hsótha̲"],
+      breakdown: [["shakoti"], "hsótha̲"],
     },
     {
       pronoun: "us",
       phrase: "yukhihsothokúha̲",
-      breakdown: [{ text: "yukhi" }, "hsothokúha̲"],
+      breakdown: [["yukhi"], "hsothokúha̲"],
     },
     {
       pronoun: "yall",
       phrase: "yetshihsothokúha̲",
-      breakdown: [{ text: "yetshi" }, "hsothokúha̲"],
+      breakdown: [["yetshi"], "hsothokúha̲"],
     },
   ],
 };

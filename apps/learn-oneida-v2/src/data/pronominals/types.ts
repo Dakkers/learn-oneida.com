@@ -1,8 +1,8 @@
-import { type BreakdownArray } from "@ukwehuwehneke/ohutsya";
+import { type BreakdownArray } from "@ukwehuwehneke/language-components";
 
 type Excp = "1" | "2" | "3" | "4" | "5" | "6";
 
-type Blah =
+type StemData =
   | string
   | {
       excp: Excp | readonly Excp[];
@@ -14,12 +14,12 @@ type Blah =
     };
 
 interface Entry {
-  default: Blah[];
-  c?: Blah[];
-  a?: Blah[];
-  e?: Blah[];
-  i?: Blah[];
-  o?: Blah[];
+  default: StemData[];
+  c?: StemData[];
+  a?: StemData[];
+  e?: StemData[];
+  i?: StemData[];
+  o?: StemData[];
 }
 
 export interface PronominalRules {

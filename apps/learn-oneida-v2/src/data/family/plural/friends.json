@@ -6,7 +6,7 @@
       "pronoun": "i",
       "phrase": "ukwatʌloʔslaʔshúha̲",
       "breakdown": [
-        { "text": "ukw" },
+        ["ukw"],
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
         "ʔshúha̲"
@@ -16,7 +16,7 @@
       "pronoun": "u",
       "phrase": "swatʌloʔslaʔshúha̲",
       "breakdown": [
-        { "text": "sw" },
+        ["sw"],
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
         "ʔshúha̲"
@@ -26,7 +26,7 @@
       "pronoun": "m",
       "phrase": "lonatʌloʔslaʔshúha̲",
       "breakdown": [
-        { "text": "lon" },
+        ["lon"],
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
         "ʔshúha̲"
@@ -36,7 +36,7 @@
       "pronoun": "f",
       "phrase": "lonatʌloʔslaʔshúha̲",
       "breakdown": [
-        { "text": "lon" },
+        ["lon"],
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
         "ʔshúha̲"
@@ -46,7 +46,7 @@
       "pronoun": "f_f",
       "phrase": "onatʌloʔslaʔshúha̲",
       "breakdown": [
-        { "text": "on" },
+        ["on"],
         "atʌloʔsl",
         { "text": "a", "type": "JOIN" },
         "ʔshúha̲"

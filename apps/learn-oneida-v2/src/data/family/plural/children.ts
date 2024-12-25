@@ -32,7 +32,7 @@ const data: ParadigmData = {
     {
       pronoun: "yall",
       phrase: "yetshiyʌʔokúha̲",
-      breakdown: [{ text: "yetshi" }, "yʌʔokúha̲"],
+      breakdown: [["yetshi"], "yʌʔokúha̲"],
     },
   ],
 };

@@ -1,38 +1,38 @@
 import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
-  translation: "{{pronounPossessive}} uncles & aunts",
+  translation: "{{pronounPossessive}} aunts & uncles",
   type: "PP",
   phrases: [
     {
       pronoun: "i",
       phrase: "yuknulhaʔshúha̲",
-      breakdown: [{ text: "yuk" }, "nulhaʔshúha̲"],
+      breakdown: [["yuk"], "nulhaʔshúha̲"],
     },
     {
       pronoun: "u",
       phrase: "yesanulhaʔshúha̲",
-      breakdown: [{ text: "yesa" }, "nulhaʔshúha̲"],
+      breakdown: [["yesa"], "nulhaʔshúha̲"],
     },
     {
       pronoun: "m",
       phrase: "luwanulhaʔshúha̲",
-      breakdown: [{ text: "luwa" }, "nulhaʔshúha̲"],
+      breakdown: [["luwa"], "nulhaʔshúha̲"],
     },
     {
       pronoun: "f",
       phrase: "shakotinulhaʔshúha̲",
-      breakdown: [{ text: "shakoti" }, "nulhaʔshúha̲"],
+      breakdown: [["shakoti"], "nulhaʔshúha̲"],
     },
     {
       pronoun: "us",
       phrase: "yukhinulhaʔshúha̲",
-      breakdown: [{ text: "yukhi" }, "nulhaʔshúha̲"],
+      breakdown: [["yukhi"], "nulhaʔshúha̲"],
     },
     {
       pronoun: "yall",
       phrase: "yetshinulhaʔshúha̲",
-      breakdown: [{ text: "yetshi" }, "nulhaʔshúha̲"],
+      breakdown: [["yetshi"], "nulhaʔshúha̲"],
     },
   ],
 };

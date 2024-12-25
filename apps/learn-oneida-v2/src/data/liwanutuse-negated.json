@@ -24,7 +24,7 @@
       "breakdown": [
         "Tákʌʔ ",
         { "text": "ʌ", "type": "FUT" },
-        { "text": "she" },
+        ["she"],
         "liʔwanu·túse̲"
       ],
       "key": "u_f",

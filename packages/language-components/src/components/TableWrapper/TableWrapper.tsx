@@ -13,6 +13,8 @@ import {
   TextArray,
 } from "@ukwehuwehneke/ohutsya";
 
+export type { TableProps as TableWrapperProps };
+
 export function TableWrapper(props: TableProps) {
   return <Table {...props} />;
 }

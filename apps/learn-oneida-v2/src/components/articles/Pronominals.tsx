@@ -59,6 +59,7 @@ import {
 
 export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
   const level = (_level + 1) as SectionHeadingProps["level"];
+  const sublevel = (level + 1) as SectionHeadingProps["level"];
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="pronominals" level={_level}>
@@ -119,7 +120,7 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         most common.
       </Notice>
 
-      <SectionHeading id="subjective" level={level + 1}>
+      <SectionHeading id="subjective" level={sublevel}>
         Subjective Pronominals (Red)
       </SectionHeading>
       <AccordionWrapper
@@ -135,10 +136,9 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         ]}
       />
       <Text>Here is the full table of the pronominals on their own.</Text>
-      {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsPrimitiveTable color="red" data={redPronominalsJson} />
 
-      <SectionHeading id="objective" level={level + 1}>
+      <SectionHeading id="objective" level={sublevel}>
         Objective Pronominals (Blue)
       </SectionHeading>
       <AccordionWrapper
@@ -153,10 +153,9 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
           [null, "-ʌtuni-"],
         ]}
       />
-      {/* @ts-expect-error To be addressed in LO-17 */}
       <PronominalsPrimitiveTable color="blue" data={bluePronominalsJson} />
 
-      <SectionHeading id="person-to-person" level={level + 1}>
+      <SectionHeading id="person-to-person" level={sublevel}>
         Person-to-Person Pronominals (Purple)
       </SectionHeading>
       <AccordionWrapper
@@ -173,7 +172,7 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       />
       <PronominalsPrimitiveTable color="purple" data={purplePronominalsJson} />
 
-      <SectionHeading id="possessive" level={level + 1}>
+      <SectionHeading id="possessive" level={sublevel}>
         Possessive Pronominals (Light Blue)
       </SectionHeading>
       <AccordionWrapper
@@ -190,7 +189,6 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       />
       <PronominalsPrimitiveTable
         color="lightblue"
-        // @ts-expect-error To be addressed in LO-17
         data={lightbluePronominalsJson}
       />
 
@@ -247,7 +245,7 @@ function PronominalsPrimitiveTable({
   color: PronominalColor;
   data: PronominalRules | PronominalRulesPurple;
 }) {
-  const stems = ["c", "a", "i", "e", "o"];
+  const stems = ["c", "a", "i", "e", "o"] as const;
   const isPurple = color === "purple";
   const rowsToUse = isPurple ? pronounsPurpleFull : pronouns;
 
@@ -280,6 +278,7 @@ function PronominalsPrimitiveTable({
                 )}
               </PrimitiveTableCell>
               {stems.map((stem) => {
+                // @ts-expect-error TODO pronominals
                 const datum = data[pronoun];
                 const content = datum[stem] ?? datum.default;
 
@@ -418,14 +417,15 @@ function AccordionWrapper({
   );
 }
 
-function ExceptionsSection({ level }: { level: number }) {
+function ExceptionsSection({ level }: { level: SectionHeadingProps["level"] }) {
+  const sublevel = (level + 1) as SectionHeadingProps["level"];
   return (
     <>
       <SectionHeading id="exceptions" level={level}>
         Exceptions
       </SectionHeading>
 
-      <SectionHeading level={level + 1}>Exception 1</SectionHeading>
+      <SectionHeading level={sublevel}>Exception 1</SectionHeading>
       <Text>
         The vowel with a squiggly underline replaces the leading vowel of the
         root word.
@@ -439,7 +439,7 @@ function ExceptionsSection({ level }: { level: number }) {
         translation is <b>yuttókhaʔ</b>. <ExcpPlay num="1" />
       </Text>
 
-      <SectionHeading level={level + 1}>Exception 2</SectionHeading>
+      <SectionHeading level={sublevel}>Exception 2</SectionHeading>
       <Text>
         The <Letter>h</Letter> is not written or pronounced when nothing is
         attached in front of the pronominal. However, when anything is attached
@@ -448,14 +448,14 @@ function ExceptionsSection({ level }: { level: number }) {
         <b>yáh tehsnú·wehse̲ʔ</b>. <ExcpPlay num="2-2" />
       </Text>
 
-      <SectionHeading level={level + 1}>Exception 3</SectionHeading>
+      <SectionHeading level={sublevel}>Exception 3</SectionHeading>
       <Text>
         The letter <Letter>e</Letter> only appears on root words that begin with
         a double consonant or a glottal stop.
       </Text>
       <Notice intent="warning">Examples are needed for this exception.</Notice>
 
-      <SectionHeading level={level + 1}>Exception 4</SectionHeading>
+      <SectionHeading level={sublevel}>Exception 4</SectionHeading>
       <Text>
         The <Letter>ik</Letter> prefix is attached to most (but not all) single
         syllable roots. The <Letter>i</Letter> in <Letter>ik</Letter> is used
@@ -464,7 +464,7 @@ function ExceptionsSection({ level }: { level: number }) {
         <ExcpPlay num="4-1" /> and <b>yáh té·kyʌheʔ</b>. <ExcpPlay num="4-2" />
       </Text>
 
-      <SectionHeading level={level + 1}>Exception 5</SectionHeading>
+      <SectionHeading level={sublevel}>Exception 5</SectionHeading>
       <Text>
         The prefix <code>ts</code> is attached to all roots beginning with{" "}
         <Letter>y</Letter> and <Letter>i</Letter>. The <Letter>t</Letter>{" "}
@@ -482,7 +482,7 @@ function ExceptionsSection({ level }: { level: number }) {
         </List.Item>
       </List>
 
-      <SectionHeading level={level + 1}>Exception 6</SectionHeading>
+      <SectionHeading level={sublevel}>Exception 6</SectionHeading>
       <Text>
         The prefix <Letter>it</Letter> is attached to all roots beginning with{" "}
         <Letter>hs</Letter> and the <Letter>i</Letter> disappears when anything

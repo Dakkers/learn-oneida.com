@@ -28,7 +28,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Times
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.timePhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.timePhrases}
+      />
 
       <SectionHeading
         id="times-of-day-daytime"
@@ -36,7 +40,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Day, daytime
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.dayPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.dayPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-morning"
@@ -44,7 +52,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Morning
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.morningPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.morningPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-afternoon"
@@ -52,7 +64,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Afternoon
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.afternoonPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.afternoonPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-evening"
@@ -60,7 +76,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Evening
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.eveningPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.eveningPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-night"
@@ -68,7 +88,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Night
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.nightPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.nightPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-tomorrow"
@@ -76,7 +100,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Tomorrow
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.tomorrowPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.tomorrowPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-yesterday"
@@ -84,7 +112,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Yesterday
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.yesterdayPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.yesterdayPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-week"
@@ -92,7 +124,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Week
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.weekPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.weekPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-weekend"
@@ -100,7 +136,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Weekend
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.weekendPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.weekendPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-month"
@@ -108,7 +148,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Months
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.monthPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.monthPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-year"
@@ -116,7 +160,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Years
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.yearPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.yearPhrases}
+      />
 
       <SectionHeading
         id="times-of-day-other"
@@ -124,7 +172,11 @@ export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
       >
         Other Phrases
       </SectionHeading>
-      <TableWrapper columns={columns} data={data.otherPhrases} />
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={columns}
+        data={data.otherPhrases}
+      />
     </Flex>
   );
 }

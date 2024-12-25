@@ -2,7 +2,7 @@ import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
   translation: "{{pronounPossessive}} mother",
-  type: "PLB",
+  type: "PB",
   phrases: [
     {
       pronoun: "i",
@@ -17,7 +17,7 @@ const data: ParadigmData = {
     {
       pronoun: "m",
       phrase: "lonulhá·",
-      breakdown: [{ text: "lo", type: "PB" }, "nulhá·"],
+      breakdown: [{ text: "lo" }, "nulhá·"],
     },
     {
       pronoun: "f",

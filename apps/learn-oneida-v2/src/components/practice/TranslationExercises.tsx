@@ -3,7 +3,6 @@ import { TableWrapper, TableWrapperProps } from "@/components/TableWrapper";
 import React from "react";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
-import { PlayIcon } from "lucide-react";
 
 const oneidaToEnglishModule01 = [
   ["1", "Né· lokstʌ́ha lanú·wehseʔ uní né· kháleʔ akokstʌ́ha yenú·wehse̲ʔ"],
@@ -235,6 +234,7 @@ function TranslationExerciseTable({
         },
         {
           accessorKey: "question",
+          // @ts-expect-error TODO - TableWrapper/Table generics
           cell: (
             value: string,
             row: {

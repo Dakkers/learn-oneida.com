@@ -92,7 +92,7 @@ export const PRONOUN_MAP_EN_POSSESSIVE: Record<Pronoun, string | string[]> = {
   "2f": "Their (2 females)",
   us: "All our",
   theyni: "All our (they and I)",
-  yall: "All of yours",
+  yall: "All of yours'",
   ms: ["All (males) their", "All (males + females) their"],
   fs: "All (females) their",
 } as const;
@@ -149,6 +149,24 @@ export const REF_VERB_PASTTENSE_ALT_MAP: Record<Pronoun, string> = {
   yall: "were",
   ms: "were",
   fs: "were",
+} as const;
+
+export const REFLEXIVE_MAP: Record<Pronoun, string> = {
+  i: "myself",
+  u: "yourself",
+  m: "himself",
+  f: "herself",
+  it: "itself",
+  uni: "ourselves",
+  soni: "ourselves",
+  u2: "yourselves",
+  "2m": "themselves",
+  "2f": "themselves",
+  us: "ourselves",
+  theyni: "ourselves",
+  yall: "yourselves",
+  ms: "themselves",
+  fs: "themselves",
 } as const;
 
 export const pronounsPurple = [

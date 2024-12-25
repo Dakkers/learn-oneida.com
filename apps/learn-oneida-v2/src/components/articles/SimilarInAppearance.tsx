@@ -32,12 +32,7 @@ const data = createParadigmData(
         ],
       },
       {
-        breakdown: [
-          "tetsi",
-          { text: "tsy" },
-          { text: "at", type: "SRFL" },
-          "yelʌ́",
-        ],
+        breakdown: ["tetsi", ["tsy"], { text: "at", type: "SRFL" }, "yelʌ́"],
       },
       {
         breakdown: [
@@ -72,12 +67,7 @@ const data = createParadigmData(
         ],
       },
       {
-        breakdown: [
-          "tetsi",
-          { text: "sw" },
-          { text: "at", type: "SRFL" },
-          "yelʌ́",
-        ],
+        breakdown: ["tetsi", ["sw"], { text: "at", type: "SRFL" }, "yelʌ́"],
       },
       {
         breakdown: ["tes", { text: "hu" }, { text: "t", type: "SRFL" }, "yelʌ́"],

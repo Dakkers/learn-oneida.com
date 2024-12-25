@@ -19,8 +19,8 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       [{ text: "s" }, "ukweʔtiyo", "hné·"],
     ],
     [
-      [{ text: "h", type: "RPL" }, { text: "l" }, "ukweʔtiyó"],
-      [{ text: "h", type: "RPL" }, { text: "l" }, "ukweʔtiyo", "hné·"],
+      [["h", "RPL"], { text: "l" }, "ukweʔtiyó"],
+      [["h", "RPL"], { text: "l" }, "ukweʔtiyo", "hné·"],
     ],
     [
       [{ text: "yak" }, "ukweʔtiyó"],
@@ -41,8 +41,8 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       [{ text: "s" }, "ukweʔtaksʌ́", "hneʔ"],
     ],
     [
-      [{ text: "h", type: "RPL" }, { text: "l" }, "ukweʔtáksʌ"],
-      [{ text: "h", type: "RPL" }, { text: "l" }, "ukweʔtaksʌ́", "hneʔ"],
+      [["h", "RPL"], { text: "l" }, "ukweʔtáksʌ"],
+      [["h", "RPL"], { text: "l" }, "ukweʔtaksʌ́", "hneʔ"],
     ],
     [
       [{ text: "yak" }, "ukweʔtáksʌ"],
@@ -59,8 +59,8 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       [{ text: "k" }, "eksaʔtiyo", "hné·"],
     ],
     [
-      [{ text: "h", type: "RPL" }, { text: "s" }, "eksaʔtiyó"],
-      [{ text: "h", type: "RPL" }, { text: "s" }, "eksaʔtiyo", "hné·"],
+      [["h", "RPL"], { text: "s" }, "eksaʔtiyó"],
+      [["h", "RPL"], { text: "s" }, "eksaʔtiyo", "hné·"],
     ],
     [
       [{ text: "la" }, "ksaʔtiyó"],

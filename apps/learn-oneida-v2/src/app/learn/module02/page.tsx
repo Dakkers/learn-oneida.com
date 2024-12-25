@@ -35,6 +35,7 @@ import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_EN_OBJECTIVE,
   PURPLES_MAP,
+  Pronoun,
   arrayify,
   pronouns,
 } from "@ukwehuwehneke/language-components";
@@ -86,7 +87,7 @@ export default function LearnModule02() {
         <TOC.Item
           label={
             <>
-              New verbs: <b>nuwehseʔ, yʌteli, nolukhwaʔ</b>
+              New verbs: <b>yʌteli, nolukhwaʔ</b>
             </>
           }
           value="new-verbs"
@@ -195,17 +196,26 @@ export default function LearnModule02() {
   );
 }
 
+const translationFnLike = ({ pronoun }: { pronoun: Pronoun }) => ({
+  verb: ["it", "m", "f"].includes(pronoun) ? "likes" : "like",
+});
+
+const translationFnKnow = ({ pronoun }: { pronoun: Pronoun }) => ({
+  verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
+});
+
+const translationFnLove = ({ pronoun }: { pronoun: Pronoun }) => ({
+  verb: ["it", "m", "f"].includes(pronoun) ? "loves" : "love",
+});
+
 function VerbsSection() {
   return (
     <>
       <SectionHeading id="new-verbs" level={2}>
         New verbs
       </SectionHeading>
-      <Text>Below are the paradigms for three new verbs:</Text>
+      <Text>Below are the paradigms for two new verbs:</Text>
       <List>
-        <List.Item>
-          <b>nuwehseʔ</b> — to like
-        </List.Item>
         <List.Item>
           <b>yʌteli</b> — to know, to be familiar with
         </List.Item>
@@ -214,45 +224,26 @@ function VerbsSection() {
         </List.Item>
       </List>
       <Text>
-        All of these begin with a consonant so they use C-stem pronominals.
+        Both of these begin with a consonant so they use C-stem pronominals.
       </Text>
 
       <SectionHeading id="new-verbs-red" level={3}>
         Red pronominals
       </SectionHeading>
-      <VerbsTable
-        color="red"
-        enData={PRONOUN_MAP_EN}
-        headerText="... {{verb}} it"
-        keys={[...pronouns]}
-        knowData={yʌteliRed}
-        likeData={nuwehseRed}
-        loveData={nolukhwaRed}
-      />
+      <ParadigmTable data={yʌteliRed} translationFn={translationFnKnow} />
+      <ParadigmTable data={nolukhwaRed} translationFn={translationFnLove} />
+
       <SectionHeading id="new-verbs-blue" level={3}>
         Blue pronominals
       </SectionHeading>
-      <VerbsTable
-        color="blue"
-        enData={PRONOUN_MAP_EN_OBJECTIVE}
-        headerText="it {{verb}} ..."
-        keys={[...pronouns]}
-        knowData={yʌteliBlue}
-        likeData={nuwehseBlue}
-        loveData={nolukhwaBlue}
-      />
+      <ParadigmTable data={yʌteliBlue} translationFn={translationFnKnow} />
+      <ParadigmTable data={nolukhwaBlue} translationFn={translationFnLove} />
+
       <SectionHeading id="new-verbs-purple" level={3}>
         Purple pronominals
       </SectionHeading>
-      <VerbsTable
-        color="purple"
-        enData={PURPLES_MAP}
-        headerText="... {{verb}} ..."
-        keys={Object.keys(PURPLES_MAP)}
-        knowData={yʌteliPurple}
-        likeData={nuwehsePurple}
-        loveData={nolukhwaPurple}
-      />
+      <ParadigmTable data={yʌteliPurple} translationFn={translationFnKnow} />
+      <ParadigmTable data={nolukhwaPurple} translationFn={translationFnLove} />
     </>
   );
 }
@@ -275,15 +266,9 @@ function ReflexiveSection() {
         adding <Letter>atat</Letter> to the root word. Adding this prefix
         &quot;changes&quot; the root word to use an A-stem.
       </Text>
-      <VerbsTable
-        color="red"
-        enData={PRONOUN_MAP_EN}
-        headerText="... {{verb}} oneself"
-        keys={[...pronouns]}
-        knowData={yʌteliRefl}
-        likeData={nuwehseRefl}
-        loveData={nolukhwaRefl}
-      />
+      <ParadigmTable data={nuwehseRefl} translationFn={translationFnLike} />
+      <ParadigmTable data={yʌteliRefl} translationFn={translationFnKnow} />
+      <ParadigmTable data={nolukhwaRefl} translationFn={translationFnLove} />
     </>
   );
 }
@@ -291,7 +276,7 @@ function ReflexiveSection() {
 function ReciprocalSection() {
   const pronounSubset = [...dualicPronouns, ...pluralPronouns];
 
-  const knowData = [
+  const knowData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelí̲"],
@@ -304,7 +289,7 @@ function ReciprocalSection() {
     [["te", "REFL"], ["ku"], ["tat", "REFL"], "yʌtelí̲"],
   ];
 
-  const likeData = [
+  const likeData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
@@ -317,7 +302,7 @@ function ReciprocalSection() {
     [["te", "REFL"], ["ku"], ["tat", "REFL"], "nú·wehse̲ʔ"],
   ];
 
-  const loveData = [
+  const loveData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
@@ -330,12 +315,14 @@ function ReciprocalSection() {
     [["te", "REFL"], ["ku"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
   ];
 
-  const formatBreakdownsToPhrases = (data: Array<string | string[]>[]) => ({
+  const formatBreakdownsToPhrases = (verb: string, data: BreakdownArray[]) => ({
     phrases: data.map((breakdown, i) => ({
       breakdown,
       phrase: convertBreakdownToPlainText(breakdown),
       pronoun: pronounSubset[i],
     })),
+    translation: `{{pronoun}} ${verb} each other`,
+    type: "PR" as const,
   });
 
   return (
@@ -344,119 +331,38 @@ function ReciprocalSection() {
         Reciprocal
       </SectionHeading>
       <Text>
-        We can go even further and add yet another prefix to a root word to make
-        the root word apply between two subjects &quot;in each direction&quot;.
-        In English, an example of this is &quot;Someone and I like each
+        You can go even further and add yet another prefix to a word to make the
+        word apply between two subjects &quot;in each direction&quot;. In
+        English, an example of this is &quot;Someone and I like each
         other&quot;. The term for this is &quot;reciprocal&quot;.
       </Text>
       <Text>
-        To translate this sentence into Oneida, let&lsquo;s first take the root
-        word for &quot;to like&quot;, <b>nuwehseʔ</b>, and apply the reflexive
-        prefix: <b>atatnuwehseʔ</b>. This is now an A-stem word so we can look
-        at the red pronominals table to find the corresponding prefix for
-        &quot;Someone and I&quot;, which is <Letter>yaky</Letter>. So far we
-        have <b>yakyatatnú·wehse̲ʔ</b>, but if you look in the previous section,
-        this means &quot;Someone and I like ourselves&quot;. To make it
-        reciprocal, we add <Letter>te</Letter> at the beginning.
+        To translate this sentence into Oneida, first take the root word for
+        &quot;to like&quot;, <b>nuwehseʔ</b>, and apply the reflexive prefix:{" "}
+        <b>atatnuwehseʔ</b>. This is now an A-stem word so we can look at the
+        red pronominals table to find the corresponding prefix for &quot;Someone
+        and I&quot;, which is <Letter>yaky</Letter>. So far we have{" "}
+        <b>yakyatatnú·wehse̲ʔ</b>, but if you look in the previous section, this
+        means &quot;Someone and I like ourselves&quot;. To make it reciprocal,
+        add <Letter>te</Letter> at the beginning.
       </Text>
       <Text>
         So the result is: <i>teyakyatatnú·wehse̲ʔ</i>.
       </Text>
-      <VerbsTable
-        color="red"
-        enData={PRONOUN_MAP_EN}
-        headerText="... {{verb}} oneself"
-        keys={[...pronounSubset]}
-        knowData={formatBreakdownsToPhrases(knowData)}
-        likeData={formatBreakdownsToPhrases(likeData)}
-        loveData={formatBreakdownsToPhrases(loveData)}
+      <ParadigmTable
+        data={formatBreakdownsToPhrases("like", likeData)}
+        translationFn={translationFnLike}
+      />
+      <ParadigmTable
+        data={formatBreakdownsToPhrases("know", knowData)}
+        translationFn={translationFnKnow}
+      />
+      <ParadigmTable
+        data={formatBreakdownsToPhrases("love", loveData)}
+        translationFn={translationFnLove}
       />
     </>
   );
-}
-
-function VerbsTable({
-  color,
-  enData,
-  headerText,
-  keys,
-  knowData,
-  likeData,
-  loveData,
-}: {
-  color: PronominalColor;
-  enData: Record<string, string>;
-  headerText: string;
-  keys: string[];
-  // @ts-expect-error To be addressed in LO-21
-  knowData: SomeData;
-  // @ts-expect-error To be addressed in LO-21
-  likeData: SomeData;
-  // @ts-expect-error To be addressed in LO-21
-  loveData: SomeData;
-}) {
-  let typeFallback: BreakdownType | undefined;
-  if (color === "red") {
-    typeFallback = "PR";
-  } else if (color === "blue") {
-    typeFallback = "PB";
-  } else if (color === "purple") {
-    typeFallback = "PP";
-  }
-
-  const columns = React.useMemo(
-    () => [
-      {
-        accessorKey: "en",
-        header: "",
-      },
-      {
-        accessorKey: "like",
-        cell: (value: BreakdownArray) => (
-          <TextBreakdown breakdown={value} typeFallback={typeFallback} />
-        ),
-        header: headerText.replace(
-          "{{verb}}",
-          color === "blue" ? "likes" : "like",
-        ),
-      },
-      {
-        accessorKey: "know",
-        cell: (value) => (
-          <TextBreakdown breakdown={value} typeFallback={typeFallback} />
-        ),
-        header: headerText.replace(
-          "{{verb}}",
-          color === "blue" ? "knows" : "know",
-        ),
-      },
-      {
-        accessorKey: "love",
-        cell: (value) => (
-          <TextBreakdown breakdown={value} typeFallback={typeFallback} />
-        ),
-        header: headerText.replace(
-          "{{verb}}",
-          color === "blue" ? "loves" : "love",
-        ),
-      },
-    ],
-    [color, headerText, typeFallback],
-  );
-
-  const rows = React.useMemo(
-    () =>
-      keys.map((key) => ({
-        en: enData[key],
-        like: getBreakdown(likeData, key),
-        love: getBreakdown(loveData, key),
-        know: getBreakdown(knowData, key),
-      })),
-    [keys, enData, likeData, knowData, loveData],
-  );
-
-  // @ts-expect-error To be addressed in LO-12
-  return <TableWrapper columns={columns} data={rows} />;
 }
 
 function CommandsSection() {
@@ -852,6 +758,7 @@ function NumbersSection() {
           TableWrapper.columnsEnglishTranslation[0],
           {
             accessorKey: "translation",
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: string | string[], row: any) => (
               <Flex direction="column" gap={2}>
                 {arrayify(value).map((val, i) => (
@@ -989,6 +896,7 @@ function DialogueSection() {
     { one: "ʌ́·", hasAudio: false },
   ];
 
+  // @ts-expect-error TODO
   const mapper = (row) => ({ ...row, hasAudio: row.hasAudio ?? true });
 
   return (
@@ -1059,6 +967,7 @@ function ThingsThatAreTheSameSection() {
         Things that are the same
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={data.map(TableWrapper.mapEnglishAndTranslation).map((row, i) => ({
           ...row,
@@ -1068,10 +977,3 @@ function ThingsThatAreTheSameSection() {
     </>
   );
 }
-
-// @ts-expect-error To be addressed in LO-21
-const getBreakdown = (data, key) =>
-  data.phrases.find(
-    // @ts-expect-error To be addressed in LO-21
-    (p: SomethingElseEntirely) => p.key === key || p.pronoun === key,
-  )?.breakdown;

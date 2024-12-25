@@ -7,49 +7,49 @@ const data: ParadigmData = createParadigmData(
     type: "PB",
     phrases: [
       {
-        breakdown: [["wak"], "nú·wehse̲ʔ"],
+        breakdown: [["wak"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["sa"], "nú·wehse̲ʔ"],
+        breakdown: [["sa"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["lo"], "nú·wehse̲ʔ"],
+        breakdown: [["lo"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["yako"], "nú·wehse̲ʔ"],
+        breakdown: [["yako"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["yo"], "nú·wehse̲ʔ"],
+        breakdown: [["yo"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["yukni"], "nú·wehse̲ʔ"],
+        breakdown: [["yukni"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["yukni"], "nú·wehse̲ʔ"],
+        breakdown: [["yukni"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["sni"], "nú·wehse̲ʔ"],
+        breakdown: [["sni"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["loti"], "nú·wehse̲ʔ"],
+        breakdown: [["loti"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["yoti"], "nú·wehse̲ʔ"],
+        breakdown: [["yoti"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["yukwa"], "nú·wehse̲ʔ"],
+        breakdown: [["yukwa"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["yukwa"], "nú·wehse̲ʔ"],
+        breakdown: [["yukwa"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["swa"], "nú·wehse̲ʔ"],
+        breakdown: [["swa"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["loti"], "nú·wehse̲ʔ"],
+        breakdown: [["loti"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["yoti"], "nú·wehse̲ʔ"],
+        breakdown: [["yoti"], "nú·wehseʔ"],
       },
     ],
   },

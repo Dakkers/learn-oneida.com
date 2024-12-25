@@ -52,7 +52,7 @@ const data: ParadigmData = {
     {
       pronoun: "2f",
       phrase: "naʔ teyonohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "yon" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["yon"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "us",
@@ -67,7 +67,7 @@ const data: ParadigmData = {
     {
       pronoun: "yall",
       phrase: "naʔ tetsyohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "tsy" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["tsy"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "ms",
@@ -77,7 +77,7 @@ const data: ParadigmData = {
     {
       pronoun: "fs",
       phrase: "naʔ teyonohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "yon" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["yon"], "ohsliyá·ku̲"],
     },
   ],
 };

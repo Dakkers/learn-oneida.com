@@ -7,17 +7,17 @@ const data: ParadigmData = {
     {
       pronoun: "i",
       phrase: "yuknulhá·",
-      breakdown: [{ text: "yuk" }, "nulhá·"],
+      breakdown: [["yuk"], "nulhá·"],
     },
     {
       pronoun: "u",
       phrase: "yesanulhá·",
-      breakdown: [{ text: "yesa" }, "nulhá·"],
+      breakdown: [["yesa"], "nulhá·"],
     },
     {
       pronoun: "m",
       phrase: "luwanulhá·",
-      breakdown: [{ text: "luwa" }, "nulhá·"],
+      breakdown: [["luwa"], "nulhá·"],
     },
     {
       pronoun: "f",
@@ -27,12 +27,12 @@ const data: ParadigmData = {
     {
       pronoun: "us",
       phrase: "yukhinulhá·",
-      breakdown: [{ text: "yukhi" }, "nulhá·"],
+      breakdown: [["yukhi"], "nulhá·"],
     },
     {
       pronoun: "yall",
       phrase: "yetshinulhá·",
-      breakdown: [{ text: "yetshi" }, "nulhá·"],
+      breakdown: [["yetshi"], "nulhá·"],
     },
   ],
 };
