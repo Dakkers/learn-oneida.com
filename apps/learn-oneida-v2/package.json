@@ -8,7 +8,7 @@
     "cf:deploy": "pnpm run ci:tailwind:deps && pnpm run ci:build:deps && pnpm run ci:tailwind && npx @cloudflare/next-on-pages@1",
     "ci:build:deps": "pnpm --filter \"@ukwehuwehneke/ohutsya\" build && pnpm --filter \"@ukwehuwehneke/language-components\" build",
     "ci:format": "prettier ./src --check",
-    "ci:tailwind:deps": "pnpm --filter \"@ukwehuwehneke/ohutsya\" tailwind:build",
+    "ci:tailwind:deps": "pnpm --filter \"@ukwehuwehneke/ohutsya\" tailwind:build && pnpm --filter \"@ukwehuwehneke/language-components\" tailwind:build",
     "ci:tailwind": "pnpm run tailwind:build",
     "dev": "next dev",
     "format:write": "prettier ./src --write",
