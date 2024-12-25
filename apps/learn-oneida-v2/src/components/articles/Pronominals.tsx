@@ -1,15 +1,18 @@
 "use client";
-import { Accordion, Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
+import { Accordion, Flex, PlayButton, TextArray } from "@ukwehuwehneke/ohutsya";
 import {
+  pronounsPurple,
+  pronounsPurpleFull,
+  PURPLES_MAP_FULL,
   SectionHeading,
   SectionHeadingProps,
   TableWrapper,
 } from "@ukwehuwehneke/language-components";
 import { ArticleProps } from "./utils";
-import redPronominalsJson from "../../data/red-pronominals.json";
-import bluePronominalsJson from "../../data/blue-pronominals.json";
-import purplePronominalsJson from "../../data/purple-pronominals.json";
-import lightbluePronominalsJson from "../../data/lightblue-pronominals.json";
+import redPronominalsJson from "../../data/pronominals/red";
+import bluePronominalsJson from "../../data/pronominals/blue";
+import purplePronominalsJson from "../../data/pronominals/purple";
+import lightbluePronominalsJson from "../../data/pronominals/lightblue";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
@@ -49,6 +52,10 @@ import dataSleeping from "~/data/module05/sleep-PRS";
 import dataEnjoy from "~/data/module05/enjoyingDoingSomething-PRS";
 import dataLikeTheTaste from "~/data/module05/likingTheTaste-PRS";
 import { ParadigmData, ParadigmTable } from "../ParadigmTable";
+import {
+  PronominalRules,
+  PronominalRulesPurple,
+} from "@/data/pronominals/types";
 
 export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
   const level = (_level + 1) as SectionHeadingProps["level"];
@@ -182,19 +189,6 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         ]}
       />
       <PronominalsPrimitiveTable
-        allowedPronouns={[
-          "i",
-          "u",
-          "m",
-          "f",
-          "it",
-          "uni",
-          "u2",
-          "us",
-          "yall",
-          "ms",
-          "fs",
-        ]}
         color="lightblue"
         // @ts-expect-error To be addressed in LO-17
         data={lightbluePronominalsJson}
@@ -247,21 +241,15 @@ function FreestandingPronounsSection() {
 }
 
 function PronominalsPrimitiveTable({
-  allowedPronouns,
   color,
-  data = [],
+  data,
 }: {
-  allowedPronouns?: Pronoun[];
   color: PronominalColor;
-  data:
-    | Pronoun[]
-    | Array<{
-        label: string;
-      }>;
+  data: PronominalRules | PronominalRulesPurple;
 }) {
   const stems = ["c", "a", "i", "e", "o"];
   const isPurple = color === "purple";
-  const rowsToUse = isPurple ? data : allowedPronouns ?? pronouns;
+  const rowsToUse = isPurple ? pronounsPurpleFull : pronouns;
 
   return (
     <Bleed mx={0}>
@@ -281,21 +269,20 @@ function PronominalsPrimitiveTable({
           </PrimitiveTableRow>
         </PrimitiveTableHeader>
         <PrimitiveTableBody>
-          {rowsToUse.map((row, i) => (
+          {rowsToUse.map((pronoun, i) => (
             <PrimitiveTableRow key={i}>
               <PrimitiveTableCell>
-                {!isPurple
-                  ? // @ts-expect-error To be addressed in LO-17
-                    PRONOUN_MAP_EN[row]
-                  : // @ts-expect-error To be addressed in LO-17
-                    arrayify(row.label).map((label, j) => (
-                      <div key={j}>{label}</div>
-                    ))}
+                {!isPurple ? (
+                  // @ts-expect-error To be addressed in LO-17
+                  <TextArray>{PRONOUN_MAP_EN[pronoun]}</TextArray>
+                ) : (
+                  <TextArray>{PURPLES_MAP_FULL[pronoun]}</TextArray>
+                )}
               </PrimitiveTableCell>
               {stems.map((stem) => {
-                // @ts-expect-error To be addressed in LO-17
-                const datum = isPurple ? row : data[row];
+                const datum = data[pronoun];
                 const content = datum[stem] ?? datum.default;
+
                 return (
                   <PrimitiveTableCell key={stem}>
                     <Flex direction="column">
@@ -353,18 +340,12 @@ function PronominalPrimitiveTableText({
     <TextBreakdown
       // @ts-expect-error To be addressed in LO-17
       breakdown={entry.breakdown.map((b) => {
-        if (typeof b === "string") {
-          return {
-            text: b,
-            type: typeFallback,
-          };
+        const result = arrayify(b);
+        const opIdx = result.findIndex((el) => el === "OP");
+        if (opIdx >= 0) {
+          result[opIdx] = ["OP", typeFallback];
         }
-        // @ts-expect-error To be addressed in LO-17
-        const type = arrayify(b.type ?? []);
-        return {
-          ...b,
-          type: type.includes("RPL") ? type : [...type, typeFallback],
-        };
+        return result;
       })}
       typeFallback={typeFallback}
     />

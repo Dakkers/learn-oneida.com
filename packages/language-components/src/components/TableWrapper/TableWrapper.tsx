@@ -8,7 +8,6 @@ import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "../../utils";
 import {
   Flex,
   PlayButton,
-  Text,
   Table,
   TableProps,
   TextArray,
@@ -81,13 +80,15 @@ function createBreakdownCol(
 const oneidaPronounColumns: TableProps["columns"] = [
   {
     accessorKey: "pronoun",
-    cell: (value: Pronoun) => <Text>{PRONOUN_MAP_EN[value]}</Text>,
+    cell: (value: Pronoun) => <TextArray>{PRONOUN_MAP_EN[value]}</TextArray>,
     header: "Pronoun (en)",
     key: "pronoun_en",
   },
   {
     accessorKey: "pronoun",
-    cell: (value: Pronoun) => <Text>{PRONOUN_MAP_ONEIDA[value]}</Text>,
+    cell: (value: Pronoun) => (
+      <TextArray>{PRONOUN_MAP_ONEIDA[value]}</TextArray>
+    ),
     header: "Pronoun",
     key: "pronoun_lang",
   },

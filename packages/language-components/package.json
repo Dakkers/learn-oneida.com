@@ -33,11 +33,13 @@
     "@types/react-dom": "^18.3.0",
     "prettier": "^3.2.5",
     "storybook": "^8.1.9",
+    "tailwind-merge": "^2.3.0",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
   },
   "dependencies": {
-    "@ukwehuwehneke/ohutsya": "workspace:*"
+    "@ukwehuwehneke/ohutsya": "workspace:*",
+    "tailwindcss": "^3.4.4"
   },
   "peerDependencies": {
     "react": "^18.3.1",

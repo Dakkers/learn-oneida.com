@@ -7,7 +7,7 @@
         { "text": "sk" },
         "hlo·lí̲"
       ],
-      "key": "you_me",
+      "key": "u_i",
       "phrase": "Tákʌʔ ʌskhlo·lí̲·"
     },
     {
@@ -17,7 +17,7 @@
         { "text": "skwa" },
         "hlo·lí̲"
       ],
-      "key": "you_us_exclusive",
+      "key": "u_theyni",
       "phrase": "Tákʌʔ ʌskwahlo·lí̲·"
     },
     {
@@ -27,7 +27,7 @@
         { "text": "she" },
         "hlo·lí̲"
       ],
-      "key": "you_her",
+      "key": "u_f",
       "phrase": "Tákʌʔ ʌshehlo·lí̲·"
     },
     {
@@ -37,7 +37,7 @@
         { "text": "hets" },
         "hlo·lí̲"
       ],
-      "key": "you_him",
+      "key": "u_m",
       "phrase": "Tákʌʔ ʌhetshlo·lí̲·"
     }
   ],
