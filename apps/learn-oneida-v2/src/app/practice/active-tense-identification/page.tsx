@@ -124,10 +124,7 @@ export default function PracticeTenseIdentification() {
             <Text>
               Use this page to practice identifying what tense conjugation an
               active verb contains. These words come from{" "}
-              <Link className="text-blue-600 underline" to="/learn/module06">
-                module 6
-              </Link>
-              .
+              <Link href="/learn/module06">module 6</Link>.
             </Text>
 
             <Settings
