@@ -12,12 +12,12 @@ const data: ParadigmData = {
     {
       pronoun: "u",
       phrase: "sanúhte̲ʔ",
-      breakdown: [{ text: "s" }, "anúhte̲ʔ"],
+      breakdown: [["s"], "anúhte̲ʔ"],
     },
     {
       pronoun: "m",
       phrase: "lonúhte̲ʔ",
-      breakdown: [{ text: "lo" }, "núhte̲ʔ"],
+      breakdown: [["lo"], "núhte̲ʔ"],
     },
     {
       pronoun: "f",

@@ -12,12 +12,12 @@ const data: ParadigmData = {
     {
       pronoun: "u",
       phrase: "kʌʔ nitisayʌ́ha",
-      breakdown: ["kʌʔ niti", { text: "sa" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ niti", ["sa"], "yʌ́ha̲"],
     },
     {
       pronoun: "m",
       phrase: "kʌʔ nitloyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "ho" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["ho"], "yʌ́ha̲"],
     },
     {
       pronoun: "f",
@@ -32,17 +32,17 @@ const data: ParadigmData = {
     {
       pronoun: "uni",
       phrase: "kʌʔ nityukniyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "yukni" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["yukni"], "yʌ́ha̲"],
     },
     {
       pronoun: "soni",
       phrase: "kʌʔ nityukniyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "yukni" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["yukni"], "yʌ́ha̲"],
     },
     {
       pronoun: "u2",
       phrase: "kʌʔ nitisniyʌ́ha",
-      breakdown: ["kʌʔ niti", { text: "sni" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ niti", ["sni"], "yʌ́ha̲"],
     },
     {
       pronoun: "2m",

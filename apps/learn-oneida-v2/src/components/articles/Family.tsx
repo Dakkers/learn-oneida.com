@@ -395,14 +395,38 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Cousins
       </SectionHeading>
       <Text>
-        The kin term is <b>alaʔse</b> and uses purple pronominals. The ending{" "}
-        <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
-        pluralization.
+        The kin term is <b>alaʔse</b> and uses blue pronominals. The suffix{" "}
+        <Letter>shuha</Letter> is added for pluralization. There is an uncommon
+        case here that occurs when referring to a female's cousins, all of whom
+        are female.
       </Text>
       <ParadigmTable
         allowedPronouns={["i", "u", "m", "f", "f_f"]}
         columnVisibility={colVisibility}
         data={cousinsJson}
+        translationFn={({ pronoun }) =>
+          pronoun === "f_f"
+            ? {
+                pronounPossessive: "Her",
+                note: "(females only)",
+              }
+            : { note: "" }
+        }
+      />
+
+      <SectionHeading id="family-friends" level={sublevel}>
+        Friends
+      </SectionHeading>
+      <Text>
+        The base is <b>atʌloʔsla</b> and uses blue pronominals. The suffix{" "}
+        <Letter>ʔshuha</Letter> is added for pluralization. There is an uncommon
+        case here that occurs when referring to a female's friends, all of whom
+        are female.
+      </Text>
+      <ParadigmTable
+        allowedPronouns={["i", "u", "m", "f", "f_f"]}
+        columnVisibility={colVisibility}
+        data={friendsJson}
         translationFn={({ pronoun }) =>
           pronoun === "f_f"
             ? {

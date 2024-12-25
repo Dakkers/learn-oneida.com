@@ -41,7 +41,6 @@ export default function LearnModule03() {
           <b>NOTE:</b> This page is still under construction!
         </Notice>
       </Box>
-      <Text>In this module, we&lsquo;ll cover the following:</Text>
 
       <TOC>
         <TOC.Item label="Past Tense" value="past-tense">
@@ -314,16 +313,16 @@ function PastTenseUsedToBe() {
     {
       en: ["I am a young man", "I was / used to be a young man"],
       one: [
-        [{ text: "k" }, "nikʌ́htluʔ"],
-        [{ text: "k" }, "nikʌhtlu", "hné·"],
+        [["k"], "nikʌ́htluʔ"],
+        [["k"], "nikʌhtlu", "hné·"],
       ],
       type: "PR",
     },
     {
       en: ["I am a young woman", "I was / used to be a young woman"],
       one: [
-        [{ text: "k" }, "yaʔtaséha"],
-        [{ text: "k" }, "yaʔtase", "hné·"],
+        [["k"], "yaʔtaséha"],
+        [["k"], "yaʔtase", "hné·"],
       ],
       type: "PR",
     },
@@ -334,9 +333,9 @@ function PastTenseUsedToBe() {
         "I didn't used to be free / single (but I am now)",
       ],
       one: [
-        [{ text: "k" }, "atatwʌni·yó̲·"],
-        [{ text: "k" }, "atatwʌni·yo", "hné·"],
-        ["yáh teʔ", { text: "k" }, "atatwʌni·yo", "hné·"],
+        [["k"], "atatwʌni·yó̲·"],
+        [["k"], "atatwʌni·yo", "hné·"],
+        ["yáh teʔ", ["k"], "atatwʌni·yo", "hné·"],
       ],
       type: "PR",
     },
@@ -346,8 +345,8 @@ function PastTenseUsedToBe() {
         "I was / used to be engaged (to someone)",
       ],
       one: [
-        [{ text: "yukni" }, "nyákheʔ"],
-        [{ text: "yukni" }, "nyákhe", "hkwe̲ʔ"],
+        [["yukni"], "nyákheʔ"],
+        [["yukni"], "nyákhe", "hkwe̲ʔ"],
       ],
       type: "PB",
     },
@@ -357,8 +356,8 @@ function PastTenseUsedToBe() {
         "I was / used to be in a relationship (with someone)",
       ],
       one: [
-        [{ text: "yákn" }, "ehse̲"],
-        [{ text: "yákn" }, "eh", "skwe̲ʔ"],
+        [["yákn"], "ehse̲"],
+        [["yákn"], "eh", "skwe̲ʔ"],
       ],
       type: "PR",
     },
@@ -369,9 +368,9 @@ function PastTenseUsedToBe() {
         "I didn't used to be married (but I am now)",
       ],
       one: [
-        [{ text: "wake" }, "nyákuʔ"],
-        [{ text: "wake" }, "nyaku", "hné·"],
-        ["yáh teʔ", { text: "wake" }, "nyaku", "hné·"],
+        [["wake"], "nyákuʔ"],
+        [["wake"], "nyaku", "hné·"],
+        ["yáh teʔ", ["wake"], "nyaku", "hné·"],
       ],
       type: "PB",
     },
@@ -401,9 +400,9 @@ function PastTenseUsedToBe() {
         "I didn't used to like her / them (but I do now)",
       ],
       one: [
-        [{ text: "khe" }, "nú·wehse̲ʔ"],
-        [{ text: "khe" }, "nú·weh", "skwe̲ʔ"],
-        ["yáh teʔ", { text: "khe" }, "nú·weh", "skwe̲ʔ"],
+        [["khe"], "nú·wehse̲ʔ"],
+        [["khe"], "nú·weh", "skwe̲ʔ"],
+        ["yáh teʔ", ["khe"], "nú·weh", "skwe̲ʔ"],
       ],
       type: "PP",
     },
@@ -414,9 +413,9 @@ function PastTenseUsedToBe() {
         "I didn't used to love her / them (but I do now)",
       ],
       one: [
-        [{ text: "khe" }, "nolúkhwa̲ʔ"],
-        [{ text: "khe" }, "nolúkhwa", "hkwe̲ʔ"],
-        ["yáh te", { text: "khe" }, "nolúkhwa", "hkwe̲ʔ"],
+        [["khe"], "nolúkhwa̲ʔ"],
+        [["khe"], "nolúkhwa", "hkwe̲ʔ"],
+        ["yáh te", ["khe"], "nolúkhwa", "hkwe̲ʔ"],
       ],
       type: "PP",
     },
@@ -463,40 +462,40 @@ function PastTenseWhen() {
     {
       en: ["I am a child", "When I was / used to be a child"],
       one: [
-        [{ text: "k" }, "ekhsá·"],
-        ["tshi", { text: "k" }, "ekhsá·"],
+        [["k"], "ekhsá·"],
+        ["tshi", ["k"], "ekhsá·"],
       ],
       type: "PR",
     },
     {
       en: ["I am a young man", "When I was / used to be a young man"],
       one: [
-        [{ text: "k" }, "nikʌ́htluʔ"],
-        ["tshi", { text: "k" }, "nikʌh́tluʔ"],
+        [["k"], "nikʌ́htluʔ"],
+        ["tshi", ["k"], "nikʌh́tluʔ"],
       ],
       type: "PR",
     },
     {
       en: ["I am a young woman", "When I was / used to be a young woman"],
       one: [
-        [{ text: "k" }, "yá·taseha̲"],
-        ["tshi", { text: "k" }, "yá·taséha̲"],
+        [["k"], "yá·taseha̲"],
+        ["tshi", ["k"], "yá·taséha̲"],
       ],
       type: "PR",
     },
     {
       en: ["I am free / single", "When I was free / single"],
       one: [
-        [{ text: "k" }, "atatwʌni·yó̲·"],
-        ["tshi", { text: "k" }, "atatwʌni·yó̲·"],
+        [["k"], "atatwʌni·yó̲·"],
+        ["tshi", ["k"], "atatwʌni·yó̲·"],
       ],
       type: "PR",
     },
     {
       en: ["I am engaged (to someone)", "When I was engaged (to someone)"],
       one: [
-        [{ text: "yukni" }, "nyákheʔ"],
-        ["tshi", { text: "yukni" }, "nyákheʔ"],
+        [["yukni"], "nyákheʔ"],
+        ["tshi", ["yukni"], "nyákheʔ"],
       ],
       type: "PB",
     },
@@ -506,24 +505,24 @@ function PastTenseWhen() {
         "When I was in a relationship (with someone)",
       ],
       one: [
-        [{ text: "yákn" }, "ehse̲"],
-        ["tshi", { text: "yákn" }, "ehse̲"],
+        [["yákn"], "ehse̲"],
+        ["tshi", ["yákn"], "ehse̲"],
       ],
       type: "PR",
     },
     {
       en: ["I am married", "When I was married"],
       one: [
-        [{ text: "wake" }, "nyákuʔ"],
-        ["tshi", { text: "wake" }, "nyákuʔ"],
+        [["wake"], "nyákuʔ"],
+        ["tshi", ["wake"], "nyákuʔ"],
       ],
       type: "PB",
     },
     {
       en: ["I am married (to someone)", "When I was married (to someone)"],
       one: [
-        [{ text: "yukni" }, "nyákuʔ"],
-        ["tshi", { text: "yukni" }, "nyá·kuʔ"],
+        [["yukni"], "nyákuʔ"],
+        ["tshi", ["yukni"], "nyá·kuʔ"],
       ],
       type: "PB",
     },
@@ -542,7 +541,7 @@ function PastTenseWhen() {
       en: ["I love her / them", "When I loved her / them"],
       one: [
         [["khe"], "nolúkhwa̲ʔ"],
-        ["tshi", { text: "khe" }, "nolúkhwa̲ʔ"],
+        ["tshi", ["khe"], "nolúkhwa̲ʔ"],
       ],
       type: "PP",
     },

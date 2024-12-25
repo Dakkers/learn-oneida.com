@@ -117,7 +117,7 @@ const IFUT = { text: "a", type: "IFUT" };
 function StativeVerbExamples() {
   const data = [
     {
-      breakdown: ["kʌʔ ", { text: "i·", type: "RPL" }, { text: "k" }, "é·seʔ"],
+      breakdown: ["kʌʔ ", { text: "i·", type: "RPL" }, ["k"], "é·seʔ"],
       en: "I am here",
       type: "Present",
     },
@@ -171,7 +171,7 @@ function StativeVerbExamples() {
       type: "",
     },
     {
-      breakdown: ["kʌʔ ", { text: "s" }, "éhs", { text: "ek", type: "FUT" }],
+      breakdown: ["kʌʔ ", ["s"], "éhs", { text: "ek", type: "FUT" }],
       en: "Stay here!",
       type: "Command",
     },

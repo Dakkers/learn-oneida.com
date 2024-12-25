@@ -7,10 +7,10 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: ["kʌʔ ni", { text: "k" }, "á·"],
+        breakdown: ["kʌʔ ni", ["k"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "hs" }, "á·"],
+        breakdown: ["kʌʔ ni", ["hs"], "á·"],
       },
       {
         breakdown: ["kʌʔ ni", { text: "hl" }, "á·"],
@@ -19,7 +19,7 @@ export default createParadigmData(
         breakdown: ["kʌʔ ni", { text: "yak" }, "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "w" }, "á·"],
+        breakdown: ["kʌʔ ni", ["w"], "á·"],
       },
       {
         breakdown: ["kʌʔ ni", { text: "tn" }, "á·"],
@@ -37,10 +37,10 @@ export default createParadigmData(
         breakdown: ["kʌʔ ni", { text: "kn" }, "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "tw" }, "á·"],
+        breakdown: ["kʌʔ ni", ["tw"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "yakw" }, "á·"],
+        breakdown: ["kʌʔ ni", ["yakw"], "á·"],
       },
       {
         breakdown: ["kʌʔ ni", { text: "swa" }, "á·"],

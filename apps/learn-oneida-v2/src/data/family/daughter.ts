@@ -7,7 +7,7 @@ const data: ParadigmData = {
     {
       pronoun: "i",
       phrase: "kheyʌ́ha̲",
-      breakdown: [{ text: "khe" }, "yʌ́ha̲"],
+      breakdown: [["khe"], "yʌ́ha̲"],
     },
     {
       pronoun: "u",
@@ -17,7 +17,7 @@ const data: ParadigmData = {
     {
       pronoun: "m",
       phrase: "shakoyʌ́ha̲",
-      breakdown: [{ text: "shako" }, "yʌ́ha̲"],
+      breakdown: [["shako"], "yʌ́ha̲"],
     },
     {
       pronoun: "f",

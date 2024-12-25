@@ -48,9 +48,9 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
             [["te", "DUAL"], ["hni"], "yáhse"],
             [["te", "DUAL"], ["kni"], "yáhse"],
           ],
-          ["three", ["áhsʌ ni", ["hati"]], ["áhsʌ ni", ["hati"]]],
-          ["four", ["kayé ni", ["hati"]], ["kayé ni", ["hati"]]],
-          ["five", ["wísk ni", { text: "hati" }], ["wísk ni", ["hati"]]],
+          ["three", ["áhsʌ ni", ["hatí"]], ["áhsʌ ni", ["kutí"]]],
+          ["four", ["kayé ni", ["hatí"]], ["kayé ni", ["kutí"]]],
+          ["five", ["wísk ni", { text: "hatí" }], ["wísk ni", ["kutí"]]],
         ].map(([en, male, female]) => ({ en, male, female }))}
       />
       <Text>Some concrete examples:</Text>
@@ -61,7 +61,7 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
           ["two young men", "tehniyáhse tehninikʌhtlúha̲"],
           ["one young woman", "tsyeyá·tat yeyá·taseha̲"],
           ["three adults", "áhsʌ nihatí lʌnukwé̲·"],
-          ["two older women", "tehniyáhse yotikhstʌ́ha̲"],
+          ["two older women", "tekniyáhse yotikhstʌ́ha̲"],
         ].map(([left, right], i) => (
           <List.Item key={i}>
             {left} — <b>{right}</b>

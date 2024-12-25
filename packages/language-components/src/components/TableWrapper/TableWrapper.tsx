@@ -74,7 +74,7 @@ function createBreakdownCol(
         {row.audioFile && <PlayButton filepath={`/audio/${row.audioFile}`} />}
       </Flex>
     ),
-    header: options.header ?? "Translation",
+    header: options.header ?? "Oneida",
   };
 }
 
@@ -117,7 +117,7 @@ const columnsEnglishTranslation: TableProps["columns"] = [
   {
     accessorKey: "translation",
     cell: TableWrapper.textArrayCellBold,
-    header: "Translation",
+    header: "Oneida",
   },
 ];
 const columnsEnglishBreakdown: TableProps["columns"] = [
@@ -128,7 +128,7 @@ const columnsEnglishBreakdown: TableProps["columns"] = [
     cell: (value: BreakdownArray) => (
       <TextBreakdown breakdown={value} wrap="nowrap" />
     ),
-    header: "Translation",
+    header: "Oneida",
   },
 ];
 

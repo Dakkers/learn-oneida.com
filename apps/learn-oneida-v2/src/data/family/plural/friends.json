@@ -1,56 +1,31 @@
 {
-  "translation": "{{pronoun}} are friends",
+  "translation": "{{pronounPossessive}} friends {{note}}",
   "type": "PB",
   "phrases": [
     {
       "pronoun": "i",
       "phrase": "ukwatʌloʔslaʔshúha̲",
-      "breakdown": [
-        ["ukw"],
-        "atʌloʔsl",
-        { "text": "a", "type": "JOIN" },
-        "ʔshúha̲"
-      ]
+      "breakdown": [["ukw"], "atʌloʔsl", ["a", "JOIN"], "ʔshúha̲"]
     },
     {
       "pronoun": "u",
       "phrase": "swatʌloʔslaʔshúha̲",
-      "breakdown": [
-        ["sw"],
-        "atʌloʔsl",
-        { "text": "a", "type": "JOIN" },
-        "ʔshúha̲"
-      ]
+      "breakdown": [["sw"], "atʌloʔsl", ["a", "JOIN"], "ʔshúha̲"]
     },
     {
       "pronoun": "m",
       "phrase": "lonatʌloʔslaʔshúha̲",
-      "breakdown": [
-        ["lon"],
-        "atʌloʔsl",
-        { "text": "a", "type": "JOIN" },
-        "ʔshúha̲"
-      ]
+      "breakdown": [["lon"], "atʌloʔsl", ["a", "JOIN"], "ʔshúha̲"]
     },
     {
       "pronoun": "f",
       "phrase": "lonatʌloʔslaʔshúha̲",
-      "breakdown": [
-        ["lon"],
-        "atʌloʔsl",
-        { "text": "a", "type": "JOIN" },
-        "ʔshúha̲"
-      ]
+      "breakdown": [["lon"], "atʌloʔsl", ["a", "JOIN"], "ʔshúha̲"]
     },
     {
       "pronoun": "f_f",
       "phrase": "onatʌloʔslaʔshúha̲",
-      "breakdown": [
-        ["on"],
-        "atʌloʔsl",
-        { "text": "a", "type": "JOIN" },
-        "ʔshúha̲"
-      ]
+      "breakdown": [["on"], "atʌloʔsl", ["a", "JOIN"], "ʔshúha̲"]
     }
   ]
 }

@@ -23,7 +23,7 @@ export function DomesticatedAnimalsArticle({ level = 1 }: { level?: 1 | 2 }) {
           {
             accessorKey: "one",
             cell: TableWrapper.textArrayCellBold,
-            header: "Translation",
+            header: "Oneida",
           },
         ]}
         data={[
@@ -48,7 +48,7 @@ export function DomesticatedAnimalsArticle({ level = 1 }: { level?: 1 | 2 }) {
           {
             accessorKey: "one",
             cell: TableWrapper.textArrayCellBold,
-            header: "Translation",
+            header: "Oneida",
           },
         ]}
         data={[
