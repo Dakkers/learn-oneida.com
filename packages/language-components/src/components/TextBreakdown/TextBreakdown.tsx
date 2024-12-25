@@ -1,4 +1,3 @@
-// @ts-expect-error TODO
 import { cn } from "@ukwehuwehneke/ohutsya";
 import { arrayify } from "../../utils";
 import { whisperizeWord } from "../../utils/words";

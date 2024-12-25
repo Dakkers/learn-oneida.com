@@ -10,3 +10,5 @@ public/build
 
 lib/
 *.map
+
+*.tsbuildinfo

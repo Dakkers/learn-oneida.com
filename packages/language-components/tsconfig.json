@@ -2,17 +2,14 @@
   "compilerOptions": {
     "allowJs": false,
     "baseUrl": "./",
-    "build": true,
     "composite": true,
     "declaration": true,
-    "declarationDir": "./lib/types",
     "declarationMap": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "noEmit": true,
-    "outDir": "lib/types",
+    "outDir": "dist/types",
     "paths": {
       "~/*": ["src/*"],
       "@/*": ["src/*"],
@@ -21,9 +18,6 @@
     "rootDir": "src",
     "skipLibCheck": true,
     "target": "ES2021",
-    "typeRoots": [
-      "../ohutsya/lib/types"
-    ],
     "useDefineForClassFields": true,
 
     /* Bundler mode */
@@ -37,9 +31,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "references": [
-    { "path": "../../packages/ohutsya" }
-  ],
   "include": ["src/**/*"],
-  "exclude": ["node_modules/"],
+  "exclude": ["node_modules/"]
 }

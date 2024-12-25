@@ -131,10 +131,7 @@ export default function PracticeTenseIdentification() {
             <Text>
               Use this page to practice identifying what tense conjugation a
               word contains. These words come from{" "}
-              <Link className="text-blue-600 underline" to="/learn/module05">
-                module 5
-              </Link>
-              .
+              <Link href="/learn/module05">module 5</Link>.
             </Text>
 
             <Settings

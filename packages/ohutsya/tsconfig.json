@@ -5,13 +5,11 @@
     "build": true,
     "composite": true,
     "declaration": true,
-    "declarationDir": "./lib/types",
     "declarationMap": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "outDir": "lib/types",
     "paths": {
       "~/*": ["src/*"],
       "@/*": ["src/*"],
@@ -19,7 +17,7 @@
     },
     "rootDir": "src",
     "skipLibCheck": true,
-    "target": "ES2020",
+    "target": "ES2021",
     "useDefineForClassFields": true,
 
     /* Bundler mode */
