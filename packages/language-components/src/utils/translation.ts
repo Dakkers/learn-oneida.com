@@ -1,3 +1,4 @@
+import { arrayify } from "./misc";
 import {
   Pronoun,
   PRONOUN_MAP_EN,
@@ -25,9 +26,9 @@ export function translatePhrase(
   translationFn?: (arg: { pronoun: Pronoun }) => void,
 ) {
   return formatTranslation(phrase, {
-    pronoun: PRONOUN_MAP_EN[pronoun],
-    pronounObjective: PRONOUN_MAP_EN_OBJECTIVE[pronoun],
-    pronounPossessive: PRONOUN_MAP_EN_POSSESSIVE[pronoun],
+    pronoun: arrayify(PRONOUN_MAP_EN[pronoun])[0],
+    pronounObjective: arrayify(PRONOUN_MAP_EN_OBJECTIVE[pronoun])[0],
+    pronounPossessive: arrayify(PRONOUN_MAP_EN_POSSESSIVE[pronoun])[0],
     refVerb: REF_VERB_MAP[pronoun],
     refVerbPast: REF_VERB_PASTTENSE_MAP[pronoun],
     refVerbPastAlt: REF_VERB_PASTTENSE_ALT_MAP[pronoun],
