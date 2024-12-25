@@ -41,9 +41,9 @@ export const PRONOUN_MAP_ONEIDA: Record<Pronoun, string> = {
   yall: "swakwekú",
   ms: "latikwekú",
   fs: "kutikwekú",
-};
+} as const;
 
-export const PRONOUN_MAP_EN: Record<Pronoun, string> = {
+export const PRONOUN_MAP_EN: Record<Pronoun, string | string[]> = {
   i: "I",
   u: "You",
   m: "He",
@@ -52,16 +52,16 @@ export const PRONOUN_MAP_EN: Record<Pronoun, string> = {
   uni: "You and I",
   soni: "Someone and I",
   u2: "You two",
-  "2m": "Two males",
-  "2f": "Two females",
+  "2m": ["2 males", "1 male + 1 female"],
+  "2f": "2 females",
   us: "You all and I",
   theyni: "They and I",
   yall: "All of you",
-  ms: "They (males)",
+  ms: ["They (males)", "They (males + females)"],
   fs: "They (females)",
-};
+} as const;
 
-export const PRONOUN_MAP_EN_OBJECTIVE: Record<Pronoun, string> = {
+export const PRONOUN_MAP_EN_OBJECTIVE: Record<Pronoun, string | string[]> = {
   i: "Me",
   u: "You",
   m: "Him",
@@ -70,16 +70,16 @@ export const PRONOUN_MAP_EN_OBJECTIVE: Record<Pronoun, string> = {
   uni: "You and I",
   soni: "Someone and I",
   u2: "You two",
-  "2m": "Two males",
-  "2f": "Two females",
+  "2m": ["2 males", "1 male + 1 female"],
+  "2f": "2 females",
   us: "You all and I",
   theyni: "Them and I",
   yall: "All of you",
-  ms: "Them (males)",
+  ms: ["Them (males)", "Them (males + females)"],
   fs: "Them (females)",
-};
+} as const;
 
-export const PRONOUN_MAP_EN_POSSESSIVE: Record<Pronoun, string> = {
+export const PRONOUN_MAP_EN_POSSESSIVE: Record<Pronoun, string | string[]> = {
   i: "My",
   u: "Your",
   m: "His",
@@ -88,14 +88,14 @@ export const PRONOUN_MAP_EN_POSSESSIVE: Record<Pronoun, string> = {
   uni: "Our (you and I)",
   soni: "Our (someone and I)",
   u2: "All your",
-  "2m": "Their (males, mix)",
-  "2f": "Their (females)",
+  "2m": ["Their (2 males)", "Their (1 male + 1 female)"],
+  "2f": "Their (2 females)",
   us: "All our",
   theyni: "All our (they and I)",
   yall: "All of yours",
-  ms: "All (males) their",
+  ms: ["All (males) their", "All (males + females) their"],
   fs: "All (females) their",
-};
+} as const;
 
 export const REF_VERB_MAP: Record<Pronoun, string> = {
   i: "am",
@@ -113,7 +113,7 @@ export const REF_VERB_MAP: Record<Pronoun, string> = {
   yall: "are",
   ms: "are",
   fs: "are",
-};
+} as const;
 
 export const REF_VERB_PASTTENSE_MAP: Record<Pronoun, string> = {
   i: "have",
@@ -131,7 +131,7 @@ export const REF_VERB_PASTTENSE_MAP: Record<Pronoun, string> = {
   yall: "have",
   ms: "have",
   fs: "have",
-};
+} as const;
 
 export const REF_VERB_PASTTENSE_ALT_MAP: Record<Pronoun, string> = {
   i: "was",
@@ -149,53 +149,117 @@ export const REF_VERB_PASTTENSE_ALT_MAP: Record<Pronoun, string> = {
   yall: "were",
   ms: "were",
   fs: "were",
-};
+} as const;
 
-export const PURPLES_MAP = {
-  i_you: "I → you",
-  i_him: "I → him",
-  i_her: "I → her",
+export const pronounsPurple = [
+  "i_u", // ku
+  "i_m", // li
+  "i_f", // khe
+  "u_i", // sk
+  "u_m", // hetsh
+  "u_f", // she
+  "m_i", // lak
+  "m_u", // ya
+  "m_m", // lo
+  "m_f", // shako
+  "f_i", // yuk
+  "f_u", // yesa
+  "f_m", // luwa
+  "f_f", // yutat
+] as const;
 
-  you_me: "You → me",
-  you_him: "You → him",
-  you_her: "You → her",
+const purplePairs = pronounsPurple.map((key) => [
+  key,
+  key
+    .split("_")
+    .map((word, i) =>
+      i === 0
+        ? {
+            i: "I",
+            u: "You",
+            m: "He",
+            f: "She",
+          }[word]
+        : {
+            i: "me",
+            u: "you",
+            m: "him",
+            f: "her",
+          }[word],
+    )
+    .join(" → "),
+]);
 
-  he_me: "He → me",
-  he_you: "He → you",
-  he_him: "He → him",
-  he_her: "He → her",
+export const PURPLES_MAP = Object.fromEntries(purplePairs);
 
-  she_me: "She → me",
-  she_you: "She → you",
-  she_him: "She → him",
-  she_her: "She → her",
-};
+const purplesPairsFull = [
+  ...purplePairs,
+  ["i_u2", "I → you two"], // kni
+  ["i_yall", "I → All of you"], // kwa
+
+  ["u_soni", "You → someone & I"], // skni
+  ["u_theyni", "You → them & I"], // skwa
+
+  ["m_uni", "He → you & I"], // shukni
+  ["m_soni", "He → someone & I"], // shukni
+  ["m_u2", "He → you two"], // hetsni
+  ["m_us", "He → all of us"], // shukwa
+  ["m_theyni", "He → they & I"], // shukwa
+  ["m_yall", "He → all of you"], // hetswa
+
+  ["f_uni", "She → you & I"], // yukhi
+  ["f_soni", "She → someone & I"], // yukhi
+  ["f_u2", "She → you two"], // yetshi
+  ["f_us", "She → all of us"], // yukhi
+  ["f_theyni", "She → they & I"], // yukhi
+  ["f_yall", "She → all of you"], // yetshi
+
+  ["uni_m", "You & I → him"], // hetni
+  ["uni_f", "You & I → her"], // yethi
+
+  ["soni_u", "Someone & I → you"], // kni
+  ["soni_m", "Someone & I → him"], // shakni
+  ["soni_f", "Someone & I → her"], // yakhi
+  ["soni_u2", "Someone & I → you two"], // kni
+  ["soni_yall", "Someone & I → all of you"], // kwa
+
+  ["u2_i", "You two → me"], // skni
+  ["u2_m", "You two → him"], // hetsni
+  ["u2_f", "You two → her"], // yetshi
+  ["u2_theyni", "You two → them and I"], // skwa
+
+  ["us_m", "All of us → him"], // hethwa
+  ["us_f", "All of us → her"], // yethi
+
+  ["theyni_u", "They & I → you"], // kwa
+  ["theyni_m", "They & I → him"], // shakwa
+  ["theyni_f", "They & I → her"], // yakhi
+  ["theyni_u2", "They & I → you two"], // kwa
+  ["theyni_yall", "They & I → all of you"], // kwa
+
+  ["yall_i", "All of you → me"], // skwa
+  ["yall_m", "All of you → him"], // hetswa
+  ["yall_f", "All of you → her"], // yetshi
+  ["yall_soni", "All of you → someone & I"], // skwa
+  ["yall_theyni", "All of you → they & I"], // skwa
+
+  ["ms_them", "They (males / mix) → them"], // shakoti
+  ["fs_them", "They (females) → them"], // yakoti
+
+  ["they_ms", "They → them (males / mix)"], // luwati
+  ["they_fs", "They → them (females)"], // kuwati
+  ["they_it", "They → it"], // kuwa
+
+  ["cmd_u_i", "You → me (command)"], // tak
+  ["cmd_yall_i", "All of you → me (command)"], // takwa
+  ["cmd_u2_i", "You two → me (command)"], // takni
+] as const;
 
 export const PURPLES_MAP_FULL = {
   ...PURPLES_MAP,
-  i_u2: "I → you two",
-  i_yall: "I → All of you",
-
-  you_theyni: "You → them & I",
-
-  he_u2: "He → you two",
-
-  uni_him: "You & I → him",
-
-  u2_me: "You two → me",
-  u2_him: "You two → him",
-
-  us_her: "All of us → her",
-  us_him: "All of us → him",
-
-  theyni_you: "They & I → you",
-
-  yall_me: "All of you → me",
-  yall_her: "All of you → her",
-
-  cmd_you_me: "You → me (command)",
-  cmd_yall_me: "All of you → me (command)",
-  cmd_u2_me: "You two → me (command)",
+  ...Object.fromEntries(purplesPairsFull),
 };
+
+export const pronounsPurpleFull = purplesPairsFull.map((pair) => pair[0]);
 
 export const isPlural = (pronoun: Pronoun) => pluralPronouns.includes(pronoun);

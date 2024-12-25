@@ -13,9 +13,9 @@ import nolukhwaRed from "~/data/nolukhwa-red";
 import nuwehseBlue from "~/data/nuwehse-blue";
 import yʌteliBlue from "~/data/yʌteli-blue";
 import nolukhwaBlue from "~/data/nolukhwa-blue";
-import nuwehsePurple from "~/data/nuwehse-purple.json";
-import yʌteliPurple from "~/data/yʌteli-purple.json";
-import nolukhwaPurple from "~/data/nolukhwa-purple.json";
+import nuwehsePurple from "~/data/module01/like-purple";
+import yʌteliPurple from "~/data/module02/know-purple";
+import nolukhwaPurple from "~/data/module02/love-purple";
 import nuwehseRefl from "~/data/nuwehse-refl";
 import nolukhwaRefl from "~/data/nolukhwa-refl";
 import yʌteliRefl from "~/data/yʌteli-refl";
@@ -521,17 +521,17 @@ function CommandsTable({
   negated?: boolean;
   verb: string;
 }) {
-  const keys = ["you_me", "you_us_exclusive", "you_her", "you_him"] as const;
+  const keys = ["u_i", "u_theyni", "u_f", "u_m"] as const;
   const negativeText = negated ? "Don't" : "";
   const en = {
-    you_me: [`${negativeText} (you) ${verb} me`],
-    you_us_exclusive: [
+    u_i: [`${negativeText} (you) ${verb} me`],
+    u_theyni: [
       `${negativeText} you ${verb} all of us`,
       `${negativeText} all of you ${verb} me`,
       `${negativeText} all of you ${verb} all of us`,
     ],
-    you_her: [`${negativeText} (you) ${verb} her`],
-    you_him: [`${negativeText} (you) ${verb} him`],
+    u_f: [`${negativeText} (you) ${verb} her`],
+    u_m: [`${negativeText} (you) ${verb} him`],
   };
   return (
     <TableWrapper

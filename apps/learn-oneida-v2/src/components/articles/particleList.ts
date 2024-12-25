@@ -995,7 +995,7 @@ export const particleList = [
   },
 
   {
-    key: "all_of_you",
+    key: "all_of_u",
     translation: "swakwekú̲",
     en: "all of you",
     examples: [
