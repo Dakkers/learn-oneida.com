@@ -1,4 +1,5 @@
 import React from "react";
+import { useLinkAs } from "../components/LinkAs";
 
 export interface LinkProps {
   children: React.ReactNode;
@@ -6,9 +7,7 @@ export interface LinkProps {
 }
 
 export function Link({ children, href }: LinkProps) {
-  return (
-    <a className="text-blue-600 underline" href={href}>
-      {children}
-    </a>
-  );
+  const LinkAs = useLinkAs();
+
+  return <LinkAs href={href}>{children}</LinkAs>;
 }
