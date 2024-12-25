@@ -69,11 +69,7 @@
     {
       "pronoun": "yall",
       "phrase": "teswatatekʌha̲",
-      "breakdown": [
-        { "text": "sw" },
-        { "text": "atat", "type": "REFL" },
-        "ekʌha̲"
-      ]
+      "breakdown": [["sw"], { "text": "atat", "type": "REFL" }, "ekʌha̲"]
     },
     {
       "pronoun": "ms",

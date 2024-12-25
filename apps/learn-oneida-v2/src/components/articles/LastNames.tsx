@@ -13,7 +13,7 @@ const data = createParadigmData(
     translation: "{{pronounPossessive}} last name",
     type: "PR",
     phrases: [
-      { breakdown: [["te", "DUAL"], { text: "k" }, "hsʌná·se·le̲ʔ"] },
+      { breakdown: [["te", "DUAL"], ["k"], "hsʌná·se·le̲ʔ"] },
       { breakdown: [["te", "DUAL"], { text: "ts" }, "ʌná·se·le̲ʔ"] },
       { breakdown: [["te", "DUAL"], { text: "ha" }, "hsʌná·se·le̲ʔ"] },
       { breakdown: [["te", "DUAL"], { text: "ye" }, "hsʌná·se·le̲ʔ"] },
@@ -58,6 +58,7 @@ export function LastNamesArticle({ level = 1 }: ArticleProps) {
         Examples
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={examplesList}
       />

@@ -99,7 +99,7 @@ const dataNations = createParadigmData(
         breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "wak" }, "uhutsyó·tʌ̲ʔ"],
       },
       {
-        breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "s" }, "uhutsyó·tʌ̲ʔ"],
+        breakdown: [`Onʌyoʔteʔa·ká· ni`, ["s"], "uhutsyó·tʌ̲ʔ"],
       },
       {
         breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "ha" }, "uhutsyó·tʌ̲ʔ"],

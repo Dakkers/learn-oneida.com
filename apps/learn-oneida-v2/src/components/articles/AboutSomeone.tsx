@@ -1,5 +1,5 @@
 "use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
   SectionHeading,
@@ -8,19 +8,21 @@ import {
 import { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 import { singlePronouns } from "@ukwehuwehneke/language-components";
+import { LinkWrapper } from "../LinkWrapper";
+import { Letter } from "../Letter";
 
 const data = createParadigmData(
   {
     translation: "About {{pronounObjective}}",
     type: "PLB",
     phrases: [
-      { breakdown: [{ text: "ak" }, "lihwá·ke̲"] },
-      { breakdown: [{ text: "sa" }, "lihwá·ke̲"] },
-      { breakdown: [{ text: "lao" }, "lihwá·ke̲"] },
-      { breakdown: [{ text: "ako" }, "lihwá·ke̲"] },
-      { breakdown: [{ text: "ao" }, "lihwá·ke̲"] },
-      { breakdown: [{ text: "laoti" }, "lihwá·ke̲"] },
-      { breakdown: [{ text: "aoti" }, "lihwá·ke̲"] },
+      { breakdown: [["ak"], "lihwá·ke"] },
+      { breakdown: [["sa"], "lihwá·ke"] },
+      { breakdown: [["lao"], "lihwá·ke"] },
+      { breakdown: [["ako"], "lihwá·ke"] },
+      { breakdown: [["ao"], "lihwá·ke"] },
+      { breakdown: [["laoti"], "lihwá·ke"] },
+      { breakdown: [["aoti"], "lihwá·ke"] },
     ],
   },
   [...singlePronouns, "ms", "fs"],
@@ -52,6 +54,14 @@ export function AboutSomeoneArticle({ level = 1 }: ArticleProps) {
       <SectionHeading id="about-someone" level={level}>
         About Someone
       </SectionHeading>
+      <Text>
+        Note: The website author is unsure of the derivation of this word but it
+        looks like it is comprised of the root word <Letter>-lihw-</Letter>{" "}
+        which means "issue", a joiner vowel "a", and the suffix{" "}
+        <Letter>-ke</Letter> which means "on" (discussed in{" "}
+        <LinkWrapper page={10} />
+        .)
+      </Text>
       <ParadigmTable
         audioFolder="module02/about"
         columnVisibility={{ pronounEnglish: false }}

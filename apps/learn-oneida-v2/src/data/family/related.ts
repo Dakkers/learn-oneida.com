@@ -7,42 +7,42 @@ const data: ParadigmData = {
     {
       pronoun: "uni",
       phrase: "tyatátnuhkwe̲ʔ",
-      breakdown: [{ text: "ty" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
+      breakdown: [["ty"], { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "soni",
       phrase: "yakyatátnuhkwe̲ʔ",
-      breakdown: [{ text: "yaky" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
+      breakdown: [["yaky"], { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "u2",
       phrase: "tsyatátnuhkwe̲ʔ",
-      breakdown: [{ text: "tsy" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
+      breakdown: [["tsy"], { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "2m",
       phrase: "hyatátnuhkwe̲ʔ",
-      breakdown: [{ text: "hy" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
+      breakdown: [["hy"], { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "2f",
       phrase: "kyatátnuhkwe̲ʔ",
-      breakdown: [{ text: "ky" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
+      breakdown: [["ky"], { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "us",
       phrase: "twatátnuhkwe̲ʔ",
-      breakdown: [{ text: "tw" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
+      breakdown: [["tw"], { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "theyni",
       phrase: "yakwatátnuhkwe̲ʔ",
-      breakdown: [{ text: "yakw" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
+      breakdown: [["yakw"], { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "yall",
       phrase: "swatátnuhkwe̲ʔ",
-      breakdown: [{ text: "sw" }, { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
+      breakdown: [["sw"], { text: "atát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
     {
       pronoun: "ms",
@@ -52,7 +52,7 @@ const data: ParadigmData = {
     {
       pronoun: "fs",
       phrase: "kutátnuhkwe̲ʔ",
-      breakdown: [{ text: "ku" }, { text: "tát", type: "REFL" }, "nuhkwe̲ʔ"],
+      breakdown: [["ku"], { text: "tát", type: "REFL" }, "nuhkwe̲ʔ"],
     },
   ],
 };

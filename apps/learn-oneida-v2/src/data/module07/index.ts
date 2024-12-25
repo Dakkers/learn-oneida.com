@@ -1239,7 +1239,12 @@ export function createModule7NounsList() {
   ];
 }
 
-export function getEnglishTranslation(datum, key) {
+export function getEnglishTranslation(
+  datum: {
+    en: string;
+  },
+  key: string,
+) {
   let result = "";
   if (key === "single") {
     result = `it is {{A}} {{WORD}}`;

@@ -1,1 +1,4 @@
-export { TableWrapper } from "@ukwehuwehneke/language-components";
+export {
+  TableWrapper,
+  type TableWrapperProps,
+} from "@ukwehuwehneke/language-components";

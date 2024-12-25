@@ -11,16 +11,16 @@ import { BreakdownArray } from "@ukwehuwehneke/language-components";
 export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
   const goodPeopleData: Array<BreakdownArray[]> = [
     [
-      [{ text: "k" }, "ukweʔtiyó"],
-      [{ text: "k" }, "ukweʔtiyo", "hné·"],
+      [["k"], "ukweʔtiyó"],
+      [["k"], "ukweʔtiyo", "hné·"],
     ],
     [
-      [{ text: "s" }, "ukweʔtiyó"],
-      [{ text: "s" }, "ukweʔtiyo", "hné·"],
+      [["s"], "ukweʔtiyó"],
+      [["s"], "ukweʔtiyo", "hné·"],
     ],
     [
-      [{ text: "h", type: "RPL" }, { text: "l" }, "ukweʔtiyó"],
-      [{ text: "h", type: "RPL" }, { text: "l" }, "ukweʔtiyo", "hné·"],
+      [["h", "RPL"], ["l"], "ukweʔtiyó"],
+      [["h", "RPL"], ["l"], "ukweʔtiyo", "hné·"],
     ],
     [
       [{ text: "yak" }, "ukweʔtiyó"],
@@ -33,16 +33,16 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
   ];
   const badPeopleData: Array<BreakdownArray[]> = [
     [
-      [{ text: "k" }, "ukweʔtáksʌ"],
-      [{ text: "k" }, "ukweʔtaksʌ́", "hné·"],
+      [["k"], "ukweʔtáksʌ"],
+      [["k"], "ukweʔtaksʌ́", "hné·"],
     ],
     [
-      [{ text: "s" }, "ukweʔtáksʌ"],
-      [{ text: "s" }, "ukweʔtaksʌ́", "hneʔ"],
+      [["s"], "ukweʔtáksʌ"],
+      [["s"], "ukweʔtaksʌ́", "hneʔ"],
     ],
     [
-      [{ text: "h", type: "RPL" }, { text: "l" }, "ukweʔtáksʌ"],
-      [{ text: "h", type: "RPL" }, { text: "l" }, "ukweʔtaksʌ́", "hneʔ"],
+      [["h", "RPL"], ["l"], "ukweʔtáksʌ"],
+      [["h", "RPL"], ["l"], "ukweʔtaksʌ́", "hneʔ"],
     ],
     [
       [{ text: "yak" }, "ukweʔtáksʌ"],
@@ -55,12 +55,12 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
   ];
   const goodKidsData: Array<BreakdownArray[]> = [
     [
-      [{ text: "k" }, "eksaʔtiyó"],
-      [{ text: "k" }, "eksaʔtiyo", "hné·"],
+      [["k"], "eksaʔtiyó"],
+      [["k"], "eksaʔtiyo", "hné·"],
     ],
     [
-      [{ text: "h", type: "RPL" }, { text: "s" }, "eksaʔtiyó"],
-      [{ text: "h", type: "RPL" }, { text: "s" }, "eksaʔtiyo", "hné·"],
+      [["h", "RPL"], ["s"], "eksaʔtiyó"],
+      [["h", "RPL"], ["s"], "eksaʔtiyo", "hné·"],
     ],
     [
       [{ text: "la" }, "ksaʔtiyó"],
@@ -77,12 +77,12 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
   ];
   const badKidsData: Array<BreakdownArray[]> = [
     [
-      [{ text: "k" }, "eksaʔtáksʌ"],
-      [{ text: "k" }, "eksaʔtaksʌ́", "hneʔ"],
+      [["k"], "eksaʔtáksʌ"],
+      [["k"], "eksaʔtaksʌ́", "hneʔ"],
     ],
     [
-      [{ text: "s" }, "eksaʔtáksʌ"],
-      [{ text: "s" }, "eksaʔtaksʌ́", "hneʔ"],
+      [["s"], "eksaʔtáksʌ"],
+      [["s"], "eksaʔtaksʌ́", "hneʔ"],
     ],
     [
       [{ text: "la" }, "ksaʔtáksʌ"],

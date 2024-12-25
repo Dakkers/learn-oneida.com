@@ -7,17 +7,17 @@ const data: ParadigmData = {
     {
       pronoun: "i",
       phrase: "wakekstʌ́ha",
-      breakdown: [{ text: "wake" }, "kstʌ́ha̲"],
+      breakdown: [["wake"], "kstʌ́ha̲"],
     },
     {
       pronoun: "u",
       phrase: "sakstʌ́ha",
-      breakdown: [{ text: "sa" }, "kstʌ́ha̲"],
+      breakdown: [["sa"], "kstʌ́ha̲"],
     },
     {
       pronoun: "m",
       phrase: "lokstʌ́ha",
-      breakdown: [{ text: "lo" }, "kstʌ́ha̲"],
+      breakdown: [["lo"], "kstʌ́ha̲"],
     },
     {
       pronoun: "f",
@@ -32,17 +32,17 @@ const data: ParadigmData = {
     {
       pronoun: "uni",
       phrase: "yuknikstʌ́ha",
-      breakdown: [{ text: "yukni" }, "kstʌ́ha̲"],
+      breakdown: [["yukni"], "kstʌ́ha̲"],
     },
     {
       pronoun: "soni",
       phrase: "yuknikstʌ́ha",
-      breakdown: [{ text: "yukni" }, "kstʌ́ha̲"],
+      breakdown: [["yukni"], "kstʌ́ha̲"],
     },
     {
       pronoun: "u2",
       phrase: "snikstʌ́ha",
-      breakdown: [{ text: "sni" }, "kstʌ́ha̲"],
+      breakdown: [["sni"], "kstʌ́ha̲"],
     },
     {
       pronoun: "2m",

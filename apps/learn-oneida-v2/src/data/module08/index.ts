@@ -641,7 +641,12 @@ export function createModule8CharacteristicsList() {
   ];
 }
 
-export function getEnglishTranslation(datum, key) {
+export function getEnglishTranslation(
+  datum: {
+    en: string;
+  },
+  key: string,
+) {
   let result = "";
   if (key === "verb") {
     result = `it is {{WORD}}`;
@@ -660,7 +665,7 @@ export function getEnglishTranslation(datum, key) {
   } else if (key === "haveNounPast") {
     result = `I used to have {{A}} {{WORD}} bag`;
   } else if (key === "haveNounPastPlural") {
-    result = `I used to have  {{WORD}} bags`;
+    result = `I used to have {{WORD}} bags`;
   }
   return result
     .replace("{{WORD}}", datum.en)

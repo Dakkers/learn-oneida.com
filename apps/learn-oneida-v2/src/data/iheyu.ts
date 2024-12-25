@@ -12,7 +12,7 @@ const data: ParadigmData = {
     {
       pronoun: "u",
       phrase: "sʌheyú",
-      breakdown: [{ text: "s" }, "ʌheyú"],
+      breakdown: [["s"], "ʌheyú"],
     },
     {
       pronoun: "m",
@@ -47,12 +47,12 @@ const data: ParadigmData = {
     {
       pronoun: "2m",
       phrase: "lonʌheyú",
-      breakdown: [{ text: "lon" }, "ʌheyú"],
+      breakdown: [["lon"], "ʌheyú"],
     },
     {
       pronoun: "2f",
       phrase: "yonʌheyú",
-      breakdown: [{ text: "yon" }, "ʌheyú"],
+      breakdown: [["yon"], "ʌheyú"],
     },
     {
       pronoun: "us",
@@ -67,17 +67,17 @@ const data: ParadigmData = {
     {
       pronoun: "yall",
       phrase: "swʌheyú",
-      breakdown: [{ text: "sw" }, "ʌheyú"],
+      breakdown: [["sw"], "ʌheyú"],
     },
     {
       pronoun: "ms",
       phrase: "lonʌheyú",
-      breakdown: [{ text: "lon" }, "ʌheyú"],
+      breakdown: [["lon"], "ʌheyú"],
     },
     {
       pronoun: "fs",
       phrase: "yonʌheyú",
-      breakdown: [{ text: "yon" }, "ʌheyú"],
+      breakdown: [["yon"], "ʌheyú"],
     },
   ],
 };

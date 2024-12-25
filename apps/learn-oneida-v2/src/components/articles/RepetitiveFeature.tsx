@@ -4,137 +4,129 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
 import { TableWrapper } from "@/components/TableWrapper";
-import {
-  BreakdownArray,
-  BreakdownType,
-  TextBreakdown,
-} from "@ukwehuwehneke/language-components";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
   const data = [
     {
-      en: ["It is single", "It is single again"],
-      one: [
-        [{ text: "w" }, "atatwʌni·yó̲·"],
-        [{ text: "s", type: "REP" }, { text: "w" }, "atatwʌni·yó̲·"],
-      ],
-      type: "PR",
+      en: "It is single",
+      breakdown: [["w", "PR"], "atatwʌni·yó̲·"],
     },
     {
-      en: ["I am married", "I am married again"],
-      one: [
-        [{ text: "wake" }, "nyákuʔ"],
-        [{ text: "s", type: "REP" }, { text: "wake" }, "nyá·kuʔ"],
-      ],
-      type: "PB",
+      en: "It is single again",
+      breakdown: [["s", "REP"], ["w", "PR"], "atatwʌni·yó̲·"],
     },
     {
-      en: ["He is single", "He is single again"],
-      one: [
-        [{ text: "l" }, "atatwʌni·yó̲·"],
-        [{ text: "s", type: "REP" }, { text: "h" }, "atatwʌni·yó̲·"],
-      ],
-      type: "PR",
+      en: "I am married",
+      breakdown: [["wake", "PB"], "nyákuʔ"],
     },
     {
-      en: ["He is married (to someone)", "He is married (to someone) again"],
-      one: [
-        [{ text: "lo" }, "nyákuʔ"],
-        [{ text: "s", type: "REP" }, { text: "ho" }, "nyákuʔ"],
-      ],
-      type: "PB",
+      en: "I am married again",
+      breakdown: [["s", "REP"], ["wake", "PB"], "nyá·kuʔ"],
     },
     {
-      en: ["He doesn't know me", "He doesn't know me anymore"],
-      one: [
-        ["yáh te", { text: "hak" }, "yʌtelí̲"],
-        ["yáh te", { text: "s", type: "REP" }, { text: "hak" }, "yʌtelí̲"],
-      ],
-      type: "PP",
+      en: "He is single",
+      breakdown: [["l", "PR"], "atatwʌni·yó̲·"],
     },
     {
-      en: ["I like it", "I like it again"],
-      one: [
-        [{ text: "k" }, "nú·wehse̲"],
-        [{ text: "s", type: "REP" }, { text: "k" }, "nú·wehse̲"],
-      ],
-      type: "PR",
+      en: "He is single again",
+      breakdown: [["s", "REP"], ["h", "PR"], "atatwʌni·yó̲·"],
     },
     {
-      en: ["I do not like you", "I do not like you anymore"],
-      one: [
-        ["yáh teʔ", { text: "ku" }, "nú·wehse̲"],
-        ["yáh te", { text: "s", type: "REP" }, { text: "ku" }, "nú·wehse̲"],
-      ],
-      type: "PP",
+      en: "He is married (to someone)",
+      breakdown: [["lo", "PB"], "nyákuʔ"],
     },
     {
-      en: ["You like it", "You like it again"],
-      one: [
-        [{ text: "s" }, "nú·wehse̲"],
-        [{ text: "se", type: "REP" }, { text: "hs" }, "nú·wehse̲"],
-      ],
-      type: "PR",
+      en: "He is married (to someone) again",
+      breakdown: [["s", "REP"], ["ho", "PB"], "nyákuʔ"],
     },
     {
-      en: ["He loves her/them", "He loves her/them again"],
-      one: [
-        [{ text: "shako" }, "nolúkhwa̲ʔ"],
-        [{ text: "se", type: "REP" }, { text: "shako" }, "nolúkhwa̲ʔ"],
-      ],
-      type: "PP",
+      en: "He doesn't know me",
+      breakdown: ["yáh te", ["hak", "PP"], "yʌtelí̲"],
     },
     {
-      en: ["I do not like her/them", "I do not like her/them anymore"],
-      one: [
-        ["yáh teʔ", { text: "khe" }, "nú·wehse̲"],
-        ["yáh te", { text: "se", type: "REP" }, { text: "khe" }, "nú·wehse̲"],
-      ],
-      type: "PP",
+      en: "He doesn't know me anymore",
+      breakdown: ["yáh te", ["s", "REP"], ["hak", "PP"], "yʌtelí̲"],
     },
     {
-      en: ["Someone and I are engaged", "Someone and I are engaged again"],
-      one: [
-        [{ text: "yukni" }, "nyákheʔ"],
-        [{ text: "ts", type: "REP" }, { text: "yukni" }, "nyákheʔ"],
-      ],
-      type: "PB",
+      en: "I like it",
+      breakdown: [["k", "PR"], "nú·wehse̲"],
     },
     {
-      en: [
-        "I am not in a relationship (with someone)",
-        "I am not in a relationship (with someone) anymore",
-      ],
-      one: [
-        ["yáh te", { text: "yákn" }, "ehse̲"],
-        ["yáh te", { text: "ts", type: "REP" }, { text: "yákn" }, "ehse̲"],
-      ],
-      type: "PR",
+      en: "I like it again",
+      breakdown: [["s", "REP"], ["k", "PR"], "nú·wehse̲"],
     },
     {
-      en: ["He loves her/them", "He loves her/them again"],
-      one: [
-        [{ text: "yesa" }, "nolúkhwa̲ʔ"],
-        [{ text: "ts", type: "REP" }, { text: "yesa" }, "nolúkhwa̲ʔ"],
-      ],
-      type: "PP",
+      en: "I do not like you",
+      breakdown: ["yáh teʔ", ["ku", "PP"], "nú·wehse̲"],
     },
     {
-      en: ["You two are not married", "You two are not married anymore"],
-      one: [
-        ["yáh te", { text: "sni" }, "nyákuʔ"],
-        ["yáh te", { text: "tsi", type: "REP" }, { text: "sni" }, "nyákuʔ"],
-      ],
-      type: "PB",
+      en: "I do not like you anymore",
+      breakdown: ["yáh te", ["s", "REP"], ["ku", "PP"], "nú·wehse̲"],
     },
     {
-      en: ["Are you two single?", "Are you two single again?"],
-      one: [
-        [{ text: "tsy" }, "atatwʌni·yó· kʌ́"],
-        [{ text: "tsi", type: "REP" }, { text: "tsy" }, "atatwʌni·yó· kʌ́"],
-      ],
-      type: "PR",
+      en: "You like it",
+      breakdown: [["s", "PR"], "nú·wehse̲"],
+    },
+    {
+      en: "You like it again",
+      breakdown: [["se", "REP"], ["hs", "PR"], "nú·wehse̲"],
+    },
+    {
+      en: "He loves her/them",
+      breakdown: [["shako", "PP"], "nolúkhwa̲ʔ"],
+    },
+    {
+      en: "He loves her/them again",
+      breakdown: [["se", "REP"], ["shako", "PP"], "nolúkhwa̲ʔ"],
+    },
+    {
+      en: "I do not like her/them",
+      breakdown: ["yáh teʔ", ["khe", "PP"], "nú·wehse̲"],
+    },
+    {
+      en: "I do not like her/them anymore",
+      breakdown: ["yáh te", ["se", "REP"], ["khe", "PP"], "nú·wehse̲"],
+    },
+    {
+      en: "Someone and I are engaged",
+      breakdown: [["yukni", "PB"], "nyákheʔ"],
+    },
+    {
+      en: "Someone and I are engaged again",
+      breakdown: [["ts", "REP"], ["yukni", "PB"], "nyákheʔ"],
+    },
+    {
+      en: "I am not in a relationship (with someone)",
+      breakdown: ["yáh te", ["yákn", "PR"], "ehse̲"],
+    },
+    {
+      en: "I am not in a relationship (with someone) anymore",
+      breakdown: ["yáh te", ["ts", "REP"], ["yákn", "PR"], "ehse̲"],
+    },
+    {
+      en: "He loves her/them",
+      breakdown: [["yesa", "PP"], "nolúkhwa̲ʔ"],
+    },
+    {
+      en: "He loves her/them again",
+      breakdown: [["ts", "REP"], ["yesa", "PP"], "nolúkhwa̲ʔ"],
+    },
+    {
+      en: "You two are not married",
+      breakdown: ["yáh te", ["sni", "PB"], "nyákuʔ"],
+    },
+    {
+      en: "You two are not married anymore",
+      breakdown: ["yáh te", ["tsi", "REP"], ["sni", "PB"], "nyákuʔ"],
+    },
+    {
+      en: "Are you two single?",
+      breakdown: [["tsy", "PR"], "atatwʌni·yó· kʌ́"],
+    },
+    {
+      en: "Are you two single again?",
+      breakdown: [["tsi", "REP"], ["tsy", "PR"], "atatwʌni·yó· kʌ́"],
     },
   ];
 
@@ -166,23 +158,7 @@ export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
       </List>
 
       <TableWrapper
-        columns={[
-          TableWrapper.englishColumn,
-          {
-            accessorKey: "one",
-            // @ts-expect-error To be fixed in LO-12
-            cell: (value: BreakdownArray[], row: { type: BreakdownType }) =>
-              value.map((v, i) => (
-                <TextBreakdown
-                  as="div"
-                  breakdown={v}
-                  key={i}
-                  typeFallback={row.type}
-                />
-              )),
-            header: "Translation",
-          },
-        ]}
+        columns={TableWrapper.columnsEnglishBreakdown}
         data={data}
       />
     </Flex>

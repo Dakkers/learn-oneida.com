@@ -85,7 +85,7 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
     },
     {
       pronoun: "soni",
-      breakdown: [{ text: "yákn" }],
+      breakdown: [["yákn"]],
     },
     {
       pronoun: "2m",

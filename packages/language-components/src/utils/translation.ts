@@ -7,6 +7,7 @@ import {
   REF_VERB_MAP,
   REF_VERB_PASTTENSE_ALT_MAP,
   REF_VERB_PASTTENSE_MAP,
+  REFLEXIVE_MAP,
 } from "./pronouns";
 
 export function formatTranslation(
@@ -29,6 +30,7 @@ export function translatePhrase(
     pronoun: arrayify(PRONOUN_MAP_EN[pronoun])[0],
     pronounObjective: arrayify(PRONOUN_MAP_EN_OBJECTIVE[pronoun])[0],
     pronounPossessive: arrayify(PRONOUN_MAP_EN_POSSESSIVE[pronoun])[0],
+    reflexive: REFLEXIVE_MAP[pronoun],
     refVerb: REF_VERB_MAP[pronoun],
     refVerbPast: REF_VERB_PASTTENSE_MAP[pronoun],
     refVerbPastAlt: REF_VERB_PASTTENSE_ALT_MAP[pronoun],

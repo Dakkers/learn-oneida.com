@@ -2,27 +2,27 @@ import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
   translation: "{{pronounPossessive}} mother",
-  type: "PLB",
+  type: "PB",
   phrases: [
     {
       pronoun: "i",
       phrase: "aknulhá·",
-      breakdown: [{ text: "ak" }, "nulhá·"],
+      breakdown: [["ak"], "nulhá·"],
     },
     {
       pronoun: "u",
       phrase: "sanulhá·",
-      breakdown: [{ text: "sa" }, "nulhá·"],
+      breakdown: [["sa"], "nulhá·"],
     },
     {
       pronoun: "m",
       phrase: "lonulhá·",
-      breakdown: [{ text: "lo", type: "PB" }, "nulhá·"],
+      breakdown: [["lo"], "nulhá·"],
     },
     {
       pronoun: "f",
       phrase: "akonulhá·",
-      breakdown: [{ text: "ako" }, "nulhá·"],
+      breakdown: [["ako"], "nulhá·"],
     },
     {
       pronoun: "us",

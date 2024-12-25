@@ -98,16 +98,16 @@ function createPhrasesLol(animal: string) {
       breakdown: [`${animal} ni`, { text: "sʌ" }, "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "ho" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["ho"], "ʔtaló·tʌʔ"],
     },
     {
       breakdown: [`${animal} ni`, { text: "yako" }, "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "yukni" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yukni"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "sni" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["sni"], "ʔtaló·tʌʔ"],
     },
     {
       breakdown: [`${animal} ni`, { text: "yukwʌ" }, "ʔtaló·tʌʔ"],

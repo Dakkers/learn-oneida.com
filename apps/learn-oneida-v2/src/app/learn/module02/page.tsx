@@ -7,22 +7,19 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import React from "react";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 
-import nuwehseRed from "~/data/nuwehse-red";
 import yʌteliRed from "~/data/yʌteli-red";
 import nolukhwaRed from "~/data/nolukhwa-red";
-import nuwehseBlue from "~/data/nuwehse-blue";
 import yʌteliBlue from "~/data/yʌteli-blue";
 import nolukhwaBlue from "~/data/nolukhwa-blue";
-import nuwehsePurple from "~/data/module01/like-purple";
 import yʌteliPurple from "~/data/module02/know-purple";
 import nolukhwaPurple from "~/data/module02/love-purple";
 import nuwehseRefl from "~/data/nuwehse-refl";
 import nolukhwaRefl from "~/data/nolukhwa-refl";
 import yʌteliRefl from "~/data/yʌteli-refl";
-import liwanutuseData from "~/data/liwanutuse.json";
-import hloliData from "~/data/hloli.json";
-import hloliNegatedData from "~/data/hloli-negated.json";
-import liwanutuseNegatedData from "~/data/liwanutuse-negated.json";
+import liwanutuseData from "~/data/module02/ask";
+import hloliData from "~/data/module02/tell";
+import hloliNegatedData from "~/data/module02/tell-negated";
+import liwanutuseNegatedData from "~/data/module02/ask-negated";
 import unheJson from "~/data/unhe";
 import iheyuJson from "~/data/iheyu";
 import atukohtuJson from "~/data/atukohtu";
@@ -31,22 +28,13 @@ import kʌʔni_yʌhaJson from "~/data/kʌʔni_yʌha";
 import ohsliyakuJson from "~/data/ohsliyaku";
 
 import { TableWrapper } from "@/components/TableWrapper";
-import {
-  PRONOUN_MAP_EN,
-  PRONOUN_MAP_EN_OBJECTIVE,
-  PURPLES_MAP,
-  arrayify,
-  pronouns,
-} from "@ukwehuwehneke/language-components";
+import { Pronoun, arrayify } from "@ukwehuwehneke/language-components";
 import {
   BreakdownArray,
-  BreakdownType,
   convertBreakdownToPlainText,
   dualicPronouns,
   pluralPronouns,
-  TextBreakdown,
 } from "@ukwehuwehneke/language-components";
-import { PronominalColor } from "~/components/Pronominal";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "~/components/Letter";
 import _ from "lodash";
@@ -54,7 +42,7 @@ import {
   FamilyArticle,
   FamilyTableOfContentItems,
 } from "~/components/articles/Family";
-import { ParadigmTable } from "~/components/ParadigmTable";
+import { ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { LastNamesArticle } from "~/components/articles/LastNames";
@@ -63,6 +51,7 @@ import { SimilarInAppearanceArticle } from "~/components/articles/SimilarInAppea
 import { BeingDifferentArticle } from "~/components/articles/BeingDifferent";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -75,18 +64,17 @@ export default function LearnModule02() {
   return (
     <>
       <SectionHeading level={1}>Module 2</SectionHeading>
-      <Box py={4}>
-        <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
-        </Notice>
-      </Box>
-      <Text>In this module, we&lsquo;ll cover the following:</Text>
+
+      <Notice intent="negative">
+        This page is undergoing a rewrite of sorts. There is missing content and
+        other content is subject to change.
+      </Notice>
 
       <TOC>
         <TOC.Item
           label={
             <>
-              New verbs: <b>nuwehseʔ, yʌteli, nolukhwaʔ</b>
+              New verbs: <b>yʌteli, nolukhwaʔ</b>
             </>
           }
           value="new-verbs"
@@ -195,17 +183,26 @@ export default function LearnModule02() {
   );
 }
 
+const translationFnLike = ({ pronoun }: { pronoun: Pronoun }) => ({
+  verb: ["it", "m", "f"].includes(pronoun) ? "likes" : "like",
+});
+
+const translationFnKnow = ({ pronoun }: { pronoun: Pronoun }) => ({
+  verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
+});
+
+const translationFnLove = ({ pronoun }: { pronoun: Pronoun }) => ({
+  verb: ["it", "m", "f"].includes(pronoun) ? "loves" : "love",
+});
+
 function VerbsSection() {
   return (
     <>
       <SectionHeading id="new-verbs" level={2}>
         New verbs
       </SectionHeading>
-      <Text>Below are the paradigms for three new verbs:</Text>
+      <Text>Below are the paradigms for two new verbs:</Text>
       <List>
-        <List.Item>
-          <b>nuwehseʔ</b> — to like
-        </List.Item>
         <List.Item>
           <b>yʌteli</b> — to know, to be familiar with
         </List.Item>
@@ -214,45 +211,26 @@ function VerbsSection() {
         </List.Item>
       </List>
       <Text>
-        All of these begin with a consonant so they use C-stem pronominals.
+        Both of these begin with a consonant so they use C-stem pronominals.
       </Text>
 
       <SectionHeading id="new-verbs-red" level={3}>
         Red pronominals
       </SectionHeading>
-      <VerbsTable
-        color="red"
-        enData={PRONOUN_MAP_EN}
-        headerText="... {{verb}} it"
-        keys={[...pronouns]}
-        knowData={yʌteliRed}
-        likeData={nuwehseRed}
-        loveData={nolukhwaRed}
-      />
+      <ParadigmTable data={yʌteliRed} translationFn={translationFnKnow} />
+      <ParadigmTable data={nolukhwaRed} translationFn={translationFnLove} />
+
       <SectionHeading id="new-verbs-blue" level={3}>
         Blue pronominals
       </SectionHeading>
-      <VerbsTable
-        color="blue"
-        enData={PRONOUN_MAP_EN_OBJECTIVE}
-        headerText="it {{verb}} ..."
-        keys={[...pronouns]}
-        knowData={yʌteliBlue}
-        likeData={nuwehseBlue}
-        loveData={nolukhwaBlue}
-      />
+      <ParadigmTable data={yʌteliBlue} translationFn={translationFnKnow} />
+      <ParadigmTable data={nolukhwaBlue} translationFn={translationFnLove} />
+
       <SectionHeading id="new-verbs-purple" level={3}>
         Purple pronominals
       </SectionHeading>
-      <VerbsTable
-        color="purple"
-        enData={PURPLES_MAP}
-        headerText="... {{verb}} ..."
-        keys={Object.keys(PURPLES_MAP)}
-        knowData={yʌteliPurple}
-        likeData={nuwehsePurple}
-        loveData={nolukhwaPurple}
-      />
+      <ParadigmTable data={yʌteliPurple} translationFn={translationFnKnow} />
+      <ParadigmTable data={nolukhwaPurple} translationFn={translationFnLove} />
     </>
   );
 }
@@ -275,15 +253,9 @@ function ReflexiveSection() {
         adding <Letter>atat</Letter> to the root word. Adding this prefix
         &quot;changes&quot; the root word to use an A-stem.
       </Text>
-      <VerbsTable
-        color="red"
-        enData={PRONOUN_MAP_EN}
-        headerText="... {{verb}} oneself"
-        keys={[...pronouns]}
-        knowData={yʌteliRefl}
-        likeData={nuwehseRefl}
-        loveData={nolukhwaRefl}
-      />
+      <ParadigmTable data={nuwehseRefl} translationFn={translationFnLike} />
+      <ParadigmTable data={yʌteliRefl} translationFn={translationFnKnow} />
+      <ParadigmTable data={nolukhwaRefl} translationFn={translationFnLove} />
     </>
   );
 }
@@ -291,7 +263,7 @@ function ReflexiveSection() {
 function ReciprocalSection() {
   const pronounSubset = [...dualicPronouns, ...pluralPronouns];
 
-  const knowData = [
+  const knowData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelí̲"],
@@ -304,7 +276,7 @@ function ReciprocalSection() {
     [["te", "REFL"], ["ku"], ["tat", "REFL"], "yʌtelí̲"],
   ];
 
-  const likeData = [
+  const likeData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
@@ -317,7 +289,7 @@ function ReciprocalSection() {
     [["te", "REFL"], ["ku"], ["tat", "REFL"], "nú·wehse̲ʔ"],
   ];
 
-  const loveData = [
+  const loveData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
@@ -330,12 +302,14 @@ function ReciprocalSection() {
     [["te", "REFL"], ["ku"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
   ];
 
-  const formatBreakdownsToPhrases = (data: Array<string | string[]>[]) => ({
+  const formatBreakdownsToPhrases = (verb: string, data: BreakdownArray[]) => ({
     phrases: data.map((breakdown, i) => ({
       breakdown,
       phrase: convertBreakdownToPlainText(breakdown),
       pronoun: pronounSubset[i],
     })),
+    translation: `{{pronoun}} ${verb} each other`,
+    type: "PR" as const,
   });
 
   return (
@@ -344,119 +318,38 @@ function ReciprocalSection() {
         Reciprocal
       </SectionHeading>
       <Text>
-        We can go even further and add yet another prefix to a root word to make
-        the root word apply between two subjects &quot;in each direction&quot;.
-        In English, an example of this is &quot;Someone and I like each
+        You can go even further and add yet another prefix to a word to make the
+        word apply between two subjects &quot;in each direction&quot;. In
+        English, an example of this is &quot;Someone and I like each
         other&quot;. The term for this is &quot;reciprocal&quot;.
       </Text>
       <Text>
-        To translate this sentence into Oneida, let&lsquo;s first take the root
-        word for &quot;to like&quot;, <b>nuwehseʔ</b>, and apply the reflexive
-        prefix: <b>atatnuwehseʔ</b>. This is now an A-stem word so we can look
-        at the red pronominals table to find the corresponding prefix for
-        &quot;Someone and I&quot;, which is <Letter>yaky</Letter>. So far we
-        have <b>yakyatatnú·wehse̲ʔ</b>, but if you look in the previous section,
-        this means &quot;Someone and I like ourselves&quot;. To make it
-        reciprocal, we add <Letter>te</Letter> at the beginning.
+        To translate this sentence into Oneida, first take the root word for
+        &quot;to like&quot;, <b>nuwehseʔ</b>, and apply the reflexive prefix:{" "}
+        <b>atatnuwehseʔ</b>. This is now an A-stem word so we can look at the
+        red pronominals table to find the corresponding prefix for &quot;Someone
+        and I&quot;, which is <Letter>yaky</Letter>. So far we have{" "}
+        <b>yakyatatnú·wehse̲ʔ</b>, but if you look in the previous section, this
+        means &quot;Someone and I like ourselves&quot;. To make it reciprocal,
+        add <Letter>te</Letter> at the beginning.
       </Text>
       <Text>
         So the result is: <i>teyakyatatnú·wehse̲ʔ</i>.
       </Text>
-      <VerbsTable
-        color="red"
-        enData={PRONOUN_MAP_EN}
-        headerText="... {{verb}} oneself"
-        keys={[...pronounSubset]}
-        knowData={formatBreakdownsToPhrases(knowData)}
-        likeData={formatBreakdownsToPhrases(likeData)}
-        loveData={formatBreakdownsToPhrases(loveData)}
+      <ParadigmTable
+        data={formatBreakdownsToPhrases("like", likeData)}
+        translationFn={translationFnLike}
+      />
+      <ParadigmTable
+        data={formatBreakdownsToPhrases("know", knowData)}
+        translationFn={translationFnKnow}
+      />
+      <ParadigmTable
+        data={formatBreakdownsToPhrases("love", loveData)}
+        translationFn={translationFnLove}
       />
     </>
   );
-}
-
-function VerbsTable({
-  color,
-  enData,
-  headerText,
-  keys,
-  knowData,
-  likeData,
-  loveData,
-}: {
-  color: PronominalColor;
-  enData: Record<string, string>;
-  headerText: string;
-  keys: string[];
-  // @ts-expect-error To be addressed in LO-21
-  knowData: SomeData;
-  // @ts-expect-error To be addressed in LO-21
-  likeData: SomeData;
-  // @ts-expect-error To be addressed in LO-21
-  loveData: SomeData;
-}) {
-  let typeFallback: BreakdownType | undefined;
-  if (color === "red") {
-    typeFallback = "PR";
-  } else if (color === "blue") {
-    typeFallback = "PB";
-  } else if (color === "purple") {
-    typeFallback = "PP";
-  }
-
-  const columns = React.useMemo(
-    () => [
-      {
-        accessorKey: "en",
-        header: "",
-      },
-      {
-        accessorKey: "like",
-        cell: (value: BreakdownArray) => (
-          <TextBreakdown breakdown={value} typeFallback={typeFallback} />
-        ),
-        header: headerText.replace(
-          "{{verb}}",
-          color === "blue" ? "likes" : "like",
-        ),
-      },
-      {
-        accessorKey: "know",
-        cell: (value) => (
-          <TextBreakdown breakdown={value} typeFallback={typeFallback} />
-        ),
-        header: headerText.replace(
-          "{{verb}}",
-          color === "blue" ? "knows" : "know",
-        ),
-      },
-      {
-        accessorKey: "love",
-        cell: (value) => (
-          <TextBreakdown breakdown={value} typeFallback={typeFallback} />
-        ),
-        header: headerText.replace(
-          "{{verb}}",
-          color === "blue" ? "loves" : "love",
-        ),
-      },
-    ],
-    [color, headerText, typeFallback],
-  );
-
-  const rows = React.useMemo(
-    () =>
-      keys.map((key) => ({
-        en: enData[key],
-        like: getBreakdown(likeData, key),
-        love: getBreakdown(loveData, key),
-        know: getBreakdown(knowData, key),
-      })),
-    [keys, enData, likeData, knowData, loveData],
-  );
-
-  // @ts-expect-error To be addressed in LO-12
-  return <TableWrapper columns={columns} data={rows} />;
 }
 
 function CommandsSection() {
@@ -466,23 +359,16 @@ function CommandsSection() {
         Commands
       </SectionHeading>
       <Text>
-        Here we introduce commands, which have different pronominals in some
-        cases. The two commands are:
+        Here we introduce commands, which use purple pronominals. Commands have
+        different pronominals when you ("I") are the subject. These are known as
+        "command form" pronominals.
       </Text>
-      <List>
-        <List.Item>
-          <b>hlo·li̲ʔ</b> — to tell someone
-        </List.Item>
-        <List.Item>
-          <b>liwanu·túse̲</b> — to ask someone
-        </List.Item>
-      </List>
       <SectionHeading id="commands-tell" level={3}>
-        <b>hlo·li̲ʔ·</b> — to tell someone
+        <b>-hloli- / -hloly-</b> — tell someone
       </SectionHeading>
       <CommandsTable data={hloliData} verb="tell" />
       <SectionHeading id="commands-ask" level={3}>
-        <i>liwanu·túse̲</i> — to ask someone
+        <b>-liʔwanut- / -liʔwanutu-</b> — ask someone
       </SectionHeading>
       <CommandsTable data={liwanutuseData} verb="ask" />
     </>
@@ -496,15 +382,18 @@ function NegatedCommandsSection() {
         Negated Commands
       </SectionHeading>
       <Text>
-        We can negate the commands learned above too. Notice that some of the
-        pronominals are different.
+        Commands can be negated, too. The regular purple pronominals are used,
+        as opposed to the command form pronominals. When negating a command, the
+        future tense of the verb must be used, which is indicated with the
+        prefix <Letter>ʌ</Letter>. This will be discussed more in{" "}
+        <LinkWrapper page={4} />.
       </Text>
       <SectionHeading id="negated-commands-tell" level={3}>
-        <b>Takʌ ...hlo·li̲ʔ</b> — don&lsquo;t tell someone
+        <b>Takʌ ʌ...hlo·li̲ʔ</b> — don&lsquo;t tell someone
       </SectionHeading>
       <CommandsTable data={hloliNegatedData} negated verb="tell" />
       <SectionHeading id="negated-commands-ask" level={3}>
-        <b>Takʌ ...liwanu·túse̲</b> — don&lsquo;t ask someone
+        <b>Takʌ ʌ...liwanu·túse̲</b> — don&lsquo;t ask someone
       </SectionHeading>
       <CommandsTable data={liwanutuseNegatedData} negated verb="ask" />
     </>
@@ -516,16 +405,15 @@ function CommandsTable({
   negated = false,
   verb,
 }: {
-  // @ts-expect-error To be addressed in LO-21
-  data: SomeOtherData;
+  data: ParadigmData;
   negated?: boolean;
   verb: string;
 }) {
-  const keys = ["u_i", "u_theyni", "u_f", "u_m"] as const;
+  const keys = ["cmd_u_i", "cmd_u_theyni", "u_f", "u_m"] as const;
   const negativeText = negated ? "Don't" : "";
   const en = {
-    u_i: [`${negativeText} (you) ${verb} me`],
-    u_theyni: [
+    cmd_u_i: [`${negativeText} (you) ${verb} me`],
+    cmd_u_theyni: [
       `${negativeText} you ${verb} all of us`,
       `${negativeText} all of you ${verb} me`,
       `${negativeText} all of you ${verb} all of us`,
@@ -534,13 +422,9 @@ function CommandsTable({
     u_m: [`${negativeText} (you) ${verb} him`],
   };
   return (
-    <TableWrapper
-      columns={TableWrapper.columnsParadigmPurple}
-      data={keys.map((key) => ({
-        // @ts-expect-error To be addressed in LO-21
-        breakdown: data.phrases.find((p) => p.key === key).breakdown,
-        en: en[key],
-      }))}
+    <ParadigmTable
+      columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
+      data={data}
     />
   );
 }
@@ -563,11 +447,13 @@ function AliveDeadSection() {
         data={unheJson}
       />
       <SectionHeading id="verb-dead" level={2}>
-        iheyu — (to be) dead / (to have) died
+        iheyu / ʌheyu — (to be) dead / (to have) died
       </SectionHeading>
       <Text>
-        Below is the paradigm table for <b>iheyu</b>. It is an I-stem root word
-        and uses blue pronominals.
+        Below is the paradigm table for <b>iheyu</b>. It is an irregular root
+        word where its stem depends on the pronominal. It can be thought of as a
+        Λ-stem root word for all pronominals except the "me" pronominal, where
+        it is an I-stem root word. In both cases, it uses blue pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
@@ -852,6 +738,7 @@ function NumbersSection() {
           TableWrapper.columnsEnglishTranslation[0],
           {
             accessorKey: "translation",
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: string | string[], row: any) => (
               <Flex direction="column" gap={2}>
                 {arrayify(value).map((val, i) => (
@@ -989,6 +876,7 @@ function DialogueSection() {
     { one: "ʌ́·", hasAudio: false },
   ];
 
+  // @ts-expect-error TODO
   const mapper = (row) => ({ ...row, hasAudio: row.hasAudio ?? true });
 
   return (
@@ -1058,7 +946,12 @@ function ThingsThatAreTheSameSection() {
       <SectionHeading id="things-that-are-the-same" level={2}>
         Things that are the same
       </SectionHeading>
+      <Text>
+        To say two things are the same, the <LinkWrapper page="coin" />,{" "}
+        <Letter>tshaʔ</Letter>, is used.
+      </Text>
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={data.map(TableWrapper.mapEnglishAndTranslation).map((row, i) => ({
           ...row,
@@ -1068,10 +961,3 @@ function ThingsThatAreTheSameSection() {
     </>
   );
 }
-
-// @ts-expect-error To be addressed in LO-21
-const getBreakdown = (data, key) =>
-  data.phrases.find(
-    // @ts-expect-error To be addressed in LO-21
-    (p: SomethingElseEntirely) => p.key === key || p.pronoun === key,
-  )?.breakdown;

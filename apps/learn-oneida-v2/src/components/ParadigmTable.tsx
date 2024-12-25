@@ -396,7 +396,7 @@ export function createParadigmData(
   data: Pick<ParadigmData, "translation" | "type" | "whispered"> & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },
-  allowedPronouns?: Pronoun[],
+  allowedPronouns?: Pronoun[] | typeof pronounsPurple,
 ): ParadigmData {
   const result = _.cloneDeep(data) as ParadigmData;
   for (let i = 0; i < result.phrases.length; i++) {
@@ -424,6 +424,7 @@ export function createParadigmData(
       .join("");
 
     if (allowedPronouns) {
+      // @ts-expect-error TODO
       element.pronoun = allowedPronouns[i];
     }
   }
