@@ -5,9 +5,9 @@
   "scripts": {
     "build": "next build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
-    "cf:deploy": "pnpm run ci:tailwind && pnpm run ci:build:deps && npx @cloudflare/next-on-pages@1",
-    "ci:format": "prettier ./src --check",
+    "cf:deploy": "pnpm run ci:build:deps && pnpm run ci:tailwind && npx @cloudflare/next-on-pages@1",
     "ci:build:deps": "pnpm --filter \"@ukwehuwehneke/ohutsya\" build && pnpm --filter \"@ukwehuwehneke/language-components\" build",
+    "ci:format": "prettier ./src --check",
     "ci:tailwind": "pnpm --filter \"@ukwehuwehneke/ohutsya\" tailwind:build && pnpm run tailwind:build",
     "dev": "next dev",
     "format:write": "prettier ./src --write",

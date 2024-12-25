@@ -24,6 +24,7 @@ import {
   PrimitiveTableHead,
   PrimitiveTableHeader,
   PrimitiveTableRow,
+  TextArray,
   TextInput,
 } from "@ukwehuwehneke/ohutsya";
 import { Settings } from "lucide-react";
@@ -50,6 +51,8 @@ import {
   translatePhrase,
   whisperizeWord,
 } from "@ukwehuwehneke/language-components";
+
+import { pronounsPurple } from "@ukwehuwehneke/language-components";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),
@@ -247,17 +250,21 @@ function TableRowWrapper({
   return (
     <PrimitiveTableRow>
       {colVisibility.pronounEnglish && (
-        <PrimitiveTableCell>{PRONOUN_MAP_EN[row.pronoun]}</PrimitiveTableCell>
+        <PrimitiveTableCell>
+          <TextArray>{PRONOUN_MAP_EN[row.pronoun]}</TextArray>
+        </PrimitiveTableCell>
       )}
       {colVisibility.pronounOneida && (
         <PrimitiveTableCell>
-          {PRONOUN_MAP_ONEIDA[row.pronoun]}
+          <TextArray>{PRONOUN_MAP_ONEIDA[row.pronoun]}</TextArray>
         </PrimitiveTableCell>
       )}
       {context.isTesting ? (
         <>
           {colVisibility.translation && (
-            <PrimitiveTableCell>{translatedPhrase}</PrimitiveTableCell>
+            <PrimitiveTableCell>
+              <TextArray>{translatedPhrase}</TextArray>
+            </PrimitiveTableCell>
           )}
           <PrimitiveTableCell>
             <FormField
@@ -302,7 +309,9 @@ function TableRowWrapper({
             </Flex>
           </PrimitiveTableCell>
           {colVisibility.translation && (
-            <PrimitiveTableCell>{translatedPhrase}</PrimitiveTableCell>
+            <PrimitiveTableCell>
+              <TextArray>{translatedPhrase}</TextArray>
+            </PrimitiveTableCell>
           )}
         </>
       )}

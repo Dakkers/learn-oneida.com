@@ -290,7 +290,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
           { data: friendsJson, en: "friends", oneida: "atʌloʔslaʔshúha" },
         ]}
         // @ts-expect-error To be addressed in LO-16
-        pronouns={["i", "u", "m", "f", "she_her"]}
+        pronouns={["i", "u", "m", "f", "f_f"]}
       />
     </>
   );

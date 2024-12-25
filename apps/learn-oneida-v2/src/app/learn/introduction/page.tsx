@@ -55,10 +55,10 @@ export default function LearnIntroduction() {
         help you learn the Oneida language. Oneida is a Haudenosaunee language,
         which is part of the Iroquian language family. Like most ukwehuwehnéke
         (native languages), it is an immensely sophisticated language. This
-        website will not dive too deep into the linguistics of this language at
-        this time, but it is worth knowing that words are much longer than in
-        English and comprised of many distinct pieces due to the language's
-        polysynthetic nature. An example is this word:
+        website will not dive too deep into the linguistics of Oneida at this
+        time, but it is worth knowing that words are much longer than in English
+        and comprised of many distinct pieces due to Oneida's polysynthetic
+        nature. An example is this word:
       </Text>
 
       <div className="text-center">
