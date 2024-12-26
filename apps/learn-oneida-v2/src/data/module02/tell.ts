@@ -19,6 +19,7 @@ const data: ParadigmData = createParadigmData(
       },
     ],
   },
+  // @ts-expect-error Pronominal things
   ["cmd_u_i", "cmd_u_theyni", "u_f", "u_m"],
 );
 

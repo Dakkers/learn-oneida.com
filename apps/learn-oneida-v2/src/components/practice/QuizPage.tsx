@@ -11,8 +11,8 @@ import { cn } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import { CheckCircle2Icon, XCircleIcon } from "lucide-react";
 import React from "react";
-import { arrayify } from "~/utils";
-import { sanitizeIrregularCharacters } from "~/utils/words";
+import { arrayify } from "@ukwehuwehneke/language-components";
+import { sanitizeIrregularCharacters } from "@ukwehuwehneke/language-components";
 
 interface QuizContainerContextProps {
   answerSetting: string;
@@ -155,7 +155,7 @@ function ResultsScreen({
           { accessorKey: "question", header: "Question" },
           {
             accessorKey: "answer",
-            // @ts-expect-error To be addressed in LO-12
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: Result["answer"]) => (
               <Flex align="center" gap={4}>
                 {value.isCorrect ? (
@@ -186,7 +186,7 @@ function ResultsScreen({
             header: "Answer",
           },
         ]}
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         data={results}
       />
 

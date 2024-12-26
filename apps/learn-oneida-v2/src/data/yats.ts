@@ -12,32 +12,32 @@ const data: ParadigmData = {
     {
       pronoun: "u",
       phrase: "yesa·yáts",
-      breakdown: [{ text: "yesa·" }, "yáts"],
+      breakdown: [["yesa·"], "yáts"],
     },
     {
       pronoun: "m",
       phrase: "luwa·yáts",
-      breakdown: [{ text: "luwa·" }, "yáts"],
+      breakdown: [["luwa·"], "yáts"],
     },
     {
       pronoun: "f",
       phrase: "yutatyáts",
-      breakdown: [{ text: "yutat" }, "yáts"],
+      breakdown: [["yutat"], "yáts"],
     },
     {
       pronoun: "it",
       phrase: "kuwa·yáts",
-      breakdown: [{ text: "kuwa·" }, "yáts"],
+      breakdown: [["kuwa·"], "yáts"],
     },
     {
       pronoun: "ms",
       phrase: "luwati·yáts",
-      breakdown: [{ text: "luwati·" }, "yáts"],
+      breakdown: [["luwati·"], "yáts"],
     },
     {
       pronoun: "fs",
       phrase: "kuwati·yáts",
-      breakdown: [{ text: "kuwati·" }, "yáts"],
+      breakdown: [["kuwati·"], "yáts"],
     },
   ],
 };

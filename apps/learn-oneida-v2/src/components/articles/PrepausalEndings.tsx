@@ -1,12 +1,15 @@
 "use client";
-import { Flex, Link, List, PlayButton } from "@ukwehuwehneke/ohutsya";
-import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { Flex, List, PlayButton } from "@ukwehuwehneke/ohutsya";
+import {
+  SectionHeading,
+  SectionHeadingProps,
+} from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ArticleProps } from "./utils";
-import { Letter } from "../Letter";
 import { DialogueTable } from "../DialogueTable";
 
 export function PrepausalEndingsArticle({ level = 1 }: ArticleProps) {
+  const sublevel = (level + 1) as SectionHeadingProps["level"];
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="prepausal-endings" level={level}>
@@ -36,7 +39,7 @@ export function PrepausalEndingsArticle({ level = 1 }: ArticleProps) {
         is in its "medial form".
       </Text>
 
-      <SectionHeading id="prepausal-cut-off" level={level + 1}>
+      <SectionHeading id="prepausal-cut-off" level={sublevel}>
         Cut-off Endings
       </SectionHeading>
 
@@ -55,7 +58,7 @@ export function PrepausalEndingsArticle({ level = 1 }: ArticleProps) {
         ]}
       />
 
-      <SectionHeading id="prepausal-replaced-syllable" level={level + 1}>
+      <SectionHeading id="prepausal-replaced-syllable" level={sublevel}>
         Replaced Syllable
       </SectionHeading>
 
@@ -76,7 +79,7 @@ export function PrepausalEndingsArticle({ level = 1 }: ArticleProps) {
         ]}
       />
 
-      <SectionHeading id="prepausal-whispered" level={level + 1}>
+      <SectionHeading id="prepausal-whispered" level={sublevel}>
         Whispered Syllables
       </SectionHeading>
 
@@ -88,7 +91,7 @@ export function PrepausalEndingsArticle({ level = 1 }: ArticleProps) {
 
       <ListOfWords words={[["tehatilihwákhwa̲ʔ", "tehatilihwákhwaʔ"]]} />
 
-      <SectionHeading id="prepausal-examples" level={level + 1}>
+      <SectionHeading id="prepausal-examples" level={sublevel}>
         Examples
       </SectionHeading>
 

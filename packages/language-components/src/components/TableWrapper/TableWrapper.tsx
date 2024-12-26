@@ -81,14 +81,14 @@ function createBreakdownCol(
 const oneidaPronounColumns: TableProps["columns"] = [
   {
     accessorKey: "pronoun",
-    // @ts-expect-error TODO
+    // @ts-expect-error TODO - TableWrapper/Table generics
     cell: (value: Pronoun) => <TextArray>{PRONOUN_MAP_EN[value]}</TextArray>,
     header: "Pronoun (en)",
     key: "pronoun_en",
   },
   {
     accessorKey: "pronoun",
-    // @ts-expect-error TODO
+    // @ts-expect-error TODO - TableWrapper/Table generics
     cell: (value: Pronoun) => (
       <TextArray>{PRONOUN_MAP_ONEIDA[value]}</TextArray>
     ),
@@ -99,17 +99,17 @@ const oneidaPronounColumns: TableProps["columns"] = [
 
 const columnsParadigmRed: TableProps["columns"] = [
   EnglishCol,
-  // @ts-expect-error TODO
+  // @ts-expect-error TODO - TableWrapper/Table generics
   createBreakdownCol("PR"),
 ];
 const columnsParadigmBlue: TableProps["columns"] = [
   EnglishCol,
-  // @ts-expect-error TODO
+  // @ts-expect-error TODO - TableWrapper/Table generics
   createBreakdownCol("PB"),
 ];
 const columnsParadigmPurple: TableProps["columns"] = [
   EnglishCol,
-  // @ts-expect-error TODO
+  // @ts-expect-error TODO - TableWrapper/Table generics
   createBreakdownCol("PP"),
 ];
 const columnsEnglishTranslation: TableProps["columns"] = [
@@ -124,7 +124,7 @@ const columnsEnglishBreakdown: TableProps["columns"] = [
   EnglishCol,
   {
     accessorKey: "breakdown",
-    // @ts-expect-error TODO
+    // @ts-expect-error TODO - TableWrapper/Table generics
     cell: (value: BreakdownArray) => (
       <TextBreakdown breakdown={value} wrap="nowrap" />
     ),

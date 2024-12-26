@@ -129,18 +129,6 @@ export default function LearnModule03() {
   );
 }
 
-const pastTenseColumns = [
-  TableWrapper.englishColumn,
-  {
-    accessorKey: "one",
-    cell: (value: BreakdownArray[], row: { type: BreakdownType }) =>
-      value.map((v, i) => (
-        <TextBreakdown as="div" breakdown={v} key={i} typeFallback={row.type} />
-      )),
-    header: "Translation",
-  },
-];
-
 function PastTenseSection() {
   return (
     <>
@@ -163,110 +151,96 @@ function PastTenseIntroduction() {
   const data = [
     {
       en: "I like it",
-      breakdown: [{ text: "k", type: "PR" }, "nú·wehse̲ʔ"],
+      breakdown: [["k", "PR"], "nú·wehse̲ʔ"],
     },
     {
       en: "I used to like it",
-      breakdown: [{ text: "k", type: "PR" }, "nú·wehs", "kwe̲ʔ"],
+      breakdown: [["k", "PR"], "nú·wehs", "kwe̲ʔ"],
     },
     {
       en: "it likes me",
-      breakdown: [{ text: "wak", type: "PB" }, "nú·wehse̲ʔ"],
+      breakdown: [["wak", "PB"], "nú·wehse̲ʔ"],
     },
     {
       en: "it used to like me",
-      breakdown: [{ text: "wak", type: "PB" }, "nú·wehs", "kwe̲ʔ"],
+      breakdown: [["wak", "PB"], "nú·wehs", "kwe̲ʔ"],
     },
     {
       en: "I like you",
-      breakdown: [{ text: "ku", type: "PP" }, "nú·wehse̲ʔ"],
+      breakdown: [["ku", "PP"], "nú·wehse̲ʔ"],
     },
     {
       en: "I used to like you",
-      breakdown: [{ text: "ku", type: "PP" }, "nú·wehs", "kwe̲ʔ"],
+      breakdown: [["ku", "PP"], "nú·wehs", "kwe̲ʔ"],
     },
     {
       en: "I love it",
-      breakdown: [{ text: "k", type: "PR" }, "nolúkhwa̲"],
+      breakdown: [["k", "PR"], "nolúkhwa̲"],
     },
     {
       en: "I used to love it",
-      breakdown: [{ text: "k", type: "PR" }, "nolúkhwa", "hkwe̲ʔ"],
+      breakdown: [["k", "PR"], "nolúkhwa", ["hkwe̲ʔ", "PAST"]],
     },
     {
       en: "it loves me",
-      breakdown: [{ text: "wak", type: "PB" }, "nolúkhwa̲"],
+      breakdown: [["wak", "PB"], "nolúkhwa̲"],
     },
     {
       en: "it used to love me",
-      breakdown: [{ text: "wak", type: "PB" }, "nolúkhwa", "hkwe̲ʔ"],
+      breakdown: [["wak", "PB"], "nolúkhwa", ["hkwe̲ʔ", "PAST"]],
     },
     {
       en: "I love you",
-      breakdown: [{ text: "ku", type: "PP" }, "nolúkhwa̲"],
+      breakdown: [["ku", "PP"], "nolúkhwa̲"],
     },
     {
       en: "I used to love you",
-      breakdown: [{ text: "ku", type: "PP" }, "nolúkhwa", "hkwe̲ʔ"],
+      breakdown: [["ku", "PP"], "nolúkhwa", ["hkwe̲ʔ", "PAST"]],
     },
     {
       en: "I know it",
-      breakdown: [{ text: "k", type: "PR" }, "yʌtelí̲"],
+      breakdown: [["k", "PR"], "yʌtelí̲"],
     },
     {
       en: "I used to know it",
-      breakdown: [{ text: "k", type: "PR" }, "yʌteli", "hné·"],
+      breakdown: [["k", "PR"], "yʌteli", ["hné·", "PAST"]],
     },
     {
       en: "it knows me",
-      breakdown: [{ text: "wak", type: "PB" }, "yʌtelí̲"],
+      breakdown: [["wak", "PB"], "yʌtelí̲"],
     },
     {
       en: "it used to know me",
-      breakdown: [{ text: "wak", type: "PB" }, "yʌteli", "hné·"],
+      breakdown: [["wak", "PB"], "yʌteli", ["hné·", "PAST"]],
     },
     {
       en: "I know you",
-      breakdown: [{ text: "ku", type: "PP" }, "yʌtelí̲"],
+      breakdown: [["ku", "PP"], "yʌtelí̲"],
     },
     {
       en: "I used to know you",
-      breakdown: [{ text: "ku", type: "PP" }, "yʌteli", "hné·"],
+      breakdown: [["ku", "PP"], "yʌteli", ["hné·", "PAST"]],
     },
 
     {
       en: "I like myself",
-      breakdown: [
-        { text: "k", type: "PR" },
-        { text: "atat", type: "REFL" },
-        "nú·wehse̲ʔ",
-      ],
+      breakdown: [["k", "PR"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     },
     {
       en: "I used to like myself",
-      breakdown: [
-        { text: "k", type: "PR" },
-        { text: "atat", type: "REFL" },
-        "nú·wehs",
-        "kwe̲ʔ",
-      ],
+      breakdown: [["k", "PR"], ["atat", "REFL"], "nú·wehs", "kwe̲ʔ"],
     },
 
     {
       en: "You and I like each other",
-      breakdown: [
-        { text: "te", type: "RECP" },
-        { text: "ty", type: "PR" },
-        { text: "atat", type: "REFL" },
-        "nú·wehse̲ʔ",
-      ],
+      breakdown: [["te", "DUAL"], ["ty", "PR"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     },
     {
       en: "You and I used to like each other",
       breakdown: [
-        { text: "te", type: "RECP" },
-        { text: "ty", type: "PR" },
-        { text: "atat", type: "REFL" },
+        ["te", "DUAL"],
+        ["ty", "PR"],
+        ["atat", "REFL"],
         "nú·wehs",
         "kwe̲ʔ",
       ],
@@ -274,11 +248,11 @@ function PastTenseIntroduction() {
 
     {
       en: "I know",
-      breakdown: [{ text: "wak", type: "PB" }, "anúhte̲ʔ"],
+      breakdown: [["wak", "PB"], "anúhte̲ʔ"],
     },
     {
       en: "I used to know",
-      breakdown: [{ text: "wak", type: "PB" }, "anúhte", "hkwe̲ʔ"],
+      breakdown: [["wak", "PB"], "anúhte", ["hkwe̲ʔ", "PAST"]],
     },
   ];
 
@@ -303,142 +277,133 @@ function PastTenseIntroduction() {
 function PastTenseUsedToBe() {
   const data = [
     {
-      en: ["I am a child", "I was / used to be a child"],
-      one: [
-        [{ text: "ke" }, "khsá·"],
-        [{ text: "ke" }, "khsa", "hné·"],
-      ],
-      type: "PR",
+      en: "I am a child",
+      breakdown: [["ke", "PR"], "khsá·"],
     },
     {
-      en: ["I am a young man", "I was / used to be a young man"],
-      one: [
-        [["k"], "nikʌ́htluʔ"],
-        [["k"], "nikʌhtlu", "hné·"],
-      ],
-      type: "PR",
+      en: "I was / used to be a child",
+      breakdown: [["ke", "PR"], "khsa", ["hné·", "PAST"]],
     },
     {
-      en: ["I am a young woman", "I was / used to be a young woman"],
-      one: [
-        [["k"], "yaʔtaséha"],
-        [["k"], "yaʔtase", "hné·"],
-      ],
-      type: "PR",
+      en: "I am a young man",
+      breakdown: [["k", "PR"], "nikʌ́htluʔ"],
     },
     {
-      en: [
-        "I am free / single",
-        "I was / used to be free / single",
-        "I didn't used to be free / single (but I am now)",
-      ],
-      one: [
-        [["k"], "atatwʌni·yó̲·"],
-        [["k"], "atatwʌni·yo", "hné·"],
-        ["yáh teʔ", ["k"], "atatwʌni·yo", "hné·"],
-      ],
-      type: "PR",
+      en: "I was / used to be a young man",
+      breakdown: [["k", "PR"], "nikʌhtlu", ["hné·", "PAST"]],
     },
     {
-      en: [
-        "I am engaged (to someone)",
-        "I was / used to be engaged (to someone)",
-      ],
-      one: [
-        [["yukni"], "nyákheʔ"],
-        [["yukni"], "nyákhe", "hkwe̲ʔ"],
-      ],
-      type: "PB",
+      en: "I am a young woman",
+      breakdown: [["k", "PR"], "yaʔtaséha"],
     },
     {
-      en: [
-        "I am in a relationship (with someone)",
-        "I was / used to be in a relationship (with someone)",
-      ],
-      one: [
-        [["yákn"], "ehse̲"],
-        [["yákn"], "eh", "skwe̲ʔ"],
-      ],
-      type: "PR",
+      en: "I was / used to be a young woman",
+      breakdown: [["k", "PR"], "yaʔtase", ["hné·", "PAST"]],
     },
     {
-      en: [
-        "I am married",
-        "I was / used to be married",
-        "I didn't used to be married (but I am now)",
-      ],
-      one: [
-        [["wake"], "nyákuʔ"],
-        [["wake"], "nyaku", "hné·"],
-        ["yáh teʔ", ["wake"], "nyaku", "hné·"],
-      ],
-      type: "PB",
+      en: "I am free / single",
+      breakdown: [["k", "PR"], "atatwʌni·yó̲·"],
     },
     {
-      en: [
-        "I am separated (from someone)",
-        "I was / used to be separated (from someone)",
-      ],
-      one: [
-        ["te", { text: "yuky" }, "atekháshyuʔ"],
-        ["te", { text: "yuky" }, "atekhashyu", "hné·"],
-      ],
-      type: "PB",
+      en: "I was / used to be free / single",
+      breakdown: [["k", "PR"], "atatwʌni·yo", ["hné·", "PAST"]],
     },
     {
-      en: ["my name is ...", "my name was / used to be ..."],
-      one: [
-        ["... ní·", { text: "yúk" }, "yats"],
-        ["... ní·", { text: "yúk" }, "yat", "skwe̲ʔ"],
-      ],
-      type: "PP",
+      en: "I didn't used to be free / single (but I am now)",
+      breakdown: ["yáh teʔ", ["k", "PR"], "atatwʌni·yo", ["hné·", "PAST"]],
     },
     {
-      en: [
-        "I like her / them",
-        "I used to like her / them",
-        "I didn't used to like her / them (but I do now)",
-      ],
-      one: [
-        [["khe"], "nú·wehse̲ʔ"],
-        [["khe"], "nú·weh", "skwe̲ʔ"],
-        ["yáh teʔ", ["khe"], "nú·weh", "skwe̲ʔ"],
-      ],
-      type: "PP",
+      en: "I am engaged (to someone)",
+      breakdown: [["yukni", "PB"], "nyákheʔ"],
     },
     {
-      en: [
-        "I love her / them",
-        "I used to love her / them",
-        "I didn't used to love her / them (but I do now)",
-      ],
-      one: [
-        [["khe"], "nolúkhwa̲ʔ"],
-        [["khe"], "nolúkhwa", "hkwe̲ʔ"],
-        ["yáh te", ["khe"], "nolúkhwa", "hkwe̲ʔ"],
-      ],
-      type: "PP",
+      en: "I was / used to be engaged (to someone)",
+      breakdown: [["yukni", "PB"], "nyákhe", ["hkwe̲ʔ", "PAST"]],
     },
     {
-      en: ["I am 20 years old", "I was / used to be 20 years old"],
-      one: [
-        ["tewáhsʌ naʔte", { text: "wak" }, "ohsliyá·ku̲"],
-        ["tewáhsʌ naʔte", { text: "wak" }, "ohsliyaʔku", "hné·"],
-      ],
-      type: "PB",
+      en: "I am in a relationship (with someone)",
+      breakdown: [["yákn", "PR"], "ehse̲"],
     },
     {
-      en: [
-        "I know / am aware",
-        "I used to know / be aware (but not now)",
-        "I didn't used to know / be aware (but I do now)",
+      en: "I was / used to be in a relationship (with someone)",
+      breakdown: [["yákn", "PR"], "eh", ["skwe̲ʔ", "PAST"]],
+    },
+    {
+      en: "I am married",
+      breakdown: [["wake", "PB"], "nyákuʔ"],
+    },
+    {
+      en: "I was / used to be married",
+      breakdown: [["wake", "PB"], "nyaku", ["hné·", "PAST"]],
+    },
+    {
+      en: "I didn't used to be married (but I am now)",
+      breakdown: ["yáh teʔ", ["wake", "PB"], "nyaku", ["hné·", "PAST"]],
+    },
+    {
+      en: "I am separated (from someone)",
+      breakdown: ["te", ["yuky", "PB"], "atekháshyuʔ"],
+    },
+    {
+      en: "I was / used to be separated (from someone)",
+      breakdown: ["te", ["yuky", "PB"], "atekhashyu", ["hné·", "PAST"]],
+    },
+    {
+      en: "my name is ...",
+      breakdown: ["... ní·", ["yúk", "PP"], "yats"],
+    },
+    {
+      en: "my name was / used to be ...",
+      breakdown: ["... ní·", ["yúk", "PP"], "yat", ["skwe̲ʔ", "PAST"]],
+    },
+    {
+      en: "I like her / them",
+      breakdown: [["khe", "PP"], "nú·wehse̲ʔ"],
+    },
+    {
+      en: "I used to like her / them",
+      breakdown: [["khe", "PP"], "nú·weh", ["skwe̲ʔ", "PAST"]],
+    },
+    {
+      en: "I didn't used to like her / them (but I do now)",
+      breakdown: ["yáh teʔ", ["khe", "PP"], "nú·weh", ["skwe̲ʔ", "PAST"]],
+    },
+    {
+      en: "I love her / them",
+      breakdown: [["khe", "PP"], "nolúkhwa̲ʔ"],
+    },
+    {
+      en: "I used to love her / them",
+      breakdown: [["khe", "PP"], "nolúkhwa", ["hkwe̲ʔ", "PAST"]],
+    },
+    {
+      en: "I didn't used to love her / them (but I do now)",
+      breakdown: ["yáh te", ["khe", "PP"], "nolúkhwa", ["hkwe̲ʔ", "PAST"]],
+    },
+    {
+      en: "I am 20 years old",
+      breakdown: ["tewáhsʌ naʔte", ["wak", "PB"], "ohsliyá·ku̲"],
+    },
+    {
+      en: "I was / used to be 20 years old",
+      breakdown: [
+        "tewáhsʌ naʔte",
+        ["wak", "PB"],
+        "ohsliyaʔku",
+        ["hné·", "PAST"],
       ],
-      one: [
-        [{ text: "wak" }, "anúhte̲ʔ"],
-        [{ text: "wak" }, "anúhte", "hkwe̲ʔ"],
-        ["yáh teʔ", { text: "wak" }, "anúhte", "hkwe̲ʔ"],
-      ],
-      type: "PB",
+    },
+    {
+      en: "I know / am aware",
+      breakdown: [["wak", "PB"], "anúhte̲ʔ"],
+    },
+    {
+      en: "I used to know / be aware (but not now)",
+      breakdown: [["wak", "PB"], "anúhte", ["hkwe̲ʔ", "PAST"]],
+    },
+    {
+      en: "I didn't used to know / be aware (but I do/am now)",
+      breakdown: ["yáh teʔ", ["wak", "PB"], "anúhte", ["hkwe̲ʔ", "PAST"]],
     },
   ];
 
@@ -451,8 +416,10 @@ function PastTenseUsedToBe() {
         Here are some more examples of when something used to be the case.
       </Text>
 
-      {/* @ts-expect-error To be addressed in LO-12 */}
-      <TableWrapper columns={pastTenseColumns} data={data} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishBreakdown}
+        data={data}
+      />
     </>
   );
 }
@@ -460,108 +427,101 @@ function PastTenseUsedToBe() {
 function PastTenseWhen() {
   const data = [
     {
-      en: ["I am a child", "When I was / used to be a child"],
-      one: [
-        [["k"], "ekhsá·"],
-        ["tshi", ["k"], "ekhsá·"],
-      ],
-      type: "PR",
+      en: "I am a child",
+      breakdown: [["k", "PR"], "ekhsá·"],
     },
     {
-      en: ["I am a young man", "When I was / used to be a young man"],
-      one: [
-        [["k"], "nikʌ́htluʔ"],
-        ["tshi", ["k"], "nikʌh́tluʔ"],
-      ],
-      type: "PR",
+      en: "When I was / used to be a child",
+      breakdown: ["tshi", ["k", "PR"], "ekhsá·"],
     },
     {
-      en: ["I am a young woman", "When I was / used to be a young woman"],
-      one: [
-        [["k"], "yá·taseha̲"],
-        ["tshi", ["k"], "yá·taséha̲"],
-      ],
-      type: "PR",
+      en: "I am a young man",
+      breakdown: [["k", "PR"], "nikʌ́htluʔ"],
     },
     {
-      en: ["I am free / single", "When I was free / single"],
-      one: [
-        [["k"], "atatwʌni·yó̲·"],
-        ["tshi", ["k"], "atatwʌni·yó̲·"],
-      ],
-      type: "PR",
+      en: "When I was / used to be a young man",
+      breakdown: ["tshi", ["k", "PR"], "nikʌh́tluʔ"],
     },
     {
-      en: ["I am engaged (to someone)", "When I was engaged (to someone)"],
-      one: [
-        [["yukni"], "nyákheʔ"],
-        ["tshi", ["yukni"], "nyákheʔ"],
-      ],
-      type: "PB",
+      en: "I am a young woman",
+      breakdown: [["k", "PR"], "yá·taseha̲"],
     },
     {
-      en: [
-        "I am in a relationship (with someone)",
-        "When I was in a relationship (with someone)",
-      ],
-      one: [
-        [["yákn"], "ehse̲"],
-        ["tshi", ["yákn"], "ehse̲"],
-      ],
-      type: "PR",
+      en: "When I was / used to be a young woman",
+      breakdown: ["tshi", ["k", "PR"], "yá·taséha̲"],
     },
     {
-      en: ["I am married", "When I was married"],
-      one: [
-        [["wake"], "nyákuʔ"],
-        ["tshi", ["wake"], "nyákuʔ"],
-      ],
-      type: "PB",
+      en: "I am free / single",
+      breakdown: [["k", "PR"], "atatwʌni·yó̲·"],
     },
     {
-      en: ["I am married (to someone)", "When I was married (to someone)"],
-      one: [
-        [["yukni"], "nyákuʔ"],
-        ["tshi", ["yukni"], "nyá·kuʔ"],
-      ],
-      type: "PB",
+      en: "When I was free / single",
+      breakdown: ["tshi", ["k", "PR"], "atatwʌni·yó̲·"],
     },
     {
-      en: [
-        "I am separated (from someone)",
-        "When I was separated (from someone)",
-      ],
-      one: [
-        ["te", { text: "yukya" }, "tekháshyuʔ"],
-        ["tshaʔ", "te", { text: "yukya" }, "tekháshyuʔ"],
-      ],
-      type: "PB",
+      en: "I am engaged (to someone)",
+      breakdown: [["yukni", "PB"], "nyákheʔ"],
     },
     {
-      en: ["I love her / them", "When I loved her / them"],
-      one: [
-        [["khe"], "nolúkhwa̲ʔ"],
-        ["tshi", ["khe"], "nolúkhwa̲ʔ"],
-      ],
-      type: "PP",
+      en: "When I was engaged (to someone)",
+      breakdown: ["tshi", ["yukni", "PB"], "nyákheʔ"],
     },
     {
-      en: ["I am 20 years old", "When I was / used to be 20 years old"],
-      one: [
-        ["tewáhsʌ naʔte", { text: "wak" }, "ohsliyá·ku̲"],
-        [
-          "tewáhsʌ ",
-          { text: "tshaʔ", type: "PAST" },
-          "te",
-          { text: "wak" },
-          "ohsliyá·ku̲",
-        ],
+      en: "I am in a relationship (with someone)",
+      breakdown: [["yákn", "PR"], "ehse̲"],
+    },
+    {
+      en: "When I was in a relationship (with someone)",
+      breakdown: ["tshi", ["yákn", "PR"], "ehse̲"],
+    },
+    {
+      en: "I am married",
+      breakdown: [["wake", "PB"], "nyákuʔ"],
+    },
+    {
+      en: "When I was married",
+      breakdown: ["tshi", ["wake", "PB"], "nyákuʔ"],
+    },
+    {
+      en: "I am married (to someone)",
+      breakdown: [["yukni", "PB"], "nyákuʔ"],
+    },
+    {
+      en: "When I was married (to someone)",
+      breakdown: ["tshi", ["yukni", "PB"], "nyá·kuʔ"],
+    },
+    {
+      en: "I am separated (from someone)",
+      breakdown: ["te", ["yukya", "PB"], "tekháshyuʔ"],
+    },
+    {
+      en: "When I was separated (from someone)",
+      breakdown: ["tshaʔ", "te", ["yukya", "PB"], "tekháshyuʔ"],
+    },
+    {
+      en: "I love her / them",
+      breakdown: [["khe", "PP"], "nolúkhwa̲ʔ"],
+    },
+    {
+      en: "When I loved her / them",
+      breakdown: ["tshi", ["khe", "PP"], "nolúkhwa̲ʔ"],
+    },
+    {
+      en: "I am 20 years old",
+      breakdown: ["tewáhsʌ naʔte", ["wak", "PB"], "ohsliyá·ku̲"],
+    },
+    {
+      en: "When I was / used to be 20 years old",
+      breakdown: [
+        "tewáhsʌ ",
+        ["tshaʔ", "PAST"],
+        "te",
+        ["wak", "PB"],
+        "ohsliyá·ku̲",
       ],
-      type: "PB",
     },
   ];
 
-  // @ts-expect-error To be addressed in LO-12
   return (
     <>
       <SectionHeading id="past-tense-when" level={3}>
@@ -572,7 +532,10 @@ function PastTenseWhen() {
         communicated using a pre-pronominal prefix.
       </Text>
 
-      <TableWrapper columns={pastTenseColumns} data={data} />
+      <TableWrapper
+        columns={TableWrapper.columnsEnglishBreakdown}
+        data={data}
+      />
     </>
   );
 }
@@ -598,7 +561,7 @@ function HavingConjugations() {
       </SectionHeading>
 
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColsLol([
           "pronominal",
           "noun root",
@@ -607,14 +570,19 @@ function HavingConjugations() {
         ])}
         data={[
           {
-            col0: [{ text: "wake", type: "PB" }],
-            col1: ["ksaʔt"],
-            col2: [{ text: "a", type: "JOIN" }],
-            col3: [{ text: "yʌ", type: "REP" }],
+            col0: [["wake", "PB"]],
+            col1: [["ksaʔt", "NOUN"]],
+            col2: [["a", "JOIN"]],
+            col3: ["yʌ"],
             result: (row: WeirdRow) => (
               <div>
                 <TextBreakdown
-                  breakdown={[...row.col0, "ksá·t", ...row.col2, ...row.col3]}
+                  breakdown={[
+                    ...row.col0,
+                    ["ksá·t", "NOUN"],
+                    ...row.col2,
+                    ...row.col3,
+                  ]}
                 />
                 <Text variant="bodyS">
                   <i>(I have a child)</i>
@@ -623,10 +591,10 @@ function HavingConjugations() {
             ),
           },
           {
-            col0: [{ text: "wak", type: "PB" }],
-            col1: ["wil"],
-            col2: [{ text: "a", type: "JOIN" }],
-            col3: [{ text: "yʌ", type: "REP" }],
+            col0: [["wak", "PB"]],
+            col1: [["wil", "NOUN"]],
+            col2: [["a", "JOIN"]],
+            col3: ["yʌ"],
             result: (row: WeirdRow) => (
               <div>
                 <TextBreakdown
@@ -635,7 +603,7 @@ function HavingConjugations() {
                     ...row.col1,
                     ...row.col2,
                     "·",
-                  ].concat([{ text: "yʌ́·", type: "REP" }])}
+                  ].concat(["yʌ́·"])}
                 />
                 <Text variant="bodyS">
                   <i>(I have a baby)</i>
@@ -644,16 +612,19 @@ function HavingConjugations() {
             ),
           },
           {
-            col0: [{ text: "wak", type: "PB" }],
-            col1: ["naskw"],
-            col2: [{ text: "a", type: "JOIN" }],
-            col3: [{ text: "yʌ", type: "REP" }],
+            col0: [["wak", "PB"]],
+            col1: [["naskw", "NOUN"]],
+            col2: [["a", "JOIN"]],
+            col3: ["yʌ"],
             result: (row: WeirdRow) => (
               <div>
                 <TextBreakdown
-                  breakdown={[...row.col0, "náskw", ...row.col2].concat([
-                    { text: "yʌʔ", type: "REP" },
-                  ])}
+                  breakdown={[
+                    ...row.col0,
+                    ["náskw", "NOUN"],
+                    ...row.col2,
+                    "yʌʔ",
+                  ]}
                 />
                 <Text variant="bodyS">
                   <i>(I have an animal)</i>
@@ -662,10 +633,10 @@ function HavingConjugations() {
             ),
           },
           {
-            col0: [{ text: "wak", type: "PB" }],
-            col1: ["nikʌhtluʔtsl"],
-            col2: [{ text: "a", type: "JOIN" }],
-            col3: [{ text: "yʌ", type: "REP" }],
+            col0: [["wak", "PB"]],
+            col1: [["nikʌhtluʔtsl", "NOUN"]],
+            col2: [["a", "JOIN"]],
+            col3: ["yʌ"],
             result: (row: WeirdRow) => (
               <div>
                 <TextBreakdown
@@ -674,7 +645,7 @@ function HavingConjugations() {
                     ...row.col1,
                     ...row.col2,
                     "·",
-                  ].concat([{ text: "yʌ́·", type: "REP" }])}
+                  ].concat(["yʌ́·"])}
                 />
                 <Text variant="bodyS">
                   <i>(I have a boyfriend)</i>
@@ -683,19 +654,20 @@ function HavingConjugations() {
             ),
           },
           {
-            col0: [{ text: "wak", type: "PB" }],
-            col1: ["yaʔtaseʔtsl"],
-            col2: [{ text: "a", type: "JOIN" }],
-            col3: [{ text: "yʌ", type: "REP" }],
+            col0: [["wak", "PB"]],
+            col1: [["yaʔtaseʔtsl", "NOUN"]],
+            col2: [["a", "JOIN"]],
+            col3: ["yʌ"],
             result: (row: WeirdRow) => (
               <div>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
-                    "yaʔtase·tsl",
+                    ["yaʔtase·tsl", "NOUN"],
                     ...row.col2,
                     "·",
-                  ].concat([{ text: "yʌ́·", type: "REP" }])}
+                    "yʌ́·",
+                  ]}
                 />
                 <Text variant="bodyS">
                   <i>(I have a girlfriend)</i>
@@ -710,7 +682,7 @@ function HavingConjugations() {
         &quot;Having&quot; a person or animal in the past
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColsLol([
           "pronominal",
           "noun root",
@@ -721,18 +693,18 @@ function HavingConjugations() {
         ])}
         data={[
           {
-            col0: [{ text: "wake", type: "PB" }],
-            col1: ["naskw"],
-            col2: [{ text: "a", type: "JOIN" }],
-            col3: [{ text: "yʌʔt", type: "REP" }],
-            col4: [{ text: "a", type: "JOIN" }],
-            col5: [{ text: "hkweʔ", type: "PAST" }],
+            col0: [["wake", "PB"]],
+            col1: [["naskw", "NOUN"]],
+            col2: [["a", "JOIN"]],
+            col3: ["yʌʔt"],
+            col4: [["a", "JOIN"]],
+            col5: [["hkweʔ", "PAST"]],
             result: (row: WeirdRow) => (
               <div>
                 <TextBreakdown
                   breakdown={[
                     ...row.col0,
-                    "ksá·t",
+                    ...row.col1,
                     ...row.col2,
                     ...row.col3,
                     ...row.col4,
@@ -752,21 +724,17 @@ function HavingConjugations() {
         &quot;Having&quot; a good animal
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColsLol(["pronominal", "noun root", "verb root"])}
         data={[
           {
-            col0: [{ text: "wak", type: "PB" }],
-            col1: ["naskw"],
-            col2: [{ text: "iyo", type: "REP" }],
+            col0: [["wak", "PB"]],
+            col1: [["naskw", "NOUN"]],
+            col2: ["iyo"],
             result: (row: WeirdRow) => (
               <div>
                 <TextBreakdown
-                  breakdown={[
-                    ...row.col0,
-                    ...row.col1,
-                    { text: "i·yó", type: "REP" },
-                  ]}
+                  breakdown={[...row.col0, ...row.col1, ["i·yó"]]}
                 />
                 <Text variant="bodyS">
                   <i>(I have a good animal)</i>
@@ -781,7 +749,7 @@ function HavingConjugations() {
         &quot;Having&quot; an animal in the past
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColsLol([
           "pronominal",
           "noun root",
@@ -790,10 +758,10 @@ function HavingConjugations() {
         ])}
         data={[
           {
-            col0: [{ text: "wak", type: "PB" }],
-            col1: ["naskw"],
-            col2: [{ text: "iyo", type: "REP" }],
-            col3: [{ text: "hne", type: "PAST" }],
+            col0: [["wak", "PB"]],
+            col1: [["naskw", "NOUN"]],
+            col2: ["iyo"],
+            col3: [["hne", "PAST"]],
             result: (row: WeirdRow) => (
               <div>
                 <TextBreakdown
@@ -812,10 +780,10 @@ function HavingConjugations() {
             ),
           },
           {
-            col0: [{ text: "wak", type: "PB" }],
-            col1: ["naskw"],
-            col2: [{ text: "aksʌ", type: "REP" }],
-            col3: [{ text: "hne", type: "PAST" }],
+            col0: [["wak", "PB"]],
+            col1: [["naskw", "NOUN"]],
+            col2: ["aksʌ"],
+            col3: [["hne", "PAST"]],
             result: (row: WeirdRow) => (
               <div>
                 <TextBreakdown

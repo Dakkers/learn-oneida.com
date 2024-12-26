@@ -96,16 +96,16 @@ const dataNations = createParadigmData(
   {
     phrases: [
       {
-        breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "wak" }, "uhutsyó·tʌ̲ʔ"],
+        breakdown: ["Onʌyoʔteʔa·ká· ni", ["wak"], "uhutsyó·tʌ̲ʔ"],
       },
       {
-        breakdown: [`Onʌyoʔteʔa·ká· ni`, ["s"], "uhutsyó·tʌ̲ʔ"],
+        breakdown: ["Onʌyoʔteʔa·ká· ni", ["s"], "uhutsyó·tʌ̲ʔ"],
       },
       {
-        breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "ha" }, "uhutsyó·tʌ̲ʔ"],
+        breakdown: ["Onʌyoʔteʔa·ká· ni", ["ha"], "uhutsyó·tʌ̲ʔ"],
       },
       {
-        breakdown: [`Onʌyoʔteʔa·ká· ni`, { text: "yaka" }, "uhutsyó·tʌ̲ʔ"],
+        breakdown: ["Onʌyoʔteʔa·ká· ni", ["yaka"], "uhutsyó·tʌ̲ʔ"],
       },
     ],
     translation: "{{pronoun}} {{refVerb}} an Oneida",

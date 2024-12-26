@@ -127,7 +127,7 @@ function ResultsScreen({
           { accessorKey: "question", header: "Question" },
           {
             accessorKey: "selectedAnswer",
-            // @ts-expect-error To be addressed in LO-12
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (selectedAnswer: Result["selectedAnswer"], row: Result) => (
               <Flex align="center" gap={4}>
                 {row.isCorrect ? (
@@ -158,7 +158,7 @@ function ResultsScreen({
             header: "Answer",
           },
         ]}
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         data={results}
       />
 

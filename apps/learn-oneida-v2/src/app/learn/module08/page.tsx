@@ -77,12 +77,12 @@ function AllNouns() {
   );
 }
 
-function DatumTable({ datum }) {
+function DatumTable({ datum }: { datum: any }) {
   return (
     <TableWrapper
       columns={[
         TableWrapper.englishColumn,
-        // @ts-expect-error LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         TableWrapper.createTextBreakdownColumn("PB"),
       ]}
       data={[

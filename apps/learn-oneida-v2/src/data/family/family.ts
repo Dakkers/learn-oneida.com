@@ -32,7 +32,7 @@ const data: ParadigmData = {
     {
       pronoun: "uni",
       phrase: "uknihwa·tsíle̲ʔ",
-      breakdown: [{ text: "ukni" }, "hwa·tsíle̲ʔ"],
+      breakdown: [["ukni"], "hwa·tsíle̲ʔ"],
     },
     {
       pronoun: "u2",
@@ -42,12 +42,12 @@ const data: ParadigmData = {
     {
       pronoun: "us",
       phrase: "ukwahwa·tsíle̲ʔ",
-      breakdown: [{ text: "ukwa" }, "hwa·tsíle̲ʔ"],
+      breakdown: [["ukwa"], "hwa·tsíle̲ʔ"],
     },
     {
       pronoun: "yall",
       phrase: "swahwa·tsíle̲ʔ",
-      breakdown: [{ text: "swa" }, "hwa·tsíle̲ʔ"],
+      breakdown: [["swa"], "hwa·tsíle̲ʔ"],
     },
     {
       pronoun: "ms",

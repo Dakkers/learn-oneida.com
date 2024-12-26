@@ -25,8 +25,6 @@ import familyJson from "../../data/family/family";
 import friendJson from "../../data/family/friend";
 import cousinJson from "../../data/family/cousin";
 import relatedJson from "../../data/family/related";
-import siblingSameSexJson from "../../data/family/sibling-same-sex.json";
-import siblingJson from "../../data/family/sibling.json";
 
 import parentsJson from "../../data/family/plural/parents";
 import childrenJson from "../../data/family/plural/children";
@@ -38,20 +36,10 @@ import youngerSiblingsJson from "../../data/family/plural/siblings-younger";
 import unclesAuntsJson from "../../data/family/plural/uncles-aunts";
 import niblingsJson from "../../data/family/plural/niblings";
 
-import siblingsJson from "../../data/family/plural/siblings.json";
 import cousinsJson from "../../data/family/plural/cousins.json";
 import friendsJson from "../../data/family/plural/friends.json";
 
-import { TableWrapper } from "@/components/TableWrapper";
 import { Notice, Text } from "@ukwehuwehneke/ohutsya";
-import {
-  BreakdownArray,
-  TextBreakdown,
-} from "@ukwehuwehneke/language-components";
-import {
-  PRONOUN_MAP_EN_POSSESSIVE,
-  type Pronoun,
-} from "@ukwehuwehneke/language-components";
 import { TableOfContents as TOC } from "../TableOfContents";
 import { Letter } from "../Letter";
 import {
@@ -401,10 +389,14 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         are female.
       </Text>
       <ParadigmTable
+        // @ts-expect-error TODO - weird pronominals
         allowedPronouns={["i", "u", "m", "f", "f_f"]}
         columnVisibility={colVisibility}
+        // @ts-expect-error TODO - weird pronominals
         data={cousinsJson}
+        // @ts-expect-error TODO - weird pronominals
         translationFn={({ pronoun }) =>
+          // @ts-expect-error TODO - weird pronominals
           pronoun === "f_f"
             ? {
                 pronounPossessive: "Her",
@@ -424,10 +416,14 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         are female.
       </Text>
       <ParadigmTable
+        // @ts-expect-error TODO - weird pronominals
         allowedPronouns={["i", "u", "m", "f", "f_f"]}
         columnVisibility={colVisibility}
+        // @ts-expect-error TODO - weird pronominals
         data={friendsJson}
+        // @ts-expect-error TODO - weird pronominals
         translationFn={({ pronoun }) =>
+          // @ts-expect-error TODO - weird pronominals
           pronoun === "f_f"
             ? {
                 pronounPossessive: "Her",
@@ -476,25 +472,4 @@ export function FamilyTableOfContentItems() {
   ].map(([label, value]) => (
     <TOC.Item label={label} value={`family-${value ?? label.toLowerCase()}`} />
   ));
-  return (
-    <>
-      <TOC.Item label="Mother" value="family-mother" />
-      <TOC.Item
-        label="Female relatives (younger)"
-        value="female-relatives-younger"
-      />
-      <TOC.Item label="Male relatives (older)" value="male-relatives-older" />
-      <TOC.Item
-        label="Male relatives (younger)"
-        value="male-relatives-younger"
-      />
-      <TOC.Item label="Cousins & friends" value="cousins" />
-      <TOC.Item label="Family" value="family" />
-      <TOC.Item label="Siblings" value="siblings" />
-      <TOC.Item
-        label="Multiple family members"
-        value="multiple-family-members"
-      />
-    </>
-  );
 }

@@ -83,7 +83,7 @@ export function TableAsForm({
               },
               {
                 accessorKey: "key",
-                // @ts-expect-error TODO
+                // @ts-expect-error TODO - TableWrapper/Table generics
                 cell: (key: string, row: Row) => (
                   <FormField
                     control={form.control}

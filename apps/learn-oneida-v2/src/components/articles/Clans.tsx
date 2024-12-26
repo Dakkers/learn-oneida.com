@@ -3,6 +3,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
   SectionHeadingProps,
+  type Pronoun,
 } from "@ukwehuwehneke/language-components";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
@@ -12,7 +13,6 @@ import {
   createParadigmData,
 } from "../ParadigmTable";
 import { ArticleProps } from "./utils";
-import { type Pronoun } from "~/utils";
 
 const allowedPronouns: Pronoun[] = [
   "i",
@@ -92,34 +92,34 @@ export function ClansArticle({ level = 1 }: ArticleProps) {
 function createPhrasesLol(animal: string) {
   return [
     {
-      breakdown: [`${animal} ni`, { text: "waki" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["wak"], "iʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "sʌ" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["sʌ"], "ʔtaló·tʌʔ"],
     },
     {
       breakdown: [`${animal} ni`, ["ho"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "yako" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yako"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, ["yukni"], "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yukn"], "iʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, ["sni"], "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["sn"], "iʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "yukwʌ" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yukwʌ"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "swʌ" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["swʌ"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "hoti" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["hot"], "iʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "yoti" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yot"], "iʔtaló·tʌʔ"],
     },
   ];
 }

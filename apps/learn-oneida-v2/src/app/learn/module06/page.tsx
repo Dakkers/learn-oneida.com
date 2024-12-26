@@ -211,7 +211,7 @@ function StativeVsActiveSection() {
             accessorKey: "tense",
             header: "Tense",
           },
-          // @ts-expect-error LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PB"),
           TableWrapper.englishColumn,
         ]}
@@ -262,7 +262,7 @@ function StativeVsActiveSection() {
             accessorKey: "tense",
             header: "Tense",
           },
-          // @ts-expect-error LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR"),
           TableWrapper.englishColumn,
         ]}
@@ -376,7 +376,7 @@ function OneidaTermsForTenses() {
             accessorKey: "tense",
             header: "Tense",
           },
-          // @ts-expect-error LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR"),
         ]}
         data={[
@@ -416,7 +416,7 @@ function OneidaTermsForTenses() {
             accessorKey: "tense",
             header: "Tense",
           },
-          // @ts-expect-error LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PB"),
           TableWrapper.englishColumn,
         ]}
@@ -468,7 +468,7 @@ function OneidaTermsForTenses() {
             accessorKey: "tense",
             header: "Tense",
           },
-          // @ts-expect-error LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR"),
           TableWrapper.englishColumn,
         ]}
@@ -563,7 +563,7 @@ function HowConstructedSection() {
         columns={[
           {
             accessorKey: "key",
-            // @ts-expect-error To be addressed
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (key: Module6VerbTense, row: (typeof data)[0]) => (
               <TextArray>
                 {tenseMap[key]}
@@ -577,7 +577,7 @@ function HowConstructedSection() {
           },
           {
             accessorKey: "prepronominal",
-            // @ts-expect-error To be addressed
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (prepronominal: string[]) => (
               <TextArray>{prepronominal ?? []}</TextArray>
             ),
@@ -585,7 +585,7 @@ function HowConstructedSection() {
           },
           {
             accessorKey: "colors",
-            // @ts-expect-error To be addressed
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (colors: data[0]["colors"]) => (
               <TextArray>
                 {(colors ?? (["red", "blue", "purple"] as const)).map(
@@ -606,7 +606,7 @@ function HowConstructedSection() {
           },
           {
             accessorKey: "ending",
-            // @ts-expect-error To be addressed
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (ending: string) => (ending ? `${ending} ending` : ""),
             header: "Ending",
           },
@@ -710,7 +710,7 @@ function ExamplesSection() {
         columns={[
           {
             accessorKey: "key",
-            // @ts-expect-error To be addressed
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (key: Module6VerbTense) => (
               <TextArray>
                 <span className="underline">{tenseMap[key]}</span>
@@ -725,7 +725,7 @@ function ExamplesSection() {
           },
           {
             accessorKey: "desc",
-            // @ts-expect-error To be addressed
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (desc: string[]) => (
               <Flex direction="column" gap={2}>
                 <TextArray>{desc}</TextArray>
@@ -735,7 +735,7 @@ function ExamplesSection() {
           },
           {
             accessorKey: "breakdown",
-            // @ts-expect-error To be addressed
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (breakdown: BreakdownArray, row: (typeof data)[0]) => (
               <TextArray>
                 <TextBreakdown
@@ -750,7 +750,7 @@ function ExamplesSection() {
           },
           {
             accessorKey: "negation",
-            // @ts-expect-error To be addressed
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (negation: BreakdownArray, row: (typeof data)[0]) => (
               <TextArray>
                 <TextBreakdown
@@ -812,7 +812,7 @@ function DailyActivitiesSection() {
                 columns={[
                   {
                     accessorKey: "tense",
-                    // @ts-expect-error To be fixed in LO-12
+                    // @ts-expect-error TODO - TableWrapper/Table generics
                     cell: (value: keyof typeof tenseMap) =>
                       convertBreakdownToPlainText(
                         tenseLiteralBreakdownMap[value],
@@ -821,7 +821,7 @@ function DailyActivitiesSection() {
                   },
                   {
                     accessorKey: "text",
-                    // @ts-expect-error To be fixed in LO-12
+                    // @ts-expect-error TODO - TableWrapper/Table generics
                     cell: (
                       value: BreakdownArray,
                       row: { colour: BreakdownType },

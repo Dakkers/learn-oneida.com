@@ -117,12 +117,12 @@ const IFUT = { text: "a", type: "IFUT" };
 function StativeVerbExamples() {
   const data = [
     {
-      breakdown: ["kʌʔ ", { text: "i·", type: "RPL" }, ["k"], "é·seʔ"],
+      breakdown: ["kʌʔ ", ["i·", "RPL"], ["k"], "é·seʔ"],
       en: "I am here",
       type: "Present",
     },
     {
-      breakdown: [{ text: "ku", type: "PP" }, "nolúkhwa̲ʔ"],
+      breakdown: [["ku", "PP"], "nolúkhwa̲ʔ"],
       en: "I love you",
       type: "",
     },
@@ -132,11 +132,7 @@ function StativeVerbExamples() {
       type: "Past",
     },
     {
-      breakdown: [
-        { text: "ku", type: "PP" },
-        "nolúkhwa",
-        { text: "hkweʔ", type: "PAST" },
-      ],
+      breakdown: [["ku", "PP"], "nolúkhwa", ["hkweʔ", "PAST"]],
       en: "I used to love you",
       type: "",
     },
@@ -146,12 +142,7 @@ function StativeVerbExamples() {
       type: "Future",
     },
     {
-      breakdown: [
-        FUT,
-        { text: "ku", type: "PP" },
-        "nolúkhw",
-        { text: "akeʔ", type: "FUT" },
-      ],
+      breakdown: [FUT, ["ku", "PP"], "nolúkhw", ["akeʔ", "FUT"]],
       en: "I will love you",
       type: "",
     },
@@ -161,26 +152,17 @@ function StativeVerbExamples() {
       type: "Conditional",
     },
     {
-      breakdown: [
-        IFUT,
-        { text: "ku", type: "PP" },
-        "nolúkhw",
-        { text: "akeʔ", type: "IFUT" },
-      ],
+      breakdown: [IFUT, ["ku", "PP"], "nolúkhw", ["akeʔ", "IFUT"]],
       en: "I might love you",
       type: "",
     },
     {
-      breakdown: ["kʌʔ ", ["s"], "éhs", { text: "ek", type: "FUT" }],
+      breakdown: ["kʌʔ ", ["s"], "éhs", ["ek", "FUT"]],
       en: "Stay here!",
       type: "Command",
     },
     {
-      breakdown: [
-        { text: "tak", type: "PP" },
-        "nolúkhw",
-        { text: "ak", type: "IFUT" },
-      ],
+      breakdown: [["tak", "PP"], "nolúkhw", ["ak", "IFUT"]],
       en: "Love me!",
       type: "",
     },
@@ -190,43 +172,43 @@ function StativeVerbExamples() {
     { breakdown: ["kʌʔ ni·yót"], en: "This is how (it is)", type: "" },
 
     {
-      breakdown: ["oh niyoht", { text: "ú·ne̲ʔ", type: "PAST" }],
+      breakdown: ["oh niyoht", ["ú·ne̲ʔ", "PAST"]],
       en: "How (was it)?",
       type: "Past",
     },
     {
-      breakdown: ["tsiʔ niyoht", { text: "ú·ne̲ʔ", type: "PAST" }],
+      breakdown: ["tsiʔ niyoht", ["ú·ne̲ʔ", "PAST"]],
       en: "How (it was)",
       type: "",
     },
     {
-      breakdown: ["tho niyoht", { text: "ú·ne̲ʔ", type: "PAST" }],
+      breakdown: ["tho niyoht", ["ú·ne̲ʔ", "PAST"]],
       en: "That is how (it was)",
       type: "",
     },
     {
-      breakdown: ["kʌʔ niyoht", { text: "ú·ne̲ʔ", type: "PAST" }],
+      breakdown: ["kʌʔ niyoht", ["ú·ne̲ʔ", "PAST"]],
       en: "This is how (it was)",
       type: "",
     },
 
     {
-      breakdown: ["oh n", FUT, "yoht", { text: "úhake̲ʔ", type: "FUT" }],
+      breakdown: ["oh n", FUT, "yoht", ["úhake̲ʔ", "FUT"]],
       en: "How (will it be)?",
       type: "Future",
     },
     {
-      breakdown: ["tsiʔ n", FUT, "yoht", { text: "úhake̲ʔ", type: "FUT" }],
+      breakdown: ["tsiʔ n", FUT, "yoht", ["úhake̲ʔ", "FUT"]],
       en: "How (it will be)",
       type: "",
     },
     {
-      breakdown: ["tho n", FUT, "yoht", { text: "úhake̲ʔ", type: "FUT" }],
+      breakdown: ["tho n", FUT, "yoht", ["úhake̲ʔ", "FUT"]],
       en: "That is how (it will be)",
       type: "",
     },
     {
-      breakdown: ["kʌʔ n", FUT, "yoht", { text: "úhake̲ʔ", type: "FUT" }],
+      breakdown: ["kʌʔ n", FUT, "yoht", ["úhake̲ʔ", "FUT"]],
       en: "This is how (it will be)",
       type: "",
     },
@@ -253,44 +235,44 @@ function StativeVerbExamples() {
     },
 
     {
-      breakdown: ["oh nayoht", { text: "úhakʔ", type: "FUT" }],
+      breakdown: ["oh nayoht", ["úhakʔ", "FUT"]],
       en: "How (would it be)?",
       type: "Command",
     },
     {
-      breakdown: ["tsiʔ nayoht", { text: "úhakʔ", type: "FUT" }],
+      breakdown: ["tsiʔ nayoht", ["úhakʔ", "FUT"]],
       en: "How (it would be)",
       type: "",
     },
     {
-      breakdown: ["tho nayoht", { text: "úhakʔ", type: "FUT" }],
+      breakdown: ["tho nayoht", ["úhakʔ", "FUT"]],
       en: "Let it be how (it would be)",
       type: "",
     },
     {
-      breakdown: ["kʌʔ nayoht", { text: "úhakʔ", type: "FUT" }],
+      breakdown: ["kʌʔ nayoht", ["úhakʔ", "FUT"]],
       en: "This is how (it would be)",
       type: "",
     },
 
     { breakdown: ["ikʌ́"], en: "(it) is", type: "Present" },
     {
-      breakdown: ["kʌ·", { text: "hné·", type: "PAST" }],
+      breakdown: ["kʌ·", ["hné·", "PAST"]],
       en: "(it) was",
       type: "Past",
     },
     {
-      breakdown: [FUT, "kʌ́", { text: "hakeʔ", type: "FUT" }],
+      breakdown: [FUT, "kʌ́", ["hakeʔ", "FUT"]],
       en: "(it) is",
       type: "Future",
     },
     {
-      breakdown: [IFUT, "ikʌ́", { text: "hakeʔ", type: "IFUT" }],
+      breakdown: [IFUT, "ikʌ́", ["hakeʔ", "IFUT"]],
       en: "(it) is",
       type: "Conditional",
     },
     {
-      breakdown: ["kʌ́", { text: "hak", type: "FUT" }],
+      breakdown: ["kʌ́", ["hak", "FUT"]],
       en: "(it) is",
       type: "Command",
     },
@@ -305,7 +287,7 @@ function StativeVerbExamples() {
       <TableWrapper
         columns={[
           { accessorKey: "type", header: "" },
-          // @ts-expect-error To be addressed in LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR", { header: "" }),
           TableWrapper.englishColumn,
         ]}
@@ -359,7 +341,7 @@ function VerbSectionItem({
           { accessorKey: "type", header: "" },
           {
             accessorKey: "breakdown",
-            // @ts-expect-error To be addressed in LO-12
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: BreakdownArray) => (
               <TextBreakdown typeFallback={typeFallback} breakdown={value} />
             ),
@@ -390,17 +372,13 @@ function OtherStativeVerbs() {
     {
       en: "in bad / poor condition",
       breakdown: [["w", "PR"], "ahétkʌʔ"],
-      breakdownPast: [["w", "PR"], "ahétkʌ́·", { text: "ne·", type: "PAST" }],
+      breakdownPast: [["w", "PR"], "ahétkʌ́·", ["ne·", "PAST"]],
     },
 
     {
       en: "lonesome",
-      breakdown: [{ text: "yaw" }, "ʌtúnyaʔt"],
-      breakdownPast: [
-        { text: "yaw" },
-        "ʌtunyaʔt",
-        { text: "ú·ne", type: "PAST" },
-      ],
+      breakdown: [["yaw"], "ʌtúnyaʔt"],
+      breakdownPast: [["yaw"], "ʌtunyaʔt", ["ú·ne", "PAST"]],
     },
 
     {
@@ -539,9 +517,9 @@ function OtherStativeVerbs() {
       <TableWrapper
         columns={[
           TableWrapper.englishColumn,
-          // @ts-expect-error To be addressed in LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PB", { header: "It is..." }),
-          // @ts-expect-error To be addressed in LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PB", {
             accessorKey: "breakdownPast",
             header: "It used to be...",
@@ -635,7 +613,7 @@ function NegatingStativeVerbsSection() {
         columns={[
           {
             accessorKey: "left",
-            // @ts-expect-error To be addressed in LO-12
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: { on: BreakdownArray; en: string }) => (
               <>
                 <TextBreakdown breakdown={value.on} typeFallback="PB" />
@@ -646,7 +624,7 @@ function NegatingStativeVerbsSection() {
           },
           {
             accessorKey: "right",
-            // @ts-expect-error To be addressed in LO-12
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: { on: BreakdownArray; en: string }) => (
               <>
                 <TextBreakdown breakdown={value.on} typeFallback="PB" />

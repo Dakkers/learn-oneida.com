@@ -100,6 +100,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </Text>
 
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={simpleExamples}
       />
@@ -124,6 +125,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       <Text>If this is confusing, take a look at the examples below.</Text>
 
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={minutesExamples}
       />
@@ -131,6 +133,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       <Text>To make things even more confusing, you may instead hear:</Text>
 
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={eveningExamples}
       />
@@ -154,6 +157,7 @@ export function ClockTimeArticle({ level = 1 }: ArticleProps) {
       </Text>
 
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={lastExamples}
       />

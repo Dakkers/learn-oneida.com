@@ -15,7 +15,7 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         columns={[
           { accessorKey: "en", header: "English" },
-          // @ts-expect-error To be addressed in LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR"),
         ]}
         data={[
@@ -30,12 +30,12 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         columns={[
           { accessorKey: "en", header: "English" },
-          // @ts-expect-error To be addressed in LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR", {
             accessorKey: "male",
             header: "Male(s)",
           }),
-          // @ts-expect-error To be addressed in LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR", {
             accessorKey: "female",
             header: "Female(s)",
@@ -50,7 +50,7 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
           ],
           ["three", ["áhsʌ ni", ["hatí"]], ["áhsʌ ni", ["kutí"]]],
           ["four", ["kayé ni", ["hatí"]], ["kayé ni", ["kutí"]]],
-          ["five", ["wísk ni", { text: "hatí" }], ["wísk ni", ["kutí"]]],
+          ["five", ["wísk ni", ["hatí"]], ["wísk ni", ["kutí"]]],
         ].map(([en, male, female]) => ({ en, male, female }))}
       />
       <Text>Some concrete examples:</Text>

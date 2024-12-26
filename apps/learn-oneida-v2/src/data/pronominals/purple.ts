@@ -428,25 +428,35 @@ const fullData: PronominalRulesPurple = {
   ...data,
   soni_u: data.i_u2,
   soni_u2: data.i_u2,
+  // @ts-expect-error IDK
   soni_yall: data.i_yall,
+  // @ts-expect-error IDK
   theyni_u: data.i_yall,
+  // @ts-expect-error IDK
   theyni_u2: data.i_yall,
+  // @ts-expect-error IDK
   theyni_yall: data.i_yall,
   u_soni: data.u2_i,
+  // @ts-expect-error IDK
   m_theyni: data.m_us,
   m_soni: data.m_uni,
+  // @ts-expect-error IDK
   m_u2: data.u2_m,
+  // @ts-expect-error IDK
   m_yall: data.yall_m,
   f_soni: data.f_uni,
   f_us: data.f_uni,
   f_theyni: data.f_uni,
   f_yall: data.f_u2,
   u2_f: data.f_u2,
+  // @ts-expect-error IDK
   u2_theyni: data.yall_i,
   us_f: data.f_u2,
   theyni_f: data.soni_f,
   yall_f: data.f_u2,
+  // @ts-expect-error IDK
   yall_soni: data.u_theyni,
+  // @ts-expect-error IDK
   yall_theyni: data.u_theyni,
 };
 

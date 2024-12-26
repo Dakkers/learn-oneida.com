@@ -13,28 +13,28 @@ export default createParadigmData(
         breakdown: ["kʌʔ ni", ["hs"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "hl" }, "á·"],
+        breakdown: ["kʌʔ ni", ["hl"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "yak" }, "á·"],
+        breakdown: ["kʌʔ ni", ["yak"], "á·"],
       },
       {
         breakdown: ["kʌʔ ni", ["w"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "tn" }, "á·"],
+        breakdown: ["kʌʔ ni", ["tn"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "yakn" }, "á·"],
+        breakdown: ["kʌʔ ni", ["yakn"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "sn" }, "á·"],
+        breakdown: ["kʌʔ ni", ["sn"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "hn" }, "á·"],
+        breakdown: ["kʌʔ ni", ["hn"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "kn" }, "á·"],
+        breakdown: ["kʌʔ ni", ["kn"], "á·"],
       },
       {
         breakdown: ["kʌʔ ni", ["tw"], "á·"],
@@ -43,13 +43,13 @@ export default createParadigmData(
         breakdown: ["kʌʔ ni", ["yakw"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "swa" }, "á·"],
+        breakdown: ["kʌʔ ni", ["swa"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "hʌn" }, "á·"],
+        breakdown: ["kʌʔ ni", ["hʌn"], "á·"],
       },
       {
-        breakdown: ["kʌʔ ni", { text: "kun" }, "á·"],
+        breakdown: ["kʌʔ ni", ["kun"], "á·"],
       },
     ],
   },

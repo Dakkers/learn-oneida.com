@@ -7,7 +7,7 @@ const data: ParadigmData = {
     {
       pronoun: "i",
       phrase: "wakiheyú",
-      breakdown: [{ text: "wak" }, "iheyú"],
+      breakdown: [["wak"], "iheyú"],
     },
     {
       pronoun: "u",
@@ -17,32 +17,32 @@ const data: ParadigmData = {
     {
       pronoun: "m",
       phrase: "lawʌheyú",
-      breakdown: [{ text: "law" }, "ʌheyú"],
+      breakdown: [["law"], "ʌheyú"],
     },
     {
       pronoun: "f",
       phrase: "yakawʌheyú",
-      breakdown: [{ text: "yakaw" }, "ʌheyú"],
+      breakdown: [["yakaw"], "ʌheyú"],
     },
     {
       pronoun: "it",
       phrase: "yawʌheyú",
-      breakdown: [{ text: "yaw" }, "ʌheyú"],
+      breakdown: [["yaw"], "ʌheyú"],
     },
     {
       pronoun: "uni",
       phrase: "yuknʌheyú",
-      breakdown: [{ text: "yukn" }, "ʌheyú"],
+      breakdown: [["yukn"], "ʌheyú"],
     },
     {
       pronoun: "soni",
       phrase: "yuknʌheyú",
-      breakdown: [{ text: "yukn" }, "ʌheyú"],
+      breakdown: [["yukn"], "ʌheyú"],
     },
     {
       pronoun: "u2",
       phrase: "snʌheyú",
-      breakdown: [{ text: "sn" }, "ʌheyú"],
+      breakdown: [["sn"], "ʌheyú"],
     },
     {
       pronoun: "2m",
@@ -57,12 +57,12 @@ const data: ParadigmData = {
     {
       pronoun: "us",
       phrase: "yukwʌheyú",
-      breakdown: [{ text: "yukw" }, "ʌheyú"],
+      breakdown: [["yukw"], "ʌheyú"],
     },
     {
       pronoun: "theyni",
       phrase: "yukwʌheyú",
-      breakdown: [{ text: "yukw" }, "ʌheyú"],
+      breakdown: [["yukw"], "ʌheyú"],
     },
     {
       pronoun: "yall",

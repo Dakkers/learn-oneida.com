@@ -65,7 +65,7 @@ export default function PracticeListening() {
     value: string;
   }> = [
     {
-      getData: () => getAllAudioForModule(subcategory),
+      getData: () => getAllAudioForModule(subcategory as ModuleNumber),
       label: "All audio from module",
       sub: MODULES_LIST,
       value: "all_audio_from_module",
@@ -85,7 +85,7 @@ export default function PracticeListening() {
     //   value: "living_somewhere",
     // },
     {
-      getData: () => formatParticleAudioFiles(subcategory),
+      getData: () => formatParticleAudioFiles(subcategory as ModuleNumber),
       label: "Particles",
       sub: [
         // { label: "All", value: "all" },
@@ -96,7 +96,8 @@ export default function PracticeListening() {
       value: "particle_example_sentences",
     },
     {
-      getData: () => formatParticleExampleAudioFiles(subcategory),
+      getData: () =>
+        formatParticleExampleAudioFiles(subcategory as ModuleNumber),
       label: "Particle example sentences",
       sub: [
         // { label: "All", value: "all" },
@@ -107,7 +108,7 @@ export default function PracticeListening() {
       value: "particle_example_sentences",
     },
     {
-      getData: () => getSentenceAudioForModule(subcategory),
+      getData: () => getSentenceAudioForModule(subcategory as ModuleNumber),
       label: "Sentences from module",
       sub: MODULES_LIST,
       value: "sentences_from_module",
@@ -141,7 +142,8 @@ export default function PracticeListening() {
       value: "times_of_day",
     },
     {
-      getData: () => formatTranslationExerciseAudioFiles(subcategory),
+      getData: () =>
+        formatTranslationExerciseAudioFiles(subcategory as ModuleNumber),
       label: "Translation exercises",
       sub: [
         // { label: "All", value: "all" },
@@ -419,6 +421,7 @@ function formatTranslationExerciseAudioFiles(module: ModuleNumber) {
   if (["module02", "module03", "module04", "module05"].includes(module)) {
     return [];
   }
+  // @ts-expect-error TODO: module number shenanigans
   return getTranslationExercisesForModule(module).map((datum) => ({
     audioFile: `/translation_exercises/${module}/ex_${datum[0]}.mp3`,
     en: "",
@@ -427,9 +430,13 @@ function formatTranslationExerciseAudioFiles(module: ModuleNumber) {
 }
 
 function formatParticleAudioFiles(module: ModuleNumber) {
+  // @ts-expect-error TODO: module number shenanigans
   return getParticlesForGroup(module).map((datum) => ({
+    // @ts-expect-error TODO: Why is `datum` weird?
     audioFile: `/particles/${module}/${datum.key}.mp3`,
+    // @ts-expect-error TODO: Why is `datum` weird?
     en: datum.en,
+    // @ts-expect-error TODO: Why is `datum` weird?
     translation: datum.translation,
   }));
 }
@@ -438,11 +445,14 @@ function formatParticleExampleAudioFiles(module: ModuleNumber) {
   if (["module04", "module05", "module06"].includes(module)) {
     return [];
   }
+  // @ts-expect-error TODO: module number shenanigans
   const data = getParticlesForGroup(module);
   const result = [];
   for (const datum of data) {
+    // @ts-expect-error TODO: Why is `datum` weird?
     const examples = datum.examples ?? [];
     for (let i = 0; i < examples.length; i++) {
+      // @ts-expect-error TODO: Why is `datum` weird?
       const filepath = `/particle_examples/${module}/${datum.key}${examples.length > 1 ? `_${i + 1}` : ""}.mp3`;
       result.push({
         audioFile: filepath,

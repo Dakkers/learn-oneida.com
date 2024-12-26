@@ -84,7 +84,9 @@ export function MonthsArticle({ level = 1 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         columns={[
+          // @ts-expect-error TODO - TableWrapper/Table generics
           ...TableWrapper.columnsEnglishAudio,
+          // @ts-expect-error TODO - TableWrapper/Table generics
           {
             accessorKey: "literal",
             header: "Literal translation",

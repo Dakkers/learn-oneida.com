@@ -52,7 +52,7 @@ export default function Index() {
               <Text variant="titleM">
                 {"title" in card ? card.title : `Module ${i}`}
               </Text>
-              <Box className="mt-2">
+              <Box pt={2}>
                 <Text>{card.desc}</Text>
               </Box>
 
