@@ -50,7 +50,7 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
           ],
           ["three", ["áhsʌ ni", ["hatí"]], ["áhsʌ ni", ["kutí"]]],
           ["four", ["kayé ni", ["hatí"]], ["kayé ni", ["kutí"]]],
-          ["five", ["wísk ni", { text: "hatí" }], ["wísk ni", ["kutí"]]],
+          ["five", ["wísk ni", ["hatí"]], ["wísk ni", ["kutí"]]],
         ].map(([en, male, female]) => ({ en, male, female }))}
       />
       <Text>Some concrete examples:</Text>

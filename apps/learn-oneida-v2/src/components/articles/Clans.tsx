@@ -92,10 +92,10 @@ export function ClansArticle({ level = 1 }: ArticleProps) {
 function createPhrasesLol(animal: string) {
   return [
     {
-      breakdown: [`${animal} ni`, { text: "waki" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["wak"], "iʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "sʌ" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["sʌ"], "ʔtaló·tʌʔ"],
     },
     {
       breakdown: [`${animal} ni`, ["ho"], "ʔtaló·tʌʔ"],
@@ -104,22 +104,22 @@ function createPhrasesLol(animal: string) {
       breakdown: [`${animal} ni`, ["yako"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, ["yukni"], "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yukn"], "iʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, ["sni"], "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["sn"], "iʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "yukwʌ" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yukwʌ"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "swʌ" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["swʌ"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, ["hoti"], "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["hot"], "iʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, ["yoti"], "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yot"], "iʔtaló·tʌʔ"],
     },
   ];
 }

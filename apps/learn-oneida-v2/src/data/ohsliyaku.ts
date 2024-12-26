@@ -27,17 +27,17 @@ const data: ParadigmData = {
     {
       pronoun: "it",
       phrase: "naʔ teyaohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "ya" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["ya"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "uni",
       phrase: "naʔ teyuknohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "yukn" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["yukn"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "soni",
       phrase: "naʔ teyuknohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "yukn" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["yukn"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "u2",
@@ -47,7 +47,7 @@ const data: ParadigmData = {
     {
       pronoun: "2m",
       phrase: "naʔ tehonohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "hon" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["hon"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "2f",
@@ -72,7 +72,7 @@ const data: ParadigmData = {
     {
       pronoun: "ms",
       phrase: "naʔ tehonohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "hon" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["hon"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "fs",

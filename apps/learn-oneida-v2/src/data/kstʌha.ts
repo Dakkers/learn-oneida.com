@@ -47,7 +47,7 @@ const data: ParadigmData = {
     {
       pronoun: "2m",
       phrase: "lotikstʌ́ha",
-      breakdown: [{ text: "loti" }, "kstʌ́ha̲"],
+      breakdown: [["loti"], "kstʌ́ha̲"],
     },
     {
       pronoun: "2f",
@@ -72,7 +72,7 @@ const data: ParadigmData = {
     {
       pronoun: "ms",
       phrase: "lotikstʌ́ha",
-      breakdown: [{ text: "loti" }, "kstʌ́ha̲"],
+      breakdown: [["loti"], "kstʌ́ha̲"],
     },
     {
       pronoun: "fs",
