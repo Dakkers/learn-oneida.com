@@ -29,7 +29,7 @@ export default function PracticeMonths() {
 
     for (const datum of DATA_MONTHS) {
       resultEn.push({ key: datum.key, text: datum.en });
-      resultOn.push({ key: datum.key, text: datum.on });
+      resultOn.push({ key: datum.key, text: datum.translation });
     }
     return [resultEn, resultOn];
   }, []);

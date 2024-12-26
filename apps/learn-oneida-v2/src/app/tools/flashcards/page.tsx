@@ -3,10 +3,9 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule5VerbsList } from "~/data/module05";
-import { arrayify } from "~/utils";
 import { useInterval } from "usehooks-ts";
 import { Select } from "@ukwehuwehneke/ohutsya";
 import { RadioGroup } from "@ukwehuwehneke/ohutsya";
@@ -189,7 +188,7 @@ function TheCard({
   );
 
   return (
-    <Card className="p-6">
+    <Card>
       <Flex align="center" direction="column" gap={4}>
         <Text variant="bodyL">{englishText}</Text>
 

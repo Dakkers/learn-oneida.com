@@ -13,7 +13,7 @@ import _ from "lodash";
 type Data = Array<{
   en: string | string[];
   key: string;
-  on: string | string[];
+  translation: string | string[];
 }>;
 
 interface MatchingGamePageContextProps {
@@ -139,7 +139,7 @@ function OneidaSection() {
     <Flex gap={4} justify="center" wrap>
       {data.map((datum) => (
         <Draggable key={datum.key} value={datum.key}>
-          {arrayify(datum.on)[0]}
+          {arrayify(datum.translation)[0]}
         </Draggable>
       ))}
     </Flex>
@@ -250,7 +250,7 @@ function DropTarget({
           <div className="absolute bottom-0 py-1 w-full flex justify-center bg-slate-200">
             {
               arrayify(
-                context.data.find((d) => d.key === droppedItemKey)?.on,
+                context.data.find((d) => d.key === droppedItemKey)?.translation,
               )[0]
             }
           </div>

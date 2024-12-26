@@ -8,7 +8,6 @@ export function LinkWrapper({
 }: {
   children?: ReactNode;
   page:
-    | "intro"
     | 1
     | 2
     | 3
@@ -21,8 +20,10 @@ export function LinkWrapper({
     | 10
     | 11
     | 12
-    | "rep"
+    | "coin"
     | "dual"
+    | "intro"
+    | "rep"
     | "semi";
 }) {
   const children = _children

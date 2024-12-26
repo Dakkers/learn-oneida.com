@@ -15,8 +15,8 @@ const data = createParadigmData(
     phrases: [
       { breakdown: [["te", "DUAL"], ["k"], "hsʌná·se·le̲ʔ"] },
       { breakdown: [["te", "DUAL"], { text: "ts" }, "ʌná·se·le̲ʔ"] },
-      { breakdown: [["te", "DUAL"], { text: "ha" }, "hsʌná·se·le̲ʔ"] },
-      { breakdown: [["te", "DUAL"], { text: "ye" }, "hsʌná·se·le̲ʔ"] },
+      { breakdown: [["te", "DUAL"], ["ha"], "hsʌná·se·le̲ʔ"] },
+      { breakdown: [["te", "DUAL"], ["ye"], "hsʌná·se·le̲ʔ"] },
       { breakdown: [["te", "DUAL"], { text: "hati" }, "hsʌná·se·le̲ʔ"] },
     ],
   },

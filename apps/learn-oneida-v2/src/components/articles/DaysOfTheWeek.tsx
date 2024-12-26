@@ -57,6 +57,7 @@ export function DaysOfTheWeekArticle({ level = 1 }: ArticleProps) {
         Days of the week
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={DATA_DAYS_OF_WEEK}
       />
@@ -68,6 +69,7 @@ export function DaysOfTheWeekArticle({ level = 1 }: ArticleProps) {
         On a specific day
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={daysSpecific}
       />
@@ -79,6 +81,7 @@ export function DaysOfTheWeekArticle({ level = 1 }: ArticleProps) {
         Last...
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={daysLast}
       />
@@ -90,6 +93,7 @@ export function DaysOfTheWeekArticle({ level = 1 }: ArticleProps) {
         Next...
       </SectionHeading>
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={daysNext}
       />

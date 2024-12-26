@@ -5,6 +5,7 @@ import React from "react";
 export default function ArticleKanuhwelatuksla() {
   return (
     <div>
+      {/* @ts-expect-error TODO */}
       <read-along
         href="/audio/kanuhwelatuksla/kanuhwelatuksla-20240719041040.readalong"
         audio="/audio/kanuhwelatuksla/kanuhwelatuksla-20240719041040.wav"
@@ -13,6 +14,7 @@ export default function ArticleKanuhwelatuksla() {
         image-assets-folder="assets/"
       >
         <span slot="read-along-header">Kanuhwelatúksla’</span>
+        {/* @ts-expect-error TODO */}
       </read-along>
 
       <script

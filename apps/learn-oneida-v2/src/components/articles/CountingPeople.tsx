@@ -15,7 +15,7 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         columns={[
           { accessorKey: "en", header: "English" },
-          // @ts-expect-error To be addressed in LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR"),
         ]}
         data={[
@@ -30,12 +30,12 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         columns={[
           { accessorKey: "en", header: "English" },
-          // @ts-expect-error To be addressed in LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR", {
             accessorKey: "male",
             header: "Male(s)",
           }),
-          // @ts-expect-error To be addressed in LO-12
+          // @ts-expect-error TODO - TableWrapper/Table generics
           TableWrapper.createTextBreakdownColumn("PR", {
             accessorKey: "female",
             header: "Female(s)",

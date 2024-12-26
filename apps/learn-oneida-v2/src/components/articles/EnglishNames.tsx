@@ -32,7 +32,7 @@ export function EnglishNamesArticle({ level = 1 }: ArticleProps) {
     { translation: "Lá·kel", en: "Rachel" },
     { translation: "Sá·lʌ̲", en: "Sara" },
     { translation: "Só·s", en: "Susan" },
-  ] as const;
+  ];
 
   return (
     <Flex direction="column" gap={4}>

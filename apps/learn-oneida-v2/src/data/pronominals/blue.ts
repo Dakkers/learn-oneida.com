@@ -93,7 +93,9 @@ const data: PronominalRules = {
   },
   "2m": maleNonSingular,
   "2f": femaleNonSingular,
+  // @ts-expect-error IDK
   us: mePlural,
+  // @ts-expect-error IDK
   theyni: mePlural,
   yall: {
     default: ["sw"],

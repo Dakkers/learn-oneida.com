@@ -65,7 +65,7 @@ function MarriedTable({ level = 2 }: ArticleProps) {
         Married
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColumns("PB", { suffix: "hne" }).slice(1)}
         data={rows}
       />
@@ -77,11 +77,11 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
   const rows = [
     {
       pronoun: "uni",
-      breakdown: ["í", { text: "tn" }],
+      breakdown: ["í", ["tn"]],
     },
     {
       pronoun: "u2",
-      breakdown: ["í", { text: "sn" }],
+      breakdown: ["í", ["sn"]],
     },
     {
       pronoun: "soni",
@@ -93,7 +93,7 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
     },
     {
       pronoun: "2f",
-      breakdown: ["í", { text: "kn" }],
+      breakdown: ["í", ["kn"]],
     },
   ].map((row) => {
     return {
@@ -112,7 +112,7 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
         In a relationship
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColumns("PR", { suffix: "kwe̲" }).slice(1)}
         data={rows}
       />
@@ -144,7 +144,7 @@ function SeparatedTable({ level = 2 }: ArticleProps) {
         Separated and Reconciled
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColumns("PB", {
           headerNow: "Separated",
           headerPast: "Reconciled",
@@ -178,7 +178,7 @@ function EngagedTable({ level = 2 }: ArticleProps) {
         Engaged
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColumns("PB", { suffix: "hkwe̲" }).slice(1)}
         data={rows}
       />
@@ -209,7 +209,7 @@ function SingleTable({ level = 2 }: ArticleProps) {
         Single
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColumns("PR", { suffix: "hne" }).slice(1)}
         data={rows}
       />
@@ -248,7 +248,7 @@ function OldManWomanTable({ level = 2 }: ArticleProps) {
           TableWrapper.columnsOneidaPronouns[1],
           {
             accessorKey: "oldMan",
-            // @ts-expect-error To be addressed in LO-12
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: BreakdownArray) => (
               <TextBreakdown breakdown={value} typeFallback="PP" />
             ),
@@ -256,7 +256,7 @@ function OldManWomanTable({ level = 2 }: ArticleProps) {
           },
           {
             accessorKey: "oldWoman",
-            // @ts-expect-error To be addressed in LO-12
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: BreakdownArray) => (
               <TextBreakdown breakdown={value} typeFallback="PP" />
             ),
@@ -332,11 +332,10 @@ function BoyfriendGirlfriendTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         columns={[
-          // @ts-expect-error To be addressed in LO-12
           TableWrapper.columnsOneidaPronouns[1],
           {
             accessorKey: "boyfriend",
-            // @ts-expect-error To be addressed in LO-12
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: BreakdownArray) => (
               <TextBreakdown breakdown={value} typeFallback="PLB" />
             ),
@@ -344,7 +343,7 @@ function BoyfriendGirlfriendTable({ level = 2 }: ArticleProps) {
           },
           {
             accessorKey: "girlfriend",
-            // @ts-expect-error To be addressed in LO-12
+            // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: BreakdownArray) => (
               <TextBreakdown breakdown={value} typeFallback="PLB" />
             ),

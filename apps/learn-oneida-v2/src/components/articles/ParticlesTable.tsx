@@ -22,7 +22,7 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
     () => [
       {
         accessorKey: "translation",
-        cell: (value: string | string[], row) => (
+        cell: (value: string | string[], row: any) => (
           <Flex direction="column" gap={2}>
             {arrayify(value).map((val, i) => (
               <Flex gap={4} key={i}>
@@ -79,7 +79,6 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
     return getParticlesForGroup(group);
   }, [group]);
 
-  // @ts-expect-error To be addressed in LO-12
   return (
     <TableWrapper
       bleed={{
@@ -87,6 +86,7 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
         md: 16,
         lg: 32,
       }}
+      // @ts-expect-error TODO - TableWrapper/Table generics
       columns={columns}
       data={data}
     />

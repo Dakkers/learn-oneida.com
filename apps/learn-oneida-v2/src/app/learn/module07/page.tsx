@@ -76,12 +76,12 @@ function AllNouns() {
   );
 }
 
-function NounTable({ nounDatum }) {
+function NounTable({ nounDatum }: { nounDatum: any }) {
   return (
     <TableWrapper
       columns={[
         TableWrapper.englishColumn,
-        // @ts-expect-error LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         TableWrapper.createTextBreakdownColumn("PR"),
       ]}
       data={[

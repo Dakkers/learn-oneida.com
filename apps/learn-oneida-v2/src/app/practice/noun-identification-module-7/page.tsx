@@ -7,7 +7,6 @@ import {
   EnglishToOneidaQuiz,
   EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
-import { arrayify } from "~/utils";
 import { createModule7NounsList } from "@/data/module07";
 import { convertBreakdownToPlainText } from "@ukwehuwehneke/language-components";
 
@@ -34,6 +33,7 @@ export default function PracticeNounIdentificationModule7() {
       resultEn.push({ key: datum.key, text: datum.en });
       resultOn.push({
         key: datum.key,
+        // @ts-expect-error Need better typing on the module 7 list
         text: convertBreakdownToPlainText(datum.single),
       });
     }

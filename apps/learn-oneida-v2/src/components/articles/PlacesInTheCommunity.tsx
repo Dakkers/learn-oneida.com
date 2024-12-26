@@ -5,7 +5,7 @@ import {
 import DATA_PLACES_IN_COMMUNITY from "~/data/module04/places-in-the-community";
 
 export function PlacesInTheCommunityArticle(
-  props: PlacesInTheCommunityArticleProps,
+  props: Omit<PlacesInTheCommunityArticleProps, "data">,
 ) {
   return <BaseArticle {...props} data={DATA_PLACES_IN_COMMUNITY} />;
 }

@@ -22,12 +22,12 @@ const data: ParadigmData = {
     {
       pronoun: "f",
       phrase: "yakokstʌ́ha",
-      breakdown: [{ text: "yako" }, "kstʌ́ha̲"],
+      breakdown: [["yako"], "kstʌ́ha̲"],
     },
     {
       pronoun: "it",
       phrase: "yokstʌ́ha",
-      breakdown: [{ text: "yo" }, "kstʌ́ha̲"],
+      breakdown: [["yo"], "kstʌ́ha̲"],
     },
     {
       pronoun: "uni",
@@ -52,22 +52,22 @@ const data: ParadigmData = {
     {
       pronoun: "2f",
       phrase: "yotikstʌ́ha",
-      breakdown: [{ text: "yoti" }, "kstʌ́ha̲"],
+      breakdown: [["yoti"], "kstʌ́ha̲"],
     },
     {
       pronoun: "us",
       phrase: "yukwakstʌ́ha",
-      breakdown: [{ text: "yukwa" }, "kstʌ́ha̲"],
+      breakdown: [["yukwa"], "kstʌ́ha̲"],
     },
     {
       pronoun: "theyni",
       phrase: "yukwakstʌ́ha",
-      breakdown: [{ text: "yukwa" }, "kstʌ́ha̲"],
+      breakdown: [["yukwa"], "kstʌ́ha̲"],
     },
     {
       pronoun: "yall",
       phrase: "swakstʌ́ha",
-      breakdown: [{ text: "swa" }, "kstʌ́ha̲"],
+      breakdown: [["swa"], "kstʌ́ha̲"],
     },
     {
       pronoun: "ms",
@@ -77,7 +77,7 @@ const data: ParadigmData = {
     {
       pronoun: "fs",
       phrase: "yotikstʌ́ha",
-      breakdown: [{ text: "yoti" }, "kstʌ́ha̲"],
+      breakdown: [["yoti"], "kstʌ́ha̲"],
     },
   ],
 };

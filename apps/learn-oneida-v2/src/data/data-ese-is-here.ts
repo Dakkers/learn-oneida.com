@@ -2,230 +2,82 @@ import { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
   translation: "{{pronoun}} {{refVerb}} here",
+  type: "PR",
   phrases: [
     {
       pronoun: "i",
       phrase: "kʌʔ i·ké·seʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "i·",
-          type: "RPL",
-        },
-        {
-          text: "k",
-          type: "PR",
-        },
-        { text: "é·seʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["i·", "RPL"], ["k"], "é·seʔ"],
     },
     {
       pronoun: "u",
       phrase: "kʌʔ íhsehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "í",
-          type: "RPL",
-        },
-        {
-          text: "hs",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["í", "RPL"], ["hs"], "ehseʔ"],
     },
     {
       pronoun: "m",
       phrase: "kʌʔ í·lehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "í·",
-          type: "RPL",
-        },
-        {
-          text: "l",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["í·", "RPL"], ["l"], "ehseʔ"],
     },
     {
       pronoun: "f",
       phrase: "kʌʔ i·yʌ́·seʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "i·",
-          type: "RPL",
-        },
-        {
-          text: "y",
-          type: "PR",
-        },
-        { text: "ʌ́·seʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["i·", "RPL"], ["y"], "ʌ́·seʔ"],
     },
     {
       pronoun: "it",
       phrase: "kʌʔ i·wé·seʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "i·",
-          type: "RPL",
-        },
-        {
-          text: "w",
-          type: "PR",
-        },
-        { text: "é·seʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["i·", "RPL"], ["w"], "é·seʔ"],
     },
     {
       pronoun: "uni",
       phrase: "kʌʔ ítnehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "í",
-          type: "RPL",
-        },
-        {
-          text: "tn",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["í", "RPL"], ["tn"], "ehseʔ"],
     },
     {
       pronoun: "soni",
       phrase: "kʌʔ yáknehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "yakn",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["yakn"], "ehseʔ"],
     },
     {
       pronoun: "u2",
       phrase: "kʌʔ ísnehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "í",
-          type: "RPL",
-        },
-        {
-          text: "sn",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["í", "RPL"], ["sn"], "ehseʔ"],
     },
     {
       pronoun: "2m",
       phrase: "kʌʔ í·nehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "í·",
-          type: "RPL",
-        },
-        {
-          text: "n",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["í·", "RPL"], ["n"], "ehseʔ"],
     },
     {
       pronoun: "2f",
       phrase: "kʌʔ íknehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "í",
-          type: "RPL",
-        },
-        {
-          text: "kn",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["í", "RPL"], ["kn"], "ehseʔ"],
     },
     {
       pronoun: "us",
       phrase: "kʌʔ ítwehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "í",
-          type: "RPL",
-        },
-        {
-          text: "tw",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["í", "RPL"], ["tw"], "ehseʔ"],
     },
     {
       pronoun: "theyni",
       phrase: "kʌʔ yákwehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "yakw",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["yakw"], "ehseʔ"],
     },
     {
       pronoun: "yall",
       phrase: "kʌʔ íswehseʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "í",
-          type: "RPL",
-        },
-        {
-          text: "sw",
-          type: "PR",
-        },
-        { text: "ehseʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["í", "RPL"], ["sw"], "ehseʔ"],
     },
     {
       pronoun: "ms",
       phrase: "kʌʔ lʌ·né·seʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "lʌ·n",
-          type: "PR",
-        },
-        { text: "é·seʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["lʌ·n"], "é·seʔ"],
     },
     {
       pronoun: "fs",
       phrase: "kʌʔ ku·né·seʔ",
-      breakdown: [
-        { text: "kʌʔ " },
-        {
-          text: "ku·n",
-          type: "PR",
-        },
-        { text: "é·seʔ" },
-      ],
+      breakdown: ["kʌʔ ", ["ku·n"], "é·seʔ"],
     },
   ],
 };

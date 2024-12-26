@@ -3,6 +3,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
   SectionHeadingProps,
+  type Pronoun,
 } from "@ukwehuwehneke/language-components";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
@@ -12,7 +13,6 @@ import {
   createParadigmData,
 } from "../ParadigmTable";
 import { ArticleProps } from "./utils";
-import { type Pronoun } from "~/utils";
 
 const allowedPronouns: Pronoun[] = [
   "i",
@@ -101,7 +101,7 @@ function createPhrasesLol(animal: string) {
       breakdown: [`${animal} ni`, ["ho"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "yako" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yako"], "ʔtaló·tʌʔ"],
     },
     {
       breakdown: [`${animal} ni`, ["yukni"], "ʔtaló·tʌʔ"],
@@ -116,10 +116,10 @@ function createPhrasesLol(animal: string) {
       breakdown: [`${animal} ni`, { text: "swʌ" }, "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "hoti" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["hoti"], "ʔtaló·tʌʔ"],
     },
     {
-      breakdown: [`${animal} ni`, { text: "yoti" }, "ʔtaló·tʌʔ"],
+      breakdown: [`${animal} ni`, ["yoti"], "ʔtaló·tʌʔ"],
     },
   ];
 }

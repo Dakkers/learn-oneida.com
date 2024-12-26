@@ -7,7 +7,7 @@ const data: ParadigmData = {
     {
       pronoun: "i",
       phrase: "naʔ tewakohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "wak" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["wak"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "u",
@@ -17,12 +17,12 @@ const data: ParadigmData = {
     {
       pronoun: "m",
       phrase: "naʔ tehaohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "ha" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["ha"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "f",
       phrase: "naʔ teyakaohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "yaka" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["yaka"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "it",
@@ -42,7 +42,7 @@ const data: ParadigmData = {
     {
       pronoun: "u2",
       phrase: "naʔ tesnohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "sn" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["sn"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "2m",
@@ -57,12 +57,12 @@ const data: ParadigmData = {
     {
       pronoun: "us",
       phrase: "naʔ teyukyohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "yuky" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["yuky"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "theyni",
       phrase: "naʔ teyukyohsliyá·ku̲",
-      breakdown: ["naʔ te", { text: "yuky" }, "ohsliyá·ku̲"],
+      breakdown: ["naʔ te", ["yuky"], "ohsliyá·ku̲"],
     },
     {
       pronoun: "yall",

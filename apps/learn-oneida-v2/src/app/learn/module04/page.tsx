@@ -55,6 +55,7 @@ import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { PhoneNumbersArticle } from "~/components/articles/PhoneNumbers";
 import { ClockTimeArticle } from "~/components/articles/ClockTime";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
+import DATA_PLACES_IN_COMMUNITY from "@/data/module04/places-in-the-community";
 
 const meta: any = () => {
   return [

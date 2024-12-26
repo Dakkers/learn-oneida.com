@@ -66,6 +66,7 @@ export default function PracticeCharacteristicConjugationModule8() {
         return {
           en: getEnglishTranslation(charDatum, key),
           key,
+          // @ts-expect-error Need better typing on the module 8 list
           on: convertBreakdownToPlainText(charDatum[key]),
         };
       })
@@ -74,7 +75,7 @@ export default function PracticeCharacteristicConjugationModule8() {
 
   const formSchema = useMemo(() => {
     return z.object(
-      Object.fromEntries(rows.map((r) => [r.key, z.string().optional()])),
+      Object.fromEntries(rows.map((r) => [r!.key, z.string().optional()])),
     );
   }, [rows]);
 
@@ -112,9 +113,11 @@ export default function PracticeCharacteristicConjugationModule8() {
         <TableAsForm
           bleed={32}
           checkCorrectness={(key, val) =>
+            // @ts-expect-error Improve type safety
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }
           formSchema={formSchema}
+          // @ts-expect-error Improve type safety
           rows={rows}
         />
       )}

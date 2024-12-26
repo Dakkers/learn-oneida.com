@@ -7,7 +7,7 @@ const data: ParadigmData = {
     {
       pronoun: "i",
       phrase: "kʌʔ nitwakyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "wak" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["wak"], "yʌ́ha̲"],
     },
     {
       pronoun: "u",
@@ -22,12 +22,12 @@ const data: ParadigmData = {
     {
       pronoun: "f",
       phrase: "kʌʔ nityakoyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "yako" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["yako"], "yʌ́ha̲"],
     },
     {
       pronoun: "it",
       phrase: "kʌʔ nityoyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "yo" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["yo"], "yʌ́ha̲"],
     },
     {
       pronoun: "uni",
@@ -47,37 +47,37 @@ const data: ParadigmData = {
     {
       pronoun: "2m",
       phrase: "kʌʔ nitlotiyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "hoti" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["hoti"], "yʌ́ha̲"],
     },
     {
       pronoun: "2f",
       phrase: "kʌʔ nityotiyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "yoti" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["yoti"], "yʌ́ha̲"],
     },
     {
       pronoun: "us",
       phrase: "kʌʔ nityukwayʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "yukwa" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["yukwa"], "yʌ́ha̲"],
     },
     {
       pronoun: "theyni",
       phrase: "kʌʔ nityukwayʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "yukwa" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["yukwa"], "yʌ́ha̲"],
     },
     {
       pronoun: "yall",
       phrase: "kʌʔ nitiswayʌ́ha",
-      breakdown: ["kʌʔ niti", { text: "swa" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ niti", ["swa"], "yʌ́ha̲"],
     },
     {
       pronoun: "ms",
       phrase: "kʌʔ nitlotiyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "hoti" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["hoti"], "yʌ́ha̲"],
     },
     {
       pronoun: "fs",
       phrase: "kʌʔ nityotiyʌ́ha",
-      breakdown: ["kʌʔ nit", { text: "yoti" }, "yʌ́ha̲"],
+      breakdown: ["kʌʔ nit", ["yoti"], "yʌ́ha̲"],
     },
   ],
 };

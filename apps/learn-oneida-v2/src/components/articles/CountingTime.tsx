@@ -11,6 +11,7 @@ export function CountingTimeArticle({ level = 1 }: ArticleProps) {
       </SectionHeading>
 
       <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
         data={createCountingTimeData()}
       />

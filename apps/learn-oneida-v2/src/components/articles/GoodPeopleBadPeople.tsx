@@ -23,12 +23,12 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       [["h", "RPL"], ["l"], "ukweʔtiyo", "hné·"],
     ],
     [
-      [{ text: "yak" }, "ukweʔtiyó"],
-      [{ text: "yak" }, "ukweʔtiyo", "hné·"],
+      [["yak"], "ukweʔtiyó"],
+      [["yak"], "ukweʔtiyo", "hné·"],
     ],
     [
-      [{ text: "lʌn" }, "ukweʔtiyóhseʔ"],
-      [{ text: "lʌn" }, "ukweʔtiyóhs", "kweʔ"],
+      [["lʌn"], "ukweʔtiyóhseʔ"],
+      [["lʌn"], "ukweʔtiyóhs", "kweʔ"],
     ],
   ];
   const badPeopleData: Array<BreakdownArray[]> = [
@@ -45,12 +45,12 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       [["h", "RPL"], ["l"], "ukweʔtaksʌ́", "hneʔ"],
     ],
     [
-      [{ text: "yak" }, "ukweʔtáksʌ"],
-      [{ text: "yak" }, "ukweʔtaksʌ́", "hneʔ"],
+      [["yak"], "ukweʔtáksʌ"],
+      [["yak"], "ukweʔtaksʌ́", "hneʔ"],
     ],
     [
-      [{ text: "lʌn" }, "ukweʔtáksʌhseʔ"],
-      [{ text: "lʌn" }, "ukweʔtaksʌhs", "kweʔ"],
+      [["lʌn"], "ukweʔtáksʌhseʔ"],
+      [["lʌn"], "ukweʔtaksʌhs", "kweʔ"],
     ],
   ];
   const goodKidsData: Array<BreakdownArray[]> = [
@@ -63,16 +63,16 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       [["h", "RPL"], ["s"], "eksaʔtiyo", "hné·"],
     ],
     [
-      [{ text: "la" }, "ksaʔtiyó"],
-      [{ text: "la" }, "ksaʔtiyo", "hné·"],
+      [["la"], "ksaʔtiyó"],
+      [["la"], "ksaʔtiyo", "hné·"],
     ],
     [
-      [{ text: "ye" }, "ksaʔtiyó"],
-      [{ text: "ye" }, "ksaʔtiyo", "hné·"],
+      [["ye"], "ksaʔtiyó"],
+      [["ye"], "ksaʔtiyo", "hné·"],
     ],
     [
-      [{ text: "lati" }, "ksaʔtiyóhseʔ"],
-      [{ text: "lati" }, "ksaʔtiyóhs", "kweʔ"],
+      [["lati"], "ksaʔtiyóhseʔ"],
+      [["lati"], "ksaʔtiyóhs", "kweʔ"],
     ],
   ];
   const badKidsData: Array<BreakdownArray[]> = [
@@ -85,16 +85,16 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       [["s"], "eksaʔtaksʌ́", "hneʔ"],
     ],
     [
-      [{ text: "la" }, "ksaʔtáksʌ"],
-      [{ text: "la" }, "ksaʔtaksʌ́", "hneʔ"],
+      [["la"], "ksaʔtáksʌ"],
+      [["la"], "ksaʔtaksʌ́", "hneʔ"],
     ],
     [
-      [{ text: "ye" }, "ksaʔtáksʌ"],
-      [{ text: "ye" }, "ksaʔtaksʌ́", "hneʔ"],
+      [["ye"], "ksaʔtáksʌ"],
+      [["ye"], "ksaʔtaksʌ́", "hneʔ"],
     ],
     [
-      [{ text: "lati" }, "ksaʔtáksʌhseʔ"],
-      [{ text: "lati" }, "ksaʔtaksʌhs", "kweʔ"],
+      [["lati"], "ksaʔtáksʌhseʔ"],
+      [["lati"], "ksaʔtaksʌhs", "kweʔ"],
     ],
   ];
 
@@ -109,7 +109,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
         Good People
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
         data={goodPeopleData.map(mapper)}
       />
@@ -117,7 +117,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
         Bad People
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
         data={badPeopleData.map(mapper)}
       />
@@ -125,7 +125,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
         Good Kids
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
         data={goodKidsData.map(mapper)}
       />
@@ -133,7 +133,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
         Bad Kids
       </SectionHeading>
       <TableWrapper
-        // @ts-expect-error To be addressed in LO-12
+        // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
         data={badKidsData.map(mapper)}
       />

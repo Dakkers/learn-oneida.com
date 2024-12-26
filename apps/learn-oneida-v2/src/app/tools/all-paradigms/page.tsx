@@ -116,7 +116,7 @@ function Module6Paradigms() {
                         pronounEnglish: false,
                         translation: true,
                       }}
-                      data={v[t]}
+                      data={v[t]!}
                     />
                   </div>
                 </>
@@ -136,7 +136,7 @@ function Module5ParadigmsAsIs() {
       columns={[
         {
           accessorKey: "left",
-          // @ts-expect-error TODO
+          // @ts-expect-error TODO - TableWrapper/Table generics
           cell: (value, row: Module5VerbDatum) => {
             return <div>{row.en}</div>;
           },
@@ -144,7 +144,7 @@ function Module5ParadigmsAsIs() {
         },
         {
           accessorKey: "middle",
-          // @ts-expect-error TODO
+          // @ts-expect-error TODO - TableWrapper/Table generics
           cell: (value, row: Module5VerbDatum) => {
             return (
               <Flex direction="column" justify="center" gap={4}>
@@ -163,7 +163,7 @@ function Module5ParadigmsAsIs() {
         },
         {
           accessorKey: "right",
-          // @ts-expect-error TODO
+          // @ts-expect-error TODO - TableWrapper/Table generics
           cell: (value, row: Module5VerbDatum) => {
             return (
               <Flex direction="column" justify="center" gap={4}>
