@@ -2,7 +2,6 @@
   "compilerOptions": {
     "allowJs": false,
     "baseUrl": "./",
-    "build": true,
     "composite": true,
     "declaration": true,
     "declarationMap": true,
