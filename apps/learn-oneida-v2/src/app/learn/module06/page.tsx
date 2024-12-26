@@ -797,8 +797,9 @@ function DailyActivitiesSection() {
               tense,
               text: (tense === "cmd"
                 ? v[tense]!.phrases.find((p) => p.pronoun === "u")
-                : v[tense]!.phrases.find((p) => p.pronoun === "i") ??
-                  v[tense]!.phrases.find((p) => p.pronoun === "it"))!.breakdown,
+                : (v[tense]!.phrases.find((p) => p.pronoun === "i") ??
+                  v[tense]!.phrases.find((p) => p.pronoun === "it")))!
+                .breakdown,
             }),
           );
 

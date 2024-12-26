@@ -36,7 +36,7 @@ export function Table({ bleed = 0, columns, data }: TableProps) {
                 <PrimitiveTableHead key={c.key ?? c.accessorKey}>
                   {typeof c.header === "function"
                     ? c.header()
-                    : c.header ?? null}
+                    : (c.header ?? null)}
                 </PrimitiveTableHead>
               ))}
             </PrimitiveTableRow>

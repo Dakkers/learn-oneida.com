@@ -415,7 +415,7 @@ export function createParadigmData(
               text: lastPartWhispered,
               type: Array.isArray(lastElement)
                 ? lastElement[1]
-                : lastElement.type ?? undefined,
+                : (lastElement.type ?? undefined),
             };
     }
 
