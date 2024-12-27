@@ -1,9 +1,9 @@
 import {
   TableWrapper,
-  EnglishTranslationPairData,
+  type EnglishTranslationPairData,
 } from "../components/TableWrapper";
 import { SectionHeading } from "../components/SectionHeading";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 export type PlacesInTheCommunityArticleProps = ArticleProps & {

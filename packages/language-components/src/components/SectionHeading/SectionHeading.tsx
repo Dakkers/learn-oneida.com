@@ -1,4 +1,4 @@
-import { Heading, HeadingProps } from "@ukwehuwehneke/ohutsya";
+import { Heading, type HeadingProps } from "@ukwehuwehneke/ohutsya";
 
 export interface SectionHeadingProps
   extends Partial<Pick<HeadingProps, "align" | "children" | "id" | "intent">> {
