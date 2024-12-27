@@ -7,7 +7,6 @@ import { Select } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { z } from "zod";
 import { TableAsForm } from "~/components/practice/TableAsForm";
-import { Link } from "@ukwehuwehneke/ohutsya";
 import {
   convertBreakdownToPlainText,
   SectionHeading,
@@ -16,6 +15,7 @@ import {
   createModule8CharacteristicsList,
   getEnglishTranslation,
 } from "@/data/module08";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -87,7 +87,7 @@ export default function PracticeCharacteristicConjugationModule8() {
 
       <Text>
         Use this page to practice a characteristic&lsquo;s paradigm from{" "}
-        <Link href="/learn/module08">module 8</Link>.
+        <LinkWrapper page={8}/>.
       </Text>
 
       <Flex align="end" gap={2}>

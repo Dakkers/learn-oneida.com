@@ -24,12 +24,11 @@ import { ParadigmTable } from "~/components/ParadigmTable";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Pronominal, type PronominalColor } from "~/components/Pronominal";
 import { Letter } from "~/components/Letter";
-import { Link } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
-import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { TextArray } from "@ukwehuwehneke/ohutsya";
 import { pronouns } from "@ukwehuwehneke/language-components";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 
@@ -198,7 +197,7 @@ function StativeVsActiveSection() {
       </SectionHeading>
 
       <Text>
-        <Link href="/learn/module05">Module 5</Link> covered{" "}
+        <LinkWrapper page={5}>Module 5</LinkWrapper> covered{" "}
         <b>stative verbs</b> which describe the{" "}
         <i>state or condition of someone or something</i>. They have 5 possible
         tenses:

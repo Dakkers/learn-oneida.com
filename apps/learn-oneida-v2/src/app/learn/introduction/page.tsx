@@ -1,15 +1,12 @@
-"use client";
-
 import {
   Bleed,
   Box,
   Divider,
-  Link,
   List,
   Notice,
   Text,
 } from "@ukwehuwehneke/ohutsya";
-
+import type { Metadata } from 'next'
 import Image from "next/image";
 import React from "react";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
@@ -20,12 +17,11 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { ParadigmTable } from "@/components/ParadigmTable";
 import dataLikeRedJson from "~/data/nuwehse-red";
+import { Link } from "@/components/Link";
 
-const meta: any = () => {
-  return [
-    { title: "Introduction" },
-    { name: "description", content: "Introduction to the Oneida curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Introduction",
+  description: "Introduction to the Oneida curriculum",
 };
 
 export default function LearnIntroduction() {

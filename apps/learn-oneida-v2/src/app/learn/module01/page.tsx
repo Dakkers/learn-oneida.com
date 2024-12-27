@@ -4,7 +4,6 @@ import {
   Bleed,
   Box,
   Divider,
-  Link,
   Notice,
   Text,
 } from "@ukwehuwehneke/ohutsya";
@@ -30,8 +29,8 @@ import { PronominalsArticle } from "~/components/articles/Pronominals";
 import { StressArticle } from "~/components/articles/Stress";
 import { GlottalStopArticle } from "~/components/articles/GlottalStop";
 import { LetterHArticle } from "~/components/articles/LetterH";
-import { WhisperedEndingsArticle } from "~/components/articles/WhisperedEndings";
 import { PrepausalEndingsArticle } from "@/components/articles/PrepausalEndings";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -122,7 +121,7 @@ export default function LearnModule01() {
       <Text>
         This module assumes a knowledge of the terms "pronominal", "root word",
         "stem", and "paradigm", all of which are discussed on the{" "}
-        <Link href="/learn/introduction">introduction page</Link>.
+        <LinkWrapper page='intro' />
       </Text>
 
       <PronominalsArticle level={2} />

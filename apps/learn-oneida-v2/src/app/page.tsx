@@ -1,7 +1,8 @@
 "use client";
 
+import { Link } from "@/components/Link";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { Box, Card, Flex, Link, Text } from "@ukwehuwehneke/ohutsya";
+import { Box, Card, Flex, Text } from "@ukwehuwehneke/ohutsya";
 
 export default function Index() {
   const modules: {

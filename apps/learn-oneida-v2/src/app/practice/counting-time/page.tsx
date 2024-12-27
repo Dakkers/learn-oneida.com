@@ -2,13 +2,14 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
-import { Link } from "@ukwehuwehneke/ohutsya";
 import { shuffle } from "lodash";
 import { useMemo, useState } from "react";
 import { z } from "zod";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createCountingTimeDataLegacy } from "~/components/articles/CountingTime";
 import { TableAsForm } from "~/components/practice/TableAsForm";
+import { LinkWrapper } from "@/components/LinkWrapper";
+import { Link } from "@/components/Link";
 
 const meta: any = () => {
   return [
@@ -59,7 +60,7 @@ export default function PracticeCountingTime() {
       <Text>
         Here you can practice the terminology on the{" "}
         <Link href="/articles/counting-time">Counting Time article</Link> which
-        is part of <Link href="/learn/module04">Module 4</Link>.
+        is part of <LinkWrapper page={4}/>.
       </Text>
 
       {hasStarted ? (

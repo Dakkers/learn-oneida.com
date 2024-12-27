@@ -1,4 +1,4 @@
-import { Link } from "@ukwehuwehneke/ohutsya";
+import { Link } from "./Link";
 import { isNumber } from "lodash";
 import type { ReactNode } from "react";
 
