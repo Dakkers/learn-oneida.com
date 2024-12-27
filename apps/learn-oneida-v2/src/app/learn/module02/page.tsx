@@ -721,7 +721,7 @@ function NumbersSection() {
             cell: (value: string | string[], row: any) => (
               <Flex direction="column" gap={2}>
                 {arrayify(value).map((val, i) => (
-                  <Flex gap={2}>
+                  <Flex gap={2} key={i}>
                     <b>{val}</b>
                     {!audioExceptions.includes(row.en) && (
                       <PlayButton

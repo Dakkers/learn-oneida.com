@@ -126,6 +126,7 @@ export function AnswerMultipleChoiceButtons({
           disabled={hasSelected}
           key={option.key}
           onClick={() => quizContext.changeAnswer?.(option.key)}
+          type="button"
         >
           {option.text}
         </button>

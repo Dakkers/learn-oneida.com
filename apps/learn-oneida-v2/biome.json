@@ -33,7 +33,12 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "style": {
+        "noNonNullAssertion": "off",
+        "noUselessElse":"off"
+      },
       "suspicious": {
+        "noArrayIndexKey": "off",
         "noExplicitAny": "off"
       }
     }

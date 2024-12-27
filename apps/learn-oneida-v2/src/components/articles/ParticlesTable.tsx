@@ -53,13 +53,13 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
         ) => (
           <Flex direction="column" gap={4}>
             {(examples ?? []).map((ex, i) => (
-              <Flex gap={2} align="start">
+              <Flex gap={2} align="start" key={i}>
                 {["module01", "module02", "module03"].includes(group) && (
                   <PlayButton
                     filepath={`/audio/particle_examples/${group}/${row.key}${examples.length > 1 ? `_${i + 1}` : ""}.mp3`}
                   />
                 )}
-                <Flex direction="column" gap={1} key={i}>
+                <Flex direction="column" gap={1}>
                   <Text>{ex.translation}</Text>
                   <Text variant="bodyS">
                     <i>{ex.en}</i>
@@ -72,7 +72,7 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
         header: "Examples",
       },
     ],
-    [],
+    [group],
   );
 
   const data = React.useMemo(() => {

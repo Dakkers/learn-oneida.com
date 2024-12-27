@@ -469,7 +469,11 @@ export function FamilyTableOfContentItems() {
     ["Nieces and nephews", "nieces-and-nephews"],
     ["Cousins"],
     ["Friends"],
-  ].map(([label, value]) => (
-    <TOC.Item label={label} value={`family-${value ?? label.toLowerCase()}`} />
+  ].map(([label, value], i) => (
+    <TOC.Item
+      key={i}
+      label={label}
+      value={`family-${value ?? label.toLowerCase()}`}
+    />
   ));
 }

@@ -33,7 +33,7 @@ export function DialogueTable({
   return (
     <PrimitiveTable>
       <PrimitiveTableHeader>
-        <PrimitiveTableRow></PrimitiveTableRow>
+        <PrimitiveTableRow />
       </PrimitiveTableHeader>
       <PrimitiveTableBody>
         {data.map((row, i) => {
@@ -53,6 +53,7 @@ export function DialogueTable({
                   {arrayify(row.one).map((text, j) => (
                     <div
                       className={cn("gap-2 flex", !isLeftside && "text-right")}
+                      key={j}
                     >
                       {!isLeftside ? text : ""}
                       {row.hasAudio && audioFolder && (

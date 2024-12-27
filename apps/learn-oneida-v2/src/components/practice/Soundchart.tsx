@@ -156,7 +156,7 @@ export function Soundchart({ level }: SectionHeadingProps) {
 
 function TheCell({ text }: { text?: string }) {
   if (!text) {
-    return <div></div>;
+    return <div />;
   }
 
   const filename = text.replaceAll("ʌ", "v");
@@ -170,6 +170,7 @@ function TheCell({ text }: { text?: string }) {
         const music = new Audio(`/audio/soundchart/${filename}.mp3`);
         music.play();
       }}
+      type="button"
     >
       {text}
     </button>

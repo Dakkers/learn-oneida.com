@@ -649,23 +649,23 @@ export function getEnglishTranslation(
 ) {
   let result = "";
   if (key === "verb") {
-    result = `it is {{WORD}}`;
+    result = "it is {{WORD}}";
   } else if (key === "verbNegated") {
-    result = `it is not {{WORD}}`;
+    result = "it is not {{WORD}}";
   } else if (key === "withNoun") {
-    result = `it is {{A}} {{WORD}} bag`;
+    result = "it is {{A}} {{WORD}} bag";
   } else if (key === "haveNoun") {
-    result = `I have {{A}} {{WORD}} bag`;
+    result = "I have {{A}} {{WORD}} bag";
   } else if (key === "haveNounPlural") {
-    result = `I have {{WORD}} bags`;
+    result = "I have {{WORD}} bags";
   } else if (key === "verbPast") {
-    result = `it used to be {{WORD}}`;
+    result = "it used to be {{WORD}}";
   } else if (key === "withNounPast") {
-    result = `it used to be {{A}} {{WORD}} bag`;
+    result = "it used to be {{A}} {{WORD}} bag";
   } else if (key === "haveNounPast") {
-    result = `I used to have {{A}} {{WORD}} bag`;
+    result = "I used to have {{A}} {{WORD}} bag";
   } else if (key === "haveNounPastPlural") {
-    result = `I used to have {{WORD}} bags`;
+    result = "I used to have {{WORD}} bags";
   }
   return result
     .replace("{{WORD}}", datum.en)

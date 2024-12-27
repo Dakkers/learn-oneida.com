@@ -35,7 +35,7 @@ export function translateNumber(value: string): string {
     const numTens = Math.floor(val / 10);
     return [
       unwhisperWord(map.get(numTens)),
-      `niwáhsʌ`,
+      "niwáhsʌ",
       digit === 0 ? "" : digitWord,
     ].join(" ");
   } else if (val < 10000) {
@@ -43,7 +43,7 @@ export function translateNumber(value: string): string {
     const remainder = val % 100;
     return [
       unwhisperWord(translateNumber(numHundreds.toString())),
-      `tewʌʔnyáweluʔ`,
+      "tewʌʔnyáweluʔ",
       remainder === 0 ? "" : translateNumber(remainder.toString()),
     ]
       .join(" ")

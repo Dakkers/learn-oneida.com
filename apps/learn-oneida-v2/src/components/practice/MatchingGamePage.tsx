@@ -183,6 +183,7 @@ function Draggable({
             ? "bg-transparent"
             : "bg-slate-200",
       )}
+      // biome-ignore lint/a11y/useSemanticElements: TODO easy fix?
       role="button"
       tabIndex={0}
     >
@@ -231,6 +232,7 @@ function DropTarget({
         "h-[200px]",
       )}
       ref={ref}
+      // biome-ignore lint/a11y/useSemanticElements: TODO easy fix?
       role="button"
       tabIndex={0}
     >

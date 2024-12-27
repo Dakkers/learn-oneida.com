@@ -196,7 +196,7 @@ function ToolsParadigmInner() {
             setWord(value as keyof typeof dataToUse);
             setHasStarted(false);
             router.replace(
-              pathname + "?" + createQueryString(searchParams, "word", value),
+              `${pathname}?${createQueryString(searchParams, "word", value)}`,
             );
           }}
           options={wordOptions}

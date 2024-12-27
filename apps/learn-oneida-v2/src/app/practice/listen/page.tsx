@@ -183,7 +183,7 @@ export default function PracticeListening() {
       return [];
     }
     return _.shuffle(selectedCategory.getData());
-  }, [category, subcategory]);
+  }, [category, selectedCategory]);
 
   const currentDatum = data[index];
 
@@ -310,6 +310,7 @@ function Player({
     setHasFinishedPlayback(false);
   }
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: not sure if this is easy to fix
   const onReady = useCallback(
     (ws: WaveSurfer, audioDuration: number) => {
       if (wavesurferRef?.current) {

@@ -391,7 +391,7 @@ function AccordionWrapper({
   return (
     <Accordion type="multiple">
       {items.map(([data, root], i) => (
-        <Accordion.Item id={stems[i]} title={`${stems[i]}-stem`}>
+        <Accordion.Item id={stems[i]} title={`${stems[i]}-stem`} key={i}>
           <Text>
             The root word is <Letter>{root}</Letter>.
           </Text>

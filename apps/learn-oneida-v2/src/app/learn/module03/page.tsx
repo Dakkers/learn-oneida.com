@@ -826,14 +826,14 @@ const createColsLol = (cols: string[]) => {
       });
     } else {
       result.push({
-        accessorKey: `equals`,
+        accessorKey: "equals",
         cell: () => "=",
         header: "=",
       });
     }
   }
   result.push({
-    accessorKey: `result`,
+    accessorKey: "result",
     cell: (renderer: (row: WeirdRow) => React.ReactNode, row: WeirdRow) => (
       <Flex gap={2}>{renderer(row)}</Flex>
     ),

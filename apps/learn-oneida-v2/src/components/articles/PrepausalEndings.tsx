@@ -136,7 +136,7 @@ export function PrepausalEndingsArticle({ level = 1 }: ArticleProps) {
 }
 
 function ListOfWords({ words }: { words: Array<[string, string]> }) {
-  const filepath = `/audio/module01/prepausal_endings`;
+  const filepath = "/audio/module01/prepausal_endings";
 
   return (
     <List>
