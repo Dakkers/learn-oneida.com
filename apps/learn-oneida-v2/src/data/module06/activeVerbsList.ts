@@ -1,4 +1,4 @@
-import { ParadigmData } from "~/components/ParadigmTable";
+import type { ParadigmData } from "~/components/ParadigmTable";
 import answerCmdData from "./answer-CMD";
 import answerDefData from "./answer-DEF";
 import answerFutData from "./answer-FUT";

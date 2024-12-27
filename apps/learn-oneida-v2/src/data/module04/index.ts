@@ -31,7 +31,7 @@ import dataDontWant from "./dont-want";
 import dataUsedToWant from "./used-to-want";
 import dataDidntUsedToWant from "./didnt-used-to-want";
 import dataThought from "./thought";
-import { ParadigmData } from "~/components/ParadigmTable";
+import type { ParadigmData } from "~/components/ParadigmTable";
 
 export const MODULE_4_TENSE_LIST = ["prs", "past", "fut", "ifut"] as const;
 export type Module4VerbTense = (typeof MODULE_4_TENSE_LIST)[number];

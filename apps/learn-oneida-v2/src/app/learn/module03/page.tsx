@@ -8,7 +8,7 @@ import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
-  BreakdownArray,
+  type BreakdownArray,
   BreakdownType,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
@@ -21,7 +21,10 @@ import { DomesticatedAnimalsArticle } from "~/components/articles/DomesticatedAn
 import { RelationshipsArticle } from "~/components/articles/Relationships";
 import { ClansArticle } from "~/components/articles/Clans";
 import { NationsArticle } from "~/components/articles/Nations";
-import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
+import {
+  DialogueTable,
+  type DialogueTableData,
+} from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { Letter } from "@/components/Letter";
 
@@ -823,14 +826,14 @@ const createColsLol = (cols: string[]) => {
       });
     } else {
       result.push({
-        accessorKey: `equals`,
+        accessorKey: "equals",
         cell: () => "=",
         header: "=",
       });
     }
   }
   result.push({
-    accessorKey: `result`,
+    accessorKey: "result",
     cell: (renderer: (row: WeirdRow) => React.ReactNode, row: WeirdRow) => (
       <Flex gap={2}>{renderer(row)}</Flex>
     ),

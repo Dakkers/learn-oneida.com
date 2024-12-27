@@ -6,7 +6,7 @@ import {
   AnswerText,
   NextBtn,
   Settings,
-  QuizOption,
+  type QuizOption,
 } from "./QuizContainer";
 import { Quiz, useQuizContext } from "./Quiz";
 import { Text } from "@ukwehuwehneke/ohutsya";

@@ -34,11 +34,11 @@ import {
   pronouns,
 } from "@ukwehuwehneke/language-components";
 import {
-  BreakdownArray,
-  BreakdownType,
+  type BreakdownArray,
+  type BreakdownType,
   standardizeCharacters,
   TextBreakdown,
-  TextBreakdownSuffix,
+  type TextBreakdownSuffix,
 } from "@ukwehuwehneke/language-components";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
@@ -50,7 +50,7 @@ import {
   whisperizeWord,
 } from "@ukwehuwehneke/language-components";
 
-import { pronounsPurple } from "@ukwehuwehneke/language-components";
+import type { pronounsPurple } from "@ukwehuwehneke/language-components";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),

@@ -1,7 +1,7 @@
 "use client";
 import { TableWrapper } from "@/components/TableWrapper";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 
 export function CountingTimeArticle({ level = 1 }: ArticleProps) {
   return (

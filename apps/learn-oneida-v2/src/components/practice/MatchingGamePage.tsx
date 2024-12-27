@@ -7,7 +7,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { cn } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { arrayify } from "@ukwehuwehneke/language-components";
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import _ from "lodash";
 
 type Data = Array<{
@@ -183,6 +183,7 @@ function Draggable({
             ? "bg-transparent"
             : "bg-slate-200",
       )}
+      // biome-ignore lint/a11y/useSemanticElements: TODO easy fix?
       role="button"
       tabIndex={0}
     >
@@ -231,6 +232,7 @@ function DropTarget({
         "h-[200px]",
       )}
       ref={ref}
+      // biome-ignore lint/a11y/useSemanticElements: TODO easy fix?
       role="button"
       tabIndex={0}
     >

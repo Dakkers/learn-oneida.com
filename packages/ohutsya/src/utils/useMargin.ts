@@ -1,6 +1,6 @@
 import { cn } from "./tailwind";
-import { SpacingToken } from "./types";
-import { Responsive, responsiveClassName } from "./responsive";
+import type { SpacingToken } from "./types";
+import { type Responsive, responsiveClassName } from "./responsive";
 
 export type MarginToken = Exclude<SpacingToken, "1px" | "2px"> | 16 | 32;
 

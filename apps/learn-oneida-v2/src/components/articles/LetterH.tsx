@@ -2,7 +2,7 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import { Letter } from "../Letter";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { ListOfWords } from "../ListOfWords";

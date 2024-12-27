@@ -1,5 +1,8 @@
 import { pronounsPurple } from "@ukwehuwehneke/language-components";
-import { createParadigmData, ParadigmData } from "~/components/ParadigmTable";
+import {
+  createParadigmData,
+  type ParadigmData,
+} from "~/components/ParadigmTable";
 
 const data: ParadigmData = createParadigmData(
   {

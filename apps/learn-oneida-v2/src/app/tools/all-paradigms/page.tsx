@@ -9,7 +9,7 @@ import { ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { TextBreakdown } from "@ukwehuwehneke/language-components";
 import {
-  Module5VerbDatum,
+  type Module5VerbDatum,
   MODULE_5_VERB_TENSE_LIST,
   createModule5VerbsList,
   module5VerbTenseMap,
@@ -72,8 +72,8 @@ function Module5Paradigms() {
         <Fragment key={v.key}>
           <SectionHeading level={2}>{v.en}</SectionHeading>
           {MODULE_5_VERB_TENSE_LIST.map((t) => (
-            <>
-              <SectionHeading level={3} key={t}>
+            <Fragment key={t}>
+              <SectionHeading level={3}>
                 {v.en} — {module5VerbTenseMap[t]}
               </SectionHeading>
 
@@ -87,7 +87,7 @@ function Module5Paradigms() {
                   data={v[t]}
                 />
               </div>
-            </>
+            </Fragment>
           ))}
         </Fragment>
       ))}

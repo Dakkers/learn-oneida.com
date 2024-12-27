@@ -1,15 +1,15 @@
 import {
-  BreakdownArray,
-  BreakdownType,
+  type BreakdownArray,
+  type BreakdownType,
   TextBreakdown,
-  TextBreakdownSuffix,
+  type TextBreakdownSuffix,
 } from "./../TextBreakdown";
-import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, Pronoun } from "../../utils";
+import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, type Pronoun } from "../../utils";
 import {
   Flex,
   PlayButton,
   Table,
-  TableProps,
+  type TableProps,
   TextArray,
 } from "@ukwehuwehneke/ohutsya";
 

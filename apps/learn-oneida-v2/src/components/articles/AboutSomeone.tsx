@@ -5,7 +5,7 @@ import {
   SectionHeading,
   type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 import { singlePronouns } from "@ukwehuwehneke/language-components";
 import { LinkWrapper } from "../LinkWrapper";

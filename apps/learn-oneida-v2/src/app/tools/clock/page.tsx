@@ -64,8 +64,8 @@ export default function ToolsClock() {
             onClick={() =>
               setTranslatedValue(
                 doTheTranslate(
-                  (parseInt(hour) % 12) + (period === "AM" ? 0 : 12),
-                  parseInt(minute),
+                  (Number.parseInt(hour) % 12) + (period === "AM" ? 0 : 12),
+                  Number.parseInt(minute),
                 ),
               )
             }

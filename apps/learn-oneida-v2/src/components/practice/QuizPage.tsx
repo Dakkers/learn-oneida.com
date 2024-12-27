@@ -361,6 +361,7 @@ function MultipleChoiceOptions({
             disabled={hasSelected}
             key={item.key}
             onClick={() => onClick(item.key)}
+            type="button"
           >
             {getFirstElement(item[oppositeLangKey])}
           </button>

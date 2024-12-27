@@ -1,6 +1,6 @@
 import { Link } from "@ukwehuwehneke/ohutsya";
 import { isNumber } from "lodash";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export function LinkWrapper({
   children: _children,

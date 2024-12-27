@@ -8,7 +8,7 @@ import { Quiz, useQuizContext } from "~/components/practice/Quiz";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import {
   MODULE_5_VERB_TENSE_LIST,
-  Module5VerbTense,
+  type Module5VerbTense,
   createModule5VerbsList,
   module5VerbTenseMap,
 } from "~/data/module05";

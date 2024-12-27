@@ -1,5 +1,5 @@
 import { InternalText } from "../../internal/InternalText";
-import { type Intent } from "../../utils";
+import type { Intent } from "../../utils";
 
 export interface HelpTextProps {
   children: React.ReactNode;

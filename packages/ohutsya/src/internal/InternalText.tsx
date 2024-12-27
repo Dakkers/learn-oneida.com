@@ -1,5 +1,5 @@
-import React from "react";
-import { Intent } from "../utils/types";
+import type React from "react";
+import type { Intent } from "../utils/types";
 import { cn } from "../utils";
 
 type Contrast = "high" | "mid" | "low";

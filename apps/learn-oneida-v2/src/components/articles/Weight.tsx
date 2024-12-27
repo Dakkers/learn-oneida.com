@@ -4,7 +4,7 @@ import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 
 const dataCountingWeight = [
   {

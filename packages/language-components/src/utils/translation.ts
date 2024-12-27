@@ -1,6 +1,6 @@
 import { arrayify } from "./misc";
 import {
-  Pronoun,
+  type Pronoun,
   PRONOUN_MAP_EN,
   PRONOUN_MAP_EN_OBJECTIVE,
   PRONOUN_MAP_EN_POSSESSIVE,

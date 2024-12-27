@@ -1,4 +1,4 @@
-import { flattenVerbDatum, Module5VerbDatum } from "../module05";
+import { flattenVerbDatum, type Module5VerbDatum } from "../module05";
 import eatCmdData from "./stand-CMD";
 import eatPrsData from "./stand-PRS";
 import eatFutData from "./stand-FUT";

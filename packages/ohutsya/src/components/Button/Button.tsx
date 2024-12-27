@@ -1,5 +1,9 @@
-import { Emphasis, Size, useControlStyles } from "../../design/controlStyles";
-import { Intent, cn } from "../../utils";
+import {
+  type Emphasis,
+  type Size,
+  useControlStyles,
+} from "../../design/controlStyles";
+import { type Intent, cn } from "../../utils";
 
 export interface ButtonProps {
   children: string;

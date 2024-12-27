@@ -1,8 +1,8 @@
 import {
   cn,
-  Responsive,
+  type Responsive,
   responsiveClassName,
-  PaddingProps,
+  type PaddingProps,
   usePadding,
 } from "../../utils";
 

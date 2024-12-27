@@ -27,3 +27,5 @@ jobs:
       - run: pnpm install
 
       - run: pnpm run ci:format
+
+      - run: pnpm run ci:lint

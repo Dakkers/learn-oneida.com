@@ -1,7 +1,7 @@
 "use client";
 
 import React, {
-  RefObject,
+  type RefObject,
   useCallback,
   useMemo,
   useRef,
@@ -15,7 +15,7 @@ import { Box, Button, Card, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import { getParticlesForGroup } from "@/components/articles/ParticlesTable";
 import { getTranslationExercisesForModule } from "@/components/practice/TranslationExercises";
-import WaveSurfer from "wavesurfer.js";
+import type WaveSurfer from "wavesurfer.js";
 import WavesurferPlayer from "@wavesurfer/react";
 import { createModule4Data } from "@/data/module04";
 import {
@@ -125,11 +125,7 @@ export default function PracticeListening() {
             for (let i = 0; i < translations.length; i++) {
               const t = translations[i];
               result.push({
-                audioFile: `/module04/time_phrases/${determineTimesOfDayAudioFileName(
-                  p.en,
-                  p.translation,
-                  i,
-                )}.mp3`,
+                audioFile: `/module04/time_phrases/${determineTimesOfDayAudioFileName(p.en, p.translation, i)}.mp3`,
                 en: arrayify(p.en).join("; "),
                 translation: t,
               });
@@ -187,7 +183,7 @@ export default function PracticeListening() {
       return [];
     }
     return _.shuffle(selectedCategory.getData());
-  }, [category, subcategory]);
+  }, [category, selectedCategory]);
 
   const currentDatum = data[index];
 
@@ -314,6 +310,7 @@ function Player({
     setHasFinishedPlayback(false);
   }
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: not sure if this is easy to fix
   const onReady = useCallback(
     (ws: WaveSurfer, audioDuration: number) => {
       if (wavesurferRef?.current) {

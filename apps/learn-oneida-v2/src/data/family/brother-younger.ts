@@ -1,4 +1,4 @@
-import { ParadigmData } from "~/components/ParadigmTable";
+import type { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
   translation: "{{pronounPossessive}} younger brother",

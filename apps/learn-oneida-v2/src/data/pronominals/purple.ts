@@ -1,4 +1,4 @@
-import { PronominalRulesPurple } from "./types";
+import type { PronominalRulesPurple } from "./types";
 
 const data = {
   i_u: {

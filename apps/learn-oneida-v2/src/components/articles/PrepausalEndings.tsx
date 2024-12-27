@@ -2,10 +2,10 @@
 import { Flex, List, PlayButton } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import { DialogueTable } from "../DialogueTable";
 
 export function PrepausalEndingsArticle({ level = 1 }: ArticleProps) {
@@ -136,7 +136,7 @@ export function PrepausalEndingsArticle({ level = 1 }: ArticleProps) {
 }
 
 function ListOfWords({ words }: { words: Array<[string, string]> }) {
-  const filepath = `/audio/module01/prepausal_endings`;
+  const filepath = "/audio/module01/prepausal_endings";
 
   return (
     <List>

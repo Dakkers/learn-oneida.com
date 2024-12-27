@@ -196,7 +196,11 @@ function TheCard({
           {isShowing ? (
             oneidaTextEl
           ) : (
-            <button className="bg-slate-700" onClick={onClickAnswer}>
+            <button
+              className="bg-slate-700"
+              onClick={onClickAnswer}
+              type="button"
+            >
               <span aria-hidden className="invisible">
                 {oneidaTextEl}
               </span>

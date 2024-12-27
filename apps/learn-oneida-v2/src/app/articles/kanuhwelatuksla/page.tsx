@@ -20,7 +20,7 @@ export default function ArticleKanuhwelatuksla() {
       <script
         type="module"
         src="https://unpkg.com/@readalongs/web-component@^1.4.0/dist/web-component/web-component.esm.js"
-      ></script>
+      />
     </div>
   );
 }

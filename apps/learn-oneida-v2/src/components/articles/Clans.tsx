@@ -2,17 +2,17 @@
 import { Text } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
   type Pronoun,
 } from "@ukwehuwehneke/language-components";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import {
-  ParadigmData,
+  type ParadigmData,
   ParadigmTable,
   createParadigmData,
 } from "../ParadigmTable";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 
 const allowedPronouns: Pronoun[] = [
   "i",

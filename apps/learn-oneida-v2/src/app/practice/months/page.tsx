@@ -6,7 +6,7 @@ import { Heading } from "@ukwehuwehneke/ohutsya";
 import { DATA_MONTHS } from "~/components/articles/Months";
 import {
   EnglishToOneidaQuiz,
-  EnglishToOneidaQuizProps,
+  type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 
 const meta: any = () => {

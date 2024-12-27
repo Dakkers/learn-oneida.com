@@ -1,5 +1,8 @@
 "use client";
-import { TableWrapper, TableWrapperProps } from "@/components/TableWrapper";
+import {
+  TableWrapper,
+  type TableWrapperProps,
+} from "@/components/TableWrapper";
 import React from "react";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";

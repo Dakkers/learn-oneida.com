@@ -5,7 +5,7 @@ import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
   EnglishToOneidaQuiz,
-  EnglishToOneidaQuizProps,
+  type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { convertBreakdownToPlainText } from "@ukwehuwehneke/language-components";
 import {

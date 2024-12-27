@@ -10,19 +10,19 @@ import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
-  BreakdownArray,
-  BreakdownType,
+  type BreakdownArray,
+  type BreakdownType,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
 import {
-  Module6VerbDatum,
-  Module6VerbTense,
+  type Module6VerbDatum,
+  type Module6VerbTense,
   createModule6VerbList,
 } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { Pronominal, PronominalColor } from "~/components/Pronominal";
+import { Pronominal, type PronominalColor } from "~/components/Pronominal";
 import { Letter } from "~/components/Letter";
 import { Link } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";

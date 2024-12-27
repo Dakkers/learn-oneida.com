@@ -4,7 +4,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import React from "react";
 import {
   EnglishToOneidaQuiz,
-  EnglishToOneidaQuizProps,
+  type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule10EnvironmentNounsList } from "@/data/module10";

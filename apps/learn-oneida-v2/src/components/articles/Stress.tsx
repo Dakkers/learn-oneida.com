@@ -2,12 +2,12 @@
 import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
 import { List } from "@ukwehuwehneke/ohutsya";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import { ListOfWords } from "../ListOfWords";
 
 export function StressArticle({ level = 1 }: ArticleProps) {
@@ -111,7 +111,7 @@ export function StressArticle({ level = 1 }: ArticleProps) {
         &quot;He likes her.&quot; versus &quot;He likes her?&quot;. Oneida
         speakers should not raise their inflection when asking questions, as in:{" "}
         <b>Shakonú·wehseʔ kʌ́ né· akaulhá·</b>{" "}
-        <PlayButton filepath={`/audio/module01/length/1.mp3`} />
+        <PlayButton filepath="/audio/module01/length/1.mp3" />
       </Text>
 
       <SectionHeading
@@ -133,7 +133,7 @@ export function StressArticle({ level = 1 }: ArticleProps) {
       <Text>
         The most frequent placement for stress is on the second-to-last syllable
         of a word, for example <b>niwáhsʌ</b>.{" "}
-        <PlayButton filepath={`/audio/module01/length/2.mp3`} /> However, there
+        <PlayButton filepath="/audio/module01/length/2.mp3" /> However, there
         are many exceptions to this!
       </Text>
     </Flex>

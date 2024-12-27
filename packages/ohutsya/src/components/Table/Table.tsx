@@ -1,4 +1,4 @@
-import { TextArray, TextArrayProps } from "../../internal/TextArray";
+import { TextArray, type TextArrayProps } from "../../internal/TextArray";
 import {
   PrimitiveTable,
   PrimitiveTableBody,
@@ -8,7 +8,7 @@ import {
   PrimitiveTableRow,
 } from "../../primitives/table";
 import { Flex } from "../Flex";
-import { Bleed, BleedProps } from "../Bleed";
+import { Bleed, type BleedProps } from "../Bleed";
 
 type Row = Record<string, unknown>;
 

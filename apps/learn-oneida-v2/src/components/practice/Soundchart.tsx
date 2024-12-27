@@ -2,7 +2,7 @@ import { cn, Flex, Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "../TableWrapper";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 
 const VOWELS = ["a", "e", "i", "o", "u", "ʌ"];
@@ -156,7 +156,7 @@ export function Soundchart({ level }: SectionHeadingProps) {
 
 function TheCell({ text }: { text?: string }) {
   if (!text) {
-    return <div></div>;
+    return <div />;
   }
 
   const filename = text.replaceAll("ʌ", "v");
@@ -170,6 +170,7 @@ function TheCell({ text }: { text?: string }) {
         const music = new Audio(`/audio/soundchart/${filename}.mp3`);
         music.play();
       }}
+      type="button"
     >
       {text}
     </button>

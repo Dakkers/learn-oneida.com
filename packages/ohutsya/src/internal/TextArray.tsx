@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TextProps } from "../components/Text/Text";
+import { Text, type TextProps } from "../components/Text/Text";
 
 export interface TextArrayProps extends TextProps {
   bold?: boolean;

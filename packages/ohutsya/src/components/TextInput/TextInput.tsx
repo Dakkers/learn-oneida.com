@@ -1,6 +1,6 @@
 import { FormElement } from "../../internal/FormElement";
 import { useControlStyles } from "../../design/controlStyles";
-import { Intent, cn } from "../../utils";
+import { type Intent, cn } from "../../utils";
 
 export interface TextInputProps {
   autoComplete?: "on" | "off";

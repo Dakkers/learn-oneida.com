@@ -5,7 +5,7 @@ import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
   EnglishToOneidaQuiz,
-  EnglishToOneidaQuizProps,
+  type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { arrayify } from "@ukwehuwehneke/language-components";
 import DATA_PLACES_IN_COMMUNITY from "@/data/module04/places-in-the-community";

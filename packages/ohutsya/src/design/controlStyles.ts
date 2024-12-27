@@ -1,4 +1,4 @@
-import { Intent, cn } from "../utils";
+import { type Intent, cn } from "../utils";
 
 export type Size = "md";
 

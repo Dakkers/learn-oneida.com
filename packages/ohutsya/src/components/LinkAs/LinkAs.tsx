@@ -1,9 +1,9 @@
 import {
   createContext,
-  ElementType,
+  type ElementType,
   forwardRef,
-  HTMLAttributes,
-  ReactNode,
+  type HTMLAttributes,
+  type ReactNode,
   useContext,
 } from "react";
 
