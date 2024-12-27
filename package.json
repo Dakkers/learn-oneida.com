@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "ci:format": "pnpm -r ci:format",
+    "ci:lint": "pnpm -r lint",
     "format:write": "pnpm -r format:write",
     "lint": "pnpm -r lint",
     "lint:fix": "pnpm -r lint:fix",
