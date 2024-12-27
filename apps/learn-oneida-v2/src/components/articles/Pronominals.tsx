@@ -1,7 +1,6 @@
 "use client";
 import { Accordion, Flex, PlayButton, TextArray } from "@ukwehuwehneke/ohutsya";
 import {
-  pronounsPurple,
   pronounsPurpleFull,
   PURPLES_MAP_FULL,
   SectionHeading,
@@ -17,7 +16,6 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
-import { Divider } from "@ukwehuwehneke/ohutsya";
 import {
   PrimitiveTable,
   PrimitiveTableBody,
@@ -28,7 +26,6 @@ import {
 } from "@ukwehuwehneke/ohutsya";
 import {
   PRONOUN_MAP_EN,
-  PRONOUN_MAP_ONEIDA,
   type Pronoun,
   arrayify,
   pronouns,
@@ -46,7 +43,9 @@ import dataWise from "~/data/attokha";
 import dataAtHome from "~/data/itlu";
 import dataHardToPlease from "~/data/ʌtole";
 import dataPulling from "~/data/module01/pullingOut-HAB";
+import dataPulledOut from "~/data/module01/pullingOut-PFV";
 import dataAlive from "~/data/unhe";
+import dataLonely from "~/data/module01/lonely-PFV";
 import dataHealthy from "~/data/module05/healthy-PRS";
 import dataSleeping from "~/data/module05/sleep-PRS";
 import dataEnjoy from "~/data/module05/enjoyingDoingSomething-PRS";
@@ -148,9 +147,9 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
           [dataHealthy, "-ataʔkalite-"],
           [dataLikeTheTaste, "-ekaʔ-"],
           [dataSleeping, "-itaʔ-"],
-          [null, "-otshyu-"],
+          [dataPulledOut, "-otshyu-"],
           [dataEnjoy, "-uʔweskwani-"],
-          [null, "-ʌtuni-"],
+          [dataLonely, "-ʌtuni-"],
         ]}
       />
       <PronominalsPrimitiveTable color="blue" data={bluePronominalsJson} />
