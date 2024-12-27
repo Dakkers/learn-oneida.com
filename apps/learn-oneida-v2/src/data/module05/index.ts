@@ -341,7 +341,7 @@ import worriedFutData from "./worried-FUT";
 import worriedIfutData from "./worried-IFUT";
 import worriedPastData from "./worried-PAST";
 import worriedPrsData from "./worried-PRS";
-import { ParadigmData } from "~/components/ParadigmTable";
+import type { ParadigmData } from "~/components/ParadigmTable";
 
 export const MODULE_5_VERB_TENSE_LIST = [
   "cmd",

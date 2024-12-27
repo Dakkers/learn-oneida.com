@@ -4,7 +4,7 @@ export function translateNumber(value: string): string {
   if (!value) {
     return "";
   }
-  const val = parseInt(value);
+  const val = Number.parseInt(value);
 
   const map = new Map([
     [1, "úska"],

@@ -21,7 +21,10 @@ import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Letter } from "~/components/Letter";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
+import {
+  DialogueTable,
+  type DialogueTableData,
+} from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { PronominalsArticle } from "~/components/articles/Pronominals";
 import { StressArticle } from "~/components/articles/Stress";

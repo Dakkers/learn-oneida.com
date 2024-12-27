@@ -2,15 +2,15 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
-  BreakdownArray,
+  type BreakdownArray,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 
 export function RelationshipsArticle({ level = 1 }: ArticleProps) {
   return (

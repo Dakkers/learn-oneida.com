@@ -2,7 +2,7 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 
 const LIST = [
   ["my mom's place", "aknulhaʔké·ne"],

@@ -4,9 +4,9 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import { arrayify } from "@ukwehuwehneke/language-components";
 
 export function TimesOfDayArticle({ level = 1 }: ArticleProps) {

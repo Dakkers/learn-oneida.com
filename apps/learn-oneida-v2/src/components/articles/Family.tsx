@@ -44,7 +44,7 @@ import { TableOfContents as TOC } from "../TableOfContents";
 import { Letter } from "../Letter";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { ParadigmTable } from "../ParadigmTable";
 

@@ -1,6 +1,6 @@
 "use client";
 import { Link, List } from "@ukwehuwehneke/ohutsya";
-import React from "react";
+import type React from "react";
 
 interface TableOfContentsProps {
   children: React.ReactNode;

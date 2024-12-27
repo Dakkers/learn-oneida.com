@@ -1,5 +1,5 @@
 "use client";
-import { BleedProps } from "@ukwehuwehneke/ohutsya";
+import type { BleedProps } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
@@ -15,7 +15,7 @@ import { TextInput } from "@ukwehuwehneke/ohutsya";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { AnyZodObject, z } from "zod";
+import type { AnyZodObject, z } from "zod";
 import {
   sanitizeIrregularCharacters,
   standardizeCharacters,

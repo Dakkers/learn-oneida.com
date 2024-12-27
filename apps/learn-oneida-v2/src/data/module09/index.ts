@@ -1,6 +1,6 @@
 import {
   flattenVerbDatum,
-  Module6VerbDatum,
+  type Module6VerbDatum,
 } from "../module06/activeVerbsList";
 import eatCmdData from "./eat-CMD";
 import eatDefData from "./eat-DEF";

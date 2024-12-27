@@ -4,10 +4,10 @@ import {
   pronounsPurpleFull,
   PURPLES_MAP_FULL,
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
   TableWrapper,
 } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import redPronominalsJson from "../../data/pronominals/red";
 import bluePronominalsJson from "../../data/pronominals/blue";
 import purplePronominalsJson from "../../data/pronominals/purple";
@@ -30,9 +30,9 @@ import {
   arrayify,
   pronouns,
 } from "@ukwehuwehneke/language-components";
-import { Pronominal, PronominalColor } from "../Pronominal";
+import { Pronominal, type PronominalColor } from "../Pronominal";
 import {
-  BreakdownArray,
+  type BreakdownArray,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
@@ -50,8 +50,8 @@ import dataHealthy from "~/data/module05/healthy-PRS";
 import dataSleeping from "~/data/module05/sleep-PRS";
 import dataEnjoy from "~/data/module05/enjoyingDoingSomething-PRS";
 import dataLikeTheTaste from "~/data/module05/likingTheTaste-PRS";
-import { ParadigmData, ParadigmTable } from "../ParadigmTable";
-import {
+import { type ParadigmData, ParadigmTable } from "../ParadigmTable";
+import type {
   PronominalRules,
   PronominalRulesPurple,
 } from "@/data/pronominals/types";
@@ -360,7 +360,7 @@ function PronominalPrimitiveTableText({
 type FootnoteNumbers = string[] | string;
 
 function Footnotes({ nums: _nums }: { nums: FootnoteNumbers }) {
-  const nums = arrayify(_nums).map((n) => parseInt(n));
+  const nums = arrayify(_nums).map((n) => Number.parseInt(n));
   nums.sort();
 
   return (

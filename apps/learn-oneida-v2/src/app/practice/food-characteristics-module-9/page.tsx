@@ -5,7 +5,7 @@ import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
   EnglishToOneidaQuiz,
-  EnglishToOneidaQuizProps,
+  type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { createModule9FoodCharacteristics } from "@/data/module09";
 import { SectionHeading } from "@ukwehuwehneke/language-components";

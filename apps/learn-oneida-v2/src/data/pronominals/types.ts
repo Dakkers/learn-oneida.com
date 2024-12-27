@@ -1,4 +1,4 @@
-import { type BreakdownArray } from "@ukwehuwehneke/language-components";
+import type { BreakdownArray } from "@ukwehuwehneke/language-components";
 
 type Excp = "1" | "2" | "3" | "4" | "5" | "6";
 

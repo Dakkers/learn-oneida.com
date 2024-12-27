@@ -3,10 +3,10 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import { ParadigmTable, createParadigmData } from "../ParadigmTable";
 import { pronounsBlue } from "@ukwehuwehneke/language-components";
 

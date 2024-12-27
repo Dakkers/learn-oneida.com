@@ -7,7 +7,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { cn } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { arrayify } from "@ukwehuwehneke/language-components";
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import _ from "lodash";
 
 type Data = Array<{

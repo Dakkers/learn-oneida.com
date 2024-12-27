@@ -3,7 +3,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import { List } from "@ukwehuwehneke/ohutsya";
 
 const getAudioFolder = (name: string) => `module04/clock_time/${name}.mp3`;

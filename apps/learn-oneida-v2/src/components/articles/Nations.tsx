@@ -7,7 +7,7 @@ import {
   type Pronoun,
   SectionHeading,
 } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 
 const allowedPronouns: Pronoun[] = ["i", "u", "m", "f"];
 

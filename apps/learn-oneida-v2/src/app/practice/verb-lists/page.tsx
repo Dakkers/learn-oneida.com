@@ -13,14 +13,14 @@ import {
 } from "@ukwehuwehneke/language-components";
 import {
   MODULE_6_VERB_TENSE_LIST,
-  Module6VerbTense,
+  type Module6VerbTense,
   createModule6VerbList,
   module6VerbTenseMap,
   getPronounsForModule6Verb,
 } from "~/data/module06/activeVerbsList";
 import {
   MODULE_5_VERB_TENSE_LIST,
-  Module5VerbTense,
+  type Module5VerbTense,
   createModule5VerbsList,
   module5VerbTenseMap,
 } from "~/data/module05";
@@ -30,7 +30,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import {
   MODULE_4_TENSE_LIST,
-  Module4VerbTense,
+  type Module4VerbTense,
   createModule4Data,
 } from "~/data/module04";
 import { TableAsForm } from "~/components/practice/TableAsForm";

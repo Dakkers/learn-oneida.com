@@ -5,7 +5,7 @@ import { Noto_Sans } from "next/font/google";
 import "./../learn-oneida.css";
 import {
   LinkAsContext,
-  LinkCompatibleProps,
+  type LinkCompatibleProps,
   Text,
 } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";

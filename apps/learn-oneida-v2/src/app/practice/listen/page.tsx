@@ -1,7 +1,7 @@
 "use client";
 
 import React, {
-  RefObject,
+  type RefObject,
   useCallback,
   useMemo,
   useRef,
@@ -15,7 +15,7 @@ import { Box, Button, Card, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import { getParticlesForGroup } from "@/components/articles/ParticlesTable";
 import { getTranslationExercisesForModule } from "@/components/practice/TranslationExercises";
-import WaveSurfer from "wavesurfer.js";
+import type WaveSurfer from "wavesurfer.js";
 import WavesurferPlayer from "@wavesurfer/react";
 import { createModule4Data } from "@/data/module04";
 import {

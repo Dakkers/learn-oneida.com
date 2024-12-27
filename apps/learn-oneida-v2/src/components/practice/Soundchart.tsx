@@ -2,7 +2,7 @@ import { cn, Flex, Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "../TableWrapper";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 
 const VOWELS = ["a", "e", "i", "o", "u", "ʌ"];

@@ -5,7 +5,7 @@ import {
   SectionHeading,
   type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 
 export function PeopleArticle({ level = 1 }: ArticleProps) {
   const dataChildren = [

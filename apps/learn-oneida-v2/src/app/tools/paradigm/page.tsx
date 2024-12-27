@@ -44,7 +44,7 @@ import dataUsedToWant from "~/data/module04/used-to-want";
 import dataDidntUsedToWant from "~/data/module04/didnt-used-to-want";
 import dataThought from "~/data/module04/thought";
 
-import { ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
+import { type ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
 import {
   type Pronoun,
   dualicPronouns,
@@ -58,7 +58,7 @@ import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 import _ from "lodash";
 import { createModule9VerbListFlat } from "~/data/module09";
 import {
-  ReadonlyURLSearchParams,
+  type ReadonlyURLSearchParams,
   usePathname,
   useRouter,
   useSearchParams,

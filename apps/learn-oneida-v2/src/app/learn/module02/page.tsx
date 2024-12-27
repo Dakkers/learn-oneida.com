@@ -28,9 +28,9 @@ import kʌʔni_yʌhaJson from "~/data/kʌʔni_yʌha";
 import ohsliyakuJson from "~/data/ohsliyaku";
 
 import { TableWrapper } from "@/components/TableWrapper";
-import { Pronoun, arrayify } from "@ukwehuwehneke/language-components";
+import { type Pronoun, arrayify } from "@ukwehuwehneke/language-components";
 import {
-  BreakdownArray,
+  type BreakdownArray,
   convertBreakdownToPlainText,
   dualicPronouns,
   pluralPronouns,
@@ -42,7 +42,7 @@ import {
   FamilyArticle,
   FamilyTableOfContentItems,
 } from "~/components/articles/Family";
-import { ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
+import { type ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { LastNamesArticle } from "~/components/articles/LastNames";
@@ -50,7 +50,10 @@ import { AboutSomeoneArticle } from "~/components/articles/AboutSomeone";
 import { SimilarInAppearanceArticle } from "~/components/articles/SimilarInAppearance";
 import { BeingDifferentArticle } from "~/components/articles/BeingDifferent";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
-import { DialogueTable, DialogueTableData } from "~/components/DialogueTable";
+import {
+  DialogueTable,
+  type DialogueTableData,
+} from "~/components/DialogueTable";
 import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {

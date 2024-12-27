@@ -12,8 +12,8 @@ import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
-  BreakdownArray,
-  BreakdownType,
+  type BreakdownArray,
+  type BreakdownType,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
 import iheyuData from "~/data/iheyu";
@@ -21,7 +21,7 @@ import smallData from "~/data/module05/kʌʔ_ni-a";
 import { HeightWeightArticle } from "~/components/articles/Weight";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
-import { Module5VerbDatum, createModule5VerbsList } from "~/data/module05";
+import { type Module5VerbDatum, createModule5VerbsList } from "~/data/module05";
 
 const meta: any = () => {
   return [

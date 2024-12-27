@@ -2,12 +2,12 @@
 import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
-  SectionHeadingProps,
+  type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
 import { List } from "@ukwehuwehneke/ohutsya";
-import { ArticleProps } from "./utils";
+import type { ArticleProps } from "./utils";
 import { ListOfWords } from "../ListOfWords";
 
 export function StressArticle({ level = 1 }: ArticleProps) {

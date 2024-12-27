@@ -9,7 +9,7 @@ import { ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { TextBreakdown } from "@ukwehuwehneke/language-components";
 import {
-  Module5VerbDatum,
+  type Module5VerbDatum,
   MODULE_5_VERB_TENSE_LIST,
   createModule5VerbsList,
   module5VerbTenseMap,

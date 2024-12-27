@@ -1,5 +1,5 @@
 import { cn } from "@ukwehuwehneke/ohutsya";
-import { type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export function PageWrapper({ children }: { children: ReactNode }) {
   return (
