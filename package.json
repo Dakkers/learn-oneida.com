@@ -6,6 +6,8 @@
   "scripts": {
     "ci:format": "pnpm -r ci:format",
     "format:write": "pnpm -r format:write",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
     "typecheck": "pnpm -r typecheck",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
