@@ -11,7 +11,7 @@
     "ci:tailwind:deps": "pnpm --filter \"@ukwehuwehneke/ohutsya\" tailwind:build && pnpm --filter \"@ukwehuwehneke/language-components\" tailwind:build",
     "ci:tailwind": "pnpm run tailwind:build",
     "dev": "next dev --turbopack",
-    "format:write": "prettier ./src --write",
+    "format:write": "pnpm biome format --write",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "pages:deploy": "pnpm run pages:build && wrangler pages deploy",

@@ -125,11 +125,7 @@ export default function PracticeListening() {
             for (let i = 0; i < translations.length; i++) {
               const t = translations[i];
               result.push({
-                audioFile: `/module04/time_phrases/${determineTimesOfDayAudioFileName(
-                  p.en,
-                  p.translation,
-                  i,
-                )}.mp3`,
+                audioFile: `/module04/time_phrases/${determineTimesOfDayAudioFileName(p.en, p.translation, i)}.mp3`,
                 en: arrayify(p.en).join("; "),
                 translation: t,
               });
