@@ -3,18 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "src/main.js",
-  "types": "types/main.d.ts",
+  "main": "dist/src/main.js",
+  "types": "dist/types/main.d.ts",
   "exports": {
     ".": {
-      "types": "./types/main.d.ts",
-      "import": "./src/main.js"
+      "types": "./dist/types/main.d.ts",
+      "import": "./dist/src/main.js"
     }
   },
   "scripts": {
     "build-storybook": "storybook build",
     "build": "pnpm build:swc && pnpm build:types",
-    "build:swc": "swc src -d dist --copy-files && cp package.json ./dist",
+    "build:swc": "swc src -d dist --copy-files",
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist/types",
     "ci:format": "pnpm biome format",
     "format:write": "pnpm biome format --write",
