@@ -18,9 +18,7 @@
       "./tailwind.config.js"
     ],
     "ignoreUnknown": false,
-    "ignore": [
-      "./dist"
-    ]
+    "ignore": ["./dist"]
   },
   "formatter": {
     "enabled": true,
@@ -36,7 +34,7 @@
     "rules": {
       "recommended": true,
       "style": {
-        "noUselessElse":"off"
+        "noUselessElse": "off"
       },
       "suspicious": {
         "noArrayIndexKey": "off",

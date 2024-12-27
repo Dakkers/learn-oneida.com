@@ -13,11 +13,12 @@
       "./src/**/*.tsx",
       "./src/**/*.css",
       "./*.json",
-      "./.swcrc",
+      "./next.config.mjs",
+      "./postcss.config.js",
       "./tailwind.config.ts"
     ],
     "ignoreUnknown": false,
-    "ignore": ["./dist", "./src/ohutsya.css"]
+    "ignore": ["./src/learn-oneida.css"]
   },
   "formatter": {
     "enabled": true,
@@ -32,9 +33,13 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-      "style": {},
+      "style": {
+        "noNonNullAssertion": "off",
+        "noUselessElse": "off"
+      },
       "suspicious": {
-        "noArrayIndexKey": "off"
+        "noArrayIndexKey": "off",
+        "noExplicitAny": "off"
       }
     }
   },
