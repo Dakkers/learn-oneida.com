@@ -18,7 +18,7 @@
     "build": "pnpm build:swc && pnpm build:types",
     "build:swc": "swc src -d dist --copy-files && cp package.json ./dist",
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist/types",
-    "ci:format": "prettier ./src --check",
+    "ci:format": "pnpm biome format",
     "format:write": "pnpm biome format --write",
     "lint": "pnpm biome lint",
     "lint:fix": "pnpm biome lint --write",

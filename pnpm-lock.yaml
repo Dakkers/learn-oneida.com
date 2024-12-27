@@ -18,9 +18,6 @@ importers:
       lint-staged:
         specifier: ^15.2.11
         version: 15.2.11
-      prettier:
-        specifier: ^3.4.2
-        version: 3.4.2
 
   apps/learn-mohawk:
     dependencies:
@@ -70,9 +67,6 @@ importers:
       postcss:
         specifier: ^8.4.49
         version: 8.4.49
-      prettier:
-        specifier: ^3.4.2
-        version: 3.4.2
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
@@ -264,9 +258,6 @@ importers:
       lint-staged:
         specifier: ^15.2.11
         version: 15.2.11
-      prettier:
-        specifier: ^3.4.2
-        version: 3.4.2
       storybook:
         specifier: ^8.4.7
         version: 8.4.7(prettier@3.4.2)
