@@ -35,7 +35,7 @@
       "recommended": true,
       "style": {
         "noNonNullAssertion": "off",
-        "noUselessElse":"off"
+        "noUselessElse": "off"
       },
       "suspicious": {
         "noArrayIndexKey": "off",
