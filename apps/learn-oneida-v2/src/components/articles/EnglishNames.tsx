@@ -25,7 +25,7 @@ export function EnglishNamesArticle({ level = 1 }: ArticleProps) {
     { translation: "Tsiló·s", en: "Delores" },
     { translation: ["Aliskwe", "Alísakwe"], en: "Elizabeth" },
     { translation: "Katlí·n", en: "Katherine" },
-    { translation: ["Kwáklit", "Kowáklit"], en: "Margret" },
+    { translation: ["Kwáklit", "Kowáklit"], en: "Margaret" },
     { translation: "Máhtih", en: "Martha" },
     { translation: "Wá·li", en: "Mary" },
     { translation: "Ní·ki", en: ["Nellie", "Amelia"] },

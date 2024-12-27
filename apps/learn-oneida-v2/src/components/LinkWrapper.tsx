@@ -21,6 +21,7 @@ export function LinkWrapper({
     | 11
     | 12
     | "coin"
+    | "dim"
     | "dual"
     | "intro"
     | "rep"
@@ -32,13 +33,25 @@ export function LinkWrapper({
       ? `module ${page}`
       : {
           coin: "coincident feature",
+          dim: "diminutive feature",
           dual: "dualic feature",
           intro: "the introduction page",
           rep: "repetitive feature",
           semi: "semi-reflexive feature",
         }[page];
 
-  const NON_EXISTENT_PAGES = ["semi", "dual", "coin", 7, 8, 9, 10, 11, 12];
+  const NON_EXISTENT_PAGES = [
+    "semi",
+    "dim",
+    "dual",
+    "coin",
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+  ];
 
   if (NON_EXISTENT_PAGES.includes(page)) {
     return children;

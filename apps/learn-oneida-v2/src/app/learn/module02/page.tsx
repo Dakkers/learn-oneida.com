@@ -204,10 +204,10 @@ function VerbsSection() {
       <Text>Below are the paradigms for two new verbs:</Text>
       <List>
         <List.Item>
-          <b>yʌteli</b> — to know, to be familiar with
+          <b>-yʌteli-</b> — to know, to be familiar with
         </List.Item>
         <List.Item>
-          <b>nolukhwaʔ</b> — to love
+          <b>-nolukhw-</b> — to love
         </List.Item>
       </List>
       <Text>
@@ -366,11 +366,11 @@ function CommandsSection() {
       <SectionHeading id="commands-tell" level={3}>
         <b>-hloli- / -hloly-</b> — tell someone
       </SectionHeading>
-      <CommandsTable data={hloliData} verb="tell" />
+      <CommandsTable data={hloliData} />
       <SectionHeading id="commands-ask" level={3}>
         <b>-liʔwanut- / -liʔwanutu-</b> — ask someone
       </SectionHeading>
-      <CommandsTable data={liwanutuseData} verb="ask" />
+      <CommandsTable data={liwanutuseData} />
     </>
   );
 }
@@ -391,36 +391,16 @@ function NegatedCommandsSection() {
       <SectionHeading id="negated-commands-tell" level={3}>
         <b>Takʌ ʌ...hlo·li̲ʔ</b> — don&lsquo;t tell someone
       </SectionHeading>
-      <CommandsTable data={hloliNegatedData} negated verb="tell" />
+      <CommandsTable data={hloliNegatedData} />
       <SectionHeading id="negated-commands-ask" level={3}>
         <b>Takʌ ʌ...liwanu·túse̲</b> — don&lsquo;t ask someone
       </SectionHeading>
-      <CommandsTable data={liwanutuseNegatedData} negated verb="ask" />
+      <CommandsTable data={liwanutuseNegatedData} />
     </>
   );
 }
 
-function CommandsTable({
-  data,
-  negated = false,
-  verb,
-}: {
-  data: ParadigmData;
-  negated?: boolean;
-  verb: string;
-}) {
-  const keys = ["cmd_u_i", "cmd_u_theyni", "u_f", "u_m"] as const;
-  const negativeText = negated ? "Don't" : "";
-  const en = {
-    cmd_u_i: [`${negativeText} (you) ${verb} me`],
-    cmd_u_theyni: [
-      `${negativeText} you ${verb} all of us`,
-      `${negativeText} all of you ${verb} me`,
-      `${negativeText} all of you ${verb} all of us`,
-    ],
-    u_f: [`${negativeText} (you) ${verb} her`],
-    u_m: [`${negativeText} (you) ${verb} him`],
-  };
+function CommandsTable({ data }: { data: ParadigmData }) {
   return (
     <ParadigmTable
       columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
@@ -587,12 +567,8 @@ function YoungOldSection() {
       </SectionHeading>
       <Text>
         Below is the paradigm table for <b>kʌʔ nit...yʌha</b>. It is a C-stem
-        root word and uses blue pronominals.
-      </Text>
-      <Text>
-        This one is different from the words discussed so far. The author is
-        unsure of why there the <Letter>nit</Letter> occurs before the
-        pronominal.
+        root word and uses blue pronominals. It makes use of the{" "}
+        <LinkWrapper page="dim" />.
       </Text>
       <ParadigmTable
         audioFolder="module02/young"
