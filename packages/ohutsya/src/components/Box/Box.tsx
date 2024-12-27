@@ -1,4 +1,4 @@
-import { PaddingProps, usePadding } from "../../utils/usePadding";
+import { type PaddingProps, usePadding } from "../../utils/usePadding";
 
 export interface BoxProps extends PaddingProps {
   children: React.ReactNode;

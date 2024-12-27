@@ -14,6 +14,7 @@ export function PlayButton({
       aria-label={ariaLabel ?? "Play audio"}
       className="border border-gray-500 rounded w-[24px] h-[24px] flex justify-center items-center shrink-0 inline-flex"
       onClick={() => new Audio(filepath).play()}
+      type="button"
     >
       <PlayIcon size={16} />
     </button>

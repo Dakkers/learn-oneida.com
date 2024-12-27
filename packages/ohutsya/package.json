@@ -19,7 +19,9 @@
     "build:swc": "swc src -d dist --copy-files && cp package.json ./dist",
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist/types",
     "ci:format": "prettier ./src --check",
-    "format:write": "prettier ./src --write",
+    "format:write": "pnpm biome format --write",
+    "lint": "pnpm biome lint",
+    "lint:fix": "pnpm biome lint --write",
     "storybook": "storybook dev -p 6006",
     "tailwind": "pnpm run tailwind:watch",
     "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/ohutsya.css",
@@ -28,6 +30,7 @@
     "typecheck:emit": "tsc -b --emitDeclarationOnly && tsc-alias"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@chromatic-com/storybook": "^3.2.3",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
@@ -64,8 +67,8 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
     "react-hook-form": "^7.54.2",
-    "tailwindcss": "^3.4.17",
     "tailwind-merge": "^2.6.0",
+    "tailwindcss": "^3.4.17",
     "tsc-alias": "^1.8.10"
   },
   "peerDependencies": {

@@ -1,4 +1,4 @@
-import { SpacingToken } from "./types";
+import type { SpacingToken } from "./types";
 import { cn } from "./tailwind";
 
 type PaddingToken = Exclude<SpacingToken, "1px" | "2px">;

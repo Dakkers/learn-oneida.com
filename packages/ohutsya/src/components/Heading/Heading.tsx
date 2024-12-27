@@ -1,4 +1,7 @@
-import { InternalText, InternalTextProps } from "../../internal/InternalText";
+import {
+  InternalText,
+  type InternalTextProps,
+} from "../../internal/InternalText";
 
 export interface HeadingProps
   extends Pick<
