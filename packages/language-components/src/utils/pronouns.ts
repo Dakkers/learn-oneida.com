@@ -87,14 +87,14 @@ export const PRONOUN_MAP_EN_POSSESSIVE: Record<Pronoun, string | string[]> = {
   it: "Its",
   uni: "Our (you and I)",
   soni: "Our (someone and I)",
-  u2: "All your",
+  u2: "You two's",
   "2m": ["Their (2 males)", "Their (1 male + 1 female)"],
   "2f": "Their (2 females)",
-  us: "All our",
-  theyni: "All our (they and I)",
+  us: "Our (all of us)",
+  theyni: "Our (they and I)",
   yall: "All of yours'",
-  ms: ["All (males) their", "All (males + females) their"],
-  fs: "All (females) their",
+  ms: ["Their (males)", "Their (males + females)"],
+  fs: "Their (females)",
 } as const;
 
 export const REF_VERB_MAP: Record<Pronoun, string> = {

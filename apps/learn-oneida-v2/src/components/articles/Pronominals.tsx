@@ -44,21 +44,44 @@ import dataAtHome from "~/data/itlu";
 import dataHardToPlease from "~/data/ʌtole";
 import dataPulling from "~/data/module01/pullingOut-HAB";
 import dataPulledOut from "~/data/module01/pullingOut-PFV";
+import dataLikePurple from "~/data/module01/like-purple";
+import dataForbid from "~/data/module01/forbid-PRS";
+import dataCallDown from "~/data/module01/callDown-HAB";
+import dataGoToGet from "~/data/module01/goToGet-HAB";
+import dataHouse from "~/data/module01/house-NOUN";
+import dataHat from "~/data/module01/hat-NOUN";
+import dataHeart from "~/data/module01/heart-NOUN";
+import dataRelative from "~/data/module01/relative-NOUN";
+import dataParcel from "~/data/module01/parcel-NOUN";
+import dataTongue from "~/data/module01/tongue-NOUN";
 import dataAlive from "~/data/unhe";
 import dataLonely from "~/data/module01/lonely-PFV";
 import dataHealthy from "~/data/module05/healthy-PRS";
 import dataSleeping from "~/data/module05/sleep-PRS";
 import dataEnjoy from "~/data/module05/enjoyingDoingSomething-PRS";
 import dataLikeTheTaste from "~/data/module05/likingTheTaste-PRS";
-import { type ParadigmData, ParadigmTable } from "../ParadigmTable";
+import {
+  type ParadigmData,
+  ParadigmTable,
+  ParadigmTableProps,
+} from "../ParadigmTable";
 import type {
   PronominalRules,
   PronominalRulesPurple,
 } from "@/data/pronominals/types";
 
+const createDumbassFunction = (verb: string, verbPlural?: string) => {
+  return ({ pronoun }: { pronoun: Pronoun }) => ({
+    verb: ["it", "m", "f"].includes(pronoun)
+      ? (verbPlural ?? `${verb}s`)
+      : verb,
+  });
+};
+
 export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
   const level = (_level + 1) as SectionHeadingProps["level"];
   const sublevel = (level + 1) as SectionHeadingProps["level"];
+
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="pronominals" level={_level}>
@@ -125,7 +148,7 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       <AccordionWrapper
         color="red"
         items={[
-          [dataLikeRedJson, "-nuhweʔ-"],
+          [dataLikeRedJson, "-nuhweʔ-", createDumbassFunction("like")],
           [dataWise, "-attok-"],
           [dataLooking, "-ehsak-"],
           [dataAtHome, "-iʔtlu-"],
@@ -143,9 +166,13 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       <AccordionWrapper
         color="blue"
         items={[
-          [dataLikeBlueJson, "-nuhweʔ-"],
+          [dataLikeBlueJson, "-nuhweʔ-", createDumbassFunction("like")],
           [dataHealthy, "-ataʔkalite-"],
-          [dataLikeTheTaste, "-ekaʔ-"],
+          [
+            dataLikeTheTaste,
+            "-ekaʔ-",
+            createDumbassFunction("like the taste", "likes the taste"),
+          ],
           [dataSleeping, "-itaʔ-"],
           [dataPulledOut, "-otshyu-"],
           [dataEnjoy, "-uʔweskwani-"],
@@ -160,13 +187,13 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       <AccordionWrapper
         color="purple"
         items={[
-          [null, "-nuhweʔ-"],
+          [dataLikePurple, "-nuhweʔ-"],
+          [dataForbid, "-ahlist-"],
+          [null, "-???-"],
+          [dataGoToGet, "-ihnuks-"],
           [null, "-???-"],
           [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
+          [dataCallDown, "-ʌhni-"],
         ]}
       />
       <PronominalsPrimitiveTable color="purple" data={purplePronominalsJson} />
@@ -177,13 +204,13 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       <AccordionWrapper
         color="light_blue"
         items={[
-          [null, "-nuhs-"],
+          [dataHouse, "-nuhs-"],
+          [dataHat, "-ana?alol-"],
+          [dataHeart, "-el-"],
+          [dataParcel, "-itstotsl-"],
           [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
+          [dataRelative, "-ukweʔt-"],
+          [dataTongue, "-ʌʔnahs-"],
         ]}
       />
       <PronominalsPrimitiveTable
@@ -385,12 +412,19 @@ function AccordionWrapper({
   items,
 }: {
   color: "red" | "blue" | "light_blue" | "purple";
-  items: Array<[ParadigmData | null, string]>;
+  items: Array<
+    | [ParadigmData | null, string]
+    | [
+        ParadigmData | null,
+        string,
+        ParadigmTableProps["translationFn"] | undefined,
+      ]
+  >;
 }) {
   const stems = ["C", "A", "E", "I", "O", "U", "Λ"];
   return (
     <Accordion type="multiple">
-      {items.map(([data, root], i) => (
+      {items.map(([data, root, translationFn], i) => (
         <Accordion.Item id={stems[i]} title={`${stems[i]}-stem`} key={i}>
           <Text>
             The root word is <Letter>{root}</Letter>.
@@ -400,9 +434,7 @@ function AccordionWrapper({
               audioFolder={`module01/pronominals/${color}/${stems[i]}`}
               columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
               data={data}
-              translationFn={({ pronoun }: { pronoun: Pronoun }) => ({
-                verb: ["it", "m", "f"].includes(pronoun) ? "likes" : "like",
-              })}
+              translationFn={translationFn}
             />
           ) : (
             <Text>

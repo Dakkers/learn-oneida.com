@@ -92,7 +92,8 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
 
       <Notice intent="warning">
         For a number of the kin term pronominals, the first letter has been
-        dropped.
+        dropped. This is not specific to this website, but rather a quirk of the
+        language.
       </Notice>
 
       <SectionHeading id="family-mother" level={sublevel}>
