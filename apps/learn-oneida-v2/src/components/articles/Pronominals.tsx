@@ -1,7 +1,7 @@
 "use client";
 import { Accordion, Flex, PlayButton, TextArray } from "@ukwehuwehneke/ohutsya";
 import {
-  pronounsPurpleFull,
+  pronounsPurpleExtended,
   PURPLES_MAP_FULL,
   SectionHeading,
   type SectionHeadingProps,
@@ -273,7 +273,7 @@ function PronominalsPrimitiveTable({
 }) {
   const stems = ["c", "a", "i", "e", "o"] as const;
   const isPurple = color === "purple";
-  const rowsToUse = isPurple ? pronounsPurpleFull : pronouns;
+  const rowsToUse = isPurple ? pronounsPurpleExtended : pronouns;
 
   return (
     <Bleed mx={0}>
@@ -300,6 +300,7 @@ function PronominalsPrimitiveTable({
                   // @ts-expect-error To be addressed in LO-17
                   <TextArray>{PRONOUN_MAP_EN[pronoun]}</TextArray>
                 ) : (
+                  // @ts-expect-error To be addressed in LO-17
                   <TextArray>{PURPLES_MAP_FULL[pronoun]}</TextArray>
                 )}
               </PrimitiveTableCell>

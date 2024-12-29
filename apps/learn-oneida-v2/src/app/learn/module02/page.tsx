@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
+import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
@@ -222,11 +222,13 @@ function VerbsSection() {
         Red pronominals
       </SectionHeading>
       <ParadigmTable
+        audioFolder="module02/familiar_red"
         columnVisibility={columnVisibility}
         data={yʌteliRed}
         translationFn={translationFnKnow}
       />
       <ParadigmTable
+        audioFolder="module02/love_red"
         columnVisibility={columnVisibility}
         data={nolukhwaRed}
         translationFn={translationFnLove}
@@ -236,11 +238,13 @@ function VerbsSection() {
         Blue pronominals
       </SectionHeading>
       <ParadigmTable
+        audioFolder="module02/familiar_blue"
         columnVisibility={columnVisibility}
         data={yʌteliBlue}
         translationFn={translationFnKnow}
       />
       <ParadigmTable
+        audioFolder="module02/love_blue"
         columnVisibility={columnVisibility}
         data={nolukhwaBlue}
         translationFn={translationFnLove}
@@ -250,11 +254,13 @@ function VerbsSection() {
         Purple pronominals
       </SectionHeading>
       <ParadigmTable
+        audioFolder="module02/familiar_purple"
         columnVisibility={columnVisibility}
         data={yʌteliPurple}
         translationFn={translationFnKnow}
       />
       <ParadigmTable
+        audioFolder="module02/love_purple"
         columnVisibility={columnVisibility}
         data={nolukhwaPurple}
         translationFn={translationFnLove}
@@ -271,7 +277,7 @@ function ReflexiveSection() {
         Reflexive
       </SectionHeading>
       <Text>
-        We can add an additional prefix to a root word to make the root word
+        You can add an additional prefix to a root word to make the root word
         apply to oneself. For example, <b>knú·wehse̲ʔ</b> means &quot;I like
         it&quot;. Adding the prefix <Letter>atat</Letter> before the root word
         and after the pronominal will translate to &quot;I like myself&quot;:{" "}
@@ -282,17 +288,21 @@ function ReflexiveSection() {
         adding <Letter>atat</Letter> to the root word. Adding this prefix
         &quot;changes&quot; the root word to use an A-stem.
       </Text>
+      <Notice>The audio below only includes the prepausal ending.</Notice>
       <ParadigmTable
+        audioFolder="module02/like_refl"
         columnVisibility={columnVisibility}
         data={nuwehseRefl}
         translationFn={translationFnLike}
       />
       <ParadigmTable
+        audioFolder="module02/familiar_refl"
         columnVisibility={columnVisibility}
         data={yʌteliRefl}
         translationFn={translationFnKnow}
       />
       <ParadigmTable
+        audioFolder="module02/love_refl"
         columnVisibility={columnVisibility}
         data={nolukhwaRefl}
         translationFn={translationFnLove}
@@ -378,17 +388,21 @@ function ReciprocalSection() {
       <Text>
         So the result is: <i>teyakyatatnú·wehse̲ʔ</i>.
       </Text>
+      <Notice>The audio below only includes the prepausal ending.</Notice>
       <ParadigmTable
+        audioFolder="module02/like_recp"
         columnVisibility={columnVisibility}
         data={formatBreakdownsToPhrases("like", likeData)}
         translationFn={translationFnLike}
       />
       <ParadigmTable
+        audioFolder="module02/familiar_recp"
         columnVisibility={columnVisibility}
         data={formatBreakdownsToPhrases("know", knowData)}
         translationFn={translationFnKnow}
       />
       <ParadigmTable
+        audioFolder="module02/love_recp"
         columnVisibility={columnVisibility}
         data={formatBreakdownsToPhrases("love", loveData)}
         translationFn={translationFnLove}
@@ -404,18 +418,22 @@ function CommandsSection() {
         Commands
       </SectionHeading>
       <Text>
-        Here we introduce commands, which use purple pronominals. Commands have
-        different pronominals when you ("I") are the subject. These are known as
-        "command form" pronominals.
+        Here, commands are introduced, which use purple pronominals. Commands
+        have different pronominals when you ("I") are the subject. These are
+        known as "command form" pronominals.
       </Text>
+      <Notice intent="primary">
+        Commands are only ever stated in the prepausal form as they are always
+        used in cases where they appear by themselves.
+      </Notice>
       <SectionHeading id="commands-tell" level={3}>
         <b>-hloli- / -hloly-</b> — tell someone
       </SectionHeading>
-      <CommandsTable data={hloliData} />
+      <CommandsTable audioFolder="tell" data={hloliData} />
       <SectionHeading id="commands-ask" level={3}>
         <b>-liʔwanut- / -liʔwanutu-</b> — ask someone
       </SectionHeading>
-      <CommandsTable data={liwanutuseData} />
+      <CommandsTable audioFolder="ask" data={liwanutuseData} />
     </>
   );
 }
@@ -436,18 +454,22 @@ function NegatedCommandsSection() {
       <SectionHeading id="negated-commands-tell" level={3}>
         <b>Takʌ ʌ...hlo·li̲ʔ</b> — don&lsquo;t tell someone
       </SectionHeading>
-      <CommandsTable data={hloliNegatedData} />
+      <CommandsTable audioFolder="tell_negated" data={hloliNegatedData} />
       <SectionHeading id="negated-commands-ask" level={3}>
         <b>Takʌ ʌ...liwanu·túse̲</b> — don&lsquo;t ask someone
       </SectionHeading>
-      <CommandsTable data={liwanutuseNegatedData} />
+      <CommandsTable audioFolder="ask_negated" data={liwanutuseNegatedData} />
     </>
   );
 }
 
-function CommandsTable({ data }: { data: ParadigmData }) {
+function CommandsTable({
+  audioFolder,
+  data,
+}: { audioFolder?: string; data: ParadigmData }) {
   return (
     <ParadigmTable
+      audioFolder={audioFolder ? `module02/${audioFolder}` : undefined}
       columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
       data={data}
     />
@@ -465,6 +487,7 @@ function AliveDeadSection() {
         and uses red pronominals.
       </Text>
       <ParadigmTable
+        audioFolder="module02/alive"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -481,6 +504,7 @@ function AliveDeadSection() {
         it is an I-stem root word. In both cases, it uses blue pronominals.
       </Text>
       <ParadigmTable
+        audioFolder="module02/dead"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -502,6 +526,7 @@ function PassedOnSection() {
         word and uses blue pronominals.
       </Text>
       <ParadigmTable
+        audioFolder="module02/passed_on"
         allowedPronouns={["m", "f", "it", "ms", "fs"]}
         columnVisibility={{
           pronounEnglish: false,
@@ -515,27 +540,96 @@ function PassedOnSection() {
 
 function DeceasedRelativesSection() {
   const data = [
-    { translation: "aknulhaʔkʌ́", en: "my late mother" },
-    { translation: "lakeʔnikʌ́", en: "my late father" },
-    { translation: "aksotkʌ́", en: "my late grandmother" },
-    { translation: "laksotkʌ́", en: "my late grandfather" },
-    { translation: "yuknulhaʔkʌ́", en: "my late aunt" },
-    { translation: "laknulhaʔkʌ́", en: "my late uncle" },
-    { translation: "yukeʔkʌ́haʔkʌ́", en: "my late older sister" },
-    { translation: "lakeʔkʌhaʔkʌ́", en: "my late older brother" },
-    { translation: "kheʔkʌhaʔkʌ́", en: "my late younger sister(s)" },
-    { translation: "liʔkʌhaʔkʌ́", en: "my late younger brother" },
-    { translation: "kheyuhwatʌʔkʌ́", en: "my late niece(s) & nephew(s)" },
-    { translation: "liyuhwatʌʔkʌ́", en: "my late nephew" },
-    { translation: "kheyʌhaʔkʌ́", en: "my late daughter" },
-    { translation: "liyʌhaʔkʌ́", en: "my late son" },
+    {
+      translation: "aknulhaʔkʌ́",
+      en: "my late mother",
+      audioFile: "module02/deceased/mother.mp3",
+    },
+    {
+      translation: "lakeʔnikʌ́",
+      en: "my late father",
+      audioFile: "module02/deceased/father.mp3",
+    },
+    {
+      translation: "aksotkʌ́",
+      en: "my late grandmother",
+      audioFile: "module02/deceased/grandmother.mp3",
+    },
+    {
+      translation: "laksotkʌ́",
+      en: "my late grandfather",
+      audioFile: "module02/deceased/grandfather.mp3",
+    },
+    {
+      translation: "yuknulhaʔkʌ́",
+      en: "my late aunt",
+      audioFile: "module02/deceased/aunt.mp3",
+    },
+    {
+      translation: "laknulhaʔkʌ́",
+      en: "my late uncle",
+      audioFile: "module02/deceased/uncle.mp3",
+    },
+    {
+      translation: "yukeʔkʌ́haʔkʌ́",
+      en: "my late older sister",
+      audioFile: "module02/deceased/older_sister.mp3",
+    },
+    {
+      translation: "lakeʔkʌhaʔkʌ́",
+      en: "my late older brother",
+      audioFile: "module02/deceased/older_brother.mp3",
+    },
+    {
+      translation: "kheʔkʌhaʔkʌ́",
+      en: "my late younger sister(s)",
+      audioFile: "module02/deceased/younger_sister.mp3",
+    },
+    {
+      translation: "liʔkʌhaʔkʌ́",
+      en: "my late younger brother",
+      audioFile: "module02/deceased/younger_brother.mp3",
+    },
+    {
+      translation: "kheyuhwatʌʔkʌ́",
+      en: "my late niece(s) & nephew(s)",
+      audioFile: "module02/deceased/niece.mp3",
+    },
+    {
+      translation: "liyuhwatʌʔkʌ́",
+      en: "my late nephew",
+      audioFile: "module02/deceased/nephew.mp3",
+    },
+    {
+      translation: "kheyʌhaʔkʌ́",
+      en: "my late daughter",
+      audioFile: "module02/deceased/daughter.mp3",
+    },
+    {
+      translation: "liyʌhaʔkʌ́",
+      en: "my late son",
+      audioFile: "module02/deceased/son.mp3",
+    },
     {
       translation: "kheyatlehaʔkʌ́",
       en: "my late granddaughter(s) / grandchildren",
+      audioFile: "module02/deceased/granddaughter.mp3",
     },
-    { translation: "liyatlehaʔkʌ́", en: "my late grandson" },
-    { translation: "ukyalaʔsehaʔkʌ́", en: "my late cousin" },
-    { translation: "ukyatʌloʔkʌ́", en: "my late friend" },
+    {
+      translation: "liyatlehaʔkʌ́",
+      en: "my late grandson",
+      audioFile: "module02/deceased/grandson.mp3",
+    },
+    {
+      translation: "ukyalaʔsehaʔkʌ́",
+      en: "my late cousin",
+      audioFile: "module02/deceased/cousin.mp3",
+    },
+    {
+      translation: "ukyatʌloʔkʌ́",
+      en: "my late friend",
+      audioFile: "module02/deceased/friend.mp3",
+    },
   ];
 
   return (
@@ -580,10 +674,7 @@ function DeceasedRelativesSection() {
       <Text>
         Notice that, in many cases, accents, stresses, and lengths move places.
       </Text>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={data}
-      />
+      <TableWrapper columns={TableWrapper.columnsEnglishAudio} data={data} />
     </>
   );
 }
