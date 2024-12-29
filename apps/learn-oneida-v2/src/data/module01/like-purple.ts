@@ -31,7 +31,7 @@ const data: ParadigmData = createParadigmData(
         breakdown: [["lak"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["ya"], "nú·wehseʔ"],
+        breakdown: [["h", "RPL"], ["ya"], "nú·wehseʔ"],
       },
       {
         breakdown: [["lo"], "nú·wehseʔ"],

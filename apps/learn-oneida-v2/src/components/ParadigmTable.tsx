@@ -59,15 +59,7 @@ const formSchema = z.object(
 const ParadigmTableContext =
   React.createContext<ParadigmTableContextProps | null>(null);
 
-export function ParadigmTable({
-  allowedPronouns = [],
-  audioFolder,
-  bleed = 0,
-  columnVisibility = {},
-  data,
-  isTesting = false,
-  translationFn,
-}: {
+export interface ParadigmTableProps {
   allowedPronouns?: Pronoun[];
   audioFolder?: string;
   bleed?: BleedProps["mx"];
@@ -76,7 +68,17 @@ export function ParadigmTable({
   isTesting?: boolean;
   translationKeys?: Record<string, string>;
   translationFn?: ParadigmTableContextProps["translationFn"];
-}) {
+}
+
+export function ParadigmTable({
+  allowedPronouns = [],
+  audioFolder,
+  bleed = 0,
+  columnVisibility = {},
+  data,
+  isTesting = false,
+  translationFn,
+}: ParadigmTableProps) {
   const [colVisibility, setColVisibility] = React.useState({
     pronounOneida: true,
     pronounEnglish: true,

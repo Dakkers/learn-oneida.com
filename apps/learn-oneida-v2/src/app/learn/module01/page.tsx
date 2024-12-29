@@ -72,7 +72,7 @@ export default function LearnModule01() {
               />
               <TOC.Item
                 label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Possessive Pronominals (Light Blue)"
-                value="objective"
+                value="possessive"
               />
             </TOC.Section>
           </TOC.Section>
@@ -196,44 +196,44 @@ function DialogueSection() {
   const part4: DialogueTableData = [
     { one: "Wá·li kʌ́ niʔí·", en: "Am I Mary?" },
     {
-      one: ["Táh", "Yáh Wá·li té·kʌ nisé·", "Só·s niʔisé̲·"],
+      one: ["Táh, yáh Wá·li té·kʌ nisé·", "Só·s niʔisé̲·"],
       en: "No. You're not Mary. You are Susan.",
     },
     { one: "Tshyalé kʌ́ niʔisé̲·", en: "Are you Charlie?" },
     {
-      one: ["Táh", "Yáh Tshyalé té·kʌ niʔí·", "Wá·li niʔí·"],
+      one: ["Táh, yáh Tshyalé té·kʌ niʔí·", "Wá·li niʔí·"],
       en: "No. I'm not Charlie. I'm Mary.",
     },
     { one: "Wílo kʌ́ neʔn laulhá·", en: "Is he William?" },
     {
-      one: ["Táh", "Yáh Wílo té·kʌ neʔn laulhá·", "Tá·wet neʔn laulhá·"],
+      one: ["Táh, yáh Wílo té·kʌ neʔn laulhá·", "Tá·wet neʔn laulhá·"],
       en: "No. He's not William. He's David.",
     },
     { one: "Lá·kel kʌ́ neʔn akaulhá·", en: "Is she Rachel?" },
     {
-      one: ["Táh", "Yáh Lá·kel té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá·"],
+      one: ["Táh, yáh Lá·kel té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá·"],
       en: "No. She's not Rachel. She's Susan.",
     },
   ];
   const part5: DialogueTableData = [
     { one: "Í· kʌ́ neʔn Wá·li", en: "Am I Mary?" },
     {
-      one: ["Táh", "Yáh Wá·li té·kʌ niʔisé̲·", "Só·s ni·sé·"],
+      one: ["Táh, yáh Wá·li té·kʌ niʔisé̲·", "Só·s ni·sé·"],
       en: "No. You're not Mary. You're Susan.",
     },
     { one: "Isé· kʌ́ neʔn Tu·wís", en: "Are you Thomas?" },
     {
-      one: ["Táh", "Yáh Tu·wís té·kʌ niʔí·", "Wílo niʔí·"],
+      one: ["Táh, yáh Tu·wís té·kʌ niʔí·", "Wílo niʔí·"],
       en: "No. I'm not Thomas. I'm William.",
     },
     { one: "Laulhá· kʌ́ neʔn Tshyalé", en: "Is he Charlie?" },
     {
-      one: ["Táh", "Yáh Tshyalé té·kʌ neʔn laulhá·", "Ta·wet neʔn laulhá·"],
+      one: ["Táh, yáh Tshyalé té·kʌ neʔn laulhá·", "Ta·wet neʔn laulhá·"],
       en: "No. He's not Charlie. He's David.",
     },
     { one: "Akaulhá· kʌ́ neʔn Ní·ki", en: "Is she Amelia?" },
     {
-      one: ["Táh", "Yáh Ní·ki té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá·"],
+      one: ["Táh, yáh Ní·ki té·kʌ neʔn akaulhá·", "Só·s neʔn akaulhá·"],
       en: "No. She's not Amelia. She's Susan.",
     },
   ];
@@ -262,7 +262,7 @@ function DialogueSection() {
   const part7: DialogueTableData = [
     { one: "I·sé· kʌ́ sknú·wehse̲ʔ", en: "Do you like me?" },
     { one: "Λ́·, í· kunú·wehse̲ʔ", en: "Yes, I like you." },
-    { one: "laulhá· kʌ́ etsnú·wehse̲ʔ", en: "Do you like him?" },
+    { one: "Laulhá· kʌ́ etsnú·wehse̲ʔ", en: "Do you like him?" },
     { one: "Λ́·, laulhá· linú·wehse̲ʔ", en: "Yes, I like him." },
     { one: "Kwítel kʌ́ etsnú·wehse̲ʔ", en: "Do you like Peter?" },
     { one: "Λ́·, Kwítel linú·wehse̲ʔ", en: "Yes, I like Peter." },
@@ -457,32 +457,30 @@ function DialogueSection() {
   ];
   const part11: DialogueTableData = [
     {
-      one: "Sanúhteʔ kʌ́ náhte ni yúkyats",
+      one: "Sanúhteʔ kʌ́ náhte ní· yúkyats",
       en: "Do you know what my name is?",
     },
     { one: "Lá·kel kʌ́ yesa·yáts", en: "Is your name Rachel?" },
     {
       one: [
-        "Táh",
-        "Yáh Lá·kel teyúkyats",
+        "Táh. Yáh Lá·kel teyúkyats",
         "Thikʌ́ akokstʌ́·haʔ neʔn Lá·kel yutátyats",
       ],
-      en: "No. My name is not Rachel. That old woman is the one named Rachel.",
+      en: "No. My name is not Rachel. That old woman is named Rachel.",
     },
     { one: "Kowáklit kʌ́ yesa·yáts", en: "Is your name Margaret?" },
     {
       one: [
-        "Táh",
-        "Yáh oni Kowáklit teyúkyats",
+        "Táh. Yáh uni Kowáklit teyúkyats",
         "Thikʌ́ yeksá· neʔn Kowáklit yutátyats",
       ],
-      en: "No. Margaret isnʔt my name either. That girlʔs name is Margaret.",
+      en: "No. Margaret isn't my name either. That girl's name is Margaret.",
     },
     {
       one: "Tá·t yáh Lá·kel tathu·ní· yáh Kowáklit teyesa·yáts nahte káti yesa·yáts",
       en: "If your name is not Rachel or Margaret, then what is your name?",
     },
-    { one: "Aliskwet niyúkyats", en: "My name is Elizabeth" },
+    { one: "Aliskwet ní· yúkyats", en: "My name is Elizabeth" },
     {
       one: "Onʌ wakanúhteʔ náhte yesa·yáts",
       en: "Now I know what your name is.",

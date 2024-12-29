@@ -199,6 +199,7 @@ const translationFnLove = ({ pronoun }: { pronoun: Pronoun }) => ({
 });
 
 function VerbsSection() {
+  const columnVisibility = { pronounEnglish: false };
   return (
     <>
       <SectionHeading id="new-verbs" level={2}>
@@ -220,25 +221,50 @@ function VerbsSection() {
       <SectionHeading id="new-verbs-red" level={3}>
         Red pronominals
       </SectionHeading>
-      <ParadigmTable data={yʌteliRed} translationFn={translationFnKnow} />
-      <ParadigmTable data={nolukhwaRed} translationFn={translationFnLove} />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={yʌteliRed}
+        translationFn={translationFnKnow}
+      />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={nolukhwaRed}
+        translationFn={translationFnLove}
+      />
 
       <SectionHeading id="new-verbs-blue" level={3}>
         Blue pronominals
       </SectionHeading>
-      <ParadigmTable data={yʌteliBlue} translationFn={translationFnKnow} />
-      <ParadigmTable data={nolukhwaBlue} translationFn={translationFnLove} />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={yʌteliBlue}
+        translationFn={translationFnKnow}
+      />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={nolukhwaBlue}
+        translationFn={translationFnLove}
+      />
 
       <SectionHeading id="new-verbs-purple" level={3}>
         Purple pronominals
       </SectionHeading>
-      <ParadigmTable data={yʌteliPurple} translationFn={translationFnKnow} />
-      <ParadigmTable data={nolukhwaPurple} translationFn={translationFnLove} />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={yʌteliPurple}
+        translationFn={translationFnKnow}
+      />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={nolukhwaPurple}
+        translationFn={translationFnLove}
+      />
     </>
   );
 }
 
 function ReflexiveSection() {
+  const columnVisibility = { pronounEnglish: false };
   return (
     <>
       <SectionHeading id="reflexive" level={2}>
@@ -256,20 +282,33 @@ function ReflexiveSection() {
         adding <Letter>atat</Letter> to the root word. Adding this prefix
         &quot;changes&quot; the root word to use an A-stem.
       </Text>
-      <ParadigmTable data={nuwehseRefl} translationFn={translationFnLike} />
-      <ParadigmTable data={yʌteliRefl} translationFn={translationFnKnow} />
-      <ParadigmTable data={nolukhwaRefl} translationFn={translationFnLove} />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={nuwehseRefl}
+        translationFn={translationFnLike}
+      />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={yʌteliRefl}
+        translationFn={translationFnKnow}
+      />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={nolukhwaRefl}
+        translationFn={translationFnLove}
+      />
     </>
   );
 }
 
 function ReciprocalSection() {
   const pronounSubset = [...dualicPronouns, ...pluralPronouns];
+  const columnVisibility = { pronounEnglish: false };
 
   const knowData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["hy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["ky"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["twa"], ["tat", "REFL"], "yʌtelí̲"],
@@ -281,8 +320,8 @@ function ReciprocalSection() {
 
   const likeData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["hy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["ky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["twa"], ["tat", "REFL"], "nú·wehse̲ʔ"],
@@ -294,8 +333,8 @@ function ReciprocalSection() {
 
   const loveData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["hy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["ky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["twa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
@@ -340,14 +379,17 @@ function ReciprocalSection() {
         So the result is: <i>teyakyatatnú·wehse̲ʔ</i>.
       </Text>
       <ParadigmTable
+        columnVisibility={columnVisibility}
         data={formatBreakdownsToPhrases("like", likeData)}
         translationFn={translationFnLike}
       />
       <ParadigmTable
+        columnVisibility={columnVisibility}
         data={formatBreakdownsToPhrases("know", knowData)}
         translationFn={translationFnKnow}
       />
       <ParadigmTable
+        columnVisibility={columnVisibility}
         data={formatBreakdownsToPhrases("love", loveData)}
         translationFn={translationFnLove}
       />
