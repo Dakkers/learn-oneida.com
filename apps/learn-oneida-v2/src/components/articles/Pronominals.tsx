@@ -63,7 +63,7 @@ import dataLikeTheTaste from "~/data/module05/likingTheTaste-PRS";
 import {
   type ParadigmData,
   ParadigmTable,
-  ParadigmTableProps,
+  type ParadigmTableProps,
 } from "../ParadigmTable";
 import type {
   PronominalRules,

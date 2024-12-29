@@ -307,8 +307,8 @@ function ReciprocalSection() {
 
   const knowData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelí̲"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["hy"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["ky"], ["atat", "REFL"], "yʌtelí̲"],
     [["te", "REFL"], ["twa"], ["tat", "REFL"], "yʌtelí̲"],
@@ -320,8 +320,8 @@ function ReciprocalSection() {
 
   const likeData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["hy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["ky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
     [["te", "REFL"], ["twa"], ["tat", "REFL"], "nú·wehse̲ʔ"],
@@ -333,8 +333,8 @@ function ReciprocalSection() {
 
   const loveData: BreakdownArray[] = [
     [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
+    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["hy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["ky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
     [["te", "REFL"], ["twa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],

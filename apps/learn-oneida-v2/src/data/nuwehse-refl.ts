@@ -28,10 +28,10 @@ const data: ParadigmData = createParadigmData(
         breakdown: [["ty"], ["atat", "REFL"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["tsy"], ["atat", "REFL"], "nú·wehseʔ"],
+        breakdown: [["yaky"], ["atat", "REFL"], "nú·wehseʔ"],
       },
       {
-        breakdown: [["yaky"], ["atat", "REFL"], "nú·wehseʔ"],
+        breakdown: [["tsy"], ["atat", "REFL"], "nú·wehseʔ"],
       },
       {
         breakdown: [["h", "RPL"], ["y"], ["atat", "REFL"], "nú·wehseʔ"],

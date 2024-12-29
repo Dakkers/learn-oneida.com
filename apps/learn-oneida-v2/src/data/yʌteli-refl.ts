@@ -28,10 +28,10 @@ const data: ParadigmData = createParadigmData(
         breakdown: [["ty"], ["atat", "REFL"], "yʌtelí"],
       },
       {
-        breakdown: [["tsy"], ["atat", "REFL"], "yʌtelí"],
+        breakdown: [["yaky"], ["atat", "REFL"], "yʌtelí"],
       },
       {
-        breakdown: [["yakya"], ["tat", "REFL"], "yʌtelí"],
+        breakdown: [["tsy"], ["atat", "REFL"], "yʌtelí"],
       },
       {
         breakdown: [["h", "RPL"], ["y"], ["atat", "REFL"], "yʌtelí"],
@@ -43,10 +43,10 @@ const data: ParadigmData = createParadigmData(
         breakdown: [["twa"], ["tat", "REFL"], "yʌtelí"],
       },
       {
-        breakdown: [["yakwa"], ["tat", "REFL"], "yʌtelí"],
+        breakdown: [["yakw"], ["atat", "REFL"], "yʌtelí"],
       },
       {
-        breakdown: [["swa"], ["tat", "REFL"], "yʌtelí"],
+        breakdown: [["sw"], ["atat", "REFL"], "yʌtelí"],
       },
       {
         breakdown: [["lu"], ["tat", "REFL"], "yʌtelí"],
