@@ -41,10 +41,11 @@ export function LinkWrapper({
         }[page];
 
   const NON_EXISTENT_PAGES = [
-    "semi",
+    "coin",
     "dim",
     "dual",
-    "coin",
+    "rep",
+    "semi",
     7,
     8,
     9,

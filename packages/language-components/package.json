@@ -35,6 +35,7 @@
     "@storybook/test": "^8.4.7",
     "@swc/cli": "^0.5.2",
     "@swc/core": "^1.10.1",
+    "@types/lodash": "^4.17.13",
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
     "husky": "^9.1.7",
@@ -45,6 +46,7 @@
   },
   "dependencies": {
     "@ukwehuwehneke/ohutsya": "workspace:*",
+    "lodash": "^4.17.21",
     "tailwind-merge": "^2.6.0",
     "tailwindcss": "^3.4.17"
   },

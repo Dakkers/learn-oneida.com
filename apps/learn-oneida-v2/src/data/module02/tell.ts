@@ -5,7 +5,7 @@ import {
 
 const data: ParadigmData = createParadigmData(
   {
-    translation: "{{subject}} tell {{object}}!",
+    translation: "{{agent}} tell {{subject}}!",
     type: "PP",
     phrases: [
       {
@@ -23,7 +23,7 @@ const data: ParadigmData = createParadigmData(
     ],
   },
   // @ts-expect-error Pronominal things
-  ["cmd_u_i", "cmd_u_theyni", "u_f", "u_m"],
+  ["u_i", "yall_i", "u_f", "u_m"],
 );
 
 export default data;

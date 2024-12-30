@@ -19,11 +19,11 @@ const data: ParadigmData = createParadigmData(
         breakdown: ["Tákʌʔ ", ["ʌ", "FUT"], ["hets"], "liʔwanu·túse"],
       },
     ],
-    translation: "({{subject}}) Don't ask {{object}}!",
+    translation: "({{agent}}) Don't ask {{subject}}!",
     type: "PP",
   },
   // @ts-expect-error Pronominal things
-  ["cmd_u_i", "cmd_u_theyni", "u_f", "u_m"],
+  ["u_i", "yall_i", "u_f", "u_m"],
 );
 
 export default data;

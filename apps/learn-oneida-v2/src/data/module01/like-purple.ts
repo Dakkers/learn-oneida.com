@@ -6,7 +6,7 @@ import {
 
 const data: ParadigmData = createParadigmData(
   {
-    translation: "{{subject}} {{verb}} {{object}}",
+    translation: "{{agent}} {{verb}} {{subject}}",
     type: "PP",
     phrases: [
       {

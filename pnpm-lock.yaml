@@ -200,6 +200,9 @@ importers:
       '@ukwehuwehneke/ohutsya':
         specifier: workspace:*
         version: link:../ohutsya
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -249,6 +252,9 @@ importers:
       '@swc/core':
         specifier: ^1.10.1
         version: 1.10.1
+      '@types/lodash':
+        specifier: ^4.17.13
+        version: 4.17.13
       '@types/react':
         specifier: 19.0.2
         version: 19.0.2
