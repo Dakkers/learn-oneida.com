@@ -24,7 +24,7 @@ import {
 } from "@/components/articles/TimesOfDay";
 import { arrayify } from "@ukwehuwehneke/language-components";
 import { getDialogueModule02 } from "~/data/module02/dialogue";
-import { DialogueTableData } from "@/components/DialogueTable";
+import type { DialogueTableData } from "@/components/DialogueTable";
 import {
   getDialogueModule01,
   getAudioFileForEnglishName,
@@ -201,12 +201,12 @@ export default function PracticeListening() {
     setIsShowingAnswer(false);
   };
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: bad code
   const data = useMemo(() => {
     if (!category || !selectedCategory) {
       return [];
     }
     return _.shuffle(selectedCategory.getData());
-    // biome-ignore lint/correctness/useExhaustiveDependencies: this is a code-smell for sure then
   }, [category, subcategory]);
 
   const currentDatum = data[index];

@@ -1,4 +1,4 @@
-import { DialogueTableData } from "@/components/DialogueTable";
+import type { DialogueTableData } from "@/components/DialogueTable";
 
 export function getDialogueModule01() {
   const part1: DialogueTableData = [
