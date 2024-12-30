@@ -10,52 +10,51 @@ const data: ParadigmData = createParadigmData(
     type: "PLB",
     phrases: [
       {
-        breakdown: [["ak"], "núhsaʔ"],
+        breakdown: [["ak"], "núhsoteʔ"],
       },
       {
-        breakdown: [["sa"], "núhsaʔ"],
+        breakdown: [["sa"], "núhsoteʔ"],
       },
       {
-        breakdown: [["lao"], "núhsaʔ"],
+        breakdown: [["lao"], "núhsoteʔ"],
       },
       {
-        breakdown: [["ako"], "núhsaʔ"],
+        breakdown: [["ako"], "núhsoteʔ"],
       },
       {
-        breakdown: [["ao"], "núhsaʔ"],
+        breakdown: [["ao"], "núhsoteʔ"],
       },
       {
-        breakdown: [["ukni"], "núhsaʔ"],
+        breakdown: [["ukni"], "núhsoteʔ"],
       },
       {
-        breakdown: [["ukni"], "núhsaʔ"],
+        breakdown: [["ukni"], "núhsoteʔ"],
       },
       {
-        breakdown: [["sni"], "núhsaʔ"],
+        breakdown: [["sni"], "núhsoteʔ"],
       },
       {
-        breakdown: [["laoti"], "núhsaʔ"],
+        breakdown: [["laoti"], "núhsoteʔ"],
       },
       {
-        breakdown: [["aoti"], "núhsaʔ"],
+        breakdown: [["aoti"], "núhsoteʔ"],
       },
       {
-        breakdown: [["ukwa"], "núhsaʔ"],
+        breakdown: [["ukwa"], "núhsoteʔ"],
       },
       {
-        breakdown: [["ukwa"], "núhsaʔ"],
+        breakdown: [["ukwa"], "núhsoteʔ"],
       },
       {
-        breakdown: [["swa"], "núhsaʔ"],
+        breakdown: [["swa"], "núhsoteʔ"],
       },
       {
-        breakdown: [["laoti"], "núhsaʔ"],
+        breakdown: [["laoti"], "núhsoteʔ"],
       },
       {
-        breakdown: [["aoti"], "núhsaʔ"],
+        breakdown: [["aoti"], "núhsoteʔ"],
       },
     ],
-    whispered: false,
   },
   pronouns,
 );

@@ -47,12 +47,12 @@ const data: ParadigmData = {
     {
       pronoun: "ms",
       phrase: "lutátnuhkwe̲ʔ",
-      breakdown: [["lu"], ["tát"], "nuhkwe̲ʔ"],
+      breakdown: [["lu"], ["tát", "REFL"], "nuhkwe̲ʔ"],
     },
     {
       pronoun: "fs",
       phrase: "kutátnuhkwe̲ʔ",
-      breakdown: [["ku"], ["tát"], "nuhkwe̲ʔ"],
+      breakdown: [["ku"], ["tát", "REFL"], "nuhkwe̲ʔ"],
     },
   ],
 };
