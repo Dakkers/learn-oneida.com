@@ -15,11 +15,17 @@ import {
 } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "~/components/TableWrapper";
 
-type Row = {
-  hasAudio?: boolean;
-  one: string | string[];
-  en?: string | string[];
-};
+type Row =
+  | {
+      hasAudio?: boolean;
+      one: string[];
+      en?: string[];
+    }
+  | {
+      hasAudio?: boolean;
+      one: string;
+      en?: string;
+    };
 
 export type DialogueTableData = Row[];
 

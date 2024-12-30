@@ -23,6 +23,13 @@ import {
   determineTimesOfDayAudioFileName,
 } from "@/components/articles/TimesOfDay";
 import { arrayify } from "@ukwehuwehneke/language-components";
+import { getDialogueModule02 } from "~/data/module02/dialogue";
+import { DialogueTableData } from "@/components/DialogueTable";
+import {
+  getDialogueModule01,
+  getAudioFileForEnglishName,
+  getEnglishNames,
+} from "~/data/module01";
 
 const meta: any = () => {
   return [
@@ -85,15 +92,31 @@ export default function PracticeListening() {
     //   value: "living_somewhere",
     // },
     {
+      getData: () => formatDialogueAudioFiles(subcategory as ModuleNumber),
+      label: "Dialogue",
+      sub: [
+        // { label: "All", value: "all" },
+        { label: "Module 1", value: "module01" },
+        { label: "Module 2", value: "module02" },
+      ],
+      value: "dialogue",
+    },
+    {
+      getData: () => formatEnglishNamesAudioFiles(),
+      label: "English names",
+      value: "english_names",
+    },
+    {
       getData: () => formatParticleAudioFiles(subcategory as ModuleNumber),
       label: "Particles",
       sub: [
         // { label: "All", value: "all" },
+        { label: "Module 1", value: "module01" },
         { label: "Module 2", value: "module02" },
         { label: "Module 3", value: "module03" },
         { label: "Module 4", value: "module04" },
       ],
-      value: "particle_example_sentences",
+      value: "particles",
     },
     {
       getData: () =>
@@ -183,7 +206,8 @@ export default function PracticeListening() {
       return [];
     }
     return _.shuffle(selectedCategory.getData());
-  }, [category, selectedCategory]);
+    // biome-ignore lint/correctness/useExhaustiveDependencies: this is a code-smell for sure then
+  }, [category, subcategory]);
 
   const currentDatum = data[index];
 
@@ -237,7 +261,7 @@ export default function PracticeListening() {
 
             <Box pt={4}>
               <Player
-                audioFile={`/audio${currentDatum.audioFile}`}
+                audioFile={`/audio${currentDatum.audioFile.replace("/audio", "")}`}
                 autoplay
                 onPlay={setIsPlaying}
                 wavesurferRef={wavesurferRef}
@@ -414,6 +438,19 @@ function setupModule4Data(keyGroups: string[]) {
   return result;
 }
 
+function formatEnglishNamesAudioFiles() {
+  const names = getEnglishNames();
+  return _.flattenDeep(
+    names.map((datum) =>
+      arrayify(datum.translation).map((txt, i) => ({
+        audioFile: getAudioFileForEnglishName(datum, i),
+        en: arrayify(datum.en)[0],
+        translation: txt,
+      })),
+    ),
+  );
+}
+
 function formatTranslationExerciseAudioFiles(module: ModuleNumber) {
   if (["module02", "module03", "module04", "module05"].includes(module)) {
     return [];
@@ -461,16 +498,51 @@ function formatParticleExampleAudioFiles(module: ModuleNumber) {
   return result;
 }
 
+function formatDialogueAudioFiles(module: ModuleNumber) {
+  if (["module03", "module04", "module05", "module06"].includes(module)) {
+    return [];
+  }
+  const data =
+    module === "module01"
+      ? getDialogueModule01()
+      : module === "module02"
+        ? getDialogueModule02()
+        : null;
+  const result = [];
+  for (const key in data) {
+    const arr = data[key] as DialogueTableData;
+    arr.forEach((item, i) => {
+      if (!(item.hasAudio ?? true)) {
+        return;
+      }
+      const sentences = arrayify(item.one);
+      sentences.forEach((s, j) => {
+        result.push({
+          audioFile: `/${module}/dialogue/${key}/${i + 1}-${j + 1}.mp3`,
+          en: item.en,
+          translation: item.one,
+        });
+      });
+    });
+  }
+  return result;
+}
+
 function getSentenceAudioForModule(module: ModuleNumber) {
   return [
     ...formatParticleExampleAudioFiles(module),
     ...formatTranslationExerciseAudioFiles(module),
+    ...formatDialogueAudioFiles(module),
   ];
 }
 
 function getAllAudioForModule(module: ModuleNumber) {
-  return [
+  const result = [
     ...formatParticleAudioFiles(module),
     ...getSentenceAudioForModule(module),
   ];
+  if (module === "module01") {
+    result.push(...formatEnglishNamesAudioFiles());
+  }
+  return result;
 }
