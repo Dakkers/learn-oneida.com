@@ -519,8 +519,8 @@ function formatDialogueAudioFiles(module: ModuleNumber) {
       sentences.forEach((s, j) => {
         result.push({
           audioFile: `/${module}/dialogue/${key}/${i + 1}-${j + 1}.mp3`,
-          en: item.en,
-          translation: item.one,
+          en: arrayify(item.en)[j],
+          translation: s,
         });
       });
     });
