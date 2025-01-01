@@ -389,7 +389,10 @@ export function getEnglishNames() {
     { key: "rachel", translation: "Lá·kel", en: "Rachel" },
     { key: "sarah", translation: "Sá·lʌ̲", en: "Sara" },
     { key: "susan", translation: "Só·s", en: "Susan" },
-  ].map((row) => ({ ...row, audioFile: `module01/english_names/${row.key}.mp3` }));
+  ].map((row) => ({
+    ...row,
+    audioFile: `module01/english_names/${row.key}.mp3`,
+  }));
 }
 
 export function getAudioFileForEnglishName(
@@ -411,7 +414,7 @@ interface PeopleTerm {
   audioFile: string;
 }
 
-export function getPeopleTerms (): {
+export function getPeopleTerms(): {
   adolescents: PeopleTerm[];
   adults: PeopleTerm[];
   children: PeopleTerm[];
@@ -449,9 +452,9 @@ export function getPeopleTerms (): {
       pronoun: "fs",
     } as PeopleTerm,
   ].map((val) => ({
-          ...val,
-          audioFile: `module01/children/${val.pronoun}.mp3`,
-        }));
+    ...val,
+    audioFile: `module01/children/${val.pronoun}.mp3`,
+  }));
 
   const dataAdolescents = [
     {
@@ -485,9 +488,9 @@ export function getPeopleTerms (): {
       pronoun: "fs",
     } as PeopleTerm,
   ].map((val) => ({
-          ...val,
-          audioFile: `module01/adolescents/${val.pronoun}.mp3`,
-        }));
+    ...val,
+    audioFile: `module01/adolescents/${val.pronoun}.mp3`,
+  }));
 
   const dataAdults = [
     {
@@ -521,9 +524,9 @@ export function getPeopleTerms (): {
       pronoun: "fs",
     } as PeopleTerm,
   ].map((val) => ({
-          ...val,
-          audioFile: `module01/adults/${val.pronoun}.mp3`,
-        }));
+    ...val,
+    audioFile: `module01/adults/${val.pronoun}.mp3`,
+  }));
 
   const dataOlderPeople = [
     {
@@ -557,16 +560,16 @@ export function getPeopleTerms (): {
       pronoun: "fs",
     } as PeopleTerm,
   ].map((val) => ({
-          ...val,
-          audioFile: `module01/older_people/${val.pronoun}.mp3`,
-        }));
+    ...val,
+    audioFile: `module01/older_people/${val.pronoun}.mp3`,
+  }));
 
   return {
     children: dataChildren,
     adolescents: dataAdolescents,
     adults: dataAdults,
     olderPeople: dataOlderPeople,
-  }
+  };
 }
 
 export function getAllModule01Paradigms(): ParadigmData[] {

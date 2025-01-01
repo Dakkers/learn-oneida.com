@@ -38,10 +38,12 @@ import {
   ParadigmData,
 } from "@/components/ParadigmTable";
 import {
+  getAboutSomeoneExamples,
   getAllModule02Paradigms,
   getDeceasedRelatives,
   getFamilyParadigms,
   getLastNameExamples,
+  getThingsThatAreTheSameExamples,
 } from "@/data/module02";
 import { formatAudioFileWithSuffix } from "@/utils/misc";
 
@@ -80,13 +82,13 @@ const MODULES_LIST: Array<{ label: string; value: ModuleNumber }> = [
 
 export default function PracticeListening() {
   const commonThings = [
-    { label: 'All audio', value: 'all_audio' },
-    { label: 'All individual words', value: 'all_words' },
-    { label: 'All sentences', value: 'all_sentences' },
-    { label: 'Dialogue', value: 'dialogue' },
-    { label: 'Paradigms', value: 'paradigms' },
-    { label: 'Translation exercises', value: 'translationExercises' },
-  ] as const
+    { label: "All audio", value: "all_audio" },
+    { label: "All individual words", value: "all_words" },
+    { label: "All sentences", value: "all_sentences" },
+    { label: "Dialogue", value: "dialogue" },
+    { label: "Paradigms", value: "paradigms" },
+    { label: "Translation exercises", value: "translationExercises" },
+  ] as const;
 
   const commonDataGetters = {
     all_audio: (m: ModuleNumber) => getAllAudioForModule(m),
@@ -94,8 +96,9 @@ export default function PracticeListening() {
     all_sentences: (m: ModuleNumber) => getSentencesForModule(m),
     dialogue: (m: ModuleNumber) => formatDialogueAudioFiles(m),
     paradigms: (m: ModuleNumber) => getParadigmAudioForModule(m),
-    translationExercises: (m: ModuleNumber) => formatTranslationExerciseAudioFiles(m),
-  } as const
+    translationExercises: (m: ModuleNumber) =>
+      formatTranslationExerciseAudioFiles(m),
+  } as const;
 
   const [category, setCategory] = useState("");
   const [subcategory, setSubcategory] = useState("");
@@ -104,18 +107,21 @@ export default function PracticeListening() {
   const [isPlaying, setIsPlaying] = useState(false);
   const wavesurferRef = useRef<{ value: WaveSurfer | null }>({ value: null });
 
-  const getDataWrapper = (m: ModuleNumber, stuff: Record<string, ((m: ModuleNumber) => Data)>) => {
+  const getDataWrapper = (
+    m: ModuleNumber,
+    stuff: Record<string, (m: ModuleNumber) => Data>,
+  ) => {
     return (subcategory: string) => {
       const funcs = {
         ...commonDataGetters,
-        ...stuff
-      }
+        ...stuff,
+      };
       if (subcategory in funcs) {
         return funcs[subcategory](m);
       }
       return () => [];
-    }
-  }
+    };
+  };
 
   const categories: Array<{
     getData: () => Data;
@@ -124,54 +130,84 @@ export default function PracticeListening() {
     value: string;
   }> = [
     {
-      getData: getDataWrapper('module01', {
+      getData: () =>
+        _.flattenDeep(
+          MODULES_LIST.map(({ value }) => getAllAudioForModule(value)),
+        ),
+      label: "All audio",
+      value: "allAudio",
+    },
+    {
+      getData: () =>
+        _.flattenDeep(
+          MODULES_LIST.map(({ value }) => getSingleWordsForModule(value)),
+        ),
+      label: "All individual words",
+      value: "allIndividualWords",
+    },
+    {
+      getData: () =>
+        _.flattenDeep(
+          MODULES_LIST.map(({ value }) => getSentencesForModule(value)),
+        ),
+      label: "All sentences",
+      value: "allSentences",
+    },
+    {
+      getData: getDataWrapper("module01", {
         englishNames: () => formatEnglishNamesAudioFiles(),
         people: () => formatPeopleAudioFiles(),
         particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
-        particleExamples: (m: ModuleNumber) => formatParticleExampleAudioFiles(m),
+        particleExamples: (m: ModuleNumber) =>
+          formatParticleExampleAudioFiles(m),
       }),
-      label: 'Module 1',
+      label: "Module 1",
       sub: [
         ...commonThings,
-        { label: 'English names', value: 'englishNames' },
-        { label: 'People', value: 'people' },
-        { label: 'Particles', value: 'particles' },
-        { label: 'Particle examples', value: 'particleExamples' },
+        { label: "English names", value: "englishNames" },
+        { label: "People", value: "people" },
+        { label: "Particles", value: "particles" },
+        { label: "Particle examples", value: "particleExamples" },
       ],
-      value: 'module01',
+      value: "module01",
     },
     {
-      getData: getDataWrapper('module02', {
+      getData: getDataWrapper("module02", {
         deceased: () => formatDeceasedRelativesAudioFiles(),
-        family: () => _.flattenDeep(getFamilyParadigms().map((d) => formatParadigmDataAsAudioFiles(d))),
+        family: () =>
+          _.flattenDeep(
+            getFamilyParadigms().map((d) => formatParadigmDataAsAudioFiles(d)),
+          ),
         particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
-        particleExamples: (m: ModuleNumber) => formatParticleExampleAudioFiles(m),
+        particleExamples: (m: ModuleNumber) =>
+          formatParticleExampleAudioFiles(m),
       }),
-      label: 'Module 2',
+      label: "Module 2",
       sub: [
         ...commonThings,
-        { label: 'Deceased relatives', value: 'deceased' },
-        { label: 'Family terms', value: 'family' },
-        { label: 'Particles', value: 'particles' },
-        { label: 'Particle examples', value: 'particleExamples' },
+        { label: "Deceased relatives", value: "deceased" },
+        { label: "Family terms", value: "family" },
+        { label: "Particles", value: "particles" },
+        { label: "Particle examples", value: "particleExamples" },
       ],
-      value: 'module02',
+      value: "module02",
     },
     {
-      getData: getDataWrapper('module03', {
+      getData: getDataWrapper("module03", {
         particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
-        particleExamples: (m: ModuleNumber) => formatParticleExampleAudioFiles(m),
+        particleExamples: (m: ModuleNumber) =>
+          formatParticleExampleAudioFiles(m),
       }),
-      label: 'Module 3',
+      label: "Module 3",
       sub: [
         // ...commonThings,
-        { label: 'Particles', value: 'particles' },
-        { label: 'Particle examples', value: 'particleExamples' },
+        { label: "Particles", value: "particles" },
+        { label: "Particle examples", value: "particleExamples" },
       ],
-      value: 'module03',
+      value: "module03",
     },
     {
-      getData: getDataWrapper('module04', {
+      getData: getDataWrapper("module04", {
         beingHere: () => setupModule4Data(["here"]),
         particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
         // particleExamples: (m: ModuleNumber) => formatParticleExampleAudioFiles(m),
@@ -198,103 +234,39 @@ export default function PracticeListening() {
         },
         want: () => setupModule4Data(["want"]),
       }),
-      label: 'Module 4',
+      label: "Module 4",
       sub: [
         // ...commonThings,
-        { label: 'Times of day', value: 'timesOfDay' },
-        { label: 'Being here', value: 'beingHere' },
-        { label: 'Thought', value: 'thought' },
-        { label: 'Want', value: 'want' },
-        { label: 'Particles', value: 'particles' },
+        { label: "Times of day", value: "timesOfDay" },
+        { label: "Being here", value: "beingHere" },
+        { label: "Thought", value: "thought" },
+        { label: "Want", value: "want" },
+        { label: "Particles", value: "particles" },
         // { label: 'Particle examples', value: 'particleExamples' },
       ],
-      value: 'module04',
+      value: "module04",
     },
     {
-      getData: getDataWrapper('module06', {
-        translationExercises: (m: ModuleNumber) => formatTranslationExerciseAudioFiles(m),
+      getData: getDataWrapper("module06", {
+        translationExercises: (m: ModuleNumber) =>
+          formatTranslationExerciseAudioFiles(m),
       }),
-      label: 'Module 6',
+      label: "Module 6",
       sub: [
         // ...commonThings,
-        { label: 'Translation exercises', value: 'translationExercises' },
+        { label: "Translation exercises", value: "translationExercises" },
       ],
-      value: 'module06',
-    },
-    {
-      getData: () => getAllAudioForModule(subcategory as ModuleNumber),
-      label: "All audio",
-      value: "allAudio",
-    },
-    {
-      getData: () => getSentencesForModule(subcategory as ModuleNumber),
-      label: "All sentences from module",
-      sub: MODULES_LIST,
-      value: "allSentences",
-    },
-    {
-      getData: () => getSingleWordsForModule(subcategory as ModuleNumber),
-      label: "All single words from module",
-      sub: MODULES_LIST,
-      value: "allIndividualWords",
-    },
-    {
-      getData: formatDialogueAudioFiles,
-      label: "Dialogue",
-      sub: [
-        // { label: "All", value: "all" },
-        { label: "Module 1", value: "module01" },
-        { label: "Module 2", value: "module02" },
-      ],
-      value: "dialogue",
-    },
-    {
-      getData: getParadigmAudioForModule,
-      label: "Paradigms from module",
-      sub: MODULES_LIST,
-      value: "paradigms_from_module",
-    },
-    {
-      getData: formatParticleAudioFiles,
-      label: "Particles",
-      sub: [
-        // { label: "All", value: "all" },
-        { label: "Module 1", value: "module01" },
-        { label: "Module 2", value: "module02" },
-        { label: "Module 3", value: "module03" },
-        { label: "Module 4", value: "module04" },
-      ],
-      value: "particles",
-    },
-    {
-      getData: formatParticleExampleAudioFiles,
-      label: "Particle example sentences",
-      sub: [
-        // { label: "All", value: "all" },
-        { label: "Module 1", value: "module01" },
-        { label: "Module 2", value: "module02" },
-        { label: "Module 3", value: "module03" },
-      ],
-      value: "particle_example_sentences",
-    },
-    {
-      getData: formatTranslationExerciseAudioFiles,
-      label: "Translation exercises",
-      sub: [
-        // { label: "All", value: "all" },
-        { label: "Module 1", value: "module01" },
-        { label: "Module 2", value: "module02" },
-        { label: "Module 6", value: "module06" },
-      ],
-      value: "exercises",
+      value: "module06",
     },
   ];
 
   const selectedCategory = categories.find((c) => c.value === category);
-  const subcategoryOptions = (selectedCategory?.sub ?? []).map((c) => ({
-    label: c.label,
-    value: c.value,
-  })).sort((a, b) => a.label.localeCompare(b.label));
+  const subcategoryOptions = (selectedCategory?.sub ?? [])
+    .map((c) => ({
+      label: c.label,
+      value: c.value,
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
 
   const updateIndex = (index: number) => {
     setIndex(index);
@@ -311,7 +283,7 @@ export default function PracticeListening() {
 
   const currentDatum = data[index];
 
-  const audioFileFormatted = `/audio/${currentDatum?.audioFile?.replace("/audio", "").replace(/^\//, '')}`;
+  const audioFileFormatted = `/audio/${currentDatum?.audioFile?.replace("/audio", "").replace(/^\//, "")}`;
 
   return (
     <>
@@ -553,11 +525,13 @@ function formatDeceasedRelativesAudioFiles(): Data {
 }
 
 function formatPeopleAudioFiles(): Data {
-  return _.flattenDeep(Object.entries(getPeopleTerms()).map(([key, val]) => val)).map((ppl) => ({
+  return _.flattenDeep(
+    Object.entries(getPeopleTerms()).map(([key, val]) => val),
+  ).map((ppl) => ({
     ...ppl,
-    en: arrayify(ppl.en).join('\n'),
-    translation: convertBreakdownToPlainText(ppl.breakdown)
-  }))
+    en: arrayify(ppl.en).join("\n"),
+    translation: convertBreakdownToPlainText(ppl.breakdown),
+  }));
 }
 
 function formatEnglishNamesAudioFiles(): Data {
@@ -651,33 +625,47 @@ function formatDialogueAudioFiles(module: ModuleNumber) {
 }
 
 function getParadigmAudioForModule(module: ModuleNumber): Data {
-  const fn = module === 'module01' ? getAllModule01Paradigms
-    : module === 'module02' ? getAllModule02Paradigms
-      : null;
+  const fn =
+    module === "module01"
+      ? getAllModule01Paradigms
+      : module === "module02"
+        ? getAllModule02Paradigms
+        : null;
   if (!fn) {
     return [];
   }
-  return _.flatten(fn().filter((d) => d.audioFolder).map((d) => formatParadigmDataAsAudioFiles(d)))
+  return _.flatten(
+    fn()
+      .filter((d) => d.audioFolder)
+      .map((d) => formatParadigmDataAsAudioFiles(d)),
+  );
 }
 
 function getSentencesForModule(module: ModuleNumber): Data {
-  return [
+  const result = [
     ...formatParticleExampleAudioFiles(module),
     ...formatTranslationExerciseAudioFiles(module),
     ...formatDialogueAudioFiles(module),
   ];
+  if (module === "module01") {
+  } else if (module === "module02") {
+    result.push(...getAboutSomeoneExamples());
+    result.push(...getLastNameExamples());
+    result.push(...getThingsThatAreTheSameExamples());
+  }
+  return result;
 }
 
-function getSingleWordsForModule (module: ModuleNumber): Data {
+function getSingleWordsForModule(module: ModuleNumber): Data {
   const result = [
     ...formatParticleAudioFiles(module),
     ...getParadigmAudioForModule(module),
   ];
-  if (module === 'module01') {
+  if (module === "module01") {
     result.push(...formatEnglishNamesAudioFiles());
     result.push(...formatPeopleAudioFiles());
-  } else if (module === 'module02') {
-    result.push(...getDeceasedRelatives())
+  } else if (module === "module02") {
+    result.push(...getDeceasedRelatives());
   }
   return result;
 }

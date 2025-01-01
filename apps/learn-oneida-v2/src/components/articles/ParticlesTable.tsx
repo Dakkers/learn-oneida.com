@@ -218,6 +218,10 @@ export function getParticlesForGroup(group: ParticlesGroup) {
     ],
   };
 
+  if (!mapping[group]) {
+    return [];
+  }
+
   return mapping[group].map((key) => {
     const result = particleList.find((p) => p.key === key);
     return {

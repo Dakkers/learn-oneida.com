@@ -59,7 +59,10 @@ import {
 } from "~/components/DialogueTable";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { getDialogueModule02 } from "~/data/module02/dialogue";
-import { getDeceasedRelatives, getThingsThatAreTheSameExamples } from "@/data/module02";
+import {
+  getDeceasedRelatives,
+  getThingsThatAreTheSameExamples,
+} from "@/data/module02";
 
 const meta: any = () => {
   return [
@@ -406,9 +409,7 @@ function NegatedCommandsSection() {
   );
 }
 
-function CommandsTable({
-  data,
-}: { data: ParadigmData }) {
+function CommandsTable({ data }: { data: ParadigmData }) {
   return (
     <ParadigmTable
       columnVisibility={{ pronounEnglish: false, pronounOneida: false }}

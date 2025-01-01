@@ -3,7 +3,7 @@ import { nonSingularPronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    audioFolder: 'module02/look_alike',
+    audioFolder: "module02/look_alike",
     translation: "{{pronoun}} look alike",
     type: "PR",
     phrases: [

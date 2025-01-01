@@ -10,7 +10,7 @@ import { getPeopleTerms } from "@/data/module01";
 
 export function PeopleArticle({ level = 1 }: ArticleProps) {
   const data = getPeopleTerms();
-  const sublevel = (level + 1) as SectionHeadingProps["level"]
+  const sublevel = (level + 1) as SectionHeadingProps["level"];
   return (
     <>
       <SectionHeading id="people-article" level={level}>
@@ -24,10 +24,7 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
         of module 3.
       </Text>
 
-      <SectionHeading
-        id="people-article-children"
-        level={sublevel}
-      >
+      <SectionHeading id="people-article-children" level={sublevel}>
         Children
       </SectionHeading>
       <TableWrapper
@@ -36,10 +33,7 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
         data={data.children}
       />
 
-      <SectionHeading
-        id="people-article-adolescents"
-        level={sublevel}
-      >
+      <SectionHeading id="people-article-adolescents" level={sublevel}>
         Adolescents
       </SectionHeading>
       <TableWrapper
@@ -48,10 +42,7 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
         data={data.adolescents}
       />
 
-      <SectionHeading
-        id="people-article-adults"
-        level={sublevel}
-      >
+      <SectionHeading id="people-article-adults" level={sublevel}>
         Adults
       </SectionHeading>
       <TableWrapper
@@ -60,10 +51,7 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
         data={data.adults}
       />
 
-      <SectionHeading
-        id="people-article-older"
-        level={sublevel}
-      >
+      <SectionHeading id="people-article-older" level={sublevel}>
         Older people
       </SectionHeading>
       <Text>

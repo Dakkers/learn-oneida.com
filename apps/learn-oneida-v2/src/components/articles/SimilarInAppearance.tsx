@@ -6,7 +6,7 @@ import { ParadigmTable } from "../ParadigmTable";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
 import { LinkWrapper } from "../LinkWrapper";
-import data from '~/data/module02/similarInApperance'
+import data from "~/data/module02/similarInApperance";
 
 export function SimilarInAppearanceArticle({ level = 1 }: ArticleProps) {
   return (
@@ -18,10 +18,7 @@ export function SimilarInAppearanceArticle({ level = 1 }: ArticleProps) {
         The root word is <Letter>-yelutal-</Letter> with the dualic feature and
         the <LinkWrapper page="rep" />.
       </Text>
-      <ParadigmTable
-        columnVisibility={{ pronounEnglish: false }}
-        data={data}
-      />
+      <ParadigmTable columnVisibility={{ pronounEnglish: false }} data={data} />
     </Flex>
   );
 }

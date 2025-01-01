@@ -13,42 +13,41 @@ import dataLoveRefl from "~/data/nolukhwa-refl";
 import dataFamiliarRefl from "~/data/yʌteli-refl";
 import dataSimilarInApperance from "~/data/module02/similarInApperance";
 
-import dataAunt from "./../family/aunt"
-import dataCousin from "./../family/cousin"
-import dataFather from "./../family/father"
-import dataGrandfather from "./../family/grandfather"
-import dataGreatGranddaughter from "./../family/great-granddaughter"
-import dataNephew from "./../family/nephew"
-import dataRelated from "./../family/related"
-import dataSisterOlder from "./../family/sister-older"
-import dataUncle from "./../family/uncle"
-import dataBrotherOlder from "./../family/brother-older"
-import dataDaughter from "./../family/daughter"
-import dataFriend from "./../family/friend"
-import dataGrandmother from "./../family/grandmother"
-import dataGreatGrandson from "./../family/great-grandson"
-import dataNiece from "./../family/niece"
-import dataSisterYounger from "./../family/sister-younger"
-import dataBrotherYounger from "./../family/brother-younger"
-import dataFamily from "./../family/family"
-import dataGranddaughter from "./../family/granddaughter"
-import dataGrandson from "./../family/grandson"
-import dataMother from "./../family/mother"
-import dataSon from "./../family/son"
+import dataAunt from "./../family/aunt";
+import dataCousin from "./../family/cousin";
+import dataFather from "./../family/father";
+import dataGrandfather from "./../family/grandfather";
+import dataGreatGranddaughter from "./../family/great-granddaughter";
+import dataNephew from "./../family/nephew";
+import dataRelated from "./../family/related";
+import dataSisterOlder from "./../family/sister-older";
+import dataUncle from "./../family/uncle";
+import dataBrotherOlder from "./../family/brother-older";
+import dataDaughter from "./../family/daughter";
+import dataFriend from "./../family/friend";
+import dataGrandmother from "./../family/grandmother";
+import dataGreatGrandson from "./../family/great-grandson";
+import dataNiece from "./../family/niece";
+import dataSisterYounger from "./../family/sister-younger";
+import dataBrotherYounger from "./../family/brother-younger";
+import dataFamily from "./../family/family";
+import dataGranddaughter from "./../family/granddaughter";
+import dataGrandson from "./../family/grandson";
+import dataMother from "./../family/mother";
+import dataSon from "./../family/son";
 
-import dataCousins from '../family/plural/cousins';
-import dataFriends from '../family/plural/friends';
-import dataChildren from '../family/plural/children';
-import dataGrandchildren from '../family/plural/grandchildren';
-import dataGrandparents from '../family/plural/grandparents';
-import dataNiblings from '../family/plural/niblings';
-import dataParents from '../family/plural/parents';
-import dataSiblingsOlder from '../family/plural/siblings-older';
-import dataSiblingsYounger from '../family/plural/siblings-younger';
-import dataUnclesAunts from '../family/plural/uncles-aunts';
+import dataCousins from "../family/plural/cousins";
+import dataFriends from "../family/plural/friends";
+import dataChildren from "../family/plural/children";
+import dataGrandchildren from "../family/plural/grandchildren";
+import dataGrandparents from "../family/plural/grandparents";
+import dataNiblings from "../family/plural/niblings";
+import dataParents from "../family/plural/parents";
+import dataSiblingsOlder from "../family/plural/siblings-older";
+import dataSiblingsYounger from "../family/plural/siblings-younger";
+import dataUnclesAunts from "../family/plural/uncles-aunts";
 import { ParadigmData } from "@/components/ParadigmTable";
 import { BreakdownArray, Pronoun } from "@ukwehuwehneke/language-components";
-
 
 export function getDeceasedRelatives() {
   const data = [
@@ -164,7 +163,7 @@ export function getLastNameExamples() {
   }));
 }
 
-export function getThingsThatAreTheSameExamples () {
+export function getThingsThatAreTheSameExamples() {
   return [
     ["They are the same", "Né· tshá·kat"],
     ["Are they the same?", "Né· kʌ́ tshá·kat"],
@@ -198,10 +197,31 @@ export function getThingsThatAreTheSameExamples () {
     audioFile: `module02/things_that_are_the_same/${i + 1}.mp3`,
     en,
     translation,
-  }))
+  }));
 }
 
-export function getFamilyParadigms (): ParadigmData[] {
+export function getAboutSomeoneExamples() {
+  return [
+    ["Do you know anything about me?", "Sanúhteʔ kʌ́ náhteʔ ní· aklihwá·ke̲"],
+    [
+      "Tell me a little bit about yourself.",
+      "Takhló·li ostúha ni·isé· salihwá·ke̲",
+    ],
+    ["What do you know about David?", "Náhteʔ né· sanúhteʔ Tá·wit laolihwá·ke̲"],
+    ["Who is this about?", "Úhkaʔ náhteʔ né· akolihwá·ke kaʔí·kʌ̲"],
+    ["What's this about?", "Náhteʔ aolihwá·ke kaʔi·kʌ̲"],
+    [
+      "I don't like anything about them.",
+      "Yáh náhteʔ né· teʔknú·wehseʔ lonulhá· laotilihwá·ke̲",
+    ],
+  ].map(([en, translation], i) => ({
+    en,
+    translation,
+    audioFile: `module02/about_examples/${i + 1}.mp3`,
+  }));
+}
+
+export function getFamilyParadigms(): ParadigmData[] {
   return [
     dataAunt,
     dataCousin,
@@ -235,7 +255,7 @@ export function getFamilyParadigms (): ParadigmData[] {
     dataSiblingsOlder,
     dataSiblingsYounger,
     dataUnclesAunts,
-  ]
+  ];
 }
 
 export function getAllModule02Paradigms(): ParadigmData[] {
@@ -254,6 +274,6 @@ export function getAllModule02Paradigms(): ParadigmData[] {
     dataLoveRefl,
     dataFamiliarRefl,
     dataSimilarInApperance,
-    ...getFamilyParadigms()
+    ...getFamilyParadigms(),
   ];
 }
