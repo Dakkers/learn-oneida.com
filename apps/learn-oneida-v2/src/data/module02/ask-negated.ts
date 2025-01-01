@@ -5,6 +5,7 @@ import {
 
 const data: ParadigmData = createParadigmData(
   {
+    audioFolder: "module02/ask_negated",
     phrases: [
       {
         breakdown: ["Tákʌʔ ", ["ʌ", "FUT"], ["sk"], "liʔwanu·túse"],

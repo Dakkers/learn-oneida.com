@@ -1,6 +1,7 @@
 import type { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
+  audioFolder: "module02/great_granddaughter",
   translation: "{{pronounPossessive}} great-granddaughter",
   type: "PP",
   phrases: [

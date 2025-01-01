@@ -1,6 +1,7 @@
 import type { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
+  audioFolder: "module02/dead",
   translation: "{{pronoun}} {{refVerb}} dead; {{pronoun}} {{refVerbPast}} died",
   type: "PB",
   phrases: [

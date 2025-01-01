@@ -1,6 +1,7 @@
 import type { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
+  audioFolder: "module01/yats",
   translation: "They call {{pronounObjective}} ...",
   type: "PP",
   phrases: [

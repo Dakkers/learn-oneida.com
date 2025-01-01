@@ -10,6 +10,7 @@ import React, {
 import {
   translatePhrase,
   SectionHeading,
+  convertBreakdownToPlainText,
 } from "@ukwehuwehneke/language-components";
 import { Box, Button, Card, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
@@ -29,14 +30,27 @@ import {
   getDialogueModule01,
   getAudioFileForEnglishName,
   getEnglishNames,
+  getAllModule01Paradigms,
+  getPeopleTerms,
 } from "~/data/module01";
+import {
+  getAudioFilenameForPronoun,
+  ParadigmData,
+} from "@/components/ParadigmTable";
+import {
+  getAllModule02Paradigms,
+  getDeceasedRelatives,
+  getFamilyParadigms,
+  getLastNameExamples,
+} from "@/data/module02";
+import { formatAudioFileWithSuffix } from "@/utils/misc";
 
 const meta: any = () => {
   return [
     { title: "Listening Practice" },
     {
       name: "description",
-      content: "Practice listening to phrases in Oneida.",
+      content: "Practice listening to words and phrases in Oneida.",
     },
   ];
 };
@@ -65,6 +79,44 @@ const MODULES_LIST: Array<{ label: string; value: ModuleNumber }> = [
 ];
 
 export default function PracticeListening() {
+  const commonThings = [
+    { label: 'All audio', value: 'all_audio' },
+    { label: 'All individual words', value: 'all_words' },
+    { label: 'All sentences', value: 'all_sentences' },
+    { label: 'Dialogue', value: 'dialogue' },
+    { label: 'Paradigms', value: 'paradigms' },
+    { label: 'Translation exercises', value: 'translationExercises' },
+  ] as const
+
+  const commonDataGetters = {
+    all_audio: (m: ModuleNumber) => getAllAudioForModule(m),
+    all_words: (m: ModuleNumber) => getSingleWordsForModule(m),
+    all_sentences: (m: ModuleNumber) => getSentencesForModule(m),
+    dialogue: (m: ModuleNumber) => formatDialogueAudioFiles(m),
+    paradigms: (m: ModuleNumber) => getParadigmAudioForModule(m),
+    translationExercises: (m: ModuleNumber) => formatTranslationExerciseAudioFiles(m),
+  } as const
+
+  const [category, setCategory] = useState("");
+  const [subcategory, setSubcategory] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isShowingAnswer, setIsShowingAnswer] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const wavesurferRef = useRef<{ value: WaveSurfer | null }>({ value: null });
+
+  const getDataWrapper = (m: ModuleNumber, stuff: Record<string, ((m: ModuleNumber) => Data)>) => {
+    return (subcategory: string) => {
+      const funcs = {
+        ...commonDataGetters,
+        ...stuff
+      }
+      if (subcategory in funcs) {
+        return funcs[subcategory](m);
+      }
+      return () => [];
+    }
+  }
+
   const categories: Array<{
     getData: () => Data;
     label: string;
@@ -72,27 +124,122 @@ export default function PracticeListening() {
     value: string;
   }> = [
     {
-      getData: () => getAllAudioForModule(subcategory as ModuleNumber),
-      label: "All audio from module",
-      sub: MODULES_LIST,
-      value: "all_audio_from_module",
-    },
-    {
-      getData: () => setupModule4Data(["here"]),
-      label: "Being somewhere",
+      getData: getDataWrapper('module01', {
+        englishNames: () => formatEnglishNamesAudioFiles(),
+        people: () => formatPeopleAudioFiles(),
+        particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
+        particleExamples: (m: ModuleNumber) => formatParticleExampleAudioFiles(m),
+      }),
+      label: 'Module 1',
       sub: [
-        // { label: "Being at home", value: "being_at_home" },
-        { label: "Being here", value: "being_here" },
-        // { label: "Being there", value: "being_there" },
+        ...commonThings,
+        { label: 'English names', value: 'englishNames' },
+        { label: 'People', value: 'people' },
+        { label: 'Particles', value: 'particles' },
+        { label: 'Particle examples', value: 'particleExamples' },
       ],
-      value: "being_somewhere",
+      value: 'module01',
     },
-    // {
-    //   label: "Living somewhere",
-    //   value: "living_somewhere",
-    // },
     {
-      getData: () => formatDialogueAudioFiles(subcategory as ModuleNumber),
+      getData: getDataWrapper('module02', {
+        deceased: () => formatDeceasedRelativesAudioFiles(),
+        family: () => _.flattenDeep(getFamilyParadigms().map((d) => formatParadigmDataAsAudioFiles(d))),
+        particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
+        particleExamples: (m: ModuleNumber) => formatParticleExampleAudioFiles(m),
+      }),
+      label: 'Module 2',
+      sub: [
+        ...commonThings,
+        { label: 'Deceased relatives', value: 'deceased' },
+        { label: 'Family terms', value: 'family' },
+        { label: 'Particles', value: 'particles' },
+        { label: 'Particle examples', value: 'particleExamples' },
+      ],
+      value: 'module02',
+    },
+    {
+      getData: getDataWrapper('module03', {
+        particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
+        particleExamples: (m: ModuleNumber) => formatParticleExampleAudioFiles(m),
+      }),
+      label: 'Module 3',
+      sub: [
+        // ...commonThings,
+        { label: 'Particles', value: 'particles' },
+        { label: 'Particle examples', value: 'particleExamples' },
+      ],
+      value: 'module03',
+    },
+    {
+      getData: getDataWrapper('module04', {
+        beingHere: () => setupModule4Data(["here"]),
+        particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
+        // particleExamples: (m: ModuleNumber) => formatParticleExampleAudioFiles(m),
+        thought: () => setupModule4Data(["thought"]),
+        timesOfDay: () => {
+          const result = [];
+          const data = createTimesOfDayData();
+
+          for (const key in data) {
+            const phrases = data[key as keyof typeof data];
+            for (const p of phrases) {
+              const translations = arrayify(p.translation);
+              for (let i = 0; i < translations.length; i++) {
+                const t = translations[i];
+                result.push({
+                  audioFile: `/module04/time_phrases/${determineTimesOfDayAudioFileName(p.en, p.translation, i)}.mp3`,
+                  en: arrayify(p.en).join("; "),
+                  translation: t,
+                });
+              }
+            }
+          }
+          return result;
+        },
+        want: () => setupModule4Data(["want"]),
+      }),
+      label: 'Module 4',
+      sub: [
+        // ...commonThings,
+        { label: 'Times of day', value: 'timesOfDay' },
+        { label: 'Being here', value: 'beingHere' },
+        { label: 'Thought', value: 'thought' },
+        { label: 'Want', value: 'want' },
+        { label: 'Particles', value: 'particles' },
+        // { label: 'Particle examples', value: 'particleExamples' },
+      ],
+      value: 'module04',
+    },
+    {
+      getData: getDataWrapper('module06', {
+        translationExercises: (m: ModuleNumber) => formatTranslationExerciseAudioFiles(m),
+      }),
+      label: 'Module 6',
+      sub: [
+        // ...commonThings,
+        { label: 'Translation exercises', value: 'translationExercises' },
+      ],
+      value: 'module06',
+    },
+    {
+      getData: () => getAllAudioForModule(subcategory as ModuleNumber),
+      label: "All audio",
+      value: "allAudio",
+    },
+    {
+      getData: () => getSentencesForModule(subcategory as ModuleNumber),
+      label: "All sentences from module",
+      sub: MODULES_LIST,
+      value: "allSentences",
+    },
+    {
+      getData: () => getSingleWordsForModule(subcategory as ModuleNumber),
+      label: "All single words from module",
+      sub: MODULES_LIST,
+      value: "allIndividualWords",
+    },
+    {
+      getData: formatDialogueAudioFiles,
       label: "Dialogue",
       sub: [
         // { label: "All", value: "all" },
@@ -102,12 +249,13 @@ export default function PracticeListening() {
       value: "dialogue",
     },
     {
-      getData: () => formatEnglishNamesAudioFiles(),
-      label: "English names",
-      value: "english_names",
+      getData: getParadigmAudioForModule,
+      label: "Paradigms from module",
+      sub: MODULES_LIST,
+      value: "paradigms_from_module",
     },
     {
-      getData: () => formatParticleAudioFiles(subcategory as ModuleNumber),
+      getData: formatParticleAudioFiles,
       label: "Particles",
       sub: [
         // { label: "All", value: "all" },
@@ -119,8 +267,7 @@ export default function PracticeListening() {
       value: "particles",
     },
     {
-      getData: () =>
-        formatParticleExampleAudioFiles(subcategory as ModuleNumber),
+      getData: formatParticleExampleAudioFiles,
       label: "Particle example sentences",
       sub: [
         // { label: "All", value: "all" },
@@ -131,70 +278,23 @@ export default function PracticeListening() {
       value: "particle_example_sentences",
     },
     {
-      getData: () => getSentenceAudioForModule(subcategory as ModuleNumber),
-      label: "Sentences from module",
-      sub: MODULES_LIST,
-      value: "sentences_from_module",
-    },
-    {
-      getData: () => {
-        const result = [];
-        const data = createTimesOfDayData();
-
-        for (const key in data) {
-          const phrases = data[key as keyof typeof data];
-          for (const p of phrases) {
-            const translations = arrayify(p.translation);
-            for (let i = 0; i < translations.length; i++) {
-              const t = translations[i];
-              result.push({
-                audioFile: `/module04/time_phrases/${determineTimesOfDayAudioFileName(p.en, p.translation, i)}.mp3`,
-                en: arrayify(p.en).join("; "),
-                translation: t,
-              });
-            }
-          }
-        }
-        return result;
-      },
-      label: "Times of day",
-      value: "times_of_day",
-    },
-    {
-      getData: () =>
-        formatTranslationExerciseAudioFiles(subcategory as ModuleNumber),
+      getData: formatTranslationExerciseAudioFiles,
       label: "Translation exercises",
       sub: [
         // { label: "All", value: "all" },
         { label: "Module 1", value: "module01" },
+        { label: "Module 2", value: "module02" },
         { label: "Module 6", value: "module06" },
       ],
       value: "exercises",
     },
-    {
-      getData: () => setupModule4Data(["thought"]),
-      label: "Thought",
-      value: "thought",
-    },
-    {
-      getData: () => setupModule4Data(["want"]),
-      label: "Wanting something to happen",
-      value: "wanting",
-    },
   ];
-
-  const [category, setCategory] = useState("");
-  const [subcategory, setSubcategory] = useState("");
-  const [index, setIndex] = useState(0);
-  const [isShowingAnswer, setIsShowingAnswer] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const wavesurferRef = useRef<{ value: WaveSurfer | null }>({ value: null });
 
   const selectedCategory = categories.find((c) => c.value === category);
   const subcategoryOptions = (selectedCategory?.sub ?? []).map((c) => ({
     label: c.label,
     value: c.value,
-  }));
+  })).sort((a, b) => a.label.localeCompare(b.label));
 
   const updateIndex = (index: number) => {
     setIndex(index);
@@ -206,10 +306,12 @@ export default function PracticeListening() {
     if (!category || !selectedCategory) {
       return [];
     }
-    return _.shuffle(selectedCategory.getData());
+    return _.shuffle(selectedCategory.getData(subcategory));
   }, [category, subcategory]);
 
   const currentDatum = data[index];
+
+  const audioFileFormatted = `/audio/${currentDatum?.audioFile?.replace("/audio", "").replace(/^\//, '')}`;
 
   return (
     <>
@@ -261,7 +363,7 @@ export default function PracticeListening() {
 
             <Box pt={4}>
               <Player
-                audioFile={`/audio${currentDatum.audioFile.replace("/audio", "")}`}
+                audioFile={audioFileFormatted}
                 autoplay
                 onPlay={setIsPlaying}
                 wavesurferRef={wavesurferRef}
@@ -387,6 +489,14 @@ function Player({
   );
 }
 
+function formatParadigmDataAsAudioFiles(data: ParadigmData) {
+  return data.phrases.map((val) => ({
+    audioFile: `/${data.audioFolder}/${getAudioFilenameForPronoun(val.pronoun, data.type)}.mp3`,
+    en: translatePhrase(data.translation, val.pronoun),
+    translation: convertBreakdownToPlainText(val.breakdown),
+  }));
+}
+
 function formatSecondsAsTime(value: number) {
   const seconds = Math.floor(value) % 60;
   const minutes = Math.floor(value / 60);
@@ -438,12 +548,24 @@ function setupModule4Data(keyGroups: string[]) {
   return result;
 }
 
-function formatEnglishNamesAudioFiles() {
+function formatDeceasedRelativesAudioFiles(): Data {
+  return getDeceasedRelatives();
+}
+
+function formatPeopleAudioFiles(): Data {
+  return _.flattenDeep(Object.entries(getPeopleTerms()).map(([key, val]) => val)).map((ppl) => ({
+    ...ppl,
+    en: arrayify(ppl.en).join('\n'),
+    translation: convertBreakdownToPlainText(ppl.breakdown)
+  }))
+}
+
+function formatEnglishNamesAudioFiles(): Data {
   const names = getEnglishNames();
   return _.flattenDeep(
     names.map((datum) =>
       arrayify(datum.translation).map((txt, i) => ({
-        audioFile: getAudioFileForEnglishName(datum, i),
+        audioFile: formatAudioFileWithSuffix(datum, i),
         en: arrayify(datum.en)[0],
         translation: txt,
       })),
@@ -451,8 +573,8 @@ function formatEnglishNamesAudioFiles() {
   );
 }
 
-function formatTranslationExerciseAudioFiles(module: ModuleNumber) {
-  if (["module02", "module03", "module04", "module05"].includes(module)) {
+function formatTranslationExerciseAudioFiles(module: ModuleNumber): Data {
+  if (["module03", "module04", "module05"].includes(module)) {
     return [];
   }
   // @ts-expect-error TODO: module number shenanigans
@@ -463,7 +585,7 @@ function formatTranslationExerciseAudioFiles(module: ModuleNumber) {
   }));
 }
 
-function formatParticleAudioFiles(module: ModuleNumber) {
+function formatParticleAudioFiles(module: ModuleNumber): Data {
   // @ts-expect-error TODO: module number shenanigans
   return getParticlesForGroup(module).map((datum) => ({
     // @ts-expect-error TODO: Why is `datum` weird?
@@ -528,7 +650,17 @@ function formatDialogueAudioFiles(module: ModuleNumber) {
   return result;
 }
 
-function getSentenceAudioForModule(module: ModuleNumber) {
+function getParadigmAudioForModule(module: ModuleNumber): Data {
+  const fn = module === 'module01' ? getAllModule01Paradigms
+    : module === 'module02' ? getAllModule02Paradigms
+      : null;
+  if (!fn) {
+    return [];
+  }
+  return _.flatten(fn().filter((d) => d.audioFolder).map((d) => formatParadigmDataAsAudioFiles(d)))
+}
+
+function getSentencesForModule(module: ModuleNumber): Data {
   return [
     ...formatParticleExampleAudioFiles(module),
     ...formatTranslationExerciseAudioFiles(module),
@@ -536,13 +668,24 @@ function getSentenceAudioForModule(module: ModuleNumber) {
   ];
 }
 
-function getAllAudioForModule(module: ModuleNumber) {
+function getSingleWordsForModule (module: ModuleNumber): Data {
   const result = [
     ...formatParticleAudioFiles(module),
-    ...getSentenceAudioForModule(module),
+    ...getParadigmAudioForModule(module),
   ];
-  if (module === "module01") {
+  if (module === 'module01') {
     result.push(...formatEnglishNamesAudioFiles());
+    result.push(...formatPeopleAudioFiles());
+  } else if (module === 'module02') {
+    result.push(...getDeceasedRelatives())
   }
+  return result;
+}
+
+function getAllAudioForModule(module: ModuleNumber): Data {
+  const result = [
+    ...getSingleWordsForModule(module),
+    ...getSentencesForModule(module),
+  ];
   return result;
 }

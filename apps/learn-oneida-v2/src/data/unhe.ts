@@ -6,6 +6,7 @@ import {
 
 const data: ParadigmData = createParadigmData(
   {
+    audioFolder: `module01/pronominals/red/U`,
     translation: "{{pronoun}} {{refVerb}} alive",
     type: "PR",
     phrases: [

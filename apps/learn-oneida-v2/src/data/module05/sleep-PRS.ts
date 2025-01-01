@@ -3,6 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
+    audioFolder: `module01/pronominals/blue/I`,
     translation: "{{pronoun}} {{refVerb}} sleeping",
     type: "PB",
     phrases: [
