@@ -6,7 +6,7 @@ import {
 
 const data: ParadigmData = createParadigmData(
   {
-    audioFolder: `module01/pronominals/red/A`,
+    audioFolder: "module01/pronominals/red/A",
     translation: "{{pronoun}} {{refVerb}} wise",
     type: "PR",
     phrases: [

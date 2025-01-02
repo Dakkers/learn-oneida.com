@@ -22,7 +22,7 @@ export default createParadigmData(
         breakdown: [["on"], "atʌloʔsl", ["a", "JOIN"], "ʔshúha"],
       },
     ],
-    // @ts-expect-error Pronoun shenanigans
   },
+  // @ts-expect-error Pronoun shenanigans
   ["i", "u", "m", "f", "f_f"],
 );

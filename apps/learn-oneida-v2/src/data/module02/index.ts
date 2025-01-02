@@ -46,7 +46,7 @@ import dataParents from "../family/plural/parents";
 import dataSiblingsOlder from "../family/plural/siblings-older";
 import dataSiblingsYounger from "../family/plural/siblings-younger";
 import dataUnclesAunts from "../family/plural/uncles-aunts";
-import { ParadigmData } from "@/components/ParadigmTable";
+import type { ParadigmData } from "@/components/ParadigmTable";
 import { BreakdownArray, Pronoun } from "@ukwehuwehneke/language-components";
 
 export function getDeceasedRelatives() {

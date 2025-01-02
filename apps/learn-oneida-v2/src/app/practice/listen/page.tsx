@@ -35,7 +35,7 @@ import {
 } from "~/data/module01";
 import {
   getAudioFilenameForPronoun,
-  ParadigmData,
+  type ParadigmData,
 } from "@/components/ParadigmTable";
 import {
   getAboutSomeoneExamples,
@@ -117,6 +117,7 @@ export default function PracticeListening() {
         ...stuff,
       };
       if (subcategory in funcs) {
+        // @ts-expect-error I'll be impressed if I figure this out
         return funcs[subcategory](m);
       }
       return () => [];
@@ -124,7 +125,7 @@ export default function PracticeListening() {
   };
 
   const categories: Array<{
-    getData: () => Data;
+    getData: (subcategory: string) => Data;
     label: string;
     sub?: { label: string; value: string }[];
     value: string;
@@ -604,8 +605,9 @@ function formatDialogueAudioFiles(module: ModuleNumber) {
       : module === "module02"
         ? getDialogueModule02()
         : null;
-  const result = [];
+  const result: Data = [];
   for (const key in data) {
+    // @ts-expect-error Not sure what to do atm
     const arr = data[key] as DialogueTableData;
     arr.forEach((item, i) => {
       if (!(item.hasAudio ?? true)) {
@@ -615,8 +617,8 @@ function formatDialogueAudioFiles(module: ModuleNumber) {
       sentences.forEach((s, j) => {
         result.push({
           audioFile: `/${module}/dialogue/${key}/${i + 1}-${j + 1}.mp3`,
-          en: item.en,
-          translation: item.one,
+          en: arrayify(item.en ?? "")[0],
+          translation: item.one[j],
         });
       });
     });

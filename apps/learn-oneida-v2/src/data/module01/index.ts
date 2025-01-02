@@ -1,6 +1,9 @@
 import type { DialogueTableData } from "@/components/DialogueTable";
-import { ParadigmData } from "@/components/ParadigmTable";
-import { BreakdownArray, Pronoun } from "@ukwehuwehneke/language-components";
+import type { ParadigmData } from "@/components/ParadigmTable";
+import type {
+  BreakdownArray,
+  Pronoun,
+} from "@ukwehuwehneke/language-components";
 import dataKnow from "~/data/anuhte";
 import dataCallDown from "~/data/module01/callDown-HAB";
 import dataForbid from "~/data/module01/forbid-PRS";

@@ -389,7 +389,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         // @ts-expect-error TODO - weird pronominals
         allowedPronouns={["i", "u", "m", "f", "f_f"]}
         columnVisibility={colVisibility}
-        // @ts-expect-error TODO - weird pronominals
         data={cousinsJson}
         // @ts-expect-error TODO - weird pronominals
         translationFn={({ pronoun }) =>
@@ -416,7 +415,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         // @ts-expect-error TODO - weird pronominals
         allowedPronouns={["i", "u", "m", "f", "f_f"]}
         columnVisibility={colVisibility}
-        // @ts-expect-error TODO - weird pronominals
         data={friendsJson}
         // @ts-expect-error TODO - weird pronominals
         translationFn={({ pronoun }) =>
