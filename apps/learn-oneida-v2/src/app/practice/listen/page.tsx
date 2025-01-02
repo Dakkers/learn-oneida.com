@@ -46,6 +46,16 @@ import {
   getThingsThatAreTheSameExamples,
 } from "@/data/module02";
 import { formatAudioFileWithSuffix } from "@/utils/misc";
+import {
+  getAllModule03Paradigms,
+  getClanAnimalList,
+  getCountingPeopleExamples,
+  getCountingPeopleLists,
+  getDialogueModule03,
+  getDomesticatedAnimalList,
+  getDomesticatedBabyAnimalList,
+  getNationsList,
+} from "@/data/module03";
 
 const meta: any = () => {
   return [
@@ -195,13 +205,23 @@ export default function PracticeListening() {
     },
     {
       getData: getDataWrapper("module03", {
+        animals: () => [
+          ...getClanAnimalList(),
+          ...getDomesticatedAnimalList(),
+          ...getDomesticatedBabyAnimalList(),
+        ],
+        countingPeople: () => formatCountingPeopleFiles(),
+        nations: () => getNationsList(),
         particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
         particleExamples: (m: ModuleNumber) =>
           formatParticleExampleAudioFiles(m),
       }),
       label: "Module 3",
       sub: [
-        // ...commonThings,
+        ...commonThings,
+        { label: "Animals", value: "animals" },
+        { label: "Counting people", value: "countingPeople" },
+        { label: "Nations", value: "nations" },
         { label: "Particles", value: "particles" },
         { label: "Particle examples", value: "particleExamples" },
       ],
@@ -549,7 +569,7 @@ function formatEnglishNamesAudioFiles(): Data {
 }
 
 function formatTranslationExerciseAudioFiles(module: ModuleNumber): Data {
-  if (["module03", "module04", "module05"].includes(module)) {
+  if (["module04", "module05"].includes(module)) {
     return [];
   }
   // @ts-expect-error TODO: module number shenanigans
@@ -596,15 +616,16 @@ function formatParticleExampleAudioFiles(module: ModuleNumber) {
 }
 
 function formatDialogueAudioFiles(module: ModuleNumber) {
-  if (["module03", "module04", "module05", "module06"].includes(module)) {
-    return [];
-  }
-  const data =
-    module === "module01"
-      ? getDialogueModule01()
-      : module === "module02"
-        ? getDialogueModule02()
-        : null;
+  const fn = {
+    module01: getDialogueModule01,
+    module02: getDialogueModule02,
+    module03: getDialogueModule03,
+    module04: null,
+    module05: null,
+    module06: null,
+  }[module];
+
+  const data = fn?.() ?? {};
   const result: Data = [];
   for (const key in data) {
     // @ts-expect-error Not sure what to do atm
@@ -626,13 +647,32 @@ function formatDialogueAudioFiles(module: ModuleNumber) {
   return result;
 }
 
+function formatCountingPeopleFiles(): Data {
+  const result: Data = [];
+  const data = getCountingPeopleLists();
+  for (const val of Object.values(data)) {
+    for (const row of val) {
+      if (row.audioFile) {
+        result.push({
+          audioFile: row.audioFile,
+          en: row.en as string,
+          translation: row.translation as string,
+        });
+      }
+    }
+  }
+  return result;
+}
+
 function getParadigmAudioForModule(module: ModuleNumber): Data {
-  const fn =
-    module === "module01"
-      ? getAllModule01Paradigms
-      : module === "module02"
-        ? getAllModule02Paradigms
-        : null;
+  const fn = {
+    module01: getAllModule01Paradigms,
+    module02: getAllModule02Paradigms,
+    module03: getAllModule03Paradigms,
+    module04: null,
+    module05: null,
+    module06: null,
+  }[module];
   if (!fn) {
     return [];
   }
@@ -654,12 +694,14 @@ function getSentencesForModule(module: ModuleNumber): Data {
     result.push(...getAboutSomeoneExamples());
     result.push(...getLastNameExamples());
     result.push(...getThingsThatAreTheSameExamples());
+  } else if (module === "module03") {
+    result.push(...getCountingPeopleExamples());
   }
   return result;
 }
 
 function getSingleWordsForModule(module: ModuleNumber): Data {
-  const result = [
+  const result: Data = [
     ...formatParticleAudioFiles(module),
     ...getParadigmAudioForModule(module),
   ];
@@ -668,6 +710,12 @@ function getSingleWordsForModule(module: ModuleNumber): Data {
     result.push(...formatPeopleAudioFiles());
   } else if (module === "module02") {
     result.push(...getDeceasedRelatives());
+  } else if (module === "module03") {
+    result.push(...getNationsList());
+    result.push(...getClanAnimalList());
+    result.push(...getDomesticatedAnimalList());
+    result.push(...getDomesticatedBabyAnimalList());
+    result.push(...formatCountingPeopleFiles());
   }
   return result;
 }

@@ -1,9 +1,12 @@
 "use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { TableWrapper } from "@/components/TableWrapper";
-import { List } from "@ukwehuwehneke/ohutsya";
+import {
+  getDomesticatedAnimalList,
+  getDomesticatedBabyAnimalList,
+} from "@/data/module03";
 
 export function DomesticatedAnimalsArticle({ level = 1 }: { level?: 1 | 2 }) {
   return (
@@ -13,54 +16,27 @@ export function DomesticatedAnimalsArticle({ level = 1 }: { level?: 1 | 2 }) {
       </SectionHeading>
 
       <Text>
-        A <b>kanáskwaʔ</b> is a domesticated animal. The root word is{" "}
-        <b>naskw</b>.
+        A <b>kanáskwaʔ</b>{" "}
+        <PlayButton filepath="/audio/module03/animals/animal.mp3" /> is a
+        domesticated animal. The root word is <b>naskw</b>.
       </Text>
 
       <TableWrapper
-        columns={[
-          { accessorKey: "en", header: "English" },
-          {
-            accessorKey: "one",
-            cell: TableWrapper.textArrayCellBold,
-            header: "Oneida",
-          },
-        ]}
-        data={[
-          ["dog", "é·lhal"],
-          ["cat", "takó·s"],
-          ["goat", "kayaʔtáklahseʔ"],
-          ["sheep", "síksik"],
-          ["chicken", "kítkit"],
-          ["pig", "kóskos"],
-          ["cow", "tyonhúhskwalut"],
-          ["horse", "kohsa·tʌ́s"],
-        ].map(([en, one]) => ({ en, one }))}
+        // @ts-expect-error Table generics?
+        columns={TableWrapper.columnsEnglishAudio}
+        data={getDomesticatedAnimalList()}
       />
 
       <Text>
-        <b>othóskaʔ</b> is a word to indicate the animal is a baby.
+        <b>othóskaʔ</b>{" "}
+        <PlayButton filepath="/audio/module03/baby_animals/baby.mp3" /> is a
+        word to indicate the animal is a baby.
       </Text>
 
       <TableWrapper
-        columns={[
-          { accessorKey: "en", header: "English" },
-          {
-            accessorKey: "one",
-            cell: TableWrapper.textArrayCellBold,
-            header: "Oneida",
-          },
-        ]}
-        data={[
-          ["puppy", "é·lhal othóskaʔ"],
-          ["kitten", "takó·s othóskaʔ"],
-          ["kid", "kayaʔtáklahseʔ othóskaʔ"],
-          ["lamb", "síksik othóskaʔ"],
-          ["chick", "kítkit othóskaʔ"],
-          ["piglet", "kóskos othóskaʔ"],
-          ["calf", "tyonhúhskwalut othóskaʔ"],
-          ["foal", "kohsa·tʌ́s othóskaʔ"],
-        ].map(([en, one]) => ({ en, one }))}
+        // @ts-expect-error Table generics?
+        columns={TableWrapper.columnsEnglishAudio}
+        data={getDomesticatedBabyAnimalList()}
       />
     </Flex>
   );
