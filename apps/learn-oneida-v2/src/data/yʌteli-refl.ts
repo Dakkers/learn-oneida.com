@@ -6,6 +6,7 @@ import {
 
 const data: ParadigmData = createParadigmData(
   {
+    audioFolder: "module02/familiar_refl",
     translation: "{{pronoun}} {{verb}} {{reflexive}}",
     type: "PR",
     phrases: [

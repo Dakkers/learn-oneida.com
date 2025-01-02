@@ -271,7 +271,6 @@ function NameSection() {
 
       <ParadigmTable
         allowedPronouns={[...singlePronouns, "ms", "fs"]}
-        audioFolder="module01/yats"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -310,7 +309,6 @@ function KnowSection() {
         A-stem (becuase the first letter is "A") that uses blue pronominals.
       </Text>
       <ParadigmTable
-        audioFolder="module01/anuhte"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,

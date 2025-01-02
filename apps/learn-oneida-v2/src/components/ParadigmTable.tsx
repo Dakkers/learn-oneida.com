@@ -178,7 +178,7 @@ export function ParadigmTable({
               <PrimitiveTableBody>
                 {rowsToShow.map((row, i) => (
                   <TableRowWrapper
-                    audioFolder={audioFolder}
+                    audioFolder={data.audioFolder ?? audioFolder}
                     key={i}
                     row={row}
                     typeFallback={data.type}
@@ -234,18 +234,10 @@ function TableRowWrapper({
     context.translationFn,
   );
 
-  const audioFilenamePronoun =
-    typeFallback !== "PB"
-      ? row.pronoun
-      : row.pronoun === "theyni"
-        ? "us"
-        : row.pronoun === "soni"
-          ? "uni"
-          : row.pronoun === "ms"
-            ? "2m"
-            : row.pronoun === "fs"
-              ? "2f"
-              : row.pronoun;
+  const audioFilenamePronoun = getAudioFilenameForPronoun(
+    row.pronoun,
+    typeFallback,
+  );
 
   return (
     <PrimitiveTableRow>
@@ -369,6 +361,7 @@ interface ColumnVisibility {
 }
 
 export interface ParadigmData {
+  audioFolder?: string;
   phrases: Row[];
   translation: string;
   type?: BreakdownType;
@@ -393,7 +386,10 @@ interface ParadigmTableContextProps {
 }
 
 export function createParadigmData(
-  data: Pick<ParadigmData, "translation" | "type" | "whispered"> & {
+  data: Pick<
+    ParadigmData,
+    "audioFolder" | "translation" | "type" | "whispered"
+  > & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },
   allowedPronouns?: Pronoun[] | typeof pronounsPurple,
@@ -436,3 +432,20 @@ export function createParadigmData(
 
 const getBreakdownTextPart = (part: BreakdownArray[number]) =>
   typeof part === "string" ? part : Array.isArray(part) ? part[0] : part.text;
+
+export function getAudioFilenameForPronoun(
+  pronoun: Pronoun,
+  typeFallback?: BreakdownType,
+) {
+  return typeFallback !== "PB"
+    ? pronoun
+    : pronoun === "theyni"
+      ? "us"
+      : pronoun === "soni"
+        ? "uni"
+        : pronoun === "ms"
+          ? "2m"
+          : pronoun === "fs"
+            ? "2f"
+            : pronoun;
+}

@@ -1,4 +1,23 @@
 import type { DialogueTableData } from "@/components/DialogueTable";
+import type { ParadigmData } from "@/components/ParadigmTable";
+import type {
+  BreakdownArray,
+  Pronoun,
+} from "@ukwehuwehneke/language-components";
+import dataKnow from "~/data/anuhte";
+import dataCallDown from "~/data/module01/callDown-HAB";
+import dataForbid from "~/data/module01/forbid-PRS";
+import dataGoToGet from "~/data/module01/goToGet-HAB";
+import dataHat from "~/data/module01/hat-NOUN";
+import dataHeart from "~/data/module01/heart-NOUN";
+import dataHouse from "~/data/module01/house-NOUN";
+import dataLikePurple from "~/data/module01/like-purple";
+import dataLonelyPfv from "~/data/module01/lonely-PFV";
+import dataParcel from "~/data/module01/parcel-NOUN";
+import dataPullingOutHab from "~/data/module01/pullingOut-HAB";
+import dataPullingOutPfv from "~/data/module01/pullingOut-PFV";
+import dataRelative from "~/data/module01/relative-NOUN";
+import dataTongue from "~/data/module01/tongue-NOUN";
 
 export function getDialogueModule01() {
   const part1: DialogueTableData = [
@@ -373,7 +392,10 @@ export function getEnglishNames() {
     { key: "rachel", translation: "Lá·kel", en: "Rachel" },
     { key: "sarah", translation: "Sá·lʌ̲", en: "Sara" },
     { key: "susan", translation: "Só·s", en: "Susan" },
-  ];
+  ].map((row) => ({
+    ...row,
+    audioFile: `module01/english_names/${row.key}.mp3`,
+  }));
 }
 
 export function getAudioFileForEnglishName(
@@ -386,4 +408,188 @@ export function getAudioFileForEnglishName(
 ) {
   const suffix = Array.isArray(datum.translation) ? `_${index + 1}` : "";
   return `/audio/module01/english_names/${datum.key}${suffix}.mp3`;
+}
+
+interface PeopleTerm {
+  en: string | string[];
+  breakdown: BreakdownArray;
+  pronoun: Pronoun;
+  audioFile: string;
+}
+
+export function getPeopleTerms(): {
+  adolescents: PeopleTerm[];
+  adults: PeopleTerm[];
+  children: PeopleTerm[];
+  olderPeople: PeopleTerm[];
+} {
+  const dataChildren = [
+    {
+      en: "1 boy",
+      breakdown: [["la"], "ksá·"],
+      pronoun: "m",
+    } as PeopleTerm,
+    {
+      en: ["2 boys", "1 boy + 1 girl"],
+      breakdown: [["te", "DUAL"], ["hni"], "ksá·"],
+      pronoun: "2m",
+    } as PeopleTerm,
+    {
+      en: ["3+ boys", "Mix of boys and girls"],
+      breakdown: [["lati"], "ksaʔshúha̲"],
+      pronoun: "ms",
+    } as PeopleTerm,
+    {
+      en: "1 girl",
+      breakdown: [["ye"], "ksá·"],
+      pronoun: "f",
+    } as PeopleTerm,
+    {
+      en: "2 girls",
+      breakdown: [["te", "DUAL"], ["kni"], "ksá·"],
+      pronoun: "2f",
+    } as PeopleTerm,
+    {
+      en: ["3+ girls"],
+      breakdown: [["kuti"], "ksaʔshúha̲"],
+      pronoun: "fs",
+    } as PeopleTerm,
+  ].map((val) => ({
+    ...val,
+    audioFile: `module01/children/${val.pronoun}.mp3`,
+  }));
+
+  const dataAdolescents = [
+    {
+      en: "1 young man",
+      breakdown: [["la"], "nikʌtlúha̲"],
+      pronoun: "m",
+    } as PeopleTerm,
+    {
+      en: ["2 young men"],
+      breakdown: [["te", "DUAL"], ["hni"], "nikʌtlúha̲"],
+      pronoun: "2m",
+    } as PeopleTerm,
+    {
+      en: ["3+ young men"],
+      breakdown: [["lati"], "nikʌtluʔokúha̲"],
+      pronoun: "ms",
+    } as PeopleTerm,
+    {
+      en: "1 young woman",
+      breakdown: [["ye"], "yaʔtaséha̲"],
+      pronoun: "f",
+    } as PeopleTerm,
+    {
+      en: "2 young women",
+      breakdown: [["te", "DUAL"], ["kni"], "yaʔtaséha̲"],
+      pronoun: "2f",
+    } as PeopleTerm,
+    {
+      en: ["3+ young women"],
+      breakdown: [["kuti"], "yaʔtaseʔokúha̲"],
+      pronoun: "fs",
+    } as PeopleTerm,
+  ].map((val) => ({
+    ...val,
+    audioFile: `module01/adolescents/${val.pronoun}.mp3`,
+  }));
+
+  const dataAdults = [
+    {
+      en: "1 man",
+      breakdown: [["l"], "u·kwé̲·"],
+      pronoun: "m",
+    } as PeopleTerm,
+    {
+      en: ["2 men", "1 man + 1 woman"],
+      breakdown: [["te", "DUAL"], ["hn"], "u·kwé̲·"],
+      pronoun: "2m",
+    } as PeopleTerm,
+    {
+      en: ["3 men", "Mix of men and women"],
+      breakdown: [["lʌn"], "u·kwé̲·"],
+      pronoun: "ms",
+    } as PeopleTerm,
+    {
+      en: "1 woman",
+      breakdown: [["yak"], "u·kwé̲·"],
+      pronoun: "f",
+    } as PeopleTerm,
+    {
+      en: "2 women",
+      breakdown: [["te", "DUAL"], ["kn"], "u·kwé̲·"],
+      pronoun: "2f",
+    } as PeopleTerm,
+    {
+      en: ["3+ women"],
+      breakdown: [["kun"], "u·kwé̲·"],
+      pronoun: "fs",
+    } as PeopleTerm,
+  ].map((val) => ({
+    ...val,
+    audioFile: `module01/adults/${val.pronoun}.mp3`,
+  }));
+
+  const dataOlderPeople = [
+    {
+      en: "1 older man",
+      breakdown: [["lo"], "kstʌ́ha̲"],
+      pronoun: "m",
+    } as PeopleTerm,
+    {
+      en: ["2 older men", "1 older man + 1 older woman"],
+      breakdown: [["loti"], "kstʌ́ha̲"],
+      pronoun: "2m",
+    } as PeopleTerm,
+    {
+      en: ["3+ older men", "Mix of older men and older women"],
+      breakdown: [["loti"], "kstʌhokúha̲"],
+      pronoun: "ms",
+    } as PeopleTerm,
+    {
+      en: "1 older woman",
+      breakdown: [["ako"], "kstʌ́ha̲"],
+      pronoun: "f",
+    } as PeopleTerm,
+    {
+      en: "2 older women",
+      breakdown: [["yoti"], "kstʌ́ha̲"],
+      pronoun: "2f",
+    } as PeopleTerm,
+    {
+      en: ["3+ older women"],
+      breakdown: [["yoti"], "kstʌhokúha̲"],
+      pronoun: "fs",
+    } as PeopleTerm,
+  ].map((val) => ({
+    ...val,
+    audioFile: `module01/older_people/${val.pronoun}.mp3`,
+  }));
+
+  return {
+    children: dataChildren,
+    adolescents: dataAdolescents,
+    adults: dataAdults,
+    olderPeople: dataOlderPeople,
+  };
+}
+
+export function getAllModule01Paradigms(): ParadigmData[] {
+  return [
+    dataKnow,
+    dataCallDown,
+    dataForbid,
+    dataGoToGet,
+    dataHat,
+    dataHeart,
+    dataHouse,
+    dataLikePurple,
+    dataLonelyPfv,
+    dataParcel,
+    dataPullingOutHab,
+    dataPullingOutPfv,
+    dataRelative,
+    dataTongue,
+  ];
 }

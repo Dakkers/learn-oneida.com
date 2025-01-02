@@ -15,6 +15,11 @@ export const pronouns: Pronoun[] = [
   ...pluralPronouns,
 ];
 
+export const nonSingularPronouns: Pronoun[] = [
+  ...dualicPronouns,
+  ...pluralPronouns,
+];
+
 /** These are pronouns for blue pronominals. Because there are duplicates in the blue set,
  * we this is a smaller set than the full pronouns list. */
 export const pronounsBlue: Pronoun[] = [

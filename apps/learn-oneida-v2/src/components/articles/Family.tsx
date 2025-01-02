@@ -36,8 +36,8 @@ import youngerSiblingsJson from "../../data/family/plural/siblings-younger";
 import unclesAuntsJson from "../../data/family/plural/uncles-aunts";
 import niblingsJson from "../../data/family/plural/niblings";
 
-import cousinsJson from "../../data/family/plural/cousins.json";
-import friendsJson from "../../data/family/plural/friends.json";
+import cousinsJson from "../../data/family/plural/cousins";
+import friendsJson from "../../data/family/plural/friends";
 
 import { Notice, Text } from "@ukwehuwehneke/ohutsya";
 import { TableOfContents as TOC } from "../TableOfContents";
@@ -102,11 +102,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>nulha</b> and uses mostly blue pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/mother"
-        columnVisibility={colVisibility}
-        data={motherJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={motherJson} />
 
       <SectionHeading id="family-aunt" level={sublevel}>
         Aunt
@@ -114,11 +110,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>nulha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/aunt"
-        columnVisibility={colVisibility}
-        data={auntJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={auntJson} />
 
       <SectionHeading id="family-grandmother" level={sublevel}>
         Grandmother
@@ -126,11 +118,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>hsotha</b> and uses mostly light-blue pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/grandmother"
-        columnVisibility={colVisibility}
-        data={grandmotherJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={grandmotherJson} />
 
       <SectionHeading id="family-older-sister" level={sublevel}>
         Older sister
@@ -138,11 +126,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>ʔkʌha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/older_sister"
-        columnVisibility={colVisibility}
-        data={olderSisterJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={olderSisterJson} />
 
       <SectionHeading id="family-daughter" level={sublevel}>
         Daughter
@@ -150,11 +134,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>yʌha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/daughter"
-        columnVisibility={colVisibility}
-        data={daughterJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={daughterJson} />
 
       <SectionHeading id="family-niece" level={sublevel}>
         Niece
@@ -162,11 +142,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>uhwatʌha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/niece"
-        columnVisibility={colVisibility}
-        data={nieceJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={nieceJson} />
 
       <SectionHeading id="family-granddaughter" level={sublevel}>
         Granddaughter
@@ -175,7 +151,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The kin term is <b>atleha</b> and uses purple pronominals.
       </Text>
       <ParadigmTable
-        audioFolder="module02/granddaughter"
         columnVisibility={colVisibility}
         data={granddaughterJson}
       />
@@ -187,7 +162,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The kin term is <b>ʔkʌha</b> and uses purple pronominals.
       </Text>
       <ParadigmTable
-        audioFolder="module02/younger_sister"
         columnVisibility={colVisibility}
         data={youngerSisterJson}
       />
@@ -199,7 +173,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The kin term is <b>atleʔslʌtuheʔ</b> and uses purple pronominals.
       </Text>
       <ParadigmTable
-        audioFolder="module02/great_granddaughter"
         columnVisibility={colVisibility}
         data={greatGranddaughterJson}
       />
@@ -210,11 +183,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>ʔniha</b> and uses mostly purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/father"
-        columnVisibility={colVisibility}
-        data={fatherJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={fatherJson} />
 
       <SectionHeading id="family-uncle" level={sublevel}>
         Uncle
@@ -222,11 +191,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>nulha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/uncle"
-        columnVisibility={colVisibility}
-        data={uncleJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={uncleJson} />
 
       <SectionHeading id="family-grandfather" level={sublevel}>
         Grandfather
@@ -234,11 +199,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>hsotha</b> and uses mostly purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/grandfather"
-        columnVisibility={colVisibility}
-        data={grandfatherJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={grandfatherJson} />
 
       <SectionHeading id="family-older-brother" level={sublevel}>
         Older brother
@@ -246,11 +207,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>ʔkʌha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/older_brother"
-        columnVisibility={colVisibility}
-        data={olderBrotherJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={olderBrotherJson} />
 
       <SectionHeading id="family-son" level={sublevel}>
         Son
@@ -258,11 +215,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>yʌha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/son"
-        columnVisibility={colVisibility}
-        data={sonJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={sonJson} />
 
       <SectionHeading id="family-nephew" level={sublevel}>
         Nephew
@@ -270,11 +223,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>uhwatʌha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/nephew"
-        columnVisibility={colVisibility}
-        data={nephewJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={nephewJson} />
 
       <SectionHeading id="family-grandson" level={sublevel}>
         Grandson
@@ -282,11 +231,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>atleha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/grandson"
-        columnVisibility={colVisibility}
-        data={grandsonJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={grandsonJson} />
 
       <SectionHeading id="family-younger-brother" level={sublevel}>
         Younger brother
@@ -295,7 +240,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The kin term is <b>ʔkʌha</b> and uses purple pronominals.
       </Text>
       <ParadigmTable
-        audioFolder="module02/younger_brother"
         columnVisibility={colVisibility}
         data={youngerBrotherJson}
       />
@@ -307,7 +251,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The kin term is <b>atleʔslʌtuheʔ</b> and uses purple pronominals.
       </Text>
       <ParadigmTable
-        audioFolder="module02/great_grandson"
         columnVisibility={colVisibility}
         data={greatGrandsonJson}
       />
@@ -319,11 +262,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The kin term is <b>alaʔse</b> and uses both light-blue and blue
         pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/cousin"
-        columnVisibility={colVisibility}
-        data={cousinJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={cousinJson} />
 
       <SectionHeading id="family-friend" level={sublevel}>
         Friend
@@ -332,11 +271,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The base is <b>atʌlo</b> and uses both light-blue and blue pronominals.
         This is technically not a kin term.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/friend"
-        columnVisibility={colVisibility}
-        data={friendJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={friendJson} />
 
       <SectionHeading id="family-family" level={sublevel}>
         Family
@@ -345,11 +280,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The root word is <b>hwatsil</b> and is a regular noun, so it uses
         light-blue pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/family"
-        columnVisibility={colVisibility}
-        data={familyJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={familyJson} />
 
       <SectionHeading id="family-related" level={sublevel}>
         Related
@@ -357,11 +288,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The root word is <b>atatnuhkw</b> and uses red pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/related"
-        columnVisibility={colVisibility}
-        data={relatedJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={relatedJson} />
 
       <SectionHeading id="family-parents" level={sublevel}>
         Parents
@@ -369,11 +296,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       <Text>
         The kin term is <b>yʌha</b> and uses purple pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/parents"
-        columnVisibility={colVisibility}
-        data={parentsJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={parentsJson} />
 
       <SectionHeading id="family-children" level={sublevel}>
         Children
@@ -383,11 +306,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
         pluralization.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/children"
-        columnVisibility={colVisibility}
-        data={childrenJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={childrenJson} />
 
       <SectionHeading id="family-grandparents" level={sublevel}>
         Grandparents
@@ -397,11 +316,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         <Letter>a</Letter> gets replaced by <Letter>okuha</Letter> for
         pluralization.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/grandparents"
-        columnVisibility={colVisibility}
-        data={grandparentsJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={grandparentsJson} />
 
       <SectionHeading id="family-grandchildren" level={sublevel}>
         Grandchildren
@@ -412,7 +327,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         pluralization.
       </Text>
       <ParadigmTable
-        audioFolder="module02/grandchildren"
         columnVisibility={colVisibility}
         data={grandchildrenJson}
       />
@@ -426,7 +340,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         pluralization.
       </Text>
       <ParadigmTable
-        audioFolder="module02/older_siblings"
         columnVisibility={colVisibility}
         data={olderSiblingsJson}
       />
@@ -440,7 +353,6 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         pluralization.
       </Text>
       <ParadigmTable
-        audioFolder="module02/younger_siblings"
         columnVisibility={colVisibility}
         data={youngerSiblingsJson}
       />
@@ -452,11 +364,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The kin term is <b>nulha</b> and uses purple pronominals. The suffix{" "}
         <Letter>ʔshuha</Letter> is added for pluralization.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/aunts_and_uncles"
-        columnVisibility={colVisibility}
-        data={unclesAuntsJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={unclesAuntsJson} />
 
       <SectionHeading id="family-nieces-and-nephews" level={sublevel}>
         Nieces and Nephews
@@ -466,11 +374,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
         pluralization.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/niblings"
-        columnVisibility={colVisibility}
-        data={niblingsJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={niblingsJson} />
 
       <SectionHeading id="family-cousins" level={sublevel}>
         Cousins
@@ -482,11 +386,9 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         are female.
       </Text>
       <ParadigmTable
-        audioFolder="module02/cousins"
         // @ts-expect-error TODO - weird pronominals
         allowedPronouns={["i", "u", "m", "f", "f_f"]}
         columnVisibility={colVisibility}
-        // @ts-expect-error TODO - weird pronominals
         data={cousinsJson}
         // @ts-expect-error TODO - weird pronominals
         translationFn={({ pronoun }) =>
@@ -510,11 +412,9 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         are female.
       </Text>
       <ParadigmTable
-        audioFolder="module02/friends"
         // @ts-expect-error TODO - weird pronominals
         allowedPronouns={["i", "u", "m", "f", "f_f"]}
         columnVisibility={colVisibility}
-        // @ts-expect-error TODO - weird pronominals
         data={friendsJson}
         // @ts-expect-error TODO - weird pronominals
         translationFn={({ pronoun }) =>
