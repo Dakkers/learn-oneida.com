@@ -27,6 +27,7 @@ export function translatePhrase(
   translationFn?: (arg: { pronoun: Pronoun }) => void,
 ) {
   return formatTranslation(phrase, {
+    note: "",
     pronoun: arrayify(PRONOUN_MAP_EN[pronoun])[0],
     pronounObjective: arrayify(PRONOUN_MAP_EN_OBJECTIVE[pronoun])[0],
     pronounPossessive: arrayify(PRONOUN_MAP_EN_POSSESSIVE[pronoun])[0],

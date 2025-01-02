@@ -6,38 +6,9 @@ import {
   type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import type { ArticleProps } from "./utils";
-import { ParadigmTable, createParadigmData } from "../ParadigmTable";
-
-const data = createParadigmData(
-  {
-    translation: "{{pronounPossessive}} last name",
-    type: "PR",
-    phrases: [
-      { breakdown: [["te", "DUAL"], ["k"], "hsʌná·se·le̲ʔ"] },
-      { breakdown: [["te", "DUAL"], ["ts"], "ʌná·se·le̲ʔ"] },
-      { breakdown: [["te", "DUAL"], ["ha"], "hsʌná·se·le̲ʔ"] },
-      { breakdown: [["te", "DUAL"], ["ye"], "hsʌná·se·le̲ʔ"] },
-      { breakdown: [["te", "DUAL"], ["hati"], "hsʌná·se·le̲ʔ"] },
-    ],
-  },
-  ["i", "u", "m", "f", "ms"],
-);
-
-const examplesList = [
-  ["Is Smith your last name?", "Smith kʌ́ tetsʌná·se·le̲ʔ"],
-  ["Smith is not my last name", "Yáh Smith thaʔtekhsʌná·se·le̲ʔ"],
-  ["Jackson is 50 Cent's last name", "Jackson né· tehahsʌná·seleʔ 50 Cent"],
-  ["Knowles is Beyonce's last name", "Knowles né· teyehsʌná·seleʔ Beyonce"],
-  [
-    "McCartney, Lennon, Harrison and Starr are the last names of the Beatles",
-    "McCartney, Lennon, Harrison kháleʔ Starr né· tehatihsʌná·seleʔ Beatles",
-  ],
-]
-  .map(TableWrapper.mapEnglishAndTranslation)
-  .map((row, i) => ({
-    ...row,
-    audioFile: `module02/last_name_examples/${i + 1}.mp3`,
-  }));
+import { ParadigmTable } from "../ParadigmTable";
+import dataLastNames from "~/data/module02/lastNames";
+import { getLastNameExamples } from "@/data/module02";
 
 export function LastNamesArticle({ level = 1 }: ArticleProps) {
   return (
@@ -46,9 +17,8 @@ export function LastNamesArticle({ level = 1 }: ArticleProps) {
         Last Names
       </SectionHeading>
       <ParadigmTable
-        audioFolder="module02/last_names"
         columnVisibility={{ pronounEnglish: false }}
-        data={data}
+        data={dataLastNames}
       />
 
       <SectionHeading
@@ -60,7 +30,7 @@ export function LastNamesArticle({ level = 1 }: ArticleProps) {
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
-        data={examplesList}
+        data={getLastNameExamples()}
       />
     </Flex>
   );

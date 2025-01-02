@@ -143,7 +143,7 @@ export function getParticlesForGroup(group: ParticlesGroup) {
       "everyone",
       "you_all_and_i",
       "they_and_i",
-      "all_of_u",
+      "all_of_you",
       "all_of_them_males",
       "all_of_them_females",
       "tho",
@@ -217,6 +217,10 @@ export function getParticlesForGroup(group: ParticlesGroup) {
       "in_a_while",
     ],
   };
+
+  if (!mapping[group]) {
+    return [];
+  }
 
   return mapping[group].map((key) => {
     const result = particleList.find((p) => p.key === key);

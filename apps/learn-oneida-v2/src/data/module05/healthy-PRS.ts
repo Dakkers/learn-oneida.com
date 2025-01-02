@@ -3,6 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
+    audioFolder: "module01/pronominals/blue/A",
     translation: "{{pronoun}} {{refVerb}} healthy",
     type: "PB",
     phrases: [

@@ -1,6 +1,7 @@
 import type { ParadigmData } from "~/components/ParadigmTable";
 
 const data: ParadigmData = {
+  audioFolder: "module02/older_siblings",
   translation: "{{pronounPossessive}} older siblings",
   type: "PP",
   phrases: [

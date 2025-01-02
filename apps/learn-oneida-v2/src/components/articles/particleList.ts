@@ -995,7 +995,7 @@ export const particleList = [
   },
 
   {
-    key: "all_of_u",
+    key: "all_of_you",
     translation: "swakwekú̲",
     en: "all of you",
     examples: [
@@ -1013,7 +1013,7 @@ export const particleList = [
     examples: [
       {
         translation: "Latikwekú yuknú·wehse̲ʔ",
-        en: "They Ms all like me.",
+        en: "They (males) all like me.",
       },
     ],
   },
@@ -1025,7 +1025,7 @@ export const particleList = [
     examples: [
       {
         translation: "Kutikwekú kutinú·wehse̲ʔ",
-        en: "They Fs all like it.",
+        en: "They (females) all like it.",
       },
     ],
   },

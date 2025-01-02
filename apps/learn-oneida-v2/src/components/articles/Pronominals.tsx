@@ -432,7 +432,6 @@ function AccordionWrapper({
           </Text>
           {data ? (
             <ParadigmTable
-              audioFolder={`module01/pronominals/${color}/${stems[i]}`}
               columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
               data={data}
               translationFn={translationFn}

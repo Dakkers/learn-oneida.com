@@ -5,6 +5,7 @@ import {
 
 const data: ParadigmData = createParadigmData(
   {
+    audioFolder: "module02/tell",
     translation: "{{agent}} tell {{subject}}!",
     type: "PP",
     phrases: [

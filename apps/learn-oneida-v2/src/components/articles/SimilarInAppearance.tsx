@@ -2,114 +2,11 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import type { ArticleProps } from "./utils";
-import { ParadigmTable, createParadigmData } from "../ParadigmTable";
-import {
-  dualicPronouns,
-  pluralPronouns,
-} from "@ukwehuwehneke/language-components";
+import { ParadigmTable } from "../ParadigmTable";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "../Letter";
 import { LinkWrapper } from "../LinkWrapper";
-
-const data = createParadigmData(
-  {
-    translation: "{{pronoun}} look alike",
-    type: "PR",
-    phrases: [
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["tsi", "REP"],
-          ["ty"],
-          ["at", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["ts", "REP"],
-          ["yaky"],
-          ["at", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["tsi", "REP"],
-          ["tsy"],
-          ["at", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["s", "REP"],
-          ["hy"],
-          ["at", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["s", "REP"],
-          ["ky"],
-          ["at", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["tsi", "REP"],
-          ["tw"],
-          ["at", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["ts", "REP"],
-          ["yakw"],
-          ["at", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["tsi", "REP"],
-          ["sw"],
-          ["at", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["s", "REP"],
-          ["hu"],
-          ["t", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-      {
-        breakdown: [
-          ["te", "DUAL"],
-          ["s", "REP"],
-          ["ku"],
-          ["t", "SRFL"],
-          "yelʌ́",
-        ],
-      },
-    ],
-  },
-  [...dualicPronouns, ...pluralPronouns],
-);
+import data from "~/data/module02/similarInApperance";
 
 export function SimilarInAppearanceArticle({ level = 1 }: ArticleProps) {
   return (
@@ -121,11 +18,7 @@ export function SimilarInAppearanceArticle({ level = 1 }: ArticleProps) {
         The root word is <Letter>-yelutal-</Letter> with the dualic feature and
         the <LinkWrapper page="rep" />.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/look_alike"
-        columnVisibility={{ pronounEnglish: false }}
-        data={data}
-      />
+      <ParadigmTable columnVisibility={{ pronounEnglish: false }} data={data} />
     </Flex>
   );
 }
