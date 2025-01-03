@@ -3,6 +3,7 @@ import type { ParadigmData } from "~/components/ParadigmTable";
 const data: ParadigmData = {
   audioFolder: "module01/anuhte",
   translation: "{{pronoun}} {{verb}}",
+  // translationFn: (pronoun: Pronoun) => `{{pronoun}} ${}`,
   type: "PB",
   phrases: [
     {

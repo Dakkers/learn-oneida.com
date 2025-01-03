@@ -23,3 +23,7 @@ export function formatAudioFileWithSuffix(
   const ext = extensions.join(".");
   return `${fileSplit.slice(0, fileSplit.length - 1).join("/")}/${filename}_${index + 1}.${ext}`;
 }
+
+export function standardizeAudioFileName(filepath: string) {
+  return `/audio/${filepath.replace("/audio", "").replace(/^\//, "")}`;
+}

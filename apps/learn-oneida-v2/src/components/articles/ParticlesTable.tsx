@@ -101,7 +101,7 @@ export function getParticlesForGroup(group: ParticlesGroup) {
       "everything",
       "a_lot",
       "yes",
-      "so_then",
+      // "so_then",
       "or",
       "question_indicator",
       "this",

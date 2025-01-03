@@ -30,6 +30,10 @@ export default function Tools() {
       href: "/flashcards",
       label: "Flashcards",
     },
+    {
+      href: "/playlists",
+      label: "Playlists",
+    },
   ];
 
   return (
