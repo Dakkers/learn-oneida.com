@@ -13,34 +13,10 @@ import {
   createParadigmData,
 } from "../ParadigmTable";
 import type { ArticleProps } from "./utils";
-
-const allowedPronouns: Pronoun[] = [
-  "i",
-  "u",
-  "m",
-  "f",
-  "uni",
-  "u2",
-  "us",
-  "yall",
-  "ms",
-  "fs",
-];
-
-const dataTurtles = magicThing({
-  phrases: createPhrasesLol("aʔnó·wál"),
-  translation: "{{pronoun}} {{refVerb}} Turtle Clan",
-});
-const dataBears = magicThing({
-  phrases: createPhrasesLol("ohkwa·lí"),
-  translation: "{{pronoun}} {{refVerb}} Bear Clan",
-});
-const dataWolves = magicThing({
-  phrases: createPhrasesLol("othayu·ní"),
-  translation: "{{pronoun}} {{refVerb}} Wolf Clan",
-});
+import { getClanAnimalList, getClanParadigms } from "@/data/module03";
 
 export function ClansArticle({ level = 1 }: ArticleProps) {
+  const data = getClanParadigms();
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="clans" level={level}>
@@ -54,78 +30,25 @@ export function ClansArticle({ level = 1 }: ArticleProps) {
         Clan Animals
       </SectionHeading>
       <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={[
-          ["bear", "ohkwa·lí̲"],
-          ["beaver", "tsyoní·tuʔ"],
-          ["deer", "oskʌnu·tú·"],
-          ["eel", "tawelú·ko"],
-          ["hawk", "kalhakúha̲"],
-          ["heron", "ohá·kwalut"],
-          ["snipe", "tawístawiʔ"],
-          ["turtle", "aʔno·wál"],
-          ["wolf", "othayu·ní̲"],
-        ].map(([en, translation]) => ({ en, translation }))}
+        // @ts-expect-error Table generics
+        columns={TableWrapper.columnsEnglishAudio}
+        data={getClanAnimalList()}
       />
       <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
         Phrases
       </SectionHeading>
       <ParadigmTable
-        allowedPronouns={allowedPronouns}
         columnVisibility={{ pronounEnglish: false }}
-        data={dataBears}
+        data={data.bear}
       />
       <ParadigmTable
-        allowedPronouns={allowedPronouns}
         columnVisibility={{ pronounEnglish: false }}
-        data={dataTurtles}
+        data={data.turtle}
       />
       <ParadigmTable
-        allowedPronouns={allowedPronouns}
         columnVisibility={{ pronounEnglish: false }}
-        data={dataWolves}
+        data={data.wolf}
       />
     </Flex>
   );
-}
-
-function createPhrasesLol(animal: string) {
-  return [
-    {
-      breakdown: [`${animal} ni`, ["wak"], "iʔtaló·tʌʔ"],
-    },
-    {
-      breakdown: [`${animal} ni`, ["sʌ"], "ʔtaló·tʌʔ"],
-    },
-    {
-      breakdown: [`${animal} ni`, ["ho"], "ʔtaló·tʌʔ"],
-    },
-    {
-      breakdown: [`${animal} ni`, ["yako"], "ʔtaló·tʌʔ"],
-    },
-    {
-      breakdown: [`${animal} ni`, ["yukn"], "iʔtaló·tʌʔ"],
-    },
-    {
-      breakdown: [`${animal} ni`, ["sn"], "iʔtaló·tʌʔ"],
-    },
-    {
-      breakdown: [`${animal} ni`, ["yukwʌ"], "ʔtaló·tʌʔ"],
-    },
-    {
-      breakdown: [`${animal} ni`, ["swʌ"], "ʔtaló·tʌʔ"],
-    },
-    {
-      breakdown: [`${animal} ni`, ["hot"], "iʔtaló·tʌʔ"],
-    },
-    {
-      breakdown: [`${animal} ni`, ["yot"], "iʔtaló·tʌʔ"],
-    },
-  ];
-}
-
-function magicThing(data: any): ParadigmData {
-  const result = createParadigmData(data, allowedPronouns);
-  result.type = "PB";
-  return result;
 }

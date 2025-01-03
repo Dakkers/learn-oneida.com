@@ -8,111 +8,7 @@ import {
   SectionHeading,
 } from "@ukwehuwehneke/language-components";
 import type { ArticleProps } from "./utils";
-
-const allowedPronouns: Pronoun[] = ["i", "u", "m", "f"];
-
-const NATIONS_LIST = [
-  {
-    en: "Mohawk",
-    translation: "Kanyʌʔkeha·ká·",
-    literal: "flint",
-    key: "mohawk",
-  },
-  {
-    en: "Oneida",
-    translation: "Onʌyoʔteʔa·ká·",
-    literal: "standing stone",
-    key: "oneida",
-  },
-  {
-    en: "Onondaga",
-    translation: "Onutaʔkeha·ká·",
-    literal: "hills",
-    key: "onondaga",
-  },
-  {
-    en: "Cayuga",
-    translation: "Kayukeʔa·ká·",
-    literal: "great swamp / pipe",
-    key: "cayuga",
-  },
-  {
-    en: "Seneca",
-    translation: "Tsiʔtwanaʔa·ká·",
-    literal: "great hill / mountain",
-    key: "seneca",
-  },
-  {
-    en: "Tuscarora",
-    translation: "Taskaló·lu",
-    literal: "hemp / shirt",
-    key: "tuscarora",
-  },
-  {
-    en: "Ojibway",
-    translation: "Latitwaʔkánhaʔ",
-    literal: "(unknown)",
-    key: "ojibway",
-  },
-  {
-    en: "Algonquin",
-    translation: "Latilu·táks",
-    literal: "They eat trees",
-    key: "algonquin",
-  },
-  {
-    en: "Cree",
-    translation: "Kalhakuhlonú",
-    literal: "People of the forest (?)",
-    key: "cree",
-  },
-  {
-    en: "Huron",
-    translation: "Thotinutáthe",
-    literal: "They're making buttermilk",
-    key: "huron",
-  },
-  {
-    en: "Inuit",
-    translation: "Otholeʔkehlo·nú",
-    literal: "People of the north",
-    key: "inuit",
-  },
-  {
-    en: "American",
-    translation: "Ostohlonuʔkeha·ká",
-    literal: "(unknown)",
-    key: "american",
-  },
-  {
-    en: "French-Canadian",
-    translation: "Walé·lu",
-    literal: "(unknown)",
-    key: "french-canadian",
-  },
-];
-
-const dataNations = createParadigmData(
-  {
-    phrases: [
-      {
-        breakdown: ["Onʌyoʔteʔa·ká· ni", ["wak"], "uhutsyó·tʌ̲ʔ"],
-      },
-      {
-        breakdown: ["Onʌyoʔteʔa·ká· ni", ["s"], "uhutsyó·tʌ̲ʔ"],
-      },
-      {
-        breakdown: ["Onʌyoʔteʔa·ká· ni", ["ha"], "uhutsyó·tʌ̲ʔ"],
-      },
-      {
-        breakdown: ["Onʌyoʔteʔa·ká· ni", ["yaka"], "uhutsyó·tʌ̲ʔ"],
-      },
-    ],
-    translation: "{{pronoun}} {{refVerb}} an Oneida",
-    type: "PB",
-  },
-  allowedPronouns,
-);
+import { getNationsList, nationsParadigm } from "@/data/module03";
 
 export function NationsArticle({ level = 1 }: ArticleProps) {
   return (
@@ -126,19 +22,20 @@ export function NationsArticle({ level = 1 }: ArticleProps) {
       </Text>
       <TableWrapper
         columns={[
-          ...TableWrapper.columnsEnglishTranslation,
+          // @ts-expect-error TODO: table generics
+          ...TableWrapper.columnsEnglishAudio,
+          // @ts-expect-error TODO: table generics
           {
             accessorKey: "literal",
             header: "Literal translation",
           },
         ]}
-        data={NATIONS_LIST}
+        data={getNationsList()}
       />
       <Text>Here are a couple examples that you can use in sentences:</Text>
       <ParadigmTable
-        allowedPronouns={allowedPronouns}
         columnVisibility={{ pronounEnglish: false }}
-        data={dataNations}
+        data={nationsParadigm()}
       />
     </Flex>
   );

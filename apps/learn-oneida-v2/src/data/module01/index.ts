@@ -247,7 +247,7 @@ export function getDialogueModule01() {
     },
     {
       one: "Yáh úhkaʔ náhteʔ sʌ́haʔ teʔkhenú·wehseʔ tsiʔ ni·yót né· Beatles",
-      en: "Thereʔs no one I like more than the Beatles.",
+      en: "There's no one I like more than the Beatles.",
     },
     {
       one: "Sʌ́haʔ kʌ́ shenú·wehseʔ neʔn Beach Boys tsiʔ ni·yót neʔn Beatles",
@@ -275,19 +275,19 @@ export function getDialogueModule01() {
     },
     {
       one: "Lonúhteʔ kʌ́ neʔn Tshyalé oh náhte luwatí·yats neʔn Beatles",
-      en: "Does Charlie know what the Beatlesʔ names are?",
+      en: "Does Charlie know what the Beatles' names are?",
     },
     {
       one: "Λ́·, lonúhteʔ neʔn Tshyalé oh náhte luwati·yáts neʔn Beatles",
-      en: "Yes, Charlie knows what the Beatlesʔ names are.",
+      en: "Yes, Charlie knows what the Beatles' names are.",
     },
     {
       one: "Lonanúhteʔ kʌ́ né· thikʌ́ latiksaʔshúha oh náhte kuwatí·yats né· thikʌ́ otikhstʌʔokúha̲",
-      en: "Do those children know what those old womenʔs names are?",
+      en: "Do those children know what those old women's names are?",
     },
     {
       one: "Táh. Yáh tehonanúhteʔ né· thikʌ́ latiksaʔshúha oh náhte kuwati·yáts thikʌ́ otikhstʌʔokúha̲",
-      en: "No. Those children don't know what those old womenʔs names are.",
+      en: "No. Those children don't know what those old women's names are.",
     },
     {
       one: "Laulhá· kʌ́ lonúhteʔ náhte yesá·yats",
@@ -299,11 +299,11 @@ export function getDialogueModule01() {
     },
     {
       one: "Klistí·n kʌ́ yutátyats né· thikʌ́ yakú·kwe̲",
-      en: "Is that womanʔs name Christine?",
+      en: "Is that woman's name Christine?",
     },
     {
       one: "Λ́·, Klistí·n yutátyats né· thikʌ́ yakú·kwe̲ʔ",
-      en: "Yes, that womanʔs name is Christine.",
+      en: "Yes, that woman's name is Christine.",
     },
     {
       one: "Onulhá· kʌ́ yonanúhteʔ náhte luwati·yáts neʔn Rolling Stones",
