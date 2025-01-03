@@ -1,5 +1,8 @@
 import type { DialogueTableData } from "@/components/DialogueTable";
-import { createParadigmData, ParadigmData } from "@/components/ParadigmTable";
+import {
+  createParadigmData,
+  type ParadigmData,
+} from "@/components/ParadigmTable";
 
 import goodKidPRS from "./goodKid-PRS";
 import goodKidPAST from "./goodKid-PAST";
@@ -10,7 +13,7 @@ import goodPersonPAST from "./goodPerson-PAST";
 import badPersonPRS from "./badPerson-PRS";
 import badPersonPAST from "./badPerson-PAST";
 import {
-  BreakdownArray,
+  type BreakdownArray,
   convertBreakdownToPlainText,
 } from "@ukwehuwehneke/language-components";
 

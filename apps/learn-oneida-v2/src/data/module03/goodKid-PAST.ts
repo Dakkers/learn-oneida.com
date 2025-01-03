@@ -7,19 +7,19 @@ export default createParadigmData(
     type: "PR",
     phrases: [
       {
-        breakdown: [["k"], "eksaʔtiyo", "hné·"],
+        breakdown: [["k"], "eksaʔtiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["h", "RPL"], ["s"], "eksaʔtiyo", "hné·"],
+        breakdown: [["h", "RPL"], ["s"], "eksaʔtiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["la"], "ksaʔtiyo", "hné·"],
+        breakdown: [["la"], "ksaʔtiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["ye"], "ksaʔtiyo", "hné·"],
+        breakdown: [["ye"], "ksaʔtiyo", ["hné·", "PAST"]],
       },
       {
-        breakdown: [["lati"], "ksaʔtiyóhs", "kweʔ"],
+        breakdown: [["lati"], "ksaʔtiyóhs", ["kweʔ", "PAST"]],
       },
     ],
   },

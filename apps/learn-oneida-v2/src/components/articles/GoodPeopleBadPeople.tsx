@@ -8,16 +8,17 @@ import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { getGoodAndBadPeopleLists } from "@/data/module03";
 import _ from "lodash";
+import { ParadigmData } from "../ParadigmTable";
 
 export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
   const sublevel = (level + 1) as SectionHeadingProps["level"];
   const data = getGoodAndBadPeopleLists();
 
-  const joinLol = (left: any, right: any) => {
-    return _.zip(left, right).map(([l, r]: [any, any]) => ({
-      pronoun: l.pronoun,
-      breakdown: l.breakdown,
-      breakdownPast: r.breakdown,
+  const joinLol = (left: ParadigmData, right: ParadigmData) => {
+    return _.zip(left.phrases, right.phrases).map(([l, r]) => ({
+      pronoun: l?.pronoun,
+      breakdown: l?.breakdown,
+      breakdownPast: r?.breakdown,
     }));
   };
 
@@ -36,7 +37,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
-        data={joinLol(data.goodPeople, data.goodPeoplePast)}
+        data={joinLol(data.goodPerson, data.goodPersonPAST)}
       />
       <SectionHeading id="bad-people" level={sublevel}>
         Bad People
@@ -44,7 +45,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
-        data={joinLol(data.badPeople, data.badPeoplePast)}
+        data={joinLol(data.badPerson, data.badPersonPAST)}
       />
       <SectionHeading id="good-kids" level={sublevel}>
         Good Kids
@@ -52,7 +53,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
-        data={joinLol(data.goodKids, data.goodKidsPast)}
+        data={joinLol(data.goodKid, data.goodKidPAST)}
       />
       <SectionHeading id="bad-kids" level={sublevel}>
         Bad Kids
@@ -60,7 +61,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
-        data={joinLol(data.badKids, data.badKidsPast)}
+        data={joinLol(data.badKid, data.badKidPAST)}
       />
     </Flex>
   );
