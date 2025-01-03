@@ -8,7 +8,7 @@ import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { getGoodAndBadPeopleLists } from "@/data/module03";
 import _ from "lodash";
-import { ParadigmData } from "../ParadigmTable";
+import type { ParadigmData } from "../ParadigmTable";
 
 export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
   const sublevel = (level + 1) as SectionHeadingProps["level"];
