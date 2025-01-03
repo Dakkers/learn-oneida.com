@@ -364,6 +364,7 @@ export interface ParadigmData {
   audioFolder?: string;
   phrases: Row[];
   translation: string;
+  translationFn?: (pronoun: Pronoun) => string;
   type?: BreakdownType;
   whispered?: boolean;
 }

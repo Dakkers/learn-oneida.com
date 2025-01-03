@@ -7,7 +7,7 @@ import {
 const data: ParadigmData = createParadigmData(
   {
     audioFolder: "module02/love_recp",
-    translation: "{{pronoun}} {{verb}} {{reflexive}}",
+    translation: "{{pronoun}} {{verb}} each other",
     type: "PR",
     phrases: [
       {

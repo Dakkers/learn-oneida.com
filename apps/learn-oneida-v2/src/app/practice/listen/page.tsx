@@ -7,55 +7,40 @@ import React, {
   useRef,
   useState,
 } from "react";
-import {
-  translatePhrase,
-  SectionHeading,
-  convertBreakdownToPlainText,
-} from "@ukwehuwehneke/language-components";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box, Button, Card, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
-import { getParticlesForGroup } from "@/components/articles/ParticlesTable";
-import { getTranslationExercisesForModule } from "@/components/practice/TranslationExercises";
 import type WaveSurfer from "wavesurfer.js";
 import WavesurferPlayer from "@wavesurfer/react";
-import { createModule4Data } from "@/data/module04";
 import {
   createTimesOfDayData,
   determineTimesOfDayAudioFileName,
 } from "@/components/articles/TimesOfDay";
 import { arrayify } from "@ukwehuwehneke/language-components";
-import { getDialogueModule02 } from "~/data/module02/dialogue";
-import type { DialogueTableData } from "@/components/DialogueTable";
 import {
-  getDialogueModule01,
-  getAudioFileForEnglishName,
-  getEnglishNames,
-  getAllModule01Paradigms,
-  getPeopleTerms,
-} from "~/data/module01";
-import {
-  getAudioFilenameForPronoun,
-  type ParadigmData,
-} from "@/components/ParadigmTable";
-import {
-  getAboutSomeoneExamples,
-  getAllModule02Paradigms,
-  getDeceasedRelatives,
-  getFamilyParadigms,
-  getLastNameExamples,
-  getThingsThatAreTheSameExamples,
-} from "@/data/module02";
-import { formatAudioFileWithSuffix } from "@/utils/misc";
-import {
-  getAllModule03Paradigms,
   getClanAnimalList,
-  getCountingPeopleExamples,
-  getCountingPeopleLists,
-  getDialogueModule03,
   getDomesticatedAnimalList,
   getDomesticatedBabyAnimalList,
   getNationsList,
 } from "@/data/module03";
+import {
+  type AudioFriendlyData,
+  formatCountingPeopleFiles,
+  formatDeceasedRelativesAudioFiles,
+  formatDialogueAudioFiles,
+  formatEnglishNamesAudioFiles,
+  formatFamilyAudioFiles,
+  formatParticleAudioFiles,
+  formatParticleExampleAudioFiles,
+  formatPeopleAudioFiles,
+  formatTranslationExerciseAudioFiles,
+  getAllAudioForModule,
+  getParadigmAudioForModule,
+  getSentencesForModule,
+  getSingleWordsForModule,
+  type ModuleNumber,
+  setupModule4Data,
+} from "./dataGetters";
 
 const meta: any = () => {
   return [
@@ -66,20 +51,6 @@ const meta: any = () => {
     },
   ];
 };
-
-type Data = Array<{
-  audioFile: string;
-  en: string;
-  translation: string;
-}>;
-
-type ModuleNumber =
-  | "module01"
-  | "module02"
-  | "module03"
-  | "module04"
-  | "module05"
-  | "module06";
 
 const MODULES_LIST: Array<{ label: string; value: ModuleNumber }> = [
   { label: "Module 1", value: "module01" },
@@ -119,7 +90,7 @@ export default function PracticeListening() {
 
   const getDataWrapper = (
     m: ModuleNumber,
-    stuff: Record<string, (m: ModuleNumber) => Data>,
+    stuff: Record<string, (m: ModuleNumber) => AudioFriendlyData>,
   ) => {
     return (subcategory: string) => {
       const funcs = {
@@ -135,7 +106,7 @@ export default function PracticeListening() {
   };
 
   const categories: Array<{
-    getData: (subcategory: string) => Data;
+    getData: (subcategory: string) => AudioFriendlyData;
     label: string;
     sub?: { label: string; value: string }[];
     value: string;
@@ -185,10 +156,7 @@ export default function PracticeListening() {
     {
       getData: getDataWrapper("module02", {
         deceased: () => formatDeceasedRelativesAudioFiles(),
-        family: () =>
-          _.flattenDeep(
-            getFamilyParadigms().map((d) => formatParadigmDataAsAudioFiles(d)),
-          ),
+        family: () => formatFamilyAudioFiles(),
         particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
         particleExamples: (m: ModuleNumber) =>
           formatParticleExampleAudioFiles(m),
@@ -482,248 +450,8 @@ function Player({
   );
 }
 
-function formatParadigmDataAsAudioFiles(data: ParadigmData) {
-  return data.phrases.map((val) => ({
-    audioFile: `/${data.audioFolder}/${getAudioFilenameForPronoun(val.pronoun, data.type)}.mp3`,
-    en: translatePhrase(data.translation, val.pronoun),
-    translation: convertBreakdownToPlainText(val.breakdown),
-  }));
-}
-
 function formatSecondsAsTime(value: number) {
   const seconds = Math.floor(value) % 60;
   const minutes = Math.floor(value / 60);
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
-}
-
-function setupModule4Data(keyGroups: string[]) {
-  const mod4Data = createModule4Data();
-  const isHereKeys = [
-    "data-is-here",
-    "data-was-here",
-    "data-will-be-here",
-    "data-might-be-here",
-    "data-is-not-here",
-    "data-was-not-here",
-    "data-will-not-be-here",
-  ];
-  const thoughtKeys = ["data-thought"];
-  const wantKeys = [
-    "data-want",
-    "data-doesnt-want",
-    "data-used-to-want",
-    // "data-didnt-used-to-want",
-  ];
-
-  const keysToUse: string[] = [];
-  const someMap: Record<string, string[]> = {
-    here: isHereKeys,
-    thought: thoughtKeys,
-    want: wantKeys,
-  };
-  for (const keyGroup of keyGroups) {
-    keysToUse.push(...(someMap[keyGroup] ?? []));
-  }
-
-  const stuff = mod4Data.filter((group) => keysToUse.includes(group.key));
-
-  const result: Data = [];
-  for (const group of stuff) {
-    for (const datum of group.data.phrases) {
-      const folder = group.key.replace("data-", "").replaceAll("-", "_");
-      result.push({
-        audioFile: `/module04/${folder}/${datum.pronoun}.mp3`,
-        en: translatePhrase(group.data.translation, datum.pronoun),
-        translation: datum.phrase,
-      });
-    }
-  }
-  return result;
-}
-
-function formatDeceasedRelativesAudioFiles(): Data {
-  return getDeceasedRelatives();
-}
-
-function formatPeopleAudioFiles(): Data {
-  return _.flattenDeep(
-    Object.entries(getPeopleTerms()).map(([key, val]) => val),
-  ).map((ppl) => ({
-    ...ppl,
-    en: arrayify(ppl.en).join("\n"),
-    translation: convertBreakdownToPlainText(ppl.breakdown),
-  }));
-}
-
-function formatEnglishNamesAudioFiles(): Data {
-  const names = getEnglishNames();
-  return _.flattenDeep(
-    names.map((datum) =>
-      arrayify(datum.translation).map((txt, i) => ({
-        audioFile: formatAudioFileWithSuffix(datum, i),
-        en: arrayify(datum.en)[0],
-        translation: txt,
-      })),
-    ),
-  );
-}
-
-function formatTranslationExerciseAudioFiles(module: ModuleNumber): Data {
-  if (["module04", "module05"].includes(module)) {
-    return [];
-  }
-  // @ts-expect-error TODO: module number shenanigans
-  return getTranslationExercisesForModule(module).map((datum) => ({
-    audioFile: `/translation_exercises/${module}/ex_${datum[0]}.mp3`,
-    en: "",
-    translation: datum[1],
-  }));
-}
-
-function formatParticleAudioFiles(module: ModuleNumber): Data {
-  // @ts-expect-error TODO: module number shenanigans
-  return getParticlesForGroup(module).map((datum) => ({
-    // @ts-expect-error TODO: Why is `datum` weird?
-    audioFile: `/particles/${module}/${datum.key}.mp3`,
-    // @ts-expect-error TODO: Why is `datum` weird?
-    en: datum.en,
-    // @ts-expect-error TODO: Why is `datum` weird?
-    translation: datum.translation,
-  }));
-}
-
-function formatParticleExampleAudioFiles(module: ModuleNumber) {
-  if (["module04", "module05", "module06"].includes(module)) {
-    return [];
-  }
-  // @ts-expect-error TODO: module number shenanigans
-  const data = getParticlesForGroup(module);
-  const result = [];
-  for (const datum of data) {
-    // @ts-expect-error TODO: Why is `datum` weird?
-    const examples = datum.examples ?? [];
-    for (let i = 0; i < examples.length; i++) {
-      // @ts-expect-error TODO: Why is `datum` weird?
-      const filepath = `/particle_examples/${module}/${datum.key}${examples.length > 1 ? `_${i + 1}` : ""}.mp3`;
-      result.push({
-        audioFile: filepath,
-        en: examples[i].en,
-        translation: examples[i].translation,
-      });
-    }
-  }
-  return result;
-}
-
-function formatDialogueAudioFiles(module: ModuleNumber) {
-  const fn = {
-    module01: getDialogueModule01,
-    module02: getDialogueModule02,
-    module03: getDialogueModule03,
-    module04: null,
-    module05: null,
-    module06: null,
-  }[module];
-
-  const data = fn?.() ?? {};
-  const result: Data = [];
-  for (const key in data) {
-    // @ts-expect-error Not sure what to do atm
-    const arr = data[key] as DialogueTableData;
-    arr.forEach((item, i) => {
-      if (!(item.hasAudio ?? true)) {
-        return;
-      }
-      const sentences = arrayify(item.one);
-      sentences.forEach((s, j) => {
-        result.push({
-          audioFile: `/${module}/dialogue/${key}/${i + 1}-${j + 1}.mp3`,
-          en: arrayify(item.en ?? "")[0],
-          translation: s,
-        });
-      });
-    });
-  }
-  return result;
-}
-
-function formatCountingPeopleFiles(): Data {
-  const result: Data = [];
-  const data = getCountingPeopleLists();
-  for (const val of Object.values(data)) {
-    for (const row of val) {
-      if (row.audioFile) {
-        result.push({
-          audioFile: row.audioFile,
-          en: row.en as string,
-          translation: row.translation as string,
-        });
-      }
-    }
-  }
-  return result;
-}
-
-function getParadigmAudioForModule(module: ModuleNumber): Data {
-  const fn = {
-    module01: getAllModule01Paradigms,
-    module02: getAllModule02Paradigms,
-    module03: getAllModule03Paradigms,
-    module04: null,
-    module05: null,
-    module06: null,
-  }[module];
-  if (!fn) {
-    return [];
-  }
-  return _.flatten(
-    fn()
-      .filter((d) => d.audioFolder)
-      .map((d) => formatParadigmDataAsAudioFiles(d)),
-  );
-}
-
-function getSentencesForModule(module: ModuleNumber): Data {
-  const result = [
-    ...formatParticleExampleAudioFiles(module),
-    ...formatTranslationExerciseAudioFiles(module),
-    ...formatDialogueAudioFiles(module),
-  ];
-  if (module === "module01") {
-  } else if (module === "module02") {
-    result.push(...getAboutSomeoneExamples());
-    result.push(...getLastNameExamples());
-    result.push(...getThingsThatAreTheSameExamples());
-  } else if (module === "module03") {
-    result.push(...getCountingPeopleExamples());
-  }
-  return result;
-}
-
-function getSingleWordsForModule(module: ModuleNumber): Data {
-  const result: Data = [
-    ...formatParticleAudioFiles(module),
-    ...getParadigmAudioForModule(module),
-  ];
-  if (module === "module01") {
-    result.push(...formatEnglishNamesAudioFiles());
-    result.push(...formatPeopleAudioFiles());
-  } else if (module === "module02") {
-    result.push(...getDeceasedRelatives());
-  } else if (module === "module03") {
-    result.push(...getNationsList());
-    result.push(...getClanAnimalList());
-    result.push(...getDomesticatedAnimalList());
-    result.push(...getDomesticatedBabyAnimalList());
-    result.push(...formatCountingPeopleFiles());
-  }
-  return result;
-}
-
-function getAllAudioForModule(module: ModuleNumber): Data {
-  const result = [
-    ...getSingleWordsForModule(module),
-    ...getSentencesForModule(module),
-  ];
-  return result;
 }
