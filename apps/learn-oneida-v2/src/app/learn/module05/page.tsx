@@ -540,11 +540,17 @@ function IrregularStativeVerbsSection() {
       <SectionHeading id="irregular-died" level={2}>
         -iheyu-
       </SectionHeading>
-      <ParadigmTable data={iheyuData} />
+      <ParadigmTable
+        columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
+        data={iheyuData}
+      />
       <SectionHeading id="irregular-small" level={2}>
         -kʌ- ni-a
       </SectionHeading>
-      <ParadigmTable data={smallData} />
+      <ParadigmTable
+        columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
+        data={smallData}
+      />
     </>
   );
 }

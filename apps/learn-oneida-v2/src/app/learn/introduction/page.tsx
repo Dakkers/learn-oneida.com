@@ -479,9 +479,6 @@ function ParadigmsSection() {
         audioFolder="module01/pronominals/red/C"
         columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
         data={dataLikeRedJson}
-        translationFn={({ pronoun }: { pronoun: Pronoun }) => ({
-          verb: ["it", "m", "f"].includes(pronoun) ? "likes" : "like",
-        })}
       />
 
       <Text>

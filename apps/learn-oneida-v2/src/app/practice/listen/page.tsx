@@ -25,6 +25,7 @@ import {
 } from "@/data/module03";
 import {
   type AudioFriendlyData,
+  audioFriendlyFormatter,
   formatCountingPeopleFiles,
   formatDeceasedRelativesAudioFiles,
   formatDialogueAudioFiles,
@@ -174,12 +175,12 @@ export default function PracticeListening() {
     {
       getData: getDataWrapper("module03", {
         animals: () => [
-          ...getClanAnimalList(),
-          ...getDomesticatedAnimalList(),
-          ...getDomesticatedBabyAnimalList(),
+          ...getClanAnimalList().map(audioFriendlyFormatter),
+          ...getDomesticatedAnimalList().map(audioFriendlyFormatter),
+          ...getDomesticatedBabyAnimalList().map(audioFriendlyFormatter),
         ],
         countingPeople: () => formatCountingPeopleFiles(),
-        nations: () => getNationsList(),
+        nations: () => getNationsList().map(audioFriendlyFormatter),
         particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
         particleExamples: (m: ModuleNumber) =>
           formatParticleExampleAudioFiles(m),
@@ -213,7 +214,7 @@ export default function PracticeListening() {
                 const t = translations[i];
                 result.push({
                   audioFile: `/module04/time_phrases/${determineTimesOfDayAudioFileName(p.en, p.translation, i)}.mp3`,
-                  en: arrayify(p.en).join("; "),
+                  en: arrayify(p.en),
                   translation: t,
                 });
               }

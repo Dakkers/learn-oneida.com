@@ -60,23 +60,11 @@ import dataHealthy from "~/data/module05/healthy-PRS";
 import dataSleeping from "~/data/module05/sleep-PRS";
 import dataEnjoy from "~/data/module05/enjoyingDoingSomething-PRS";
 import dataLikeTheTaste from "~/data/module05/likingTheTaste-PRS";
-import {
-  type ParadigmData,
-  ParadigmTable,
-  type ParadigmTableProps,
-} from "../ParadigmTable";
+import { type ParadigmData, ParadigmTable } from "../ParadigmTable";
 import type {
   PronominalRules,
   PronominalRulesPurple,
 } from "@/data/pronominals/types";
-
-const createDumbassFunction = (verb: string, verbPlural?: string) => {
-  return ({ pronoun }: { pronoun: Pronoun }) => ({
-    verb: ["it", "m", "f"].includes(pronoun)
-      ? (verbPlural ?? `${verb}s`)
-      : verb,
-  });
-};
 
 export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
   const level = (_level + 1) as SectionHeadingProps["level"];
@@ -146,9 +134,8 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         Subjective Pronominals (Red)
       </SectionHeading>
       <AccordionWrapper
-        color="red"
         items={[
-          [dataLikeRedJson, "-nuhweʔ-", createDumbassFunction("like")],
+          [dataLikeRedJson, "-nuhweʔ-"],
           [dataWise, "-attok-"],
           [dataLooking, "-ehsak-"],
           [dataAtHome, "-iʔtlu-"],
@@ -164,15 +151,10 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         Objective Pronominals (Blue)
       </SectionHeading>
       <AccordionWrapper
-        color="blue"
         items={[
-          [dataLikeBlueJson, "-nuhweʔ-", createDumbassFunction("like")],
+          [dataLikeBlueJson, "-nuhweʔ-"],
           [dataHealthy, "-ataʔkalite-"],
-          [
-            dataLikeTheTaste,
-            "-ekaʔ-",
-            createDumbassFunction("like the taste", "likes the taste"),
-          ],
+          [dataLikeTheTaste, "-ekaʔ-"],
           [dataSleeping, "-itaʔ-"],
           [dataPulledOut, "-otshyu-"],
           [dataEnjoy, "-uʔweskwani-"],
@@ -185,7 +167,6 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         Person-to-Person Pronominals (Purple)
       </SectionHeading>
       <AccordionWrapper
-        color="purple"
         items={[
           [dataLikePurple, "-nuhweʔ-"],
           [dataForbid, "-ahlist-"],
@@ -202,7 +183,6 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         Possessive Pronominals (Light Blue)
       </SectionHeading>
       <AccordionWrapper
-        color="light_blue"
         items={[
           [dataHouse, "-nuhs-"],
           [dataHat, "-ana?alol-"],
@@ -369,6 +349,7 @@ function PronominalPrimitiveTableText({
         const result = arrayify(b);
         const opIdx = result.findIndex((el) => el === "OP");
         if (opIdx >= 0) {
+          // @ts-expect-error Not sure what this is
           result[opIdx] = ["OP", typeFallback];
         }
         return result;
@@ -409,23 +390,14 @@ function ExcpPlay({ num }: { num: string }) {
 }
 
 function AccordionWrapper({
-  color,
   items,
 }: {
-  color: "red" | "blue" | "light_blue" | "purple";
-  items: Array<
-    | [ParadigmData | null, string]
-    | [
-        ParadigmData | null,
-        string,
-        ParadigmTableProps["translationFn"] | undefined,
-      ]
-  >;
+  items: Array<[ParadigmData | null, string]>;
 }) {
   const stems = ["C", "A", "E", "I", "O", "U", "Λ"];
   return (
     <Accordion type="multiple">
-      {items.map(([data, root, translationFn], i) => (
+      {items.map(([data, root], i) => (
         <Accordion.Item id={stems[i]} title={`${stems[i]}-stem`} key={i}>
           <Text>
             The root word is <Letter>{root}</Letter>.
@@ -434,7 +406,6 @@ function AccordionWrapper({
             <ParadigmTable
               columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
               data={data}
-              translationFn={translationFn}
             />
           ) : (
             <Text>

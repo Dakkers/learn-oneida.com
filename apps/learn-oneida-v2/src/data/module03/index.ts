@@ -13,6 +13,7 @@ import goodPersonPAST from "./goodPerson-PAST";
 import badPersonPRS from "./badPerson-PRS";
 import badPersonPAST from "./badPerson-PAST";
 import {
+  arrayify,
   type BreakdownArray,
   convertBreakdownToPlainText,
 } from "@ukwehuwehneke/language-components";
@@ -397,14 +398,14 @@ export function getCountingPeopleLists() {
       translation: convertBreakdownToPlainText(breakdown as BreakdownArray),
     })),
     women: [
-      ["one", ["ts", ["ye"], "yá·tat"], "f"],
-      ["two", [["te", "DUAL"], ["kni"], "yáhse̲"], "2f"],
-      ["three", ["áhsʌ ni", ["kutí"]], "fs"],
-      ["four", ["kayé ni", ["kutí"]]],
-      ["five", ["wísk ni", ["kutí"]]],
+      ["one female", ["ts", ["ye"], "yá·tat"], "f"],
+      ["two females", [["te", "DUAL"], ["kni"], "yáhse̲"], "2f"],
+      ["three females", ["áhsʌ ni", ["kutí"]], "fs"],
+      ["four females", ["kayé ni", ["kutí"]]],
+      ["five females", ["wísk ni", ["kutí"]]],
     ].map(([en, breakdown, key]) => ({
       audioFile: key ? `module03/counting_people/${key}.mp3` : undefined,
-      en,
+      en: arrayify(en),
       breakdown,
       translation: convertBreakdownToPlainText(breakdown as BreakdownArray),
     })),
@@ -420,7 +421,7 @@ export function getCountingPeopleExamples() {
     ["three adults", "áhsʌ nihatí lʌnukwé̲·"],
     ["two older women", "tekniyáhse yotikhstʌ́ha̲"],
   ].map(([en, translation], i) => ({
-    en,
+    en: arrayify(en),
     translation,
     audioFile: `module03/counting_people_examples/${i + 1}.mp3`,
   }));

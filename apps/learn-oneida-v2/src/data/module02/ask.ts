@@ -3,7 +3,7 @@ import {
   type ParadigmData,
 } from "~/components/ParadigmTable";
 
-const data: ParadigmData = createParadigmData(
+const data = createParadigmData(
   {
     audioFolder: "module02/ask",
     translation: "{{agent}} ask {{subject}}!",

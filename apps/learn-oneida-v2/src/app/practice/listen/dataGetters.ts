@@ -1,9 +1,12 @@
 import {
-  translatePhrase,
   convertBreakdownToPlainText,
+  translatePhraseV2,
 } from "@ukwehuwehneke/language-components";
 import _ from "lodash";
-import { getParticlesForGroup } from "@/components/articles/ParticlesTable";
+import {
+  formatParticleExampleAudio,
+  getParticlesForGroup,
+} from "@/components/articles/ParticlesTable";
 import { getTranslationExercisesForModule } from "@/components/practice/TranslationExercises";
 import { createModule4Data } from "@/data/module04";
 import { arrayify } from "@ukwehuwehneke/language-components";
@@ -11,7 +14,6 @@ import { getDialogueModule02 } from "~/data/module02/dialogue";
 import type { DialogueTableData } from "@/components/DialogueTable";
 import {
   getDialogueModule01,
-  getAudioFileForEnglishName,
   getEnglishNames,
   getAllModule01Paradigms,
   getPeopleTerms,
@@ -48,21 +50,25 @@ export type ModuleNumber =
   | "module05"
   | "module06";
 
-export type AudioFriendlyData = Array<{
+export type AudioFriendly = {
   audioFile: string;
-  en: string;
+  en: string[];
   translation: string;
-}>;
+};
 
-export function formatParadigmDataAsAudioFiles(data: ParadigmData) {
+export type AudioFriendlyData = Array<AudioFriendly>;
+
+export function formatParadigmDataAsAudioFiles(
+  data: ParadigmData,
+): AudioFriendlyData {
   return data.phrases.map((val) => ({
     audioFile: `/${data.audioFolder}/${getAudioFilenameForPronoun(val.pronoun, data.type)}.mp3`,
-    en: translatePhrase(data.translation, val.pronoun),
+    en: translatePhraseV2(data, val.pronoun),
     translation: convertBreakdownToPlainText(val.breakdown),
   }));
 }
 
-export function setupModule4Data(keyGroups: string[]) {
+export function setupModule4Data(keyGroups: string[]): AudioFriendlyData {
   const mod4Data = createModule4Data();
   const isHereKeys = [
     "data-is-here",
@@ -99,7 +105,7 @@ export function setupModule4Data(keyGroups: string[]) {
       const folder = group.key.replace("data-", "").replaceAll("-", "_");
       result.push({
         audioFile: `/module04/${folder}/${datum.pronoun}.mp3`,
-        en: translatePhrase(group.data.translation, datum.pronoun),
+        en: translatePhraseV2(group.data, datum.pronoun),
         translation: datum.phrase,
       });
     }
@@ -108,7 +114,7 @@ export function setupModule4Data(keyGroups: string[]) {
 }
 
 export function formatDeceasedRelativesAudioFiles(): AudioFriendlyData {
-  return getDeceasedRelatives();
+  return getDeceasedRelatives().map(audioFriendlyFormatter);
 }
 
 export function formatPeopleAudioFiles(): AudioFriendlyData {
@@ -116,7 +122,7 @@ export function formatPeopleAudioFiles(): AudioFriendlyData {
     Object.entries(getPeopleTerms()).map(([key, val]) => val),
   ).map((ppl) => ({
     ...ppl,
-    en: arrayify(ppl.en).join("\n"),
+    en: arrayify(ppl.en),
     translation: convertBreakdownToPlainText(ppl.breakdown),
   }));
 }
@@ -127,7 +133,7 @@ export function formatEnglishNamesAudioFiles(): AudioFriendlyData {
     names.map((datum) =>
       arrayify(datum.translation).map((txt, i) => ({
         audioFile: formatAudioFileWithSuffix(datum, i),
-        en: arrayify(datum.en)[0],
+        en: arrayify(datum.en),
         translation: txt,
       })),
     ),
@@ -143,7 +149,7 @@ export function formatTranslationExerciseAudioFiles(
   // @ts-expect-error TODO: module number shenanigans
   return getTranslationExercisesForModule(module).map((datum) => ({
     audioFile: `/translation_exercises/${module}/ex_${datum[0]}.mp3`,
-    en: "",
+    en: [],
     translation: datum[1],
   }));
 }
@@ -153,16 +159,15 @@ export function formatParticleAudioFiles(
 ): AudioFriendlyData {
   // @ts-expect-error TODO: module number shenanigans
   return getParticlesForGroup(module).map((datum) => ({
-    // @ts-expect-error TODO: Why is `datum` weird?
     audioFile: `/particles/${module}/${datum.key}.mp3`,
-    // @ts-expect-error TODO: Why is `datum` weird?
-    en: datum.en,
-    // @ts-expect-error TODO: Why is `datum` weird?
+    en: arrayify(datum.en),
     translation: datum.translation,
   }));
 }
 
-export function formatParticleExampleAudioFiles(module: ModuleNumber) {
+export function formatParticleExampleAudioFiles(
+  module: ModuleNumber,
+): AudioFriendlyData {
   if (["module04", "module05", "module06"].includes(module)) {
     return [];
   }
@@ -170,14 +175,12 @@ export function formatParticleExampleAudioFiles(module: ModuleNumber) {
   const data = getParticlesForGroup(module);
   const result = [];
   for (const datum of data) {
-    // @ts-expect-error TODO: Why is `datum` weird?
     const examples = datum.examples ?? [];
     for (let i = 0; i < examples.length; i++) {
-      // @ts-expect-error TODO: Why is `datum` weird?
-      const filepath = `/particle_examples/${module}/${datum.key}${examples.length > 1 ? `_${i + 1}` : ""}.mp3`;
+      const filepath = formatParticleExampleAudio(module, datum.key, i);
       result.push({
         audioFile: filepath,
-        en: examples[i].en,
+        en: arrayify(examples[i].en),
         translation: examples[i].translation,
       });
     }
@@ -208,7 +211,7 @@ export function formatDialogueAudioFiles(module: ModuleNumber) {
       sentences.forEach((s, j) => {
         result.push({
           audioFile: `/${module}/dialogue/${key}/${i + 1}-${j + 1}.mp3`,
-          en: arrayify(item.en ?? "")[0],
+          en: arrayify(item.en ?? ""),
           translation: s,
         });
       });
@@ -231,7 +234,7 @@ export function formatCountingPeopleFiles(): AudioFriendlyData {
       if (row.audioFile) {
         result.push({
           audioFile: row.audioFile,
-          en: row.en as string,
+          en: arrayify(row.en) as string[],
           translation: row.translation as string,
         });
       }
@@ -289,12 +292,12 @@ export function getSingleWordsForModule(
     result.push(...formatEnglishNamesAudioFiles());
     result.push(...formatPeopleAudioFiles());
   } else if (module === "module02") {
-    result.push(...getDeceasedRelatives());
+    result.push(...formatDeceasedRelativesAudioFiles());
   } else if (module === "module03") {
-    result.push(...getNationsList());
-    result.push(...getClanAnimalList());
-    result.push(...getDomesticatedAnimalList());
-    result.push(...getDomesticatedBabyAnimalList());
+    result.push(...getNationsList().map(audioFriendlyFormatter));
+    result.push(...getClanAnimalList().map(audioFriendlyFormatter));
+    result.push(...getDomesticatedAnimalList().map(audioFriendlyFormatter));
+    result.push(...getDomesticatedBabyAnimalList().map(audioFriendlyFormatter));
     result.push(...formatCountingPeopleFiles());
   }
   return result;
@@ -306,4 +309,15 @@ export function getAllAudioForModule(module: ModuleNumber): AudioFriendlyData {
     ...getSentencesForModule(module),
   ];
   return result;
+}
+
+export function audioFriendlyFormatter(
+  data: Pick<AudioFriendly, "audioFile" | "translation"> & {
+    en: string;
+  },
+): AudioFriendly {
+  return {
+    ...data,
+    en: arrayify(data.en),
+  };
 }
