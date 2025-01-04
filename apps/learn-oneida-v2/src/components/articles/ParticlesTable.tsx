@@ -199,7 +199,7 @@ export function getParticlesForGroup(group: ParticlesGroup) {
       "forever",
       "long_time",
       "such_a_long_time",
-      "short_length_of_time",
+      "a_short_length_of_time",
       "how_long_of_a_time",
       "ago",
       "until",
