@@ -391,7 +391,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         columnVisibility={colVisibility}
         data={cousinsJson}
         // @ts-expect-error TODO - weird pronominals
-        translationFn={({ pronoun }) =>
+        legacyTranslationFn={({ pronoun }) =>
           // @ts-expect-error TODO - weird pronominals
           pronoun === "f_f"
             ? {
@@ -417,7 +417,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         columnVisibility={colVisibility}
         data={friendsJson}
         // @ts-expect-error TODO - weird pronominals
-        translationFn={({ pronoun }) =>
+        legacyTranslationFn={({ pronoun }) =>
           // @ts-expect-error TODO - weird pronominals
           pronoun === "f_f"
             ? {

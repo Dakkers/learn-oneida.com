@@ -5,7 +5,7 @@ import { Divider, Link, Notice, Text } from "@ukwehuwehneke/ohutsya";
 import React from "react";
 import { singlePronouns } from "@ukwehuwehneke/language-components";
 import yatsJson from "~/data/yats";
-import anuhteJson from "~/data/anuhte";
+import anuhteJson from "@/data/module01/know-PRS";
 import { EnglishNamesArticle } from "~/components/articles/EnglishNames";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { Pronominal } from "~/components/Pronominal";
@@ -314,9 +314,6 @@ function KnowSection() {
           pronounOneida: false,
         }}
         data={anuhteJson}
-        translationFn={({ pronoun }) => ({
-          verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
-        })}
       />
     </>
   );

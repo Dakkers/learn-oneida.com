@@ -141,15 +141,6 @@ function ToolsParadigmInner() {
   const defaultKey =
     wordSearchParam in dataToUse ? wordSearchParam : "like-red";
 
-  const translatorFns = {
-    i_tlu: ({ pronoun }: { pronoun: Pronoun }) => ({
-      verb: ["it", "m", "f"].includes(pronoun) ? "resides" : "reside",
-    }),
-    "like-red": ({ pronoun }: { pronoun: Pronoun }) => ({
-      verb: ["it", "m", "f"].includes(pronoun) ? "likes" : "like",
-    }),
-  } as const;
-
   const [word, setWord] = useState<keyof typeof dataToUse>(defaultKey);
   const [paradigm, setParadigm] = useState("all");
   const [hasStarted, setHasStarted] = useState(false);
@@ -257,8 +248,6 @@ function ToolsParadigmInner() {
           }}
           data={dataToUse[word]}
           isTesting
-          // @ts-expect-error To be addressed in LO-20
-          translationFn={translatorFns[word]}
         />
       )}
     </>

@@ -32,6 +32,7 @@ import {
   PRONOUN_MAP_ONEIDA,
   type Pronoun,
   pronouns,
+  translatePhraseV2,
 } from "@ukwehuwehneke/language-components";
 import {
   type BreakdownArray,
@@ -64,10 +65,10 @@ export interface ParadigmTableProps {
   audioFolder?: string;
   bleed?: BleedProps["mx"];
   columnVisibility?: Partial<ColumnVisibility>;
-  data: ParadigmData;
+  data: ParadigmTableContextProps["data"];
   isTesting?: boolean;
   translationKeys?: Record<string, string>;
-  translationFn?: ParadigmTableContextProps["translationFn"];
+  legacyTranslationFn?: ParadigmTableContextProps["legacyTranslationFn"];
 }
 
 export function ParadigmTable({
@@ -77,7 +78,7 @@ export function ParadigmTable({
   columnVisibility = {},
   data,
   isTesting = false,
-  translationFn,
+  legacyTranslationFn,
 }: ParadigmTableProps) {
   const [colVisibility, setColVisibility] = React.useState({
     pronounOneida: true,
@@ -126,11 +127,11 @@ export function ParadigmTable({
     <ParadigmTableContext.Provider
       value={{
         colVisibility,
+        data,
         form,
         isTesting,
         showBreakdown,
-        translation: data.translation,
-        translationFn,
+        legacyTranslationFn,
       }}
     >
       <Bleed mx={bleed}>
@@ -228,10 +229,10 @@ function TableRowWrapper({
     throw new Error("Missing context");
   }
   const { colVisibility, showBreakdown } = context;
-  const translatedPhrase = translatePhrase(
-    context.translation,
+  const translatedPhrase = translatePhraseV2(
+    context.data,
     row.pronoun,
-    context.translationFn,
+    context.legacyTranslationFn,
   );
 
   const audioFilenamePronoun = getAudioFilenameForPronoun(
@@ -378,18 +379,20 @@ interface Row {
 
 interface ParadigmTableContextProps {
   colVisibility: ColumnVisibility;
+  data: ParadigmData;
   // @ts-expect-error To be addressed in LO-15
   form: SpecialFormType;
   isTesting?: boolean;
   showBreakdown?: boolean;
-  translation: string;
-  translationFn?: ({ pronoun }: { pronoun: Pronoun }) => Record<string, string>;
+  legacyTranslationFn?: ({
+    pronoun,
+  }: { pronoun: Pronoun }) => Record<string, string>;
 }
 
 export function createParadigmData(
   data: Pick<
     ParadigmData,
-    "audioFolder" | "translation" | "type" | "whispered"
+    "audioFolder" | "translation" | "translationFn" | "type" | "whispered"
   > & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },

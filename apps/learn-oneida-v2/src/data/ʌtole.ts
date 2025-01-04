@@ -4,9 +4,9 @@ import {
   type ParadigmData,
 } from "~/components/ParadigmTable";
 
-const data: ParadigmData = createParadigmData(
+const data = createParadigmData(
   {
-    audioFolder: "module01/pronominals/red/Λ",
+    audioFolder: "module01/pronominals/red/V",
     translation: "{{pronoun}} {{refVerb}} hard to please",
     type: "PR",
     phrases: [

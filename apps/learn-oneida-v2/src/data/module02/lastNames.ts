@@ -3,7 +3,7 @@ import {
   type ParadigmData,
 } from "~/components/ParadigmTable";
 
-const data: ParadigmData = createParadigmData(
+const data = createParadigmData(
   {
     audioFolder: "module02/last_names",
     translation: "{{pronounPossessive}} last name",
