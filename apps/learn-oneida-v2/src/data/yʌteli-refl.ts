@@ -4,10 +4,10 @@ import {
   type ParadigmData,
 } from "~/components/ParadigmTable";
 
-const data: ParadigmData = createParadigmData(
+const data = createParadigmData(
   {
     audioFolder: "module02/familiar_refl",
-    translation: "{{pronoun}} {{verb}} {{reflexive}}",
+    translation: "{{pronoun}} {{refVerb}} familiar with {{reflexive}}",
     type: "PR",
     phrases: [
       {

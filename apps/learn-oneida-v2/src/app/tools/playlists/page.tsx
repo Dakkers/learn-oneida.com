@@ -2,7 +2,14 @@
 
 import React, { useMemo, useRef, useState } from "react";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { Button, Card, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
+import {
+  Button,
+  Card,
+  Flex,
+  Select,
+  Text,
+  TextArray,
+} from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import {
   type AudioFriendlyData,
@@ -12,10 +19,10 @@ import { standardizeAudioFileName } from "@/utils/misc";
 
 const meta: any = () => {
   return [
-    { title: "Listening Practice" },
+    { title: "Playlists" },
     {
       name: "description",
-      content: "Practice listening to words and phrases in Oneida.",
+      content: "Listen to lists of Oneida words uninterrupted.",
     },
   ];
 };
@@ -59,7 +66,9 @@ export default function ToolsPlaylist() {
     const audioClip = new Audio(
       standardizeAudioFileName(currentDatum.audioFile),
     );
-    const speechSynth = new SpeechSynthesisUtterance(currentDatum.en);
+    const speechSynth = new SpeechSynthesisUtterance(
+      currentDatum.en.join(", "),
+    );
     speechSynth.lang = "en-US";
 
     const voices = speechSynthesis.getVoices();
@@ -151,7 +160,7 @@ function AnswerCard({
   englishText,
   oneidaText,
 }: {
-  englishText: string;
+  englishText: string[];
   oneidaText: string;
 }) {
   return (
@@ -160,7 +169,7 @@ function AnswerCard({
         <Text as="span" variant="bodyL">
           <strong>{oneidaText}</strong>
         </Text>
-        <Text variant="bodyL">{englishText}</Text>
+        <TextArray variant="bodyL">{englishText}</TextArray>
       </Flex>
     </Card>
   );

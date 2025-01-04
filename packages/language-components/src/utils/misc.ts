@@ -1,2 +1,3 @@
-export const arrayify = (value: unknown) =>
-  Array.isArray(value) ? value : [value];
+export function arrayify<T>(value: T | T[]): T[] {
+  return Array.isArray(value) ? value : [value];
+}

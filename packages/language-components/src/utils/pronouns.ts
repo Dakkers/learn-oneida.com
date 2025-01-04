@@ -69,21 +69,21 @@ export const PRONOUN_MAP_EN: Record<Pronoun, string | string[]> = {
 } as const;
 
 export const PRONOUN_MAP_EN_OBJECTIVE: Record<Pronoun, string | string[]> = {
-  i: "Me",
-  u: "You",
-  m: "Him",
-  f: "Her",
-  it: "It",
-  uni: "You and I",
-  soni: "Someone and I",
-  u2: "You two",
+  i: "me",
+  u: "you",
+  m: "him",
+  f: "her",
+  it: "it",
+  uni: "you and I",
+  soni: "someone and I",
+  u2: "you two",
   "2m": ["2 males", "1 male + 1 female"],
   "2f": "2 females",
-  us: "You all and I",
-  theyni: "Them and I",
-  yall: "All of you",
-  ms: ["Them (males)", "Them (males + females)"],
-  fs: "Them (females)",
+  us: "you all and I",
+  theyni: "them and I",
+  yall: "all of you",
+  ms: ["them (males)", "them (males + females)"],
+  fs: "them (females)",
 } as const;
 
 export const PRONOUN_MAP_EN_POSSESSIVE: Record<Pronoun, string | string[]> = {

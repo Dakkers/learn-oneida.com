@@ -1,13 +1,16 @@
+import { pluralizeVerbCommon } from "@/utils/translation";
 import { pronouns } from "@ukwehuwehneke/language-components";
 import {
   createParadigmData,
   type ParadigmData,
 } from "~/components/ParadigmTable";
 
-const data: ParadigmData = createParadigmData(
+const data = createParadigmData(
   {
     audioFolder: "module02/like_refl",
-    translation: "{{pronoun}} {{verb}} {{reflexive}}",
+    translation: "{{pronoun}} like {{reflexive}}",
+    translationFn: (pronoun) =>
+      `{{pronoun}} ${pluralizeVerbCommon(pronoun, "like")} {{reflexive}}`,
     type: "PR",
     phrases: [
       {

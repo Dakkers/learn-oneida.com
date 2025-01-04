@@ -4,7 +4,7 @@ import type {
   BreakdownArray,
   Pronoun,
 } from "@ukwehuwehneke/language-components";
-import dataKnow from "~/data/anuhte";
+import dataKnow from "@/data/module01/know-PRS";
 import dataCallDown from "~/data/module01/callDown-HAB";
 import dataForbid from "~/data/module01/forbid-PRS";
 import dataGoToGet from "~/data/module01/goToGet-HAB";

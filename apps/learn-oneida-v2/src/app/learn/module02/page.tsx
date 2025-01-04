@@ -194,18 +194,6 @@ export default function LearnModule02() {
   );
 }
 
-const translationFnLike = ({ pronoun }: { pronoun: Pronoun }) => ({
-  verb: ["it", "m", "f"].includes(pronoun) ? "likes" : "like",
-});
-
-const translationFnKnow = ({ pronoun }: { pronoun: Pronoun }) => ({
-  verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
-});
-
-const translationFnLove = ({ pronoun }: { pronoun: Pronoun }) => ({
-  verb: ["it", "m", "f"].includes(pronoun) ? "loves" : "love",
-});
-
 function VerbsSection() {
   const columnVisibility = { pronounEnglish: false };
   return (
@@ -229,43 +217,22 @@ function VerbsSection() {
       <SectionHeading id="new-verbs-red" level={3}>
         Red pronominals
       </SectionHeading>
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={yʌteliRed}
-        translationFn={translationFnKnow}
-      />
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={nolukhwaRed}
-        translationFn={translationFnLove}
-      />
+      <ParadigmTable columnVisibility={columnVisibility} data={yʌteliRed} />
+      <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaRed} />
 
       <SectionHeading id="new-verbs-blue" level={3}>
         Blue pronominals
       </SectionHeading>
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={yʌteliBlue}
-        translationFn={translationFnKnow}
-      />
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={nolukhwaBlue}
-        translationFn={translationFnLove}
-      />
+      <ParadigmTable columnVisibility={columnVisibility} data={yʌteliBlue} />
+      <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaBlue} />
 
       <SectionHeading id="new-verbs-purple" level={3}>
         Purple pronominals
       </SectionHeading>
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={yʌteliPurple}
-        translationFn={translationFnKnow}
-      />
+      <ParadigmTable columnVisibility={columnVisibility} data={yʌteliPurple} />
       <ParadigmTable
         columnVisibility={columnVisibility}
         data={nolukhwaPurple}
-        translationFn={translationFnLove}
       />
     </>
   );
@@ -291,21 +258,9 @@ function ReflexiveSection() {
         &quot;changes&quot; the root word to use an A-stem.
       </Text>
       <Notice>The audio below only includes the prepausal ending.</Notice>
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={nuwehseRefl}
-        translationFn={translationFnLike}
-      />
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={yʌteliRefl}
-        translationFn={translationFnKnow}
-      />
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={nolukhwaRefl}
-        translationFn={translationFnLove}
-      />
+      <ParadigmTable columnVisibility={columnVisibility} data={nuwehseRefl} />
+      <ParadigmTable columnVisibility={columnVisibility} data={yʌteliRefl} />
+      <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaRefl} />
     </>
   );
 }
@@ -338,21 +293,12 @@ function ReciprocalSection() {
         So the result is: <i>teyakyatatnú·wehse̲ʔ</i>.
       </Text>
       <Notice>The audio below only includes the prepausal ending.</Notice>
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={dataLikeRecp}
-        translationFn={translationFnLike}
-      />
+      <ParadigmTable columnVisibility={columnVisibility} data={dataLikeRecp} />
       <ParadigmTable
         columnVisibility={columnVisibility}
         data={dataFamiliarRecp}
-        translationFn={translationFnKnow}
       />
-      <ParadigmTable
-        columnVisibility={columnVisibility}
-        data={dataLoveRecp}
-        translationFn={translationFnLove}
-      />
+      <ParadigmTable columnVisibility={columnVisibility} data={dataLoveRecp} />
     </>
   );
 }

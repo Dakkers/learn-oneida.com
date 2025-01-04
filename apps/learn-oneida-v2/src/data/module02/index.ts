@@ -47,7 +47,11 @@ import dataSiblingsOlder from "../family/plural/siblings-older";
 import dataSiblingsYounger from "../family/plural/siblings-younger";
 import dataUnclesAunts from "../family/plural/uncles-aunts";
 import type { ParadigmData } from "@/components/ParadigmTable";
-import { BreakdownArray, Pronoun } from "@ukwehuwehneke/language-components";
+import {
+  arrayify,
+  BreakdownArray,
+  Pronoun,
+} from "@ukwehuwehneke/language-components";
 
 export function getDeceasedRelatives() {
   const data = [
@@ -157,7 +161,7 @@ export function getLastNameExamples() {
       "McCartney, Lennon, Harrison kháleʔ Starr né· tehatihsʌná·seleʔ Beatles",
     ],
   ].map(([en, translation], i) => ({
-    en,
+    en: arrayify(en),
     translation,
     audioFile: `module02/last_name_examples/${i + 1}.mp3`,
   }));
@@ -195,7 +199,7 @@ export function getThingsThatAreTheSameExamples() {
     ["They Fs have the same last name", "tshaʔteyót tsiʔ tekutihsʌná·se·le̲ʔ"],
   ].map(([en, translation], i) => ({
     audioFile: `module02/things_that_are_the_same/${i + 1}.mp3`,
-    en,
+    en: arrayify(en),
     translation,
   }));
 }
@@ -215,7 +219,7 @@ export function getAboutSomeoneExamples() {
       "Yáh náhteʔ né· teʔknú·wehseʔ lonulhá· laotilihwá·ke̲",
     ],
   ].map(([en, translation], i) => ({
-    en,
+    en: arrayify(en),
     translation,
     audioFile: `module02/about_examples/${i + 1}.mp3`,
   }));

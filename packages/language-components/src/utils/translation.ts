@@ -21,6 +21,32 @@ export function formatTranslation(
   return result;
 }
 
+export function translatePhraseV2(
+  paradigmData: {
+    translation: string;
+    translationFn?: (pronoun: Pronoun) => string;
+  },
+  pronoun: Pronoun,
+  legacyTranslationFn?: (arg: { pronoun: Pronoun }) => void,
+) {
+  const arr = arrayify(PRONOUN_MAP_EN[pronoun]);
+  return arr.map((_, i) => {
+    const content =
+      paradigmData.translationFn?.(pronoun) ?? paradigmData.translation;
+    return formatTranslation(content, {
+      note: "",
+      pronoun: arrayify(PRONOUN_MAP_EN[pronoun])[i],
+      pronounObjective: arrayify(PRONOUN_MAP_EN_OBJECTIVE[pronoun])[i],
+      pronounPossessive: arrayify(PRONOUN_MAP_EN_POSSESSIVE[pronoun])[i],
+      reflexive: REFLEXIVE_MAP[pronoun],
+      refVerb: REF_VERB_MAP[pronoun],
+      refVerbPast: REF_VERB_PASTTENSE_MAP[pronoun],
+      refVerbPastAlt: REF_VERB_PASTTENSE_ALT_MAP[pronoun],
+      ...(legacyTranslationFn ? legacyTranslationFn({ pronoun }) : {}),
+    });
+  });
+}
+
 export function translatePhrase(
   phrase: string,
   pronoun: Pronoun,

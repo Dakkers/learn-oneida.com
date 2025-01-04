@@ -1,13 +1,10 @@
 import { nonSingularPronouns } from "@ukwehuwehneke/language-components";
-import {
-  createParadigmData,
-  type ParadigmData,
-} from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = createParadigmData(
+const data = createParadigmData(
   {
     audioFolder: "module02/love_recp",
-    translation: "{{pronoun}} {{verb}} each other",
+    translation: "{{pronoun}} love each other",
     type: "PR",
     phrases: [
       {
