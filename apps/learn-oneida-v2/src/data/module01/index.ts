@@ -18,6 +18,14 @@ import dataPullingOutHab from "~/data/module01/pullingOut-HAB";
 import dataPullingOutPfv from "~/data/module01/pullingOut-PFV";
 import dataRelative from "~/data/module01/relative-NOUN";
 import dataTongue from "~/data/module01/tongue-NOUN";
+import dataWise from "~/data/atukohtu";
+import dataLookingFor from "~/data/ehsak";
+import dataNamed from "~/data/yats";
+import dataAtHome from "~/data/itlu";
+import dataLikeRed from "~/data/nuwehse-red";
+import dataLikeBlue from "~/data/nuwehse-blue";
+import dataAlive from "~/data/unhe";
+import dataHardToPlease from "~/data/ʌtole";
 
 export function getDialogueModule01() {
   const part1: DialogueTableData = [
@@ -425,7 +433,7 @@ export function getPeopleTerms(): {
 } {
   const dataChildren = [
     {
-      en: "1 boy",
+      en: "Boy",
       breakdown: [["la"], "ksá·"],
       pronoun: "m",
     } as PeopleTerm,
@@ -440,7 +448,7 @@ export function getPeopleTerms(): {
       pronoun: "ms",
     } as PeopleTerm,
     {
-      en: "1 girl",
+      en: "Girl",
       breakdown: [["ye"], "ksá·"],
       pronoun: "f",
     } as PeopleTerm,
@@ -461,7 +469,7 @@ export function getPeopleTerms(): {
 
   const dataAdolescents = [
     {
-      en: "1 young man",
+      en: "Young man",
       breakdown: [["la"], "nikʌtlúha̲"],
       pronoun: "m",
     } as PeopleTerm,
@@ -476,7 +484,7 @@ export function getPeopleTerms(): {
       pronoun: "ms",
     } as PeopleTerm,
     {
-      en: "1 young woman",
+      en: "Young woman",
       breakdown: [["ye"], "yaʔtaséha̲"],
       pronoun: "f",
     } as PeopleTerm,
@@ -497,7 +505,7 @@ export function getPeopleTerms(): {
 
   const dataAdults = [
     {
-      en: "1 man",
+      en: "Man",
       breakdown: [["l"], "u·kwé̲·"],
       pronoun: "m",
     } as PeopleTerm,
@@ -512,7 +520,7 @@ export function getPeopleTerms(): {
       pronoun: "ms",
     } as PeopleTerm,
     {
-      en: "1 woman",
+      en: "Woman",
       breakdown: [["yak"], "u·kwé̲·"],
       pronoun: "f",
     } as PeopleTerm,
@@ -533,7 +541,7 @@ export function getPeopleTerms(): {
 
   const dataOlderPeople = [
     {
-      en: "1 older man",
+      en: "Older man",
       breakdown: [["lo"], "kstʌ́ha̲"],
       pronoun: "m",
     } as PeopleTerm,
@@ -548,7 +556,7 @@ export function getPeopleTerms(): {
       pronoun: "ms",
     } as PeopleTerm,
     {
-      en: "1 older woman",
+      en: "Older woman",
       breakdown: [["ako"], "kstʌ́ha̲"],
       pronoun: "f",
     } as PeopleTerm,
@@ -591,5 +599,13 @@ export function getAllModule01Paradigms(): ParadigmData[] {
     dataPullingOutPfv,
     dataRelative,
     dataTongue,
+    dataWise,
+    dataLookingFor,
+    dataNamed,
+    dataAtHome,
+    dataLikeRed,
+    dataLikeBlue,
+    dataAlive,
+    dataHardToPlease,
   ];
 }
