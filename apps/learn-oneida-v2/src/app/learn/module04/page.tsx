@@ -496,11 +496,7 @@ function AccordionWrapper({
       <Accordion type="multiple">
         {sections.map(([id, title, data, audioFolder]) => (
           <Accordion.Item id={id} key={id} title={title}>
-            <ParadigmTable
-              audioFolder={audioFolder ? `module04/${audioFolder}` : undefined}
-              columnVisibility={columnVisibility}
-              data={data}
-            />
+            <ParadigmTable columnVisibility={columnVisibility} data={data} />
           </Accordion.Item>
         ))}
       </Accordion>

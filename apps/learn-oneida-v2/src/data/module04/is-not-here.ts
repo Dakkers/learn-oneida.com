@@ -3,6 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
+    audioFolder: "module04/is_not_here",
     translation: "{{pronoun}} {{refVerb}} not here",
     type: "PR",
     phrases: [

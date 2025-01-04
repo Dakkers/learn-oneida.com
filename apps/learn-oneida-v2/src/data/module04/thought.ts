@@ -3,6 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
+    audioFolder: "module04/thought",
     translation: "{{pronoun}} thought",
     type: "PR",
     phrases: [
