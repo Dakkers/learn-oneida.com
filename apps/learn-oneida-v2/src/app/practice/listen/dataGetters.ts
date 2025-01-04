@@ -8,7 +8,14 @@ import {
   getParticlesForGroup,
 } from "@/components/articles/ParticlesTable";
 import { getTranslationExercisesForModule } from "@/components/practice/TranslationExercises";
-import { createModule4Data } from "@/data/module04";
+import {
+  createCountingTimeData,
+  createModule4Data,
+  createMonthsData,
+  createTimesOfDayData,
+  getAllModule04Paradigms,
+  getDaysOfWeekData,
+} from "@/data/module04";
 import { arrayify } from "@ukwehuwehneke/language-components";
 import { getDialogueModule02 } from "~/data/module02/dialogue";
 import type { DialogueTableData } from "@/components/DialogueTable";
@@ -101,14 +108,7 @@ export function setupModule4Data(keyGroups: string[]): AudioFriendlyData {
 
   const result: AudioFriendlyData = [];
   for (const group of stuff) {
-    for (const datum of group.data.phrases) {
-      const folder = group.key.replace("data-", "").replaceAll("-", "_");
-      result.push({
-        audioFile: `/module04/${folder}/${datum.pronoun}.mp3`,
-        en: translatePhraseV2(group.data, datum.pronoun),
-        translation: datum.phrase,
-      });
-    }
+    result.push(...formatParadigmDataAsAudioFiles(group.data));
   }
   return result;
 }
@@ -245,6 +245,24 @@ export function formatCountingPeopleFiles(): AudioFriendlyData {
   return result;
 }
 
+export function formatDaysOfWeekAudioFiles(): AudioFriendlyData {
+  return _.flattenDeep(Object.values(getDaysOfWeekData()));
+}
+
+export function formatTimesOfDayAudioFiles(): AudioFriendlyData {
+  return _.flattenDeep(Object.values(createTimesOfDayData()));
+}
+
+export function formatMonthsAudioFiles(): AudioFriendlyData {
+  return _.flattenDeep(Object.values(createMonthsData())).map(
+    audioFriendlyFormatter,
+  );
+}
+
+export function formatCountingTimeAudioFiles(): AudioFriendlyData {
+  return createCountingTimeData();
+}
+
 export function getParadigmAudioForModule(
   module: ModuleNumber,
 ): AudioFriendlyData {
@@ -252,7 +270,7 @@ export function getParadigmAudioForModule(
     module01: getAllModule01Paradigms,
     module02: getAllModule02Paradigms,
     module03: getAllModule03Paradigms,
-    module04: null,
+    module04: getAllModule04Paradigms,
     module05: null,
     module06: null,
   }[module];
@@ -301,6 +319,11 @@ export function getSingleWordsForModule(
     result.push(...getDomesticatedAnimalList().map(audioFriendlyFormatter));
     result.push(...getDomesticatedBabyAnimalList().map(audioFriendlyFormatter));
     result.push(...formatCountingPeopleFiles());
+  } else if (module === "module04") {
+    result.push(...formatDaysOfWeekAudioFiles());
+    result.push(...formatMonthsAudioFiles());
+    result.push(...formatCountingPeopleFiles());
+    result.push(...formatTimesOfDayAudioFiles());
   }
   return result;
 }

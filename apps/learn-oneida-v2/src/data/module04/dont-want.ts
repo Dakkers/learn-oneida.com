@@ -3,7 +3,10 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
+    audioFolder: "module04/doesnt_want",
     translation: "{{pronoun}} don't want",
+    translationFn: (pronoun) =>
+      `{{pronoun}} ${["m", "f", "it"].includes(pronoun) ? "doesn't" : "don't"} want`,
     type: "PR",
     phrases: [
       {

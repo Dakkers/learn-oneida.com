@@ -12,10 +12,6 @@ import { Box, Button, Card, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import type WaveSurfer from "wavesurfer.js";
 import WavesurferPlayer from "@wavesurfer/react";
-import {
-  createTimesOfDayData,
-  determineTimesOfDayAudioFileName,
-} from "@/components/articles/TimesOfDay";
 import { arrayify } from "@ukwehuwehneke/language-components";
 import {
   getClanAnimalList,
@@ -27,6 +23,8 @@ import {
   type AudioFriendlyData,
   audioFriendlyFormatter,
   formatCountingPeopleFiles,
+  formatCountingTimeAudioFiles,
+  formatDaysOfWeekAudioFiles,
   formatDeceasedRelativesAudioFiles,
   formatDialogueAudioFiles,
   formatEnglishNamesAudioFiles,
@@ -42,6 +40,7 @@ import {
   type ModuleNumber,
   setupModule4Data,
 } from "./dataGetters";
+import { createTimesOfDayData } from "@/data/module04";
 
 const meta: any = () => {
   return [
@@ -199,6 +198,8 @@ export default function PracticeListening() {
     {
       getData: getDataWrapper("module04", {
         beingHere: () => setupModule4Data(["here"]),
+        countingTime: () => formatCountingTimeAudioFiles(),
+        daysOfWeek: () => formatDaysOfWeekAudioFiles(),
         particles: (m: ModuleNumber) => formatParticleAudioFiles(m),
         // particleExamples: (m: ModuleNumber) => formatParticleExampleAudioFiles(m),
         thought: () => setupModule4Data(["thought"]),
@@ -213,7 +214,7 @@ export default function PracticeListening() {
               for (let i = 0; i < translations.length; i++) {
                 const t = translations[i];
                 result.push({
-                  audioFile: `/module04/time_phrases/${determineTimesOfDayAudioFileName(p.en, p.translation, i)}.mp3`,
+                  audioFile: p.audioFile,
                   en: arrayify(p.en),
                   translation: t,
                 });
@@ -226,7 +227,15 @@ export default function PracticeListening() {
       }),
       label: "Module 4",
       sub: [
-        // ...commonThings,
+        // { label: "All audio", value: "all_audio" },
+        { label: "All individual words", value: "all_words" },
+        // { label: "All sentences", value: "all_sentences" },
+        // { label: "Dialogue", value: "dialogue" },
+        { label: "Paradigms", value: "paradigms" },
+        // { label: "Translation exercises", value: "translationExercises" },
+
+        { label: "Days of week", value: "daysOfWeek" },
+        { label: "Counting time", value: "countingTime" },
         { label: "Times of day", value: "timesOfDay" },
         { label: "Being here", value: "beingHere" },
         { label: "Thought", value: "thought" },

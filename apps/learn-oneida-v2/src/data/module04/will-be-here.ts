@@ -3,6 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
+    audioFolder: "module04/will_be_here",
     translation: "{{pronoun}} will be here",
     type: "PR",
     phrases: [

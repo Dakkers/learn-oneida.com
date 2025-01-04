@@ -47,7 +47,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import _ from "lodash";
 import {
   sanitizeIrregularCharacters,
-  translatePhrase,
   whisperizeWord,
 } from "@ukwehuwehneke/language-components";
 

@@ -67,7 +67,7 @@ export default function ToolsPlaylist() {
       standardizeAudioFileName(currentDatum.audioFile),
     );
     const speechSynth = new SpeechSynthesisUtterance(
-      currentDatum.en.join(", "),
+      (currentDatum.en ?? []).join(", "),
     );
     speechSynth.lang = "en-US";
 
