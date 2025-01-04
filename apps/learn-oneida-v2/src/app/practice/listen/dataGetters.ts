@@ -130,13 +130,15 @@ export function formatPeopleAudioFiles(): AudioFriendlyData {
 export function formatEnglishNamesAudioFiles(): AudioFriendlyData {
   const names = getEnglishNames();
   return _.flattenDeep(
-    names.map((datum) =>
-      arrayify(datum.translation).map((txt, i) => ({
-        audioFile: formatAudioFileWithSuffix(datum, i),
-        en: arrayify(datum.en),
-        translation: txt,
-      })),
-    ),
+    names
+      .filter((datum) => datum.audioFile)
+      .map((datum) =>
+        arrayify(datum.translation).map((txt, i) => ({
+          audioFile: formatAudioFileWithSuffix(datum as AudioFriendly, i),
+          en: arrayify(datum.en),
+          translation: txt,
+        })),
+      ),
   );
 }
 

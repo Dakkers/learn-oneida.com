@@ -373,6 +373,8 @@ export function getDialogueModule01() {
 }
 
 export function getEnglishNames() {
+  const exceptions = ["george"];
+
   return [
     { key: "aaron", translation: "Alʌ́t", en: "Aaron" },
     { key: "abraham", translation: "Á·kwilut", en: "Abraham" },
@@ -402,7 +404,9 @@ export function getEnglishNames() {
     { key: "susan", translation: "Só·s", en: "Susan" },
   ].map((row) => ({
     ...row,
-    audioFile: `module01/english_names/${row.key}.mp3`,
+    audioFile: exceptions.includes(row.key)
+      ? undefined
+      : `module01/english_names/${row.key}.mp3`,
   }));
 }
 
