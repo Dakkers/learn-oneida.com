@@ -267,9 +267,14 @@ export function createModule4Data() {
 }
 
 export function getDaysOfWeekData() {
-  const mapUtil = (obj: any) => ({
+  const mapUtil = (obj: {
+    en: string;
+    key?: string;
+    translation: string;
+  }) => ({
     ...obj,
     audioFile: `module04/days/${obj.en.toLowerCase().replaceAll(" ", "_")}.mp3`,
+    en: arrayify(obj.en),
   });
   const days = [
     { en: "Sunday", translation: "Yautatokʌ́htu", key: "sun" },
