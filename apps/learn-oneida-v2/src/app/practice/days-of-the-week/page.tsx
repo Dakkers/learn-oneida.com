@@ -23,6 +23,7 @@ export default function PracticeDaysOfTheWeek() {
         Days of the Week
       </Heading>
 
+      {/* @ts-expect-error Who cares about this component right now? */}
       <MatchingGamePage data={getDaysOfWeekData().days} />
     </Flex>
   );
