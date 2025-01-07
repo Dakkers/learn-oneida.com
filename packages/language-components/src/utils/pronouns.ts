@@ -97,9 +97,9 @@ export const PRONOUN_MAP_EN_POSSESSIVE: Record<Pronoun, string | string[]> = {
   u2: "You two's",
   "2m": ["Their (2 males)", "Their (1 male + 1 female)"],
   "2f": "Their (2 females)",
-  us: "Our (all of us)",
-  theyni: "Our (they and I)",
-  yall: "All of yours'",
+  us: "All of ours's",
+  theyni: "Ours (they and I)",
+  yall: "All of yours's",
   ms: ["Their (males)", "Their (males + females)"],
   fs: "Their (females)",
 } as const;
@@ -260,6 +260,31 @@ export const pronounsPurpleExtended = [
 export type PronounPurple = (typeof pronounsPurple)[number];
 
 export type PronounPurpleExtended = (typeof pronounsPurpleExtended)[number];
+
+function slicePurplePronoun(val: string) {
+  return val
+    .replace("cmd_", "")
+    .split("_")
+    .map((word, i) =>
+      i === 0
+        ? { ...PRONOUN_MAP_EN, they: "They" }[word]
+        : { ...PRONOUN_MAP_EN_OBJECTIVE, they: "Them" }[word],
+    );
+}
+
+export const INTERACTIVE_AGENT_MAP = Object.fromEntries(
+  pronounsPurpleExtended.map((p: PronounPurpleExtended) => [
+    p,
+    slicePurplePronoun(p)[0],
+  ]),
+) as Record<PronounPurpleExtended, string>;
+
+export const INTERACTIVE_SUBJECT_MAP = Object.fromEntries(
+  pronounsPurpleExtended.map((p: PronounPurpleExtended) => [
+    p,
+    slicePurplePronoun(p)[1],
+  ]),
+) as Record<PronounPurpleExtended, string>;
 
 const purplePairs = Object.fromEntries(
   pronounsPurpleExtended.map((key) => [

@@ -32,6 +32,8 @@ import {
   PRONOUN_MAP_ONEIDA,
   type Pronoun,
   pronouns,
+  pronounsBlue,
+  translatePhraseInteractive,
   translatePhraseV2,
 } from "@ukwehuwehneke/language-components";
 import {
@@ -50,7 +52,12 @@ import {
   whisperizeWord,
 } from "@ukwehuwehneke/language-components";
 
-import type { pronounsPurple } from "@ukwehuwehneke/language-components";
+import {
+  PronounPlural,
+  type PronounPurple,
+  type PronounPurpleExtended,
+  pronounsPurple,
+} from "@ukwehuwehneke/language-components";
 
 const formSchema = z.object(
   Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),
@@ -228,11 +235,18 @@ function TableRowWrapper({
     throw new Error("Missing context");
   }
   const { colVisibility, showBreakdown } = context;
-  const translatedPhrase = translatePhraseV2(
-    context.data,
-    row.pronoun,
-    context.legacyTranslationFn,
-  );
+  const translatedPhrase =
+    context.data.type === "PP"
+      ? translatePhraseInteractive(
+          // @ts-expect-error ParadigmData doesn't support purple correctly :(
+          context.data,
+          row.pronoun,
+        )
+      : translatePhraseV2(
+          context.data,
+          row.pronoun,
+          context.legacyTranslationFn,
+        );
 
   const audioFilenamePronoun = getAudioFilenameForPronoun(
     row.pronoun,
@@ -365,7 +379,7 @@ export interface ParadigmData {
   phrases: Row[];
   translation: string;
   translationFn?: (pronoun: Pronoun) => string;
-  type?: BreakdownType;
+  type: "PR" | "PB" | "PLB" | "PP";
   whispered?: boolean;
 }
 
@@ -388,15 +402,14 @@ interface ParadigmTableContextProps {
   }: { pronoun: Pronoun }) => Record<string, string>;
 }
 
-export function createParadigmData(
+function createParadigmDataUtil(
   data: Pick<
     ParadigmData,
     "audioFolder" | "translation" | "translationFn" | "type" | "whispered"
   > & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },
-  allowedPronouns?: Pronoun[] | typeof pronounsPurple,
-): ParadigmData {
+) {
   const result = _.cloneDeep(data) as ParadigmData;
   for (let i = 0; i < result.phrases.length; i++) {
     const element = result.phrases[i];
@@ -421,15 +434,44 @@ export function createParadigmData(
     element.phrase = element.breakdown
       .map((part) => getBreakdownTextPart(part))
       .join("");
-
-    if (allowedPronouns) {
-      // @ts-expect-error TODO
-      element.pronoun = allowedPronouns[i];
-    }
   }
 
   result.whispered = data.whispered ?? true;
 
+  return result;
+}
+
+export function createInteractiveParadigmData(
+  data: Omit<Parameters<typeof createParadigmDataUtil>[0], "translationFn"> & {
+    translationFn?: (pronoun: PronounPurple | PronounPurpleExtended) => string;
+  },
+  allowedPronouns?: PronounPurple[] | PronounPurpleExtended[],
+): ParadigmData {
+  // @ts-expect-error Argh! ParadigmData expects Pronoun, not the purples
+  const result = createParadigmDataUtil(data);
+
+  const pronounsToUse = allowedPronouns ?? pronounsPurple;
+  for (let i = 0; i < result.phrases.length; i++) {
+    if (pronounsToUse) {
+      // @ts-expect-error Argh! ParadigmData expects Pronoun, not the purples
+      result.phrases[i].pronoun = pronounsToUse[i];
+    }
+  }
+  return result;
+}
+
+export function createParadigmData(
+  data: Parameters<typeof createParadigmDataUtil>[0],
+  allowedPronouns?: Pronoun[],
+): ParadigmData {
+  const result = createParadigmDataUtil(data);
+  const pronounsToUse =
+    allowedPronouns ?? (result.type === "PB" ? pronounsBlue : pronouns);
+  for (let i = 0; i < result.phrases.length; i++) {
+    if (pronounsToUse) {
+      result.phrases[i].pronoun = pronounsToUse[i];
+    }
+  }
   return result;
 }
 
