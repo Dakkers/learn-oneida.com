@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import {
   Button,
@@ -28,7 +28,13 @@ const meta: any = () => {
 };
 
 export default function ToolsPlaylist() {
-  const [category, setCategory] = useState("");
+  const audioClipRef = useRef<HTMLAudioElement | null>(null);
+  const speechSynthRef = useRef<SpeechSynthesisUtterance | null>(null);
+
+  const [category, setCategory] = useState("all");
+  const [hasStarted, setHasStarted] = useState(false);
+  const [index, setIndex] = useState(-1);
+  const [prevIndex, setPrevIndex] = useState(index);
 
   const data = useMemo(() => {
     if (!category) {
@@ -53,14 +59,12 @@ export default function ToolsPlaylist() {
     }
     return _.shuffle(fn().filter((d) => !!d.en));
   }, [category]);
-
-  const [hasStarted, setHasStarted] = useState(false);
-  const [index, setIndex] = useState(-1);
-  const [prevIndex, setPrevIndex] = useState(index);
   const currentDatum = data[index];
 
-  const audioClipRef = useRef<HTMLAudioElement | null>(null);
-  const speechSynthRef = useRef<SpeechSynthesisUtterance | null>(null);
+  useEffect(() => {
+    // Janky attempt at ensuring the voice doesn't sound like Daft Punk
+    speechSynthesis.getVoices();
+  }, []);
 
   if (index !== prevIndex) {
     const audioClip = new Audio(
@@ -115,7 +119,6 @@ export default function ToolsPlaylist() {
         <Select
           label="Category"
           options={[
-            ["(Select)", ""],
             ["All", "all"],
             ["Module 1", "module01"],
             ["Module 2", "module02"],
@@ -131,26 +134,22 @@ export default function ToolsPlaylist() {
       </Flex>
 
       {hasStarted ? (
-        <>
-          <AnswerCard
-            englishText={currentDatum.en}
-            oneidaText={currentDatum.translation}
-          />
-        </>
+        <AnswerCard
+          englishText={currentDatum.en}
+          oneidaText={currentDatum.translation}
+        />
       ) : category ? (
-        <>
-          <Flex justify="end">
-            <Button
-              emphasis="fill"
-              onClick={() => {
-                setHasStarted(true);
-                setIndex(0);
-              }}
-            >
-              Start
-            </Button>
-          </Flex>
-        </>
+        <Flex justify="end">
+          <Button
+            emphasis="fill"
+            onClick={() => {
+              setHasStarted(true);
+              setIndex(0);
+            }}
+          >
+            Start
+          </Button>
+        </Flex>
       ) : null}
     </>
   );

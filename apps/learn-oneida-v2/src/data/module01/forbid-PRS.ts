@@ -1,59 +1,55 @@
-import { pronounsPurple } from "@ukwehuwehneke/language-components";
-import {
-  createParadigmData,
-  type ParadigmData,
-} from "~/components/ParadigmTable";
+import { pluralizeVerbCommon } from "@/utils/translation";
+import { createInteractiveParadigmData } from "~/components/ParadigmTable";
 
-const data = createParadigmData(
-  {
-    translation: "{{agent}} {{verb}} {{subject}}",
-    type: "PP",
-    phrases: [
-      {
-        breakdown: [["kuy"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["liy"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["khey"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["skw"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["h", "RPL"], ["etsh"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["shey"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["lakw"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["h", "RPL"], ["y"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["lo"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["shako"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["yukw"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["yes"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["luw"], "ahlístaʔ"],
-      },
-      {
-        breakdown: [["yutat"], "ahlístaʔ"],
-      },
-    ],
-  },
-  pronounsPurple,
-);
+const data = createInteractiveParadigmData({
+  translation: "{{agent}} forbid {{subject}} to do it",
+  translationFn: (pronoun) =>
+    `{{agent}} ${pluralizeVerbCommon(pronoun, "forbids")} {{subject}} to do it`,
+  type: "PP",
+  phrases: [
+    {
+      breakdown: [["kuy"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["liy"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["khey"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["skw"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["h", "RPL"], ["etsh"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["shey"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["lakw"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["h", "RPL"], ["y"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["lo"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["shako"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["yukw"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["yes"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["luw"], "ahlístaʔ"],
+    },
+    {
+      breakdown: [["yutat"], "ahlístaʔ"],
+    },
+  ],
+});
 
 export default data;

@@ -1,9 +1,12 @@
 import { arrayify } from "./misc";
 import {
+  INTERACTIVE_AGENT_MAP,
+  INTERACTIVE_SUBJECT_MAP,
   type Pronoun,
   PRONOUN_MAP_EN,
   PRONOUN_MAP_EN_OBJECTIVE,
   PRONOUN_MAP_EN_POSSESSIVE,
+  type PronounPurpleExtended,
   REF_VERB_MAP,
   REF_VERB_PASTTENSE_ALT_MAP,
   REF_VERB_PASTTENSE_MAP,
@@ -19,6 +22,35 @@ export function formatTranslation(
     result = result.replace(new RegExp(`{{${key}}}`, "g"), params[key]);
   }
   return result;
+}
+
+export function translatePhraseInteractive(
+  paradigmData: {
+    translation: string;
+    translationFn?: (pronoun: PronounPurpleExtended) => string;
+  },
+  pronoun: PronounPurpleExtended,
+) {
+  // TODO: use a different map when I map the purples to the same thing
+  // e.g. `kwa` and `skwa` are both used for multiple meanings
+  const arr = arrayify([pronoun]);
+  return arr.map((p) => {
+    const content =
+      paradigmData.translationFn?.(pronoun) ?? paradigmData.translation;
+
+    const [agent] = p.replaceAll("cmd_", "").split("_");
+
+    return formatTranslation(content, {
+      agent: INTERACTIVE_AGENT_MAP[p],
+      note: "",
+      pronounObjective: arrayify(PRONOUN_MAP_EN_OBJECTIVE[agent as Pronoun])[0],
+      pronounPossessive: arrayify(
+        PRONOUN_MAP_EN_POSSESSIVE[agent as Pronoun],
+      )[0],
+      refVerb: REF_VERB_MAP[agent as Pronoun],
+      subject: INTERACTIVE_SUBJECT_MAP[p],
+    });
+  });
 }
 
 export function translatePhraseV2(

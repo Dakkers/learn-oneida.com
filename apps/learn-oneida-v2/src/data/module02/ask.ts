@@ -1,12 +1,9 @@
-import {
-  createParadigmData,
-  type ParadigmData,
-} from "~/components/ParadigmTable";
+import { createInteractiveParadigmData } from "~/components/ParadigmTable";
 
-const data = createParadigmData(
+const data = createInteractiveParadigmData(
   {
     audioFolder: "module02/ask",
-    translation: "{{agent}} ask {{subject}}!",
+    translation: "({{agent}}) Ask {{subject}}!",
     type: "PP",
     phrases: [
       {
@@ -23,7 +20,6 @@ const data = createParadigmData(
       },
     ],
   },
-  // @ts-expect-error Pronominal things
   ["u_i", "yall_i", "u_f", "u_m"],
 );
 
