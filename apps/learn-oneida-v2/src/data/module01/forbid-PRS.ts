@@ -4,7 +4,7 @@ import { createInteractiveParadigmData } from "~/components/ParadigmTable";
 const data = createInteractiveParadigmData({
   translation: "{{agent}} forbid {{subject}} to do it",
   translationFn: (pronoun) =>
-    `{{agent}} ${pluralizeVerbCommon(pronoun, "forbids")} {{subject}} to do it`,
+    `{{agent}} ${pluralizeVerbCommon(pronoun, "forbid")} {{subject}} to do it`,
   type: "PP",
   phrases: [
     {

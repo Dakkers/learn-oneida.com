@@ -49,7 +49,9 @@ import {
   type Pronoun,
   dualicPronouns,
   pluralPronouns,
+  pronouns,
   singlePronouns,
+  translatePhraseV2,
 } from "@ukwehuwehneke/language-components";
 import sample from "lodash/sample";
 import { Select } from "@ukwehuwehneke/ohutsya";
@@ -65,6 +67,8 @@ import {
 } from "next/navigation";
 import { Suspense } from "react";
 import { createModule10VerbListFlat } from "@/data/module10";
+import { TableAsForm } from "@/components/practice/TableAsForm";
+import { z } from "zod";
 
 const meta: any = () => {
   return [
@@ -125,26 +129,30 @@ function ToolsParadigmInner() {
     [],
   );
 
-  const dataToUse = Object.fromEntries([
-    ["attokha", dataAttokhaJson],
-    ["ehsaks", dataEhsaksJson],
-    ["i_tlu", dataItluJson],
-    ["like-red", dataLikeRedJson],
-    ["otshyus", dataPulling],
-    ["ʌtole", dataΛtoleJson],
-    ...createModule6VerbListFlat().map((v) => [v.key, v]),
-    ...createModule9VerbListFlat().map((v) => [v.key, v]),
-    ...createModule10VerbListFlat().map((v) => [v.key, v]),
-    ...module4Options.map((item) => [item[0], item[1]]),
-  ]);
+  const dataToUse = useMemo(
+    () =>
+      Object.fromEntries([
+        ["attokha", dataAttokhaJson],
+        ["ehsaks", dataEhsaksJson],
+        ["i_tlu", dataItluJson],
+        ["like-red", dataLikeRedJson],
+        ["otshyus", dataPulling],
+        ["ʌtole", dataΛtoleJson],
+        ...createModule6VerbListFlat().map((v) => [v.key, v]),
+        ...createModule9VerbListFlat().map((v) => [v.key, v]),
+        ...createModule10VerbListFlat().map((v) => [v.key, v]),
+        ...module4Options.map((item) => [item[0], item[1]]),
+      ]),
+    [module4Options],
+  );
 
   const defaultKey =
     wordSearchParam in dataToUse ? wordSearchParam : "like-red";
 
   const [word, setWord] = useState<keyof typeof dataToUse>(defaultKey);
-  const [paradigm, setParadigm] = useState("all");
+  const [allowedPronominals, setAllowedPronominals] = useState("all");
   const [hasStarted, setHasStarted] = useState(false);
-  const [allowedPronouns, setAllowedPronouns] = useState<Pronoun[]>([]);
+  const [pronominalsList, setPronominalsList] = useState<Pronoun[]>(pronouns);
 
   const wordOptions = useMemo(
     () =>
@@ -172,6 +180,32 @@ function ToolsParadigmInner() {
     [module4Options],
   );
 
+  const rows = useMemo(() => {
+    const datum = dataToUse[word] as ParadigmData;
+    if (!datum) {
+      return [];
+    }
+    const result = [];
+    for (const p of pronominalsList || pronouns) {
+      const entry = datum.phrases.find((phraseObj) => phraseObj.pronoun === p);
+      if (entry) {
+        result.push({
+          en: translatePhraseV2(datum, p),
+          key: p,
+          on: entry.phrase,
+          pronoun: p,
+        });
+      }
+    }
+    return result;
+  }, [dataToUse, pronominalsList, word]);
+
+  const formSchema = useMemo(() => {
+    return z.object(
+      Object.fromEntries(rows.map((r) => [r.key, z.string().optional()])),
+    );
+  }, [rows]);
+
   return (
     <>
       <SectionHeading level={1}>Paradigm Tester</SectionHeading>
@@ -196,9 +230,9 @@ function ToolsParadigmInner() {
         />
 
         <Select
-          label="Type"
+          label="Pronominals"
           onChange={(value) => {
-            setParadigm(value);
+            setAllowedPronominals(value);
             setHasStarted(false);
           }}
           options={[
@@ -206,31 +240,27 @@ function ToolsParadigmInner() {
             { label: "Singles only", value: "singles" },
             { label: "Dualics only", value: "dualics" },
             { label: "Plurals only", value: "plurals" },
-            { label: "One of each", value: "one" },
+            { label: "One of each", value: "oneOfEach" },
           ]}
-          value={paradigm}
+          value={allowedPronominals}
         />
 
         <Flex.Item>
           <Button
             disabled={!word || hasStarted}
             onClick={() => {
-              setAllowedPronouns(
-                paradigm === "all"
-                  ? []
-                  : paradigm === "singles"
-                    ? singlePronouns
-                    : paradigm === "dualics"
-                      ? dualicPronouns
-                      : paradigm === "plurals"
-                        ? pluralPronouns
-                        : paradigm === "one"
-                          ? ([
-                              sample(singlePronouns),
-                              sample(dualicPronouns),
-                              sample(pluralPronouns),
-                            ] as Pronoun[])
-                          : [],
+              setPronominalsList(
+                {
+                  all: pronouns,
+                  singles: singlePronouns,
+                  dualics: dualicPronouns,
+                  plurals: pluralPronouns,
+                  oneOfEach: [
+                    sample(singlePronouns)!,
+                    sample(dualicPronouns)!,
+                    sample(pluralPronouns)!,
+                  ],
+                }[allowedPronominals] ?? pronouns,
               );
               setHasStarted(true);
             }}
@@ -241,13 +271,13 @@ function ToolsParadigmInner() {
       </Flex>
 
       {hasStarted && (
-        <ParadigmTable
-          allowedPronouns={allowedPronouns}
-          columnVisibility={{
-            pronounEnglish: false,
-          }}
-          data={dataToUse[word]}
-          isTesting
+        <TableAsForm
+          bleed={0}
+          checkCorrectness={(key, val) =>
+            TableAsForm.defaultCheckCorrectness({ key, val, rows })
+          }
+          formSchema={formSchema}
+          rows={rows}
         />
       )}
     </>
