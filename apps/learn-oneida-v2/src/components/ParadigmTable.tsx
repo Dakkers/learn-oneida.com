@@ -3,18 +3,12 @@
 import {
   Bleed,
   type BleedProps,
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
   Flex,
   Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-  Notice,
   PlayButton,
   PrimitiveTable,
   PrimitiveTableBody,
@@ -23,13 +17,13 @@ import {
   PrimitiveTableHeader,
   PrimitiveTableRow,
   TextArray,
-  TextInput,
 } from "@ukwehuwehneke/ohutsya";
 import { Settings } from "lucide-react";
 import React from "react";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
+  PURPLES_MAP_FULL,
   type Pronoun,
   pronouns,
   pronounsBlue,
@@ -39,7 +33,6 @@ import {
 import {
   type BreakdownArray,
   type BreakdownType,
-  standardizeCharacters,
   TextBreakdown,
   type TextBreakdownSuffix,
 } from "@ukwehuwehneke/language-components";
@@ -47,13 +40,9 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import _ from "lodash";
-import {
-  sanitizeIrregularCharacters,
-  whisperizeWord,
-} from "@ukwehuwehneke/language-components";
+import { whisperizeWord } from "@ukwehuwehneke/language-components";
 
 import {
-  PronounPlural,
   type PronounPurple,
   type PronounPurpleExtended,
   pronounsPurple,
@@ -83,7 +72,6 @@ export function ParadigmTable({
   bleed = 0,
   columnVisibility = {},
   data,
-  isTesting = false,
   legacyTranslationFn,
 }: ParadigmTableProps) {
   const [colVisibility, setColVisibility] = React.useState({
@@ -93,34 +81,11 @@ export function ParadigmTable({
     ...columnVisibility,
   });
   const [showBreakdown, setShowBreakdown] = React.useState(true);
-  const [isCorrect, setIsCorrect] = React.useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {},
     resolver: zodResolver(formSchema),
   });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    let hasErrors = false;
-    for (const key in values) {
-      const value = values[key];
-      const phraseObj = data.phrases.find((p) => p.pronoun === key);
-      if (phraseObj) {
-        if (
-          !value ||
-          sanitizeIrregularCharacters(standardizeCharacters(value)) !==
-            sanitizeIrregularCharacters(phraseObj.phrase)
-        ) {
-          hasErrors = true;
-          form.setError(key, {
-            message: `Answer: ${phraseObj.phrase}`,
-            type: "custom",
-          });
-        }
-      }
-    }
-    setIsCorrect(!hasErrors);
-  }
 
   const rowsToShow = React.useMemo(() => {
     if (allowedPronouns.length === 0) {
@@ -134,8 +99,6 @@ export function ParadigmTable({
       value={{
         colVisibility,
         data,
-        form,
-        isTesting,
         showBreakdown,
         legacyTranslationFn,
       }}
@@ -155,62 +118,33 @@ export function ParadigmTable({
         </Flex>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <PrimitiveTable>
-              <PrimitiveTableHeader>
-                <PrimitiveTableRow>
-                  {colVisibility.pronounEnglish && (
-                    <PrimitiveTableHead>Pronoun (EN)</PrimitiveTableHead>
-                  )}
-                  {colVisibility.pronounOneida && (
-                    <PrimitiveTableHead>Pronoun</PrimitiveTableHead>
-                  )}
-                  {isTesting ? (
-                    <>
-                      {colVisibility.translation && (
-                        <PrimitiveTableHead>Translation</PrimitiveTableHead>
-                      )}
-                      <PrimitiveTableHead>---</PrimitiveTableHead>
-                    </>
-                  ) : (
-                    <>
-                      <PrimitiveTableHead>Phrase</PrimitiveTableHead>
-                      {colVisibility.translation && (
-                        <PrimitiveTableHead>Translation</PrimitiveTableHead>
-                      )}
-                    </>
-                  )}
-                </PrimitiveTableRow>
-              </PrimitiveTableHeader>
-              <PrimitiveTableBody>
-                {rowsToShow.map((row, i) => (
-                  <TableRowWrapper
-                    audioFolder={data.audioFolder ?? audioFolder}
-                    key={i}
-                    row={row}
-                    typeFallback={data.type}
-                    whispered={data.whispered}
-                  />
-                ))}
-              </PrimitiveTableBody>
-            </PrimitiveTable>
-
-            {isTesting && (
-              <>
-                {form.formState.submitCount > 0 && (
-                  <Notice intent={isCorrect ? "positive" : "negative"}>
-                    {isCorrect
-                      ? "Good job! You answered each prompt correctly."
-                      : "There were some mistakes with your answers. Scroll up to take a look."}
-                  </Notice>
+          <PrimitiveTable>
+            <PrimitiveTableHeader>
+              <PrimitiveTableRow>
+                {colVisibility.pronounEnglish && (
+                  <PrimitiveTableHead>Pronoun (EN)</PrimitiveTableHead>
                 )}
-
-                <Flex justify="end">
-                  <Button type="submit">Submit</Button>
-                </Flex>
-              </>
-            )}
-          </form>
+                {colVisibility.pronounOneida && (
+                  <PrimitiveTableHead>Pronoun</PrimitiveTableHead>
+                )}
+                <PrimitiveTableHead>Phrase</PrimitiveTableHead>
+                {colVisibility.translation && (
+                  <PrimitiveTableHead>Translation</PrimitiveTableHead>
+                )}
+              </PrimitiveTableRow>
+            </PrimitiveTableHeader>
+            <PrimitiveTableBody>
+              {rowsToShow.map((row, i) => (
+                <TableRowWrapper
+                  audioFolder={data.audioFolder ?? audioFolder}
+                  key={i}
+                  row={row}
+                  typeFallback={data.type}
+                  whispered={data.whispered}
+                />
+              ))}
+            </PrimitiveTableBody>
+          </PrimitiveTable>
         </Form>
       </Bleed>
     </ParadigmTableContext.Provider>
@@ -234,7 +168,7 @@ function TableRowWrapper({
   if (!context) {
     throw new Error("Missing context");
   }
-  const { colVisibility, showBreakdown } = context;
+  const { colVisibility, data, showBreakdown } = context;
   const translatedPhrase =
     context.data.type === "PP"
       ? translatePhraseInteractive(
@@ -255,71 +189,45 @@ function TableRowWrapper({
 
   return (
     <PrimitiveTableRow>
-      {colVisibility.pronounEnglish && (
+      {colVisibility.pronounEnglish && data.type !== "PP" && (
         <PrimitiveTableCell>
           <TextArray>{PRONOUN_MAP_EN[row.pronoun]}</TextArray>
         </PrimitiveTableCell>
       )}
       {colVisibility.pronounOneida && (
         <PrimitiveTableCell>
-          <TextArray>{PRONOUN_MAP_ONEIDA[row.pronoun]}</TextArray>
+          <TextArray>
+            {data.type === "PP"
+              ? // @ts-expect-error ParadigmData doesn't support purple correctly :(
+                PURPLES_MAP_FULL[row.pronoun]
+              : PRONOUN_MAP_ONEIDA[row.pronoun]}
+          </TextArray>
         </PrimitiveTableCell>
       )}
-      {context.isTesting ? (
-        <>
-          {colVisibility.translation && (
-            <PrimitiveTableCell>
-              <TextArray>{translatedPhrase}</TextArray>
-            </PrimitiveTableCell>
-          )}
-          <PrimitiveTableCell>
-            <FormField
-              control={context.form.control}
-              name={row.pronoun}
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <TextInput
-                      placeholder="Type here..."
-                      {...field}
-                      value={field.value ?? ""}
-                    />
-                  </FormControl>
-
-                  <FormMessage />
-                </FormItem>
-              )}
+      <PrimitiveTableCell>
+        <Flex gap={4}>
+          {showBreakdown ? (
+            <TextBreakdown
+              breakdown={row.breakdown}
+              suffix={suffix}
+              typeFallback={typeFallback}
+              whispered={row.whispered ?? whispered ?? false}
             />
-          </PrimitiveTableCell>
-        </>
-      ) : (
-        <>
-          <PrimitiveTableCell>
-            <Flex gap={4}>
-              {showBreakdown ? (
-                <TextBreakdown
-                  breakdown={row.breakdown}
-                  suffix={suffix}
-                  typeFallback={typeFallback}
-                  whispered={row.whispered ?? whispered ?? false}
-                />
-              ) : (
-                row.phrase
-              )}
-
-              {audioFolder && (
-                <PlayButton
-                  filepath={`/audio/${audioFolder}/${audioFilenamePronoun}.mp3`}
-                />
-              )}
-            </Flex>
-          </PrimitiveTableCell>
-          {colVisibility.translation && (
-            <PrimitiveTableCell>
-              <TextArray>{translatedPhrase}</TextArray>
-            </PrimitiveTableCell>
+          ) : (
+            row.phrase
           )}
-        </>
+
+          {audioFolder && (
+            <PlayButton
+              filepath={`/audio/${audioFolder}/${audioFilenamePronoun}.mp3`}
+            />
+          )}
+        </Flex>
+      </PrimitiveTableCell>
+      {colVisibility.translation && (
+        <PrimitiveTableCell>
+          <TextArray>{translatedPhrase}</TextArray>
+        </PrimitiveTableCell>
       )}
     </PrimitiveTableRow>
   );
@@ -336,18 +244,20 @@ function SettingsMenu({
   if (!context) {
     throw new Error("Missing context");
   }
-  const { colVisibility, isTesting, showBreakdown } = context;
+  const { colVisibility, data, showBreakdown } = context;
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Settings className="print:hidden" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuItem onClick={() => toggleColumn("pronounEnglish")}>
-          {colVisibility.pronounEnglish
-            ? "Hide Pronoun (EN) column"
-            : "Show Pronoun (EN) column"}
-        </DropdownMenuItem>
+        {data.type !== "PP" && (
+          <DropdownMenuItem onClick={() => toggleColumn("pronounEnglish")}>
+            {colVisibility.pronounEnglish
+              ? "Hide Pronoun (EN) column"
+              : "Show Pronoun (EN) column"}
+          </DropdownMenuItem>
+        )}
         <DropdownMenuItem onClick={() => toggleColumn("pronounOneida")}>
           {colVisibility.pronounOneida
             ? "Hide Pronoun column"
@@ -358,11 +268,9 @@ function SettingsMenu({
             ? "Hide Translation column"
             : "Show Translation column"}
         </DropdownMenuItem>
-        {!isTesting && (
-          <DropdownMenuItem onClick={() => toggleBreakdown(!showBreakdown)}>
-            {showBreakdown ? "Hide text colors" : "Show text colors"}
-          </DropdownMenuItem>
-        )}
+        <DropdownMenuItem onClick={() => toggleBreakdown(!showBreakdown)}>
+          {showBreakdown ? "Hide text colors" : "Show text colors"}
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
@@ -393,9 +301,6 @@ interface Row {
 interface ParadigmTableContextProps {
   colVisibility: ColumnVisibility;
   data: ParadigmData;
-  // @ts-expect-error To be addressed in LO-15
-  form: SpecialFormType;
-  isTesting?: boolean;
   showBreakdown?: boolean;
   legacyTranslationFn?: ({
     pronoun,

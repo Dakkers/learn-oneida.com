@@ -22,7 +22,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 
 type FormRow = Record<string, unknown> & {
-  en: string;
+  en: string | string[];
   key: string;
   on: string;
 };
@@ -154,7 +154,7 @@ TableAsForm.defaultCheckCorrectness = function defaultCheckCorrectness({
     if (
       !val ||
       sanitizeIrregularCharacters(standardizeCharacters(val)) !==
-        sanitizeIrregularCharacters(obj.on)
+        sanitizeIrregularCharacters(standardizeCharacters(obj.on))
     ) {
       return `Answer: ${obj.on}`;
     }
