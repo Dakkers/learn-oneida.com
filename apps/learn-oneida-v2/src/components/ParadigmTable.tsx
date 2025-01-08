@@ -199,8 +199,11 @@ function TableRowWrapper({
           <TextArray>
             {data.type === "PP"
               ? // @ts-expect-error ParadigmData doesn't support purple correctly :(
-                PURPLES_MAP_FULL[row.pronoun]
-              : PRONOUN_MAP_ONEIDA[row.pronoun]}
+                (PURPLES_MAP_FULL[row.pronoun] ??
+                PRONOUN_MAP_ONEIDA[row.pronoun])
+              : // Note for ^: some of the paradigms with type='PP' are the kinship terms which are weird
+                // as they're purple but we don't refer to them with e.g. "Her -> me", just "I"
+                PRONOUN_MAP_ONEIDA[row.pronoun]}
           </TextArray>
         </PrimitiveTableCell>
       )}

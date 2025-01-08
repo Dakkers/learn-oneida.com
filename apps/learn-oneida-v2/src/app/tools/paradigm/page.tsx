@@ -129,18 +129,22 @@ function ToolsParadigmInner() {
     [],
   );
 
-  const dataToUse = Object.fromEntries([
-    ["attokha", dataAttokhaJson],
-    ["ehsaks", dataEhsaksJson],
-    ["i_tlu", dataItluJson],
-    ["like-red", dataLikeRedJson],
-    ["otshyus", dataPulling],
-    ["ʌtole", dataΛtoleJson],
-    ...createModule6VerbListFlat().map((v) => [v.key, v]),
-    ...createModule9VerbListFlat().map((v) => [v.key, v]),
-    ...createModule10VerbListFlat().map((v) => [v.key, v]),
-    ...module4Options.map((item) => [item[0], item[1]]),
-  ]);
+  const dataToUse = useMemo(
+    () =>
+      Object.fromEntries([
+        ["attokha", dataAttokhaJson],
+        ["ehsaks", dataEhsaksJson],
+        ["i_tlu", dataItluJson],
+        ["like-red", dataLikeRedJson],
+        ["otshyus", dataPulling],
+        ["ʌtole", dataΛtoleJson],
+        ...createModule6VerbListFlat().map((v) => [v.key, v]),
+        ...createModule9VerbListFlat().map((v) => [v.key, v]),
+        ...createModule10VerbListFlat().map((v) => [v.key, v]),
+        ...module4Options.map((item) => [item[0], item[1]]),
+      ]),
+    [module4Options],
+  );
 
   const defaultKey =
     wordSearchParam in dataToUse ? wordSearchParam : "like-red";
@@ -194,7 +198,7 @@ function ToolsParadigmInner() {
       }
     }
     return result;
-  }, [pronominalsList, word]);
+  }, [dataToUse, pronominalsList, word]);
 
   const formSchema = useMemo(() => {
     return z.object(
