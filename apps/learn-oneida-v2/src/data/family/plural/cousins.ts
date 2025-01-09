@@ -1,10 +1,11 @@
 import { createParadigmData } from "~/components/ParadigmTable";
 
-export default createParadigmData(
+const data = createParadigmData(
   {
     audioFolder: "module02/cousins",
     translation: "{{pronounPossessive}} cousins {{note}}",
     type: "PB",
+    categories: ["kinship"],
     phrases: [
       {
         breakdown: [["ukw"], "alaʔsé·shuha"],
@@ -26,3 +27,5 @@ export default createParadigmData(
   // @ts-expect-error Pronoun shenanigans
   ["i", "u", "m", "f", "f_f"],
 );
+
+export default data;

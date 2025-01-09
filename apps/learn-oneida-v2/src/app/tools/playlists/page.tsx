@@ -71,7 +71,11 @@ export default function ToolsPlaylist() {
       standardizeAudioFileName(currentDatum.audioFile),
     );
     const speechSynth = new SpeechSynthesisUtterance(
-      (currentDatum.en ?? []).join(", "),
+      (currentDatum.en ?? [])
+        .join(", ")
+        .replaceAll("(males)", "males")
+        .replaceAll("(females)", "females")
+        .replaceAll("(males + females)", "males and females"),
     );
     speechSynth.lang = "en-US";
 

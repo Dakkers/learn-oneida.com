@@ -79,6 +79,26 @@ export function translatePhraseV2(
   });
 }
 
+export function translatePhraseGeneric(
+  paradigmData: {
+    categories?: Array<"kinship">;
+    translation: string;
+    translationFn?: (pronoun: Pronoun) => string;
+    type: "PP" | "PB" | "PLB" | "PR";
+  },
+  pronoun: Pronoun,
+  legacyTranslationFn?: (arg: { pronoun: Pronoun }) => void,
+) {
+  return paradigmData.type === "PP" &&
+    !paradigmData.categories?.includes("kinship")
+    ? translatePhraseInteractive(
+        // @ts-expect-error ParadigmData doesn't support purple correctly :(
+        paradigmData,
+        pronoun,
+      )
+    : translatePhraseV2(paradigmData, pronoun, legacyTranslationFn);
+}
+
 export function translatePhrase(
   phrase: string,
   pronoun: Pronoun,

@@ -1,41 +1,33 @@
-import type { ParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  audioFolder: "module02/father",
-  translation: "{{pronounPossessive}} father",
-  type: "PP",
-  phrases: [
-    {
-      pronoun: "i",
-      phrase: "lakeʔníha̲",
-      breakdown: [["lake"], "ʔníha̲"],
-    },
-    {
-      pronoun: "u",
-      phrase: "yaʔníha̲",
-      breakdown: [["ya"], "ʔníha̲"],
-    },
-    {
-      pronoun: "m",
-      phrase: "loʔníha̲",
-      breakdown: [["lo"], "ʔníha̲"],
-    },
-    {
-      pronoun: "f",
-      phrase: "akoʔníha̲",
-      breakdown: [["ako", "PB"], "ʔníha̲"],
-    },
-    {
-      pronoun: "us",
-      phrase: "shukwaʔníha̲",
-      breakdown: [["shukwa"], "ʔníha̲"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "hetswaʔníha̲",
-      breakdown: [["h", "RPL"], ["etswa"], "ʔníha̲"],
-    },
-  ],
-};
+const data = createParadigmData(
+  {
+    audioFolder: "module02/father",
+    translation: "{{pronounPossessive}} father",
+    type: "PP",
+    categories: ["kinship"],
+    phrases: [
+      {
+        breakdown: [["lake"], "ʔníha̲"],
+      },
+      {
+        breakdown: [["ya"], "ʔníha̲"],
+      },
+      {
+        breakdown: [["lo"], "ʔníha̲"],
+      },
+      {
+        breakdown: [["ako", "PB"], "ʔníha̲"],
+      },
+      {
+        breakdown: [["shukwa"], "ʔníha̲"],
+      },
+      {
+        breakdown: [["h", "RPL"], ["etswa"], "ʔníha̲"],
+      },
+    ],
+  },
+  ["i", "u", "m", "f", "us", "yall"],
+);
 
 export default data;

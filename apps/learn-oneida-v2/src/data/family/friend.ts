@@ -1,41 +1,33 @@
-import type { ParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  audioFolder: "module02/friend",
-  translation: "{{pronoun}} are friends",
-  type: "PLB",
-  phrases: [
-    {
-      pronoun: "soni",
-      phrase: "ukyatʌ·ló̲",
-      breakdown: [["uky"], "atʌ·ló̲"],
-    },
-    {
-      pronoun: "u2",
-      phrase: "tsyatʌ·ló̲",
-      breakdown: [["tsy"], "atʌ·ló̲"],
-    },
-    {
-      pronoun: "2m",
-      phrase: "lonatʌ·ló̲",
-      breakdown: [["lon", "PB"], "atʌ·ló̲"],
-    },
-    {
-      pronoun: "2f",
-      phrase: "yonatʌ·ló̲",
-      breakdown: [["yon", "PB"], "atʌ·ló̲"],
-    },
-    {
-      pronoun: "us",
-      phrase: "ukwatʌ·ló̲",
-      breakdown: [["ukw"], "atʌ·ló̲"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "swatʌ·ló̲",
-      breakdown: [["sw"], "atʌ·ló̲"],
-    },
-  ],
-};
+const data = createParadigmData(
+  {
+    audioFolder: "module02/friend",
+    translation: "{{pronoun}} are friends",
+    type: "PLB",
+    categories: ["kinship"],
+    phrases: [
+      {
+        breakdown: [["uky"], "atʌ·ló̲"],
+      },
+      {
+        breakdown: [["tsy"], "atʌ·ló̲"],
+      },
+      {
+        breakdown: [["lon", "PB"], "atʌ·ló̲"],
+      },
+      {
+        breakdown: [["yon", "PB"], "atʌ·ló̲"],
+      },
+      {
+        breakdown: [["ukw"], "atʌ·ló̲"],
+      },
+      {
+        breakdown: [["sw"], "atʌ·ló̲"],
+      },
+    ],
+  },
+  ["soni", "u2", "2m", "2f", "us", "yall"],
+);
 
 export default data;

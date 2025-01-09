@@ -1,41 +1,33 @@
-import type { ParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  audioFolder: "module02/granddaughter",
-  translation: "{{pronounPossessive}} granddaughter",
-  type: "PP",
-  phrases: [
-    {
-      pronoun: "i",
-      phrase: "kheyatléha̲",
-      breakdown: [["khey"], "atléha̲"],
-    },
-    {
-      pronoun: "u",
-      phrase: "sheyatléha̲",
-      breakdown: [["shey"], "atléha̲"],
-    },
-    {
-      pronoun: "m",
-      phrase: "shakotléha̲",
-      breakdown: [["shako"], "tléha̲"],
-    },
-    {
-      pronoun: "f",
-      phrase: "utatatléha̲",
-      breakdown: [["utat"], "atléha̲"],
-    },
-    {
-      pronoun: "us",
-      phrase: "yethiyatléha̲",
-      breakdown: [["yethiy"], "atléha̲"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "yetshiyatléha̲",
-      breakdown: [["yetshiy"], "atléha̲"],
-    },
-  ],
-};
+const data = createParadigmData(
+  {
+    audioFolder: "module02/granddaughter",
+    translation: "{{pronounPossessive}} granddaughter",
+    type: "PP",
+    categories: ["kinship"],
+    phrases: [
+      {
+        breakdown: [["khey"], "atléha̲"],
+      },
+      {
+        breakdown: [["shey"], "atléha̲"],
+      },
+      {
+        breakdown: [["shako"], "tléha̲"],
+      },
+      {
+        breakdown: [["utat"], "atléha̲"],
+      },
+      {
+        breakdown: [["yethiy"], "atléha̲"],
+      },
+      {
+        breakdown: [["yetshiy"], "atléha̲"],
+      },
+    ],
+  },
+  ["i", "u", "m", "f", "us", "yall"],
+);
 
 export default data;

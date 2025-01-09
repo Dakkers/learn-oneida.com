@@ -550,7 +550,7 @@ export const particleList: ParticleEntry[] = [
   {
     key: "now",
     translation: "nuʔú·waʔ",
-    en: "now / today",
+    en: "now, today",
     examples: [
       {
         translation: "Tehonatekháhsyu nuʔú·wa̲ʔ",
@@ -706,7 +706,7 @@ export const particleList: ParticleEntry[] = [
   {
     key: "nowhere",
     translation: "yáh kánikeʔ",
-    en: "no place / nowhere",
+    en: "no place, nowhere",
     examples: [
       {
         translation: "Yáh kánikʌ thyeyáknehskweʔ kwaʔshu·té̲·",
@@ -848,7 +848,7 @@ export const particleList: ParticleEntry[] = [
   {
     key: "how_many_things",
     translation: "Tó· ni·kú̲",
-    en: "How many things / objects?",
+    en: "How many things, objects?",
     examples: [
       {
         translation: "Tó· ni·kú snú·wehseʔ thi·kʌ̲̲́",
@@ -1039,7 +1039,7 @@ export const particleList: ParticleEntry[] = [
   {
     key: "just_only",
     translation: "né· ok",
-    en: "just / only",
+    en: "just, only",
     examples: [
       {
         translation: "Né· ok oyé·li naʔtehaohsliyá·ku̲",

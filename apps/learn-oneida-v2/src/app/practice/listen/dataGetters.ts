@@ -1,6 +1,6 @@
 import {
   convertBreakdownToPlainText,
-  translatePhraseV2,
+  translatePhraseGeneric,
 } from "@ukwehuwehneke/language-components";
 import _ from "lodash";
 import {
@@ -70,7 +70,7 @@ export function formatParadigmDataAsAudioFiles(
 ): AudioFriendlyData {
   return data.phrases.map((val) => ({
     audioFile: `/${data.audioFolder}/${getAudioFilenameForPronoun(val.pronoun, data.type)}.mp3`,
-    en: translatePhraseV2(data, val.pronoun),
+    en: translatePhraseGeneric(data, val.pronoun),
     translation: convertBreakdownToPlainText(val.breakdown),
   }));
 }
@@ -250,7 +250,9 @@ export function formatDaysOfWeekAudioFiles(): AudioFriendlyData {
 }
 
 export function formatTimesOfDayAudioFiles(): AudioFriendlyData {
-  return _.flattenDeep(Object.values(createTimesOfDayData()));
+  return _.flattenDeep(
+    Object.values(createTimesOfDayData()).map(parseMultipleTranslations),
+  );
 }
 
 export function formatMonthsAudioFiles(): AudioFriendlyData {
@@ -333,6 +335,26 @@ export function getAllAudioForModule(module: ModuleNumber): AudioFriendlyData {
     ...getSingleWordsForModule(module),
     ...getSentencesForModule(module),
   ];
+  return result;
+}
+
+function parseMultipleTranslations(
+  data: {
+    audioFile: AudioFriendly["audioFile"];
+    en: string | string[];
+    translation: string | string[];
+  }[],
+): AudioFriendlyData {
+  const result = [];
+  for (const datum of data) {
+    for (const oneidaContent of arrayify(datum.translation)) {
+      result.push({
+        audioFile: formatAudioFileWithSuffix(datum),
+        en: arrayify(datum.en),
+        translation: oneidaContent,
+      });
+    }
+  }
   return result;
 }
 
