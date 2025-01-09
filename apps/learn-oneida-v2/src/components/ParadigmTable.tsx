@@ -170,7 +170,7 @@ function TableRowWrapper({
   }
   const { colVisibility, data, showBreakdown } = context;
   const translatedPhrase =
-    context.data.type === "PP"
+    context.data.type === "PP" && !context.data.categories?.includes("kinship")
       ? translatePhraseInteractive(
           // @ts-expect-error ParadigmData doesn't support purple correctly :(
           context.data,
@@ -287,6 +287,7 @@ interface ColumnVisibility {
 
 export interface ParadigmData {
   audioFolder?: string;
+  categories?: Array<"kinship">;
   phrases: Row[];
   translation: string;
   translationFn?: (pronoun: Pronoun) => string;
@@ -313,7 +314,12 @@ interface ParadigmTableContextProps {
 function createParadigmDataUtil(
   data: Pick<
     ParadigmData,
-    "audioFolder" | "translation" | "translationFn" | "type" | "whispered"
+    | "audioFolder"
+    | "categories"
+    | "translation"
+    | "translationFn"
+    | "type"
+    | "whispered"
   > & {
     phrases: Array<{ breakdown: BreakdownArray }>;
   },
@@ -373,8 +379,7 @@ export function createParadigmData(
   allowedPronouns?: Pronoun[],
 ): ParadigmData {
   const result = createParadigmDataUtil(data);
-  const pronounsToUse =
-    allowedPronouns ?? (result.type === "PB" ? pronounsBlue : pronouns);
+  const pronounsToUse = allowedPronouns ?? pronouns;
   for (let i = 0; i < result.phrases.length; i++) {
     if (pronounsToUse) {
       result.phrases[i].pronoun = pronounsToUse[i];

@@ -1,41 +1,33 @@
-import type { ParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  audioFolder: "module02/grandparents",
-  translation: "{{pronounPossessive}} grandparents",
-  type: "PP",
-  phrases: [
-    {
-      pronoun: "i",
-      phrase: "yukhsótha̲",
-      breakdown: [["yuk"], "hsótha̲"],
-    },
-    {
-      pronoun: "u",
-      phrase: "yesahsótha̲",
-      breakdown: [["yesa"], "hsótha̲"],
-    },
-    {
-      pronoun: "m",
-      phrase: "luwahsótha̲",
-      breakdown: [["luwa"], "hsótha̲"],
-    },
-    {
-      pronoun: "f",
-      phrase: "shakotihsótha̲",
-      breakdown: [["shakoti"], "hsótha̲"],
-    },
-    {
-      pronoun: "us",
-      phrase: "yukhihsothokúha̲",
-      breakdown: [["yukhi"], "hsothokúha̲"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "yetshihsothokúha̲",
-      breakdown: [["yetshi"], "hsothokúha̲"],
-    },
-  ],
-};
+const data = createParadigmData(
+  {
+    audioFolder: "module02/grandparents",
+    translation: "{{pronounPossessive}} grandparents",
+    type: "PP",
+    categories: ["kinship"],
+    phrases: [
+      {
+        breakdown: [["yuk"], "hsótha̲"],
+      },
+      {
+        breakdown: [["yesa"], "hsótha̲"],
+      },
+      {
+        breakdown: [["luwa"], "hsótha̲"],
+      },
+      {
+        breakdown: [["shakoti"], "hsótha̲"],
+      },
+      {
+        breakdown: [["yukhi"], "hsothokúha̲"],
+      },
+      {
+        breakdown: [["yetshi"], "hsothokúha̲"],
+      },
+    ],
+  },
+  ["i", "u", "m", "f", "us", "yall"],
+);
 
 export default data;

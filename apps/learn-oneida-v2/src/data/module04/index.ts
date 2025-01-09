@@ -428,9 +428,9 @@ export function createCountingTimeData() {
     ["2 years", "teyóhslake̲ʔ"],
     ["3 years", "áhsʌ niyóhslaké̲"],
   ].map(([en, translation]) => ({
+    audioFile: `module04/counting_time/${en.replaceAll(" ", "_")}.mp3`,
     en: arrayify(en),
     translation,
-    audioFile: `module04/counting_time/${en.replaceAll(" ", "_")}.mp3`,
   }));
 }
 
@@ -445,7 +445,7 @@ export function createTimesOfDayData() {
     ...obj,
     en: arrayify(obj.en),
     audioFile: `/audio/module04/time_phrases/${determineTimesOfDayAudioFileName(obj.en, obj.translation, index)}.mp3`,
-    translation: arrayify(obj.translation)[0],
+    translation: obj.translation,
   });
 
   const dayPhrases = [

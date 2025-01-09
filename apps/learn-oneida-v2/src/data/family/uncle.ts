@@ -1,41 +1,33 @@
-import type { ParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  audioFolder: "module02/uncle",
-  translation: "{{pronounPossessive}} uncle",
-  type: "PP",
-  phrases: [
-    {
-      pronoun: "i",
-      phrase: "laknulhá·",
-      breakdown: [["lak"], "nulhá·"],
-    },
-    {
-      pronoun: "u",
-      phrase: "yanulhá·",
-      breakdown: [["ya"], "nulhá·"],
-    },
-    {
-      pronoun: "m",
-      phrase: "lonulhá·",
-      breakdown: [["lo"], "nulhá·"],
-    },
-    {
-      pronoun: "f",
-      phrase: "akonulhá·",
-      breakdown: [["ako", "PB"], "nulhá·"],
-    },
-    {
-      pronoun: "us",
-      phrase: "shukwanulhá·",
-      breakdown: [["shukwa"], "nulhá·"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "hetswanulhá·",
-      breakdown: [["h", "RPL"], ["etswa"], "nulhá·"],
-    },
-  ],
-};
+const data = createParadigmData(
+  {
+    audioFolder: "module02/uncle",
+    translation: "{{pronounPossessive}} uncle",
+    type: "PP",
+    categories: ["kinship"],
+    phrases: [
+      {
+        breakdown: [["lak"], "nulhá·"],
+      },
+      {
+        breakdown: [["ya"], "nulhá·"],
+      },
+      {
+        breakdown: [["lo"], "nulhá·"],
+      },
+      {
+        breakdown: [["ako", "PB"], "nulhá·"],
+      },
+      {
+        breakdown: [["shukwa"], "nulhá·"],
+      },
+      {
+        breakdown: [["h", "RPL"], ["etswa"], "nulhá·"],
+      },
+    ],
+  },
+  ["i", "u", "m", "f", "us", "yall"],
+);
 
 export default data;

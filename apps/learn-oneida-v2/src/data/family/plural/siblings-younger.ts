@@ -1,41 +1,33 @@
-import type { ParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  audioFolder: "module02/younger_siblings",
-  translation: "{{pronounPossessive}} younger siblings",
-  type: "PP",
-  phrases: [
-    {
-      pronoun: "i",
-      phrase: "kheʔkʌʔokúha̲",
-      breakdown: [["khe"], "ʔkʌʔokúha̲"],
-    },
-    {
-      pronoun: "u",
-      phrase: "sheʔkʌʔokúha̲",
-      breakdown: [["she"], "ʔkʌʔokúha̲"],
-    },
-    {
-      pronoun: "m",
-      phrase: "shakoʔkʌʔokúha̲",
-      breakdown: [["shako"], "ʔkʌʔokúha̲"],
-    },
-    {
-      pronoun: "f",
-      phrase: "utateʔkʌʔokúha̲",
-      breakdown: [["utate"], "ʔkʌʔokúha̲"],
-    },
-    {
-      pronoun: "us",
-      phrase: "yethiʔkʌʔokúha̲",
-      breakdown: [["yethi"], "ʔkʌʔokúha̲"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "yetshiʔkʌʔokúha̲",
-      breakdown: [["yetshi"], "ʔkʌʔokúha̲"],
-    },
-  ],
-};
+const data = createParadigmData(
+  {
+    audioFolder: "module02/younger_siblings",
+    translation: "{{pronounPossessive}} younger siblings",
+    type: "PP",
+    categories: ["kinship"],
+    phrases: [
+      {
+        breakdown: [["khe"], "ʔkʌʔokúha̲"],
+      },
+      {
+        breakdown: [["she"], "ʔkʌʔokúha̲"],
+      },
+      {
+        breakdown: [["shako"], "ʔkʌʔokúha̲"],
+      },
+      {
+        breakdown: [["utate"], "ʔkʌʔokúha̲"],
+      },
+      {
+        breakdown: [["yethi"], "ʔkʌʔokúha̲"],
+      },
+      {
+        breakdown: [["yetshi"], "ʔkʌʔokúha̲"],
+      },
+    ],
+  },
+  ["i", "u", "m", "f", "us", "yall"],
+);
 
 export default data;
