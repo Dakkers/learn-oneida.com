@@ -5,7 +5,11 @@ export function formatFileWithSuffix(
   items: unknown,
   index = 0,
 ) {
-  if (!Array.isArray(items) || items.length === 1) {
+  if (
+    !Array.isArray(items) ||
+    items.length === 1 ||
+    filepath.match(/_[0-9]+$/)
+  ) {
     return filepath;
   }
   const fileSplit = filepath.split("/");

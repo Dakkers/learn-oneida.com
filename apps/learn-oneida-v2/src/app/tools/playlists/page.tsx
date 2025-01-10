@@ -30,9 +30,13 @@ const meta: any = () => {
 export default function ToolsPlaylist() {
   const audioClipRef = useRef<HTMLAudioElement | null>(null);
   const speechSynthRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const audioClipTimerRef = useRef<Timer | null>(null);
+  const speechSynthTimerRef = useRef<Timer | null>(null);
 
   const [category, setCategory] = useState("all");
   const [hasStarted, setHasStarted] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [canPause, setCanPause] = useState(false);
   const [index, setIndex] = useState(-1);
   const [prevIndex, setPrevIndex] = useState(index);
 
@@ -66,6 +70,11 @@ export default function ToolsPlaylist() {
   useEffect(() => {
     // Janky attempt at ensuring the voice doesn't sound like Daft Punk
     speechSynthesis.getVoices();
+
+    return () => {
+      speechSynthTimerRef.current?.cleanup();
+      audioClipTimerRef.current?.cleanup();
+    };
   }, []);
 
   useEffect(() => {
@@ -98,15 +107,19 @@ export default function ToolsPlaylist() {
     speechSynth.volume = 0.7;
 
     audioClip.addEventListener("ended", () => {
-      setTimeout(() => {
+      audioClipTimerRef.current = new Timer(4500, () => {
+        setCanPause(false);
         window.speechSynthesis.speak?.(speechSynth);
-      }, 4500);
+        audioClipTimerRef.current = null;
+      });
+      setCanPause(true);
     });
 
     speechSynth.addEventListener("end", () => {
-      setTimeout(() => {
+      speechSynthTimerRef.current = new Timer(1000, () => {
         setIndex(index + 1);
-      }, 1000);
+        speechSynthTimerRef.current = null;
+      });
     });
 
     audioClipRef.current = audioClip;
@@ -146,10 +159,30 @@ export default function ToolsPlaylist() {
       </Flex>
 
       {hasStarted ? (
-        <AnswerCard
-          englishText={currentDatum.en}
-          oneidaText={currentDatum.translation}
-        />
+        <>
+          <AnswerCard
+            englishText={currentDatum.en}
+            oneidaText={currentDatum.translation}
+          />
+
+          <Flex justify="end" pt={4}>
+            <Button
+              disabled={!canPause}
+              onClick={() => {
+                if (isPaused) {
+                  audioClipTimerRef.current?.run();
+                  speechSynthTimerRef.current?.run();
+                } else {
+                  audioClipTimerRef.current?.pause();
+                  speechSynthTimerRef.current?.pause();
+                }
+                setIsPaused(!isPaused);
+              }}
+            >
+              {isPaused ? "Resume" : "Pause"}
+            </Button>
+          </Flex>
+        </>
       ) : category ? (
         <Flex justify="end">
           <Button
@@ -206,4 +239,56 @@ async function createWakeLock() {
     console.error(err);
   }
   return wakeLock;
+}
+
+class Timer {
+  time: number = 0;
+  remainingTime: number = 0;
+  callback: () => void;
+  timeoutObj: ReturnType<typeof setTimeout> | null = null;
+
+  now: number = new Date().getTime();
+
+  constructor(time: number, callback: () => void, autoRun = true) {
+    this.time = time;
+    this.remainingTime = time;
+    this.callback = callback;
+
+    if (autoRun) {
+      this.run();
+    }
+  }
+
+  reset(autoRun = true) {
+    this.remainingTime = this.time;
+    if (autoRun) {
+      this.run();
+    }
+  }
+
+  run() {
+    if (this.remainingTime <= 0) {
+      return;
+    }
+
+    this.now = new Date().getTime();
+
+    this.timeoutObj = setTimeout(() => {
+      this.callback();
+      this.remainingTime = 0;
+      this.timeoutObj = null;
+    }, this.remainingTime);
+  }
+
+  pause() {
+    const duration = new Date().getTime() - this.now;
+    this.remainingTime = this.remainingTime - duration;
+    this.cleanup();
+  }
+
+  cleanup() {
+    if (this.timeoutObj) {
+      clearTimeout(this.timeoutObj);
+    }
+  }
 }

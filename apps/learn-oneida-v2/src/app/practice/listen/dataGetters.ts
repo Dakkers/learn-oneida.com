@@ -345,15 +345,15 @@ function parseMultipleTranslations(
     translation: string | string[];
   }[],
 ): AudioFriendlyData {
-  const result = [];
+  const result: AudioFriendlyData = [];
   for (const datum of data) {
-    for (const oneidaContent of arrayify(datum.translation)) {
+    arrayify(datum.translation).forEach((oneidaContent, index) => {
       result.push({
-        audioFile: formatAudioFileWithSuffix(datum),
+        audioFile: formatAudioFileWithSuffix(datum, index),
         en: arrayify(datum.en),
         translation: oneidaContent,
       });
-    }
+    });
   }
   return result;
 }
