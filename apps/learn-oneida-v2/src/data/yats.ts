@@ -28,6 +28,7 @@ const data = createParadigmData(
         breakdown: [["kuwati·"], "yáts"],
       },
     ],
+    whispered: false,
   },
   ["i", "u", "m", "f", "it", "ms", "fs"],
 );

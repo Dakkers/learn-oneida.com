@@ -28,6 +28,7 @@ import {
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { Letter } from "@/components/Letter";
 import { getDialogueModule03 } from "@/data/module03";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -529,11 +530,12 @@ function PastTenseWhen() {
   return (
     <>
       <SectionHeading id="past-tense-when" level={3}>
-        Something used to be the case
+        When something was the case
       </SectionHeading>
       <Text>
         Now, here are examples of when something was the case. This is
-        communicated using a pre-pronominal prefix.
+        communicated using a pre-pronominal prefix called the{" "}
+        <LinkWrapper page="coin" />.
       </Text>
 
       <TableWrapper

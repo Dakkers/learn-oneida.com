@@ -52,6 +52,7 @@ export default createParadigmData(
         breakdown: [["kuti"], "kwanʌ·", ["né·", "PAST"]],
       },
     ],
+    whispered: false,
   },
   pronouns,
 );

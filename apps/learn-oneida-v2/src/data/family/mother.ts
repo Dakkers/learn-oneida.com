@@ -26,6 +26,7 @@ const data = createParadigmData(
         breakdown: [["swa"], "nulhá·"],
       },
     ],
+    whispered: false,
   },
   ["i", "u", "m", "f", "us", "yall"],
 );

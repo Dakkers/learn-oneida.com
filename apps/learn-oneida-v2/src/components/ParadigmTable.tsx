@@ -321,7 +321,7 @@ function createParadigmDataUtil(
     | "type"
     | "whispered"
   > & {
-    phrases: Array<{ breakdown: BreakdownArray }>;
+    phrases: Array<{ breakdown: BreakdownArray; whispered?: boolean }>;
   },
 ) {
   const result = _.cloneDeep(data) as ParadigmData;

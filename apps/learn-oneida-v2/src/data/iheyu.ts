@@ -51,6 +51,7 @@ const data = createParadigmData({
       breakdown: [["yon"], "ʌheyú"],
     },
   ],
+  whispered: false,
 });
 
 export default data;

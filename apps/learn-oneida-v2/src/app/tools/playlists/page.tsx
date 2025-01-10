@@ -36,6 +36,8 @@ export default function ToolsPlaylist() {
   const [index, setIndex] = useState(-1);
   const [prevIndex, setPrevIndex] = useState(index);
 
+  const wakelock = useWakeLock();
+
   const data = useMemo(() => {
     if (!category) {
       return [];
@@ -65,6 +67,12 @@ export default function ToolsPlaylist() {
     // Janky attempt at ensuring the voice doesn't sound like Daft Punk
     speechSynthesis.getVoices();
   }, []);
+
+  useEffect(() => {
+    return () => {
+      wakelock?.release();
+    };
+  }, [wakelock]);
 
   if (index !== prevIndex) {
     const audioClip = new Audio(
@@ -176,4 +184,26 @@ function AnswerCard({
       </Flex>
     </Card>
   );
+}
+
+function useWakeLock() {
+  const [wakeLock, setWakeLock] = useState<WakeLockSentinel | null>(null);
+  useEffect(() => {
+    createWakeLock().then((w) => {
+      if (w) {
+        setWakeLock(w);
+      }
+    });
+  }, []);
+  return wakeLock;
+}
+
+async function createWakeLock() {
+  let wakeLock = null;
+  try {
+    wakeLock = await navigator.wakeLock.request("screen");
+  } catch (err) {
+    console.error(err);
+  }
+  return wakeLock;
 }
