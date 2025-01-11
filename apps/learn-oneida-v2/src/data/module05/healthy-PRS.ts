@@ -3,6 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
+    audioFolder: "module01/pronominals/blue/A",
     translation: "{{pronoun}} {{refVerb}} healthy",
     type: "PB",
     phrases: [
@@ -10,7 +11,7 @@ export default createParadigmData(
         breakdown: [["wak"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["hs"], "ataʔkali·té·"],
+        breakdown: [["s"], "ataʔkali·té·"],
       },
       {
         breakdown: [["lo"], "taʔkali·té·"],

@@ -27,6 +27,8 @@ import {
 } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { Letter } from "@/components/Letter";
+import { getDialogueModule03 } from "@/data/module03";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -81,7 +83,7 @@ export default function LearnModule03() {
           </TOC.Section>
         </TOC.Item>
 
-        <TOC.Item label="Good and Bad Conjugations" value="good-bad">
+        <TOC.Item label="Good and Bad Conjugations" value="good-bad-people">
           <TOC.Section>
             <TOC.Item label="Good People" value="good-people" />
             <TOC.Item label="Bad People" value="bad-people" />
@@ -528,11 +530,12 @@ function PastTenseWhen() {
   return (
     <>
       <SectionHeading id="past-tense-when" level={3}>
-        Something used to be the case
+        When something was the case
       </SectionHeading>
       <Text>
         Now, here are examples of when something was the case. This is
-        communicated using a pre-pronominal prefix.
+        communicated using a pre-pronominal prefix called the{" "}
+        <LinkWrapper page="coin" />.
       </Text>
 
       <TableWrapper
@@ -844,138 +847,7 @@ const createColsLol = (cols: string[]) => {
 };
 
 function DialogueSection() {
-  const part1: DialogueTableData = [
-    { one: "Lonyákheʔ kʌ́ Brad Pitt" },
-    { one: "Táh, lonyá·ku nuʔú·wa̲ʔ" },
-    { one: "Úhkaʔ náhteʔ lotinyakú·" },
-    { one: "Angelina Jolie lotinyakú" },
-    { one: "Yáh teʔwakanúhtehkwe̲ʔ" },
-    { one: "ʌ́·, to·kʌ́skeʔ" },
-    { one: "Lotiwila·yʌ́· kʌ́" },
-    { one: ["ʌ́·, yá·yak nihotiwila·yʌ·, kayé·li nihá·ti kháleʔ tehní·khʌʔ"] },
-    { one: "Yáh kʌ́ tehotinyakú·neʔ Jennifer Aniston" },
-    { one: ["ʌ́·, lotinyakú·neʔ nók tsiʔ tehonatekháhsyu nuʔú·wa̲ʔ"] },
-    { one: "Yutatwʌni·yó kʌ́ nuʔú·wa̲ʔ" },
-    { one: "Yáh tetsyutatwʌni·yó· nuʔú·wa̲ʔ" },
-    { one: "Yakonyakú kʌ́" },
-    {
-      one: [
-        "ʌ́·, tsyakonyakú á·le",
-        "Lotinyakú né· shayá·tat né·n Justin Theroux luwa·yáts",
-      ],
-    },
-    { one: "Úhkaʔ náhteʔ oyá· tehotinyakú·neʔ Brad" },
-    { one: "Yáh tehotinyakú·neʔ Gwyneth Paltrow nók tsiʔ lotinyákhehkwe̲ʔ" },
-    { one: "Yutatwʌni·yó· kʌ́ nuʔú·waʔ neʔn Gwyneth" },
-    {
-      one: [
-        "Táh, lotinyákhehkwe ne Brad, neʔ thó·neʔ ihnéhskweʔ neʔn Ben Affleck neʔ thó·neʔ oyé·li niyohslaké tsiʔ náheʔ lotinyakú·neʔ né· Chris Martin",
-        "Tehniyáhse tehotiwila·yʌ́·",
-        "Shayá·tat né·n Moses luwa·yáts kháleʔ tsyeyá·tat né·n Apple yutátyats",
-        "Tehonatekháhsyu nuʔú·waʔ kháleʔ ihnehseʔ né· shayá·tat neʔn Brad Falchuk luwa·yáts",
-      ],
-    },
-    { one: ["Ok né·n Ben Affleck", "Laukwé·tayʌʔ kʌ́né·n yakukwé· nuʔú·wa̲ʔ"] },
-    {
-      one: [
-        "E·só· nikutí kunukwé· laukweʔtayʌ·táhkweʔ né· Ben",
-        "Jennifer Lopez sʌ· ihnehskwe kh ́ áleʔ lotinyákhehkwe̲ʔ",
-      ],
-    },
-    { one: "J-Lo kʌ́ sʌ́· loneʔkʌ́" },
-    {
-      one: [
-        "Táh, yáh newʌ·tú tehotinyákuʔ né· J-Lo",
-        "Tehonatekháhsyu nók tsiʔ lotinyakúhneʔ né· Jennifer Garner, oyé·li niyohslaké nikalì·wes",
-        "Áhsʌ nihotiwila·yʌ·, shayá·tat kháleʔ tekniyáhse̲",
-      ],
-    },
-    { one: "Shekú kʌ́ lotinyakú" },
-    { one: ["Táh, tehonatekháhsyu", "Yatatwʌni·yó· né· tehnitsyalú̲"] },
-    {
-      one: ["Ok né·n Ben lonatʌ·ló Matt Damon", "Oh niyohtuhátiʔ né·n laulhá·"],
-    },
-    {
-      one: "Áhsʌ nikutí lʌné·skweʔ (Minnie Driver, Winona Ryder kháleʔ tsyeyá·tat oyá·) kaló· tsiʔ niyo·lé· nihotinyakú né·n ló·ne· oyé·li niyohslaké tsiʔ náhe",
-    },
-    {
-      one: "Ok né·n Angelina Jolie uhka náhteʔ ihnéhskwe né· kaló· tsiʔ niyo·lé· né·n Brad",
-    },
-    {
-      one: [
-        "Lotinyakú·neʔ ne Billy Bob Thornton kháleʔ oyá· shayá·tat",
-        "Kháleʔ kaló· tsiʔ niyo·lé· lotinyakú·neʔ né· Billy Bob, yáh ki tsyohslaké tsiʔ náheʔ iknéhskweʔ ne tsyeyá·tat yakú·kwe̲ʔ",
-      ],
-    },
-    { one: "Yáh náhteʔ teʔwakanúhtehkweʔ thikʌ̲̲́" },
-    { one: "Nʌ ki né· sanúhte̲ʔ" },
-  ];
-
-  const part2: DialogueTableData = [
-    { one: "To·kʌ́skeʔ kʌ́ sanyákheʔ" },
-    { one: ["ʌ́·, to·kʌ́skeʔ", "Tu·wís yukninyákheʔ"] },
-    { one: ["Tu·wís kʌ́", "Lotinyakú né· So·s"] },
-    { one: "Lotinyakú·neʔ nók tsiʔ tehonatekháhsyu nuʔú·wa̲ʔ" },
-    { one: "Tó· nahe tshatehonatekháhsyu" },
-    { one: "Yáh tewahu·níseʔ nók tsiʔ latatwʌni·yó nuʔú·wa̲ʔ" },
-    { one: "Yáh kʌ́ tehotinyaku·né· kaló· tsiʔ niyo·lé· waʔhotinyakeʔ So·s" },
-    {
-      one: [
-        "Kʌʔ ok naheʔ",
-        "Katlí·n né·n lotinyakú·neʔ kháleʔ yáh só·tsiʔ teyakukweʔtiyó̲",
-      ],
-    },
-    {
-      one: ["Ok né·n Tu·wís", "Yáh só·tsiʔ tehlukweʔtiyó né·n laulhá·"],
-    },
-    {
-      one: [
-        "Latatwʌni·yó· kháleʔ laknolúkhwa̲ʔ",
-        "Ok né·n niʔisé·",
-        "Yáh teʔsanyákuʔ",
-      ],
-    },
-    {
-      one: "ʌ́· kháleʔ yáh teʔyukninyákheʔ úhkaʔ náhteʔ ok né·n tshaʔteyukniʔtaló·tʌ̲ʔ",
-    },
-    {
-      one: ["Tsiʔ nihsekhsá·", "Yukninyákheʔ kháleʔ yáh niʔisé̲·"],
-    },
-    {
-      one: "Etshlihwanu·tú·seʔ tó· nihotikhsá·tayʌʔ oskánhe né·n oyá· yakú·kwe̲",
-    },
-    { one: "Yáh tehokhsá·tayʌʔ" },
-    { one: "Yáh e·só· tehetshyʌtelí, wahí̲" },
-    { one: "Wakanúhteʔ tsiʔ laknolúkhwa̲ʔ" },
-    {
-      one: [
-        "Yáh kʌ́ teʔsanúhteʔ tsiʔ áhsʌ nikutí kunukwé· lotinyakú·neʔ",
-        "Kháleʔ oyé·li nihokhsá·tayʌʔ",
-      ],
-    },
-    {
-      one: ["Yáh to·kʌ́skeʔ té·kʌ", "Ne ok tewáhsʌ úskah niyohslaké nithoyʌ́·ha̲"],
-    },
-    {
-      one: "Sanúhteʔ kʌ́ tsiʔ nihatikhsaʔtáksʌs ne shakoyoʔokúha̲",
-    },
-    {
-      one: ["Yáh teʔsukweʔtiyó niʔisé̲·", "Tho wakanúhte̲ʔ"],
-    },
-    {
-      one: "Yaweluhátiʔ tsiʔ yáh teshakoyʌtelí né·n shakoyoʔokúha, yáh tehuwanú·wehse̲ʔ",
-    },
-    {
-      one: [
-        "Yaweluhátiʔ tó· nihokhsá·tayʌʔ, yáh úhkaʔ teʔsukwé·tayʌʔ ne·n yesanolúkhwa̲ʔ",
-        "Né· ok tewáhsʌ nikutí takós sanáhskwayʌʔ kháleʔ yáh teʔyesanú·wehse̲ʔ",
-      ],
-    },
-    {
-      one: "Sanúhteʔ kʌ́ tsiʔ yáh tehonúhteʔ oh náhteʔ tethsʌná·sele̲ʔ",
-    },
-    { one: "Sʌ́haʔ e·só· takhló·li̲" },
-  ];
+  const data = getDialogueModule03();
 
   return (
     <>
@@ -985,11 +857,11 @@ function DialogueSection() {
       <SectionHeading id="dialogue-ex1" level={3}>
         Example 1
       </SectionHeading>
-      <DialogueTable data={part1} />
+      <DialogueTable audioFolder="module03/dialogue/part1" data={data.part1} />
       <SectionHeading id="dialogue-ex2" level={3}>
         Example 2
       </SectionHeading>
-      <DialogueTable data={part2} />
+      <DialogueTable audioFolder="module03/dialogue/part2" data={data.part2} />
     </>
   );
 }

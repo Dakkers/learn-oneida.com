@@ -36,8 +36,8 @@ import youngerSiblingsJson from "../../data/family/plural/siblings-younger";
 import unclesAuntsJson from "../../data/family/plural/uncles-aunts";
 import niblingsJson from "../../data/family/plural/niblings";
 
-import cousinsJson from "../../data/family/plural/cousins.json";
-import friendsJson from "../../data/family/plural/friends.json";
+import cousinsJson from "../../data/family/plural/cousins";
+import friendsJson from "../../data/family/plural/friends";
 
 import { Notice, Text } from "@ukwehuwehneke/ohutsya";
 import { TableOfContents as TOC } from "../TableOfContents";
@@ -92,7 +92,8 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
 
       <Notice intent="warning">
         For a number of the kin term pronominals, the first letter has been
-        dropped.
+        dropped. This is not specific to this website, but rather a quirk of the
+        language.
       </Notice>
 
       <SectionHeading id="family-mother" level={sublevel}>
@@ -279,11 +280,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         The root word is <b>hwatsil</b> and is a regular noun, so it uses
         light-blue pronominals.
       </Text>
-      <ParadigmTable
-        audioFolder="module02/family"
-        columnVisibility={colVisibility}
-        data={familyJson}
-      />
+      <ParadigmTable columnVisibility={colVisibility} data={familyJson} />
 
       <SectionHeading id="family-related" level={sublevel}>
         Related
@@ -392,10 +389,9 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         // @ts-expect-error TODO - weird pronominals
         allowedPronouns={["i", "u", "m", "f", "f_f"]}
         columnVisibility={colVisibility}
-        // @ts-expect-error TODO - weird pronominals
         data={cousinsJson}
         // @ts-expect-error TODO - weird pronominals
-        translationFn={({ pronoun }) =>
+        legacyTranslationFn={({ pronoun }) =>
           // @ts-expect-error TODO - weird pronominals
           pronoun === "f_f"
             ? {
@@ -419,10 +415,9 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         // @ts-expect-error TODO - weird pronominals
         allowedPronouns={["i", "u", "m", "f", "f_f"]}
         columnVisibility={colVisibility}
-        // @ts-expect-error TODO - weird pronominals
         data={friendsJson}
         // @ts-expect-error TODO - weird pronominals
-        translationFn={({ pronoun }) =>
+        legacyTranslationFn={({ pronoun }) =>
           // @ts-expect-error TODO - weird pronominals
           pronoun === "f_f"
             ? {

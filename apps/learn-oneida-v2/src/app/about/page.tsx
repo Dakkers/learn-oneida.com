@@ -1,6 +1,6 @@
 "use client";
 
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, Link } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
@@ -18,8 +18,9 @@ export default function About() {
       </Text>
 
       <Text>
-        It is produced by Anowal Software, Indigenous-owned, and always
-        maintained with community input in mind.
+        It is produced by{" "}
+        <Link href="https://anowal-software.com/">Anowal Software</Link>,
+        Indigenous-owned, and always maintained with community input in mind.
       </Text>
 
       <SectionHeading level={2}>Contributors</SectionHeading>
@@ -30,20 +31,10 @@ export default function About() {
         Her time and commitment to helping us is greatly appreciated!
       </Text>
 
-      <SectionHeading level={2}>Land Acknowledgement</SectionHeading>
-
-      <Text>
-        Anowal Software acknowledges that we live and work on Turtle Island
-        which has been home to many Indigenous Peoples since Time Immemorial.
-        Anowal Software Operates on Land traditionally inhabited and cared for
-        by Anishinabe, Haudenosaunee, Attiwonderonk (Neutral) peoples.
-      </Text>
-
       <SectionHeading level={2}>The Anowal Software Team</SectionHeading>
 
       <List>
         <List.Item>Dakota St. Laurent - Founder and Lead Developer</List.Item>
-        <List.Item>Belle Pensamiento - Ethics Consultant</List.Item>
       </List>
 
       <SectionHeading level={2}>Join our mailing list</SectionHeading>
@@ -63,13 +54,6 @@ export default function About() {
 
       <Text>
         Questions? Found some Typos? Want to see more features? Email{" "}
-        <a
-          className="underline text-blue-600"
-          href="mailto:belle@anowal-software.com"
-        >
-          Belle
-        </a>{" "}
-        or{" "}
         <a
           className="underline text-blue-600"
           href="mailto:dakota@anowal-software.com"

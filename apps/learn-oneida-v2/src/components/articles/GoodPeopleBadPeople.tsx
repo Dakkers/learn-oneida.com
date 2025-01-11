@@ -6,157 +6,63 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import type { BreakdownArray } from "@ukwehuwehneke/language-components";
+import { getGoodAndBadPeopleLists } from "@/data/module03";
+import _ from "lodash";
+import type { ParadigmData } from "../ParadigmTable";
 
 export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
-  const goodPeopleData: Array<BreakdownArray[]> = [
-    [
-      [["k"], "ukweʔtiyó"],
-      [["k"], "ukweʔtiyo", "hné·"],
-    ],
-    [
-      [["s"], "ukweʔtiyó"],
-      [["s"], "ukweʔtiyo", "hné·"],
-    ],
-    [
-      [["h", "RPL"], ["l"], "ukweʔtiyó"],
-      [["h", "RPL"], ["l"], "ukweʔtiyo", "hné·"],
-    ],
-    [
-      [["yak"], "ukweʔtiyó"],
-      [["yak"], "ukweʔtiyo", "hné·"],
-    ],
-    [
-      [["lʌn"], "ukweʔtiyóhseʔ"],
-      [["lʌn"], "ukweʔtiyóhs", "kweʔ"],
-    ],
-  ];
-  const badPeopleData: Array<BreakdownArray[]> = [
-    [
-      [["k"], "ukweʔtáksʌ"],
-      [["k"], "ukweʔtaksʌ́", "hné·"],
-    ],
-    [
-      [["s"], "ukweʔtáksʌ"],
-      [["s"], "ukweʔtaksʌ́", "hneʔ"],
-    ],
-    [
-      [["h", "RPL"], ["l"], "ukweʔtáksʌ"],
-      [["h", "RPL"], ["l"], "ukweʔtaksʌ́", "hneʔ"],
-    ],
-    [
-      [["yak"], "ukweʔtáksʌ"],
-      [["yak"], "ukweʔtaksʌ́", "hneʔ"],
-    ],
-    [
-      [["lʌn"], "ukweʔtáksʌhseʔ"],
-      [["lʌn"], "ukweʔtaksʌhs", "kweʔ"],
-    ],
-  ];
-  const goodKidsData: Array<BreakdownArray[]> = [
-    [
-      [["k"], "eksaʔtiyó"],
-      [["k"], "eksaʔtiyo", "hné·"],
-    ],
-    [
-      [["h", "RPL"], ["s"], "eksaʔtiyó"],
-      [["h", "RPL"], ["s"], "eksaʔtiyo", "hné·"],
-    ],
-    [
-      [["la"], "ksaʔtiyó"],
-      [["la"], "ksaʔtiyo", "hné·"],
-    ],
-    [
-      [["ye"], "ksaʔtiyó"],
-      [["ye"], "ksaʔtiyo", "hné·"],
-    ],
-    [
-      [["lati"], "ksaʔtiyóhseʔ"],
-      [["lati"], "ksaʔtiyóhs", "kweʔ"],
-    ],
-  ];
-  const badKidsData: Array<BreakdownArray[]> = [
-    [
-      [["k"], "eksaʔtáksʌ"],
-      [["k"], "eksaʔtaksʌ́", "hneʔ"],
-    ],
-    [
-      [["s"], "eksaʔtáksʌ"],
-      [["s"], "eksaʔtaksʌ́", "hneʔ"],
-    ],
-    [
-      [["la"], "ksaʔtáksʌ"],
-      [["la"], "ksaʔtaksʌ́", "hneʔ"],
-    ],
-    [
-      [["ye"], "ksaʔtáksʌ"],
-      [["ye"], "ksaʔtaksʌ́", "hneʔ"],
-    ],
-    [
-      [["lati"], "ksaʔtáksʌhseʔ"],
-      [["lati"], "ksaʔtaksʌhs", "kweʔ"],
-    ],
-  ];
+  const sublevel = (level + 1) as SectionHeadingProps["level"];
+  const data = getGoodAndBadPeopleLists();
+
+  const joinLol = (left: ParadigmData, right: ParadigmData) => {
+    return _.zip(left.phrases, right.phrases).map(([l, r]) => ({
+      pronoun: l?.pronoun,
+      breakdown: l?.breakdown,
+      breakdownPast: r?.breakdown,
+    }));
+  };
 
   return (
     <Flex direction="column" gap={4}>
-      <SectionHeading level={level}>Good and Bad People</SectionHeading>
+      <SectionHeading id="good-bad-people" level={level}>
+        Good and Bad People
+      </SectionHeading>
       <Text>
         Here, two more conjugations are introduced. <b>iyo</b> makes the entity
         &quot;good&quot; and <b>aksʌ</b> other makes the &quot;bad&quot;.
       </Text>
-      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+      <SectionHeading id="good-people" level={sublevel}>
         Good People
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
-        data={goodPeopleData.map(mapper)}
+        data={joinLol(data.goodPerson, data.goodPersonPAST)}
       />
-      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+      <SectionHeading id="bad-people" level={sublevel}>
         Bad People
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
-        data={badPeopleData.map(mapper)}
+        data={joinLol(data.badPerson, data.badPersonPAST)}
       />
-      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+      <SectionHeading id="good-kids" level={sublevel}>
         Good Kids
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
-        data={goodKidsData.map(mapper)}
+        data={joinLol(data.goodKid, data.goodKidPAST)}
       />
-      <SectionHeading level={(level + 1) as SectionHeadingProps["level"]}>
+      <SectionHeading id="bad-kids" level={sublevel}>
         Bad Kids
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
-        data={badKidsData.map(mapper)}
+        data={joinLol(data.badKid, data.badKidPAST)}
       />
     </Flex>
   );
 }
-
-const mapper = ([left, right]: BreakdownArray[], i: number) => {
-  const pronoun =
-    i === 0
-      ? "i"
-      : i === 1
-        ? "u"
-        : i === 2
-          ? "m"
-          : i === 3
-            ? "f"
-            : i === 4
-              ? "ms"
-              : undefined;
-  return {
-    breakdown: left,
-    breakdownPast: right,
-    pronoun,
-  };
-};

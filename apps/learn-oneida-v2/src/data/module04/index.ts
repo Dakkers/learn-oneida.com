@@ -32,6 +32,8 @@ import dataUsedToWant from "./used-to-want";
 import dataDidntUsedToWant from "./didnt-used-to-want";
 import dataThought from "./thought";
 import type { ParadigmData } from "~/components/ParadigmTable";
+import { arrayify } from "@ukwehuwehneke/language-components";
+import { formatAudioFileWithSuffix, formatFileWithSuffix } from "@/utils/misc";
 
 export const MODULE_4_TENSE_LIST = ["prs", "past", "fut", "ifut"] as const;
 export type Module4VerbTense = (typeof MODULE_4_TENSE_LIST)[number];
@@ -44,6 +46,9 @@ interface Module4Datum {
   tense: Module4VerbTense;
 }
 
+/**
+ * @deprecated Maybe?
+ */
 export function createModule4Data() {
   const result: Module4Datum[] = [
     {
@@ -260,4 +265,361 @@ export function createModule4Data() {
     },
   ];
   return result;
+}
+
+export function getDaysOfWeekData() {
+  const mapUtil = (obj: {
+    en: string;
+    key?: string;
+    translation: string;
+  }) => ({
+    ...obj,
+    audioFile: `module04/days/${obj.en.toLowerCase().replaceAll(" ", "_")}.mp3`,
+    en: arrayify(obj.en),
+  });
+  const days = [
+    { en: "Sunday", translation: "Yautatokʌ́htu", key: "sun" },
+    { en: "Monday", translation: "Yautʌtá·u", key: "mon" },
+    { en: "Tuesday", translation: "Tekníhatut", key: "tue" },
+    { en: "Wednesday", translation: "Ahsʌ́hatut", key: "wed" },
+    { en: "Thursday", translation: "Kayelíhatut", key: "thu" },
+    { en: "Friday", translation: "Wískhatut", key: "fri" },
+    { en: "Saturday", translation: "Ʌtáktaʔ", key: "sat" },
+  ].map(mapUtil);
+
+  const daysSpecific = [
+    { en: "on Sunday", translation: "Yautatokʌhtu·ne̲ʔ" },
+    { en: "on Monday", translation: "Yautʌtaʔú·ne̲ʔ" },
+    { en: "on Tuesday", translation: "Teknihatútneʔ" },
+    { en: "on Wednesday", translation: "Ahsʌhatútneʔ" },
+    { en: "on Thursday", translation: "Kayelihatútneʔ" },
+    { en: "on Friday", translation: "Wiskhatútneʔ" },
+    { en: "on Saturday", translation: "Ʌtaktáhne̲ʔ" },
+  ].map(mapUtil);
+  const daysLast = [
+    { en: "last Sunday", translation: "tshawʌtatokʌ́htu" },
+    { en: "last Monday", translation: "tshawʌtʌ·táne̲ʔ" },
+    { en: "last Tuesday", translation: "tshaʔtekníhatuht" },
+    { en: "last Wednesday", translation: "tshiwahsʌ́hatuht" },
+    { en: "last Thursday", translation: "tshikayelíhatuht" },
+    { en: "last Friday", translation: "tshiwískhatut" },
+    { en: "last Saturday", translation: "tshiwʌtákta̲ʔ" },
+  ].map(mapUtil);
+  const daysNext = [
+    { en: "next Sunday", translation: "yʌswʌtatokʌ́htu" },
+    { en: "next Monday", translation: "oyá· yʌswʌtʌ·táne̲ʔ" },
+    { en: "next Tuesday", translation: "oyá· nyaʔtekníhatuht" },
+    { en: "next Wednesday", translation: "oyá· nyaʔteswahsʌ́hatuht" },
+    { en: "next Thursday", translation: "oyá· nyaʔtekayelíhatuht" },
+    { en: "next Friday", translation: "oyá· yʌswískhatut" },
+    { en: "next Saturday", translation: "oyá· yʌswʌtákta̲ʔ" },
+  ].map(mapUtil);
+
+  return { days, daysSpecific, daysLast, daysNext };
+}
+
+const fixAudioFileName = (filename: string) =>
+  filename
+    .replaceAll("(", "")
+    .replaceAll(")", "")
+    .replaceAll("?", "")
+    .replaceAll(" ", "_");
+
+export const determineTimesOfDayAudioFileName = (phrase: string | string[]) => {
+  const name = fixAudioFileName(arrayify(phrase)[0]);
+  return `/audio/module04/time_phrases/${name}.mp3`;
+};
+
+export function createMonthsData() {
+  const months = [
+    {
+      en: "January",
+      translation: "Teyakohúhtyaʔks",
+      literal: "Their ears are freezing",
+      key: "jan",
+    },
+    {
+      en: "February",
+      translation: "Tshaʔtekohsélha̲ʔ",
+      literal: "Half of winter",
+      key: "feb",
+    },
+    {
+      en: "March",
+      translation: "Tewʌhníslyaʔks",
+      literal: "The day is cut in two",
+      key: "mar",
+    },
+    {
+      en: "April",
+      translation: "Wahsakayu·té·se̲ʔ",
+      literal: "It's thundering",
+      key: "apr",
+    },
+    { en: "May", translation: "Latiyʌ́thos", literal: "They plant", key: "may" },
+    { en: "June", translation: "Awʌhihte̲ʔ", literal: "Strawberry", key: "jun" },
+    {
+      en: "July",
+      translation: "Ohyótsheli̲ʔ",
+      literal: "Green string bean",
+      key: "jul",
+    },
+    { en: "August", translation: "Onʌ́stase̲ʔ", literal: "New corn", key: "aug" },
+    {
+      en: "September",
+      translation: "Yeyʌthókwas",
+      literal: "Someone harvests",
+      key: "sep",
+    },
+    {
+      en: "October",
+      translation: "Yutékhwayʌhe̲ʔ",
+      literal: "Someone stores food",
+      key: "oct",
+    },
+    {
+      en: "November",
+      translation: "Tehutʌnuhela·túhe̲ʔ",
+      literal: "They give thanks",
+      key: "nov",
+    },
+    {
+      en: "December",
+      translation: "Wahsu·tés",
+      literal: "It's a long night",
+      key: "dec",
+    },
+  ].map((m) => ({
+    ...m,
+    audioFile: `module04/months/${m.en.toLowerCase()}.mp3`,
+  }));
+
+  //TODO: past/future months
+
+  return { months };
+}
+
+export function createCountingTimeData() {
+  return [
+    ["1 minute", "swasliyetaʔk"],
+    ["2 minutes", "tewasliyetaʔk"],
+    ["3 minutes", "áhsʌ niwasliyetaʔk"],
+    ["1 hour", "úska kahwistaʔeks"],
+    ["2 hours", "tekahwístaʔeks"],
+    ["3 hours", "áhsʌ nikahwístaʔeks"],
+    ["1 day", "swʌhníslat"],
+    ["2 days", "tewʌhnislaké̲"],
+    ["3 days", "áhsʌ niwʌhnislaké̲"],
+    ["1 night", "swahsu·tát"],
+    ["2 nights", "tewahsu·táke̲"],
+    ["3 nights", "áhsʌ niwahsu·táke̲"],
+    ["1 week", "swʌ·tát"],
+    ["2 weeks", "tewʌ·táke̲"],
+    ["3 weeks", "áhsʌ niwʌ·táke̲"],
+    ["1 month", "swʌhní·tat"],
+    ["2 months", "tewʌhní·take̲"],
+    ["3 months", "áhsʌ niwʌhní·take̲"],
+    ["1 year", "tsyóhslat"],
+    ["2 years", "teyóhslake̲ʔ"],
+    ["3 years", "áhsʌ niyóhslaké̲"],
+  ].map(([en, translation]) => ({
+    audioFile: `module04/counting_time/${en.replaceAll(" ", "_")}.mp3`,
+    en: arrayify(en),
+    translation,
+  }));
+}
+
+export function createTimesOfDayData() {
+  const mapUtil = (
+    obj: {
+      en: string | string[];
+      translation: string | string[];
+    },
+    index: number,
+  ) => ({
+    ...obj,
+    en: arrayify(obj.en),
+    audioFile: determineTimesOfDayAudioFileName(obj.en),
+    translation: obj.translation,
+  });
+
+  const dayPhrases = [
+    { en: "day", translation: "awʌhnísla̲ʔ" },
+    { en: "all day", translation: "kwʌʔtáti̲ʔ" },
+    { en: "during the day", translation: "tsiʔniwʌhnísles" },
+    { en: "this day", translation: "Tó· niwʌhnisla·ké͟" },
+    { en: "daytime", translation: "kwaʔté·ke̲" },
+    { en: "every day", translation: "yaʔtewʌhnislaké͟" },
+  ].map(mapUtil);
+
+  const eveningPhrases = [
+    {
+      en: ["evening", "early evening", "late afternoon"],
+      translation: ["yoʔkaláshʌ̲", "yoʔkaláshu̲"],
+    },
+    {
+      en: "when it was evening",
+      translation: "tshiyoʔkaláshu̲",
+    },
+    {
+      en: ["this evening", "tonight", "later this evening"],
+      translation: "ʌyó·kalahwe̲ʔ",
+    },
+  ].map(mapUtil);
+
+  const monthPhrases = [
+    { en: "month", translation: "awʌhní·taʔ" },
+    { en: "during the month", translation: "tsiʔ niwʌhní·tes" },
+    { en: "last month", translation: "swʌhniʔtatkʌ́" },
+    { en: "next month", translation: "yʌswʌ́hniʔtat" },
+    { en: "how many months?", translation: "Tó· niwʌhní·take̲ʔ" },
+  ].map(mapUtil);
+
+  const morningPhrases = [
+    { en: "(earlier) this morning", translation: "sʌhaʔ astéhtsi̲ʔ" },
+    { en: ["early morning", "in the morning"], translation: "astéhtsi̲" },
+    { en: "the other morning", translation: "oyá· tshitwastéhtsi̲ʔ" },
+    { en: ["morning", "morning time"], translation: "astehtsiwé·ke̲" },
+  ].map(mapUtil);
+
+  const nightPhrases = [
+    { en: "night", translation: "né· wahsuta·té̲·" },
+    { en: "night-time", translation: "kwaʔshuté·ke̲" },
+    { en: "all night", translation: "kwaʔshutátiʔ" },
+    { en: "during the night", translation: "tsiʔ niwahsu·tés" },
+    { en: "every night", translation: "yaʔtewahsu·táke̲" },
+    { en: "midnight", translation: "ashú·tha̲" },
+    { en: "(when it got dark) last night", translation: "kwaʔshu·té̲·" },
+    { en: ["this night", "tonight"], translation: "kaʔi·kʌ́· wahsuta·té̲·" },
+    { en: "the other night", translation: "oyá· tshitkwaʔshu·té̲·" },
+    { en: "how many nights?", translation: "Tó· niwahsu·táke̲ʔ" },
+    { en: "when it gets dark", translation: "tshityó·kalas" },
+  ].map(mapUtil);
+
+  const timePhrases = [
+    { en: "a long time", translation: "wahu·níse̲ʔ" },
+    { en: "a short time", translation: "kʌʔ nikalí·wes" },
+    { en: "all the time", translation: "yaʔteka·kú·te̲" },
+    {
+      en: "how long of a time?",
+      translation: ["Tó· niwahu·niʔsé̲", "Tó· náhe"],
+    },
+  ].map(mapUtil);
+
+  const tomorrowPhrases = [
+    { en: "tomorrow", translation: "ʌyólhʌne̲ʔ" },
+    { en: "tomorrow night", translation: "ʌyólhʌneʔ ʌyó·kalawe̲ʔ" },
+    { en: "tomorrow evening", translation: "ʌyólhʌneʔ yoʔkala·sne̲ʔ" },
+    { en: "the day after tomorrow", translation: "oyá· yʌtsyólhʌne̲ʔ" },
+  ].map(mapUtil);
+
+  const weekendPhrases = [
+    { en: "weekend", translation: "yawʌtokta·u" },
+    { en: "this (coming) weekend", translation: "ʌwʌtokta" },
+    { en: "this past weekend", translation: "yautokta·u" },
+  ].map(mapUtil);
+
+  const weekPhrases = [
+    { en: "all week", translation: "yaʔtewʌ·tá·ke̲" },
+    { en: "during the week", translation: "tsiʔ niwʌ·tés" },
+    { en: "every week", translation: "yaʔtewʌ·táke" },
+    { en: "last week", translation: "swʌtatkʌ́" },
+    { en: "next week", translation: "yʌswʌ·tát" },
+    { en: "how many weeks?", translation: "Tó· niwʌ·táke̲" },
+  ].map(mapUtil);
+
+  const yearPhrases = [
+    { en: "all year", translation: "ohslakwekú̲" },
+    {
+      en: ["during the year", "through the year"],
+      translation: "tsiʔ niyóhsles",
+    },
+    { en: "every year", translation: "nyaʔteyohsla·ké͟" },
+    { en: "last year", translation: "tsyohslatkʌ́" },
+    { en: "next year", translation: "yʌtsyohslá·te̲ʔ" },
+    { en: "the other year", translation: "oyá· tshikohslá·ke̲" },
+    { en: "a particular year", translation: "kaʔi·kʌ́· yohsla·té̲·" },
+    { en: "how many years?", translation: "Tó· niyohslaké̲" },
+    { en: "one year after another", translation: "yohslaténi" },
+  ].map(mapUtil);
+
+  const yesterdayPhrases = [
+    { en: "yesterday", translation: "the·tʌ̲̲́·" },
+    { en: "the day before yesterday", translation: "oyá tshithe·tʌ̲̲́" },
+  ].map(mapUtil);
+
+  const afternoonPhrases = [
+    { en: "afternoon", translation: "yotukóhtu ʌt́i" },
+    { en: "noon", translation: ["ʌ́ti", "ʌ́tyʌ ni·kále̲ʔ"] },
+  ].map(mapUtil);
+
+  console.log(afternoonPhrases);
+
+  const otherPhrases = [
+    { en: "always", translation: "tyóhtkut" },
+    { en: "eclipse", translation: "utʌhniʔtáhtuʔ" },
+    { en: "more often", translation: "sʌ́haʔ yotká·teʔ" },
+    { en: "never", translation: "yáh newʌtú" },
+    { en: ["now", "today"], translation: ["nuʔú·wa̲ʔ", "nʌʔú·wa̲ʔ"] },
+    { en: "often", translation: "yotká·teʔ" },
+    { en: "sometimes", translation: "swatye·lʌ̲̲́" },
+  ].map(mapUtil);
+
+  const result = {
+    dayPhrases,
+    eveningPhrases,
+    monthPhrases,
+    morningPhrases,
+    nightPhrases,
+    timePhrases,
+    tomorrowPhrases,
+    weekendPhrases,
+    weekPhrases,
+    yearPhrases,
+    yesterdayPhrases,
+    afternoonPhrases,
+    otherPhrases,
+  };
+  return result;
+}
+
+export function getAllModule04Paradigms(): ParadigmData[] {
+  const keys = [
+    "data-is-here",
+    "data-was-here",
+    "data-will-be-here",
+    "data-might-be-here",
+    "data-is-not-here",
+    "data-was-not-here",
+    "data-will-not-be-here",
+    "data-is-there",
+    "data-will-be-there",
+    "data-was-there",
+    "data-might-be-there",
+    "data-is-not-there",
+    "data-was-not-there",
+    "data-will-not-be-there",
+    "data-is-at-home",
+    "data-was-at-home",
+    "data-will-be-at-home",
+    "data-might-be-at-home",
+    "data-is-not-at-home",
+    "data-was-not-at-home",
+    "data-will-not-be-at-home",
+    "data-lives-there",
+    "data-used-to-live-there",
+    "data-will-live-there",
+    "data-might-live-there",
+    "data-doesnt-live-there",
+    "data-didnt-used-to-live-there",
+    "data-will-not-live-there",
+    "data-want",
+    "data-doesnt-want",
+    "data-used-to-want",
+    "data-didnt-used-to-want",
+    "data-thought",
+  ];
+  return createModule4Data()
+    .filter((datum) => keys.includes(datum.key))
+    .map((datum) => datum.data);
 }

@@ -1,40 +1,33 @@
-import type { ParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  translation: "{{pronounPossessive}} niece",
-  type: "PP",
-  phrases: [
-    {
-      pronoun: "i",
-      phrase: "kheyuhwatʌ́ha̲",
-      breakdown: [["khe"], "yuhwatʌ́ha̲"],
-    },
-    {
-      pronoun: "u",
-      phrase: "sheyuhwatʌ́ha̲",
-      breakdown: [["she"], "yuhwatʌ́ha̲"],
-    },
-    {
-      pronoun: "m",
-      phrase: "shakoyuhwatʌ́ha̲",
-      breakdown: [["shako"], "yuhwatʌ́ha̲"],
-    },
-    {
-      pronoun: "f",
-      phrase: "utatyuhwatʌ́ha̲",
-      breakdown: [["utat"], "yuhwatʌ́ha̲"],
-    },
-    {
-      pronoun: "us",
-      phrase: "yethiyuhwatʌ́ha̲",
-      breakdown: [["yethi"], "yuhwatʌ́ha̲"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "yetshiyuhwatʌ́ha̲",
-      breakdown: [["yetshi"], "yuhwatʌ́ha̲"],
-    },
-  ],
-};
+const data = createParadigmData(
+  {
+    audioFolder: "module02/niece",
+    translation: "{{pronounPossessive}} niece",
+    type: "PP",
+    categories: ["kinship"],
+    phrases: [
+      {
+        breakdown: [["khey"], "uhwatʌ́ha̲"],
+      },
+      {
+        breakdown: [["shey"], "uhwatʌ́ha̲"],
+      },
+      {
+        breakdown: [["shakoy"], "uhwatʌ́ha̲"],
+      },
+      {
+        breakdown: [["utaty"], "uhwatʌ́ha̲"],
+      },
+      {
+        breakdown: [["yethiy"], "uhwatʌ́ha̲"],
+      },
+      {
+        breakdown: [["yetshiy"], "uhwatʌ́ha̲"],
+      },
+    ],
+  },
+  ["i", "u", "m", "f", "us", "yall"],
+);
 
 export default data;

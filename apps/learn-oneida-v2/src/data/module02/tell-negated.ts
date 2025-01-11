@@ -1,10 +1,8 @@
-import {
-  createParadigmData,
-  type ParadigmData,
-} from "~/components/ParadigmTable";
+import { createInteractiveParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = createParadigmData(
+const data = createInteractiveParadigmData(
   {
+    audioFolder: "module02/tell_negated",
     phrases: [
       {
         breakdown: ["Tákʌʔ ", ["ʌ", "FUT"], ["sk"], "hlo·lí"],
@@ -19,11 +17,10 @@ const data: ParadigmData = createParadigmData(
         breakdown: ["Tákʌʔ ", ["ʌ", "FUT"], ["hets"], "hlo·lí"],
       },
     ],
-    translation: "({{subject}}) Don't tell {{object}}!",
+    translation: "({{agent}}) Don't tell {{subject}}!",
     type: "PP",
   },
-  // @ts-expect-error Pronominal things
-  ["cmd_u_i", "cmd_u_theyni", "u_f", "u_m"],
+  ["u_i", "yall_i", "u_f", "u_m"],
 );
 
 export default data;

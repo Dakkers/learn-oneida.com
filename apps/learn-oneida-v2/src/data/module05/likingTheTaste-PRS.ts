@@ -1,9 +1,13 @@
 import { createParadigmData } from "~/components/ParadigmTable";
 import { pronouns } from "@ukwehuwehneke/language-components";
+import { pluralizeVerbCommon } from "@/utils/translation";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} likes the taste",
+    audioFolder: "module01/pronominals/blue/E",
+    translation: "{{pronoun}} like the taste",
+    translationFn: (pronoun) =>
+      `{{pronoun}} ${pluralizeVerbCommon(pronoun, "like")} the taste`,
     type: "PB",
     phrases: [
       {

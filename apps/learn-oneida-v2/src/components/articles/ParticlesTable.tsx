@@ -1,10 +1,10 @@
 "use client";
 import { TableWrapper } from "@/components/TableWrapper";
-import { particleList } from "./particleList";
+import { type ParticleEntry, particleList } from "./particleList";
 import React from "react";
 import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { arrayify } from "@ukwehuwehneke/language-components";
+import { formatFileWithSuffix, standardizeAudioFileName } from "@/utils/misc";
 
 type ParticlesGroup =
   | "module01"
@@ -22,18 +22,12 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
     () => [
       {
         accessorKey: "translation",
-        cell: (value: string | string[], row: any) => (
-          <Flex direction="column" gap={2}>
-            {arrayify(value).map((val, i) => (
-              <Flex gap={4} key={i}>
-                {row.audioFile && (
-                  <PlayButton
-                    filepath={`/audio/particles/${group}/${row.key}${Array.isArray(value) ? `_${i + 1}` : ""}.mp3`}
-                  />
-                )}
-                {val}
-              </Flex>
-            ))}
+        cell: (value: string, row: ParticleEntry) => (
+          <Flex gap={4}>
+            {!["module05"].includes(group) && (
+              <PlayButton filepath={formatParticleAudio(row.key, group)} />
+            )}
+            {value}
           </Flex>
         ),
         header: "Oneida",
@@ -44,19 +38,13 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
       },
       {
         accessorKey: "examples",
-        cell: (
-          examples: Array<{
-            en: string;
-            translation: string;
-          }>,
-          row: any,
-        ) => (
+        cell: (examples: ParticleEntry["examples"], row: ParticleEntry) => (
           <Flex direction="column" gap={4}>
-            {(examples ?? []).map((ex, i) => (
-              <Flex gap={2} align="start" key={i}>
+            {(examples ?? []).map((ex, index) => (
+              <Flex gap={2} align="start" key={index}>
                 {["module01", "module02", "module03"].includes(group) && (
                   <PlayButton
-                    filepath={`/audio/particle_examples/${group}/${row.key}${examples.length > 1 ? `_${i + 1}` : ""}.mp3`}
+                    filepath={formatParticleExampleAudio(group, row.key, index)}
                   />
                 )}
                 <Flex direction="column" gap={1}>
@@ -88,6 +76,7 @@ export function ParticlesTable({ group = "module01" }: ParticlesTableProps) {
       }}
       // @ts-expect-error TODO - TableWrapper/Table generics
       columns={columns}
+      // @ts-expect-error TODO - TableWrapper/Table generics?
       data={data}
     />
   );
@@ -101,7 +90,8 @@ export function getParticlesForGroup(group: ParticlesGroup) {
       "everything",
       "a_lot",
       "yes",
-      "so_then",
+      "so_then_1",
+      "so_then_2",
       "or",
       "question_indicator",
       "this",
@@ -143,7 +133,7 @@ export function getParticlesForGroup(group: ParticlesGroup) {
       "everyone",
       "you_all_and_i",
       "they_and_i",
-      "all_of_u",
+      "all_of_you",
       "all_of_them_males",
       "all_of_them_females",
       "tho",
@@ -209,7 +199,7 @@ export function getParticlesForGroup(group: ParticlesGroup) {
       "forever",
       "long_time",
       "such_a_long_time",
-      "short_length_of_time",
+      "a_short_length_of_time",
       "how_long_of_a_time",
       "ago",
       "until",
@@ -218,15 +208,36 @@ export function getParticlesForGroup(group: ParticlesGroup) {
     ],
   };
 
-  return mapping[group].map((key) => {
-    const result = particleList.find((p) => p.key === key);
-    return {
-      ...result,
-      audioFile: ["module01", "module02", "module03", "module04"].includes(
-        group,
-      )
-        ? key
-        : undefined,
-    };
-  });
+  if (!mapping[group]) {
+    return [];
+  }
+
+  return mapping[group].map(getParticle);
+}
+
+function getParticle(key: string) {
+  const result = particleList.find((p) => p.key === key);
+  if (!result) {
+    throw new Error(`Could not find particle with key="${key}"`);
+  }
+  return result;
+}
+
+export function formatParticleAudio(key: string, module: string) {
+  return standardizeAudioFileName(`particles/${module}/${key}.mp3`);
+}
+
+export function formatParticleExampleAudio(
+  module: string,
+  key: string,
+  index = 0,
+) {
+  const result = getParticle(key);
+  return standardizeAudioFileName(
+    formatFileWithSuffix(
+      `particle_examples/${module}/${key}.mp3`,
+      result.examples,
+      index,
+    ),
+  );
 }

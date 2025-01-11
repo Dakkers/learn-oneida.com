@@ -1,4 +1,14 @@
-export const particleList = [
+export interface ParticleEntry {
+  key: string;
+  translation: string;
+  en: string;
+  examples?: Array<{
+    translation: string;
+    en: string;
+  }>;
+}
+
+export const particleList: ParticleEntry[] = [
   {
     key: "just_like",
     translation: "kwáh tsiʔ niyot",
@@ -59,14 +69,21 @@ export const particleList = [
     examples: [],
   },
   {
-    key: "so_then",
-    translation: ["kátiʔ", "ok né·n"],
+    key: "so_then_1",
+    translation: "kátiʔ",
     en: "so then",
     examples: [
       {
         translation: "Oh káti niʔí·",
         en: "So then, what about me?",
       },
+    ],
+  },
+  {
+    key: "so_then_2",
+    translation: "ok né·n",
+    en: "so then",
+    examples: [
       {
         translation: "Ok né·n niʔí·",
         en: "So then, what about me?",
@@ -216,7 +233,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "who",
     translation: "úhkaʔ náhteʔ",
@@ -232,7 +248,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "someone",
     translation: "úhkaʔ ok náhteʔ",
@@ -244,7 +259,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "certainly",
     translation: "(kwah) otokú· tsiʔ",
@@ -256,7 +270,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "something",
     translation: "náhteʔ ok",
@@ -268,7 +281,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "something_else",
     translation: "náhteʔ oyá·",
@@ -280,7 +292,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "more",
     translation: "sʌ́haʔ",
@@ -292,7 +303,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "more_than",
     translation: "sʌ́haʔ ... tsiʔ ni·yót",
@@ -304,7 +314,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "still",
     translation: "shekú",
@@ -316,7 +325,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "another_one",
     translation: "shekú o·yá·",
@@ -328,7 +336,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "that",
     translation: "thikʌ̲̲́",
@@ -340,14 +347,12 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "i_dunno",
     translation: "to·káh",
     en: "I dunno",
     examples: [],
   },
-
   {
     key: "true",
     translation: "to·kʌśke̲ʔ",
@@ -359,7 +364,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "if",
     translation: "tá·t",
@@ -371,7 +375,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "or",
     translation: "tá·thuni",
@@ -384,7 +387,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "tsi",
     translation: "tsiʔ",
@@ -400,7 +402,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "what_it_is",
     translation: "tsiʔ náhteʔ",
@@ -412,7 +413,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "isnt_it",
     translation: "wáhi̲",
@@ -424,14 +424,12 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "no",
     translation: "táh",
     en: "no",
     examples: [],
   },
-
   {
     key: "not_that_much",
     translation: "yáh kiʔ sótsi",
@@ -443,7 +441,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "nobody",
     translation: "yáh úhkaʔ",
@@ -455,14 +452,12 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "nothing",
     translation: "yáh náhteʔ",
     en: "nothing, not anything",
     examples: [],
   },
-
   {
     key: "not_true",
     translation: "Yáh ... té·kʌ",
@@ -478,7 +473,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "no_way",
     translation: "Ta·ím",
@@ -496,7 +490,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "and_then",
     translation: "kháleʔ nʌ́",
@@ -509,7 +502,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "before",
     translation: "kaló· tsiʔ niyo·lé·",
@@ -522,7 +514,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "because",
     translation: "né· tsiʔ",
@@ -534,7 +525,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "a_length_of_time",
     translation: "tsiʔ náheʔ",
@@ -546,7 +536,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "a_short_length_of_time",
     translation: "kʌʔ naheʔ",
@@ -558,11 +547,10 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "now",
     translation: "nuʔú·waʔ",
-    en: "now / today",
+    en: "now, today",
     examples: [
       {
         translation: "Tehonatekháhsyu nuʔú·wa̲ʔ",
@@ -570,7 +558,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "never",
     translation: "yáh newʌ·tú",
@@ -582,7 +569,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "thanks",
     translation: "yawʌʔkó·",
@@ -594,7 +580,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "hows_it_going",
     translation: "Oh niyotuháti",
@@ -606,7 +591,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "together",
     translation: "oskánhe",
@@ -618,7 +602,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "different",
     translation: "tekyattíhʌ̲",
@@ -630,7 +613,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "so",
     translation: "tsiʔ ni-",
@@ -642,7 +624,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "until",
     translation: "tsiʔ niyo·lé·",
@@ -654,21 +635,18 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "yo",
     translation: "yo",
     en: "(an acknowledgement)",
     examples: [],
   },
-
   {
     key: "maybe",
     translation: "ta·t nuʔuwa",
     en: "maybe, possibly",
     examples: [],
   },
-
   {
     key: "all_over",
     translation: "kwáh ok tsyoʔk nú·",
@@ -680,7 +658,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "all_over_town",
     translation: "kwáh ok tsyoʔk nú· kanatá·ke",
@@ -692,7 +669,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "wherever",
     translation: "áti kwáh tsyoʔk nú·",
@@ -705,7 +681,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "elsewhere",
     translation: "ákteʔ nú·",
@@ -717,7 +692,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "here",
     translation: "kʌ́·tho",
@@ -729,11 +703,10 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "nowhere",
     translation: "yáh kánikeʔ",
-    en: "no place / nowhere",
+    en: "no place, nowhere",
     examples: [
       {
         translation: "Yáh kánikʌ thyeyáknehskweʔ kwaʔshu·té̲·",
@@ -741,7 +714,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "somewhere",
     translation: "kátshaʔ ok nú·",
@@ -753,7 +725,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "there",
     translation: "thó",
@@ -765,7 +736,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "when",
     translation: "kánke",
@@ -777,7 +747,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "when_prefix",
     translation: "tshi-",
@@ -789,7 +758,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "when_nv",
     translation: "nʌ",
@@ -801,7 +769,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "where_2",
     translation: "tsha nú·",
@@ -813,19 +780,16 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "where_3",
     translation: "tsiʔ nú·",
     en: "where",
   },
-
   {
     key: "where_4",
     translation: "thó nú·",
     en: "where",
   },
-
   {
     key: "where_5",
     translation: "kátshaʔ nú·",
@@ -837,7 +801,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "hopefully",
     translation: "aya·wʌ́·s kwi",
@@ -849,7 +812,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "it_is_important",
     translation: "yolihowanʌ́",
@@ -861,7 +823,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "must",
     translation: "nok ʌwa·tú·",
@@ -873,7 +834,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "necessary",
     translation: "teyotuhutsyúhu",
@@ -885,11 +845,10 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "how_many_things",
     translation: "Tó· ni·kú̲",
-    en: "How many things / objects?",
+    en: "How many things, objects?",
     examples: [
       {
         translation: "Tó· ni·kú snú·wehseʔ thi·kʌ̲̲́",
@@ -897,7 +856,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "how_many_of_us",
     translation: "Tó· nitwatí̲",
@@ -909,7 +867,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "how_many_of_they_and_i",
     translation: "Tó· niyakwatí̲",
@@ -921,7 +878,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "how_many_of_yall",
     translation: "Tó· niswatí̲",
@@ -933,7 +889,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "how_many_of_them_males",
     translation: "Tó· nihatí̲",
@@ -945,7 +900,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "how_many_of_them_females",
     translation: "Tó· nikutí̲",
@@ -957,7 +911,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "everyone",
     translation: "akwekú̲",
@@ -969,7 +922,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "you_all_and_i",
     translation: "twakwekú̲",
@@ -981,7 +933,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "they_and_i",
     translation: "yakwakwekú̲",
@@ -993,9 +944,8 @@ export const particleList = [
       },
     ],
   },
-
   {
-    key: "all_of_u",
+    key: "all_of_you",
     translation: "swakwekú̲",
     en: "all of you",
     examples: [
@@ -1005,7 +955,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "all_of_them_males",
     translation: "latikwekú̲",
@@ -1013,11 +962,10 @@ export const particleList = [
     examples: [
       {
         translation: "Latikwekú yuknú·wehse̲ʔ",
-        en: "They Ms all like me.",
+        en: "They (males) all like me.",
       },
     ],
   },
-
   {
     key: "all_of_them_females",
     translation: "kutikwekú̲",
@@ -1025,11 +973,10 @@ export const particleList = [
     examples: [
       {
         translation: "Kutikwekú kutinú·wehse̲ʔ",
-        en: "They Fs all like it.",
+        en: "They (females) all like it.",
       },
     ],
   },
-
   {
     key: "tho",
     translation: "thó",
@@ -1045,7 +992,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "anything",
     translation: "átiʔ náhte̲ʔ",
@@ -1057,7 +1003,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "anyone",
     translation: "áti úhkaʔ",
@@ -1069,7 +1014,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "greater_than",
     translation: "íhsi nú·",
@@ -1081,7 +1025,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "less_than",
     translation: "kaló",
@@ -1093,11 +1036,10 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "just_only",
     translation: "né· ok",
-    en: "just / only",
+    en: "just, only",
     examples: [
       {
         translation: "Né· ok oyé·li naʔtehaohsliyá·ku̲",
@@ -1105,7 +1047,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "it_is_the_same",
     translation: "né· tshá·kat",
@@ -1117,7 +1058,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "it_is_different",
     translation: "tekyattíhʌ̲",
@@ -1129,7 +1069,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "both",
     translation: "tetsyalú̲",
@@ -1141,7 +1080,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "almost",
     translation: "thóha",
@@ -1153,7 +1091,6 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "how_many",
     translation: "tó· ni",
@@ -1165,63 +1102,54 @@ export const particleList = [
       },
     ],
   },
-
   {
     key: "why",
     translation: "náhteʔ aolí·waʔ (tsiʔ)",
     en: "why?",
     examples: [],
   },
-
   {
     key: "forever",
     translation: "(kwah) tsi nyʌhʌ́·weʔ",
     en: "forever",
     examples: [],
   },
-
   {
     key: "long_time",
     translation: "wahu·níse̲ʔ",
     en: "a long time",
     examples: [],
   },
-
   {
     key: "such_a_long_time",
     translation: "tsiʔ niwahu·níse̲ʔ",
     en: "it was such a long time",
     examples: [],
   },
-
   {
     key: "how_long_of_a_time",
     translation: "tó· náheʔ",
     en: "How long of a time?",
     examples: [],
   },
-
   {
     key: "long_time_ago",
     translation: "wahuniseʔkʌ́",
     en: "a long time ago",
     examples: [],
   },
-
   {
     key: "ago",
     translation: "tsiʔ náheʔ",
     en: "ago",
     examples: [],
   },
-
   {
     key: "sometimes",
     translation: "swatyelʌ́",
     en: "sometimes",
     examples: [],
   },
-
   {
     key: "in_a_while",
     translation: "atsyók",

@@ -3,6 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
+    audioFolder: "module04/used_to_want",
     translation: "{{pronoun}} used to want",
     type: "PR",
     phrases: [

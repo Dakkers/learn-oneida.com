@@ -1,12 +1,14 @@
+import { pluralizeVerbCommon } from "@/utils/translation";
 import { pronouns } from "@ukwehuwehneke/language-components";
 import {
   createParadigmData,
   type ParadigmData,
 } from "~/components/ParadigmTable";
 
-const data: ParadigmData = createParadigmData(
+const data = createParadigmData(
   {
-    translation: "{{pronoun}} {{verb}} it",
+    audioFolder: "module02/love_blue",
+    translation: "It loves {{pronounObjective}}",
     type: "PB",
     phrases: [
       {

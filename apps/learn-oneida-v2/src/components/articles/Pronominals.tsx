@@ -1,7 +1,7 @@
 "use client";
 import { Accordion, Flex, PlayButton, TextArray } from "@ukwehuwehneke/ohutsya";
 import {
-  pronounsPurpleFull,
+  pronounsPurpleExtended,
   PURPLES_MAP_FULL,
   SectionHeading,
   type SectionHeadingProps,
@@ -44,6 +44,16 @@ import dataAtHome from "~/data/itlu";
 import dataHardToPlease from "~/data/ʌtole";
 import dataPulling from "~/data/module01/pullingOut-HAB";
 import dataPulledOut from "~/data/module01/pullingOut-PFV";
+import dataLikePurple from "~/data/module01/like-purple";
+import dataForbid from "~/data/module01/forbid-PRS";
+import dataCallDown from "~/data/module01/callDown-HAB";
+import dataGoToGet from "~/data/module01/goToGet-HAB";
+import dataHouse from "~/data/module01/house-NOUN";
+import dataHat from "~/data/module01/hat-NOUN";
+import dataHeart from "~/data/module01/heart-NOUN";
+import dataRelative from "~/data/module01/relative-NOUN";
+import dataParcel from "~/data/module01/parcel-NOUN";
+import dataTongue from "~/data/module01/tongue-NOUN";
 import dataAlive from "~/data/unhe";
 import dataLonely from "~/data/module01/lonely-PFV";
 import dataHealthy from "~/data/module05/healthy-PRS";
@@ -59,6 +69,7 @@ import type {
 export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
   const level = (_level + 1) as SectionHeadingProps["level"];
   const sublevel = (level + 1) as SectionHeadingProps["level"];
+
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="pronominals" level={_level}>
@@ -123,7 +134,6 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         Subjective Pronominals (Red)
       </SectionHeading>
       <AccordionWrapper
-        color="red"
         items={[
           [dataLikeRedJson, "-nuhweʔ-"],
           [dataWise, "-attok-"],
@@ -141,7 +151,6 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         Objective Pronominals (Blue)
       </SectionHeading>
       <AccordionWrapper
-        color="blue"
         items={[
           [dataLikeBlueJson, "-nuhweʔ-"],
           [dataHealthy, "-ataʔkalite-"],
@@ -158,15 +167,14 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         Person-to-Person Pronominals (Purple)
       </SectionHeading>
       <AccordionWrapper
-        color="purple"
         items={[
-          [null, "-nuhweʔ-"],
+          [dataLikePurple, "-nuhweʔ-"],
+          [dataForbid, "-ahlist-"],
+          [null, "-???-"],
+          [dataGoToGet, "-ihnuks-"],
           [null, "-???-"],
           [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
+          [dataCallDown, "-ʌhni-"],
         ]}
       />
       <PronominalsPrimitiveTable color="purple" data={purplePronominalsJson} />
@@ -175,15 +183,14 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         Possessive Pronominals (Light Blue)
       </SectionHeading>
       <AccordionWrapper
-        color="light_blue"
         items={[
-          [null, "-nuhs-"],
+          [dataHouse, "-nuhs-"],
+          [dataHat, "-ana?alol-"],
+          [dataHeart, "-el-"],
+          [dataParcel, "-itstotsl-"],
           [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
-          [null, "-???-"],
+          [dataRelative, "-ukweʔt-"],
+          [dataTongue, "-ʌʔnahs-"],
         ]}
       />
       <PronominalsPrimitiveTable
@@ -246,7 +253,7 @@ function PronominalsPrimitiveTable({
 }) {
   const stems = ["c", "a", "i", "e", "o"] as const;
   const isPurple = color === "purple";
-  const rowsToUse = isPurple ? pronounsPurpleFull : pronouns;
+  const rowsToUse = isPurple ? pronounsPurpleExtended : pronouns;
 
   return (
     <Bleed mx={0}>
@@ -273,6 +280,7 @@ function PronominalsPrimitiveTable({
                   // @ts-expect-error To be addressed in LO-17
                   <TextArray>{PRONOUN_MAP_EN[pronoun]}</TextArray>
                 ) : (
+                  // @ts-expect-error To be addressed in LO-17
                   <TextArray>{PURPLES_MAP_FULL[pronoun]}</TextArray>
                 )}
               </PrimitiveTableCell>
@@ -341,6 +349,7 @@ function PronominalPrimitiveTableText({
         const result = arrayify(b);
         const opIdx = result.findIndex((el) => el === "OP");
         if (opIdx >= 0) {
+          // @ts-expect-error Not sure what this is
           result[opIdx] = ["OP", typeFallback];
         }
         return result;
@@ -381,10 +390,8 @@ function ExcpPlay({ num }: { num: string }) {
 }
 
 function AccordionWrapper({
-  color,
   items,
 }: {
-  color: "red" | "blue" | "light_blue" | "purple";
   items: Array<[ParadigmData | null, string]>;
 }) {
   const stems = ["C", "A", "E", "I", "O", "U", "Λ"];
@@ -397,12 +404,8 @@ function AccordionWrapper({
           </Text>
           {data ? (
             <ParadigmTable
-              audioFolder={`module01/pronominals/${color}/${stems[i]}`}
               columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
               data={data}
-              translationFn={({ pronoun }: { pronoun: Pronoun }) => ({
-                verb: ["it", "m", "f"].includes(pronoun) ? "likes" : "like",
-              })}
             />
           ) : (
             <Text>

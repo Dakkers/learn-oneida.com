@@ -4,7 +4,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
-import { DATA_DAYS_OF_WEEK } from "~/components/articles/DaysOfTheWeek";
+import { getDaysOfWeekData } from "@/data/module04";
 
 const meta: any = () => {
   return [
@@ -23,7 +23,8 @@ export default function PracticeDaysOfTheWeek() {
         Days of the Week
       </Heading>
 
-      <MatchingGamePage data={DATA_DAYS_OF_WEEK} />
+      {/* @ts-expect-error Who cares about this component right now? */}
+      <MatchingGamePage data={getDaysOfWeekData().days} />
     </Flex>
   );
 }

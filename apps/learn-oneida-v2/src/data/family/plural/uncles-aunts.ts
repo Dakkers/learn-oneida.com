@@ -1,40 +1,33 @@
-import type { ParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = {
-  translation: "{{pronounPossessive}} aunts & uncles",
-  type: "PP",
-  phrases: [
-    {
-      pronoun: "i",
-      phrase: "yuknulhaʔshúha̲",
-      breakdown: [["yuk"], "nulhaʔshúha̲"],
-    },
-    {
-      pronoun: "u",
-      phrase: "yesanulhaʔshúha̲",
-      breakdown: [["yesa"], "nulhaʔshúha̲"],
-    },
-    {
-      pronoun: "m",
-      phrase: "luwanulhaʔshúha̲",
-      breakdown: [["luwa"], "nulhaʔshúha̲"],
-    },
-    {
-      pronoun: "f",
-      phrase: "shakotinulhaʔshúha̲",
-      breakdown: [["shakoti"], "nulhaʔshúha̲"],
-    },
-    {
-      pronoun: "us",
-      phrase: "yukhinulhaʔshúha̲",
-      breakdown: [["yukhi"], "nulhaʔshúha̲"],
-    },
-    {
-      pronoun: "yall",
-      phrase: "yetshinulhaʔshúha̲",
-      breakdown: [["yetshi"], "nulhaʔshúha̲"],
-    },
-  ],
-};
+const data = createParadigmData(
+  {
+    audioFolder: "module02/aunts_and_uncles",
+    translation: "{{pronounPossessive}} aunts & uncles",
+    type: "PP",
+    categories: ["kinship"],
+    phrases: [
+      {
+        breakdown: [["yuk"], "nulhaʔshúha̲"],
+      },
+      {
+        breakdown: [["yesa"], "nulhaʔshúha̲"],
+      },
+      {
+        breakdown: [["luwa"], "nulhaʔshúha̲"],
+      },
+      {
+        breakdown: [["shakoti"], "nulhaʔshúha̲"],
+      },
+      {
+        breakdown: [["yukhi"], "nulhaʔshúha̲"],
+      },
+      {
+        breakdown: [["yetshi"], "nulhaʔshúha̲"],
+      },
+    ],
+  },
+  ["i", "u", "m", "f", "us", "yall"],
+);
 
 export default data;

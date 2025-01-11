@@ -1,9 +1,13 @@
 import { createParadigmData } from "~/components/ParadigmTable";
 import { pronouns } from "@ukwehuwehneke/language-components";
+import { pluralizeVerbCommon } from "@/utils/translation";
 
 export default createParadigmData(
   {
+    audioFolder: "module04/want",
     translation: "{{pronoun}} want",
+    translationFn: (pronoun) =>
+      `{{pronoun}} ${pluralizeVerbCommon(pronoun, "want")}`,
     type: "PR",
     phrases: [
       {

@@ -234,7 +234,7 @@ function PromptsScreen({
             selectedAnswer?.[getOppositeLangKey(langKeyToUse)],
           ),
         },
-      },
+      } as Result,
     ];
     setResults(newResults);
     clickNext(newResults);
@@ -252,7 +252,7 @@ function PromptsScreen({
           isCorrect: isCorrect,
           selectedAnswer: answer,
         },
-      },
+      } as Result,
     ];
     setResults(newResults);
     clickNext(newResults);
@@ -413,7 +413,7 @@ function TextAnswer({
                 currentItem[getOppositeLangKey(langKey)],
               );
               const isCorrect =
-                sanitizeIrregularCharacters(answer) ===
+                sanitizeIrregularCharacters(answer as string) ===
                 sanitizeIrregularCharacters(value);
               onNext(value, isCorrect);
               setValue("");

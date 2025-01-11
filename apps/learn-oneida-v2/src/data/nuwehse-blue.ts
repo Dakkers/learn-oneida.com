@@ -1,12 +1,10 @@
 import { pronouns } from "@ukwehuwehneke/language-components";
-import {
-  createParadigmData,
-  type ParadigmData,
-} from "~/components/ParadigmTable";
+import { createParadigmData } from "~/components/ParadigmTable";
 
-const data: ParadigmData = createParadigmData(
+const data = createParadigmData(
   {
-    translation: "{{pronoun}} {{verb}} it",
+    audioFolder: "module01/pronominals/blue/C",
+    translation: "It likes {{pronounObjective}}",
     type: "PB",
     phrases: [
       {

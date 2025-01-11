@@ -3,6 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
+    audioFolder: "module01/pronominals/blue/U",
     translation: "{{pronoun}} {{refVerb}} enjoying doing something",
     type: "PB",
     phrases: [

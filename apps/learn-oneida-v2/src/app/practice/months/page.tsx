@@ -3,11 +3,11 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
-import { DATA_MONTHS } from "~/components/articles/Months";
 import {
   EnglishToOneidaQuiz,
   type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
+import { createMonthsData } from "@/data/module04";
 
 const meta: any = () => {
   return [
@@ -27,7 +27,7 @@ export default function PracticeMonths() {
     const resultEn = [];
     const resultOn = [];
 
-    for (const datum of DATA_MONTHS) {
+    for (const datum of createMonthsData().months) {
       resultEn.push({ key: datum.key, text: datum.en });
       resultOn.push({ key: datum.key, text: datum.translation });
     }

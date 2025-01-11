@@ -46,6 +46,11 @@ const toolsItems: { title: string; href: string; description: string }[] = [
     href: "/tools/flashcards",
     description: "Quiz yourself on Oneida verbs.",
   },
+  {
+    title: "Playlists",
+    href: "/tools/playlists",
+    description: "Listen to lists of Oneida words.",
+  },
 ];
 
 export function Navbar() {

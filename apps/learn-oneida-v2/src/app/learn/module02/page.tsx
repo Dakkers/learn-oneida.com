@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
+import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
@@ -26,6 +26,9 @@ import atukohtuJson from "~/data/atukohtu";
 import kstʌhaJson from "~/data/kstʌha";
 import kʌʔni_yʌhaJson from "~/data/kʌʔni_yʌha";
 import ohsliyakuJson from "~/data/ohsliyaku";
+import dataLikeRecp from "~/data/module02/like-RECP";
+import dataFamiliarRecp from "~/data/module02/familiar-RECP";
+import dataLoveRecp from "~/data/module02/love-RECP";
 
 import { TableWrapper } from "@/components/TableWrapper";
 import { type Pronoun, arrayify } from "@ukwehuwehneke/language-components";
@@ -55,6 +58,11 @@ import {
   type DialogueTableData,
 } from "~/components/DialogueTable";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { getDialogueModule02 } from "~/data/module02/dialogue";
+import {
+  getDeceasedRelatives,
+  getThingsThatAreTheSameExamples,
+} from "@/data/module02";
 
 const meta: any = () => {
   return [
@@ -186,19 +194,8 @@ export default function LearnModule02() {
   );
 }
 
-const translationFnLike = ({ pronoun }: { pronoun: Pronoun }) => ({
-  verb: ["it", "m", "f"].includes(pronoun) ? "likes" : "like",
-});
-
-const translationFnKnow = ({ pronoun }: { pronoun: Pronoun }) => ({
-  verb: ["it", "m", "f"].includes(pronoun) ? "knows" : "know",
-});
-
-const translationFnLove = ({ pronoun }: { pronoun: Pronoun }) => ({
-  verb: ["it", "m", "f"].includes(pronoun) ? "loves" : "love",
-});
-
 function VerbsSection() {
+  const columnVisibility = { pronounEnglish: false };
   return (
     <>
       <SectionHeading id="new-verbs" level={2}>
@@ -220,32 +217,36 @@ function VerbsSection() {
       <SectionHeading id="new-verbs-red" level={3}>
         Red pronominals
       </SectionHeading>
-      <ParadigmTable data={yʌteliRed} translationFn={translationFnKnow} />
-      <ParadigmTable data={nolukhwaRed} translationFn={translationFnLove} />
+      <ParadigmTable columnVisibility={columnVisibility} data={yʌteliRed} />
+      <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaRed} />
 
       <SectionHeading id="new-verbs-blue" level={3}>
         Blue pronominals
       </SectionHeading>
-      <ParadigmTable data={yʌteliBlue} translationFn={translationFnKnow} />
-      <ParadigmTable data={nolukhwaBlue} translationFn={translationFnLove} />
+      <ParadigmTable columnVisibility={columnVisibility} data={yʌteliBlue} />
+      <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaBlue} />
 
       <SectionHeading id="new-verbs-purple" level={3}>
         Purple pronominals
       </SectionHeading>
-      <ParadigmTable data={yʌteliPurple} translationFn={translationFnKnow} />
-      <ParadigmTable data={nolukhwaPurple} translationFn={translationFnLove} />
+      <ParadigmTable columnVisibility={columnVisibility} data={yʌteliPurple} />
+      <ParadigmTable
+        columnVisibility={columnVisibility}
+        data={nolukhwaPurple}
+      />
     </>
   );
 }
 
 function ReflexiveSection() {
+  const columnVisibility = { pronounEnglish: false };
   return (
     <>
       <SectionHeading id="reflexive" level={2}>
         Reflexive
       </SectionHeading>
       <Text>
-        We can add an additional prefix to a root word to make the root word
+        You can add an additional prefix to a root word to make the root word
         apply to oneself. For example, <b>knú·wehse̲ʔ</b> means &quot;I like
         it&quot;. Adding the prefix <Letter>atat</Letter> before the root word
         and after the pronominal will translate to &quot;I like myself&quot;:{" "}
@@ -256,64 +257,16 @@ function ReflexiveSection() {
         adding <Letter>atat</Letter> to the root word. Adding this prefix
         &quot;changes&quot; the root word to use an A-stem.
       </Text>
-      <ParadigmTable data={nuwehseRefl} translationFn={translationFnLike} />
-      <ParadigmTable data={yʌteliRefl} translationFn={translationFnKnow} />
-      <ParadigmTable data={nolukhwaRefl} translationFn={translationFnLove} />
+      <Notice>The audio below only includes the prepausal ending.</Notice>
+      <ParadigmTable columnVisibility={columnVisibility} data={nuwehseRefl} />
+      <ParadigmTable columnVisibility={columnVisibility} data={yʌteliRefl} />
+      <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaRefl} />
     </>
   );
 }
 
 function ReciprocalSection() {
-  const pronounSubset = [...dualicPronouns, ...pluralPronouns];
-
-  const knowData: BreakdownArray[] = [
-    [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["yakya"], ["tat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["hy"], ["atat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["ky"], ["atat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["twa"], ["tat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["yakwa"], ["tat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["swa"], ["tat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["hu"], ["tat", "REFL"], "yʌtelí̲"],
-    [["te", "REFL"], ["ku"], ["tat", "REFL"], "yʌtelí̲"],
-  ];
-
-  const likeData: BreakdownArray[] = [
-    [["te", "REFL"], ["ty"], ["atat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["hy"], ["atat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["ky"], ["atat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["twa"], ["tat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["yakw"], ["atat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["swa"], ["tat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["hu"], ["tat", "REFL"], "nú·wehse̲ʔ"],
-    [["te", "REFL"], ["ku"], ["tat", "REFL"], "nú·wehse̲ʔ"],
-  ];
-
-  const loveData: BreakdownArray[] = [
-    [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["tsy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["yaky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["hy"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["ky"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["twa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["yakw"], ["atat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["swa"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["hu"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
-    [["te", "REFL"], ["ku"], ["tat", "REFL"], "nolúkhwa̲ʔ"],
-  ];
-
-  const formatBreakdownsToPhrases = (verb: string, data: BreakdownArray[]) => ({
-    phrases: data.map((breakdown, i) => ({
-      breakdown,
-      phrase: convertBreakdownToPlainText(breakdown),
-      pronoun: pronounSubset[i],
-    })),
-    translation: `{{pronoun}} ${verb} each other`,
-    type: "PR" as const,
-  });
+  const columnVisibility = { pronounEnglish: false };
 
   return (
     <>
@@ -339,18 +292,13 @@ function ReciprocalSection() {
       <Text>
         So the result is: <i>teyakyatatnú·wehse̲ʔ</i>.
       </Text>
+      <Notice>The audio below only includes the prepausal ending.</Notice>
+      <ParadigmTable columnVisibility={columnVisibility} data={dataLikeRecp} />
       <ParadigmTable
-        data={formatBreakdownsToPhrases("like", likeData)}
-        translationFn={translationFnLike}
+        columnVisibility={columnVisibility}
+        data={dataFamiliarRecp}
       />
-      <ParadigmTable
-        data={formatBreakdownsToPhrases("know", knowData)}
-        translationFn={translationFnKnow}
-      />
-      <ParadigmTable
-        data={formatBreakdownsToPhrases("love", loveData)}
-        translationFn={translationFnLove}
-      />
+      <ParadigmTable columnVisibility={columnVisibility} data={dataLoveRecp} />
     </>
   );
 }
@@ -362,10 +310,14 @@ function CommandsSection() {
         Commands
       </SectionHeading>
       <Text>
-        Here we introduce commands, which use purple pronominals. Commands have
-        different pronominals when you ("I") are the subject. These are known as
-        "command form" pronominals.
+        Here, commands are introduced, which use purple pronominals. Commands
+        have different pronominals when you ("I") are the subject. These are
+        known as "command form" pronominals.
       </Text>
+      <Notice intent="primary">
+        Commands are only ever stated in the prepausal form as they are always
+        used in cases where they appear by themselves.
+      </Notice>
       <SectionHeading id="commands-tell" level={3}>
         <b>-hloli- / -hloly-</b> — tell someone
       </SectionHeading>
@@ -472,29 +424,7 @@ function PassedOnSection() {
 }
 
 function DeceasedRelativesSection() {
-  const data = [
-    { translation: "aknulhaʔkʌ́", en: "my late mother" },
-    { translation: "lakeʔnikʌ́", en: "my late father" },
-    { translation: "aksotkʌ́", en: "my late grandmother" },
-    { translation: "laksotkʌ́", en: "my late grandfather" },
-    { translation: "yuknulhaʔkʌ́", en: "my late aunt" },
-    { translation: "laknulhaʔkʌ́", en: "my late uncle" },
-    { translation: "yukeʔkʌ́haʔkʌ́", en: "my late older sister" },
-    { translation: "lakeʔkʌhaʔkʌ́", en: "my late older brother" },
-    { translation: "kheʔkʌhaʔkʌ́", en: "my late younger sister(s)" },
-    { translation: "liʔkʌhaʔkʌ́", en: "my late younger brother" },
-    { translation: "kheyuhwatʌʔkʌ́", en: "my late niece(s) & nephew(s)" },
-    { translation: "liyuhwatʌʔkʌ́", en: "my late nephew" },
-    { translation: "kheyʌhaʔkʌ́", en: "my late daughter" },
-    { translation: "liyʌhaʔkʌ́", en: "my late son" },
-    {
-      translation: "kheyatlehaʔkʌ́",
-      en: "my late granddaughter(s) / grandchildren",
-    },
-    { translation: "liyatlehaʔkʌ́", en: "my late grandson" },
-    { translation: "ukyalaʔsehaʔkʌ́", en: "my late cousin" },
-    { translation: "ukyatʌloʔkʌ́", en: "my late friend" },
-  ];
+  const data = getDeceasedRelatives();
 
   return (
     <>
@@ -538,10 +468,8 @@ function DeceasedRelativesSection() {
       <Text>
         Notice that, in many cases, accents, stresses, and lengths move places.
       </Text>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishTranslation}
-        data={data}
-      />
+      {/* @ts-expect-error Table generics */}
+      <TableWrapper columns={TableWrapper.columnsEnglishAudio} data={data} />
     </>
   );
 }
@@ -557,7 +485,6 @@ function YoungOldSection() {
         and uses blue pronominals.
       </Text>
       <ParadigmTable
-        audioFolder="module02/old"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -574,7 +501,6 @@ function YoungOldSection() {
         <LinkWrapper page="dim" />.
       </Text>
       <ParadigmTable
-        audioFolder="module02/young"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -752,7 +678,6 @@ function AgeSection() {
         old&quot; is &quot;I have crossed X winters&quot;.
       </Text>
       <ParadigmTable
-        audioFolder="module02/age"
         columnVisibility={{
           pronounEnglish: false,
           pronounOneida: false,
@@ -768,92 +693,7 @@ function AgeSection() {
 }
 
 function DialogueSection() {
-  const part1: DialogueTableData = [
-    {
-      one: "Tó· naʔtehaohsliyá·ku neʔn yaʔníha̲",
-    },
-    {
-      one: "Thóha wisk niwáhsʌ naʔtehaohsliyá·ku lakeʔníha̲",
-    },
-    { one: "To·kʌ́skeʔ kʌ́ tho naʔtehaohsliyá·ku̲" },
-    { one: "ʌ́·, tho naʔtehaohsliyá·ku̲" },
-    {
-      one: "Úhkaʔ náhteʔ sheyʌtelí né·n sʌ́haʔ kʌʔ nityakoyʌ́ha̲",
-    },
-    {
-      one: [
-        "Sʌ́haʔ kʌʔ nithoyʌ́·ha loʔniha̲",
-        "Íhsi nú· né· téklu niwáhsʌ naʔtehaohsliyá·ku̲",
-      ],
-    },
-    {
-      one: "Tetsitsyatyelʌ́ kʌ́ neʔn yahsótha̲",
-    },
-    {
-      one: [
-        "Táh. Yáh thaʔtetsyakyatyelʌ̲̲́",
-        "Íhsi né· wisk niwáhsʌ niyohslaké sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót niʔí·",
-      ],
-    },
-    {
-      one: "Shakoyʌtelí kʌ́ akhwa·tsíle̲",
-    },
-    {
-      one: "Táh, né· ok laulhá laohwa·tsíleʔ shakoyʌtelí̲",
-    },
-  ];
-  const part2: DialogueTableData = [
-    {
-      one: [
-        "Úhkaʔ náhteʔ sʌ́haʔ kʌʔ nityakoyʌhaʔ né· yesayʌʔokuha̲",
-        "Yaʔníha kʌ́ katʌ sanulhá·",
-      ],
-    },
-    {
-      one: "Lakeʔníha sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót neʔn aknulhá·",
-    },
-    { one: "Tó· nikú sʌ́haʔ lokstʌ́ha̲ʔ" },
-    { one: "Tewáhsʌ niyohslaké sʌ́haʔ lokstʌ́ha̲ʔ" },
-    { one: "E·só· sʌ́haʔ lokstʌ́haʔ, wáhi̲" },
-    { one: "ʌ́·", hasAudio: false },
-  ];
-  const part3: DialogueTableData = [
-    {
-      one: "Sʌ́haʔ kʌ́ akokstʌ́haʔ né· ukyalaséha Kowáklit tsiʔ ni·yót neʔn tsyalá·séʔ Tu·wís",
-    },
-    {
-      one: "Táh. Ukyalá·seʔ Tu·wís sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót né· tsyalá·seʔ Kowáklit",
-    },
-    {
-      one: "Kayé kʌ́ niwáhsʌ naʔtehaohsliyá·ku̲",
-    },
-    {
-      one: [
-        "Táh. Yáh tho tehokstʌ́ha̲ʔ",
-        "Áhsʌ ok niwáhsʌ wá·tlu naʔtehaohsliyá·ku̲",
-      ],
-    },
-    {
-      one: "Sanúhteʔ kʌ́ tó· naʔteyakaohsliyá·ku né· ukyalasé Kowáklit",
-    },
-    {
-      one: "Táh. Yáh tewakánuhteʔ, uhkaʔ náhteʔ né· akonulhá·",
-    },
-    {
-      one: "Yukeʔkʌ́ha Ní·ki neʔn akonulhá·",
-    },
-    {
-      one: "Tó· sʌ́haʔ akokstʌ́haʔ Ní·ki tsiʔ ni·yót niʔisé̲·",
-    },
-    {
-      one: "Thohaʔ oyé·li niyohslaké sʌ́haʔ akokstʌ́haʔ tsiʔ ni·yót niʔí·",
-    },
-    {
-      one: "Yáh yeksá· té·kʌ, wáhi̲",
-    },
-    { one: "To·kʌ́skeʔ kʌ́", hasAudio: false },
-    { one: "ʌ́·", hasAudio: false },
-  ];
+  const data = getDialogueModule02();
 
   // @ts-expect-error TODO
   const mapper = (row) => ({ ...row, hasAudio: row.hasAudio ?? true });
@@ -869,57 +709,27 @@ function DialogueSection() {
       </SectionHeading>
       <DialogueTable
         audioFolder="module02/dialogue/part1"
-        data={part1.map(mapper)}
+        data={data.part1.map(mapper)}
       />
       <SectionHeading id="dialogue-ex2" level={3}>
         Example 2
       </SectionHeading>
       <DialogueTable
         audioFolder="module02/dialogue/part2"
-        data={part2.map(mapper)}
+        data={data.part2.map(mapper)}
       />
       <SectionHeading id="dialogue-ex3" level={3}>
         Example 3
       </SectionHeading>
       <DialogueTable
         audioFolder="module02/dialogue/part3"
-        data={part3.map(mapper)}
+        data={data.part3.map(mapper)}
       />
     </>
   );
 }
 
 function ThingsThatAreTheSameSection() {
-  const data = [
-    ["They are the same", "Né· tshá·kat"],
-    ["Are they the same?", "Né· kʌ́ tshá·kat"],
-    ["They are not the same", "yáh né· tshá·kat té·kʌ"],
-    ["Someone and I are the same age", "tshaʔteyuknohsliyá·ku̲"],
-    ["You two are the same age", "tshaʔtesnohsliyá·ku̲"],
-    ["We are all the same age", "tshaʔteyukyohsliyá·ku̲"],
-    ["You all are the same age", "tshaʔtetsyohsliyá·ku̲"],
-    ["They Ms are the same age", "tshaʔtehonohsliyá·ku̲"],
-    ["They Fs are the same age", "tshaʔteyonohsliyá·ku̲"],
-    ["You and I have the same last name", "tshaʔteyót tsiʔ tetnihsʌná·se·le̲ʔ"],
-    [
-      "Someone and I have the same last name",
-      "tshaʔteyót tsiʔ teʔyaknihsʌná·se·le̲ʔ",
-    ],
-    ["You two have the same last name", "tshaʔteyót tsiʔ tehsnihsʌná·se·le̲ʔ"],
-    ["Two males have the same last name", "tshaʔteyót tsiʔ tehnihsʌná·se·le̲ʔ"],
-    [
-      "Two females have the same last name",
-      "tshaʔteyót tsiʔ teknihsʌná·se·le̲ʔ",
-    ],
-    ["We all have the same last name", "tshaʔteyót tsiʔ tetwahsʌná·se·le̲ʔ"],
-    [
-      "They and l have the same last name",
-      "tshaʔteyót tsiʔ teyakwahsʌná·se·le̲ʔ",
-    ],
-    ["You all have the same last name", "tshaʔteyót tsiʔ tehswahsʌná·se·le̲ʔ"],
-    ["They Ms have the same last name", "tshaʔteyót tsiʔ tehatihsʌná·se·le̲ʔ"],
-    ["They Fs have the same last name", "tshaʔteyót tsiʔ tekutihsʌná·se·le̲ʔ"],
-  ];
   return (
     <>
       <SectionHeading id="things-that-are-the-same" level={2}>
@@ -932,10 +742,7 @@ function ThingsThatAreTheSameSection() {
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={TableWrapper.columnsEnglishAudio}
-        data={data.map(TableWrapper.mapEnglishAndTranslation).map((row, i) => ({
-          ...row,
-          audioFile: `module02/things_that_are_the_same/${i + 1}.mp3`,
-        }))}
+        data={getThingsThatAreTheSameExamples()}
       />
     </>
   );

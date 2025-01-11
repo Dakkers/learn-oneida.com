@@ -52,6 +52,7 @@ export default createParadigmData(
         breakdown: [["t", "CIS"], ["yoti"], "ʔnikuhliyo", ["hné·", "PAST"]],
       },
     ],
+    whispered: false,
   },
   pronouns,
 );
