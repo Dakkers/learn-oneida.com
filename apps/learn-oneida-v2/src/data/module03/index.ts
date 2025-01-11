@@ -53,7 +53,7 @@ export function getDialogueModule03() {
         "Tehonatekháhsyu nuʔú·waʔ kháleʔ ihnehseʔ né· shayá·tat neʔn Brad Falchuk luwa·yáts",
       ],
     },
-    { one: ["Ok né·n Ben Affleck", "Laukwé·tayʌʔ kʌ́né·n yakukwé· nuʔú·wa̲ʔ"] },
+    { one: ["Ok né·n Ben Affleck", "Laukwé·tayʌʔ kʌ́ né·n yakukwé· nuʔú·wa̲ʔ"] },
     {
       one: [
         "E·só· nikutí kunukwé· laukweʔtayʌ·táhkweʔ né· Ben",

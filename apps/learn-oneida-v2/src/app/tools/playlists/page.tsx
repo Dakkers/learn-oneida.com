@@ -242,8 +242,8 @@ async function createWakeLock() {
 }
 
 class Timer {
-  time: number = 0;
-  remainingTime: number = 0;
+  time = 0;
+  remainingTime = 0;
   callback: () => void;
   timeoutObj: ReturnType<typeof setTimeout> | null = null;
 
