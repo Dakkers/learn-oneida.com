@@ -12,6 +12,7 @@ import {
   createTimesOfDayData,
   determineTimesOfDayAudioFileName,
 } from "@/data/module04";
+import { formatFileWithSuffix } from "@/utils/misc";
 
 export function TimesOfDayArticle({ level = 1 }: ArticleProps) {
   const data = createTimesOfDayData();
@@ -201,7 +202,11 @@ const columns = [
             {val}
 
             <PlayButton
-              filepath={`/audio/module04/time_phrases/${determineTimesOfDayAudioFileName(row.en, value, i)}.mp3`}
+              filepath={formatFileWithSuffix(
+                determineTimesOfDayAudioFileName(row.en),
+                value,
+                i,
+              )}
             />
           </Flex>
         ))}

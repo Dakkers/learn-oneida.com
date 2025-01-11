@@ -20,8 +20,10 @@ export default createParadigmData(
       },
       {
         breakdown: [["lʌn"], "ukweʔtiyóhs", ["kweʔ", "PAST"]],
+        whispered: true,
       },
     ],
+    whispered: false,
   },
   ["i", "u", "m", "f", "ms"],
 );

@@ -33,6 +33,7 @@ import dataDidntUsedToWant from "./didnt-used-to-want";
 import dataThought from "./thought";
 import type { ParadigmData } from "~/components/ParadigmTable";
 import { arrayify } from "@ukwehuwehneke/language-components";
+import { formatAudioFileWithSuffix, formatFileWithSuffix } from "@/utils/misc";
 
 export const MODULE_4_TENSE_LIST = ["prs", "past", "fut", "ifut"] as const;
 export type Module4VerbTense = (typeof MODULE_4_TENSE_LIST)[number];
@@ -324,15 +325,9 @@ const fixAudioFileName = (filename: string) =>
     .replaceAll("?", "")
     .replaceAll(" ", "_");
 
-export const determineTimesOfDayAudioFileName = (
-  phrase: string | string[],
-  translations: string | string[],
-  index: number,
-) => {
+export const determineTimesOfDayAudioFileName = (phrase: string | string[]) => {
   const name = fixAudioFileName(arrayify(phrase)[0]);
-  const hasMultiple = Array.isArray(translations);
-  const suffix = hasMultiple ? `_${index + 1}` : "";
-  return `${name}${suffix}`;
+  return `/audio/module04/time_phrases/${name}.mp3`;
 };
 
 export function createMonthsData() {
@@ -444,7 +439,7 @@ export function createTimesOfDayData() {
   ) => ({
     ...obj,
     en: arrayify(obj.en),
-    audioFile: `/audio/module04/time_phrases/${determineTimesOfDayAudioFileName(obj.en, obj.translation, index)}.mp3`,
+    audioFile: determineTimesOfDayAudioFileName(obj.en),
     translation: obj.translation,
   });
 
@@ -557,6 +552,8 @@ export function createTimesOfDayData() {
     { en: "afternoon", translation: "yotukóhtu ʌt́i" },
     { en: "noon", translation: ["ʌ́ti", "ʌ́tyʌ ni·kále̲ʔ"] },
   ].map(mapUtil);
+
+  console.log(afternoonPhrases);
 
   const otherPhrases = [
     { en: "always", translation: "tyóhtkut" },

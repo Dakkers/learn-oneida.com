@@ -11,7 +11,7 @@ export default createParadigmData(
         breakdown: [["wak"], "ataʔkali·té·"],
       },
       {
-        breakdown: [["hs"], "ataʔkali·té·"],
+        breakdown: [["s"], "ataʔkali·té·"],
       },
       {
         breakdown: [["lo"], "taʔkali·té·"],
