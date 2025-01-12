@@ -1,5 +1,3 @@
-"use client";
-
 import { Link } from "@/components/Link";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box, Card, Flex, Text } from "@ukwehuwehneke/ohutsya";

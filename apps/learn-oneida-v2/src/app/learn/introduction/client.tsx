@@ -1,3 +1,4 @@
+'use client'
 import { Letter } from "@/components/Letter";
 import { ParadigmTable } from "@/components/ParadigmTable";
 import { SectionHeading } from "@ukwehuwehneke/language-components";

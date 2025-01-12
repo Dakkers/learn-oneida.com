@@ -18,11 +18,11 @@ import { Letter } from "~/components/Letter";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Link } from "@/components/Link";
 import { LinkWrapper } from "@/components/LinkWrapper";
-import { ParadigmsSection } from "./blah";
+import { ParadigmsSection } from "./client";
 
 export const metadata: Metadata = {
   title: "Introduction",
-  description: "Introduction to the Oneida curriculum",
+  description: "Introduction to the Oneida curriculum. This page will teach you about the Oneida orthography, root words, pronominal prefixes, and stems.",
 };
 
 export default function LearnIntroduction() {
