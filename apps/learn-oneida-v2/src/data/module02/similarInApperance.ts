@@ -1,4 +1,4 @@
-import { createParadigmData } from "@/components/ParadigmTable";
+import { createParadigmData } from "@/utils/paradigm";
 import { nonSingularPronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(

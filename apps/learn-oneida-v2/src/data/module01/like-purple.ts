@@ -1,5 +1,5 @@
 import { pluralizeVerbCommon } from "@/utils/translation";
-import { createInteractiveParadigmData } from "~/components/ParadigmTable";
+import { createInteractiveParadigmData } from "@/utils/paradigm";
 
 const data = createInteractiveParadigmData({
   // audioFolder: "module01/pronominals/purple/C",

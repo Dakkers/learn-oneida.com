@@ -26,23 +26,17 @@ import {
   PURPLES_MAP_FULL,
   type Pronoun,
   type TextBreakdownProps,
-  pronouns,
   translatePhraseInteractive,
   translatePhraseV2,
 } from "@ukwehuwehneke/language-components";
 import {
-  type BreakdownArray,
   type BreakdownType,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
 import _ from "lodash";
-import { whisperizeWord } from "@ukwehuwehneke/language-components";
 
-import {
-  type PronounPurple,
-  type PronounPurpleExtended,
-  pronounsPurple,
-} from "@ukwehuwehneke/language-components";
+import type { ParadigmData, ParadigmTableRow } from "@/utils/paradigm";
+import { getAudioFilenameForPronoun } from "@/utils/misc";
 
 const ParadigmTableContext =
   React.createContext<ParadigmTableContextProps | null>(null);
@@ -146,7 +140,7 @@ function TableRowWrapper({
 }: {
   audioFolder?: string;
   ignoredBreakdownTypes: TextBreakdownProps["ignored"];
-  row: Row;
+  row: ParadigmTableRow;
   typeFallback?: BreakdownType;
   whispered?: boolean;
 }) {
@@ -271,23 +265,6 @@ interface ColumnVisibility {
   translation: boolean;
 }
 
-export interface ParadigmData {
-  audioFolder?: string;
-  categories?: Array<"kinship">;
-  phrases: Row[];
-  translation: string;
-  translationFn?: (pronoun: Pronoun) => string;
-  type: "PR" | "PB" | "PLB" | "PP";
-  whispered?: boolean;
-}
-
-interface Row {
-  breakdown: BreakdownArray;
-  phrase: string;
-  pronoun: Pronoun;
-  whispered?: boolean;
-}
-
 interface ParadigmTableContextProps {
   colVisibility: ColumnVisibility;
   data: ParadigmData;
@@ -295,101 +272,4 @@ interface ParadigmTableContextProps {
   legacyTranslationFn?: ({
     pronoun,
   }: { pronoun: Pronoun }) => Record<string, string>;
-}
-
-function createParadigmDataUtil(
-  data: Pick<
-    ParadigmData,
-    | "audioFolder"
-    | "categories"
-    | "translation"
-    | "translationFn"
-    | "type"
-    | "whispered"
-  > & {
-    phrases: Array<{ breakdown: BreakdownArray; whispered?: boolean }>;
-  },
-) {
-  const result = _.cloneDeep(data) as ParadigmData;
-  for (let i = 0; i < result.phrases.length; i++) {
-    const element = result.phrases[i];
-    const endIndex = element.breakdown.length - 1;
-    if (element.whispered ?? data.whispered ?? true) {
-      const lastElement = element.breakdown[endIndex];
-      const lastPartOfBreakdown = getBreakdownTextPart(
-        getBreakdownTextPart(lastElement),
-      );
-      const lastPartWhispered = whisperizeWord(lastPartOfBreakdown);
-      element.breakdown[endIndex] =
-        typeof lastElement === "string"
-          ? lastPartWhispered
-          : {
-              text: lastPartWhispered,
-              type: Array.isArray(lastElement)
-                ? lastElement[1]
-                : (lastElement.type ?? undefined),
-            };
-    }
-
-    element.phrase = element.breakdown
-      .map((part) => getBreakdownTextPart(part))
-      .join("");
-  }
-
-  result.whispered = data.whispered ?? true;
-
-  return result;
-}
-
-export function createInteractiveParadigmData(
-  data: Omit<Parameters<typeof createParadigmDataUtil>[0], "translationFn"> & {
-    translationFn?: (pronoun: PronounPurple | PronounPurpleExtended) => string;
-  },
-  allowedPronouns?: PronounPurple[] | PronounPurpleExtended[],
-): ParadigmData {
-  // @ts-expect-error Argh! ParadigmData expects Pronoun, not the purples
-  const result = createParadigmDataUtil(data);
-
-  const pronounsToUse = allowedPronouns ?? pronounsPurple;
-  for (let i = 0; i < result.phrases.length; i++) {
-    if (pronounsToUse) {
-      // @ts-expect-error Argh! ParadigmData expects Pronoun, not the purples
-      result.phrases[i].pronoun = pronounsToUse[i];
-    }
-  }
-  return result;
-}
-
-export function createParadigmData(
-  data: Parameters<typeof createParadigmDataUtil>[0],
-  allowedPronouns?: Pronoun[],
-): ParadigmData {
-  const result = createParadigmDataUtil(data);
-  const pronounsToUse = allowedPronouns ?? pronouns;
-  for (let i = 0; i < result.phrases.length; i++) {
-    if (pronounsToUse) {
-      result.phrases[i].pronoun = pronounsToUse[i];
-    }
-  }
-  return result;
-}
-
-const getBreakdownTextPart = (part: BreakdownArray[number]) =>
-  typeof part === "string" ? part : Array.isArray(part) ? part[0] : part.text;
-
-export function getAudioFilenameForPronoun(
-  pronoun: Pronoun,
-  typeFallback?: BreakdownType,
-) {
-  return typeFallback !== "PB"
-    ? pronoun
-    : pronoun === "theyni"
-      ? "us"
-      : pronoun === "soni"
-        ? "uni"
-        : pronoun === "ms"
-          ? "2m"
-          : pronoun === "fs"
-            ? "2f"
-            : pronoun;
 }

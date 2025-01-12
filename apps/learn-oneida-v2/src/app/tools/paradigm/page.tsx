@@ -44,7 +44,7 @@ import dataUsedToWant from "~/data/module04/used-to-want";
 import dataDidntUsedToWant from "~/data/module04/didnt-used-to-want";
 import dataThought from "~/data/module04/thought";
 
-import { type ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
+import type { ParadigmData } from "@/utils/paradigm";
 import {
   type Pronoun,
   dualicPronouns,

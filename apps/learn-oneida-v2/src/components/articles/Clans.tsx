@@ -3,15 +3,10 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
   type SectionHeadingProps,
-  type Pronoun,
 } from "@ukwehuwehneke/language-components";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import {
-  type ParadigmData,
-  ParadigmTable,
-  createParadigmData,
-} from "../ParadigmTable";
+import { ParadigmTable } from "../ParadigmTable";
 import type { ArticleProps } from "./utils";
 import { getClanAnimalList, getClanParadigms } from "@/data/module03";
 

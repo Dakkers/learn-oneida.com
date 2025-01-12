@@ -1,5 +1,4 @@
 import type { DialogueTableData } from "@/components/DialogueTable";
-import type { ParadigmData } from "@/components/ParadigmTable";
 import type {
   BreakdownArray,
   Pronoun,
@@ -26,6 +25,7 @@ import dataLikeRed from "~/data/nuwehse-red";
 import dataLikeBlue from "~/data/nuwehse-blue";
 import dataAlive from "~/data/unhe";
 import dataHardToPlease from "~/data/ʌtole";
+import type { ParadigmData } from "@/utils/paradigm";
 
 export function getDialogueModule01() {
   const part1: DialogueTableData = [

@@ -1,5 +1,5 @@
 import { pronouns } from "@ukwehuwehneke/language-components";
-import { createParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "@/utils/paradigm";
 
 const data = createParadigmData(
   {

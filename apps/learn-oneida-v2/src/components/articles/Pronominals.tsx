@@ -59,11 +59,12 @@ import dataHealthy from "~/data/module05/healthy-PRS";
 import dataSleeping from "~/data/module05/sleep-PRS";
 import dataEnjoy from "~/data/module05/enjoyingDoingSomething-PRS";
 import dataLikeTheTaste from "~/data/module05/likingTheTaste-PRS";
-import { type ParadigmData, ParadigmTable } from "../ParadigmTable";
+import { ParadigmTable } from "../ParadigmTable";
 import type {
   PronominalRules,
   PronominalRulesPurple,
 } from "@/data/pronominals/types";
+import type { ParadigmData } from "@/utils/paradigm";
 
 export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
   const level = (_level + 1) as SectionHeadingProps["level"];

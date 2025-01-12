@@ -11,10 +11,7 @@ import Image from "next/image";
 import React from "react";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Letter } from "~/components/Letter";
-import {
-  type Pronoun,
-  SectionHeading,
-} from "@ukwehuwehneke/language-components";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ParadigmTable } from "@/components/ParadigmTable";
 import dataLikeRedJson from "~/data/nuwehse-red";
 import { Link } from "@/components/Link";

@@ -1,10 +1,5 @@
+import { createInteractiveParadigmData } from "@/utils/paradigm";
 import { pluralizeVerbCommon } from "@/utils/translation";
-import { pronounsPurple } from "@ukwehuwehneke/language-components";
-import {
-  createInteractiveParadigmData,
-  createParadigmData,
-  type ParadigmData,
-} from "~/components/ParadigmTable";
 
 const data = createInteractiveParadigmData({
   audioFolder: "module02/love_purple",

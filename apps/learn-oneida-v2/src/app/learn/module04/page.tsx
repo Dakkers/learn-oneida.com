@@ -35,7 +35,8 @@ import dataDidntUsedToWant from "~/data/module04/didnt-used-to-want";
 import dataThought from "~/data/module04/thought";
 
 import { Accordion, Text } from "@ukwehuwehneke/ohutsya";
-import { type ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
+import type { ParadigmData } from "@/utils/paradigm";
+import { ParadigmTable } from "~/components/ParadigmTable";
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
