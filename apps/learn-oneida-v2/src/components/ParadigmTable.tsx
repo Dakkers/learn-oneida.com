@@ -35,9 +35,6 @@ import {
   type BreakdownType,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
-import * as z from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import _ from "lodash";
 import { whisperizeWord } from "@ukwehuwehneke/language-components";
 
@@ -46,10 +43,6 @@ import {
   type PronounPurpleExtended,
   pronounsPurple,
 } from "@ukwehuwehneke/language-components";
-
-const formSchema = z.object(
-  Object.fromEntries(pronouns.map((p) => [p, z.string().nullish()])),
-);
 
 const ParadigmTableContext =
   React.createContext<ParadigmTableContextProps | null>(null);
@@ -81,11 +74,6 @@ export function ParadigmTable({
   });
   const [showBreakdown, setShowBreakdown] = React.useState(true);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    defaultValues: {},
-    resolver: zodResolver(formSchema),
-  });
-
   const rowsToShow = React.useMemo(() => {
     if (allowedPronouns.length === 0) {
       return data.phrases;
@@ -116,36 +104,34 @@ export function ParadigmTable({
           />
         </Flex>
 
-        <Form {...form}>
-          <PrimitiveTable>
-            <PrimitiveTableHeader>
-              <PrimitiveTableRow>
-                {colVisibility.pronounEnglish && (
-                  <PrimitiveTableHead>Pronoun (EN)</PrimitiveTableHead>
-                )}
-                {colVisibility.pronounOneida && (
-                  <PrimitiveTableHead>Pronoun</PrimitiveTableHead>
-                )}
-                <PrimitiveTableHead>Phrase</PrimitiveTableHead>
-                {colVisibility.translation && (
-                  <PrimitiveTableHead>Translation</PrimitiveTableHead>
-                )}
-              </PrimitiveTableRow>
-            </PrimitiveTableHeader>
-            <PrimitiveTableBody>
-              {rowsToShow.map((row, i) => (
-                <TableRowWrapper
-                  audioFolder={data.audioFolder ?? audioFolder}
-                  ignoredBreakdownTypes={ignoredBreakdownTypes}
-                  key={i}
-                  row={row}
-                  typeFallback={data.type}
-                  whispered={data.whispered}
-                />
-              ))}
-            </PrimitiveTableBody>
-          </PrimitiveTable>
-        </Form>
+        <PrimitiveTable>
+          <PrimitiveTableHeader>
+            <PrimitiveTableRow>
+              {colVisibility.pronounEnglish && (
+                <PrimitiveTableHead>Pronoun (EN)</PrimitiveTableHead>
+              )}
+              {colVisibility.pronounOneida && (
+                <PrimitiveTableHead>Pronoun</PrimitiveTableHead>
+              )}
+              <PrimitiveTableHead>Phrase</PrimitiveTableHead>
+              {colVisibility.translation && (
+                <PrimitiveTableHead>Translation</PrimitiveTableHead>
+              )}
+            </PrimitiveTableRow>
+          </PrimitiveTableHeader>
+          <PrimitiveTableBody>
+            {rowsToShow.map((row, i) => (
+              <TableRowWrapper
+                audioFolder={data.audioFolder ?? audioFolder}
+                ignoredBreakdownTypes={ignoredBreakdownTypes}
+                key={i}
+                row={row}
+                typeFallback={data.type}
+                whispered={data.whispered}
+              />
+            ))}
+          </PrimitiveTableBody>
+        </PrimitiveTable>
       </Bleed>
     </ParadigmTableContext.Provider>
   );
