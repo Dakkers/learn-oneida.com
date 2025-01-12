@@ -1,9 +1,6 @@
 import { pluralizeVerbCommon } from "@/utils/translation";
 import { pronouns } from "@ukwehuwehneke/language-components";
-import {
-  createParadigmData,
-  type ParadigmData,
-} from "~/components/ParadigmTable";
+import { createParadigmData, type ParadigmData } from "@/utils/paradigm";
 
 const data = createParadigmData(
   {

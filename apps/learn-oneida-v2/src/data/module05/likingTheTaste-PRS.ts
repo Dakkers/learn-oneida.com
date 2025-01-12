@@ -1,4 +1,4 @@
-import { createParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "@/utils/paradigm";
 import { pronouns } from "@ukwehuwehneke/language-components";
 import { pluralizeVerbCommon } from "@/utils/translation";
 

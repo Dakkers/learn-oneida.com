@@ -26,10 +26,6 @@ import {
   getPeopleTerms,
 } from "~/data/module01";
 import {
-  getAudioFilenameForPronoun,
-  type ParadigmData,
-} from "@/components/ParadigmTable";
-import {
   getAboutSomeoneExamples,
   getAllModule02Paradigms,
   getDeceasedRelatives,
@@ -37,7 +33,10 @@ import {
   getLastNameExamples,
   getThingsThatAreTheSameExamples,
 } from "@/data/module02";
-import { formatAudioFileWithSuffix } from "@/utils/misc";
+import {
+  formatAudioFileWithSuffix,
+  getAudioFilenameForPronoun,
+} from "@/utils/misc";
 import {
   getAllModule03Paradigms,
   getClanAnimalList,
@@ -48,6 +47,7 @@ import {
   getDomesticatedBabyAnimalList,
   getNationsList,
 } from "@/data/module03";
+import type { ParadigmData } from "@/utils/paradigm";
 
 export type ModuleNumber =
   | "module01"

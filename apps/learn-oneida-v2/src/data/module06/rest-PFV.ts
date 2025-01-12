@@ -1,4 +1,4 @@
-import { createParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "@/utils/paradigm";
 import { pronouns } from "@ukwehuwehneke/language-components";
 
 // Yes, there is a glottal at the end of a perfective!

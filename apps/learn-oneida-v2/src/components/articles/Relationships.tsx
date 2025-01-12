@@ -11,7 +11,6 @@ import {
   type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import type { ArticleProps } from "./utils";
-import { createParadigmData } from "../ParadigmTable";
 
 export function RelationshipsArticle({ level = 1 }: ArticleProps) {
   return (

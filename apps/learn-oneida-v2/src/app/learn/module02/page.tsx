@@ -31,13 +31,7 @@ import dataFamiliarRecp from "~/data/module02/familiar-RECP";
 import dataLoveRecp from "~/data/module02/love-RECP";
 
 import { TableWrapper } from "@/components/TableWrapper";
-import { type Pronoun, arrayify } from "@ukwehuwehneke/language-components";
-import {
-  type BreakdownArray,
-  convertBreakdownToPlainText,
-  dualicPronouns,
-  pluralPronouns,
-} from "@ukwehuwehneke/language-components";
+import { arrayify } from "@ukwehuwehneke/language-components";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Letter } from "~/components/Letter";
 import _ from "lodash";
@@ -45,7 +39,8 @@ import {
   FamilyArticle,
   FamilyTableOfContentItems,
 } from "~/components/articles/Family";
-import { type ParadigmData, ParadigmTable } from "~/components/ParadigmTable";
+import type { ParadigmData } from "@/utils/paradigm";
+import { ParadigmTable } from "~/components/ParadigmTable";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { LastNamesArticle } from "~/components/articles/LastNames";
@@ -53,10 +48,7 @@ import { AboutSomeoneArticle } from "~/components/articles/AboutSomeone";
 import { SimilarInAppearanceArticle } from "~/components/articles/SimilarInAppearance";
 import { BeingDifferentArticle } from "~/components/articles/BeingDifferent";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
-import {
-  DialogueTable,
-  type DialogueTableData,
-} from "~/components/DialogueTable";
+import { DialogueTable } from "~/components/DialogueTable";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { getDialogueModule02 } from "~/data/module02/dialogue";
 import {

@@ -1,3 +1,7 @@
+import type {
+  BreakdownType,
+  Pronoun,
+} from "@ukwehuwehneke/language-components";
 import _ from "lodash";
 
 export function formatFileWithSuffix(
@@ -37,4 +41,21 @@ export function formatAudioFileWithSuffix(
 
 export function standardizeAudioFileName(filepath: string) {
   return `/audio/${filepath.replace("/audio", "").replace(/^\//, "")}`;
+}
+
+export function getAudioFilenameForPronoun(
+  pronoun: Pronoun,
+  typeFallback?: BreakdownType,
+) {
+  return typeFallback !== "PB"
+    ? pronoun
+    : pronoun === "theyni"
+      ? "us"
+      : pronoun === "soni"
+        ? "uni"
+        : pronoun === "ms"
+          ? "2m"
+          : pronoun === "fs"
+            ? "2f"
+            : pronoun;
 }

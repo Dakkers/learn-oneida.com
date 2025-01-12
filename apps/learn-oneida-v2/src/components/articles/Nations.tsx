@@ -2,11 +2,8 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import { ParadigmTable, createParadigmData } from "../ParadigmTable";
-import {
-  type Pronoun,
-  SectionHeading,
-} from "@ukwehuwehneke/language-components";
+import { ParadigmTable } from "../ParadigmTable";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import type { ArticleProps } from "./utils";
 import { getNationsList, nationsParadigm } from "@/data/module03";
 

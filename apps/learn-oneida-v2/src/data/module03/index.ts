@@ -1,8 +1,5 @@
 import type { DialogueTableData } from "@/components/DialogueTable";
-import {
-  createParadigmData,
-  type ParadigmData,
-} from "@/components/ParadigmTable";
+import { createParadigmData, type ParadigmData } from "@/utils/paradigm";
 
 import goodKidPRS from "./goodKid-PRS";
 import goodKidPAST from "./goodKid-PAST";

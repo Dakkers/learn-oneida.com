@@ -31,7 +31,7 @@ import dataDontWant from "./dont-want";
 import dataUsedToWant from "./used-to-want";
 import dataDidntUsedToWant from "./didnt-used-to-want";
 import dataThought from "./thought";
-import type { ParadigmData } from "~/components/ParadigmTable";
+import type { ParadigmData } from "@/utils/paradigm";
 import { arrayify } from "@ukwehuwehneke/language-components";
 import { formatAudioFileWithSuffix, formatFileWithSuffix } from "@/utils/misc";
 
