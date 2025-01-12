@@ -11,6 +11,7 @@ import {
   type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import type { ArticleProps } from "./utils";
+import { createParadigmData } from "../ParadigmTable";
 
 export function RelationshipsArticle({ level = 1 }: ArticleProps) {
   return (
@@ -192,17 +193,27 @@ function EngagedTable({ level = 2 }: ArticleProps) {
 
 function SingleTable({ level = 2 }: ArticleProps) {
   const rows = [
-    ["i", "k"],
-    ["u", "s"],
-    ["m", "l"],
-    ["f", "yu"],
-  ].map(([pronoun, p]) => {
-    return {
-      pronoun,
-      breakdown: [{ text: p }, "atatwʌni·yó"],
-      breakdownPast: [{ text: p }, "tatwʌniyo", ["hné·", "PAST"]],
-    };
-  });
+    {
+      breakdown: [["k"], "atatwʌni·yó"],
+      breakdownPast: [["k"], "atatwʌniyo", ["hné·", "PAST"]],
+      pronoun: "i",
+    },
+    {
+      breakdown: [["s"], "atatwʌni·yó"],
+      breakdownPast: [["s"], "atatwʌniyo", ["hné·", "PAST"]],
+      pronoun: "u",
+    },
+    {
+      breakdown: [["l"], "atatwʌni·yó"],
+      breakdownPast: [["l"], "atatwʌniyo", ["hné·", "PAST"]],
+      pronoun: "m",
+    },
+    {
+      breakdown: [["yu"], "tatwʌni·yó"],
+      breakdownPast: [["yu"], "tatwʌniyo", ["hné·", "PAST"]],
+      pronoun: "f",
+    },
+  ];
 
   return (
     <>
