@@ -1,7 +1,4 @@
-import {
-  createParadigmData,
-  type ParadigmData,
-} from "~/components/ParadigmTable";
+import { createParadigmData, type ParadigmData } from "@/utils/paradigm";
 
 const data = createParadigmData(
   {

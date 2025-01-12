@@ -1,4 +1,4 @@
-import { createInteractiveParadigmData } from "~/components/ParadigmTable";
+import { createInteractiveParadigmData } from "@/utils/paradigm";
 
 const data = createInteractiveParadigmData({
   translation: "{{agent}} {{refVerb}} going to get {{subject}}",

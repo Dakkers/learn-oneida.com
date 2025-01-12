@@ -7,8 +7,9 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import type { ArticleProps } from "./utils";
-import { ParadigmTable, createParadigmData } from "../ParadigmTable";
+import { ParadigmTable } from "../ParadigmTable";
 import { pronounsBlue } from "@ukwehuwehneke/language-components";
+import { createParadigmData } from "@/utils/paradigm";
 
 const dataAtSomeonesOwnHouse = createParadigmData(
   {

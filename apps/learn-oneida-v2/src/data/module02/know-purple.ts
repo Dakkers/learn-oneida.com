@@ -1,4 +1,4 @@
-import { createInteractiveParadigmData } from "~/components/ParadigmTable";
+import { createInteractiveParadigmData } from "@/utils/paradigm";
 
 const data = createInteractiveParadigmData({
   audioFolder: "module02/familiar_purple",

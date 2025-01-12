@@ -8,12 +8,9 @@ import {
   PrimitiveTable,
   PrimitiveTableBody,
   PrimitiveTableCell,
-  PrimitiveTableHead,
   PrimitiveTableHeader,
   PrimitiveTableRow,
-  TextArray,
 } from "@ukwehuwehneke/ohutsya";
-import { TableWrapper } from "~/components/TableWrapper";
 
 type Row =
   | {

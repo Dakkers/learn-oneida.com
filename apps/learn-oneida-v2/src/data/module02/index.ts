@@ -46,12 +46,8 @@ import dataParents from "../family/plural/parents";
 import dataSiblingsOlder from "../family/plural/siblings-older";
 import dataSiblingsYounger from "../family/plural/siblings-younger";
 import dataUnclesAunts from "../family/plural/uncles-aunts";
-import type { ParadigmData } from "@/components/ParadigmTable";
-import {
-  arrayify,
-  BreakdownArray,
-  Pronoun,
-} from "@ukwehuwehneke/language-components";
+import { arrayify } from "@ukwehuwehneke/language-components";
+import type { ParadigmData } from "@/utils/paradigm";
 
 export function getDeceasedRelatives() {
   const data = [

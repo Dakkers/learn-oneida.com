@@ -1,4 +1,4 @@
-import { createParadigmData } from "~/components/ParadigmTable";
+import { createParadigmData } from "@/utils/paradigm";
 
 const data = createParadigmData({
   audioFolder: "module02/dead",

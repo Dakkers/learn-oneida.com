@@ -1,5 +1,5 @@
 import { pluralizeVerbCommon } from "@/utils/translation";
-import { createInteractiveParadigmData } from "~/components/ParadigmTable";
+import { createInteractiveParadigmData } from "@/utils/paradigm";
 
 const data = createInteractiveParadigmData({
   translation: "{{agent}} forbid {{subject}} to do it",
