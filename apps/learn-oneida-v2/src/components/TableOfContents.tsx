@@ -17,7 +17,7 @@ interface TableOfContentsItemProps {
   value: React.ReactNode;
 }
 
-function TableOfContentsItem({
+export function TableOfContentsItem({
   children,
   label,
   value,
@@ -36,13 +36,15 @@ interface TableOfContentsSectionProps {
   children: React.ReactNode;
 }
 
-TableOfContents.Section = function TableOfContentsSection({
+export function TableOfContentsSection({
   children,
 }: TableOfContentsSectionProps) {
   return <List>{children}</List>;
-};
+}
 
-TableOfContentsItem.Phrase = function TocItemPhrase({
+TableOfContents.Section = TableOfContentsSection;
+
+export function TableOfContentsItemPhrase({
   label,
   word,
   value,
@@ -61,4 +63,6 @@ TableOfContentsItem.Phrase = function TocItemPhrase({
       value={value}
     />
   );
-};
+}
+
+TableOfContentsItem.Phrase = TableOfContentsItemPhrase;

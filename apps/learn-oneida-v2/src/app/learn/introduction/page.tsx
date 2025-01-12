@@ -1,21 +1,24 @@
 import {
-  Bleed,
   Box,
   Divider,
   List,
+  ListItem,
   Notice,
   Text,
 } from "@ukwehuwehneke/ohutsya";
 import type { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+} from "~/components/TableOfContents";
 import { Letter } from "~/components/Letter";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { ParadigmTable } from "@/components/ParadigmTable";
-import dataLikeRedJson from "~/data/nuwehse-red";
 import { Link } from "@/components/Link";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { ParadigmsSection } from "./blah";
 
 export const metadata: Metadata = {
   title: "Introduction",
@@ -33,16 +36,16 @@ export default function LearnIntroduction() {
       </Box>
 
       <TOC>
-        <TOC.Item label="Orthography" value="orthography" />
-        <TOC.Item label="Terminology" value="terminology">
-          <TOC.Section>
-            <TOC.Item label="Root Words" value="root-words" />
-            <TOC.Item label="Pronominal Prefixes" value="pronominals" />
-          </TOC.Section>
-        </TOC.Item>
+        <TocItem label="Orthography" value="orthography" />
+        <TocItem label="Terminology" value="terminology">
+          <TocSection>
+            <TocItem label="Root Words" value="root-words" />
+            <TocItem label="Pronominal Prefixes" value="pronominals" />
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Paradigms" value="paradigms" />
-        <TOC.Item label="What's Next?" value="whats-next" />
+        <TocItem label="Paradigms" value="paradigms" />
+        <TocItem label="What's Next?" value="whats-next" />
       </TOC>
 
       <Divider />
@@ -67,28 +70,28 @@ export default function LearnIntroduction() {
       <Text>Breaking down this word into its pieces results in:</Text>
 
       <List>
-        <List.Item>
+        <ListItem>
           <Letter>ʌ</Letter> - definite future tense
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>ts</Letter> - repetitive feature, indicating something is
           being done again
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>yakwa</Letter> - first-person, exclusive, plural
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>hnaná·t</Letter> - the <i>noun root</i> for "potato"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>a</Letter> - joiner vowel
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>ko</Letter> - the <i>verb root</i> for "pick, harvest"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>ʔ</Letter> - punctual aspect suffix
-        </List.Item>
+        </ListItem>
       </List>
 
       <Text>
@@ -133,9 +136,9 @@ export default function LearnIntroduction() {
       </Text>
 
       <List ordered>
-        <List.Item>A root word</List.Item>
-        <List.Item>A pronominal prefix</List.Item>
-        <List.Item>An aspect suffix</List.Item>
+        <ListItem>A root word</ListItem>
+        <ListItem>A pronominal prefix</ListItem>
+        <ListItem>An aspect suffix</ListItem>
       </List>
 
       <Text>Below, the first two terms will be discussed.</Text>
@@ -155,12 +158,12 @@ export default function LearnIntroduction() {
       </Text>
 
       <List>
-        <List.Item>The orthography (writing system) of Oneida</List.Item>
-        <List.Item>How letters are pronounced</List.Item>
-        <List.Item>
+        <ListItem>The orthography (writing system) of Oneida</ListItem>
+        <ListItem>How letters are pronounced</ListItem>
+        <ListItem>
           The terms "root word", "pronominal", "paradigm", "stem"
-        </List.Item>
-        <List.Item>How to identify the stem of a root word</List.Item>
+        </ListItem>
+        <ListItem>How to identify the stem of a root word</ListItem>
       </List>
 
       <Text>
@@ -195,66 +198,66 @@ function OrthographySection() {
       </Text>
 
       <List>
-        <List.Item>
+        <ListItem>
           <Letter>a</Letter> is pronounced like "f<b className="underline">a</b>
           ther"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>e</Letter> is pronounced like "d<b className="underline">e</b>
           bt"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>i</Letter> is pronounced like "n
           <b className="underline">ee</b>d"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>o</Letter> is pronounced like "t<b className="underline">o</b>
           e"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>u</Letter> is pronounced like "l
           <b className="underline">oo</b>n"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>ʌ</Letter> is pronounced like "h<b className="underline">u</b>
           h"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>h</Letter> is pronounced like "<b className="underline">h</b>
           ello"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>k</Letter> is pronounced like "<b className="underline">g</b>
           reen"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>l</Letter> is pronounced like "<b className="underline">l</b>
           adder"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>n</Letter> is pronounced like "<b className="underline">n</b>
           eedle"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>s</Letter> is pronounced like "<b className="underline">z</b>
           ombie"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>t</Letter> is pronounced like "<b className="underline">d</b>
           uck"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>w</Letter> is pronounced like "<b className="underline">w</b>
           ind"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>y</Letter> is pronounced like "<b className="underline">y</b>
           es"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>ʔ</Letter> is pronounced like "uh
           <b className="underline">-</b>oh"
-        </List.Item>
+        </ListItem>
       </List>
 
       <Text>
@@ -263,14 +266,14 @@ function OrthographySection() {
       </Text>
 
       <List>
-        <List.Item>
+        <ListItem>
           <Letter>kh</Letter> is pronounced like "<b className="underline">c</b>
           ot"
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <Letter>th</Letter> is pronounced like "<b className="underline">t</b>
           ook"
-        </List.Item>
+        </ListItem>
       </List>
 
       <Text>
@@ -303,18 +306,18 @@ function RootWordsSection() {
       </Text>
 
       <List>
-        <List.Item>
+        <ListItem>
           <b>kekhu·níheʔ</b> - I am cooking
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>wahakhu·ní·</b> - he cooked
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>ʌyekhu·ní·</b> - she will cook
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>ahsekhu·ní·</b> - you will cook
-        </List.Item>
+        </ListItem>
       </List>
 
       <Text>
@@ -327,18 +330,18 @@ function RootWordsSection() {
       </Text>
 
       <List>
-        <List.Item>
+        <ListItem>
           <b>aknúhsaʔ</b> - my house
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>sanúhsaʔ</b> - your house
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>laonúhsaʔ</b> - his house
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>akonúhsaʔ</b> - her house
-        </List.Item>
+        </ListItem>
       </List>
 
       <Text>
@@ -371,18 +374,18 @@ function PronominalsSection() {
       </Text>
 
       <List>
-        <List.Item>
+        <ListItem>
           <b>kekhu·níheʔ</b> - I am cooking
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>sekhu·níheʔ</b> - you are cooking
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>lakhu·níheʔ</b> - he is cooking
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>yekhu·níheʔ</b> - she is cooking
-        </List.Item>
+        </ListItem>
       </List>
 
       <Text>
@@ -397,18 +400,18 @@ function PronominalsSection() {
       </Text>
 
       <List>
-        <List.Item>
+        <ListItem>
           <b>katekhu·níheʔ</b> - I am eating
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>satekhu·níheʔ</b> - you are eating
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>latekhu·níheʔ</b> - he is eating
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>yutekhu·níheʔ</b> - she is eating
-        </List.Item>
+        </ListItem>
       </List>
 
       <Text>
@@ -420,67 +423,32 @@ function PronominalsSection() {
       </Text>
 
       <List>
-        <List.Item>
+        <ListItem>
           <b>A-stem</b>: atekhuni (eat), aluʔtat (shoot), anowʌht (lie)
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>E-stem</b>: ehsak (look for), elh (want, think), ehyahl (remember)
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>I-stem</b>: iheyu (die), itaklaʔ (fall down), itaʔ (sleep)
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>O-stem</b>: ohlok (insert), ohalakw (unhook), okw (take out of
           water)
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>U-stem</b>: uhew (sweep), unhe (live), uni (make)
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>Λ-stem</b>: ʌshenhu (moan), ʌtol (be difficult to please), ʌtuni
           (feel lonely)
-        </List.Item>
-        <List.Item>
+        </ListItem>
+        <ListItem>
           <b>C-stem</b>: kw (pick), nohale (wash), hninu (buy)
-        </List.Item>
+        </ListItem>
       </List>
 
       <Text>Root words apply to both nouns and verbs.</Text>
-    </>
-  );
-}
-
-function ParadigmsSection() {
-  return (
-    <>
-      <SectionHeading id="paradigms" level={2}>
-        Paradigms
-      </SectionHeading>
-
-      <Text>
-        On this website, many root words are given with an accompanying{" "}
-        <b>paradigm</b>. This term is used to refer to taking a root word and
-        conjugating it with all of the appropriate pronominals. Different tenses
-        will result in different paradigms.
-      </Text>
-
-      <Text>
-        Consider the root word <b>nuhweʔ</b> which means "to like". In the
-        present tense, one paradigm for this word is the following:
-      </Text>
-
-      <ParadigmTable
-        audioFolder="module01/pronominals/red/C"
-        columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
-        data={dataLikeRedJson}
-      />
-
-      <Text>
-        Something you may have noticed: the spelling of the root word does not
-        exactly line up with the spelling in the table above. Oftentimes, if a
-        root word contains an <Letter>h</Letter> or a <Letter>ʔ</Letter>, those
-        characters may get shifted around or replaced.
-      </Text>
     </>
   );
 }

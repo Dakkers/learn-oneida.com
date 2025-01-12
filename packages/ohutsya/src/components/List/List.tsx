@@ -15,10 +15,12 @@ export function List({ children, ordered = false }: ListProps) {
   );
 }
 
-List.Item = function ListItem({ children }: { children: React.ReactNode }) {
+export function ListItem({ children }: { children: React.ReactNode }) {
   return (
     <li className="ml-6">
       <Text>{children}</Text>
     </li>
   );
-};
+}
+
+List.Item = ListItem;
