@@ -14,11 +14,11 @@ import {
 import { z } from "zod";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { createModule4Data } from "~/data/module04";
-import { Link } from "@ukwehuwehneke/ohutsya";
 import {
   SectionHeading,
   translatePhrase,
 } from "@ukwehuwehneke/language-components";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -120,7 +120,7 @@ export default function PracticeTenseConjugation() {
 
       <Text>
         Use this page to practice conjugating the different tenses for a given
-        verb from <Link href="/learn/module04">module 4</Link>.
+        verb from <LinkWrapper page={4} />.
       </Text>
 
       <Flex align="end" gap={2}>

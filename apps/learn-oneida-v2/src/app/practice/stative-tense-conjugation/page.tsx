@@ -19,7 +19,7 @@ import {
   createModule5VerbsList,
   module5VerbTenseMap,
 } from "~/data/module05";
-import { Link } from "@ukwehuwehneke/ohutsya";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -82,8 +82,7 @@ export default function PracticeTenseConjugation() {
 
       <Text>
         Use this page to practice conjugating the different tenses for a given
-        verb. These words come from <Link href="/learn/module05">module 5</Link>
-        .
+        verb. These words come from <LinkWrapper page={5} />.
       </Text>
 
       <Flex

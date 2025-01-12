@@ -2,7 +2,6 @@ import {
   type BreakdownArray,
   type BreakdownType,
   TextBreakdown,
-  type TextBreakdownSuffix,
 } from "./../TextBreakdown";
 import { PRONOUN_MAP_EN, PRONOUN_MAP_ONEIDA, type Pronoun } from "../../utils";
 import {
@@ -27,7 +26,6 @@ interface BreakdownColOptions {
 interface CreatePastTenseColumnsOptions {
   headerNow?: string;
   headerPast?: string;
-  suffix?: TextBreakdownSuffix;
 }
 
 export type EnglishTranslationPairData = Array<{
@@ -168,11 +166,7 @@ const createPastTenseColumns = (
   {
     accessorKey: "breakdownPast",
     cell: (value: BreakdownArray) => (
-      <TextBreakdown
-        breakdown={value}
-        suffix={opts.suffix}
-        typeFallback={typeFallback}
-      />
+      <TextBreakdown breakdown={value} typeFallback={typeFallback} />
     ),
     header: opts?.headerPast ?? "Used to be",
   },

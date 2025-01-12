@@ -25,8 +25,8 @@ import {
   PRONOUN_MAP_ONEIDA,
   PURPLES_MAP_FULL,
   type Pronoun,
+  type TextBreakdownProps,
   pronouns,
-  pronounsBlue,
   translatePhraseInteractive,
   translatePhraseV2,
 } from "@ukwehuwehneke/language-components";
@@ -34,7 +34,6 @@ import {
   type BreakdownArray,
   type BreakdownType,
   TextBreakdown,
-  type TextBreakdownSuffix,
 } from "@ukwehuwehneke/language-components";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
@@ -61,8 +60,7 @@ export interface ParadigmTableProps {
   bleed?: BleedProps["mx"];
   columnVisibility?: Partial<ColumnVisibility>;
   data: ParadigmTableContextProps["data"];
-  isTesting?: boolean;
-  translationKeys?: Record<string, string>;
+  ignoredBreakdownTypes?: TextBreakdownProps["ignored"];
   legacyTranslationFn?: ParadigmTableContextProps["legacyTranslationFn"];
 }
 
@@ -72,6 +70,7 @@ export function ParadigmTable({
   bleed = 0,
   columnVisibility = {},
   data,
+  ignoredBreakdownTypes,
   legacyTranslationFn,
 }: ParadigmTableProps) {
   const [colVisibility, setColVisibility] = React.useState({
@@ -137,6 +136,7 @@ export function ParadigmTable({
               {rowsToShow.map((row, i) => (
                 <TableRowWrapper
                   audioFolder={data.audioFolder ?? audioFolder}
+                  ignoredBreakdownTypes={ignoredBreakdownTypes}
                   key={i}
                   row={row}
                   typeFallback={data.type}
@@ -153,14 +153,14 @@ export function ParadigmTable({
 
 function TableRowWrapper({
   audioFolder,
+  ignoredBreakdownTypes,
   row,
-  suffix,
   typeFallback,
   whispered = false,
 }: {
   audioFolder?: string;
+  ignoredBreakdownTypes: TextBreakdownProps["ignored"];
   row: Row;
-  suffix?: TextBreakdownSuffix;
   typeFallback?: BreakdownType;
   whispered?: boolean;
 }) {
@@ -212,7 +212,7 @@ function TableRowWrapper({
           {showBreakdown ? (
             <TextBreakdown
               breakdown={row.breakdown}
-              suffix={suffix}
+              ignored={ignoredBreakdownTypes}
               typeFallback={typeFallback}
               whispered={row.whispered ?? whispered ?? false}
             />

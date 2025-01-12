@@ -20,7 +20,7 @@ import {
   module6VerbTenseMap,
 } from "~/data/module06/activeVerbsList";
 import { TableAsForm } from "~/components/practice/TableAsForm";
-import { Link } from "@ukwehuwehneke/ohutsya";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -83,8 +83,7 @@ export default function PracticeTenseConjugation() {
 
       <Text>
         Use this page to practice conjugating the different tenses for a given
-        active verb. These words come from{" "}
-        <Link href="/learn/module06">module 6</Link>.
+        active verb. These words come from <LinkWrapper page={6} />.
       </Text>
 
       <Flex

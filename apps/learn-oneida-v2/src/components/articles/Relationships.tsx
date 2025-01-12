@@ -52,7 +52,7 @@ function MarriedTable({ level = 2 }: ArticleProps) {
     return {
       pronoun,
       breakdown: [{ text: p }, "nyákuʔ"],
-      breakdownPast: [{ text: p }, "nyaku"],
+      breakdownPast: [{ text: p }, "nyaku", ["hné·", "PAST"]],
     };
   });
 
@@ -99,7 +99,7 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
     return {
       ...row,
       breakdown: [...row.breakdown, "ehse"],
-      breakdownPast: [...row.breakdown, "ehs"],
+      breakdownPast: [...row.breakdown, "ehs", ["kwe̲", "PAST"]],
     };
   });
 
@@ -131,7 +131,12 @@ function SeparatedTable({ level = 2 }: ArticleProps) {
     return {
       pronoun,
       breakdown: [["te", "DUAL"], { text: p }, "atekháshyu"],
-      breakdownPast: [["te", "DUAL"], { text: p }, "atekhashyu"],
+      breakdownPast: [
+        ["te", "DUAL"],
+        { text: p },
+        "atekhashyu",
+        ["hné·", "PAST"],
+      ],
     };
   });
 
@@ -148,7 +153,6 @@ function SeparatedTable({ level = 2 }: ArticleProps) {
         columns={createColumns("PB", {
           headerNow: "Separated",
           headerPast: "Reconciled",
-          suffix: "hne",
         }).slice(1)}
         data={rows}
       />
@@ -165,7 +169,7 @@ function EngagedTable({ level = 2 }: ArticleProps) {
     return {
       pronoun,
       breakdown: [{ text: p }, "nyákheʔ"],
-      breakdownPast: [{ text: p }, "nkákhe"],
+      breakdownPast: [{ text: p }, "nkákhe", ["hkwe̲", "PAST"]],
     };
   });
 
@@ -196,7 +200,7 @@ function SingleTable({ level = 2 }: ArticleProps) {
     return {
       pronoun,
       breakdown: [{ text: p }, "atatwʌni·yó"],
-      breakdownPast: [{ text: p }, "atatwʌniyo"],
+      breakdownPast: [{ text: p }, "tatwʌniyo", ["hné·", "PAST"]],
     };
   });
 
