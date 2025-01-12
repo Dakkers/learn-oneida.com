@@ -1,9 +1,10 @@
 "use client";
 
-import { Flex, Link } from "@ukwehuwehneke/ohutsya";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { Link } from "@/components/Link";
 
 export default function About() {
   return (

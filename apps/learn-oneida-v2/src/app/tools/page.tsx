@@ -1,9 +1,10 @@
 "use client";
 
-import { Link, List } from "@ukwehuwehneke/ohutsya";
+import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { Link } from "@/components/Link";
 
 const meta: any = () => {
   return [
