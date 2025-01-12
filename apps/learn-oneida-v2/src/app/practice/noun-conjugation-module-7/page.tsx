@@ -7,12 +7,12 @@ import { Select } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { z } from "zod";
 import { TableAsForm } from "~/components/practice/TableAsForm";
-import { Link } from "@ukwehuwehneke/ohutsya";
 import {
   convertBreakdownToPlainText,
   SectionHeading,
 } from "@ukwehuwehneke/language-components";
 import { createModule7NounsList, getEnglishTranslation } from "@/data/module07";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -84,7 +84,7 @@ export default function PracticeCharacteristicConjugationModule8() {
 
       <Text>
         Use this page to practice a noun&lsquo;s paradigm from{" "}
-        <Link href="/learn/module07">module 7</Link>.
+        <LinkWrapper page={7} />.
       </Text>
 
       <Flex align="end" gap={2}>

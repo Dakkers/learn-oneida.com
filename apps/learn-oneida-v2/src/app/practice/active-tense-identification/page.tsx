@@ -13,10 +13,10 @@ import {
   QuizContainerContext,
   Settings,
 } from "~/components/practice/QuizContainer";
-import { Link } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -124,7 +124,7 @@ export default function PracticeTenseIdentification() {
             <Text>
               Use this page to practice identifying what tense conjugation an
               active verb contains. These words come from{" "}
-              <Link href="/learn/module06">module 6</Link>.
+              <LinkWrapper page={6} />.
             </Text>
 
             <Settings

@@ -160,7 +160,7 @@ function PastTenseIntroduction() {
     },
     {
       en: "I used to like it",
-      breakdown: [["k", "PR"], "nú·wehs", "kwe̲ʔ"],
+      breakdown: [["k", "PR"], "nú·wehs", ["kwe̲ʔ", "PAST"]],
     },
     {
       en: "it likes me",
@@ -168,7 +168,7 @@ function PastTenseIntroduction() {
     },
     {
       en: "it used to like me",
-      breakdown: [["wak", "PB"], "nú·wehs", "kwe̲ʔ"],
+      breakdown: [["wak", "PB"], "nú·wehs", ["kwe̲ʔ", "PAST"]],
     },
     {
       en: "I like you",
@@ -176,7 +176,7 @@ function PastTenseIntroduction() {
     },
     {
       en: "I used to like you",
-      breakdown: [["ku", "PP"], "nú·wehs", "kwe̲ʔ"],
+      breakdown: [["ku", "PP"], "nú·wehs", ["kwe̲ʔ", "PAST"]],
     },
     {
       en: "I love it",
@@ -233,7 +233,7 @@ function PastTenseIntroduction() {
     },
     {
       en: "I used to like myself",
-      breakdown: [["k", "PR"], ["atat", "REFL"], "nú·wehs", "kwe̲ʔ"],
+      breakdown: [["k", "PR"], ["atat", "REFL"], "nú·wehs", ["kwe̲ʔ", "PAST"]],
     },
 
     {
@@ -247,7 +247,7 @@ function PastTenseIntroduction() {
         ["ty", "PR"],
         ["atat", "REFL"],
         "nú·wehs",
-        "kwe̲ʔ",
+        ["kwe̲ʔ", "PAST"],
       ],
     },
 

@@ -21,7 +21,7 @@ import {
   QuizContainerContext,
   Settings,
 } from "~/components/practice/QuizContainer";
-import { Link } from "@ukwehuwehneke/ohutsya";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -130,8 +130,7 @@ export default function PracticeTenseIdentification() {
           <>
             <Text>
               Use this page to practice identifying what tense conjugation a
-              word contains. These words come from{" "}
-              <Link href="/learn/module05">module 5</Link>.
+              word contains. These words come from <LinkWrapper page={5} />.
             </Text>
 
             <Settings

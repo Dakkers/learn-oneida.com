@@ -265,7 +265,7 @@ function NameSection() {
 
       <Text>
         The root word, <Letter>-yat-</Letter>, means "to be named". It is a
-        C-stem (becuase the first letter is a consonant) that uses purple
+        C-stem (because the first letter is a consonant) that uses purple
         pronominals.
       </Text>
 
@@ -306,7 +306,7 @@ function KnowSection() {
       </SectionHeading>
       <Text>
         The root word, <Letter>-anuht(e)-</Letter>, means "to know". It is an
-        A-stem (becuase the first letter is "A") that uses blue pronominals.
+        A-stem (because the first letter is "A") that uses blue pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{

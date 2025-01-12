@@ -26,7 +26,6 @@ import {
 } from "@ukwehuwehneke/ohutsya";
 import {
   PRONOUN_MAP_EN,
-  type Pronoun,
   arrayify,
   pronouns,
 } from "@ukwehuwehneke/language-components";
@@ -406,6 +405,7 @@ function AccordionWrapper({
             <ParadigmTable
               columnVisibility={{ pronounEnglish: false, pronounOneida: false }}
               data={data}
+              ignoredBreakdownTypes={["HAB"]}
             />
           ) : (
             <Text>
