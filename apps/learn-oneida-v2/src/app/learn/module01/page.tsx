@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  Divider,
-  Notice,
-  Text,
-} from "@ukwehuwehneke/ohutsya";
+import { Divider, Notice, Text } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
 import { singlePronouns } from "@ukwehuwehneke/language-components";
@@ -117,7 +113,7 @@ export default function LearnModule01() {
       <Text>
         This module assumes a knowledge of the terms "pronominal", "root word",
         "stem", and "paradigm", all of which are discussed on the{" "}
-        <LinkWrapper page='intro' />
+        <LinkWrapper page="intro" />
       </Text>
 
       <PronominalsArticle level={2} />

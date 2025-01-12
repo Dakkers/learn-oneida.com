@@ -6,7 +6,7 @@ import {
   Notice,
   Text,
 } from "@ukwehuwehneke/ohutsya";
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
 import { TableOfContents as TOC } from "~/components/TableOfContents";

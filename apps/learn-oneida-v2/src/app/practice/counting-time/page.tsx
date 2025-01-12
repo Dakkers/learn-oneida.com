@@ -60,7 +60,7 @@ export default function PracticeCountingTime() {
       <Text>
         Here you can practice the terminology on the{" "}
         <Link href="/articles/counting-time">Counting Time article</Link> which
-        is part of <LinkWrapper page={4}/>.
+        is part of <LinkWrapper page={4} />.
       </Text>
 
       {hasStarted ? (

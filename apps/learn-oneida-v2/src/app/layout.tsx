@@ -3,9 +3,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./../learn-oneida.css";
-import {
-  Text,
-} from "@ukwehuwehneke/ohutsya";
+import { Text } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
 import { cn } from "@ukwehuwehneke/ohutsya";
 import { Navbar } from "@/components/Navbar";
@@ -29,18 +27,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={notoSansFont.className}>
-          <TitleBar />
-          <div className="bg-gray-100">
-            <Navbar />
-          </div>
-          <div
-            className={cn(
-              "mx-auto flex flex-col gap-4 p-4 md:p-8",
-              useLargeWidth ? "max-w-5xl" : "max-w-2xl",
-            )}
-          >
-            {children}
-          </div>
+        <TitleBar />
+        <div className="bg-gray-100">
+          <Navbar />
+        </div>
+        <div
+          className={cn(
+            "mx-auto flex flex-col gap-4 p-4 md:p-8",
+            useLargeWidth ? "max-w-5xl" : "max-w-2xl",
+          )}
+        >
+          {children}
+        </div>
       </body>
     </html>
   );
