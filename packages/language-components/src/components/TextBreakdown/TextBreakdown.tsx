@@ -40,21 +40,10 @@ export type BreakdownArray = Array<
     }
 >;
 
-export type TextBreakdownSuffix =
-  | "hne"
-  | "kwe"
-  | "hkwe"
-  | "hake"
-  | "heke"
-  | "hak"
-  | "ake"
-  | "áke";
-
 export interface TextBreakdownProps {
   as?: "span" | "div";
   breakdown: BreakdownArray;
-  prefix?: BreakdownType;
-  suffix?: TextBreakdownSuffix;
+  ignored?: BreakdownType[];
   typeFallback?: BreakdownType;
   whispered?: boolean;
   wrap?: "nowrap";
@@ -63,15 +52,12 @@ export interface TextBreakdownProps {
 export function TextBreakdown({
   as: Tag = "span",
   breakdown: _breakdown,
-  prefix,
-  suffix,
+  ignored = [],
   typeFallback,
   whispered: _whispered = false,
   wrap,
 }: TextBreakdownProps) {
-  const breakdown = getPrefixArr(prefix)
-    .concat(_breakdown)
-    .concat(getSuffixArr(suffix));
+  const breakdown = _breakdown;
 
   return (
     <Tag>
@@ -81,25 +67,8 @@ export function TextBreakdown({
         const whispered = isLastPart && !!_whispered;
 
         if (typeof part === "string") {
-          const isPastTense =
-            ([
-              "kweʔ",
-              "hkweʔ",
-              "hné·",
-              "hneʔ",
-              "kwe̲",
-              "kwe̲ʔ",
-              "hkwe̲",
-              "hkwe̲ʔ",
-            ].includes(part) &&
-              isLastPart) ||
-            (["tshi", "tshaʔ"].includes(part) && i === 0);
           return (
-            <InnerText
-              {...innerTextProps}
-              key={i}
-              type={isPastTense ? "PAST" : undefined}
-            >
+            <InnerText {...innerTextProps} key={i}>
               {whispered ? whisperizeWord(part) : part}
             </InnerText>
           );
@@ -110,8 +79,13 @@ export function TextBreakdown({
 
         const hasLeadingWhitespace = text.trimStart() !== text;
         const hasTrailingWhitespace = text.trimStart() !== text;
+        const _type = type ?? typeFallback;
         return (
-          <InnerText {...innerTextProps} key={i} type={type ?? typeFallback}>
+          <InnerText
+            {...innerTextProps}
+            key={i}
+            type={_type && ignored.includes(_type) ? undefined : _type}
+          >
             {hasLeadingWhitespace ? "&nbsp" : ""}
             {whispered ? whisperizeWord(text) : text}
             {hasTrailingWhitespace ? "&nbsp" : ""}
@@ -176,59 +150,8 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   SRFL: "text-green-700",
 } as const;
 
-function getSuffixArr(suffix: TextBreakdownSuffix | undefined) {
-  if (!suffix) {
-    return [];
-  }
-  const text =
-    suffix === "hne"
-      ? "hné·"
-      : suffix === "kwe"
-        ? "kweʔ"
-        : suffix === "hkwe"
-          ? "hkweʔ"
-          : suffix === "hake"
-            ? "hakeʔ"
-            : suffix === "heke"
-              ? "hekeʔ"
-              : suffix === "hak"
-                ? "hakʔ"
-                : suffix === "ake"
-                  ? "akeʔ"
-                  : suffix === "áke"
-                    ? "ákeʔ"
-                    : suffix;
-
-  if (!text) {
-    return [];
-  }
-  return [{ text, type: "PAST" }] as const;
-}
-
-function getPrefixArr(prefix: BreakdownType | undefined): BreakdownArray {
-  if (!prefix) {
-    return [];
-  } else if (prefix === "RECP") {
-    return [{ text: "te", type: "RECP" }];
-  } else if (prefix === "FUT") {
-    return [{ text: "ʌ", type: "FUT" }];
-  } else if (prefix === "IFUT") {
-    return [{ text: "a", type: "IFUT" }];
-  } else {
-    return [];
-  }
-}
-
-export function convertBreakdownToPlainText(
-  breakdown: BreakdownArray,
-  options: {
-    prefix?: BreakdownType;
-    suffix?: TextBreakdownSuffix;
-  } = {},
-) {
-  const breakdownDuplicate = getPrefixArr(options.prefix)
-    .concat(breakdown)
-    .concat(getSuffixArr(options.suffix));
+export function convertBreakdownToPlainText(breakdown: BreakdownArray) {
+  const breakdownDuplicate = breakdown;
 
   return breakdownDuplicate
     .map((part) =>

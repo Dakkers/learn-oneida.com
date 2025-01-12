@@ -83,8 +83,7 @@ export default function PracticeTenseConjugation() {
 
       <Text>
         Use this page to practice conjugating the different tenses for a given
-        active verb. These words come from{" "}
-        <LinkWrapper page={6}/>.
+        active verb. These words come from <LinkWrapper page={6} />.
       </Text>
 
       <Flex

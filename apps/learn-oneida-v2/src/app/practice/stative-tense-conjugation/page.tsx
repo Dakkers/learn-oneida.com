@@ -82,8 +82,7 @@ export default function PracticeTenseConjugation() {
 
       <Text>
         Use this page to practice conjugating the different tenses for a given
-        verb. These words come from <LinkWrapper page={5}/>.
-        .
+        verb. These words come from <LinkWrapper page={5} />.
       </Text>
 
       <Flex

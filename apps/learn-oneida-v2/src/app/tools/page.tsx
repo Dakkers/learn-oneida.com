@@ -1,6 +1,6 @@
 "use client";
 
-import { List } from "@ukwehuwehneke/ohutsya";
+import { Link, List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
 import { SectionHeading } from "@ukwehuwehneke/language-components";
@@ -37,19 +37,17 @@ export default function Tools() {
   ];
 
   return (
-    <div>
+    <>
       <SectionHeading level={1}>Tools</SectionHeading>
 
       <Text>Check out some tools:</Text>
       <List>
         {tools.map((t, i) => (
           <List.Item key={i}>
-            <a className="underline text-blue-600" href={`/tools${t.href}`}>
-              {t.label}
-            </a>
+            <Link href={`/tools${t.href}`}>{t.label}</Link>
           </List.Item>
         ))}
       </List>
-    </div>
+    </>
   );
 }

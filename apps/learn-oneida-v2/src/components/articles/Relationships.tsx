@@ -11,6 +11,7 @@ import {
   type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import type { ArticleProps } from "./utils";
+import { createParadigmData } from "../ParadigmTable";
 
 export function RelationshipsArticle({ level = 1 }: ArticleProps) {
   return (
@@ -52,7 +53,7 @@ function MarriedTable({ level = 2 }: ArticleProps) {
     return {
       pronoun,
       breakdown: [{ text: p }, "nyákuʔ"],
-      breakdownPast: [{ text: p }, "nyaku"],
+      breakdownPast: [{ text: p }, "nyaku", ["hné·", "PAST"]],
     };
   });
 
@@ -99,7 +100,7 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
     return {
       ...row,
       breakdown: [...row.breakdown, "ehse"],
-      breakdownPast: [...row.breakdown, "ehs"],
+      breakdownPast: [...row.breakdown, "ehs", ["kwe̲", "PAST"]],
     };
   });
 
@@ -131,7 +132,12 @@ function SeparatedTable({ level = 2 }: ArticleProps) {
     return {
       pronoun,
       breakdown: [["te", "DUAL"], { text: p }, "atekháshyu"],
-      breakdownPast: [["te", "DUAL"], { text: p }, "atekhashyu"],
+      breakdownPast: [
+        ["te", "DUAL"],
+        { text: p },
+        "atekhashyu",
+        ["hné·", "PAST"],
+      ],
     };
   });
 
@@ -148,7 +154,6 @@ function SeparatedTable({ level = 2 }: ArticleProps) {
         columns={createColumns("PB", {
           headerNow: "Separated",
           headerPast: "Reconciled",
-          suffix: "hne",
         }).slice(1)}
         data={rows}
       />
@@ -165,7 +170,7 @@ function EngagedTable({ level = 2 }: ArticleProps) {
     return {
       pronoun,
       breakdown: [{ text: p }, "nyákheʔ"],
-      breakdownPast: [{ text: p }, "nkákhe"],
+      breakdownPast: [{ text: p }, "nkákhe", ["hkwe̲", "PAST"]],
     };
   });
 
@@ -188,17 +193,27 @@ function EngagedTable({ level = 2 }: ArticleProps) {
 
 function SingleTable({ level = 2 }: ArticleProps) {
   const rows = [
-    ["i", "k"],
-    ["u", "s"],
-    ["m", "l"],
-    ["f", "yu"],
-  ].map(([pronoun, p]) => {
-    return {
-      pronoun,
-      breakdown: [{ text: p }, "atatwʌni·yó"],
-      breakdownPast: [{ text: p }, "atatwʌniyo"],
-    };
-  });
+    {
+      breakdown: [["k"], "atatwʌni·yó"],
+      breakdownPast: [["k"], "atatwʌniyo", ["hné·", "PAST"]],
+      pronoun: "i",
+    },
+    {
+      breakdown: [["s"], "atatwʌni·yó"],
+      breakdownPast: [["s"], "atatwʌniyo", ["hné·", "PAST"]],
+      pronoun: "u",
+    },
+    {
+      breakdown: [["l"], "atatwʌni·yó"],
+      breakdownPast: [["l"], "atatwʌniyo", ["hné·", "PAST"]],
+      pronoun: "m",
+    },
+    {
+      breakdown: [["yu"], "tatwʌni·yó"],
+      breakdownPast: [["yu"], "tatwʌniyo", ["hné·", "PAST"]],
+      pronoun: "f",
+    },
+  ];
 
   return (
     <>

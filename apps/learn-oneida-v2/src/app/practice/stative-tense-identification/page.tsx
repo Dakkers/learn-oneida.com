@@ -130,8 +130,7 @@ export default function PracticeTenseIdentification() {
           <>
             <Text>
               Use this page to practice identifying what tense conjugation a
-              word contains. These words come from{" "}
-              <LinkWrapper page={5} />.
+              word contains. These words come from <LinkWrapper page={5} />.
             </Text>
 
             <Settings

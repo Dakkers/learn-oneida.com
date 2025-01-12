@@ -84,7 +84,7 @@ export default function PracticeCharacteristicConjugationModule8() {
 
       <Text>
         Use this page to practice a noun&lsquo;s paradigm from{" "}
-        <LinkWrapper page={7}/>.
+        <LinkWrapper page={7} />.
       </Text>
 
       <Flex align="end" gap={2}>
