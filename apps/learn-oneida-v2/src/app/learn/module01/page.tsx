@@ -22,6 +22,7 @@ import { GlottalStopArticle } from "~/components/articles/GlottalStop";
 import { LetterHArticle } from "~/components/articles/LetterH";
 import { PrepausalEndingsArticle } from "@/components/articles/PrepausalEndings";
 import { getDialogueModule01 } from "~/data/module01";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -112,7 +113,7 @@ export default function LearnModule01() {
       <Text>
         This module assumes a knowledge of the terms "pronominal", "root word",
         "stem", and "paradigm", all of which are discussed on the{" "}
-        <Link href="/learn/introduction">introduction page</Link>.
+        <LinkWrapper page="intro" />.
       </Text>
 
       <PronominalsArticle level={2} />

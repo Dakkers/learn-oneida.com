@@ -20,6 +20,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { ParadigmTable } from "@/components/ParadigmTable";
 import dataLikeRedJson from "~/data/nuwehse-red";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -170,7 +171,7 @@ export default function LearnIntroduction() {
       </List>
 
       <Text>
-        Click <Link href="/learn/module01">here</Link> to continue to module 1!
+        Click <LinkWrapper page={1}>here</LinkWrapper> to continue to module 1!
       </Text>
     </>
   );
