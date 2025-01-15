@@ -191,8 +191,14 @@ export function getThingsThatAreTheSameExamples() {
       "tshaʔteyót tsiʔ teyakwahsʌná·se·le̲ʔ",
     ],
     ["You all have the same last name", "tshaʔteyót tsiʔ tehswahsʌná·se·le̲ʔ"],
-    ["They Ms have the same last name", "tshaʔteyót tsiʔ tehatihsʌná·se·le̲ʔ"],
-    ["They Fs have the same last name", "tshaʔteyót tsiʔ tekutihsʌná·se·le̲ʔ"],
+    [
+      "They (males) have the same last name",
+      "tshaʔteyót tsiʔ tehatihsʌná·se·le̲ʔ",
+    ],
+    [
+      "They (females) have the same last name",
+      "tshaʔteyót tsiʔ tekutihsʌná·se·le̲ʔ",
+    ],
   ].map(([en, translation], i) => ({
     audioFile: `module02/things_that_are_the_same/${i + 1}.mp3`,
     en: arrayify(en),

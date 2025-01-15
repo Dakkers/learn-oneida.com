@@ -439,6 +439,7 @@ function Player({
       <WavesurferPlayer
         height={100}
         onReady={onReady}
+        onClick={() => wavesurferRef?.current.value?.play()}
         onPlay={() => onPlay(true)}
         onPause={() => onPlay(false)}
         onFinish={() => setHasFinishedPlayback(true)}
