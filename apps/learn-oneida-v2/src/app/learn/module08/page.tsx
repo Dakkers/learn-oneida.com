@@ -8,7 +8,6 @@ import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
-import { createModule7NounsList } from "@/data/module07";
 import { createModule8CharacteristicsList } from "@/data/module08";
 
 const meta: any = () => {
@@ -18,8 +17,8 @@ const meta: any = () => {
   ];
 };
 
-export default function LearnModule07() {
-  const list = createModule7NounsList();
+export default function LearnModule08() {
+  const list = createModule8CharacteristicsList();
   return (
     <>
       <SectionHeading level={1}>Module 8</SectionHeading>
