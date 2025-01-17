@@ -5,46 +5,46 @@ const data = createInteractiveParadigmData({
   type: "PP",
   phrases: [
     {
-      breakdown: [["kuy"], "unyʌ·ni’he’"],
+      breakdown: [["kuy"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["liy"], "unyʌ·ni’he’"],
+      breakdown: [["liy"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["khey"], "unyʌ·ni’he’"],
+      breakdown: [["khey"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["sk"], "unyʌ·ni’he’"],
+      breakdown: [["sk"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["h", "RPL"], ["etsh"], "unyʌ·ni’he’"],
+      breakdown: [["h", "RPL"], ["etsh"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["shey"], "unyʌ·ni’he’"],
+      breakdown: [["shey"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["lakw"], "unyʌ·ni’he’"],
+      breakdown: [["lak"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["h", "RPL"], ["yay"], "unyʌ·ni’he’"],
+      breakdown: [["h", "RPL"], ["yay"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["la"], "unyʌ·ni’he’"],
+      breakdown: [["la"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["shaka"], "unyʌ·ni’he’"],
+      breakdown: [["shaka"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["yuk"], "unyʌ·ni’he’"],
+      breakdown: [["yuk"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["yesay"], "unyʌ·ni’he’"],
+      breakdown: [["yesay"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["luway"], "unyʌ·ni’he’"],
+      breakdown: [["luway"], "unyʌ·níheʔ"],
     },
     {
-      breakdown: [["yutat"], "unyʌ·ni’he’"],
+      breakdown: [["yutat"], "unyʌ·níheʔ"],
     },
   ],
 });
