@@ -26,7 +26,7 @@ const data = createInteractiveParadigmData({
       breakdown: [["lak"], "ihnúkseʔ"],
     },
     {
-      breakdown: [["h", "RPL"], ["yʌ"], "ihnúkseʔ"],
+      breakdown: [["h", "RPL"], ["yʌ"], "hnúkseʔ"],
     },
     {
       breakdown: [["lo"], "hnúkseʔ"],
