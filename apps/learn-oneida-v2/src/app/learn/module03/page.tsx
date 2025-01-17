@@ -43,7 +43,7 @@ export default function LearnModule03() {
       <SectionHeading level={1}>Module 3</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
+          <b>Note:</b> This page is still under construction!
         </Notice>
       </Box>
 

@@ -44,9 +44,11 @@ import dataHardToPlease from "~/data/ʌtole";
 import dataPulling from "~/data/module01/pullingOut-HAB";
 import dataPulledOut from "~/data/module01/pullingOut-PFV";
 import dataLikePurple from "~/data/module01/like-purple";
-import dataForbid from "~/data/module01/forbid-PRS";
+import dataWatchSomeone from "~/data/module01/watchSomeone-PRS";
 import dataCallDown from "~/data/module01/callDown-HAB";
-import dataGoToGet from "~/data/module01/goToGet-HAB";
+import dataPity from "~/data/module01/pity-PRS";
+import dataRememberSomeone from "~/data/module01/rememberSomeone-PRS";
+import dataMakeSomethingForSomeone from "~/data/module01/makeSomethingForSomeone-PRS";
 import dataHouse from "~/data/module01/house-NOUN";
 import dataHat from "~/data/module01/hat-NOUN";
 import dataHeart from "~/data/module01/heart-NOUN";
@@ -169,11 +171,11 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       <AccordionWrapper
         items={[
           [dataLikePurple, "-nuhweʔ-"],
-          [dataForbid, "-ahlist-"],
+          [dataWatchSomeone, "-atlolok-"],
+          [dataRememberSomeone, "-ehyahlaʔ-"],
+          [dataPity, "-itʌl-"],
           [null, "-???-"],
-          [dataGoToGet, "-ihnuks-"],
-          [null, "-???-"],
-          [null, "-???-"],
+          [dataMakeSomethingForSomeone, "-unyʌni-"],
           [dataCallDown, "-ʌhni-"],
         ]}
       />
@@ -454,9 +456,15 @@ function ExceptionsSection({ level }: { level: SectionHeadingProps["level"] }) {
       <SectionHeading level={sublevel}>Exception 3</SectionHeading>
       <Text>
         The letter <Letter>e</Letter> only appears on root words that begin with
-        a double consonant or a glottal stop.
+        a double consonant or a glottal stop. Examples:
       </Text>
-      <Notice intent="warning">Examples are needed for this exception.</Notice>
+      <List>
+        <List.Item>keshwʌ·neʔ</List.Item>
+        <List.Item>keʔnekʌhtalá·keʔ</List.Item>
+        <List.Item>kenyalá·keʔ</List.Item>
+        <List.Item>wakeste·líhst</List.Item>
+        <List.Item>wakeʔnikuhlowanʌ̲́</List.Item>
+      </List>
 
       <SectionHeading level={sublevel}>Exception 4</SectionHeading>
       <Text>

@@ -135,7 +135,7 @@ export default function LearnModule06() {
 
       <Box py={4}>
         <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
+          <b>Note:</b> This page is still under construction!
         </Notice>
       </Box>
 
