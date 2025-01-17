@@ -454,9 +454,15 @@ function ExceptionsSection({ level }: { level: SectionHeadingProps["level"] }) {
       <SectionHeading level={sublevel}>Exception 3</SectionHeading>
       <Text>
         The letter <Letter>e</Letter> only appears on root words that begin with
-        a double consonant or a glottal stop.
+        a double consonant or a glottal stop. Examples:
       </Text>
-      <Notice intent="warning">Examples are needed for this exception.</Notice>
+      <List>
+        <List.Item>keshwʌ·neʔ</List.Item>
+        <List.Item>keʔnekʌhtalá·keʔ</List.Item>
+        <List.Item>kenyalá·keʔ</List.Item>
+        <List.Item>wakeste·líhst</List.Item>
+        <List.Item>wakeʔnikuhlowanʌ̲́</List.Item>
+      </List>
 
       <SectionHeading level={sublevel}>Exception 4</SectionHeading>
       <Text>

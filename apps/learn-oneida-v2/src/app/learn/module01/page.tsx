@@ -65,6 +65,10 @@ export default function LearnModule01() {
                 label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Possessive Pronominals (Light Blue)"
                 value="possessive"
               />
+              <TOC.Item
+                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exceptions"
+                value="exceptions"
+              />
             </TOC.Section>
           </TOC.Section>
         </TOC.Item>

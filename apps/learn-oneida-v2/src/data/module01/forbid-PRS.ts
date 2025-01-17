@@ -32,10 +32,10 @@ const data = createInteractiveParadigmData({
       breakdown: [["h", "RPL"], ["y"], "ahlístaʔ"],
     },
     {
-      breakdown: [["lo"], "ahlístaʔ"],
+      breakdown: [["lo"], "hlístaʔ"],
     },
     {
-      breakdown: [["shako"], "ahlístaʔ"],
+      breakdown: [["shako"], "hlístaʔ"],
     },
     {
       breakdown: [["yukw"], "ahlístaʔ"],

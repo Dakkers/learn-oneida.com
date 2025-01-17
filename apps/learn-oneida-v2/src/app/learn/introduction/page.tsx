@@ -32,7 +32,7 @@ export default function LearnIntroduction() {
       <SectionHeading level={1}>Introduction</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
+          <b>Note:</b> This page is still under construction!
         </Notice>
       </Box>
 
@@ -54,8 +54,8 @@ export default function LearnIntroduction() {
       <Text>
         Shekolih! (Hello!) Welcome to learn-oneida.com, a free website that will
         help you learn the Oneida language. Oneida is a Haudenosaunee language,
-        which is part of the Iroquian language family. Like most ukwehuwehnéke
-        (native languages), it is an immensely sophisticated language. This
+        which is part of the Iroquian language family. Like most Ukwehuwé
+        (native) languages, it is an immensely sophisticated language. This
         website will not dive too deep into the linguistics of Oneida at this
         time, but it is worth knowing that words are much longer than in English
         and comprised of many distinct pieces due to Oneida's polysynthetic
