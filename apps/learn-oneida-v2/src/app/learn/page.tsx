@@ -24,7 +24,7 @@ export default function Learn() {
         {modules.map((m) => (
           <List.Item key={m}>
             <LinkWrapper page={m}>
-              {m == "intro" ? "Introduction" : `Module ${m}`}
+              {m === "intro" ? "Introduction" : `Module ${m}`}
             </LinkWrapper>
           </List.Item>
         ))}
