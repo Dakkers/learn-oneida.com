@@ -279,8 +279,8 @@ function OrthographySection() {
 
       <Text>
         There are many other sounds, all of which you can (and should!) practice
-        using the <Link href="/practice/soundchart">sound chart</Link>. Being
-        familiar with these sounds is the first step to learning Oneida.
+        using the <LinkWrapper page="soundchart" />. Being familiar with these
+        sounds is the first step to learning Oneida.
       </Text>
     </>
   );

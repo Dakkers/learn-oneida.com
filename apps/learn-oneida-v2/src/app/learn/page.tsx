@@ -3,6 +3,7 @@ import { Flex } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { LinkWrapper } from "@/components/LinkWrapper";
 
 const meta: any = () => {
   return [
@@ -12,7 +13,7 @@ const meta: any = () => {
 };
 
 export default function Learn() {
-  const modules = [1, 2, 3, 4, 5, 6, 7];
+  const modules = ["intro", 1, 2, 3, 4, 5, 6] as const;
 
   return (
     <Flex direction="column" gap={4}>
@@ -22,12 +23,9 @@ export default function Learn() {
       <List>
         {modules.map((m) => (
           <List.Item key={m}>
-            <a
-              className="underline text-blue-600"
-              href={`/learn/module${m.toString().padStart(2, "0")}`}
-            >
-              Module {m}
-            </a>
+            <LinkWrapper page={m}>
+              {m == "intro" ? "Introduction" : `Module ${m}`}
+            </LinkWrapper>
           </List.Item>
         ))}
       </List>
