@@ -100,7 +100,7 @@ function DatumTable({ data }: { data: BodyPartNounData[] }) {
             return (
               <Flex direction="column" gap={4}>
                 {onNoun.map((obj) => (
-                  <Flex direction="column" gap={1}>
+                  <Flex direction="column" gap={0}>
                     <TextBreakdown
                       breakdown={obj.one}
                       typeFallback="PR"
