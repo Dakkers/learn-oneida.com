@@ -58,8 +58,8 @@ export default function LearnModule01() {
                 value="objective"
               />
               <TOC.Item
-                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Person-to-Person Pronominals (Purple)"
-                value="person-to-person"
+                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interactive Pronominals (Purple)"
+                value="interactive"
               />
               <TOC.Item
                 label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Possessive Pronominals (Light Blue)"
