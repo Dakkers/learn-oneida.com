@@ -1,4 +1,4 @@
-import type { PronominalRulesPurple } from "./types";
+import type { PronominalRulesInteractive } from "./types";
 
 const data = {
   i_u: {
@@ -12,9 +12,24 @@ const data = {
     ],
   },
   i_m: {
-    default: ["liy"],
-    c: ["li"],
-    i: ["l"],
+    default: [
+      {
+        excp: "2" as const,
+        text: "liy",
+      },
+    ],
+    c: [
+      {
+        excp: "2" as const,
+        text: "li",
+      },
+    ],
+    i: [
+      {
+        excp: "2" as const,
+        text: "l",
+      },
+    ],
   },
   i_f: {
     default: ["khey"],
@@ -48,7 +63,7 @@ const data = {
     c: [
       "sk",
       {
-        excp: "3" as const,
+        excp: "4" as const,
         text: "ske",
       },
     ],
@@ -57,17 +72,17 @@ const data = {
   u_m: {
     default: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "etsh"],
       },
     ],
     c: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "etsh"],
       },
       {
-        excp: ["2", "3"] as const,
+        excp: ["3", "4"] as const,
         breakdown: [["h", "RPL"], "etshe"],
       },
     ],
@@ -93,7 +108,7 @@ const data = {
     ],
     o: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: ["sky"],
       },
     ],
@@ -104,7 +119,7 @@ const data = {
     c: [
       "lak",
       {
-        excp: "3" as const,
+        excp: "4" as const,
         text: "lake",
       },
     ],
@@ -114,25 +129,25 @@ const data = {
   m_u: {
     default: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "yay"],
       },
     ],
     c: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "ya"],
       },
     ],
     a: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "y"],
       },
     ],
     i: [
       {
-        excp: ["1", "2"] as const,
+        excp: ["1", "3"] as const,
         breakdown: [["h", "RPL"], "y", ["ʌ", "OP"]],
       },
     ],
@@ -140,13 +155,28 @@ const data = {
   m_m: {
     default: [
       {
-        excp: "1" as const,
+        excp: ["1", "2"] as const,
         breakdown: ["l", ["o", "OP"]],
       },
     ],
-    c: ["lo"],
-    e: ["law"],
-    o: ["la"],
+    c: [
+      {
+        excp: "2" as const,
+        text: "lo",
+      },
+    ],
+    e: [
+      {
+        excp: "2" as const,
+        text: "law",
+      },
+    ],
+    o: [
+      {
+        excp: "2" as const,
+        text: "la",
+      },
+    ],
   },
   m_f: {
     default: [
@@ -181,7 +211,7 @@ const data = {
     c: [
       "yuk",
       {
-        excp: "3" as const,
+        excp: "4" as const,
         text: "yuke",
       },
     ],
@@ -215,7 +245,7 @@ const data = {
     c: [
       "yutat",
       {
-        excp: "3" as const,
+        excp: "4" as const,
         text: "yutate",
       },
     ],
@@ -235,19 +265,19 @@ const data = {
   uni_m: {
     default: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "ethn"],
       },
     ],
     c: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "ethni"],
       },
     ],
     a: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "ety"],
       },
     ],
@@ -277,19 +307,19 @@ const data = {
   u2_m: {
     default: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "etsn"],
       },
     ],
     c: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "etsni"],
       },
     ],
     a: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "etsy"],
       },
     ],
@@ -298,25 +328,25 @@ const data = {
   us_m: {
     default: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "ethw"],
       },
     ],
     c: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "ethwa"],
       },
     ],
     i: [
       {
-        excp: ["1", "2"] as const,
+        excp: ["1", "3"] as const,
         breakdown: [["h", "RPL"], "ethw", ["ʌ", "OP"]],
       },
     ],
     o: [
       {
-        excp: "2" as const,
+        excp: "3" as const,
         breakdown: [["h", "RPL"], "ety"],
       },
     ],
@@ -370,11 +400,24 @@ const data = {
   },
 
   they_ms: {
-    default: ["luwat"],
-    c: ["luwati"],
-    a: ["luwʌn"],
-    e: ["luwʌn"],
-    o: ["luwʌn"],
+    default: [
+      {
+        excp: "2" as const,
+        text: "luwʌn",
+      },
+    ],
+    c: [
+      {
+        excp: "2" as const,
+        text: "luwati",
+      },
+    ],
+    i: [
+      {
+        excp: "2" as const,
+        text: "luwat",
+      },
+    ],
   },
   they_fs: {
     default: ["kuwat"],
@@ -400,7 +443,7 @@ const data = {
     c: [
       "tak",
       {
-        excp: "3" as const,
+        excp: "4" as const,
         text: "take",
       },
     ],
@@ -424,7 +467,7 @@ const data = {
   },
 };
 
-const fullData: PronominalRulesPurple = {
+const fullData: PronominalRulesInteractive = {
   ...data,
   soni_u: data.i_u2,
   soni_u2: data.i_u2,
