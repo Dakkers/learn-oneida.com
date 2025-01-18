@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} defecated",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["waʔ", "DEF"], ["k"], "aní·tayʌʔ"],

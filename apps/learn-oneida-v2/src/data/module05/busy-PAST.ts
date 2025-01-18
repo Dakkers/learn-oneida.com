@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be busy",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["te", "DUAL"], ["wake"], "wyʌnhalaʔú·", ["ne·", "PAST"]],

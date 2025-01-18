@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} wake up",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: ["i", ["k"], "yehseʔ"],

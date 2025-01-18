@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be grieving",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wake"], "ʔnikuhlaksʌʔ", ["hné·", "PAST"]],

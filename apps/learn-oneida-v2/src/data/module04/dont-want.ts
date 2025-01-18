@@ -7,7 +7,7 @@ export default createParadigmData(
     translation: "{{pronoun}} don't want",
     translationFn: (pronoun) =>
       `{{pronoun}} ${["m", "f", "it"].includes(pronoun) ? "doesn't" : "don't"} want`,
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: ["yáh té·", ["k"], "elheʔ"],

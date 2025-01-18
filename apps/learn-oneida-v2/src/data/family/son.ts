@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/son",
     translation: "{{pronounPossessive}} son",
-    type: "PP",
+    type: "PI",
     categories: ["kinship"],
     phrases: [
       {

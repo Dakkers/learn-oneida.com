@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} will be VERB",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["ʌ", "FUT"], ["wak"], "atatewyʌnʌtaʔú", ["hakeʔ", "FUT"]],

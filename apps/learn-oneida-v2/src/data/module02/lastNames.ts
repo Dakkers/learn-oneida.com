@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/last_names",
     translation: "{{pronounPossessive}} last name",
-    type: "PR",
+    type: "PS",
     phrases: [
       { breakdown: [["te", "DUAL"], ["k"], "hsʌná·se·le̲ʔ"] },
       { breakdown: [["te", "DUAL"], ["ts"], "ʌná·se·le̲ʔ"] },

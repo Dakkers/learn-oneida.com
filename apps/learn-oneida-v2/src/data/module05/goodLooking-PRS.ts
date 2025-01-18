@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} good-looking",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "nikʌhtlúha"],

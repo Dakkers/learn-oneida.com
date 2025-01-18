@@ -83,7 +83,7 @@ function DatumTable({ datum }: { datum: any }) {
       columns={[
         TableWrapper.englishColumn,
         // @ts-expect-error TODO - TableWrapper/Table generics
-        TableWrapper.createTextBreakdownColumn("PB"),
+        TableWrapper.createTextBreakdownColumn("PO"),
       ]}
       data={[
         ["it is...", datum.verb],

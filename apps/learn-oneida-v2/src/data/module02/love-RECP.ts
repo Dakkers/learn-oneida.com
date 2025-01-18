@@ -5,7 +5,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/love_recp",
     translation: "{{pronoun}} love each other",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["te", "REFL"], ["ty"], ["atat", "REFL"], "nolúkhwaʔ"],

@@ -9,19 +9,19 @@ const meDual = {
 const maleNonSingular = {
   default: [
     {
-      excp: "2",
+      excp: "2" as const,
       text: "lon",
     },
   ],
   c: [
     {
-      excp: "2",
+      excp: "2" as const,
       text: "loti",
     },
   ],
   i: [
     {
-      excp: "2",
+      excp: "2" as const,
       text: "lot",
     },
   ],

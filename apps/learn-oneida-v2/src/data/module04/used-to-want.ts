@@ -5,7 +5,7 @@ export default createParadigmData(
   {
     audioFolder: "module04/used_to_want",
     translation: "{{pronoun}} used to want",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "élh", ["a", "JOIN"], ["hkweʔ", "PAST"]],

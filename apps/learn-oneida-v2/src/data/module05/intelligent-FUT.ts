@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} will be intelligent",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["ʌ", "FUT"], ["wake"], "ʔnikuhlowanʌ́", ["hakeʔ", "FUT"]],

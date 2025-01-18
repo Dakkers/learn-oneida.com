@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might bathe",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["a", "IFUT"], ["k"], "atyaʔtóhaleʔ"],

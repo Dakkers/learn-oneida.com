@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be married",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wake"], "nyaku", ["hné·", "PAST"]],

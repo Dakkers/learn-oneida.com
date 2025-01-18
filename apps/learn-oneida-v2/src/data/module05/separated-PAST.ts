@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be separated",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["te", "DUAL"], ["wak"], "atekhahsyu·", ["hné·", "PAST"]],

@@ -3,7 +3,7 @@ import { createParadigmData } from "@/utils/paradigm";
 const data = createParadigmData(
   {
     translation: "{{pronoun}} are siblings",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["te", "RECP"], ["ty"], ["ata", "REFL"], "hnu·téle̲ʔ"],

@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} will not be at home",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [

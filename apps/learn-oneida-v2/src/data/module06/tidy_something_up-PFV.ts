@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerbPast}} tidied up",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["te", "DUAL"], ["wak"], "atohtálhu"],

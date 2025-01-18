@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be dead",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "iheyu·", ["hné·", "PAST"]],

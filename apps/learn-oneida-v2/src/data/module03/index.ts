@@ -177,7 +177,7 @@ export function nationsParadigm() {
         },
       ],
       translation: "{{pronoun}} {{refVerb}} an Oneida",
-      type: "PB",
+      type: "PO",
     },
     ["i", "u", "m", "f"],
   );
@@ -324,7 +324,7 @@ export function getClanParadigms() {
       {
         audioFolder: `module03/${animalEn}_clan`,
         translation: `{{pronoun}} {{refVerb}} ${animalEn} clan`,
-        type: "PB",
+        type: "PO",
         phrases: [
           {
             breakdown: [`${animalOne} ni`, ["wak"], "iʔtaló·tʌʔ"],

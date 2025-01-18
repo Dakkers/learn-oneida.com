@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} cooking",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["ke"], "khu·níheʔ"],

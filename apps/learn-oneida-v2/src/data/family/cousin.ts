@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/cousin",
     translation: "{{pronoun}} are cousins",
-    type: "PLB",
+    type: "PP",
     categories: ["kinship"],
     phrases: [
       {
@@ -14,10 +14,10 @@ const data = createParadigmData(
         breakdown: [["tsy"], "alá·se̲ʔ"],
       },
       {
-        breakdown: [["lon", "PB"], "alá·se̲ʔ"],
+        breakdown: [["lon", "PO"], "alá·se̲ʔ"],
       },
       {
-        breakdown: [["yon", "PB"], "alá·se̲ʔ"],
+        breakdown: [["yon", "PO"], "alá·se̲ʔ"],
       },
       {
         breakdown: [["ukw"], "alá·se̲ʔ"],

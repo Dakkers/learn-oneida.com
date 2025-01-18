@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might live there",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [

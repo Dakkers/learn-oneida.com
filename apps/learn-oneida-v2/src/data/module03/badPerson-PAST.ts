@@ -4,7 +4,7 @@ export default createParadigmData(
   {
     // audioFolder: "module03/bad_person_past",
     translation: "{{pronoun}} used to be a bad person",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "ukweʔtaksʌ́", ["hné·", "PAST"]],

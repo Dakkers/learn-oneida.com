@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might be strong",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["a·", "IFUT"], ["ke"], "shátst", ["ekeʔ", "IFUT"]],

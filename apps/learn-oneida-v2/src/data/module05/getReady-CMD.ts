@@ -3,7 +3,7 @@ import { createParadigmData } from "@/utils/paradigm";
 export default createParadigmData(
   {
     translation: "Get ready!",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["s"], "atatewyʌnʌtaʔú", ["hak", "FUT"]],

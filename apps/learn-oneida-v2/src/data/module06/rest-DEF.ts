@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} rested",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["waʔ", "DEF"], ["k"], "atolíshʌʔ"],

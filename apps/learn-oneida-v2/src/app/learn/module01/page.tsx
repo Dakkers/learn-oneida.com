@@ -270,7 +270,7 @@ function NameSection() {
 
       <Text>
         The root word, <Letter>-yat-</Letter>, means "to be named". It is a
-        C-stem (because the first letter is a consonant) that uses purple
+        C-stem (because the first letter is a consonant) that uses interactive
         pronominals.
       </Text>
 
@@ -288,10 +288,10 @@ function NameSection() {
         <b>
           Bob ni· <Pronominal color="p">yuk</Pronominal>yáts
         </b>{" "}
-        translates to &quot;Bob is my name&quot;. Using the purple pronominals
-        table above, one can see <Letter>yuk</Letter> in the C-stem column
-        corresponds to the direction &quot;They → me&quot;. Thus, this phrase
-        can literaly be translated as "They name me Bob". Colloquially we
+        translates to &quot;Bob is my name&quot;. Using the interactive
+        pronominals table above, one can see <Letter>yuk</Letter> in the C-stem
+        column corresponds to the direction &quot;They → me&quot;. Thus, this
+        phrase can literaly be translated as "They name me Bob". Colloquially we
         translate this as "They call me Bob".
       </Text>
 
@@ -311,7 +311,8 @@ function KnowSection() {
       </SectionHeading>
       <Text>
         The root word, <Letter>-anuht(e)-</Letter>, means "to know". It is an
-        A-stem (because the first letter is "A") that uses blue pronominals.
+        A-stem (because the first letter is "A") that uses objective
+        pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{

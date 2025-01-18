@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} answered",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["t", "CIS"], ["a", "DEF"], ["k"], "lihwaʔsla·kó·"],

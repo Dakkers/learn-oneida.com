@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerbPast}} eaten a meal",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "atekhuní"],

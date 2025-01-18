@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} say",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "a·túheʔ"],

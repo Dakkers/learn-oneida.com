@@ -3,7 +3,7 @@ import { createParadigmData } from "@/utils/paradigm";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might happen",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [

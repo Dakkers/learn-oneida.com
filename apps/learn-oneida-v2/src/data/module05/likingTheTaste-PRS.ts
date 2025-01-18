@@ -8,7 +8,7 @@ export default createParadigmData(
     translation: "{{pronoun}} like the taste",
     translationFn: (pronoun) =>
       `{{pronoun}} ${pluralizeVerbCommon(pronoun, "like")} the taste`,
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "e·ká·seʔ"],

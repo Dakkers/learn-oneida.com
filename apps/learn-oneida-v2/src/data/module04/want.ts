@@ -8,7 +8,7 @@ export default createParadigmData(
     translation: "{{pronoun}} want",
     translationFn: (pronoun) =>
       `{{pronoun}} ${pluralizeVerbCommon(pronoun, "want")}`,
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["i·", "RPL"], ["k"], "élheʔ"],

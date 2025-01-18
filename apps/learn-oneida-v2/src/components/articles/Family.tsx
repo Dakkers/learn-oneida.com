@@ -65,7 +65,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         term for mother, aunt, and uncle, but the pronominals give context.
       </Text>
       <Text>
-        Most of the time, purple pronominals are used. When the relative is
+        Most of the time, interactive pronominals are used. When the relative is
         older, you must use the pronominal that corresponds to
         &quot;relative&quot; → &quot;person&quot;. When the relative is younger,
         use the &quot;person&quot; → &quot;relative&quot; pronominal.
@@ -100,7 +100,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Mother
       </SectionHeading>
       <Text>
-        The kin term is <b>nulha</b> and uses mostly blue pronominals.
+        The kin term is <b>nulha</b> and uses mostly objective pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={motherJson} />
 
@@ -108,7 +108,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Aunt
       </SectionHeading>
       <Text>
-        The kin term is <b>nulha</b> and uses purple pronominals.
+        The kin term is <b>nulha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={auntJson} />
 
@@ -116,7 +116,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Grandmother
       </SectionHeading>
       <Text>
-        The kin term is <b>hsotha</b> and uses mostly light-blue pronominals.
+        The kin term is <b>hsotha</b> and uses mostly possessive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={grandmotherJson} />
 
@@ -124,7 +124,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Older sister
       </SectionHeading>
       <Text>
-        The kin term is <b>ʔkʌha</b> and uses purple pronominals.
+        The kin term is <b>ʔkʌha</b> and uses mostly interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={olderSisterJson} />
 
@@ -132,7 +132,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Daughter
       </SectionHeading>
       <Text>
-        The kin term is <b>yʌha</b> and uses purple pronominals.
+        The kin term is <b>yʌha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={daughterJson} />
 
@@ -140,7 +140,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Niece
       </SectionHeading>
       <Text>
-        The kin term is <b>uhwatʌha</b> and uses purple pronominals.
+        The kin term is <b>uhwatʌha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={nieceJson} />
 
@@ -148,7 +148,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Granddaughter
       </SectionHeading>
       <Text>
-        The kin term is <b>atleha</b> and uses purple pronominals.
+        The kin term is <b>atleha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={colVisibility}
@@ -159,7 +159,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Younger sister
       </SectionHeading>
       <Text>
-        The kin term is <b>ʔkʌha</b> and uses purple pronominals.
+        The kin term is <b>ʔkʌha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={colVisibility}
@@ -170,7 +170,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Great-granddaughter
       </SectionHeading>
       <Text>
-        The kin term is <b>atleʔslʌtuheʔ</b> and uses purple pronominals.
+        The kin term is <b>atleʔslʌtuheʔ</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={colVisibility}
@@ -181,7 +181,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Father
       </SectionHeading>
       <Text>
-        The kin term is <b>ʔniha</b> and uses mostly purple pronominals.
+        The kin term is <b>ʔniha</b> and uses mostly interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={fatherJson} />
 
@@ -189,7 +189,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Uncle
       </SectionHeading>
       <Text>
-        The kin term is <b>nulha</b> and uses purple pronominals.
+        The kin term is <b>nulha</b> and uses mostly interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={uncleJson} />
 
@@ -197,7 +197,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Grandfather
       </SectionHeading>
       <Text>
-        The kin term is <b>hsotha</b> and uses mostly purple pronominals.
+        The kin term is <b>hsotha</b> and uses mostly interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={grandfatherJson} />
 
@@ -205,7 +205,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Older brother
       </SectionHeading>
       <Text>
-        The kin term is <b>ʔkʌha</b> and uses purple pronominals.
+        The kin term is <b>ʔkʌha</b> and uses mostly interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={olderBrotherJson} />
 
@@ -213,7 +213,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Son
       </SectionHeading>
       <Text>
-        The kin term is <b>yʌha</b> and uses purple pronominals.
+        The kin term is <b>yʌha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={sonJson} />
 
@@ -221,7 +221,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Nephew
       </SectionHeading>
       <Text>
-        The kin term is <b>uhwatʌha</b> and uses purple pronominals.
+        The kin term is <b>uhwatʌha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={nephewJson} />
 
@@ -229,7 +229,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Grandson
       </SectionHeading>
       <Text>
-        The kin term is <b>atleha</b> and uses purple pronominals.
+        The kin term is <b>atleha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={grandsonJson} />
 
@@ -237,7 +237,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Younger brother
       </SectionHeading>
       <Text>
-        The kin term is <b>ʔkʌha</b> and uses purple pronominals.
+        The kin term is <b>ʔkʌha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={colVisibility}
@@ -248,7 +248,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Great-grandson
       </SectionHeading>
       <Text>
-        The kin term is <b>atleʔslʌtuheʔ</b> and uses purple pronominals.
+        The kin term is <b>atleʔslʌtuheʔ</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={colVisibility}
@@ -259,7 +259,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Cousin
       </SectionHeading>
       <Text>
-        The kin term is <b>alaʔse</b> and uses both light-blue and blue
+        The kin term is <b>alaʔse</b> and uses both possessive and objective
         pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={cousinJson} />
@@ -268,8 +268,8 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Friend
       </SectionHeading>
       <Text>
-        The base is <b>atʌlo</b> and uses both light-blue and blue pronominals.
-        This is technically not a kin term.
+        The base is <b>atʌlo</b> and uses both possessive and objective
+        pronominals. This is technically not a kin term.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={friendJson} />
 
@@ -278,7 +278,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
       </SectionHeading>
       <Text>
         The root word is <b>hwatsil</b> and is a regular noun, so it uses
-        light-blue pronominals.
+        possessive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={familyJson} />
 
@@ -286,7 +286,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Related
       </SectionHeading>
       <Text>
-        The root word is <b>atatnuhkw</b> and uses red pronominals.
+        The root word is <b>atatnuhkw</b> and uses subjective pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={relatedJson} />
 
@@ -294,7 +294,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Parents
       </SectionHeading>
       <Text>
-        The kin term is <b>yʌha</b> and uses purple pronominals.
+        The kin term is <b>yʌha</b> and uses interactive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={parentsJson} />
 
@@ -302,7 +302,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Children
       </SectionHeading>
       <Text>
-        The kin term is <b>yʌha</b> and uses purple pronominals. The ending{" "}
+        The kin term is <b>yʌha</b> and uses interactive pronominals. The ending{" "}
         <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
         pluralization.
       </Text>
@@ -312,8 +312,8 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Grandparents
       </SectionHeading>
       <Text>
-        The kin term is <b>hsotha</b> and uses purple pronominals. The ending{" "}
-        <Letter>a</Letter> gets replaced by <Letter>okuha</Letter> for
+        The kin term is <b>hsotha</b> and uses interactive pronominals. The
+        ending <Letter>a</Letter> gets replaced by <Letter>okuha</Letter> for
         pluralization.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={grandparentsJson} />
@@ -322,8 +322,8 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Grandchildren
       </SectionHeading>
       <Text>
-        The kin term is <b>atleha</b> and uses purple pronominals. The ending{" "}
-        <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
+        The kin term is <b>atleha</b> and uses interactive pronominals. The
+        ending <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
         pluralization.
       </Text>
       <ParadigmTable
@@ -335,8 +335,8 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Older Siblings
       </SectionHeading>
       <Text>
-        The kin term is <b>ʔkʌha</b> and uses purple pronominals. The ending{" "}
-        <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
+        The kin term is <b>ʔkʌha</b> and uses interactive pronominals. The
+        ending <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
         pluralization.
       </Text>
       <ParadigmTable
@@ -348,8 +348,8 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Younger Siblings
       </SectionHeading>
       <Text>
-        The kin term is <b>ʔkʌha</b> and uses purple pronominals. The ending{" "}
-        <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
+        The kin term is <b>ʔkʌha</b> and uses interactive pronominals. The
+        ending <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
         pluralization.
       </Text>
       <ParadigmTable
@@ -361,8 +361,8 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Aunts and Uncles
       </SectionHeading>
       <Text>
-        The kin term is <b>nulha</b> and uses purple pronominals. The suffix{" "}
-        <Letter>ʔshuha</Letter> is added for pluralization.
+        The kin term is <b>nulha</b> and uses interactive pronominals. The
+        suffix <Letter>ʔshuha</Letter> is added for pluralization.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={unclesAuntsJson} />
 
@@ -370,8 +370,8 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Nieces and Nephews
       </SectionHeading>
       <Text>
-        The kin term is <b>uhwatʌha</b> and uses purple pronominals. The ending{" "}
-        <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
+        The kin term is <b>uhwatʌha</b> and uses interactive pronominals. The
+        ending <Letter>ha</Letter> gets replaced by <Letter>ʔokuha</Letter> for
         pluralization.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={niblingsJson} />
@@ -380,7 +380,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Cousins
       </SectionHeading>
       <Text>
-        The kin term is <b>alaʔse</b> and uses blue pronominals. The suffix{" "}
+        The kin term is <b>alaʔse</b> and uses objective pronominals. The suffix{" "}
         <Letter>shuha</Letter> is added for pluralization. There is an uncommon
         case here that occurs when referring to a female's cousins, all of whom
         are female.
@@ -406,7 +406,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Friends
       </SectionHeading>
       <Text>
-        The base is <b>atʌloʔsla</b> and uses blue pronominals. The suffix{" "}
+        The base is <b>atʌloʔsla</b> and uses objective pronominals. The suffix{" "}
         <Letter>ʔshuha</Letter> is added for pluralization. There is an uncommon
         case here that occurs when referring to a female's friends, all of whom
         are female.

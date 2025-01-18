@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} keep hiding",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "atahséhtha"],
