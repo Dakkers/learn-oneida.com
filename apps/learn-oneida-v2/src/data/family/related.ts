@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/related",
     translation: "{{pronoun}} are related",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["ty"], ["atát", "REFL"], "nuhkwe̲ʔ"],

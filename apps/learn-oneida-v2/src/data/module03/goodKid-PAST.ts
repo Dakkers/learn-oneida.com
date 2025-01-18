@@ -4,7 +4,7 @@ export default createParadigmData(
   {
     audioFolder: "module03/good_kids_past",
     translation: "{{pronoun}} used to be a good kid",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "eksaʔtiyo", ["hné·", "PAST"]],

@@ -6,7 +6,7 @@ const data = createParadigmData({
   translation: "{{pronoun}} {{verb}}",
   translationFn: (pronoun) =>
     `{{pronoun}} ${pluralizeVerbCommon(pronoun, "know")}`,
-  type: "PB",
+  type: "PO",
   phrases: [
     {
       breakdown: [["wak"], "anúhte̲ʔ"],

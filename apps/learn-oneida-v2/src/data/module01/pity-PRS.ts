@@ -2,7 +2,7 @@ import { createInteractiveParadigmData } from "@/utils/paradigm";
 
 const data = createInteractiveParadigmData({
   translation: "{{agent}} {{refVerb}} pitying {{subject}}",
-  type: "PP",
+  type: "PI",
   phrases: [
     {
       breakdown: [["ku"], "·tʌ́lheʔ"],

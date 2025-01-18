@@ -17,11 +17,11 @@ export type BreakdownType =
   | "OP"
   | "NOUN"
   | "PAST"
-  | "PB"
+  | "PO"
   | "PFV"
-  | "PLB"
   | "PP"
-  | "PR"
+  | "PI"
+  | "PS"
   | "PREP" // prepronominal
   | "PTV"
   | "RECP"
@@ -136,11 +136,11 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   NOUN: "text-orange-500",
   OP: "underline decoration-wavy decoration-black",
   PAST: "text-emerald-400",
-  PB: "text-blue-600",
+  PO: "text-blue-600",
   PFV: "text-emerald-400",
-  PLB: "text-cyan-400",
-  PP: "text-violet-700",
-  PR: "text-red-600",
+  PP: "text-cyan-400",
+  PI: "text-violet-700",
+  PS: "text-red-600",
   PREP: "text-lime-500",
   PTV: "text-lime-500",
   RECP: "text-green-700",

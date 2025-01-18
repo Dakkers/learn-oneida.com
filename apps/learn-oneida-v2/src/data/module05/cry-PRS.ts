@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} crying",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["te", "DUAL"], ["k"], "ashʌ́thos"],

@@ -5,7 +5,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/about",
     translation: "About {{pronounObjective}}",
-    type: "PLB",
+    type: "PP",
     phrases: [
       { breakdown: [["ak"], "lihwá·ke"] },
       { breakdown: [["sa"], "lihwá·ke"] },

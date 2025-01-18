@@ -3,7 +3,7 @@ import { createInteractiveParadigmData } from "@/utils/paradigm";
 const data = createInteractiveParadigmData({
   audioFolder: "module02/familiar_purple",
   translation: "{{agent}} {{refVerb}} familiar with {{subject}}",
-  type: "PP",
+  type: "PI",
   phrases: [
     {
       breakdown: [["ku"], "yʌtelí"],

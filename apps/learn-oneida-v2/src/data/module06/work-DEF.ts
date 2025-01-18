@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} worked",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["u", "DEF"], ["k"], "yo·tʌ́·"],

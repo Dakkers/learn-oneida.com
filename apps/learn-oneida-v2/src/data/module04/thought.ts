@@ -5,7 +5,7 @@ export default createParadigmData(
   {
     audioFolder: "module04/thought",
     translation: "{{pronoun}} thought",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: ["wá·", ["k"], "elheʔ"],

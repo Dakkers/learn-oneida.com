@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might wake up",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["á·", "IFUT"], ["k"], "iʔ"],

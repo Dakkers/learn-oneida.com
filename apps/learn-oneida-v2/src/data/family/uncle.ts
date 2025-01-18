@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/uncle",
     translation: "{{pronounPossessive}} uncle",
-    type: "PP",
+    type: "PI",
     categories: ["kinship"],
     phrases: [
       {
@@ -17,7 +17,7 @@ const data = createParadigmData(
         breakdown: [["lo"], "nulhá·"],
       },
       {
-        breakdown: [["ako", "PB"], "nulhá·"],
+        breakdown: [["ako", "PO"], "nulhá·"],
       },
       {
         breakdown: [["shukwa"], "nulhá·"],

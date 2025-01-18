@@ -360,13 +360,13 @@ function PronominalPrimitiveTableText({
 
   const typeFallback =
     color === "red"
-      ? "PR"
+      ? "PS"
       : color === "blue"
-        ? "PB"
+        ? "PO"
         : color === "purple"
-          ? "PP"
+          ? "PI"
           : color === "lightblue"
-            ? "PLB"
+            ? "PP"
             : undefined;
 
   const textContent = !entry.breakdown ? (
@@ -465,7 +465,7 @@ function ExceptionsSection({ level }: { level: SectionHeadingProps["level"] }) {
         root word.
       </Text>
       <Text>
-        As an example, let&lsquo;s look at the A-stem column in the red
+        As an example, let&lsquo;s look at the A-stem column in the subjective
         pronominals table, and use the root word <b>attokhaʔ</b>. The
         translation for &quot;she is wise&quot; without this replacement rule
         would be <b>yuattokhaʔ</b>. <Letter>yua</Letter> is not a sound in

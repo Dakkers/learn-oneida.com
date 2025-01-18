@@ -5,7 +5,7 @@ export default createParadigmData(
   {
     audioFolder: "module04/was_not_here",
     translation: "{{pronoun}} {{refVerbPastAlt}} not here",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: ["yáh kʌʔ té·", ["k"], "ehs", ["kweʔ", "PAST"]],

@@ -4,7 +4,7 @@ const data = createInteractiveParadigmData(
   {
     audioFolder: "module02/ask",
     translation: "({{agent}}) Ask {{subject}}!",
-    type: "PP",
+    type: "PI",
     phrases: [
       {
         breakdown: [["tak"], "liʔwanu·túse"],

@@ -84,12 +84,12 @@ export function translatePhraseGeneric(
     categories?: Array<"kinship">;
     translation: string;
     translationFn?: (pronoun: Pronoun) => string;
-    type: "PP" | "PB" | "PLB" | "PR";
+    type: "PI" | "PO" | "PP" | "PS";
   },
   pronoun: Pronoun,
   legacyTranslationFn?: (arg: { pronoun: Pronoun }) => void,
 ) {
-  return paradigmData.type === "PP" &&
+  return paradigmData.type === "PI" &&
     !paradigmData.categories?.includes("kinship")
     ? translatePhraseInteractive(
         // @ts-expect-error ParadigmData doesn't support purple correctly :(

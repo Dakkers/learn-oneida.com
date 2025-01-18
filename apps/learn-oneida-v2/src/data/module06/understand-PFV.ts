@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerbPast}} understood it",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wake"], "ʔnikuhlayʌtá·u"],

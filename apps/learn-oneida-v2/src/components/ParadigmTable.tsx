@@ -150,7 +150,7 @@ function TableRowWrapper({
   }
   const { colVisibility, data, showBreakdown } = context;
   const translatedPhrase =
-    context.data.type === "PP" && !context.data.categories?.includes("kinship")
+    context.data.type === "PI" && !context.data.categories?.includes("kinship")
       ? translatePhraseInteractive(
           // @ts-expect-error ParadigmData doesn't support purple correctly :(
           context.data,
@@ -169,7 +169,7 @@ function TableRowWrapper({
 
   return (
     <PrimitiveTableRow>
-      {colVisibility.pronounEnglish && data.type !== "PP" && (
+      {colVisibility.pronounEnglish && data.type !== "PI" && (
         <PrimitiveTableCell>
           <TextArray>{PRONOUN_MAP_EN[row.pronoun]}</TextArray>
         </PrimitiveTableCell>
@@ -177,11 +177,11 @@ function TableRowWrapper({
       {colVisibility.pronounOneida && (
         <PrimitiveTableCell>
           <TextArray>
-            {data.type === "PP"
+            {data.type === "PI"
               ? // @ts-expect-error ParadigmData doesn't support purple correctly :(
                 (PURPLES_MAP_FULL[row.pronoun] ??
                 PRONOUN_MAP_ONEIDA[row.pronoun])
-              : // Note for ^: some of the paradigms with type='PP' are the kinship terms which are weird
+              : // Note for ^: some of the paradigms with type='PI' are the kinship terms which are weird
                 // as they're purple but we don't refer to them with e.g. "Her -> me", just "I"
                 PRONOUN_MAP_ONEIDA[row.pronoun]}
           </TextArray>
@@ -234,7 +234,7 @@ function SettingsMenu({
         <Settings className="print:hidden" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        {data.type !== "PP" && (
+        {data.type !== "PI" && (
           <DropdownMenuItem onClick={() => toggleColumn("pronounEnglish")}>
             {colVisibility.pronounEnglish
               ? "Hide Pronoun (EN) column"

@@ -6,7 +6,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/familiar_blue",
     translation: "It is familiar with {{pronounObjective}}",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "yʌtelí"],

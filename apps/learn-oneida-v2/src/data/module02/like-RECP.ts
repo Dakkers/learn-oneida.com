@@ -5,7 +5,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/like_recp",
     translation: "{{pronoun}} like each other",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["te", "REFL"], ["ty"], ["atat", "REFL"], "nú·wehseʔ"],

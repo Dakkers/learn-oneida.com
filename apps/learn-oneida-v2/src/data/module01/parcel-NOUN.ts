@@ -4,7 +4,7 @@ import { createParadigmData, type ParadigmData } from "@/utils/paradigm";
 const data = createParadigmData(
   {
     translation: "{{pronounPossessive}} parcel",
-    type: "PLB",
+    type: "PP",
     phrases: [
       {
         breakdown: [["ak"], "itstósliʔ"],

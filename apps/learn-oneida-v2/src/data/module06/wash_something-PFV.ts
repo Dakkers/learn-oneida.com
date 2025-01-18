@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerbPast}} washed something",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "nóhale"],

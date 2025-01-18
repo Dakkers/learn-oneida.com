@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerbPast}} cooked",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wake"], "khuní"],

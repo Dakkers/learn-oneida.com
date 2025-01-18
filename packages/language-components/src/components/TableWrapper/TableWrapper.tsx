@@ -98,17 +98,17 @@ const oneidaPronounColumns: TableProps["columns"] = [
 const columnsParadigmRed: TableProps["columns"] = [
   EnglishCol,
   // @ts-expect-error TODO - TableWrapper/Table generics
-  createBreakdownCol("PR"),
+  createBreakdownCol("PS"),
 ];
 const columnsParadigmBlue: TableProps["columns"] = [
   EnglishCol,
   // @ts-expect-error TODO - TableWrapper/Table generics
-  createBreakdownCol("PB"),
+  createBreakdownCol("PO"),
 ];
 const columnsParadigmPurple: TableProps["columns"] = [
   EnglishCol,
   // @ts-expect-error TODO - TableWrapper/Table generics
-  createBreakdownCol("PP"),
+  createBreakdownCol("PI"),
 ];
 const columnsEnglishTranslation: TableProps["columns"] = [
   EnglishCol,

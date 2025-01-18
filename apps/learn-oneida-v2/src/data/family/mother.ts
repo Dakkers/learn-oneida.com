@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/mother",
     translation: "{{pronounPossessive}} mother",
-    type: "PB",
+    type: "PO",
     categories: ["kinship"],
     phrases: [
       {
@@ -20,7 +20,7 @@ const data = createParadigmData(
         breakdown: [["ako"], "nulhá·"],
       },
       {
-        breakdown: [["yukhi", "PP"], "nulhá·"],
+        breakdown: [["yukhi", "PI"], "nulhá·"],
       },
       {
         breakdown: [["swa"], "nulhá·"],

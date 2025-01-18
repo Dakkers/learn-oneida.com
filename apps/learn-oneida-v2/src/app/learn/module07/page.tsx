@@ -82,7 +82,7 @@ function NounTable({ nounDatum }: { nounDatum: any }) {
       columns={[
         TableWrapper.englishColumn,
         // @ts-expect-error TODO - TableWrapper/Table generics
-        TableWrapper.createTextBreakdownColumn("PR"),
+        TableWrapper.createTextBreakdownColumn("PS"),
       ]}
       data={[
         ["it is a...", nounDatum.single],

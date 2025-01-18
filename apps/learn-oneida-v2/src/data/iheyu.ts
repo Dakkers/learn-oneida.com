@@ -3,7 +3,7 @@ import { createParadigmData } from "@/utils/paradigm";
 const data = createParadigmData({
   audioFolder: "module02/dead",
   translation: "{{pronoun}} {{refVerb}} dead; {{pronoun}} {{refVerbPast}} died",
-  type: "PB",
+  type: "PO",
   phrases: [
     {
       breakdown: [["wak"], "iheyú"],
