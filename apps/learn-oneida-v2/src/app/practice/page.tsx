@@ -1,6 +1,7 @@
 "use client";
 
-import { Heading, Link } from "@ukwehuwehneke/ohutsya";
+import { Link } from "@/components/Link";
+import { Heading } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 

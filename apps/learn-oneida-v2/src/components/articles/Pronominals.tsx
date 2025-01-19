@@ -1,11 +1,5 @@
 "use client";
-import {
-  Accordion,
-  Flex,
-  Link,
-  PlayButton,
-  TextArray,
-} from "@ukwehuwehneke/ohutsya";
+import { Accordion, Flex, PlayButton, TextArray } from "@ukwehuwehneke/ohutsya";
 import {
   pronounsPurpleExtended,
   PURPLES_MAP_FULL,
@@ -74,6 +68,7 @@ import type {
 } from "@/data/pronominals/types";
 import type { ParadigmData } from "@/utils/paradigm";
 import { LinkWrapper } from "../LinkWrapper";
+import { Link } from "../Link";
 
 export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
   const level = (_level + 1) as SectionHeadingProps["level"];
