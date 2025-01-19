@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} opening the door",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["ke"], "nhotúkwas"],

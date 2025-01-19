@@ -365,7 +365,7 @@ export type Module5VerbDatum = {
   key: string;
   stem: string;
   root: string[];
-  type?: "PR" | "PB" | "PP";
+  type?: "PS" | "PO" | "PI";
 };
 
 export const module5VerbTenseMap: Record<Module5VerbTense, string> = {
@@ -728,7 +728,7 @@ const characterTenseData: Array<Partial<Module5VerbDatum>> = [
     stem: "U stem",
     root: ["-ukweʔtiyo-"],
     en: "be a good person",
-    type: "PR",
+    type: "PS",
   },
   {
     key: "famous",
@@ -828,7 +828,7 @@ const characterTenseData: Array<Partial<Module5VerbDatum>> = [
   //     on: ["s", "ukweʔtaksʌ", "hak"],
   //     en: "Be bad!",
   //   },
-  //   type: "PR",
+  //   type: "PS",
   //   en: "be a bad person",
   // },
 ];
@@ -889,7 +889,7 @@ const mindTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [100],
     stem: 'A stem with "te" prefix',
     root: ["-anahalawʌlyeʔt-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "mind",
@@ -909,7 +909,7 @@ const emotionTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [120],
     stem: 'A stem with "te" prefix',
     root: [".ashʌtho-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "emotion",
@@ -918,7 +918,7 @@ const emotionTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [352],
     stem: "ʌ stem",
     root: ["-ʌtuni-", "-ʌtuny-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "emotion",
@@ -1011,7 +1011,7 @@ const bodyTenseData: Array<Partial<Module5VerbDatum>> = [
   //   dict: [803, 1061],
   //   stem: 'C stem with "ni" prefix',
   //   root: ["-yaʔtoʔtʌ-"],
-  //   type: "PR",
+  //   type: "PS",
   // },
 
   // TODO - pregnant is `nel` in my version of the dictionary?
@@ -1024,7 +1024,7 @@ const bodyTenseData: Array<Partial<Module5VerbDatum>> = [
   //   dict: [609, 1132],
   //   stem: "C stem",
   //   root: ["-nun-"],
-  //   type: "PR",
+  //   type: "PS",
   // },
   {
     category: "body",
@@ -1033,7 +1033,7 @@ const bodyTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [591],
     stem: "C stem",
     root: ["-nikʌhtlʌ-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "body",
@@ -1042,7 +1042,7 @@ const bodyTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [367, 1245],
     stem: "C stem",
     root: ["-hetkʌ-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "body",
@@ -1051,7 +1051,7 @@ const bodyTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [498, 907],
     stem: "C stem",
     root: ["-kwan(ʌ)-", "-owan(ʌ)"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "body",
@@ -1060,7 +1060,7 @@ const bodyTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [1186, 59],
     stem: "A Stem",
     root: ["Kʌʔ - -áʔ-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "body",
@@ -1069,7 +1069,7 @@ const bodyTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [390, 1223],
     stem: "C stem",
     root: ["-hnʌyes-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "body",
@@ -1078,7 +1078,7 @@ const bodyTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [390, 1175],
     stem: 'C stem with "ni" prefix',
     root: ["kʌʔ- -hnʌyes- .ha"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "body",
@@ -1087,7 +1087,7 @@ const bodyTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: ["382?", 424],
     stem: "C stem with epenthetic E",
     root: ["-hn- -a- -wiskel-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "body",
@@ -1138,7 +1138,7 @@ const physicalTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [776, 940],
     stem: "C stem",
     root: ["-wisto-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "physical",
@@ -1147,7 +1147,7 @@ const physicalTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [867, 1210],
     stem: "C stem",
     root: ["-ʔshatste-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "physical",
@@ -1156,7 +1156,7 @@ const physicalTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [280, 1049],
     stem: "A stem",
     root: ["-atuhkalyaʔk-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "physical",
@@ -1165,7 +1165,7 @@ const physicalTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [755, 1079],
     stem: "U stem",
     root: ["-unhe-"],
-    type: "PR",
+    type: "PS",
   },
   // {
   // category: 'physical',
@@ -1298,7 +1298,7 @@ const miscTenseData: Array<Partial<Module5VerbDatum>> = [
   //   dict: [830],
   //   stem: "C stem",
   //   root: ["-yʌteli-"],
-  //   type: "PR",
+  //   type: "PS",
   // },
   {
     category: "misc",
@@ -1307,7 +1307,7 @@ const miscTenseData: Array<Partial<Module5VerbDatum>> = [
     dict: [145],
     stem: "A stem",
     root: ["-atatwʌniyo-"],
-    type: "PR",
+    type: "PS",
   },
   {
     category: "misc",

@@ -5,7 +5,7 @@ const data = createParadigmData(
   {
     audioFolder: "module01/pronominals/red/A",
     translation: "{{pronoun}} {{refVerb}} wise",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "attókhaʔ"],

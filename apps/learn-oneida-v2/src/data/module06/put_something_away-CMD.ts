@@ -3,7 +3,7 @@ import { createParadigmData } from "@/utils/paradigm";
 export default createParadigmData(
   {
     translation: "Put something away!",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["s"], "atewyʌ́·tu"],

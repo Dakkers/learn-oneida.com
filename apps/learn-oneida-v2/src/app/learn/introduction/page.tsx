@@ -22,7 +22,8 @@ import { ParadigmsSection } from "./client";
 
 export const metadata: Metadata = {
   title: "Introduction",
-  description: "Introduction to the Oneida curriculum. This page will teach you about the Oneida orthography, root words, pronominal prefixes, and stems.",
+  description:
+    "Introduction to the Oneida curriculum. This page will teach you about the Oneida orthography, root words, pronominal prefixes, and stems.",
 };
 
 export default function LearnIntroduction() {
@@ -31,7 +32,7 @@ export default function LearnIntroduction() {
       <SectionHeading level={1}>Introduction</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
+          <b>Note:</b> This page is still under construction!
         </Notice>
       </Box>
 
@@ -53,8 +54,8 @@ export default function LearnIntroduction() {
       <Text>
         Shekolih! (Hello!) Welcome to learn-oneida.com, a free website that will
         help you learn the Oneida language. Oneida is a Haudenosaunee language,
-        which is part of the Iroquian language family. Like most ukwehuwehnéke
-        (native languages), it is an immensely sophisticated language. This
+        which is part of the Iroquian language family. Like most Ukwehuwé
+        (native) languages, it is an immensely sophisticated language. This
         website will not dive too deep into the linguistics of Oneida at this
         time, but it is worth knowing that words are much longer than in English
         and comprised of many distinct pieces due to Oneida's polysynthetic
@@ -278,8 +279,8 @@ function OrthographySection() {
 
       <Text>
         There are many other sounds, all of which you can (and should!) practice
-        using the <Link href="/practice/soundchart">sound chart</Link>. Being
-        familiar with these sounds is the first step to learning Oneida.
+        using the <LinkWrapper page="soundchart" />. Being familiar with these
+        sounds is the first step to learning Oneida.
       </Text>
     </>
   );

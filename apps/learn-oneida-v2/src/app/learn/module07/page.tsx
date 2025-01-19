@@ -25,7 +25,7 @@ export default function LearnModule07() {
 
       <Box py={4}>
         <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
+          <b>Note:</b> This page is still under construction!
         </Notice>
       </Box>
 
@@ -82,7 +82,7 @@ function NounTable({ nounDatum }: { nounDatum: any }) {
       columns={[
         TableWrapper.englishColumn,
         // @ts-expect-error TODO - TableWrapper/Table generics
-        TableWrapper.createTextBreakdownColumn("PR"),
+        TableWrapper.createTextBreakdownColumn("PS"),
       ]}
       data={[
         ["it is a...", nounDatum.single],

@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} did something",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["n", "PTV"], ["aʔ", "DEF"], ["k"], "átyeleʔ"],

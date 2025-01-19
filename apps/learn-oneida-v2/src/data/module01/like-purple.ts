@@ -6,7 +6,7 @@ const data = createInteractiveParadigmData({
   translation: "{{agent}} like {{subject}}",
   translationFn: (pronoun) =>
     `{{agent}} ${pluralizeVerbCommon(pronoun, "like")} {{subject}}`,
-  type: "PP",
+  type: "PI",
   phrases: [
     {
       breakdown: [["ku"], "nú·wehseʔ"],

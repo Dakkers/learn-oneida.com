@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/great_granddaughter",
     translation: "{{pronounPossessive}} great-granddaughter",
-    type: "PP",
+    type: "PI",
     categories: ["kinship"],
     phrases: [
       {

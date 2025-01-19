@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} will be light-skinned",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["ʌ", "FUT"], ["ke"], "hnawiskél", ["hakeʔ", "FUT"]],

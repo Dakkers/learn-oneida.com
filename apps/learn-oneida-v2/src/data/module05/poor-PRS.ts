@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} poor",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "i·tʌ́t"],

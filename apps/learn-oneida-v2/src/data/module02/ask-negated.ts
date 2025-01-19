@@ -18,7 +18,7 @@ const data = createInteractiveParadigmData(
       },
     ],
     translation: "({{agent}}) Don't ask {{subject}}!",
-    type: "PP",
+    type: "PI",
   },
   ["u_i", "yall_i", "u_f", "u_m"],
 );

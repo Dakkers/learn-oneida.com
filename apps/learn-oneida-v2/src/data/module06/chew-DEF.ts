@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} chewed",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["waʔ", "DEF"], ["t", "DUAL"], ["k"], "atská·huʔ"],

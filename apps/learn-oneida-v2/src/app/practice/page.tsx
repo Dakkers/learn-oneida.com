@@ -1,6 +1,6 @@
 "use client";
 
-import { Heading } from "@ukwehuwehneke/ohutsya";
+import { Heading, Link } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
@@ -120,9 +120,7 @@ export default function Practice() {
       <List>
         {items.map((t, i) => (
           <List.Item key={i}>
-            <a className="underline text-blue-600" href={`/practice${t.href}`}>
-              {t.label}
-            </a>
+            <Link href={`/practice${t.href}`}>{t.label}</Link>
           </List.Item>
         ))}
       </List>

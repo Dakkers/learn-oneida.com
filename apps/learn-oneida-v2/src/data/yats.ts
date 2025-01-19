@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module01/yats",
     translation: "They call {{pronounObjective}} ...",
-    type: "PP",
+    type: "PI",
     phrases: [
       {
         breakdown: [["yuk"], "yáts"],

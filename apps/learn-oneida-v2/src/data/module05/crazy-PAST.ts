@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be crazy",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["te", "DUAL"], ["k"], "anahalawʌlyé", ["hkweʔ", "PAST"]],

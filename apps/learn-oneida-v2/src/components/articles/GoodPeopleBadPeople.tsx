@@ -36,7 +36,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
+        columns={TableWrapper.createPastTenseColumns("PS").slice(1)}
         data={joinLol(data.goodPerson, data.goodPersonPAST)}
       />
       <SectionHeading id="bad-people" level={sublevel}>
@@ -44,7 +44,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
+        columns={TableWrapper.createPastTenseColumns("PS").slice(1)}
         data={joinLol(data.badPerson, data.badPersonPAST)}
       />
       <SectionHeading id="good-kids" level={sublevel}>
@@ -52,7 +52,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
+        columns={TableWrapper.createPastTenseColumns("PS").slice(1)}
         data={joinLol(data.goodKid, data.goodKidPAST)}
       />
       <SectionHeading id="bad-kids" level={sublevel}>
@@ -60,7 +60,7 @@ export function GoodPeopleBadPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={TableWrapper.createPastTenseColumns("PR").slice(1)}
+        columns={TableWrapper.createPastTenseColumns("PS").slice(1)}
         data={joinLol(data.badKid, data.badKidPAST)}
       />
     </Flex>

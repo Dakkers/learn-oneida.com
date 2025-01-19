@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} sleepy",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wake"], "slʌ́htalahseʔ"],

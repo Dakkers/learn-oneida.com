@@ -2,7 +2,7 @@ import { createInteractiveParadigmData } from "@/utils/paradigm";
 
 const data = createInteractiveParadigmData({
   translation: "{{agent}} {{refVerb}} going to get {{subject}}",
-  type: "PP",
+  type: "PI",
   phrases: [
     {
       breakdown: [["ku"], "hnúkseʔ"],
@@ -26,7 +26,7 @@ const data = createInteractiveParadigmData({
       breakdown: [["lak"], "ihnúkseʔ"],
     },
     {
-      breakdown: [["h", "RPL"], ["yʌ"], "ihnúkseʔ"],
+      breakdown: [["h", "RPL"], ["yʌ"], "hnúkseʔ"],
     },
     {
       breakdown: [["lo"], "hnúkseʔ"],

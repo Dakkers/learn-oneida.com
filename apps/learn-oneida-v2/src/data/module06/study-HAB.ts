@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} studying",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], ["atat", "REFL"], "lihunyʌ·níheʔ"],

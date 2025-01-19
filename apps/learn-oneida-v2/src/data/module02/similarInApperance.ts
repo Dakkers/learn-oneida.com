@@ -5,7 +5,7 @@ export default createParadigmData(
   {
     audioFolder: "module02/look_alike",
     translation: "{{pronoun}} look alike",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [

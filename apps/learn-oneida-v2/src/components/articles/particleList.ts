@@ -619,7 +619,7 @@ export const particleList: ParticleEntry[] = [
     en: "so",
     examples: [
       {
-        translation: "Tsiʔ nithoyʌ́ né· thikʌ́ lú·kwe̲",
+        translation: "Tsiʔ nithoyʌ́ha né· thikʌ́ lú·kwe̲",
         en: "That man is so young.",
       },
     ],

@@ -47,7 +47,7 @@ export function getAudioFilenameForPronoun(
   pronoun: Pronoun,
   typeFallback?: BreakdownType,
 ) {
-  return typeFallback !== "PB"
+  return typeFallback !== "PO"
     ? pronoun
     : pronoun === "theyni"
       ? "us"

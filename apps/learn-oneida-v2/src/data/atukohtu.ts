@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/passed_on",
     translation: "{{pronoun}} {{refVerbPast}} passed on",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["lo"], "tukóhtu̲"],

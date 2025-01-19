@@ -37,7 +37,7 @@ export default function LearnModule05() {
 
       <Box py={4}>
         <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
+          <b>Note:</b> This page is still under construction!
         </Notice>
       </Box>
 
@@ -122,7 +122,7 @@ function StativeVerbExamples() {
       type: "Present",
     },
     {
-      breakdown: [["ku", "PP"], "nolúkhwa̲ʔ"],
+      breakdown: [["ku", "PI"], "nolúkhwa̲ʔ"],
       en: "I love you",
       type: "",
     },
@@ -132,7 +132,7 @@ function StativeVerbExamples() {
       type: "Past",
     },
     {
-      breakdown: [["ku", "PP"], "nolúkhwa", ["hkweʔ", "PAST"]],
+      breakdown: [["ku", "PI"], "nolúkhwa", ["hkweʔ", "PAST"]],
       en: "I used to love you",
       type: "",
     },
@@ -142,7 +142,7 @@ function StativeVerbExamples() {
       type: "Future",
     },
     {
-      breakdown: [FUT, ["ku", "PP"], "nolúkhw", ["akeʔ", "FUT"]],
+      breakdown: [FUT, ["ku", "PI"], "nolúkhw", ["akeʔ", "FUT"]],
       en: "I will love you",
       type: "",
     },
@@ -152,7 +152,7 @@ function StativeVerbExamples() {
       type: "Conditional",
     },
     {
-      breakdown: [IFUT, ["ku", "PP"], "nolúkhw", ["akeʔ", "IFUT"]],
+      breakdown: [IFUT, ["ku", "PI"], "nolúkhw", ["akeʔ", "IFUT"]],
       en: "I might love you",
       type: "",
     },
@@ -162,7 +162,7 @@ function StativeVerbExamples() {
       type: "Command",
     },
     {
-      breakdown: [["tak", "PP"], "nolúkhw", ["ak", "IFUT"]],
+      breakdown: [["tak", "PI"], "nolúkhw", ["ak", "IFUT"]],
       en: "Love me!",
       type: "",
     },
@@ -288,7 +288,7 @@ function StativeVerbExamples() {
         columns={[
           { accessorKey: "type", header: "" },
           // @ts-expect-error TODO - TableWrapper/Table generics
-          TableWrapper.createTextBreakdownColumn("PR", { header: "" }),
+          TableWrapper.createTextBreakdownColumn("PS", { header: "" }),
           TableWrapper.englishColumn,
         ]}
         data={data}
@@ -310,7 +310,7 @@ function VerbSection({ category, title }: { category: string; title: string }) {
           {...d}
           key={d.key}
           id=""
-          typeFallback={d.type ?? "PB"}
+          typeFallback={d.type ?? "PO"}
         />
       ))}
     </>
@@ -371,8 +371,8 @@ function OtherStativeVerbs() {
   const data = [
     {
       en: "in bad / poor condition",
-      breakdown: [["w", "PR"], "ahétkʌʔ"],
-      breakdownPast: [["w", "PR"], "ahétkʌ́·", ["ne·", "PAST"]],
+      breakdown: [["w", "PS"], "ahétkʌʔ"],
+      breakdownPast: [["w", "PS"], "ahétkʌ́·", ["ne·", "PAST"]],
     },
 
     {
@@ -469,8 +469,8 @@ function OtherStativeVerbs() {
     },
     {
       en: "difficult",
-      breakdown: [["w", "PR"], "ʌto·lé·"],
-      breakdownPast: [["w", "PR"], "ʌtolé", ["hkweʔ", "PAST"]],
+      breakdown: [["w", "PS"], "ʌto·lé·"],
+      breakdownPast: [["w", "PS"], "ʌtolé", ["hkweʔ", "PAST"]],
     },
     {
       en: "disgraceful",
@@ -499,8 +499,8 @@ function OtherStativeVerbs() {
     },
     {
       en: "cheap, available, willing",
-      breakdown: [["w", "PR"], "atyesʌ́"],
-      breakdownPast: [["w", "PR"], "atyesʌ́", ["·neʔ", "PAST"]],
+      breakdown: [["w", "PS"], "atyesʌ́"],
+      breakdownPast: [["w", "PS"], "atyesʌ́", ["·neʔ", "PAST"]],
     },
     {
       en: "probably, it seems",
@@ -518,9 +518,9 @@ function OtherStativeVerbs() {
         columns={[
           TableWrapper.englishColumn,
           // @ts-expect-error TODO - TableWrapper/Table generics
-          TableWrapper.createTextBreakdownColumn("PB", { header: "It is..." }),
+          TableWrapper.createTextBreakdownColumn("PO", { header: "It is..." }),
           // @ts-expect-error TODO - TableWrapper/Table generics
-          TableWrapper.createTextBreakdownColumn("PB", {
+          TableWrapper.createTextBreakdownColumn("PO", {
             accessorKey: "breakdownPast",
             header: "It used to be...",
           }),
@@ -622,7 +622,7 @@ function NegatingStativeVerbsSection() {
             // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: { on: BreakdownArray; en: string }) => (
               <>
-                <TextBreakdown breakdown={value.on} typeFallback="PB" />
+                <TextBreakdown breakdown={value.on} typeFallback="PO" />
                 <Text variant="bodyS">{value.en}</Text>
               </>
             ),
@@ -633,7 +633,7 @@ function NegatingStativeVerbsSection() {
             // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: { on: BreakdownArray; en: string }) => (
               <>
-                <TextBreakdown breakdown={value.on} typeFallback="PB" />
+                <TextBreakdown breakdown={value.on} typeFallback="PO" />
                 <Text variant="bodyS">{value.en}</Text>
               </>
             ),

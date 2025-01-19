@@ -5,7 +5,7 @@ const data = createParadigmData(
   {
     audioFolder: "module01/pronominals/blue/O",
     translation: "{{pronoun}} {{refVerbPast}} pulled it out",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "ótshyu"],

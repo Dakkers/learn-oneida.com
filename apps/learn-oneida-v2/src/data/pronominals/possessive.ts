@@ -33,7 +33,7 @@ const data: PronominalRules = {
     c: [
       "ak",
       {
-        excp: "3",
+        excp: "4",
         text: "ake",
       },
     ],
@@ -81,7 +81,7 @@ const data: PronominalRules = {
     ],
     c: ["ao"],
     e: ["aw"],
-    o: ["y"],
+    o: ["a"],
   },
   uni: meDual,
   soni: meDual,

@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} keep chewing",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["te", "DUAL"], ["k"], "atská·huhé"],

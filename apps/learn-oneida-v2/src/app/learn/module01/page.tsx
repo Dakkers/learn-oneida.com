@@ -2,10 +2,12 @@
 
 import { Divider, Notice, Text } from "@ukwehuwehneke/ohutsya";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { singlePronouns } from "@ukwehuwehneke/language-components";
 import yatsJson from "~/data/yats";
 import anuhteJson from "@/data/module01/know-PRS";
+import dataKnowNegated from "@/data/module01/know-negated-PRS";
+import dataBelonging from "@/data/module01/belonging-NOUN";
 import { EnglishNamesArticle } from "~/components/articles/EnglishNames";
 import { ParadigmTable } from "~/components/ParadigmTable";
 import { Pronominal } from "~/components/Pronominal";
@@ -23,6 +25,10 @@ import { LetterHArticle } from "~/components/articles/LetterH";
 import { PrepausalEndingsArticle } from "@/components/articles/PrepausalEndings";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { getDialogueModule01 } from "~/data/module01";
+import { ListOfWords } from "@/components/ListOfWords";
+import _ from "lodash";
+import { createParadigmData } from "@/utils/paradigm";
+import { Link } from "@/components/Link";
 
 const meta: any = () => {
   return [
@@ -48,27 +54,29 @@ export default function LearnModule01() {
             <TOC.Item label="English Pronouns" value="english-pronouns" />
             <TOC.Item label="Standalone Pronouns" value="standalone-pronouns" />
             <TOC.Item label="Bound Pronouns" value="bound-pronouns" />
-            <TOC.Section>
+            <TOC.Section level={1}>
               <TOC.Item
-                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subjective Pronominals (Red)"
+                label="Subjective Pronominals (Red)"
                 value="subjective"
               />
               <TOC.Item
-                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Objective Pronominals (Blue)"
+                label="Objective Pronominals (Blue)"
                 value="objective"
               />
               <TOC.Item
-                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Person-to-Person Pronominals (Purple)"
-                value="person-to-person"
+                label="Interactive Pronominals (Purple)"
+                value="interactive"
               />
               <TOC.Item
-                label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Possessive Pronominals (Light Blue)"
+                label="Possessive Pronominals (Light Blue)"
                 value="possessive"
               />
+              <TOC.Item label="Exceptions" value="exceptions" />
             </TOC.Section>
           </TOC.Section>
         </TOC.Item>
 
+        <TOC.Item label="Leading Vowel Pronunciation" value="leading-vowel" />
         <TOC.Item label="Stress and Accents" value="stress">
           <TOC.Section>
             <TOC.Item label="Short stress" value="short-stress" />
@@ -81,13 +89,13 @@ export default function LearnModule01() {
         <TOC.Item label="Glottal Stops" value="glottal" />
         <TOC.Item label="The Letter H" value="letter-h" />
         <TOC.Item label="Prepausal Endings" value="prepausal-endings" />
-        <TOC.Item.Phrase
-          label="to call someone by a name"
-          word="yats"
-          value="yats"
-        />
-        <TOC.Item.Phrase label="to know" word="anuhte" value="anuhte" />
 
+        <TOC.Item.Phrase label="to be named" word="yats" value="yats" />
+        <TOC.Item.Phrase label="to know" word="anuhte" value="anuhte" />
+        <TOC.Item.Phrase label="belonging" word="awʌ" value="belonging" />
+        <TOC.Item label="It belongs to someone" value="belongs-to-someone" />
+
+        <TOC.Item label="Negating Verbs" value="negating-verbs" />
         <TOC.Item label="Particles" value="particles" />
 
         <TOC.Item label="People" value="people-article">
@@ -118,6 +126,8 @@ export default function LearnModule01() {
 
       <PronominalsArticle level={2} />
 
+      <LeadingVowelPronunciationSection />
+
       <StressArticle level={2} />
 
       <GlottalStopArticle level={2} />
@@ -128,6 +138,8 @@ export default function LearnModule01() {
 
       <NameSection />
       <KnowSection />
+      <BelongingSection />
+      <NegationSection />
 
       <SectionHeading id="particles" level={2}>
         Particles
@@ -147,6 +159,41 @@ export default function LearnModule01() {
 
       <DialogueSection />
       <TranslationExercisesSection group="module01" />
+    </>
+  );
+}
+
+function LeadingVowelPronunciationSection() {
+  return (
+    <>
+      <SectionHeading id="leading-vowel" level={2}>
+        Leading Vowel Pronunciation
+      </SectionHeading>
+
+      <Text>
+        You may have noticed after listening to the audio in the{" "}
+        <Link href="#standalone-pronouns">standalone pronouns</Link> and{" "}
+        <Link href="#possessive">possessive pronouns</Link> sections that when a
+        word begins with a vowel, it is pronounced as though there is an{" "}
+        <Letter>h</Letter> in front of the vowel. Take a listen to these words
+        to get a sense of how the vowels end up sounding:
+      </Text>
+
+      <ListOfWords
+        words={[
+          ["aknulhá·", "/module02/mother/i.mp3"],
+          ["etshnú·wehseʔ", ""],
+          ["íkyʌheʔ", "/module01/exceptions/excp_5-1.mp3"],
+          ["owi·lá̲·", "/module01/long_stress/1.mp3"],
+          ["ukyalá·se̲ʔ", "/module02/cousin/soni.mp3"],
+          ["ʌyó·kalahwe̲ʔ", "/module04/time_phrases/tomorrow.mp3"],
+        ]}
+      />
+
+      <Text>
+        This is more of a "light" H sound as opposed to the breath-y H sound
+        discussed <Link href="#letter-h">below</Link>.
+      </Text>
     </>
   );
 }
@@ -261,12 +308,12 @@ function NameSection() {
   return (
     <>
       <SectionHeading id="yats" level={2}>
-        yat — be named
+        -yat- — be named
       </SectionHeading>
 
       <Text>
         The root word, <Letter>-yat-</Letter>, means "to be named". It is a
-        C-stem (because the first letter is a consonant) that uses purple
+        C-stem (because the first letter is a consonant) that uses interactive
         pronominals.
       </Text>
 
@@ -284,11 +331,11 @@ function NameSection() {
         <b>
           Bob ni· <Pronominal color="p">yuk</Pronominal>yáts
         </b>{" "}
-        translates to &quot;Bob is my name&quot;. Using the purple pronominals
-        table above, one can see <Letter>yuk</Letter> in the C-stem column
-        corresponds to the direction &quot;They → me&quot;. Thus, this phrase
-        can literaly be translated as "They name me Bob". Colloquially we
-        translate this as "They call me Bob".
+        translates to &quot;Bob is my name&quot;. Using the interactive
+        pronominals table above, one can see <Letter>yuk</Letter> in the C-stem
+        column corresponds to the direction &quot;They → me&quot;. Thus, this
+        phrase can literaly be translated as "They name me Bob". Colloquially,
+        this is translated as "They call me Bob" or "My name is Bob".
       </Text>
 
       <Text>
@@ -303,11 +350,12 @@ function KnowSection() {
   return (
     <>
       <SectionHeading id="anuhte" level={2}>
-        anuhte — to know
+        -anuhte- — to know
       </SectionHeading>
       <Text>
         The root word, <Letter>-anuht(e)-</Letter>, means "to know". It is an
-        A-stem (because the first letter is "A") that uses blue pronominals.
+        A-stem (because the first letter is "A") that uses objective
+        pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
@@ -315,6 +363,124 @@ function KnowSection() {
           pronounOneida: false,
         }}
         data={anuhteJson}
+      />
+    </>
+  );
+}
+
+function BelongingSection() {
+  const dataBelongsToSomeone = useMemo(() => {
+    return createParadigmData(
+      {
+        translation: "It belongs to {{pronounObjective}}",
+        phrases: [
+          { breakdown: ["í· ", ["akw"], "awʌ́"] },
+          { breakdown: ["isé· ", ["s"], "awʌ́"] },
+          { breakdown: ["laulhá· ", ["lao"], "wʌ́"] },
+          { breakdown: ["akaulhá· ", ["ako"], "wʌ́"] },
+          { breakdown: ["aulhá· ", ["ao"], "wʌ́"] },
+          { breakdown: ["í· ", ["uky"], "awʌ́"] },
+          { breakdown: ["isé· ", ["tsy"], "awʌ́"] },
+          { breakdown: ["í· ", ["ukw"], "awʌ́"] },
+          { breakdown: ["isé· ", ["sw"], "awʌ́"] },
+          { breakdown: ["lonulhá· ", ["laon"], "awʌ́"] },
+          { breakdown: ["onulhá· ", ["aon"], "awʌ́"] },
+        ],
+        type: "PP",
+      },
+      [...singlePronouns, "uni", "u2", "us", "yall", "ms", "fs"],
+    );
+  }, []);
+
+  return (
+    <>
+      <SectionHeading id="belonging" level={2}>
+        -awʌ- — belonging
+      </SectionHeading>
+      <Text>
+        The root word, <Letter>-awʌ-</Letter>, means "belonging". It is an
+        A-stem noun (because the first letter is "A") that uses possessive
+        pronominals.
+      </Text>
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={dataBelonging}
+      />
+
+      <SectionHeading id="belongs-to-someone" level={2}>
+        It belongs to someone
+      </SectionHeading>
+      <Text>
+        The following table combines the{" "}
+        <Link href="#standalone-pronouns">standalone pronouns</Link> with the
+        table above.
+      </Text>
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={dataBelongsToSomeone}
+      />
+    </>
+  );
+}
+
+function NegationSection() {
+  const dataDoesntBelong = useMemo(() => {
+    return createParadigmData(
+      {
+        translation: "It doesn't belong to {{pronounObjective}}",
+        phrases: [
+          { breakdown: ["yáh ne teʔ", ["wak"], "awʌ́"] },
+          { breakdown: ["yáh ne teʔ", ["s"], "awʌ́"] },
+          { breakdown: ["yáh ne te", ["ho"], "wʌ́"] },
+          { breakdown: ["yáh ne teʔ", ["yako"], "wʌ́"] },
+          { breakdown: ["yáh ne te", ["hon"], "awʌ́"] },
+        ],
+        type: "PO",
+      },
+      ["i", "u", "m", "f", "ms"],
+    );
+  }, []);
+
+  return (
+    <>
+      <SectionHeading id="negating-verbs" level={2}>
+        Negating Verbs
+      </SectionHeading>
+      <Text>
+        To negate a simple verb, take the stated form of the verb and add{" "}
+        <Letter>yáh</Letter> <Letter>teʔ</Letter> to the beginning. The{" "}
+        <Letter>te</Letter> is attached directly to the word that is being
+        negated. (The glottal is dropped if attached to a word starting with{" "}
+        <Letter>H</Letter>.)
+      </Text>
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={dataKnowNegated}
+      />
+      <Text>
+        This works for verbs that do not have a <LinkWrapper page="prep" />.
+        Negation for verbs that have a pre-pronominal prefix is discussed in{" "}
+        <LinkWrapper page={2} />.
+      </Text>
+      <Text>
+        Below is another example of negating a verb, though for some reason,{" "}
+        <Letter>ne</Letter> is a required word in the phrase.
+      </Text>
+      <ParadigmTable
+        columnVisibility={{
+          pronounEnglish: false,
+          pronounOneida: false,
+        }}
+        data={dataDoesntBelong}
       />
     </>
   );

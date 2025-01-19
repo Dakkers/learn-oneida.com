@@ -1,6 +1,6 @@
 import type { BreakdownArray } from "@ukwehuwehneke/language-components";
 
-type Excp = "1" | "2" | "3" | "4" | "5" | "6";
+type Excp = "1" | "2" | "3" | "4" | "5" | "6" | "7";
 
 type StemData =
   | string
@@ -40,7 +40,7 @@ export interface PronominalRules {
   fs: Entry;
 }
 
-export interface PronominalRulesPurple {
+export interface PronominalRulesInteractive {
   i_u: Entry;
   i_m: Entry;
   i_f: Entry;

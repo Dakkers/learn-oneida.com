@@ -5,7 +5,7 @@ export default createParadigmData(
   {
     audioFolder: "module01/pronominals/blue/I",
     translation: "{{pronoun}} {{refVerb}} sleeping",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "i·tá·s"],

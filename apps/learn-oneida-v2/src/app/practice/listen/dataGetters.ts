@@ -213,7 +213,7 @@ export function formatDialogueAudioFiles(module: ModuleNumber) {
       sentences.forEach((s, j) => {
         result.push({
           audioFile: `/${module}/dialogue/${key}/${i + 1}-${j + 1}.mp3`,
-          en: arrayify(item.en ?? ""),
+          en: [arrayify(item.en ?? "")[j]],
           translation: s,
         });
       });

@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be small",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: ["kʌʔ ni", ["k"], "á·s", ["kweʔ", "PAST"]],

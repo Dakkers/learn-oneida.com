@@ -5,7 +5,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/familiar_recp",
     translation: "{{pronoun}} are familiar with each other",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["te", "REFL"], ["ty"], ["atat", "REFL"], "yʌtelí"],

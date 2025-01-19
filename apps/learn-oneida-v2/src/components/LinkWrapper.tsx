@@ -24,8 +24,11 @@ export function LinkWrapper({
     | "dim"
     | "dual"
     | "intro"
+    | "prep"
+    | "refl"
     | "rep"
-    | "semi";
+    | "semi"
+    | "soundchart";
 }) {
   const children = _children
     ? _children
@@ -36,14 +39,19 @@ export function LinkWrapper({
           dim: "diminutive feature",
           dual: "dualic feature",
           intro: "the introduction page",
+          prep: "pre-pronominal prefix",
+          refl: "reflexive feature",
           rep: "repetitive feature",
           semi: "semi-reflexive feature",
+          soundchart: "sound chart",
         }[page];
 
   const NON_EXISTENT_PAGES = [
     "coin",
     "dim",
     "dual",
+    "prep",
+    "refl",
     "rep",
     "semi",
     7,
@@ -58,17 +66,29 @@ export function LinkWrapper({
     return children;
   }
 
-  return (
-    <Link
-      href={
-        page === "intro"
-          ? "/learn/introduction"
-          : page === "rep"
-            ? "/articles/repetitive-feature"
-            : `/learn/module${page.toString().padStart(2, "0")}`
-      }
-    >
-      {children}
-    </Link>
-  );
+  const hrefMap = {
+    1: "/learn/module01",
+    2: "/learn/module02",
+    3: "/learn/module03",
+    4: "/learn/module04",
+    5: "/learn/module05",
+    6: "/learn/module06",
+    7: "/learn/module07",
+    8: "/learn/module08",
+    9: "/learn/module09",
+    10: "/learn/module10",
+    11: "/learn/module11",
+    12: "/learn/module12",
+    intro: "/learn/introduction",
+    coin: "/articles/coincident-feature",
+    dim: "/articles/diminutive-feature",
+    dual: "/articles/dualic-feature",
+    prep: "/articles/prepronominal-prefix",
+    refl: "/articles/reflexive-feature",
+    rep: "/articles/repetitive-feature",
+    semi: "/articles/semireflexive-feature",
+    soundchart: "/practice/soundchart",
+  } as const;
+
+  return <Link href={hrefMap[page]}>{children}</Link>;
 }

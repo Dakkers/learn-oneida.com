@@ -2,7 +2,7 @@ import { createParadigmData } from "@/utils/paradigm";
 
 const data = createParadigmData({
   translation: "{{pronoun}} {{refVerb}} here",
-  type: "PR",
+  type: "PS",
   phrases: [
     {
       breakdown: ["kʌʔ ", ["i·", "RPL"], ["k"], "é·seʔ"],

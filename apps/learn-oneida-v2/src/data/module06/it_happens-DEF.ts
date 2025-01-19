@@ -3,7 +3,7 @@ import { createParadigmData } from "@/utils/paradigm";
 export default createParadigmData(
   {
     translation: "{{pronoun}} happened",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["n", "PTV"], ["aʔ", "DEF"], ["a·w"], "ʌ́·"],

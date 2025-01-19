@@ -10,123 +10,123 @@ export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
   const data = [
     {
       en: "It is single",
-      breakdown: [["w", "PR"], "atatwʌni·yó̲·"],
+      breakdown: [["w", "PS"], "atatwʌni·yó̲·"],
     },
     {
       en: "It is single again",
-      breakdown: [["s", "REP"], ["w", "PR"], "atatwʌni·yó̲·"],
+      breakdown: [["s", "REP"], ["w", "PS"], "atatwʌni·yó̲·"],
     },
     {
       en: "I am married",
-      breakdown: [["wake", "PB"], "nyákuʔ"],
+      breakdown: [["wake", "PO"], "nyákuʔ"],
     },
     {
       en: "I am married again",
-      breakdown: [["s", "REP"], ["wake", "PB"], "nyá·kuʔ"],
+      breakdown: [["s", "REP"], ["wake", "PO"], "nyá·kuʔ"],
     },
     {
       en: "He is single",
-      breakdown: [["l", "PR"], "atatwʌni·yó̲·"],
+      breakdown: [["l", "PS"], "atatwʌni·yó̲·"],
     },
     {
       en: "He is single again",
-      breakdown: [["s", "REP"], ["h", "PR"], "atatwʌni·yó̲·"],
+      breakdown: [["s", "REP"], ["h", "PS"], "atatwʌni·yó̲·"],
     },
     {
       en: "He is married (to someone)",
-      breakdown: [["lo", "PB"], "nyákuʔ"],
+      breakdown: [["lo", "PO"], "nyákuʔ"],
     },
     {
       en: "He is married (to someone) again",
-      breakdown: [["s", "REP"], ["ho", "PB"], "nyákuʔ"],
+      breakdown: [["s", "REP"], ["ho", "PO"], "nyákuʔ"],
     },
     {
       en: "He doesn't know me",
-      breakdown: ["yáh te", ["hak", "PP"], "yʌtelí̲"],
+      breakdown: ["yáh te", ["hak", "PI"], "yʌtelí̲"],
     },
     {
       en: "He doesn't know me anymore",
-      breakdown: ["yáh te", ["s", "REP"], ["hak", "PP"], "yʌtelí̲"],
+      breakdown: ["yáh te", ["s", "REP"], ["hak", "PI"], "yʌtelí̲"],
     },
     {
       en: "I like it",
-      breakdown: [["k", "PR"], "nú·wehse̲"],
+      breakdown: [["k", "PS"], "nú·wehse̲"],
     },
     {
       en: "I like it again",
-      breakdown: [["s", "REP"], ["k", "PR"], "nú·wehse̲"],
+      breakdown: [["s", "REP"], ["k", "PS"], "nú·wehse̲"],
     },
     {
       en: "I do not like you",
-      breakdown: ["yáh teʔ", ["ku", "PP"], "nú·wehse̲"],
+      breakdown: ["yáh teʔ", ["ku", "PI"], "nú·wehse̲"],
     },
     {
       en: "I do not like you anymore",
-      breakdown: ["yáh te", ["s", "REP"], ["ku", "PP"], "nú·wehse̲"],
+      breakdown: ["yáh te", ["s", "REP"], ["ku", "PI"], "nú·wehse̲"],
     },
     {
       en: "You like it",
-      breakdown: [["s", "PR"], "nú·wehse̲"],
+      breakdown: [["s", "PS"], "nú·wehse̲"],
     },
     {
       en: "You like it again",
-      breakdown: [["se", "REP"], ["hs", "PR"], "nú·wehse̲"],
+      breakdown: [["se", "REP"], ["hs", "PS"], "nú·wehse̲"],
     },
     {
       en: "He loves her/them",
-      breakdown: [["shako", "PP"], "nolúkhwa̲ʔ"],
+      breakdown: [["shako", "PI"], "nolúkhwa̲ʔ"],
     },
     {
       en: "He loves her/them again",
-      breakdown: [["se", "REP"], ["shako", "PP"], "nolúkhwa̲ʔ"],
+      breakdown: [["se", "REP"], ["shako", "PI"], "nolúkhwa̲ʔ"],
     },
     {
       en: "I do not like her/them",
-      breakdown: ["yáh teʔ", ["khe", "PP"], "nú·wehse̲"],
+      breakdown: ["yáh teʔ", ["khe", "PI"], "nú·wehse̲"],
     },
     {
       en: "I do not like her/them anymore",
-      breakdown: ["yáh te", ["se", "REP"], ["khe", "PP"], "nú·wehse̲"],
+      breakdown: ["yáh te", ["se", "REP"], ["khe", "PI"], "nú·wehse̲"],
     },
     {
       en: "Someone and I are engaged",
-      breakdown: [["yukni", "PB"], "nyákheʔ"],
+      breakdown: [["yukni", "PO"], "nyákheʔ"],
     },
     {
       en: "Someone and I are engaged again",
-      breakdown: [["ts", "REP"], ["yukni", "PB"], "nyákheʔ"],
+      breakdown: [["ts", "REP"], ["yukni", "PO"], "nyákheʔ"],
     },
     {
       en: "I am not in a relationship (with someone)",
-      breakdown: ["yáh te", ["yákn", "PR"], "ehse̲"],
+      breakdown: ["yáh te", ["yákn", "PS"], "ehse̲"],
     },
     {
       en: "I am not in a relationship (with someone) anymore",
-      breakdown: ["yáh te", ["ts", "REP"], ["yákn", "PR"], "ehse̲"],
+      breakdown: ["yáh te", ["ts", "REP"], ["yákn", "PS"], "ehse̲"],
     },
     {
       en: "He loves her/them",
-      breakdown: [["yesa", "PP"], "nolúkhwa̲ʔ"],
+      breakdown: [["yesa", "PI"], "nolúkhwa̲ʔ"],
     },
     {
       en: "He loves her/them again",
-      breakdown: [["ts", "REP"], ["yesa", "PP"], "nolúkhwa̲ʔ"],
+      breakdown: [["ts", "REP"], ["yesa", "PI"], "nolúkhwa̲ʔ"],
     },
     {
       en: "You two are not married",
-      breakdown: ["yáh te", ["sni", "PB"], "nyákuʔ"],
+      breakdown: ["yáh te", ["sni", "PO"], "nyákuʔ"],
     },
     {
       en: "You two are not married anymore",
-      breakdown: ["yáh te", ["tsi", "REP"], ["sni", "PB"], "nyákuʔ"],
+      breakdown: ["yáh te", ["tsi", "REP"], ["sni", "PO"], "nyákuʔ"],
     },
     {
       en: "Are you two single?",
-      breakdown: [["tsy", "PR"], "atatwʌni·yó· kʌ́"],
+      breakdown: [["tsy", "PS"], "atatwʌni·yó· kʌ́"],
     },
     {
       en: "Are you two single again?",
-      breakdown: [["tsi", "REP"], ["tsy", "PR"], "atatwʌni·yó· kʌ́"],
+      breakdown: [["tsi", "REP"], ["tsy", "PS"], "atatwʌni·yó· kʌ́"],
     },
   ];
 

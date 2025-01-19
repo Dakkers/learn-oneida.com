@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} free",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "atatwʌni·yó·"],

@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/friend",
     translation: "{{pronoun}} are friends",
-    type: "PLB",
+    type: "PP",
     categories: ["kinship"],
     phrases: [
       {
@@ -14,10 +14,10 @@ const data = createParadigmData(
         breakdown: [["tsy"], "atʌ·ló̲"],
       },
       {
-        breakdown: [["lon", "PB"], "atʌ·ló̲"],
+        breakdown: [["lon", "PO"], "atʌ·ló̲"],
       },
       {
-        breakdown: [["yon", "PB"], "atʌ·ló̲"],
+        breakdown: [["yon", "PO"], "atʌ·ló̲"],
       },
       {
         breakdown: [["ukw"], "atʌ·ló̲"],

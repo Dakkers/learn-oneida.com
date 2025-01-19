@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} will be tall",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["ʌ", "FUT"], ["k"], "hnʌyésu", ["hakeʔ", "FUT"]],

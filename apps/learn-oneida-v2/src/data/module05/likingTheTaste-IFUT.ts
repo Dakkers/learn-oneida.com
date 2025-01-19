@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might like the taste",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["a·", "IFUT"], ["wak"], "e·ká·s", ["hekeʔ", "IFUT"]],

@@ -27,7 +27,7 @@ export default function ToolsNumbers() {
       <SectionHeading level={1}>Numbers</SectionHeading>
 
       <p className="mt-8 mb-4">
-        <b>NOTE:</b> This page is still under construction! Only numbers up to
+        <b>Note:</b> This page is still under construction! Only numbers up to
         9,999 are supported.
       </p>
 

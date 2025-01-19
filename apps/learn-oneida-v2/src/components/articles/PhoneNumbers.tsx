@@ -14,7 +14,7 @@ import { createParadigmData } from "@/utils/paradigm";
 const dataAtSomeonesOwnHouse = createParadigmData(
   {
     translation: "At {{pronounPossessive}} own house",
-    type: "PB",
+    type: "PO",
     phrases: [
       { breakdown: ["tsiʔ ", ["t", "CIS"], ["wak"], "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["ti", "CIS"], ["s"], "yoʔtʌ́staʔ"] },
@@ -35,7 +35,7 @@ const dataAtSomeonesOwnHouse = createParadigmData(
 const dataAtSomeonesOwnWork = createParadigmData(
   {
     translation: "At {{pronounPossessive}} own work",
-    type: "PB",
+    type: "PO",
     phrases: [
       { breakdown: ["tsiʔ ", ["t", "CIS"], ["wak"], "yoʔtʌ́staʔ"] },
       { breakdown: ["tsiʔ ", ["ti", "CIS"], ["s"], "yoʔtʌ́staʔ"] },

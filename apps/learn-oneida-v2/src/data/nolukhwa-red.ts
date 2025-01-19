@@ -8,7 +8,7 @@ const data = createParadigmData(
     translation: "{{pronoun}} love it",
     translationFn: (pronoun) =>
       `{{pronoun}} ${pluralizeVerbCommon(pronoun, "love")} it`,
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "nolúkhwaʔ"],

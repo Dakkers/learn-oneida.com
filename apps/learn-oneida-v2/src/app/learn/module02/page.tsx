@@ -83,9 +83,12 @@ export default function LearnModule02() {
           value="new-verbs"
         >
           <TOC.Section>
-            <TOC.Item label="Red pronominals" value="new-verbs-red" />
-            <TOC.Item label="Blue pronominals" value="new-verbs-blue" />
-            <TOC.Item label="Purple pronominals" value="new-verbs-purple" />
+            <TOC.Item label="Subjective pronominals" value="new-verbs-red" />
+            <TOC.Item label="Objective pronominals" value="new-verbs-blue" />
+            <TOC.Item
+              label="Interactive pronominals"
+              value="new-verbs-purple"
+            />
           </TOC.Section>
         </TOC.Item>
         <TOC.Item label="Reflexive" value="reflexive" />
@@ -207,19 +210,19 @@ function VerbsSection() {
       </Text>
 
       <SectionHeading id="new-verbs-red" level={3}>
-        Red pronominals
+        Subjective pronominals
       </SectionHeading>
       <ParadigmTable columnVisibility={columnVisibility} data={yʌteliRed} />
       <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaRed} />
 
       <SectionHeading id="new-verbs-blue" level={3}>
-        Blue pronominals
+        Objective pronominals
       </SectionHeading>
       <ParadigmTable columnVisibility={columnVisibility} data={yʌteliBlue} />
       <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaBlue} />
 
       <SectionHeading id="new-verbs-purple" level={3}>
-        Purple pronominals
+        Interactive pronominals
       </SectionHeading>
       <ParadigmTable columnVisibility={columnVisibility} data={yʌteliPurple} />
       <ParadigmTable
@@ -275,11 +278,11 @@ function ReciprocalSection() {
         To translate this sentence into Oneida, first take the root word for
         &quot;to like&quot;, <b>nuwehseʔ</b>, and apply the reflexive prefix:{" "}
         <b>atatnuwehseʔ</b>. This is now an A-stem word so we can look at the
-        red pronominals table to find the corresponding prefix for &quot;Someone
-        and I&quot;, which is <Letter>yaky</Letter>. So far we have{" "}
-        <b>yakyatatnú·wehse̲ʔ</b>, but if you look in the previous section, this
-        means &quot;Someone and I like ourselves&quot;. To make it reciprocal,
-        add <Letter>te</Letter> at the beginning.
+        subjective pronominals table to find the corresponding prefix for
+        &quot;Someone and I&quot;, which is <Letter>yaky</Letter>. So far we
+        have <b>yakyatatnú·wehse̲ʔ</b>, but if you look in the previous section,
+        this means &quot;Someone and I like ourselves&quot;. To make it
+        reciprocal, add <Letter>te</Letter> at the beginning.
       </Text>
       <Text>
         So the result is: <i>teyakyatatnú·wehse̲ʔ</i>.
@@ -302,9 +305,9 @@ function CommandsSection() {
         Commands
       </SectionHeading>
       <Text>
-        Here, commands are introduced, which use purple pronominals. Commands
-        have different pronominals when you ("I") are the subject. These are
-        known as "command form" pronominals.
+        Here, commands are introduced, which use interactive pronominals.
+        Commands have different pronominals when you ("I") are the subject.
+        These are known as "command form" pronominals.
       </Text>
       <Notice intent="primary">
         Commands are only ever stated in the prepausal form as they are always
@@ -329,10 +332,10 @@ function NegatedCommandsSection() {
         Negated Commands
       </SectionHeading>
       <Text>
-        Commands can be negated, too. The regular purple pronominals are used,
-        as opposed to the command form pronominals. When negating a command, the
-        future tense of the verb must be used, which is indicated with the
-        prefix <Letter>ʌ</Letter>. This will be discussed more in{" "}
+        Commands can be negated, too. The regular interactive pronominals are
+        used, as opposed to the command form pronominals. When negating a
+        command, the future tense of the verb must be used, which is indicated
+        with the prefix <Letter>ʌ</Letter>. This will be discussed more in{" "}
         <LinkWrapper page={4} />.
       </Text>
       <SectionHeading id="negated-commands-tell" level={3}>
@@ -360,11 +363,11 @@ function AliveDeadSection() {
   return (
     <>
       <SectionHeading id="verb-alive" level={2}>
-        unheʔ — (to be) alive
+        -unheʔ- — (to be) alive
       </SectionHeading>
       <Text>
-        Below is the paradigm table for <b>unheʔ</b>. It is a U-stem root word
-        and uses red pronominals.
+        Below is the paradigm table for <b>-unheʔ-</b>. It is a U-stem root word
+        and uses subjective pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
@@ -374,13 +377,14 @@ function AliveDeadSection() {
         data={unheJson}
       />
       <SectionHeading id="verb-dead" level={2}>
-        iheyu / ʌheyu — (to be) dead / (to have) died
+        -iheyu- / -ʌheyu- — (to be) dead / (to have) died
       </SectionHeading>
       <Text>
-        Below is the paradigm table for <b>iheyu</b>. It is an irregular root
-        word where its stem depends on the pronominal. It can be thought of as a
-        Λ-stem root word for all pronominals except the "me" pronominal, where
-        it is an I-stem root word. In both cases, it uses blue pronominals.
+        Below is the paradigm table for <b>-iheyu-</b> / <b>-ʌheyu-</b>. It is
+        an irregular root word where its stem depends on the pronominal. It can
+        be thought of as a Λ-stem root word for all pronominals except the "me"
+        pronominal, where it is an I-stem root word. In both cases, it uses
+        objective pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
@@ -397,11 +401,11 @@ function PassedOnSection() {
   return (
     <>
       <SectionHeading id="verb-passed-on" level={2}>
-        atukohtu — to have passed on
+        -atukohtu- — to have passed on
       </SectionHeading>
       <Text>
-        Below is the paradigm table for <b>atukohtu</b>. It is an A-stem root
-        word and uses blue pronominals.
+        Below is the paradigm table for <b>-atukohtu-</b>. It is an A-stem root
+        word and uses objective pronominals.
       </Text>
       <ParadigmTable
         allowedPronouns={["m", "f", "it", "ms", "fs"]}
@@ -474,7 +478,7 @@ function YoungOldSection() {
       </SectionHeading>
       <Text>
         Below is the paradigm table for <b>kstʌha</b>. It is a C-stem root word
-        and uses blue pronominals.
+        and uses objective pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
@@ -489,7 +493,7 @@ function YoungOldSection() {
       </SectionHeading>
       <Text>
         Below is the paradigm table for <b>kʌʔ nit...yʌha</b>. It is a C-stem
-        root word and uses blue pronominals. It makes use of the{" "}
+        root word and uses objective pronominals. It makes use of the{" "}
         <LinkWrapper page="dim" />.
       </Text>
       <ParadigmTable
@@ -620,7 +624,7 @@ function NumbersSection() {
           11 - 19: the second digit comes first, followed by <b>yawa·lé̲·</b>
         </List.Item>
         <List.Item>
-          21 - 29: <b>tewáhsʌ̲</b> then the second digit
+          20 - 29: <b>tewáhsʌ</b> then the second digit
         </List.Item>
         <List.Item>
           30 - 99: the first digit, <b>niwáhsʌ̲</b>, then the second digit

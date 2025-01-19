@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} will get dead-tired",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["t", "DUAL"], ["ʌ", "FUT"], ["k"], "hwishʌ́heyeʔ"],
