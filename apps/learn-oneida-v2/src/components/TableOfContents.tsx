@@ -33,12 +33,14 @@ TableOfContents.Item = TableOfContentsItem;
 
 interface TableOfContentsSectionProps {
   children: React.ReactNode;
+  level?: 0 | 1 | 2;
 }
 
 TableOfContents.Section = function TableOfContentsSection({
   children,
+  level = 0,
 }: TableOfContentsSectionProps) {
-  return <List>{children}</List>;
+  return <List level={level}>{children}</List>;
 };
 
 TableOfContentsItem.Phrase = function TocItemPhrase({
