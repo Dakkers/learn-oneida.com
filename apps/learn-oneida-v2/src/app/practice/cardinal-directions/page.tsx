@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
@@ -11,10 +12,10 @@ import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Cardinal Directions",
-  description: "Match the Oneida words with the English words.",
-};
+// export const metadata: Metadata = {
+//   title: "Cardinal Directions",
+//   description: "Match the Oneida words with the English words.",
+// };
 
 export default function PracticeCardinalDirections() {
   return (

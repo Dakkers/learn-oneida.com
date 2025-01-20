@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { DATA_SEASONS } from "~/components/articles/Seasons";
 import { Flower2Icon, LeafIcon, SnowflakeIcon, SunIcon } from "lucide-react";
@@ -7,10 +8,10 @@ import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 
-export const metadata: Metadata = {
-  title: "Seasons",
-  description: "Match the Oneida words with the English words.",
-};
+// export const metadata: Metadata = {
+//   title: "Seasons",
+//   description: "Match the Oneida words with the English words.",
+// };
 
 export default function PracticeSeasons() {
   return (
