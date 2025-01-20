@@ -1,3 +1,4 @@
+"use client";
 import {
   TableOfContents as TOC,
   TableOfContentsItem as TocItem,
@@ -16,10 +17,10 @@ import { createModule8CharacteristicsList } from "@/data/module08";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Module 8",
-  description: "Module 8 of the Oneida curriculum",
-};
+// export const metadata: Metadata = {
+//   title: "Module 8",
+//   description: "Module 8 of the Oneida curriculum",
+// };
 
 export default function LearnModule07() {
   const list = createModule7NounsList();
