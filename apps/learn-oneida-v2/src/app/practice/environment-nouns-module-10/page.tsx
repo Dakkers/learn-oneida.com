@@ -8,15 +8,11 @@ import {
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule10EnvironmentNounsList } from "@/data/module10";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Environment noun identification (module 10)" },
-    {
-      name: "description",
-      content: "Quiz your Oneida knowledge by picking the right translation!",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Environment noun identification (module 10)",
+  description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
 export default function PracticeEnvironmentNounIdentificationModule10() {
@@ -51,7 +47,7 @@ export default function PracticeEnvironmentNounIdentificationModule10() {
   }, []);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>
         Practice identifying environment nouns from module 10
       </SectionHeading>
@@ -60,6 +56,6 @@ export default function PracticeEnvironmentNounIdentificationModule10() {
         englishOptions={englishOptions}
         oneidaOptions={oneidaOptions}
       />
-    </Flex>
+    </PageWrapper>
   );
 }

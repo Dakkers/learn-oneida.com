@@ -1,4 +1,3 @@
-"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
@@ -19,16 +18,13 @@ import {
   translatePhrase,
 } from "@ukwehuwehneke/language-components";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Tenses Conjugation for Verbs from Module 4" },
-    {
-      name: "description",
-      content:
-        "Practice your knowledge and understanding of tenses for verbs from module 4 in the Oneida language.",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Tenses Conjugation for Verbs from Module 4",
+  description:
+    "Practice your knowledge and understanding of tenses for verbs from module 4 in the Oneida language.",
 };
 
 export default function PracticeTenseConjugation() {
@@ -115,7 +111,7 @@ export default function PracticeTenseConjugation() {
   }, [rows]);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>Tense Conjugation for Module 4</SectionHeading>
 
       <Text>
@@ -168,6 +164,6 @@ export default function PracticeTenseConjugation() {
           rows={rows}
         />
       )}
-    </Flex>
+    </PageWrapper>
   );
 }

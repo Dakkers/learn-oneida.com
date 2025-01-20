@@ -1,5 +1,6 @@
+"use client";
 import { pluralizeVerbCommon } from "@/utils/translation";
-import { Pronoun, pronouns } from "@ukwehuwehneke/language-components";
+import { pronouns } from "@ukwehuwehneke/language-components";
 import { createParadigmData } from "@/utils/paradigm";
 
 const data = createParadigmData(

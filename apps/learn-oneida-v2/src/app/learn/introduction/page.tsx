@@ -19,6 +19,7 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Link } from "@/components/Link";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { ParadigmsSection } from "./client";
+import { PageWrapper } from "@/components/PageWrapper";
 
 export const metadata: Metadata = {
   title: "Introduction",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function LearnIntroduction() {
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Introduction</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
@@ -170,7 +171,7 @@ export default function LearnIntroduction() {
       <Text>
         Click <LinkWrapper page={1}>here</LinkWrapper> to continue to module 1!
       </Text>
-    </>
+    </PageWrapper>
   );
 }
 

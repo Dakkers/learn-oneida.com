@@ -1,20 +1,17 @@
 import React from "react";
 import { TimesOfDayArticle } from "~/components/articles/TimesOfDay";
 
-const meta: any = () => {
-  return [
-    { title: "Times of day" },
-    {
-      name: "description",
-      content: "Times of day in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Times of day",
+  description: "Times of day in Oneida",
 };
 
 export default function ArticlesTimesOfDay() {
   return (
-    <div>
+    <PageWrapper>
       <TimesOfDayArticle />
-    </div>
+    </PageWrapper>
   );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import dataIsHere from "~/data/module04/is-here";
 import dataWasHere from "~/data/module04/was-here";
 import dataWillBeHere from "~/data/module04/will-be-here";
@@ -37,7 +35,12 @@ import dataThought from "~/data/module04/thought";
 import { Accordion, Text } from "@ukwehuwehneke/ohutsya";
 import type { ParadigmData } from "@/utils/paradigm";
 import { ParadigmTable } from "~/components/ParadigmTable";
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
@@ -56,12 +59,12 @@ import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { PhoneNumbersArticle } from "~/components/articles/PhoneNumbers";
 import { ClockTimeArticle } from "~/components/articles/ClockTime";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Module 4" },
-    { name: "description", content: "Module 4 of the Oneida curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Module 4",
+  description: "Module 4 of the Oneida curriculum",
 };
 
 const columnVisibility = {
@@ -71,7 +74,7 @@ const columnVisibility = {
 
 export default function LearnModule04() {
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Module 4</SectionHeading>
 
       <Box py={4}>
@@ -81,187 +84,178 @@ export default function LearnModule04() {
       </Box>
 
       <TOC>
-        <TOC.Item label="Being here" value="being-here">
-          <TOC.Section>
-            <TOC.Item label="Someone is here" value="someone-is-here" />
-            <TOC.Item label="Someone was here" value="someone-was-here" />
-            <TOC.Item
+        <TocItem label="Being here" value="being-here">
+          <TocSection>
+            <TocItem label="Someone is here" value="someone-is-here" />
+            <TocItem label="Someone was here" value="someone-was-here" />
+            <TocItem
               label="Someone will be here"
               value="someone-will-be-here"
             />
-            <TOC.Item
+            <TocItem
               label="Someone would/might be here"
               value="someone-might-be-here"
             />
-            <TOC.Item label="Someone is not here" value="someone-is-not-here" />
-            <TOC.Item
+            <TocItem label="Someone is not here" value="someone-is-not-here" />
+            <TocItem
               label="Someone was not here"
               value="someone-was-not-here"
             />
-            <TOC.Item
+            <TocItem
               label="Someone will not be here"
               value="someone-will-not-be-here"
             />
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Being there (temporarily)" value="being-there-temp">
-          <TOC.Section>
-            <TOC.Item label="Someone is there" value="someone-is-there-temp" />
-            <TOC.Item
-              label="Someone was there"
-              value="someone-was-there-temp"
-            />
-            <TOC.Item
+        <TocItem label="Being there (temporarily)" value="being-there-temp">
+          <TocSection>
+            <TocItem label="Someone is there" value="someone-is-there-temp" />
+            <TocItem label="Someone was there" value="someone-was-there-temp" />
+            <TocItem
               label="Someone will be there"
               value="someone-will-be-there-temp"
             />
-            <TOC.Item
+            <TocItem
               label="Someone would/might be there"
               value="someone-might-be-there-temp"
             />
-            <TOC.Item
+            <TocItem
               label="Someone is not there"
               value="someone-is-not-there-temp"
             />
-            <TOC.Item
+            <TocItem
               label="Someone was not there"
               value="someone-was-not-there-temp"
             />
-            <TOC.Item
+            <TocItem
               label="Someone will not be there"
               value="someone-will-not-be-there-temp"
             />
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        {/* <TOC.Item label="Being there (usually)" value="being-there-usually">
-          <TOC.Section>
-            <TOC.Item
+        {/* <TocItem label="Being there (usually)" value="being-there-usually">
+          <TocSection>
+            <TocItem
               label="Someone is there"
               value="someone-is-there-usually"
             />
-            <TOC.Item
+            <TocItem
               label="Someone was there"
               value="someone-was-there-usually"
             />
-            <TOC.Item
+            <TocItem
               label="Someone will be there"
               value="someone-will-be-there-usually"
             />
-            <TOC.Item
+            <TocItem
               label="Someone would/might be there"
               value="someone-might-be-there-usually"
             />
-            <TOC.Item
+            <TocItem
               label="Someone is not there"
               value="someone-is-not-there-usually"
             />
-            <TOC.Item
+            <TocItem
               label="Someone was not there"
               value="someone-was-not-there-usually"
             />
-            <TOC.Item
+            <TocItem
               label="Someone will not be there"
               value="someone-will-not-be-there-usually"
             />
-          </TOC.Section>
-        </TOC.Item> */}
+          </TocSection>
+        </TocItem> */}
 
-        <TOC.Item
-          label="Residing at an address / being home"
-          value="being-home"
-        >
-          <TOC.Section>
-            <TOC.Item label="Someone is at home" value="someone-is-at-home" />
-            <TOC.Item label="Someone was at home" value="someone-was-at-home" />
-            <TOC.Item
+        <TocItem label="Residing at an address / being home" value="being-home">
+          <TocSection>
+            <TocItem label="Someone is at home" value="someone-is-at-home" />
+            <TocItem label="Someone was at home" value="someone-was-at-home" />
+            <TocItem
               label="Someone will be at home"
               value="someone-will-be-at-home"
             />
-            <TOC.Item
+            <TocItem
               label="Someone would/might be at home"
               value="someone-might-be-at-home"
             />
-            <TOC.Item
+            <TocItem
               label="Someone is not at home"
               value="someone-is-not-at-home"
             />
-            <TOC.Item
+            <TocItem
               label="Someone was not at home"
               value="someone-was-not-at-home"
             />
-            <TOC.Item
+            <TocItem
               label="Someone will not be at home"
               value="someone-will-not-be-at-home"
             />
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Living in an area" value="living-there">
-          <TOC.Section>
-            <TOC.Item label="Someone lives there" value="someone-lives-there" />
-            <TOC.Item
+        <TocItem label="Living in an area" value="living-there">
+          <TocSection>
+            <TocItem label="Someone lives there" value="someone-lives-there" />
+            <TocItem
               label="Someone used to live there"
               value="someone-used-to-live-there"
             />
-            <TOC.Item
+            <TocItem
               label="Someone will live there"
               value="someone-will-live-there"
             />
-            <TOC.Item
+            <TocItem
               label="Someone would/might live there"
               value="someone-might-live-there"
             />
-            <TOC.Item
+            <TocItem
               label="Someone doesn't live there"
               value="someone-doesnt-live-there"
             />
-            <TOC.Item
+            <TocItem
               label="Someone didn't used to live there"
               value="someone-didnt-used-to-live-there"
             />
-            <TOC.Item
+            <TocItem
               label="Someone will not live there"
               value="someone-will-not-live-there"
             />
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Want something to happen" value="want-thought">
-          <TOC.Section>
-            <TOC.Item label="Want" value="someone-wants" />
-            <TOC.Item label="Doesn't want" value="someone-doesnt-want" />
-            <TOC.Item label="Used to want" value="someone-used-to-want" />
-            <TOC.Item
+        <TocItem label="Want something to happen" value="want-thought">
+          <TocSection>
+            <TocItem label="Want" value="someone-wants" />
+            <TocItem label="Doesn't want" value="someone-doesnt-want" />
+            <TocItem label="Used to want" value="someone-used-to-want" />
+            <TocItem
               label="Didn't used to want"
               value="someone-didnt-used-to-want"
             />
-            <TOC.Item label="Thought" value="someone-thought" />
-          </TOC.Section>
-        </TOC.Item>
+            <TocItem label="Thought" value="someone-thought" />
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Times of day" value="times-of-day" />
-        <TOC.Item label="Days of the week" value="days-of-week" />
-        <TOC.Item label="Months of the year" value="months" />
-        <TOC.Item label="Clock time" value="clock-time" />
-        <TOC.Item label="Counting time" value="counting-time" />
-        <TOC.Item label="Phone numbers" value="phone-numbers">
-          <TOC.Section>
-            <TOC.Item label="Someone's house" value="at-someones-house" />
-            <TOC.Item
-              label="Someone's place of work"
-              value="at-someones-work"
-            />
-          </TOC.Section>
-        </TOC.Item>
-        <TOC.Item label="Roads" value="roads" />
-        <TOC.Item label="Cities" value="cities" />
-        <TOC.Item label="Countries" value="countries" />
-        <TOC.Item label="Around the house" value="around-the-house" />
-        <TOC.Item label="At someone's place" value="at-someones-place" />
-        <TOC.Item label="Places in the community" value="places-in-community" />
-        <TOC.Item label="Particles" value="particles" />
+        <TocItem label="Times of day" value="times-of-day" />
+        <TocItem label="Days of the week" value="days-of-week" />
+        <TocItem label="Months of the year" value="months" />
+        <TocItem label="Clock time" value="clock-time" />
+        <TocItem label="Counting time" value="counting-time" />
+        <TocItem label="Phone numbers" value="phone-numbers">
+          <TocSection>
+            <TocItem label="Someone's house" value="at-someones-house" />
+            <TocItem label="Someone's place of work" value="at-someones-work" />
+          </TocSection>
+        </TocItem>
+        <TocItem label="Roads" value="roads" />
+        <TocItem label="Cities" value="cities" />
+        <TocItem label="Countries" value="countries" />
+        <TocItem label="Around the house" value="around-the-house" />
+        <TocItem label="At someone's place" value="at-someones-place" />
+        <TocItem label="Places in the community" value="places-in-community" />
+        <TocItem label="Particles" value="particles" />
       </TOC>
 
       <SectionHeading id="being-here" level={2}>
@@ -481,7 +475,7 @@ export default function LearnModule04() {
         Particles
       </SectionHeading>
       <ParticlesTable group="module04" />
-    </>
+    </PageWrapper>
   );
 }
 

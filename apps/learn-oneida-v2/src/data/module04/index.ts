@@ -553,8 +553,6 @@ export function createTimesOfDayData() {
     { en: "noon", translation: ["ʌ́ti", "ʌ́tyʌ ni·kále̲ʔ"] },
   ].map(mapUtil);
 
-  console.log(afternoonPhrases);
-
   const otherPhrases = [
     { en: "always", translation: "tyóhtkut" },
     { en: "eclipse", translation: "utʌhniʔtáhtuʔ" },

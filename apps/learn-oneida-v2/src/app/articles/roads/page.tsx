@@ -1,20 +1,17 @@
 import React from "react";
 import { RoadsArticle } from "~/components/articles/Roads";
 
-const meta: any = () => {
-  return [
-    { title: "Roads" },
-    {
-      name: "description",
-      content: "Roads in the Oneida of the Thames community",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Roads",
+  description: "Roads in the Oneida of the Thames community",
 };
 
 export default function ArticlesRoads() {
   return (
-    <div>
+    <PageWrapper>
       <RoadsArticle />
-    </div>
+    </PageWrapper>
   );
 }

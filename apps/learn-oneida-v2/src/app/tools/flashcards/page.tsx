@@ -1,5 +1,3 @@
-"use client";
-
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
@@ -12,6 +10,7 @@ import { RadioGroup } from "@ukwehuwehneke/ohutsya";
 import { Card } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { createModule6VerbList } from "~/data/module06/activeVerbsList";
+import { PageWrapper } from "@/components/PageWrapper";
 
 interface Item {
   en: string;
@@ -104,7 +103,7 @@ export default function ToolsFlashcards() {
   );
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>Flashcards</SectionHeading>
 
       {hasStarted ? (
@@ -166,7 +165,7 @@ export default function ToolsFlashcards() {
           </Flex.Item>
         </Flex>
       )}
-    </Flex>
+    </PageWrapper>
   );
 }
 

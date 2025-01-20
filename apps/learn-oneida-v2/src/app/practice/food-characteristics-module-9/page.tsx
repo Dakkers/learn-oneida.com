@@ -9,15 +9,11 @@ import {
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { createModule9FoodCharacteristics } from "@/data/module09";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Food characteristics (module 9)" },
-    {
-      name: "description",
-      content: "Quiz your Oneida knowledge by picking the right translation!",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Food characteristics (module 9)",
+  description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
 export default function PracticeFoodIdentificationModule9() {
@@ -38,7 +34,7 @@ export default function PracticeFoodIdentificationModule9() {
   }, []);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>
         Practice identifying food characteristics from module 9
       </SectionHeading>
@@ -47,6 +43,6 @@ export default function PracticeFoodIdentificationModule9() {
         englishOptions={englishOptions}
         oneidaOptions={oneidaOptions}
       />
-    </Flex>
+    </PageWrapper>
   );
 }

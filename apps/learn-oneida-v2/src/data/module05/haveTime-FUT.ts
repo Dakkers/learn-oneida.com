@@ -3,7 +3,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} will be have time",
+    translation: "{{pronoun}} will have time",
     type: "PO",
     phrases: [
       {

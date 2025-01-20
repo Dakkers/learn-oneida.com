@@ -1,5 +1,3 @@
-"use client";
-
 import { Divider, Notice, Text } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
@@ -13,7 +11,12 @@ import { ParadigmTable } from "~/components/ParadigmTable";
 import { Pronominal } from "~/components/Pronominal";
 import { PeopleArticle } from "~/components/articles/People";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 import { Letter } from "~/components/Letter";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { DialogueTable } from "~/components/DialogueTable";
@@ -29,87 +32,79 @@ import { ListOfWords } from "@/components/ListOfWords";
 import _ from "lodash";
 import { createParadigmData } from "@/utils/paradigm";
 import { Link } from "@/components/Link";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Module 1" },
-    { name: "description", content: "Module 1 of the Oneida curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Module 1",
+  description: "Module 1 of the Oneida curriculum",
 };
 
 export default function LearnModule01() {
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Module 1</SectionHeading>
 
-      <Notice intent="negative">
-        This page is undergoing a rewrite of sorts. There is missing content and
-        other content is subject to change.
-      </Notice>
-
       <TOC>
-        <TOC.Item label="Introduction" value="intro" />
-        <TOC.Item label="Pronominals" value="pronominals">
-          <TOC.Section>
-            <TOC.Item label="English Pronouns" value="english-pronouns" />
-            <TOC.Item label="Standalone Pronouns" value="standalone-pronouns" />
-            <TOC.Item label="Bound Pronouns" value="bound-pronouns" />
-            <TOC.Section level={1}>
-              <TOC.Item
+        <TocItem label="Introduction" value="intro" />
+        <TocItem label="Pronominals" value="pronominals">
+          <TocSection>
+            <TocItem label="English Pronouns" value="english-pronouns" />
+            <TocItem label="Standalone Pronouns" value="standalone-pronouns" />
+            <TocItem label="Bound Pronouns" value="bound-pronouns" />
+            <TocSection level={1}>
+              <TocItem
                 label="Subjective Pronominals (Red)"
                 value="subjective"
               />
-              <TOC.Item
-                label="Objective Pronominals (Blue)"
-                value="objective"
-              />
-              <TOC.Item
+              <TocItem label="Objective Pronominals (Blue)" value="objective" />
+              <TocItem
                 label="Interactive Pronominals (Purple)"
                 value="interactive"
               />
-              <TOC.Item
+              <TocItem
                 label="Possessive Pronominals (Light Blue)"
                 value="possessive"
               />
-              <TOC.Item label="Exceptions" value="exceptions" />
-            </TOC.Section>
-          </TOC.Section>
-        </TOC.Item>
+              <TocItem label="Exceptions" value="exceptions" />
+            </TocSection>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Leading Vowel Pronunciation" value="leading-vowel" />
-        <TOC.Item label="Stress and Accents" value="stress">
-          <TOC.Section>
-            <TOC.Item label="Short stress" value="short-stress" />
-            <TOC.Item label="Long stress" value="long-stress" />
-            <TOC.Item label="Length" value="length" />
-            <TOC.Item label="Where stress occurs" value="where-stress" />
-          </TOC.Section>
-        </TOC.Item>
+        <TocItem label="Leading Vowel Pronunciation" value="leading-vowel" />
+        <TocItem label="Stress and Accents" value="stress">
+          <TocSection>
+            <TocItem label="Short stress" value="short-stress" />
+            <TocItem label="Long stress" value="long-stress" />
+            <TocItem label="Length" value="length" />
+            <TocItem label="Where stress occurs" value="where-stress" />
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Glottal Stops" value="glottal" />
-        <TOC.Item label="The Letter H" value="letter-h" />
-        <TOC.Item label="Prepausal Endings" value="prepausal-endings" />
+        <TocItem label="Glottal Stops" value="glottal" />
+        <TocItem label="The Letter H" value="letter-h" />
+        <TocItem label="Prepausal Endings" value="prepausal-endings" />
 
-        <TOC.Item.Phrase label="to be named" word="yats" value="yats" />
-        <TOC.Item.Phrase label="to know" word="anuhte" value="anuhte" />
-        <TOC.Item.Phrase label="belonging" word="awʌ" value="belonging" />
-        <TOC.Item label="It belongs to someone" value="belongs-to-someone" />
+        <TocPhrase label="to be named" word="yats" value="yats" />
+        <TocPhrase label="to know" word="anuhte" value="anuhte" />
+        <TocPhrase label="belonging" word="awʌ" value="belonging" />
+        <TocItem label="It belongs to someone" value="belongs-to-someone" />
 
-        <TOC.Item label="Negating Verbs" value="negating-verbs" />
-        <TOC.Item label="Particles" value="particles" />
+        <TocItem label="Negating Verbs" value="negating-verbs" />
+        <TocItem label="Particles" value="particles" />
 
-        <TOC.Item label="People" value="people-article">
-          <TOC.Section>
-            <TOC.Item label="Children" value="people-article-children" />
-            <TOC.Item label="Adolescents" value="people-article-adolescents" />
-            <TOC.Item label="Adults" value="people-article-adults" />
-            <TOC.Item label="Older people" value="people-article-older" />
-          </TOC.Section>
-        </TOC.Item>
+        <TocItem label="People" value="people-article">
+          <TocSection>
+            <TocItem label="Children" value="people-article-children" />
+            <TocItem label="Adolescents" value="people-article-adolescents" />
+            <TocItem label="Adults" value="people-article-adults" />
+            <TocItem label="Older people" value="people-article-older" />
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="English names" value="english-names" />
-        <TOC.Item label="Dialogue" value="dialogue" />
-        <TOC.Item label="Translation exercises" value="translation-exercises" />
+        <TocItem label="English names" value="english-names" />
+        <TocItem label="Dialogue" value="dialogue" />
+        <TocItem label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <Divider />
@@ -159,7 +154,7 @@ export default function LearnModule01() {
 
       <DialogueSection />
       <TranslationExercisesSection group="module01" />
-    </>
+    </PageWrapper>
   );
 }
 

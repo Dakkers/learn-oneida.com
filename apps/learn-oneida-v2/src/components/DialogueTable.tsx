@@ -1,5 +1,3 @@
-"use client";
-
 import { arrayify } from "@ukwehuwehneke/language-components";
 import {
   cn,

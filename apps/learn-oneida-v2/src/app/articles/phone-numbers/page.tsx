@@ -1,20 +1,17 @@
 import React from "react";
 import { PhoneNumbersArticle } from "~/components/articles/PhoneNumbers";
 
-const meta: any = () => {
-  return [
-    { title: "Phone Numbers" },
-    {
-      name: "description",
-      content: "Examples of dialogue involving phone numbers in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Phone Numbers",
+  description: "Examples of dialogue involving phone numbers in Oneida",
 };
 
 export default function ArticlesPhoneNumbers() {
   return (
-    <div>
+    <PageWrapper>
       <PhoneNumbersArticle />
-    </div>
+    </PageWrapper>
   );
 }

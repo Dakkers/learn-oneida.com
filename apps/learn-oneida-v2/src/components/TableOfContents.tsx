@@ -44,6 +44,8 @@ export function TableOfContentsSection({
   return <List level={level}>{children}</List>;
 }
 
+TableOfContents.Section = TableOfContentsSection;
+
 export function TableOfContentsItemPhrase({
   label,
   word,

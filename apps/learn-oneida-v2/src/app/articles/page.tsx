@@ -1,16 +1,14 @@
-"use client";
-
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
-const meta: any = () => {
-  return [
-    { title: "Articles" },
-    { name: "description", content: "Articles provided by this website" },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Articles",
+  description: "Articles provided by this website",
 };
 
 export default function Articles() {

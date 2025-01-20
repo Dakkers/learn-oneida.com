@@ -17,16 +17,12 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Tense Identification for Active Verbs" },
-    {
-      name: "description",
-      content:
-        "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on an active verb.",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Tense Identification for Active Verbs",
+  description:
+    "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on an active verb.",
 };
 
 const TENSE_LIST = ["hab", "def", "fut", "ifut", "cmd", "pfv"] as const;
@@ -88,7 +84,7 @@ export default function PracticeTenseIdentification() {
         setQuestionCountSetting,
       }}
     >
-      <Flex direction="column" gap={4}>
+      <PageWrapper>
         <SectionHeading level={1}>
           Tense Identification (Active Verbs)
         </SectionHeading>
@@ -137,7 +133,7 @@ export default function PracticeTenseIdentification() {
             </Box>
           </>
         )}
-      </Flex>
+      </PageWrapper>
     </QuizContainerContext.Provider>
   );
 }

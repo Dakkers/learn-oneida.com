@@ -1,6 +1,3 @@
-"use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
@@ -9,15 +6,11 @@ import {
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { createModule7NounsList } from "@/data/module07";
 import { convertBreakdownToPlainText } from "@ukwehuwehneke/language-components";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Noun identification (module 7)" },
-    {
-      name: "description",
-      content: "Quiz your Oneida knowledge by picking the right translation!",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Noun identification (module 7)",
+  description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
 export default function PracticeNounIdentificationModule7() {
@@ -41,7 +34,7 @@ export default function PracticeNounIdentificationModule7() {
   }, []);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <Heading level={1} variant="headlineL">
         Practice identifying nouns from module 7
       </Heading>
@@ -50,6 +43,6 @@ export default function PracticeNounIdentificationModule7() {
         englishOptions={englishOptions}
         oneidaOptions={oneidaOptions}
       />
-    </Flex>
+    </PageWrapper>
   );
 }

@@ -11,15 +11,11 @@ import { List } from "@ukwehuwehneke/ohutsya";
 import { doTheTranslate } from "~/utils/time";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Clock Time" },
-    {
-      name: "description",
-      content: "Translate clock time into Oneida",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Clock Time",
+  description: "Translate clock time into Oneida",
 };
 
 export default function ToolsClock() {
@@ -29,7 +25,7 @@ export default function ToolsClock() {
   const [translatedValue, setTranslatedValue] = React.useState<string[]>([]);
 
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Clock Time</SectionHeading>
 
       <Flex direction="column" gap={2}>
@@ -83,6 +79,6 @@ export default function ToolsClock() {
           <List.Item key={i}>{value}</List.Item>
         ))}
       </List>
-    </>
+    </PageWrapper>
   );
 }

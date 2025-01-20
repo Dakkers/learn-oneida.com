@@ -1,3 +1,4 @@
+"use client";
 import { PlayIcon } from "lucide-react";
 
 export interface PlayButtonProps {

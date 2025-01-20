@@ -1,16 +1,17 @@
 import React from "react";
 import { CountingTimeArticle } from "~/components/articles/CountingTime";
 
-const meta: any = () => {
-  return [
-    { title: "Counting lengths of time" },
-    {
-      name: "description",
-      content: "Counting lengths of time in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Counting lengths of time",
+  description: "Counting lengths of time in Oneida",
 };
 
 export default function ArticlesCountingTime() {
-  return <CountingTimeArticle />;
+  return (
+    <PageWrapper>
+      <CountingTimeArticle />
+    </PageWrapper>
+  );
 }

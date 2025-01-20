@@ -1,4 +1,5 @@
 import { Link } from "@/components/Link";
+import { PageWrapper } from "@/components/PageWrapper";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box, Card, Flex, Text } from "@ukwehuwehneke/ohutsya";
 
@@ -35,7 +36,7 @@ export default function Index() {
   ] as const;
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <div className="lg:max-w-lg mx-auto mt-4 md:mt-8 mb-2 md:mb-4">
         <SectionHeading align="center" level={1}>
           Welcome to Learn Oneida
@@ -72,6 +73,6 @@ export default function Index() {
           ))}
         </div>
       </div>
-    </Flex>
+    </PageWrapper>
   );
 }

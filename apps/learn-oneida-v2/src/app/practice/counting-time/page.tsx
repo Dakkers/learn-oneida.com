@@ -10,15 +10,11 @@ import { createCountingTimeDataLegacy } from "~/components/articles/CountingTime
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { Link } from "@/components/Link";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Practice Counting Time" },
-    {
-      name: "description",
-      content: "Test your Oneida knowledge on counting lengths of time!",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Practice Counting Time",
+  description: "Test your Oneida knowledge on counting lengths of time!",
 };
 
 export default function PracticeCountingTime() {
@@ -55,7 +51,7 @@ export default function PracticeCountingTime() {
   const [hasStarted, setHasStarted] = useState(false);
 
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Practice counting time</SectionHeading>
       <Text>
         Here you can practice the terminology on the{" "}
@@ -78,6 +74,6 @@ export default function PracticeCountingTime() {
           </Button>
         </Flex>
       )}
-    </>
+    </PageWrapper>
   );
 }

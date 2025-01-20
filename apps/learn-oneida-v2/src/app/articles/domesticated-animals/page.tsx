@@ -1,20 +1,17 @@
 import React from "react";
 import { DomesticatedAnimalsArticle } from "~/components/articles/DomesticatedAnimals";
 
-const meta: any = () => {
-  return [
-    { title: "Domesticated Animals" },
-    {
-      name: "description",
-      content: "Domesticated animals in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Domesticated Animals",
+  description: "Domesticated animals in Oneida",
 };
 
 export default function ArticlesDomesticatedAnimals() {
   return (
-    <div>
+    <PageWrapper>
       <DomesticatedAnimalsArticle />
-    </div>
+    </PageWrapper>
   );
 }

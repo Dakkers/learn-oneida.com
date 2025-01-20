@@ -10,11 +10,12 @@ const notoSansFont = Noto_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Learn Oneida',
-    default: 'Learn Oneida',
+    template: "%s | Learn Oneida",
+    default: "Learn Oneida",
   },
-  description: 'Learn the Oneida language with our comprehensive online resources. Includes a fully developed curriculum and tools for practicing. Free-to-use forever!',
-  metadataBase: new URL('https://learn-oneida.com'),
+  description:
+    "Learn the Oneida language with our comprehensive online resources. Includes a fully developed curriculum and tools for practicing. Free-to-use forever!",
+  metadataBase: new URL("https://learn-oneida.com"),
 };
 
 export default function RootLayout({
@@ -22,7 +23,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const useLargeWidth = true;
   return (
     <html lang="en">
       <body className={notoSansFont.className}>
@@ -30,14 +30,7 @@ export default function RootLayout({
         <div className="bg-gray-100">
           <Navbar />
         </div>
-        <div
-          className={cn(
-            "mx-auto flex flex-col gap-4 p-4 md:p-8",
-            useLargeWidth ? "max-w-5xl" : "max-w-2xl",
-          )}
-        >
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );

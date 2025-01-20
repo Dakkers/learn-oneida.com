@@ -3,10 +3,6 @@
 import {
   Bleed,
   type BleedProps,
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
   Flex,
   PlayButton,
   PrimitiveTable,
@@ -17,7 +13,6 @@ import {
   PrimitiveTableRow,
   TextArray,
 } from "@ukwehuwehneke/ohutsya";
-import { Settings } from "lucide-react";
 import React from "react";
 import {
   PRONOUN_MAP_EN,
@@ -36,18 +31,18 @@ import _ from "lodash";
 
 import type { ParadigmData, ParadigmTableRow } from "@/utils/paradigm";
 import { getAudioFilenameForPronoun } from "@/utils/misc";
-
-const ParadigmTableContext =
-  React.createContext<ParadigmTableContextProps | null>(null);
+import { type ColumnVisibility, SettingsMenu } from "./SettingsMenu";
 
 export interface ParadigmTableProps {
   allowedPronouns?: Pronoun[];
   audioFolder?: string;
   bleed?: BleedProps["mx"];
   columnVisibility?: Partial<ColumnVisibility>;
-  data: ParadigmTableContextProps["data"];
+  data: ParadigmData;
   ignoredBreakdownTypes?: TextBreakdownProps["ignored"];
-  legacyTranslationFn?: ParadigmTableContextProps["legacyTranslationFn"];
+  legacyTranslationFn?: ({
+    pronoun,
+  }: { pronoun: Pronoun }) => Record<string, string>;
 }
 
 export function ParadigmTable({
@@ -75,17 +70,13 @@ export function ParadigmTable({
   }, [data.phrases, allowedPronouns]);
 
   return (
-    <ParadigmTableContext.Provider
-      value={{
-        colVisibility,
-        data,
-        showBreakdown,
-        legacyTranslationFn,
-      }}
-    >
+    <>
       <Bleed mx={bleed}>
         <Flex justify="end">
           <SettingsMenu
+            colVisibility={colVisibility}
+            data={data}
+            showBreakdown={showBreakdown}
             toggleColumn={(columnName) =>
               setColVisibility({
                 ...colVisibility,
@@ -116,9 +107,13 @@ export function ParadigmTable({
             {rowsToShow.map((row, i) => (
               <TableRowWrapper
                 audioFolder={data.audioFolder ?? audioFolder}
+                colVisibility={colVisibility}
+                data={data}
                 ignoredBreakdownTypes={ignoredBreakdownTypes}
+                legacyTranslationFn={legacyTranslationFn}
                 key={i}
                 row={row}
+                showBreakdown={showBreakdown}
                 typeFallback={data.type}
                 whispered={data.whispered}
               />
@@ -126,40 +121,39 @@ export function ParadigmTable({
           </PrimitiveTableBody>
         </PrimitiveTable>
       </Bleed>
-    </ParadigmTableContext.Provider>
+    </>
   );
 }
 
 function TableRowWrapper({
   audioFolder,
+  colVisibility,
+  data,
   ignoredBreakdownTypes,
+  legacyTranslationFn,
   row,
+  showBreakdown,
   typeFallback,
   whispered = false,
 }: {
   audioFolder?: string;
+  colVisibility: ColumnVisibility;
+  data: ParadigmData;
   ignoredBreakdownTypes: TextBreakdownProps["ignored"];
+  legacyTranslationFn?: ParadigmTableProps["legacyTranslationFn"];
   row: ParadigmTableRow;
+  showBreakdown?: boolean;
   typeFallback?: BreakdownType;
   whispered?: boolean;
 }) {
-  const context = React.useContext(ParadigmTableContext);
-  if (!context) {
-    throw new Error("Missing context");
-  }
-  const { colVisibility, data, showBreakdown } = context;
   const translatedPhrase =
-    context.data.type === "PI" && !context.data.categories?.includes("kinship")
+    data.type === "PI" && !data.categories?.includes("kinship")
       ? translatePhraseInteractive(
           // @ts-expect-error ParadigmData doesn't support purple correctly :(
-          context.data,
+          data,
           row.pronoun,
         )
-      : translatePhraseV2(
-          context.data,
-          row.pronoun,
-          context.legacyTranslationFn,
-        );
+      : translatePhraseV2(data, row.pronoun, legacyTranslationFn);
 
   const audioFilenamePronoun = getAudioFilenameForPronoun(
     row.pronoun,
@@ -213,62 +207,4 @@ function TableRowWrapper({
       )}
     </PrimitiveTableRow>
   );
-}
-
-function SettingsMenu({
-  toggleBreakdown,
-  toggleColumn,
-}: {
-  toggleBreakdown: (value: boolean) => void;
-  toggleColumn: (value: string) => void;
-}) {
-  const context = React.useContext(ParadigmTableContext);
-  if (!context) {
-    throw new Error("Missing context");
-  }
-  const { colVisibility, data, showBreakdown } = context;
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger>
-        <Settings className="print:hidden" />
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        {data.type !== "PI" && (
-          <DropdownMenuItem onClick={() => toggleColumn("pronounEnglish")}>
-            {colVisibility.pronounEnglish
-              ? "Hide Pronoun (EN) column"
-              : "Show Pronoun (EN) column"}
-          </DropdownMenuItem>
-        )}
-        <DropdownMenuItem onClick={() => toggleColumn("pronounOneida")}>
-          {colVisibility.pronounOneida
-            ? "Hide Pronoun column"
-            : "Show Pronoun column"}
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => toggleColumn("translation")}>
-          {colVisibility.translation
-            ? "Hide Translation column"
-            : "Show Translation column"}
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => toggleBreakdown(!showBreakdown)}>
-          {showBreakdown ? "Hide text colors" : "Show text colors"}
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
-}
-
-interface ColumnVisibility {
-  pronounOneida: boolean;
-  pronounEnglish: boolean;
-  translation: boolean;
-}
-
-interface ParadigmTableContextProps {
-  colVisibility: ColumnVisibility;
-  data: ParadigmData;
-  showBreakdown?: boolean;
-  legacyTranslationFn?: ({
-    pronoun,
-  }: { pronoun: Pronoun }) => Record<string, string>;
 }

@@ -1,6 +1,9 @@
-"use client";
-
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 import { Accordion, Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
@@ -9,18 +12,17 @@ import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { createModule7NounsList } from "@/data/module07";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Module 7" },
-    { name: "description", content: "Module 7 of the Oneida curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Module 7",
+  description: "Module 7 of the Oneida curriculum",
 };
 
 export default function LearnModule07() {
   const list = createModule7NounsList();
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Module 7</SectionHeading>
 
       <Box py={4}>
@@ -30,22 +32,22 @@ export default function LearnModule07() {
       </Box>
 
       <TOC>
-        <TOC.Item label="Introduction" value="intro" />
+        <TocItem label="Introduction" value="intro" />
 
-        <TOC.Item label="Paradigms for Select Active Verbs" value="paradigms">
-          <TOC.Section>
+        <TocItem label="Paradigms for Select Active Verbs" value="paradigms">
+          <TocSection>
             {list.map((n) => (
-              <TOC.Item key={n.key} label={n.en} value={n.key.toLowerCase()} />
+              <TocItem key={n.key} label={n.en} value={n.key.toLowerCase()} />
             ))}
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Translation exercises" value="translation-exercises" />
+        <TocItem label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <Introduction />
       <AllNouns />
-    </>
+    </PageWrapper>
   );
 }
 

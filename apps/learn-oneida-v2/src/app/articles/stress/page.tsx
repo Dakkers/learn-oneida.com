@@ -1,16 +1,17 @@
 import React from "react";
 import { StressArticle } from "~/components/articles/Stress";
 
-const meta: any = () => {
-  return [
-    { title: "Stress and Accents" },
-    {
-      name: "description",
-      content: "Stress and accents in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Stress and Accents",
+  description: "Stress and accents in Oneida",
 };
 
 export default function ArticlesStress() {
-  return <StressArticle />;
+  return (
+    <PageWrapper>
+      <StressArticle />
+    </PageWrapper>
+  );
 }

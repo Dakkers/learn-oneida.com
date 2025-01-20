@@ -16,10 +16,10 @@ const mapUtil = ([en, translation, audioFile]: string[]) => ({
 const simpleExamples = [
   ["1:00 a.m.", "úska niyohwistá·e astéhtsi̲ʔ", "100_am"],
   ["7:00 a.m.", "tsyá·tak niyohwistá·e astéhtsi̲ʔ", "700_am"],
-  ["11:00 a.m.", "úska yawa·lé niyohwistá·e astéhtsi̲ʔ", "1100_am"],
+  ["11:00 a.m.", "úska yawʌ·lé· niyohwistá·e astéhtsi̲ʔ", "1100_am"],
   ["1:00 p.m.", "úska niyohwistá·e yotukóhtu ʌ́ti", "100_pm"],
   ["4:00 p.m.", "kayé niyohwistá·e yotukóhtu ʌ́ti", "400_pm"],
-  ["5:00 p.m.", "wísk yawa·lé niyohwistá·e yotukóhtu ʌ́ti", "500_pm"],
+  ["5:00 p.m.", "wísk yawʌ·lé· niyohwistá·e yotukóhtu ʌ́ti", "500_pm"],
 ].map(mapUtil);
 
 const minutesExamples = [

@@ -1,11 +1,14 @@
-"use client";
-
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 import { TableWrapper } from "@/components/TableWrapper";
 import {
   type BreakdownArray,
@@ -29,17 +32,17 @@ import { TranslationExercisesSection } from "~/components/practice/TranslationEx
 import { Letter } from "@/components/Letter";
 import { getDialogueModule03 } from "@/data/module03";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Module 3" },
-    { name: "description", content: "Module 3 of the Oneida curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Module 3",
+  description: "Module 3 of the Oneida curriculum",
 };
 
 export default function LearnModule03() {
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>Module 3</SectionHeading>
       <Box py={4}>
         <Notice intent="warning">
@@ -48,61 +51,58 @@ export default function LearnModule03() {
       </Box>
 
       <TOC>
-        <TOC.Item label="Past Tense" value="past-tense">
-          <TOC.Section>
-            <TOC.Item
+        <TocItem label="Past Tense" value="past-tense">
+          <TocSection>
+            <TocItem
               label="Introduction to Past Tense"
               value="past-tense-intro"
             />
-            <TOC.Item
-              label="Something used to be the case"
-              value="used-to-be"
-            />
-            <TOC.Item
+            <TocItem label="Something used to be the case" value="used-to-be" />
+            <TocItem
               label="When something was the case"
               value="past-tense-when"
             />
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Repetitive feature" value="repetitive-s" />
+        <TocItem label="Repetitive feature" value="repetitive-s" />
 
-        <TOC.Item label="Relationships" value="relationships">
-          <TOC.Section>
-            <TOC.Item label="Married" value="married" />
-            <TOC.Item label="In a Relationship" value="in-a-relationship" />
-            <TOC.Item label="Separated" value="separated" />
-            <TOC.Item label="Engaged" value="engaged" />
-            <TOC.Item label="Single" value="single" />
-            <TOC.Item label="Old Man / Old Woman" value="old-man-old-woman" />
-            <TOC.Item label="Spouse" value="spouse" />
-            <TOC.Item
+        <TocItem label="Relationships" value="relationships">
+          <TocSection>
+            <TocItem label="Married" value="married" />
+            <TocItem label="In a Relationship" value="in-a-relationship" />
+            <TocItem label="Separated" value="separated" />
+            <TocItem label="Engaged" value="engaged" />
+            <TocItem label="Single" value="single" />
+            <TocItem label="Old Man / Old Woman" value="old-man-old-woman" />
+            <TocItem label="Spouse" value="spouse" />
+            <TocItem
               label="Girlfriend / Boyfriend"
               value="girlfriend-boyfriend"
             />
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Good and Bad Conjugations" value="good-bad-people">
-          <TOC.Section>
-            <TOC.Item label="Good People" value="good-people" />
-            <TOC.Item label="Bad People" value="bad-people" />
-            <TOC.Item label="Good Kids" value="good-kids" />
-            <TOC.Item label="Bad Kids" value="bad-kids" />
-          </TOC.Section>
-        </TOC.Item>
-        <TOC.Item label="Counting people" value="counting-people" />
-        <TOC.Item label="Counting animals" value="counting-animals" />
-        <TOC.Item label="Domesticated animals" value="domesticated-animals" />
-        <TOC.Item
+        <TocItem label="Good and Bad Conjugations" value="good-bad-people">
+          <TocSection>
+            <TocItem label="Good People" value="good-people" />
+            <TocItem label="Bad People" value="bad-people" />
+            <TocItem label="Good Kids" value="good-kids" />
+            <TocItem label="Bad Kids" value="bad-kids" />
+          </TocSection>
+        </TocItem>
+        <TocItem label="Counting people" value="counting-people" />
+        <TocItem label="Counting animals" value="counting-animals" />
+        <TocItem label="Domesticated animals" value="domesticated-animals" />
+        <TocItem
           label="Having a person or animal"
           value="having-conjugations"
         />
-        <TOC.Item label="Clans" value="clans" />
-        <TOC.Item label="Nations" value="nations" />
-        <TOC.Item label="Particles" value="particles" />
-        <TOC.Item label="Dialogue" value="dialogue" />
-        <TOC.Item label="Translation exercises" value="translation-exercises" />
+        <TocItem label="Clans" value="clans" />
+        <TocItem label="Nations" value="nations" />
+        <TocItem label="Particles" value="particles" />
+        <TocItem label="Dialogue" value="dialogue" />
+        <TocItem label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <PastTenseSection />
@@ -130,7 +130,7 @@ export default function LearnModule03() {
 
       <DialogueSection />
       <TranslationExercisesSection group="module03" />
-    </Flex>
+    </PageWrapper>
   );
 }
 

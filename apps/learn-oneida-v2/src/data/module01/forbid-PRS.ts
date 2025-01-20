@@ -1,3 +1,4 @@
+"use client";
 import { pluralizeVerbCommon } from "@/utils/translation";
 import { createInteractiveParadigmData } from "@/utils/paradigm";
 

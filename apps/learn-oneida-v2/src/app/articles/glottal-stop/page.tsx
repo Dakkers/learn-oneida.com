@@ -1,16 +1,17 @@
 import React from "react";
 import { GlottalStopArticle } from "~/components/articles/GlottalStop";
 
-const meta: any = () => {
-  return [
-    { title: "Glottal Stop" },
-    {
-      name: "description",
-      content: "Glottal stops in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Glottal Stop",
+  description: "Glottal stops in Oneida",
 };
 
 export default function ArticlesGlottalStop() {
-  return <GlottalStopArticle />;
+  return (
+    <PageWrapper>
+      <GlottalStopArticle />
+    </PageWrapper>
+  );
 }

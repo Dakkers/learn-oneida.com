@@ -1,20 +1,17 @@
 import React from "react";
 import { CardinalDirectionsArticle } from "~/components/articles/CardinalDirections";
 
-const meta: any = () => {
-  return [
-    { title: "Cardinal directions" },
-    {
-      name: "description",
-      content: "Cardinal directions in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Cardinal directions",
+  description: "Cardinal directions in Oneida",
 };
 
 export default function ArticlesCardinalDirections() {
   return (
-    <div>
+    <PageWrapper>
       <CardinalDirectionsArticle />
-    </div>
+    </PageWrapper>
   );
 }

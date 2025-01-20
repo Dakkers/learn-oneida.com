@@ -1,6 +1,3 @@
-"use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
@@ -8,15 +5,11 @@ import {
   type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { createMonthsData } from "@/data/module04";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Months" },
-    {
-      name: "description",
-      content: "Quiz your Oneida knowledge by picking the right translation!",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Months",
+  description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
 export default function PracticeMonths() {
@@ -35,7 +28,7 @@ export default function PracticeMonths() {
   }, []);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <Heading level={1} variant="headlineL">
         Practice months
       </Heading>
@@ -44,6 +37,6 @@ export default function PracticeMonths() {
         englishOptions={englishOptions}
         oneidaOptions={oneidaOptions}
       />
-    </Flex>
+    </PageWrapper>
   );
 }

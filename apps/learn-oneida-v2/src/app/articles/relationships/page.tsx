@@ -1,20 +1,17 @@
 import React from "react";
 import { RelationshipsArticle } from "~/components/articles/Relationships";
 
-const meta: any = () => {
-  return [
-    { title: "Relationships" },
-    {
-      name: "description",
-      content: "Relationships in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+export const metadata: Metadata = {
+  title: "Relationships",
+  description: "Relationships in Oneida",
 };
 
 export default function ArticlesRelationships() {
   return (
-    <div>
+    <PageWrapper>
       <RelationshipsArticle />
-    </div>
+    </PageWrapper>
   );
 }

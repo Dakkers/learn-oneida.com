@@ -1,8 +1,4 @@
-"use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 
 import dataIsHere from "~/data/module04/is-here";
 import dataWasHere from "~/data/module04/was-here";
@@ -34,18 +30,15 @@ import dataDidntUsedToLiveThere from "~/data/module04/didnt-used-to-live-there";
 import dataWillNotLiveThere from "~/data/module04/will-not-live-there";
 import {
   convertBreakdownToPlainText,
+  SectionHeading,
   translatePhrase,
 } from "@ukwehuwehneke/language-components";
 import { EnglishToOneidaQuiz } from "~/components/practice/EnglishToOneidaQuiz";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Being somewhere" },
-    {
-      name: "description",
-      content: "Quiz your Oneida knowledge by picking the right translation!",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Being somewhere",
+  description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
 export default function PracticeBeingSomewhere() {
@@ -99,15 +92,15 @@ export default function PracticeBeingSomewhere() {
   }, []);
 
   return (
-    <Flex direction="column" gap={4}>
-      <Heading level={1} variant="headlineL">
+    <PageWrapper>
+      <SectionHeading level={1}>
         Practice verbs for: being, living somewhere
-      </Heading>
+      </SectionHeading>
 
       <EnglishToOneidaQuiz
         englishOptions={englishOptions}
         oneidaOptions={oneidaOptions}
       />
-    </Flex>
+    </PageWrapper>
   );
 }

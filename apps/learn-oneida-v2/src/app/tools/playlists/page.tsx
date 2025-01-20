@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import {
@@ -16,15 +14,11 @@ import {
   getSingleWordsForModule,
 } from "@/app/practice/listen/dataGetters";
 import { standardizeAudioFileName } from "@/utils/misc";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Playlists" },
-    {
-      name: "description",
-      content: "Listen to lists of Oneida words uninterrupted.",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Playlists",
+  description: "Listen to lists of Oneida words uninterrupted.",
 };
 
 export default function ToolsPlaylist() {
@@ -131,7 +125,7 @@ export default function ToolsPlaylist() {
   }
 
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Playlists</SectionHeading>
 
       <Text>
@@ -196,7 +190,7 @@ export default function ToolsPlaylist() {
           </Button>
         </Flex>
       ) : null}
-    </>
+    </PageWrapper>
   );
 }
 
