@@ -1,11 +1,11 @@
 import React from "react";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 import { DATA_SEASONS } from "~/components/articles/Seasons";
 import { Flower2Icon, LeafIcon, SnowflakeIcon, SunIcon } from "lucide-react";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 import { PageWrapper } from "@/components/PageWrapper";
 
 import type { Metadata } from "next";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 export const metadata: Metadata = {
   title: "Seasons",
@@ -15,9 +15,7 @@ export const metadata: Metadata = {
 export default function PracticeSeasons() {
   return (
     <PageWrapper>
-      <Heading level={1} variant="headlineL">
-        Seasons
-      </Heading>
+      <SectionHeading level={1}>Seasons</SectionHeading>
 
       <MatchingGamePage
         data={DATA_SEASONS}
