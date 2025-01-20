@@ -1,3 +1,4 @@
+"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
@@ -21,11 +22,11 @@ import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Tenses Conjugation for Verbs from Module 4",
-  description:
-    "Practice your knowledge and understanding of tenses for verbs from module 4 in the Oneida language.",
-};
+// export const metadata: Metadata = {
+//   title: "Tenses Conjugation for Verbs from Module 4",
+//   description:
+//     "Practice your knowledge and understanding of tenses for verbs from module 4 in the Oneida language.",
+// };
 
 export default function PracticeTenseConjugation() {
   const [word, setWord] = React.useState("here");
@@ -119,7 +120,7 @@ export default function PracticeTenseConjugation() {
         verb from <LinkWrapper page={4} />.
       </Text>
 
-      <Flex align="end" gap={2}>
+      <Flex direction="column" gap={2}>
         <Select
           label="Word"
           onChange={(value) => {
@@ -146,12 +147,14 @@ export default function PracticeTenseConjugation() {
           value={pronoun}
         />
 
-        <Button
-          disabled={!word || hasStarted}
-          onClick={() => setHasStarted(true)}
-        >
-          Start
-        </Button>
+        <Flex.Item>
+          <Button
+            disabled={!word || hasStarted}
+            onClick={() => setHasStarted(true)}
+          >
+            Start
+          </Button>
+        </Flex.Item>
       </Flex>
 
       {hasStarted && (

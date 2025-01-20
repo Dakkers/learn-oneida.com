@@ -1,3 +1,4 @@
+"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
@@ -24,11 +25,11 @@ import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Tense Identification",
-  description:
-    "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on a stative verb.",
-};
+// export const metadata: Metadata = {
+//   title: "Tense Identification",
+//   description:
+//     "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on a stative verb.",
+// };
 
 const DATA_FULL_LIST = _.flattenDeep(
   createModule5VerbsList().map((datum) =>

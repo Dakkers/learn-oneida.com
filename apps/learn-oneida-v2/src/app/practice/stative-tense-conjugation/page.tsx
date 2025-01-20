@@ -1,3 +1,4 @@
+"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
@@ -22,11 +23,11 @@ import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Tenses practice",
-  description:
-    "Practice your knowledge and understanding of tenses for stative verbs in the Oneida language.",
-};
+// export const metadata: Metadata = {
+//   title: "Tenses practice",
+//   description:
+//     "Practice your knowledge and understanding of tenses for stative verbs in the Oneida language.",
+// };
 
 export default function PracticeTenseConjugation() {
   const [word, setWord] = React.useState("goodPerson");
@@ -81,11 +82,7 @@ export default function PracticeTenseConjugation() {
         verb. These words come from <LinkWrapper page={5} />.
       </Text>
 
-      <Flex
-        align={{ sm: "end" }}
-        direction={{ xs: "column", sm: "row" }}
-        gap={2}
-      >
+      <Flex direction="column" gap={2}>
         <Select
           label="Word"
           onChange={(value) => {

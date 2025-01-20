@@ -62,6 +62,7 @@ export default function PracticeCountingTime() {
 
       {hasStarted ? (
         <TableAsForm
+          bleed={0}
           checkCorrectness={(key, val) =>
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }

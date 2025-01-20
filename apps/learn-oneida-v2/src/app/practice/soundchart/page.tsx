@@ -5,7 +5,7 @@ import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Soundchart",
+  title: "Sound chart",
   description:
     "Master the sounds of the Oneida language with our comprehensive pronunciation guide, including audio examples and helpful tips.",
 };

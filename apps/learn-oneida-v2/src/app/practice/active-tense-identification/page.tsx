@@ -1,3 +1,4 @@
+"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
@@ -19,11 +20,11 @@ import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Tense Identification for Active Verbs",
-  description:
-    "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on an active verb.",
-};
+// export const metadata: Metadata = {
+//   title: "Tense Identification for Active Verbs",
+//   description:
+//     "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on an active verb.",
+// };
 
 const TENSE_LIST = ["hab", "def", "fut", "ifut", "cmd", "pfv"] as const;
 type Tense = (typeof TENSE_LIST)[number];

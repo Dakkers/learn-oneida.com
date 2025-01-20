@@ -1,3 +1,4 @@
+"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
@@ -18,11 +19,11 @@ import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Characteristic Conjugation from Module 8",
-  description:
-    "Practice your knowledge and understanding of object characteristics from module 8 in the Oneida language.",
-};
+// export const metadata: Metadata = {
+//   title: "Characteristic Conjugation from Module 8",
+//   description:
+//     "Practice your knowledge and understanding of object characteristics from module 8 in the Oneida language.",
+// };
 
 export default function PracticeCharacteristicConjugationModule8() {
   const [char, setChar] = React.useState(
