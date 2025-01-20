@@ -3,6 +3,8 @@ import { RepetitiveFeatureArticle } from "~/components/articles/RepetitiveFeatur
 
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Repetitive Conjugation",
   description: "The repetitive conjugation in Oneida",

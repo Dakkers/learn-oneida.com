@@ -9,6 +9,7 @@ import {
 import { DATA_CARDINAL_DIRECTIONS } from "~/components/articles/CardinalDirections";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Cardinal Directions",

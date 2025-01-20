@@ -8,6 +8,8 @@ import { createModule7NounsList } from "@/data/module07";
 import { convertBreakdownToPlainText } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Noun identification (module 7)",
   description: "Quiz your Oneida knowledge by picking the right translation!",

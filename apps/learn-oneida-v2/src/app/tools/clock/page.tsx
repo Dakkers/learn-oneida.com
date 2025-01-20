@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import { Flex } from "@ukwehuwehneke/ohutsya";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 import { Divider, Select } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
@@ -10,8 +9,9 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { doTheTranslate } from "~/utils/time";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { PageWrapper } from "@/components/PageWrapper";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Clock Time",

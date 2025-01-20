@@ -3,6 +3,8 @@ import { WhisperedEndingsArticle } from "~/components/articles/WhisperedEndings"
 
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Whispered Endings",
   description: "Whispered endings in Oneida",

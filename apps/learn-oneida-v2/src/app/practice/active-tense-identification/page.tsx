@@ -1,4 +1,3 @@
-"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
@@ -18,6 +17,7 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule6VerbListFlat } from "~/data/module06/activeVerbsList";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Tense Identification for Active Verbs",

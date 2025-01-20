@@ -13,6 +13,7 @@ import _ from "lodash";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { createModule7NounsList } from "@/data/module07";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Module 7",

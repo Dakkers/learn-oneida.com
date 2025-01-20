@@ -1,4 +1,3 @@
-"use client";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
@@ -21,6 +20,7 @@ import {
 } from "~/data/module05";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Tenses practice",

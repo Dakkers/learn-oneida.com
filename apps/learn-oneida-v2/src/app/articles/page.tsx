@@ -2,9 +2,9 @@ import { Heading } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
+import { Link } from "@/components/Link";
 
 export const metadata: Metadata = {
   title: "Articles",
@@ -112,7 +112,7 @@ export default function Articles() {
   ];
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <Heading level={1} variant="headlineL">
         Articles
       </Heading>
@@ -122,7 +122,7 @@ export default function Articles() {
 
       <Text>Other articles:</Text>
       <LinksList links={articles} />
-    </Flex>
+    </PageWrapper>
   );
 }
 
@@ -138,9 +138,7 @@ function LinksList({
         const label = Array.isArray(t) ? t[1] : t.label;
         return (
           <List.Item key={i}>
-            <a className="underline text-blue-600" href={`/articles${href}`}>
-              {label}
-            </a>
+            <Link href={`/articles${href}`}>{label}</Link>
           </List.Item>
         );
       })}

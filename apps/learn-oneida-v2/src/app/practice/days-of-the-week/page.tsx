@@ -3,6 +3,7 @@ import { Heading } from "@ukwehuwehneke/ohutsya";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 import { getDaysOfWeekData } from "@/data/module04";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Days of the week",

@@ -11,11 +11,12 @@ import { TableAsForm } from "~/components/practice/TableAsForm";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { Link } from "@/components/Link";
 import { PageWrapper } from "@/components/PageWrapper";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Practice Counting Time",
-  description: "Test your Oneida knowledge on counting lengths of time!",
-};
+// export const metadata: Metadata = {
+//   title: "Practice Counting Time",
+//   description: "Test your Oneida knowledge on counting lengths of time!",
+// };
 
 export default function PracticeCountingTime() {
   const rows = useMemo(() => {

@@ -3,6 +3,8 @@ import { NationsArticle } from "~/components/articles/Nations";
 
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Nations",
   description: "Nations in Oneida",

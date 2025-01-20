@@ -5,6 +5,8 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Link } from "@/components/Link";
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Tools",
   description: "Tools provided by this website",

@@ -3,6 +3,8 @@ import { SeasonsArticle } from "~/components/articles/Seasons";
 
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Seasons",
   description: "Seasons in Oneida",

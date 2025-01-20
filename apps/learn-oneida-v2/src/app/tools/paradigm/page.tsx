@@ -70,6 +70,7 @@ import { createModule10VerbListFlat } from "@/data/module10";
 import { TableAsForm } from "@/components/practice/TableAsForm";
 import { z } from "zod";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Paradigm Tester",

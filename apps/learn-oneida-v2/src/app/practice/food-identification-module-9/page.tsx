@@ -1,8 +1,4 @@
-"use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
   EnglishToOneidaQuiz,
   type EnglishToOneidaQuizProps,
@@ -10,6 +6,7 @@ import {
 import { createModule9FoodLists } from "@/data/module09";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Food identification (module 9)",

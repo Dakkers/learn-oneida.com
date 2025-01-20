@@ -33,6 +33,7 @@ import { TextArray } from "@ukwehuwehneke/ohutsya";
 import { pronouns } from "@ukwehuwehneke/language-components";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 

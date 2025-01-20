@@ -21,6 +21,8 @@ import {
 } from "~/data/module06/activeVerbsList";
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "All Paradigms",
   description: "All paradigms for each module",

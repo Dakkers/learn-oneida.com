@@ -3,6 +3,8 @@ import { TimesOfDayArticle } from "~/components/articles/TimesOfDay";
 
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Times of day",
   description: "Times of day in Oneida",

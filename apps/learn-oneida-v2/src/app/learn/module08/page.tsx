@@ -14,6 +14,7 @@ import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { createModule7NounsList } from "@/data/module07";
 import { createModule8CharacteristicsList } from "@/data/module08";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Module 8",

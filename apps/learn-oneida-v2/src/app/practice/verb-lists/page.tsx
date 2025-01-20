@@ -36,11 +36,12 @@ import {
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { z } from "zod";
 import { PageWrapper } from "@/components/PageWrapper";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Practice Lists of Verbs",
-  description: "Practice your knowledge of verbs in the Oneida language.",
-};
+// export const metadata: Metadata = {
+//   title: "Practice Lists of Verbs",
+//   description: "Practice your knowledge of verbs in the Oneida language.",
+// };
 
 const tenseMap: Record<Module5VerbTense | Module6VerbTense, string> = {
   ...module5VerbTenseMap,

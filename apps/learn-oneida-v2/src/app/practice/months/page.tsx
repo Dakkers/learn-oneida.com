@@ -7,6 +7,8 @@ import {
 import { createMonthsData } from "@/data/module04";
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Months",
   description: "Quiz your Oneida knowledge by picking the right translation!",

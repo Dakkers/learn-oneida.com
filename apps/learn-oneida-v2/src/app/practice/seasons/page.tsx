@@ -5,6 +5,8 @@ import { Flower2Icon, LeafIcon, SnowflakeIcon, SunIcon } from "lucide-react";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Seasons",
   description: "Match the Oneida words with the English words.",

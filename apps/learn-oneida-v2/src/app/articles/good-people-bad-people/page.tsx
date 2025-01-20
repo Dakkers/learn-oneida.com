@@ -3,6 +3,8 @@ import { GoodPeopleBadPeopleArticle } from "~/components/articles/GoodPeopleBadP
 
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Good people and bad people",
   description: "Good people and bad people conjugation in Oneida",

@@ -11,6 +11,8 @@ import {
 } from "@/data/module08";
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Object characteristics (module 8)",
   description: "Quiz your Oneida knowledge by picking the right translation!",

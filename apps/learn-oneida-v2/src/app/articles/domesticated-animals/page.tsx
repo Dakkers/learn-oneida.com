@@ -3,6 +3,8 @@ import { DomesticatedAnimalsArticle } from "~/components/articles/DomesticatedAn
 
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Domesticated Animals",
   description: "Domesticated animals in Oneida",

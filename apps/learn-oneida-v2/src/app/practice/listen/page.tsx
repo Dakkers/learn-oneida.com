@@ -1,3 +1,4 @@
+"use client";
 import React, {
   type RefObject,
   useCallback,
@@ -40,11 +41,12 @@ import {
 } from "./dataGetters";
 import { createTimesOfDayData } from "@/data/module04";
 import { PageWrapper } from "@/components/PageWrapper";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Listening Practice",
-  description: "Practice listening to words and phrases in Oneida.",
-};
+// export const metadata: Metadata = {
+//   title: "Listening Practice",
+//   description: "Practice listening to words and phrases in Oneida.",
+// };
 
 const MODULES_LIST: Array<{ label: string; value: ModuleNumber }> = [
   { label: "Module 1", value: "module01" },

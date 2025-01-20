@@ -1,6 +1,3 @@
-"use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
 import {
   EnglishToOneidaQuiz,
@@ -9,6 +6,7 @@ import {
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule10EnvironmentNounsList } from "@/data/module10";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Environment noun identification (module 10)",

@@ -9,6 +9,8 @@ import { translateNumber } from "~/utils/numbers";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Numbers",
   description: "Translate numbers from Oneida to English and vice versa",
