@@ -11,10 +11,10 @@ import { PageWrapper } from "@/components/PageWrapper";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Numbers",
-  description: "Translate numbers from Oneida to English and vice versa",
-};
+// export const metadata: Metadata = {
+//   title: "Numbers",
+//   description: "Translate numbers from Oneida to English and vice versa",
+// };
 
 export default function ToolsNumbers() {
   const [value, setValue] = React.useState("");

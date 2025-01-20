@@ -1,3 +1,5 @@
+"use client";
+
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";

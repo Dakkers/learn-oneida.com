@@ -13,10 +13,10 @@ import { PageWrapper } from "@/components/PageWrapper";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Clock Time",
-  description: "Translate clock time into Oneida",
-};
+// export const metadata: Metadata = {
+//   title: "Clock Time",
+//   description: "Translate clock time into Oneida",
+// };
 
 export default function ToolsClock() {
   const [hour, setHour] = React.useState<string>("12");

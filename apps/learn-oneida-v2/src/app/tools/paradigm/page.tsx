@@ -72,10 +72,10 @@ import { z } from "zod";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Paradigm Tester",
-  description: "Test a root word's paradigm!",
-};
+// export const metadata: Metadata = {
+//   title: "Paradigm Tester",
+//   description: "Test a root word's paradigm!",
+// };
 
 function ToolsParadigmInner() {
   const router = useRouter();
