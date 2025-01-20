@@ -36,14 +36,14 @@ export default function Index() {
   ] as const;
 
   return (
-    <PageWrapper>
-      <div className="lg:max-w-lg mx-auto mt-4 md:mt-8 mb-2 md:mb-4">
+    <PageWrapper width="l">
+      <div className="mx-auto mt-4 md:mt-8 mb-2 md:mb-4">
         <SectionHeading align="center" level={1}>
           Welcome to Learn Oneida
         </SectionHeading>
       </div>
 
-      <div className="lg:max-w-5xl mt-2 md:mt-6 mx-auto">
+      <div className="mt-2 md:mt-6 mx-auto">
         <SectionHeading level={2}>Learn</SectionHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-4">
