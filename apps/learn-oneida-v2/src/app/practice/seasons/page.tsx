@@ -1,28 +1,22 @@
 "use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 import { DATA_SEASONS } from "~/components/articles/Seasons";
 import { Flower2Icon, LeafIcon, SnowflakeIcon, SunIcon } from "lucide-react";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Seasons" },
-    {
-      name: "description",
-      content: "Match the Oneida words with the English words.",
-    },
-  ];
-};
+import type { Metadata } from "next";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
+
+// export const metadata: Metadata = {
+//   title: "Seasons",
+//   description: "Match the Oneida words with the English words.",
+// };
 
 export default function PracticeSeasons() {
   return (
-    <Flex direction="column" gap={4}>
-      <Heading level={1} variant="headlineL">
-        Seasons
-      </Heading>
+    <PageWrapper>
+      <SectionHeading level={1}>Seasons</SectionHeading>
 
       <MatchingGamePage
         data={DATA_SEASONS}
@@ -38,6 +32,6 @@ export default function PracticeSeasons() {
                   : undefined
         }
       />
-    </Flex>
+    </PageWrapper>
   );
 }

@@ -22,17 +22,14 @@ import {
   Settings,
 } from "~/components/practice/QuizContainer";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Tense Identification" },
-    {
-      name: "description",
-      content:
-        "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on a stative verb.",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Tense Identification",
+//   description:
+//     "Practice your knowledge of tenses in the Oneida language by identifying a tense conjugation on a stative verb.",
+// };
 
 const DATA_FULL_LIST = _.flattenDeep(
   createModule5VerbsList().map((datum) =>
@@ -93,7 +90,7 @@ export default function PracticeTenseIdentification() {
         setQuestionCountSetting,
       }}
     >
-      <Flex direction="column" gap={4}>
+      <PageWrapper>
         <Heading level={1} variant="headlineL">
           Tense Identification
         </Heading>
@@ -143,7 +140,7 @@ export default function PracticeTenseIdentification() {
             </Box>
           </>
         )}
-      </Flex>
+      </PageWrapper>
     </QuizContainerContext.Provider>
   );
 }

@@ -5,7 +5,7 @@ export default createParadigmData(
   {
     audioFolder: "module04/will_be_here",
     translation: "{{pronoun}} will be here",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: ["kʌʔ ", ["ʌ·", "FUT"], ["k"], "é·shekeʔ"],

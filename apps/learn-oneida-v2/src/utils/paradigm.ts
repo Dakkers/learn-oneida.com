@@ -15,7 +15,7 @@ export interface ParadigmData {
   phrases: ParadigmTableRow[];
   translation: string;
   translationFn?: (pronoun: Pronoun) => string;
-  type: "PR" | "PB" | "PLB" | "PP";
+  type: "PS" | "PO" | "PP" | "PI";
   whispered?: boolean;
 }
 

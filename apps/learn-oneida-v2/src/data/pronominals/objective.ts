@@ -7,9 +7,24 @@ const meDual = {
 };
 
 const maleNonSingular = {
-  default: ["lon"],
-  c: ["loti"],
-  i: ["lot"],
+  default: [
+    {
+      excp: "2" as const,
+      text: "lon",
+    },
+  ],
+  c: [
+    {
+      excp: "2" as const,
+      text: "loti",
+    },
+  ],
+  i: [
+    {
+      excp: "2" as const,
+      text: "lot",
+    },
+  ],
 };
 
 const femaleNonSingular = {
@@ -36,7 +51,7 @@ const data: PronominalRules = {
     c: [
       "wak",
       {
-        excp: "3",
+        excp: "4",
         breakdown: ["wake"],
       },
     ],
@@ -54,13 +69,28 @@ const data: PronominalRules = {
   m: {
     default: [
       {
-        excp: "1",
+        excp: ["1", "2"],
         breakdown: ["l", ["o", "OP"]],
       },
     ],
-    c: ["lo"],
-    e: ["law"],
-    o: ["la"],
+    c: [
+      {
+        excp: "2" as const,
+        text: "lo",
+      },
+    ],
+    e: [
+      {
+        excp: "2" as const,
+        text: "law",
+      },
+    ],
+    o: [
+      {
+        excp: "2" as const,
+        text: "la",
+      },
+    ],
   },
   f: {
     default: [

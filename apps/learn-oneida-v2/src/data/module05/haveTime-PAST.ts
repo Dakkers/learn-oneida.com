@@ -3,8 +3,8 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} used to be have time",
-    type: "PB",
+    translation: "{{pronoun}} used to have time",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "nakto·t", ["á", "JOIN"], ["hkweʔ", "PAST"]],

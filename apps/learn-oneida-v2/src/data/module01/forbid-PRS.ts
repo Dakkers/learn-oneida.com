@@ -1,3 +1,4 @@
+"use client";
 import { pluralizeVerbCommon } from "@/utils/translation";
 import { createInteractiveParadigmData } from "@/utils/paradigm";
 
@@ -5,7 +6,7 @@ const data = createInteractiveParadigmData({
   translation: "{{agent}} forbid {{subject}} to do it",
   translationFn: (pronoun) =>
     `{{agent}} ${pluralizeVerbCommon(pronoun, "forbid")} {{subject}} to do it`,
-  type: "PP",
+  type: "PI",
   phrases: [
     {
       breakdown: [["kuy"], "ahlístaʔ"],
@@ -32,10 +33,10 @@ const data = createInteractiveParadigmData({
       breakdown: [["h", "RPL"], ["y"], "ahlístaʔ"],
     },
     {
-      breakdown: [["lo"], "ahlístaʔ"],
+      breakdown: [["lo"], "hlístaʔ"],
     },
     {
-      breakdown: [["shako"], "ahlístaʔ"],
+      breakdown: [["shako"], "hlístaʔ"],
     },
     {
       breakdown: [["yukw"], "ahlístaʔ"],

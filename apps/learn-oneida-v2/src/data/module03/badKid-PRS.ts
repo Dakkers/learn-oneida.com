@@ -4,7 +4,7 @@ export default createParadigmData(
   {
     audioFolder: "module03/bad_kids",
     translation: "{{pronoun}} {{refVerb}} a bad kid",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "eksaʔtáksʌ"],

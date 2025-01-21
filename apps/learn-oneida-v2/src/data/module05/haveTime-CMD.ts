@@ -2,8 +2,8 @@ import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData(
   {
-    translation: "Be have time!",
-    type: "PB",
+    translation: "Have time!",
+    type: "PO",
     phrases: [
       {
         breakdown: [["sa"], "nakto·t", ["ak", "FUT"]],

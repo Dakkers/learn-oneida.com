@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might be hungry",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["a", "IFUT"], ["k"], "atuhkályaʔks", ["hekeʔ", "IFUT"]],

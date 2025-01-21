@@ -19,20 +19,21 @@ import {
   MODULE_6_VERB_TENSE_LIST,
   module6VerbTenseMap,
 } from "~/data/module06/activeVerbsList";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "All Paradigms" },
-    { name: "description", content: "All paradigms for each module" },
-  ];
-};
+import type { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "All Paradigms",
+//   description: "All paradigms for each module",
+// };
 
 export default function ToolsAllParadigms() {
   const [module, setModule] = useState("m6");
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <div className="print:hidden">
         <SectionHeading level={1}>All Paradigms</SectionHeading>
 
@@ -60,7 +61,7 @@ export default function ToolsAllParadigms() {
       ) : module === "m5-legacy" ? (
         <Module5ParadigmsAsIs />
       ) : null}
-    </Flex>
+    </PageWrapper>
   );
 }
 

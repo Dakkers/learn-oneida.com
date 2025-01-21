@@ -2,10 +2,12 @@ import { arrayify } from "./misc";
 import {
   INTERACTIVE_AGENT_MAP,
   INTERACTIVE_SUBJECT_MAP,
+  NEGATION_MAP,
   type Pronoun,
   PRONOUN_MAP_EN,
   PRONOUN_MAP_EN_OBJECTIVE,
   PRONOUN_MAP_EN_POSSESSIVE,
+  PRONOUN_MAP_STANDALONE,
   type PronounPurpleExtended,
   REF_VERB_MAP,
   REF_VERB_PASTTENSE_ALT_MAP,
@@ -42,6 +44,7 @@ export function translatePhraseInteractive(
 
     return formatTranslation(content, {
       agent: INTERACTIVE_AGENT_MAP[p],
+      negation: NEGATION_MAP[agent as Pronoun],
       note: "",
       pronounObjective: arrayify(PRONOUN_MAP_EN_OBJECTIVE[agent as Pronoun])[0],
       pronounPossessive: arrayify(
@@ -66,6 +69,7 @@ export function translatePhraseV2(
     const content =
       paradigmData.translationFn?.(pronoun) ?? paradigmData.translation;
     return formatTranslation(content, {
+      negation: NEGATION_MAP[pronoun],
       note: "",
       pronoun: arrayify(PRONOUN_MAP_EN[pronoun])[i],
       pronounObjective: arrayify(PRONOUN_MAP_EN_OBJECTIVE[pronoun])[i],
@@ -74,6 +78,7 @@ export function translatePhraseV2(
       refVerb: REF_VERB_MAP[pronoun],
       refVerbPast: REF_VERB_PASTTENSE_MAP[pronoun],
       refVerbPastAlt: REF_VERB_PASTTENSE_ALT_MAP[pronoun],
+      standalone: PRONOUN_MAP_STANDALONE[pronoun],
       ...(legacyTranslationFn ? legacyTranslationFn({ pronoun }) : {}),
     });
   });
@@ -84,12 +89,12 @@ export function translatePhraseGeneric(
     categories?: Array<"kinship">;
     translation: string;
     translationFn?: (pronoun: Pronoun) => string;
-    type: "PP" | "PB" | "PLB" | "PR";
+    type: "PI" | "PO" | "PP" | "PS";
   },
   pronoun: Pronoun,
   legacyTranslationFn?: (arg: { pronoun: Pronoun }) => void,
 ) {
-  return paradigmData.type === "PP" &&
+  return paradigmData.type === "PI" &&
     !paradigmData.categories?.includes("kinship")
     ? translatePhraseInteractive(
         // @ts-expect-error ParadigmData doesn't support purple correctly :(

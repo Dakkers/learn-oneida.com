@@ -1,11 +1,14 @@
-"use client";
-
 import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
 import React from "react";
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 
 import yʌteliRed from "~/data/yʌteli-red";
 import nolukhwaRed from "~/data/nolukhwa-red";
@@ -55,17 +58,17 @@ import {
   getDeceasedRelatives,
   getThingsThatAreTheSameExamples,
 } from "@/data/module02";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Module 2" },
-    { name: "description", content: "Module 2 of the Oneida curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Module 2",
+  description: "Module 2 of the Oneida curriculum",
 };
 
 export default function LearnModule02() {
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Module 2</SectionHeading>
 
       <Notice intent="negative">
@@ -74,7 +77,7 @@ export default function LearnModule02() {
       </Notice>
 
       <TOC>
-        <TOC.Item
+        <TocItem
           label={
             <>
               New verbs: <b>yʌteli, nolukhwaʔ</b>
@@ -82,72 +85,68 @@ export default function LearnModule02() {
           }
           value="new-verbs"
         >
-          <TOC.Section>
-            <TOC.Item label="Red pronominals" value="new-verbs-red" />
-            <TOC.Item label="Blue pronominals" value="new-verbs-blue" />
-            <TOC.Item label="Purple pronominals" value="new-verbs-purple" />
-          </TOC.Section>
-        </TOC.Item>
-        <TOC.Item label="Reflexive" value="reflexive" />
-        <TOC.Item label="Reciprocal" value="reciprocal" />
+          <TocSection>
+            <TocItem label="Subjective pronominals" value="new-verbs-red" />
+            <TocItem label="Objective pronominals" value="new-verbs-blue" />
+            <TocItem label="Interactive pronominals" value="new-verbs-purple" />
+          </TocSection>
+        </TocItem>
+        <TocItem label="Reflexive" value="reflexive" />
+        <TocItem label="Reciprocal" value="reciprocal" />
 
-        <TOC.Item label="Commands" value="commands">
-          <TOC.Section>
-            <TOC.Item label="Tell" value="commands-tell" />
-            <TOC.Item label="Ask" value="commands-ask" />
-          </TOC.Section>
-        </TOC.Item>
-        <TOC.Item label="Negated Commands" value="negated-commands">
-          <TOC.Section>
-            <TOC.Item label="Don't tell" value="negated-commands-tell" />
-            <TOC.Item label="Don't ask" value="negated-commands-ask" />
-          </TOC.Section>
-        </TOC.Item>
+        <TocItem label="Commands" value="commands">
+          <TocSection>
+            <TocItem label="Tell" value="commands-tell" />
+            <TocItem label="Ask" value="commands-ask" />
+          </TocSection>
+        </TocItem>
+        <TocItem label="Negated Commands" value="negated-commands">
+          <TocSection>
+            <TocItem label="Don't tell" value="negated-commands-tell" />
+            <TocItem label="Don't ask" value="negated-commands-ask" />
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Family members" value="family-members">
-          <TOC.Section>
+        <TocItem label="Family members" value="family-members">
+          <TocSection>
             <FamilyTableOfContentItems />
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item.Phrase
-          label="(to be) alive"
-          word="unheʔ"
-          value="verb-alive"
-        />
-        <TOC.Item.Phrase label="(to be) dead" word="iheyu" value="verb-dead" />
-        <TOC.Item.Phrase
+        <TocPhrase label="(to be) alive" word="unheʔ" value="verb-alive" />
+        <TocPhrase label="(to be) dead" word="iheyu" value="verb-dead" />
+        <TocPhrase
           label="(to have) passed on"
           word="atukohtu"
           value="verb-passed-on"
         />
 
-        <TOC.Item label="Deceased Family Members" value="deceased-relatives" />
-        <TOC.Item label="Numbers" value="numbers" />
+        <TocItem label="Deceased Family Members" value="deceased-relatives" />
+        <TocItem label="Numbers" value="numbers" />
 
-        <TOC.Item.Phrase label="(to be) old" word="kstʌha" value="verb-old" />
-        <TOC.Item.Phrase
+        <TocPhrase label="(to be) old" word="kstʌha" value="verb-old" />
+        <TocPhrase
           label="(to be) young"
           word="kʌʔ nit...yʌha"
           value="verb-young"
         />
-        <TOC.Item.Phrase
+        <TocPhrase
           label="(to be) an age"
           word="naʔ te...ohsliyá·ku̲"
           value="verb-age"
         />
 
-        <TOC.Item label="Particles" value="particles" />
-        <TOC.Item label="Dialogue" value="dialogue" />
-        <TOC.Item label="Last Names" value="last-names" />
-        <TOC.Item label="About Someone or Something" value="about-someone" />
-        <TOC.Item label="Similar in Appearance" value="similar-in-appearance" />
-        <TOC.Item
+        <TocItem label="Particles" value="particles" />
+        <TocItem label="Dialogue" value="dialogue" />
+        <TocItem label="Last Names" value="last-names" />
+        <TocItem label="About Someone or Something" value="about-someone" />
+        <TocItem label="Similar in Appearance" value="similar-in-appearance" />
+        <TocItem
           label="Things That Are The Same"
           value="things-that-are-the-same"
         />
-        <TOC.Item label="Being Different" value="being-different" />
-        <TOC.Item label="Translation exercises" value="translation-exercises" />
+        <TocItem label="Being Different" value="being-different" />
+        <TocItem label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <VerbsSection />
@@ -182,7 +181,7 @@ export default function LearnModule02() {
 
       <DialogueSection />
       <TranslationExercisesSection group="module02" />
-    </>
+    </PageWrapper>
   );
 }
 
@@ -207,19 +206,19 @@ function VerbsSection() {
       </Text>
 
       <SectionHeading id="new-verbs-red" level={3}>
-        Red pronominals
+        Subjective pronominals
       </SectionHeading>
       <ParadigmTable columnVisibility={columnVisibility} data={yʌteliRed} />
       <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaRed} />
 
       <SectionHeading id="new-verbs-blue" level={3}>
-        Blue pronominals
+        Objective pronominals
       </SectionHeading>
       <ParadigmTable columnVisibility={columnVisibility} data={yʌteliBlue} />
       <ParadigmTable columnVisibility={columnVisibility} data={nolukhwaBlue} />
 
       <SectionHeading id="new-verbs-purple" level={3}>
-        Purple pronominals
+        Interactive pronominals
       </SectionHeading>
       <ParadigmTable columnVisibility={columnVisibility} data={yʌteliPurple} />
       <ParadigmTable
@@ -275,11 +274,11 @@ function ReciprocalSection() {
         To translate this sentence into Oneida, first take the root word for
         &quot;to like&quot;, <b>nuwehseʔ</b>, and apply the reflexive prefix:{" "}
         <b>atatnuwehseʔ</b>. This is now an A-stem word so we can look at the
-        red pronominals table to find the corresponding prefix for &quot;Someone
-        and I&quot;, which is <Letter>yaky</Letter>. So far we have{" "}
-        <b>yakyatatnú·wehse̲ʔ</b>, but if you look in the previous section, this
-        means &quot;Someone and I like ourselves&quot;. To make it reciprocal,
-        add <Letter>te</Letter> at the beginning.
+        subjective pronominals table to find the corresponding prefix for
+        &quot;Someone and I&quot;, which is <Letter>yaky</Letter>. So far we
+        have <b>yakyatatnú·wehse̲ʔ</b>, but if you look in the previous section,
+        this means &quot;Someone and I like ourselves&quot;. To make it
+        reciprocal, add <Letter>te</Letter> at the beginning.
       </Text>
       <Text>
         So the result is: <i>teyakyatatnú·wehse̲ʔ</i>.
@@ -302,9 +301,9 @@ function CommandsSection() {
         Commands
       </SectionHeading>
       <Text>
-        Here, commands are introduced, which use purple pronominals. Commands
-        have different pronominals when you ("I") are the subject. These are
-        known as "command form" pronominals.
+        Here, commands are introduced, which use interactive pronominals.
+        Commands have different pronominals when you ("I") are the subject.
+        These are known as "command form" pronominals.
       </Text>
       <Notice intent="primary">
         Commands are only ever stated in the prepausal form as they are always
@@ -329,10 +328,10 @@ function NegatedCommandsSection() {
         Negated Commands
       </SectionHeading>
       <Text>
-        Commands can be negated, too. The regular purple pronominals are used,
-        as opposed to the command form pronominals. When negating a command, the
-        future tense of the verb must be used, which is indicated with the
-        prefix <Letter>ʌ</Letter>. This will be discussed more in{" "}
+        Commands can be negated, too. The regular interactive pronominals are
+        used, as opposed to the command form pronominals. When negating a
+        command, the future tense of the verb must be used, which is indicated
+        with the prefix <Letter>ʌ</Letter>. This will be discussed more in{" "}
         <LinkWrapper page={4} />.
       </Text>
       <SectionHeading id="negated-commands-tell" level={3}>
@@ -360,11 +359,11 @@ function AliveDeadSection() {
   return (
     <>
       <SectionHeading id="verb-alive" level={2}>
-        unheʔ — (to be) alive
+        -unheʔ- — (to be) alive
       </SectionHeading>
       <Text>
-        Below is the paradigm table for <b>unheʔ</b>. It is a U-stem root word
-        and uses red pronominals.
+        Below is the paradigm table for <b>-unheʔ-</b>. It is a U-stem root word
+        and uses subjective pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
@@ -374,13 +373,14 @@ function AliveDeadSection() {
         data={unheJson}
       />
       <SectionHeading id="verb-dead" level={2}>
-        iheyu / ʌheyu — (to be) dead / (to have) died
+        -iheyu- / -ʌheyu- — (to be) dead / (to have) died
       </SectionHeading>
       <Text>
-        Below is the paradigm table for <b>iheyu</b>. It is an irregular root
-        word where its stem depends on the pronominal. It can be thought of as a
-        Λ-stem root word for all pronominals except the "me" pronominal, where
-        it is an I-stem root word. In both cases, it uses blue pronominals.
+        Below is the paradigm table for <b>-iheyu-</b> / <b>-ʌheyu-</b>. It is
+        an irregular root word where its stem depends on the pronominal. It can
+        be thought of as a Λ-stem root word for all pronominals except the "me"
+        pronominal, where it is an I-stem root word. In both cases, it uses
+        objective pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
@@ -397,11 +397,11 @@ function PassedOnSection() {
   return (
     <>
       <SectionHeading id="verb-passed-on" level={2}>
-        atukohtu — to have passed on
+        -atukohtu- — to have passed on
       </SectionHeading>
       <Text>
-        Below is the paradigm table for <b>atukohtu</b>. It is an A-stem root
-        word and uses blue pronominals.
+        Below is the paradigm table for <b>-atukohtu-</b>. It is an A-stem root
+        word and uses objective pronominals.
       </Text>
       <ParadigmTable
         allowedPronouns={["m", "f", "it", "ms", "fs"]}
@@ -474,7 +474,7 @@ function YoungOldSection() {
       </SectionHeading>
       <Text>
         Below is the paradigm table for <b>kstʌha</b>. It is a C-stem root word
-        and uses blue pronominals.
+        and uses objective pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
@@ -489,7 +489,7 @@ function YoungOldSection() {
       </SectionHeading>
       <Text>
         Below is the paradigm table for <b>kʌʔ nit...yʌha</b>. It is a C-stem
-        root word and uses blue pronominals. It makes use of the{" "}
+        root word and uses objective pronominals. It makes use of the{" "}
         <LinkWrapper page="dim" />.
       </Text>
       <ParadigmTable
@@ -617,10 +617,10 @@ function NumbersSection() {
       </Text>
       <List>
         <List.Item>
-          11 - 19: the second digit comes first, followed by <b>yawa·lé̲·</b>
+          11 - 19: the second digit comes first, followed by <b>yawʌ·lé̲·</b>
         </List.Item>
         <List.Item>
-          21 - 29: <b>tewáhsʌ̲</b> then the second digit
+          20 - 29: <b>tewáhsʌ</b> then the second digit
         </List.Item>
         <List.Item>
           30 - 99: the first digit, <b>niwáhsʌ̲</b>, then the second digit

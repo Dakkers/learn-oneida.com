@@ -8,10 +8,10 @@ import {
   TableWrapper,
 } from "@ukwehuwehneke/language-components";
 import type { ArticleProps } from "./utils";
-import redPronominalsJson from "../../data/pronominals/red";
-import bluePronominalsJson from "../../data/pronominals/blue";
-import purplePronominalsJson from "../../data/pronominals/purple";
-import lightbluePronominalsJson from "../../data/pronominals/lightblue";
+import redPronominalsJson from "../../data/pronominals/subjective";
+import bluePronominalsJson from "../../data/pronominals/objective";
+import purplePronominalsJson from "../../data/pronominals/interactive";
+import lightbluePronominalsJson from "../../data/pronominals/possessive";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
@@ -44,9 +44,11 @@ import dataHardToPlease from "~/data/ʌtole";
 import dataPulling from "~/data/module01/pullingOut-HAB";
 import dataPulledOut from "~/data/module01/pullingOut-PFV";
 import dataLikePurple from "~/data/module01/like-purple";
-import dataForbid from "~/data/module01/forbid-PRS";
+import dataWatchSomeone from "~/data/module01/watchSomeone-PRS";
 import dataCallDown from "~/data/module01/callDown-HAB";
-import dataGoToGet from "~/data/module01/goToGet-HAB";
+import dataPity from "~/data/module01/pity-PRS";
+import dataRememberSomeone from "~/data/module01/rememberSomeone-PRS";
+import dataMakeSomethingForSomeone from "~/data/module01/makeSomethingForSomeone-PRS";
 import dataHouse from "~/data/module01/house-NOUN";
 import dataHat from "~/data/module01/hat-NOUN";
 import dataHeart from "~/data/module01/heart-NOUN";
@@ -62,9 +64,11 @@ import dataLikeTheTaste from "~/data/module05/likingTheTaste-PRS";
 import { ParadigmTable } from "../ParadigmTable";
 import type {
   PronominalRules,
-  PronominalRulesPurple,
+  PronominalRulesInteractive,
 } from "@/data/pronominals/types";
 import type { ParadigmData } from "@/utils/paradigm";
+import { LinkWrapper } from "../LinkWrapper";
+import { Link } from "../Link";
 
 export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
   const level = (_level + 1) as SectionHeadingProps["level"];
@@ -106,12 +110,12 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
         <List.Item>Subjective (Red)</List.Item>
         <List.Item>Objective (Blue)</List.Item>
         <List.Item>Possessive (Light Blue)</List.Item>
-        <List.Item>Person-to-Person (Purple)</List.Item>
+        <List.Item>Interactive (Purple)</List.Item>
       </List>
       <Text>
-        The last group, Person-to-Person, refers to a group of pronouns that do
-        not have an English counterpart. Each of these groups are colour-coded
-        to help you identify pronouns within words.
+        The last group, Interactive, refers to a group of pronouns that do not
+        have an English counterpart. Each of these groups are colour-coded to
+        help you identify pronouns within words.
       </Text>
       <Text>
         Below you&lsquo;ll see a paradigm chart for each stem for each of the
@@ -133,6 +137,10 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       <SectionHeading id="subjective" level={sublevel}>
         Subjective Pronominals (Red)
       </SectionHeading>
+      <Text>
+        Generally, subjective (red) pronominals are used when the person is in
+        control of the action. There are exceptions to this, though.
+      </Text>
       <AccordionWrapper
         items={[
           [dataLikeRedJson, "-nuhweʔ-"],
@@ -144,12 +152,17 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
           [dataHardToPlease, "-ʌtol-"],
         ]}
       />
-      <Text>Here is the full table of the pronominals on their own.</Text>
       <PronominalsPrimitiveTable color="red" data={redPronominalsJson} />
 
       <SectionHeading id="objective" level={sublevel}>
         Objective Pronominals (Blue)
       </SectionHeading>
+      <Text>
+        Objective (blue) pronominals are often when the person is not in control
+        of the action, such as states of mind or illnesses. Many of these are
+        discussed in <LinkWrapper page={5} />. There are exceptions to this too,
+        though.
+      </Text>
       <AccordionWrapper
         items={[
           [dataLikeBlueJson, "-nuhweʔ-"],
@@ -163,17 +176,23 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       />
       <PronominalsPrimitiveTable color="blue" data={bluePronominalsJson} />
 
-      <SectionHeading id="person-to-person" level={sublevel}>
-        Person-to-Person Pronominals (Purple)
+      <SectionHeading id="interactive" level={sublevel}>
+        Interactive Pronominals (Purple)
       </SectionHeading>
+      <Text>
+        Interactive (purple) pronominals do not have an English counterpart.
+        There are many of these! On this website, almost all verbs that use
+        interactive pronominals will be stated only with a subset of these
+        pronominals. These are the singular cases, as seen in the tables below.
+      </Text>
       <AccordionWrapper
         items={[
           [dataLikePurple, "-nuhweʔ-"],
-          [dataForbid, "-ahlist-"],
+          [dataWatchSomeone, "-atlolok-"],
+          [dataRememberSomeone, "-ehyahlaʔ-"],
+          [dataPity, "-itʌl-"],
           [null, "-???-"],
-          [dataGoToGet, "-ihnuks-"],
-          [null, "-???-"],
-          [null, "-???-"],
+          [dataMakeSomethingForSomeone, "-unyʌni-"],
           [dataCallDown, "-ʌhni-"],
         ]}
       />
@@ -182,6 +201,11 @@ export function PronominalsArticle({ level: _level = 1 }: ArticleProps) {
       <SectionHeading id="possessive" level={sublevel}>
         Possessive Pronominals (Light Blue)
       </SectionHeading>
+      <Text>
+        Possessive (light blue) pronominals occur when talking about nouns.
+        Almost all nouns use these, but they cannot be used with people, plants,
+        animals, and most body parts.
+      </Text>
       <AccordionWrapper
         items={[
           [dataHouse, "-nuhs-"],
@@ -249,7 +273,7 @@ function PronominalsPrimitiveTable({
   data,
 }: {
   color: PronominalColor;
-  data: PronominalRules | PronominalRulesPurple;
+  data: PronominalRules | PronominalRulesInteractive;
 }) {
   const stems = ["c", "a", "i", "e", "o"] as const;
   const isPurple = color === "purple";
@@ -260,7 +284,7 @@ function PronominalsPrimitiveTable({
       <PrimitiveTable>
         <PrimitiveTableHeader>
           <PrimitiveTableRow>
-            <PrimitiveTableHead>EN</PrimitiveTableHead>
+            <PrimitiveTableHead>English</PrimitiveTableHead>
             <PrimitiveTableHead>C-stem</PrimitiveTableHead>
             <PrimitiveTableHead>A-stem</PrimitiveTableHead>
             <PrimitiveTableHead>I-stem</PrimitiveTableHead>
@@ -331,13 +355,13 @@ function PronominalPrimitiveTableText({
 
   const typeFallback =
     color === "red"
-      ? "PR"
+      ? "PS"
       : color === "blue"
-        ? "PB"
+        ? "PO"
         : color === "purple"
-          ? "PP"
+          ? "PI"
           : color === "lightblue"
-            ? "PLB"
+            ? "PP"
             : undefined;
 
   const textContent = !entry.breakdown ? (
@@ -376,9 +400,9 @@ function Footnotes({ nums: _nums }: { nums: FootnoteNumbers }) {
     <Flex gap={1}>
       {nums.map((num) => (
         <sup key={num}>
-          <Text contrast="mid" intent="secondary" variant="footnote">
-            {num}
-          </Text>
+          <Link href={`#exception-${num}`}>
+            <Text variant="footnote">{num}</Text>
+          </Link>
         </sup>
       ))}
     </Flex>
@@ -428,13 +452,15 @@ function ExceptionsSection({ level }: { level: SectionHeadingProps["level"] }) {
         Exceptions
       </SectionHeading>
 
-      <SectionHeading level={sublevel}>Exception 1</SectionHeading>
+      <SectionHeading id="exception-1" level={sublevel}>
+        Exception 1
+      </SectionHeading>
       <Text>
         The vowel with a squiggly underline replaces the leading vowel of the
         root word.
       </Text>
       <Text>
-        As an example, let&lsquo;s look at the A-stem column in the red
+        As an example, let&lsquo;s look at the A-stem column in the subjective
         pronominals table, and use the root word <b>attokhaʔ</b>. The
         translation for &quot;she is wise&quot; without this replacement rule
         would be <b>yuattokhaʔ</b>. <Letter>yua</Letter> is not a sound in
@@ -442,32 +468,63 @@ function ExceptionsSection({ level }: { level: SectionHeadingProps["level"] }) {
         translation is <b>yuttókhaʔ</b>. <ExcpPlay num="1" />
       </Text>
 
-      <SectionHeading level={sublevel}>Exception 2</SectionHeading>
+      <SectionHeading id="exception-2" level={sublevel}>
+        Exception 2
+      </SectionHeading>
+      <Text>
+        The letter <Letter>l</Letter> changes to an <Letter>h</Letter> when
+        there is something attached before the pronominal. Examples:
+      </Text>
+
+      <List>
+        <List.Item>
+          <b>lanú·wehse̲ʔ</b> &nbsp; vs. &nbsp; <b>yáh tehanú·wehse̲ʔ</b>
+        </List.Item>
+        <List.Item>
+          <b>lonúhte̲ʔ</b> &nbsp; vs. &nbsp; <b>yáh tehonúhte̲ʔ</b>
+        </List.Item>
+      </List>
+
+      <SectionHeading id="exception-3" level={sublevel}>
+        Exception 3
+      </SectionHeading>
       <Text>
         The <Letter>h</Letter> is not written or pronounced when nothing is
         attached in front of the pronominal. However, when anything is attached
         to the front of the pronominal, the <Letter>h</Letter> is written and
-        pronounced. Example: <b>snú·wehse̲ʔ</b> <ExcpPlay num="2-1" /> and{" "}
-        <b>yáh tehsnú·wehse̲ʔ</b>. <ExcpPlay num="2-2" />
+        pronounced. Example: <b>snú·wehse̲ʔ</b> <ExcpPlay num="3-1" /> and{" "}
+        <b>yáh tehsnú·wehse̲ʔ</b>. <ExcpPlay num="3-2" />
       </Text>
 
-      <SectionHeading level={sublevel}>Exception 3</SectionHeading>
+      <SectionHeading id="exception-4" level={sublevel}>
+        Exception 4
+      </SectionHeading>
       <Text>
         The letter <Letter>e</Letter> only appears on root words that begin with
-        a double consonant or a glottal stop.
+        a double consonant or a glottal stop. Examples:
       </Text>
-      <Notice intent="warning">Examples are needed for this exception.</Notice>
+      <List>
+        <List.Item>keshwʌ·neʔ</List.Item>
+        <List.Item>keʔnekʌhtalá·keʔ</List.Item>
+        <List.Item>kenyalá·keʔ</List.Item>
+        <List.Item>wakeste·líhst</List.Item>
+        <List.Item>wakeʔnikuhlowanʌ̲́</List.Item>
+      </List>
 
-      <SectionHeading level={sublevel}>Exception 4</SectionHeading>
+      <SectionHeading id="exception-5" level={sublevel}>
+        Exception 5
+      </SectionHeading>
       <Text>
         The <Letter>ik</Letter> prefix is attached to most (but not all) single
         syllable roots. The <Letter>i</Letter> in <Letter>ik</Letter> is used
         only occasionally. The <Letter>i</Letter> disappears when anything is
         attached in front of the prefix. Example: <b>íkyʌheʔ</b>{" "}
-        <ExcpPlay num="4-1" /> and <b>yáh té·kyʌheʔ</b>. <ExcpPlay num="4-2" />
+        <ExcpPlay num="5-1" /> and <b>yáh té·kyʌheʔ</b>. <ExcpPlay num="5-2" />
       </Text>
 
-      <SectionHeading level={sublevel}>Exception 5</SectionHeading>
+      <SectionHeading id="exception-6" level={sublevel}>
+        Exception 6
+      </SectionHeading>
       <Text>
         The prefix <code>ts</code> is attached to all roots beginning with{" "}
         <Letter>y</Letter> and <Letter>i</Letter>. The <Letter>t</Letter>{" "}
@@ -476,21 +533,23 @@ function ExceptionsSection({ level }: { level: SectionHeadingProps["level"] }) {
       </Text>
       <List>
         <List.Item>
-          <b>tsyʌtelí̲</b> <ExcpPlay num="5-1" /> &nbsp; vs. &nbsp;{" "}
-          <b>yáh tehsyʌtelí̲</b> <ExcpPlay num="5-2" />
+          <b>tsyʌtelí̲</b> <ExcpPlay num="6-1" /> &nbsp; vs. &nbsp;{" "}
+          <b>yáh tehsyʌtelí̲</b> <ExcpPlay num="6-2" />
         </List.Item>
         <List.Item>
-          <b>tsí·tlu̲ʔ</b> <ExcpPlay num="5-3" /> &nbsp; vs. &nbsp;{" "}
-          <b>yáh tehsí·tlu̲ʔ</b> <ExcpPlay num="5-4" />
+          <b>tsí·tlu̲ʔ</b> <ExcpPlay num="6-3" /> &nbsp; vs. &nbsp;{" "}
+          <b>yáh tehsí·tlu̲ʔ</b> <ExcpPlay num="6-4" />
         </List.Item>
       </List>
 
-      <SectionHeading level={sublevel}>Exception 6</SectionHeading>
+      <SectionHeading id="exception-7" level={sublevel}>
+        Exception 7
+      </SectionHeading>
       <Text>
         The prefix <Letter>it</Letter> is attached to all roots beginning with{" "}
         <Letter>hs</Letter> and the <Letter>i</Letter> disappears when anything
         is attached in front of the prefix. Example: <b>ítshaʔas</b>{" "}
-        <ExcpPlay num="6-1" /> and <b>yáh tetsháʔas</b>. <ExcpPlay num="6-2" />{" "}
+        <ExcpPlay num="7-1" /> and <b>yáh tetsháʔas</b>. <ExcpPlay num="7-2" />{" "}
         Additionally, the {"h"} shifts over.
       </Text>
     </>

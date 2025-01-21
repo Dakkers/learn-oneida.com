@@ -2,7 +2,7 @@ import { createInteractiveParadigmData } from "@/utils/paradigm";
 
 const data = createInteractiveParadigmData({
   translation: "{{agent}} {{refVerb}} repremanding {{subject}}",
-  type: "PP",
+  type: "PI",
   phrases: [
     {
       breakdown: [["kuy"], "ʌ́·niheʔ"],

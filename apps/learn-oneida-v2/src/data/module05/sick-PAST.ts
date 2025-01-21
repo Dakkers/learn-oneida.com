@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be sick",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "nuhwáktanih", ["a", "JOIN"], ["hkweʔ", "PAST"]],

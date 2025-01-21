@@ -5,7 +5,7 @@ export default createParadigmData(
   {
     audioFolder: "module01/pronominals/blue/U",
     translation: "{{pronoun}} {{refVerb}} enjoying doing something",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "uʔwéskwaniheʔ"],

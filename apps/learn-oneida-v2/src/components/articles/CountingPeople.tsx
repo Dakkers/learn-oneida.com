@@ -20,7 +20,7 @@ export function CountingPeopleArticle({ level = 1 }: { level?: 1 | 2 }) {
         columns={[
           { accessorKey: "en", header: "English" },
           // @ts-expect-error TODO - TableWrapper/Table generics
-          TableWrapper.createTextBreakdownColumn("PR"),
+          TableWrapper.createTextBreakdownColumn("PS"),
         ]}
         data={data.people}
       />

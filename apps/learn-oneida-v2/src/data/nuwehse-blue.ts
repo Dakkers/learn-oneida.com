@@ -5,7 +5,7 @@ const data = createParadigmData(
   {
     audioFolder: "module01/pronominals/blue/C",
     translation: "It likes {{pronounObjective}}",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "nú·wehseʔ"],

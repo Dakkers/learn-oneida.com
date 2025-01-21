@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} ate",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["wá·", "DEF"], ["k"], "ekeʔ"],

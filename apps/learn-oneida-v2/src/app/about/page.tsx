@@ -1,13 +1,12 @@
-"use client";
-
-import { Flex, Link } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { Link } from "@/components/Link";
+import { PageWrapper } from "@/components/PageWrapper";
 
 export default function About() {
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>About Learn-Oneida</SectionHeading>
 
       <Text>
@@ -62,6 +61,6 @@ export default function About() {
         </a>
         !
       </Text>
-    </Flex>
+    </PageWrapper>
   );
 }

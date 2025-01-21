@@ -3,7 +3,7 @@ import { createParadigmData } from "@/utils/paradigm";
 const data = createParadigmData({
   audioFolder: "module02/age",
   translation: "{{pronoun}} {{refVerb}} ... years old",
-  type: "PB",
+  type: "PO",
   phrases: [
     {
       breakdown: ["naʔ te", ["wak"], "ohsliyá·ku̲"],

@@ -6,11 +6,11 @@ const data: PronominalRules = {
     c: [
       "k",
       {
-        excp: "4",
+        excp: "5",
         breakdown: [["i", "RPL"], "k"],
       },
       {
-        excp: "3",
+        excp: "4",
         breakdown: ["ke"],
       },
     ],
@@ -18,29 +18,29 @@ const data: PronominalRules = {
   u: {
     default: [
       {
-        excp: "2",
+        excp: "3",
         breakdown: [["h", "RPL"], "s"],
       },
     ],
     c: [
       "s",
       {
-        excp: "5",
+        excp: "6",
         text: "ts",
       },
       {
-        excp: "6",
+        excp: "7",
         breakdown: [["i", "RPL"], "t"],
       },
       {
-        excp: ["3", "2"],
+        excp: ["4", "3"],
         breakdown: [["h", "RPL"], "se"],
       },
     ],
     i: [
       "ts",
       {
-        excp: "2",
+        excp: "3",
         breakdown: [["h", "RPL"], "s"],
       },
     ],
@@ -48,15 +48,25 @@ const data: PronominalRules = {
   m: {
     default: [
       {
-        excp: "2",
+        excp: ["2", "3"],
         breakdown: [["h", "RPL"], "l"],
       },
     ],
-    c: ["la"],
-    a: ["l"],
+    c: [
+      {
+        excp: "2" as const,
+        text: "la",
+      },
+    ],
+    a: [
+      {
+        excp: "2" as const,
+        text: "l",
+      },
+    ],
     i: [
       {
-        excp: "1",
+        excp: ["1", "2"],
         breakdown: ["l", ["ʌ", "OP"]],
       },
     ],
@@ -106,19 +116,19 @@ const data: PronominalRules = {
   "2m": {
     default: [
       {
-        excp: "2",
+        excp: "3",
         breakdown: [["h", "RPL"], "n"],
       },
     ],
     c: [
       {
-        excp: "2",
+        excp: "3",
         breakdown: [["h", "RPL"], "ni"],
       },
     ],
     a: [
       {
-        excp: "2",
+        excp: "3",
         breakdown: [["h", "RPL"], "y"],
       },
     ],
@@ -162,15 +172,34 @@ const data: PronominalRules = {
     o: ["tsy"],
   },
   ms: {
-    default: ["lʌn"],
-    c: ["lati"],
+    default: [
+      {
+        excp: "2" as const,
+        text: "lʌn",
+      },
+    ],
+    c: [
+      {
+        excp: "2" as const,
+        text: "lati",
+      },
+    ],
     a: [
       {
-        excp: "1",
+        excp: ["1", "2"],
         breakdown: ["l", ["u", "OP"]],
       },
     ],
-    i: ["lat", "lʌn"],
+    i: [
+      {
+        excp: "2" as const,
+        text: "lʌn",
+      },
+      {
+        excp: "2" as const,
+        text: "lat",
+      },
+    ],
   },
   fs: {
     default: ["kun"],

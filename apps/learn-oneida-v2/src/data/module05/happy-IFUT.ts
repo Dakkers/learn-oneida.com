@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} might be happy",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["a·", "IFUT"], ["uk"], "atshanuní", ["hakeʔ", "IFUT"]],

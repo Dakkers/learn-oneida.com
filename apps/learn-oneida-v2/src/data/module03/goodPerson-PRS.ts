@@ -4,7 +4,7 @@ export default createParadigmData(
   {
     // audioFolder: "module03/good_person",
     translation: "{{pronoun}} {{refVerb}} a good person",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "ukweʔtiyó"],

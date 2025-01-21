@@ -1,4 +1,5 @@
-import { cn, Flex, Text } from "@ukwehuwehneke/ohutsya";
+"use client";
+import { cn, Flex, Notice, Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "../TableWrapper";
 import {
   SectionHeading,
@@ -6,55 +7,60 @@ import {
 } from "@ukwehuwehneke/language-components";
 
 const VOWELS = ["a", "e", "i", "o", "u", "ʌ"];
-const SINGLES = ["h", "k", "l", "n", "s", "t", "w", "y"];
-const TWOS = [
-  "hl",
-  "hn",
-  "hw",
-  "hy",
+const BASICS = [
+  "h",
+  "k",
   "kh",
+  "khl",
+  "khw",
   "kl",
-  "kn",
   "kw",
-  "ky",
-  "ly",
-  "ny",
+  "l",
+  "n",
+  "s",
   "sh",
+  "shl",
+  "shn",
   "sk",
+  "skl",
+  "skw",
   "sl",
   "sn",
   "st",
   "sw",
-  "sy",
+  "t",
   "th",
-  "tk",
-  "tl",
-  "tn",
-  "ts",
+  "thw",
+  "tsy",
   "tw",
-  "ty",
+  "w",
+  "y",
 ];
-const THREES = [
-  "hwy",
-  "khl",
-  "khn",
-  "khw",
+const Y_SOUNDS = [
   "khy",
-  "skl",
-  "skw",
+  "ky",
+  "ly",
+  "ny",
+  "shy",
   "sky",
   "sny",
-  "thl",
-  "thn",
-  "thw",
+  "sy",
   "thy",
-  "tkw",
-  "tsh",
-  "tsy",
+  "tshy",
+  "ty",
 ];
-const FOURS = ["tshy"];
+
+const BASIC_CLUSTERS = ["khn", "kn", "ks", "thl", "thn", "tk", "tl", "tsh"];
+
+const MEDIUM_CLUSTERS = ["khsw", "kt", "ktsy", "tk", "tkw", "tn", "ts"];
+
+const HARD_CLUSTERS = ["kk", "kkw", "stsy"];
+
+const BREATHY = ["hl", "hn", "hw", "hwy", "hy"];
 
 const EXCEPTIONS = [
+  "khswo",
+  "khswu",
   "wo",
   "wu",
   "yi",
@@ -67,12 +73,83 @@ const EXCEPTIONS = [
   "syi",
   "two",
   "twu",
+  "tsyi", // TODO, see https://anowal-software.atlassian.net/browse/ONEIDA-150
+  "tshyi",
   "tyi",
   "skwo",
   "skwu",
   "tkwo",
   "tkwu",
   "snyu",
+];
+
+const NO_AUDIO = [
+  "khswa",
+  "khswe",
+  "khswi",
+  "khswo",
+  "khswu",
+  "khswʌ",
+  "kka",
+  "kke",
+  "kki",
+  "kko",
+  "kku",
+  "kkʌ",
+  "kkwa",
+  "kkwe",
+  "kkwi",
+  "kkwo",
+  "kkwu",
+  "kkwʌ",
+  "ksa",
+  "kse",
+  "ksi",
+  "kso",
+  "ksu",
+  "ksʌ",
+  "kta",
+  "kte",
+  "kti",
+  "kto",
+  "ktu",
+  "ktʌ",
+  "ktsya",
+  "ktsye",
+  "ktsyi",
+  "ktsyo",
+  "ktsyu",
+  "ktsyʌ",
+  "shla",
+  "shle",
+  "shli",
+  "shlo",
+  "shlu",
+  "shlʌ",
+  "shna",
+  "shne",
+  "shni",
+  "shno",
+  "shnu",
+  "shnʌ",
+  "stsya",
+  "stsye",
+  "stsyi",
+  "stsyo",
+  "stsyu",
+  "stsyʌ",
+  "shya",
+  "shye",
+  "shyi",
+  "shyo",
+  "shyu",
+  "shyʌ",
+  "tka",
+  "tke",
+  "tki",
+  "tko",
+  "tku",
+  "tkʌ",
 ];
 
 export function Soundchart({ level }: SectionHeadingProps) {
@@ -88,36 +165,60 @@ export function Soundchart({ level }: SectionHeadingProps) {
         sound in Oneida.
       </Text>
 
-      <SectionHeading level={level}>Two letters</SectionHeading>
+      <Notice intent="warning">
+        This sound chart has recently been re-organized and new sounds have been
+        added. Recordings for these sounds have not yet been made available.
+      </Notice>
 
+      <SectionHeading level={level}>Basics</SectionHeading>
+      <Text>
+        Start with these sounds, as they are the simplest sounds in Oneida.
+      </Text>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createCols()}
-        data={createArray(SINGLES)}
+        data={createArray(BASICS)}
       />
 
-      <SectionHeading level={level}>Three letters</SectionHeading>
-
+      <SectionHeading level={level}>Sounds with Y</SectionHeading>
+      <Text>
+        These sounds have a "yuh" sound of sorts that takes a bit of getting
+        used to.
+      </Text>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createCols()}
-        data={createArray(TWOS)}
+        data={createArray(Y_SOUNDS)}
       />
 
-      <SectionHeading level={level}>Four letters</SectionHeading>
-
+      <SectionHeading level={level}>Clusters 1</SectionHeading>
+      <Text>These are a bit trickier.</Text>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createCols()}
-        data={createArray(THREES)}
+        data={createArray(BASIC_CLUSTERS)}
       />
 
-      <SectionHeading level={level}>Five letters</SectionHeading>
-
+      <SectionHeading level={level}>Clusters 2</SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createCols()}
-        data={createArray(FOURS)}
+        data={createArray(MEDIUM_CLUSTERS)}
+      />
+
+      <SectionHeading level={level}>Clusters 3</SectionHeading>
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={createCols()}
+        data={createArray(HARD_CLUSTERS)}
+      />
+
+      <SectionHeading level={level}>Breathy Sounds</SectionHeading>
+      <Text>The "hwy" sound here is particularly tricky.</Text>
+      <TableWrapper
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        columns={createCols()}
+        data={createArray(BREATHY)}
       />
 
       <SectionHeading level={level}>Double vowels</SectionHeading>
@@ -146,7 +247,6 @@ export function Soundchart({ level }: SectionHeadingProps) {
         }))}
         data={[
           { col0: "ya·a", col1: "tu·u" },
-          { col0: "akka", col1: "ʌkkwi", col2: "ikko", col3: "ukko" },
           { col0: "kew", col1: "tew" },
         ]}
       />
@@ -160,16 +260,24 @@ function TheCell({ text }: { text?: string }) {
   }
 
   const filename = text.replaceAll("ʌ", "v");
+  const disabled = NO_AUDIO.includes(text);
 
   return (
     <button
+      aria-disabled={disabled}
       className={cn(
         "w-full border border-gray-400 rounded border-2 bg-gray-200 hover:bg-gray-300 h-[48px]",
+        disabled &&
+          "cursor-not-allowed border-0 bg-gray-100 hover:bg-gray-100 text-gray-400",
       )}
-      onClick={() => {
-        const music = new Audio(`/audio/soundchart/${filename}.mp3`);
-        music.play();
-      }}
+      onClick={
+        disabled
+          ? undefined
+          : () => {
+              const music = new Audio(`/audio/soundchart/${filename}.mp3`);
+              music.play();
+            }
+      }
       type="button"
     >
       {text}

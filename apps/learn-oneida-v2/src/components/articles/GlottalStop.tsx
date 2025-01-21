@@ -1,5 +1,3 @@
-"use client";
-
 import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";

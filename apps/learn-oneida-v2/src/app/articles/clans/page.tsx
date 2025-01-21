@@ -1,20 +1,19 @@
 import React from "react";
 import { ClansArticle } from "~/components/articles/Clans";
 
-const meta: any = () => {
-  return [
-    { title: "Clans" },
-    {
-      name: "description",
-      content: "Clans in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clans",
+  description: "Clans in Oneida",
 };
 
 export default function ArticlesClans() {
   return (
-    <div>
+    <PageWrapper>
       <ClansArticle />
-    </div>
+    </PageWrapper>
   );
 }

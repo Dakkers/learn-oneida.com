@@ -1,20 +1,18 @@
 import React from "react";
 import { AroundTheHouseArticle } from "~/components/articles/AroundTheHouse";
 
-const meta: any = () => {
-  return [
-    { title: "AroundTheHouse" },
-    {
-      name: "description",
-      content: "Around the house in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Around the House",
+  description: "Around the house in Oneida",
 };
 
 export default function ArticlesAroundTheHouse() {
   return (
-    <div>
+    <PageWrapper>
       <AroundTheHouseArticle />
-    </div>
+    </PageWrapper>
   );
 }

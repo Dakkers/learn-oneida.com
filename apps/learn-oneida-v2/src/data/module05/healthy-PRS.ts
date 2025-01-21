@@ -5,7 +5,7 @@ export default createParadigmData(
   {
     audioFolder: "module01/pronominals/blue/A",
     translation: "{{pronoun}} {{refVerb}} healthy",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "ataʔkali·té·"],

@@ -1,20 +1,19 @@
 import React from "react";
 import { NationsArticle } from "~/components/articles/Nations";
 
-const meta: any = () => {
-  return [
-    { title: "Nations" },
-    {
-      name: "description",
-      content: "Nations in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nations",
+  description: "Nations in Oneida",
 };
 
 export default function ArticlesNations() {
   return (
-    <div>
+    <PageWrapper>
       <NationsArticle />
-    </div>
+    </PageWrapper>
   );
 }

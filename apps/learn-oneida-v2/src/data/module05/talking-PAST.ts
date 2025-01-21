@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be talking",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wake"], "tha·l", ["á", "JOIN"], ["hkweʔ", "PAST"]],

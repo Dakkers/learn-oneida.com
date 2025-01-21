@@ -1,36 +1,32 @@
-"use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Learn" },
-    { name: "description", content: "Learn using a structured curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Learn",
+  description: "Learn using a structured curriculum",
 };
 
 export default function Learn() {
-  const modules = [1, 2, 3, 4, 5, 6, 7];
+  const modules = ["intro", 1, 2, 3, 4, 5, 6] as const;
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>Learn</SectionHeading>
 
       <p>Start learning from the curriculum:</p>
       <List>
         {modules.map((m) => (
           <List.Item key={m}>
-            <a
-              className="underline text-blue-600"
-              href={`/learn/module${m.toString().padStart(2, "0")}`}
-            >
-              Module {m}
-            </a>
+            <LinkWrapper page={m}>
+              {m === "intro" ? "Introduction" : `Module ${m}`}
+            </LinkWrapper>
           </List.Item>
         ))}
       </List>
-    </Flex>
+    </PageWrapper>
   );
 }

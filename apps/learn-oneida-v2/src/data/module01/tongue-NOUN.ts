@@ -1,10 +1,10 @@
 import { pronouns } from "@ukwehuwehneke/language-components";
-import { createParadigmData, type ParadigmData } from "@/utils/paradigm";
+import { createParadigmData } from "@/utils/paradigm";
 
 const data = createParadigmData(
   {
-    translation: "{{pronounPossessive}} heart",
-    type: "PLB",
+    translation: "{{pronounPossessive}} tongue",
+    type: "PP",
     phrases: [
       {
         breakdown: [["akw"], "ʌʔnáhsaʔ"],

@@ -1,4 +1,4 @@
-import { Link } from "@ukwehuwehneke/ohutsya";
+import { Link } from "./Link";
 import { isNumber } from "lodash";
 import type { ReactNode } from "react";
 
@@ -24,6 +24,7 @@ export function LinkWrapper({
     | "dim"
     | "dual"
     | "intro"
+    | "prep"
     | "refl"
     | "rep"
     | "semi"
@@ -38,6 +39,7 @@ export function LinkWrapper({
           dim: "diminutive feature",
           dual: "dualic feature",
           intro: "the introduction page",
+          prep: "pre-pronominal prefix",
           refl: "reflexive feature",
           rep: "repetitive feature",
           semi: "semi-reflexive feature",
@@ -48,6 +50,7 @@ export function LinkWrapper({
     "coin",
     "dim",
     "dual",
+    "prep",
     "refl",
     "rep",
     "semi",
@@ -80,6 +83,7 @@ export function LinkWrapper({
     coin: "/articles/coincident-feature",
     dim: "/articles/diminutive-feature",
     dual: "/articles/dualic-feature",
+    prep: "/articles/prepronominal-prefix",
     refl: "/articles/reflexive-feature",
     rep: "/articles/repetitive-feature",
     semi: "/articles/semireflexive-feature",

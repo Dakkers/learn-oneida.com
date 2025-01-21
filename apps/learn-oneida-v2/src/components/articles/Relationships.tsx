@@ -66,7 +66,7 @@ function MarriedTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={createColumns("PB", { suffix: "hne" }).slice(1)}
+        columns={createColumns("PO", { suffix: "hne" }).slice(1)}
         data={rows}
       />
     </>
@@ -113,7 +113,7 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={createColumns("PR", { suffix: "kwe̲" }).slice(1)}
+        columns={createColumns("PS", { suffix: "kwe̲" }).slice(1)}
         data={rows}
       />
     </>
@@ -150,7 +150,7 @@ function SeparatedTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={createColumns("PB", {
+        columns={createColumns("PO", {
           headerNow: "Separated",
           headerPast: "Reconciled",
         }).slice(1)}
@@ -183,7 +183,7 @@ function EngagedTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={createColumns("PB", { suffix: "hkwe̲" }).slice(1)}
+        columns={createColumns("PO", { suffix: "hkwe̲" }).slice(1)}
         data={rows}
       />
     </>
@@ -224,7 +224,7 @@ function SingleTable({ level = 2 }: ArticleProps) {
       </SectionHeading>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={createColumns("PR", { suffix: "hne" }).slice(1)}
+        columns={createColumns("PS", { suffix: "hne" }).slice(1)}
         data={rows}
       />
     </>
@@ -264,7 +264,7 @@ function OldManWomanTable({ level = 2 }: ArticleProps) {
             accessorKey: "oldMan",
             // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: BreakdownArray) => (
-              <TextBreakdown breakdown={value} typeFallback="PP" />
+              <TextBreakdown breakdown={value} typeFallback="PI" />
             ),
             header: "Old man",
           },
@@ -272,7 +272,7 @@ function OldManWomanTable({ level = 2 }: ArticleProps) {
             accessorKey: "oldWoman",
             // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: BreakdownArray) => (
-              <TextBreakdown breakdown={value} typeFallback="PP" />
+              <TextBreakdown breakdown={value} typeFallback="PI" />
             ),
             header: "Old woman",
           },
@@ -351,7 +351,7 @@ function BoyfriendGirlfriendTable({ level = 2 }: ArticleProps) {
             accessorKey: "boyfriend",
             // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: BreakdownArray) => (
-              <TextBreakdown breakdown={value} typeFallback="PLB" />
+              <TextBreakdown breakdown={value} typeFallback="PP" />
             ),
             header: "Boyfriend",
           },
@@ -359,7 +359,7 @@ function BoyfriendGirlfriendTable({ level = 2 }: ArticleProps) {
             accessorKey: "girlfriend",
             // @ts-expect-error TODO - TableWrapper/Table generics
             cell: (value: BreakdownArray) => (
-              <TextBreakdown breakdown={value} typeFallback="PLB" />
+              <TextBreakdown breakdown={value} typeFallback="PP" />
             ),
             header: "Girlfriend",
           },

@@ -1,3 +1,4 @@
+"use client";
 import { pluralizeVerbCommon } from "@/utils/translation";
 import { pronouns } from "@ukwehuwehneke/language-components";
 import { createParadigmData, type ParadigmData } from "@/utils/paradigm";
@@ -8,7 +9,7 @@ const data = createParadigmData(
     translation: "{{pronoun}} love {{reflexive}}",
     translationFn: (pronoun) =>
       `{{pronoun}} ${pluralizeVerbCommon(pronoun, "love")} {{reflexive}}`,
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], ["atat", "REFL"], "nolúkhwaʔ"],

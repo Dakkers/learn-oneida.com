@@ -16,17 +16,14 @@ import {
   getEnglishTranslation,
 } from "@/data/module08";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Characteristic Conjugation from Module 8" },
-    {
-      name: "description",
-      content:
-        "Practice your knowledge and understanding of object characteristics from module 8 in the Oneida language.",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Characteristic Conjugation from Module 8",
+//   description:
+//     "Practice your knowledge and understanding of object characteristics from module 8 in the Oneida language.",
+// };
 
 export default function PracticeCharacteristicConjugationModule8() {
   const [char, setChar] = React.useState(
@@ -80,7 +77,7 @@ export default function PracticeCharacteristicConjugationModule8() {
   }, [rows]);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>
         Characteristic Conjugation for Module 8
       </SectionHeading>
@@ -121,6 +118,6 @@ export default function PracticeCharacteristicConjugationModule8() {
           rows={rows}
         />
       )}
-    </Flex>
+    </PageWrapper>
   );
 }

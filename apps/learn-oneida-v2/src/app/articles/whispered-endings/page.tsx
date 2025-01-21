@@ -1,16 +1,19 @@
 import React from "react";
 import { WhisperedEndingsArticle } from "~/components/articles/WhisperedEndings";
 
-const meta: any = () => {
-  return [
-    { title: "Whispered Endings" },
-    {
-      name: "description",
-      content: "Whispered endings in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Whispered Endings",
+  description: "Whispered endings in Oneida",
 };
 
 export default function ArticlesWhisperedEndings() {
-  return <WhisperedEndingsArticle />;
+  return (
+    <PageWrapper>
+      <WhisperedEndingsArticle />
+    </PageWrapper>
+  );
 }

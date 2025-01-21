@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} not there",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: ["yáh thó thye·", ["k"], "é·seʔ"],

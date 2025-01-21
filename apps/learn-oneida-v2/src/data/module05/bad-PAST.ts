@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be a bad person",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["k"], "ukweʔtaksʌ·", ["hné·", "PAST"]],

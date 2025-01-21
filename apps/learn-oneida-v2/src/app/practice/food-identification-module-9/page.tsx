@@ -1,23 +1,16 @@
-"use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
   EnglishToOneidaQuiz,
   type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { createModule9FoodLists } from "@/data/module09";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Food identification (module 9)" },
-    {
-      name: "description",
-      content: "Quiz your Oneida knowledge by picking the right translation!",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Food identification (module 9)",
+  description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
 export default function PracticeFoodIdentificationModule9() {
@@ -40,7 +33,7 @@ export default function PracticeFoodIdentificationModule9() {
   }, []);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>
         Practice identifying food from module 9
       </SectionHeading>
@@ -49,6 +42,6 @@ export default function PracticeFoodIdentificationModule9() {
         englishOptions={englishOptions}
         oneidaOptions={oneidaOptions}
       />
-    </Flex>
+    </PageWrapper>
   );
 }

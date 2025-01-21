@@ -1,10 +1,9 @@
-"use client";
-
+import { PageWrapper } from "@/components/PageWrapper";
 import React from "react";
 
 export default function ArticleKanuhwelatuksla() {
   return (
-    <div>
+    <PageWrapper width="l">
       {/* @ts-expect-error TODO */}
       <read-along
         href="/audio/kanuhwelatuksla/kanuhwelatuksla-20240719041040.readalong"
@@ -21,6 +20,6 @@ export default function ArticleKanuhwelatuksla() {
         type="module"
         src="https://unpkg.com/@readalongs/web-component@^1.4.0/dist/web-component/web-component.esm.js"
       />
-    </div>
+    </PageWrapper>
   );
 }

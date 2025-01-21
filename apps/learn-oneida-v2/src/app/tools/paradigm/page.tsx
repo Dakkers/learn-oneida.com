@@ -69,16 +69,13 @@ import { Suspense } from "react";
 import { createModule10VerbListFlat } from "@/data/module10";
 import { TableAsForm } from "@/components/practice/TableAsForm";
 import { z } from "zod";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Paradigm Tester" },
-    {
-      name: "description",
-      content: "Test a root word's paradigm!",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Paradigm Tester",
+//   description: "Test a root word's paradigm!",
+// };
 
 function ToolsParadigmInner() {
   const router = useRouter();
@@ -207,7 +204,7 @@ function ToolsParadigmInner() {
   }, [rows]);
 
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Paradigm Tester</SectionHeading>
 
       <Flex
@@ -280,7 +277,7 @@ function ToolsParadigmInner() {
           rows={rows}
         />
       )}
-    </>
+    </PageWrapper>
   );
 }
 

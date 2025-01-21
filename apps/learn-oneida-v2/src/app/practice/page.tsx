@@ -1,19 +1,13 @@
-"use client";
-
+import { Link } from "@/components/Link";
+import { PageWrapper } from "@/components/PageWrapper";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
+import type { Metadata } from "next";
 
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
-const meta: any = () => {
-  return [
-    { title: "Practice" },
-    {
-      name: "description",
-      content: "Improve your Oneida skills with tools provided by this website",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Practice",
+  description: "Improve your Oneida skills with tools provided by this website",
 };
 
 export default function Practice() {
@@ -109,7 +103,7 @@ export default function Practice() {
   ];
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <Heading level={1} variant="headlineL">
         Practice
       </Heading>
@@ -120,12 +114,10 @@ export default function Practice() {
       <List>
         {items.map((t, i) => (
           <List.Item key={i}>
-            <a className="underline text-blue-600" href={`/practice${t.href}`}>
-              {t.label}
-            </a>
+            <Link href={`/practice${t.href}`}>{t.label}</Link>
           </List.Item>
         ))}
       </List>
-    </Flex>
+    </PageWrapper>
   );
 }

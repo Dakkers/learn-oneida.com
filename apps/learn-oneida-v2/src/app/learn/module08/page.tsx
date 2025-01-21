@@ -1,6 +1,10 @@
 "use client";
-
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 import { Accordion, Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
@@ -9,43 +13,43 @@ import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { createModule8CharacteristicsList } from "@/data/module08";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Module 8" },
-    { name: "description", content: "Module 8 of the Oneida curriculum" },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Module 8",
+//   description: "Module 8 of the Oneida curriculum",
+// };
 
 export default function LearnModule08() {
   const list = createModule8CharacteristicsList();
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Module 8</SectionHeading>
 
       <Box py={4}>
         <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
+          <b>Note:</b> This page is still under construction!
         </Notice>
       </Box>
 
       <TOC>
-        <TOC.Item label="Introduction" value="intro" />
+        <TocItem label="Introduction" value="intro" />
 
-        <TOC.Item label="Paradigms for Select Active Verbs" value="paradigms">
-          <TOC.Section>
+        <TocItem label="Paradigms for Select Active Verbs" value="paradigms">
+          <TocSection>
             {list.map((n) => (
-              <TOC.Item key={n.key} label={n.en} value={n.key.toLowerCase()} />
+              <TocItem key={n.key} label={n.en} value={n.key.toLowerCase()} />
             ))}
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Translation exercises" value="translation-exercises" />
+        <TocItem label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <Introduction />
       <AllNouns />
-    </>
+    </PageWrapper>
   );
 }
 
@@ -82,7 +86,7 @@ function DatumTable({ datum }: { datum: any }) {
       columns={[
         TableWrapper.englishColumn,
         // @ts-expect-error TODO - TableWrapper/Table generics
-        TableWrapper.createTextBreakdownColumn("PB"),
+        TableWrapper.createTextBreakdownColumn("PO"),
       ]}
       data={[
         ["it is...", datum.verb],

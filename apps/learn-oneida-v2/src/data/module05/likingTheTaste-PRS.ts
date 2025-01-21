@@ -1,3 +1,4 @@
+"use client";
 import { createParadigmData } from "@/utils/paradigm";
 import { pronouns } from "@ukwehuwehneke/language-components";
 import { pluralizeVerbCommon } from "@/utils/translation";
@@ -8,7 +9,7 @@ export default createParadigmData(
     translation: "{{pronoun}} like the taste",
     translationFn: (pronoun) =>
       `{{pronoun}} ${pluralizeVerbCommon(pronoun, "like")} the taste`,
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "e·ká·seʔ"],

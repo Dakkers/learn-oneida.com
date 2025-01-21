@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} didn't used to live there",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: ["yáh thó teʔ", ["k"], "nákle", ["hkweʔ", "PAST"]],

@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./../learn-mohawk.css";

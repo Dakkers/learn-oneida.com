@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} keep urinating",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["k"], "anistya·kéheʔ"],

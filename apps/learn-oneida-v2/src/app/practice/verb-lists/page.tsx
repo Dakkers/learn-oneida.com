@@ -35,16 +35,13 @@ import {
 } from "~/data/module04";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { z } from "zod";
+import { PageWrapper } from "@/components/PageWrapper";
+import { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Practice Lists of Verbs" },
-    {
-      name: "description",
-      content: "Practice your knowledge of verbs in the Oneida language.",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Practice Lists of Verbs",
+//   description: "Practice your knowledge of verbs in the Oneida language.",
+// };
 
 const tenseMap: Record<Module5VerbTense | Module6VerbTense, string> = {
   ...module5VerbTenseMap,
@@ -141,7 +138,7 @@ export default function PracticeTenseConjugation() {
   }, [rows]);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>Practice Lists of Verbs</SectionHeading>
 
       <Text>
@@ -204,6 +201,6 @@ export default function PracticeTenseConjugation() {
           rows={rows}
         />
       )}
-    </Flex>
+    </PageWrapper>
   );
 }

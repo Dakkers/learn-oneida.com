@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} used to be satisfied",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["t", "CIS"], ["wake"], "ʔnikuhliyo", ["hné·", "PAST"]],

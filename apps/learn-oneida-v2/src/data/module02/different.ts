@@ -5,7 +5,7 @@ export default createParadigmData(
   {
     audioFolder: "module02/being_different",
     translation: "{{pronoun}} are different",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["te", "DUAL"], ["ty"], ["at", "SRFL"], "tíhʌ"],

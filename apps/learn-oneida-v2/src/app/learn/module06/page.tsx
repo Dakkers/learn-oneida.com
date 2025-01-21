@@ -1,6 +1,9 @@
-"use client";
-
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 import { Accordion, Flex } from "@ukwehuwehneke/ohutsya";
 import {
   convertBreakdownToPlainText,
@@ -24,13 +27,13 @@ import { ParadigmTable } from "~/components/ParadigmTable";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Pronominal, type PronominalColor } from "~/components/Pronominal";
 import { Letter } from "~/components/Letter";
-import { Link } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
-import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { TextArray } from "@ukwehuwehneke/ohutsya";
 import { pronouns } from "@ukwehuwehneke/language-components";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 
@@ -49,14 +52,14 @@ const tenseBreakdownMap: Record<Module6VerbTense, BreakdownArray> = {
   fut: [["n", "PTV"], ["ʌ", "FUT"], ["k"], "átyele̲ʔ"],
   hab: ["tsiʔ ", ["ni", "PTV"], ["k"], "atyélhaʔ"],
   ifut: [["n", "PTV"], ["a", "IFUT"], ["k"], "átyele̲ʔ"],
-  pfv: [["ni", "PTV"], ["wak", "PB"], "átyele̲ʔ"],
+  pfv: [["ni", "PTV"], ["wak", "PO"], "átyele̲ʔ"],
 };
 
 const tenseLiteralBreakdownMap: Record<Module6VerbTense, BreakdownArray> = {
   cmd: ["shehlo·lí̲"],
   def: ["utu·kohte"],
   fut: ["ʌskahawíhte"],
-  hab: ["tsiʔ ni", ["k", "PR"], "atyélhaʔ"],
+  hab: ["tsiʔ ni", ["k", "PS"], "atyélhaʔ"],
   ifut: ["teyotuhutsyóhu"],
   pfv: ["yotukóhtu"],
 };
@@ -120,49 +123,47 @@ const verbsWithParadigms = [
   },
 ] as const;
 
-const meta: any = () => {
-  return [
-    { title: "Module 6" },
-    { name: "description", content: "Module 6 of the Oneida curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Module 6",
+  description: "Module 6 of the Oneida curriculum",
 };
 
 export default function LearnModule06() {
   const list = createModule6VerbList();
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Module 6</SectionHeading>
 
       <Box py={4}>
         <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
+          <b>Note:</b> This page is still under construction!
         </Notice>
       </Box>
 
       <TOC>
-        <TOC.Item label="Introduction" value="intro" />
-        <TOC.Item
+        <TocItem label="Introduction" value="intro" />
+        <TocItem
           label="Oneida Terms for Tenses"
           value="oneida-terms-for-tenses"
         />
-        <TOC.Item
+        <TocItem
           label="How Active Verbs Are Constructed"
           value="how-its-constructed"
         />
-        <TOC.Item label="Active Verb Examples" value="examples" />
+        <TocItem label="Active Verb Examples" value="examples" />
 
-        <TOC.Item label="Daily Activities" value="daily-activities">
-          <TOC.Section>
+        <TocItem label="Daily Activities" value="daily-activities">
+          <TocSection>
             {createModule6VerbList().map((v) => (
-              <TOC.Item key={v.key} label={v.en} value={_.kebabCase(v.key)} />
+              <TocItem key={v.key} label={v.en} value={_.kebabCase(v.key)} />
             ))}
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Paradigms for Select Active Verbs" value="paradigms">
-          <TOC.Section>
+        <TocItem label="Paradigms for Select Active Verbs" value="paradigms">
+          <TocSection>
             {verbsWithParadigms.map((v) => (
-              <TOC.Item
+              <TocItem
                 key={v.key}
                 label={v.root}
                 value={formatVerbParadigmSectionId(
@@ -170,10 +171,10 @@ export default function LearnModule06() {
                 )}
               />
             ))}
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Translation exercises" value="translation-exercises" />
+        <TocItem label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <StativeVsActiveSection />
@@ -185,7 +186,7 @@ export default function LearnModule06() {
       <VerbsParadigmsSection />
 
       <TranslationExercisesSection group="module06" />
-    </>
+    </PageWrapper>
   );
 }
 
@@ -213,7 +214,7 @@ function StativeVsActiveSection() {
             header: "Tense",
           },
           // @ts-expect-error TODO - TableWrapper/Table generics
-          TableWrapper.createTextBreakdownColumn("PB"),
+          TableWrapper.createTextBreakdownColumn("PO"),
           TableWrapper.englishColumn,
         ]}
         data={[
@@ -264,7 +265,7 @@ function StativeVsActiveSection() {
             header: "Tense",
           },
           // @ts-expect-error TODO - TableWrapper/Table generics
-          TableWrapper.createTextBreakdownColumn("PR"),
+          TableWrapper.createTextBreakdownColumn("PS"),
           TableWrapper.englishColumn,
         ]}
         data={[
@@ -301,24 +302,24 @@ function StativeVsActiveSection() {
           {
             tense: "Active Perfective",
             en: "I have cooked",
-            breakdown: [["wake", "PB"], "khuní"],
+            breakdown: [["wake", "PO"], "khuní"],
           },
           {
             tense: "Active Progressive",
             en: "I am going along cooking",
-            breakdown: [["wake", "PB"], "khuni", ["háti", "PAST"]],
+            breakdown: [["wake", "PO"], "khuni", ["háti", "PAST"]],
           },
           {
             tense: "Active Perfective Past",
             en: "I had cooked",
-            breakdown: [["wake", "PB"], "khuni·", ["hné·", "PAST"]],
+            breakdown: [["wake", "PO"], "khuni·", ["hné·", "PAST"]],
           },
           {
             tense: "Active Perfective Indefinite",
             en: "I should have cooked",
             breakdown: [
               ["a", "IFUT"],
-              ["·uk", "PB"],
+              ["·uk", "PO"],
               "khuni·",
               ["keʔ", "PAST"],
             ],
@@ -378,7 +379,7 @@ function OneidaTermsForTenses() {
             header: "Tense",
           },
           // @ts-expect-error TODO - TableWrapper/Table generics
-          TableWrapper.createTextBreakdownColumn("PR"),
+          TableWrapper.createTextBreakdownColumn("PS"),
         ]}
         data={[
           {
@@ -418,7 +419,7 @@ function OneidaTermsForTenses() {
             header: "Tense",
           },
           // @ts-expect-error TODO - TableWrapper/Table generics
-          TableWrapper.createTextBreakdownColumn("PB"),
+          TableWrapper.createTextBreakdownColumn("PO"),
           TableWrapper.englishColumn,
         ]}
         data={[
@@ -470,7 +471,7 @@ function OneidaTermsForTenses() {
             header: "Tense",
           },
           // @ts-expect-error TODO - TableWrapper/Table generics
-          TableWrapper.createTextBreakdownColumn("PR"),
+          TableWrapper.createTextBreakdownColumn("PS"),
           TableWrapper.englishColumn,
         ]}
         data={[
@@ -495,7 +496,7 @@ function OneidaTermsForTenses() {
             tense: "Definite Future",
           },
           {
-            breakdown: ["thó ni", ["wak", "PB"], "atyel", ["ʌ́", "PFV"]],
+            breakdown: ["thó ni", ["wak", "PO"], "atyel", ["ʌ́", "PFV"]],
             en: [
               "That is what I have done",
               "That is what I'm doing right now",
@@ -503,7 +504,7 @@ function OneidaTermsForTenses() {
             tense: "Perfective",
           },
           {
-            breakdown: ["thó ni", ["wak", "PB"], "atyelʌhátiʔ"],
+            breakdown: ["thó ni", ["wak", "PO"], "atyelʌhátiʔ"],
             en: "That is what I am going along doing right now",
             tense: ["Progressive", "Stative"],
           },
@@ -570,7 +571,7 @@ function HowConstructedSection() {
                 {tenseMap[key]}
                 <TextBreakdown
                   breakdown={tenseLiteralBreakdownMap[row.key]}
-                  typeFallback="PR"
+                  typeFallback="PS"
                 />
               </TextArray>
             ),
@@ -653,7 +654,7 @@ function ExamplesSection() {
       tense: "Definite Past",
       en: "I cooked",
       breakdown: cookVerbDatum.def.phrases[0].breakdown,
-      negation: ["Yáh teʔ", ["wake", "PB"], "khu·ní·"],
+      negation: ["Yáh teʔ", ["wake", "PO"], "khu·ní·"],
       negationEn: "I did not cook",
       desc: [
         "Describes a completed event (verbs that end in -ed in English)",
@@ -686,7 +687,7 @@ function ExamplesSection() {
       tense: "Perfective",
       en: "I have cooked",
       breakdown: cookVerbDatum.pfv.phrases[0].breakdown,
-      negation: ["Yáh teʔ", ["wake", "PB"], "khu·ní·"],
+      negation: ["Yáh teʔ", ["wake", "PO"], "khu·ní·"],
       negationEn: "I have not cooked",
       desc: [
         "Describes one (or many) events that have been completed, either recently or long ago",
@@ -717,7 +718,7 @@ function ExamplesSection() {
                 <span className="underline">{tenseMap[key]}</span>
                 <TextBreakdown
                   breakdown={tenseLiteralBreakdownMap[key]}
-                  typeFallback="PR"
+                  typeFallback="PS"
                   wrap="nowrap"
                 />
               </TextArray>
@@ -741,7 +742,7 @@ function ExamplesSection() {
               <TextArray>
                 <TextBreakdown
                   breakdown={breakdown}
-                  typeFallback="PR"
+                  typeFallback="PS"
                   wrap="nowrap"
                 />
                 {row.en}
@@ -756,7 +757,7 @@ function ExamplesSection() {
               <TextArray>
                 <TextBreakdown
                   breakdown={negation}
-                  typeFallback="PR"
+                  typeFallback="PS"
                   wrap="nowrap"
                 />
                 {row.negationEn}
@@ -776,7 +777,7 @@ function ExamplesSection() {
         </List.Item>
         <List.Item>
           The &quot;Perfective&quot; and &quot;Definite&quot; negations are the
-          same, and use blue pronominals (the Perfective form)
+          same, and use objective pronominals (the Perfective form)
         </List.Item>
       </List>
     </>

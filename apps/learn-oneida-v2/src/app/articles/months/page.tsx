@@ -1,20 +1,19 @@
 import React from "react";
 import { MonthsArticle } from "~/components/articles/Months";
 
-const meta: any = () => {
-  return [
-    { title: "Months" },
-    {
-      name: "description",
-      content: "Months in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Months",
+  description: "Months in Oneida",
 };
 
 export default function ArticlesMonths() {
   return (
-    <div>
+    <PageWrapper>
       <MonthsArticle />
-    </div>
+    </PageWrapper>
   );
 }

@@ -4,7 +4,7 @@ const data = createParadigmData(
   {
     audioFolder: "module02/father",
     translation: "{{pronounPossessive}} father",
-    type: "PP",
+    type: "PI",
     categories: ["kinship"],
     phrases: [
       {
@@ -17,7 +17,7 @@ const data = createParadigmData(
         breakdown: [["lo"], "ʔníha̲"],
       },
       {
-        breakdown: [["ako", "PB"], "ʔníha̲"],
+        breakdown: [["ako", "PO"], "ʔníha̲"],
       },
       {
         breakdown: [["shukwa"], "ʔníha̲"],

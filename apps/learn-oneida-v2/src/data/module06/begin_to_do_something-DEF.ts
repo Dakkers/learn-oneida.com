@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} began to do something",
-    type: "PR",
+    type: "PS",
     phrases: [
       {
         breakdown: [["t", "CIS"], ["a", "DEF"], ["k"], "atáhsawʌʔ"],

@@ -1,6 +1,7 @@
 "use client";
-import { Link, List } from "@ukwehuwehneke/ohutsya";
+import { List } from "@ukwehuwehneke/ohutsya";
 import type React from "react";
+import { Link } from "./Link";
 
 interface TableOfContentsProps {
   children: React.ReactNode;
@@ -16,7 +17,7 @@ interface TableOfContentsItemProps {
   value: React.ReactNode;
 }
 
-function TableOfContentsItem({
+export function TableOfContentsItem({
   children,
   label,
   value,
@@ -33,15 +34,19 @@ TableOfContents.Item = TableOfContentsItem;
 
 interface TableOfContentsSectionProps {
   children: React.ReactNode;
+  level?: 0 | 1 | 2;
 }
 
-TableOfContents.Section = function TableOfContentsSection({
+export function TableOfContentsSection({
   children,
+  level = 0,
 }: TableOfContentsSectionProps) {
-  return <List>{children}</List>;
-};
+  return <List level={level}>{children}</List>;
+}
 
-TableOfContentsItem.Phrase = function TocItemPhrase({
+TableOfContents.Section = TableOfContentsSection;
+
+export function TableOfContentsItemPhrase({
   label,
   word,
   value,
@@ -60,4 +65,6 @@ TableOfContentsItem.Phrase = function TocItemPhrase({
       value={value}
     />
   );
-};
+}
+
+TableOfContentsItem.Phrase = TableOfContentsItemPhrase;

@@ -20,17 +20,14 @@ import {
   module5VerbTenseMap,
 } from "~/data/module05";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Tenses practice" },
-    {
-      name: "description",
-      content:
-        "Practice your knowledge and understanding of tenses for stative verbs in the Oneida language.",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Tenses practice",
+//   description:
+//     "Practice your knowledge and understanding of tenses for stative verbs in the Oneida language.",
+// };
 
 export default function PracticeTenseConjugation() {
   const [word, setWord] = React.useState("goodPerson");
@@ -75,7 +72,7 @@ export default function PracticeTenseConjugation() {
   }, [rows]);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <Heading level={1} variant="headlineL">
         Tense Conjugation
       </Heading>
@@ -85,11 +82,7 @@ export default function PracticeTenseConjugation() {
         verb. These words come from <LinkWrapper page={5} />.
       </Text>
 
-      <Flex
-        align={{ sm: "end" }}
-        direction={{ xs: "column", sm: "row" }}
-        gap={2}
-      >
+      <Flex direction="column" gap={2}>
         <Select
           label="Word"
           onChange={(value) => {
@@ -131,6 +124,6 @@ export default function PracticeTenseConjugation() {
           rows={rows}
         />
       )}
-    </Flex>
+    </PageWrapper>
   );
 }

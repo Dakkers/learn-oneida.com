@@ -1,20 +1,19 @@
 import React from "react";
 import { ClockTimeArticle } from "~/components/articles/ClockTime";
 
-const meta: any = () => {
-  return [
-    { title: "Clock time" },
-    {
-      name: "description",
-      content: "Clock time in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clock time",
+  description: "Clock time in Oneida",
 };
 
 export default function ArticlesClockTime() {
   return (
-    <div>
+    <PageWrapper>
       <ClockTimeArticle />
-    </div>
+    </PageWrapper>
   );
 }

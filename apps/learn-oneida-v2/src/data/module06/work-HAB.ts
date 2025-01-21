@@ -4,7 +4,7 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 export default createParadigmData(
   {
     translation: "{{pronoun}} work",
-    type: "PB",
+    type: "PO",
     phrases: [
       {
         breakdown: [["wak"], "yó·tʌhseʔ"],

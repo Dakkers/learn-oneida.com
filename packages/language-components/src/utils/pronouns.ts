@@ -33,11 +33,11 @@ export const pronounsBlue: Pronoun[] = [
 ];
 
 export const PRONOUN_MAP_ONEIDA: Record<Pronoun, string> = {
-  i: "í",
-  u: "isé",
-  m: "laulhá",
-  f: "akaulhá",
-  it: "aulhá",
+  i: "í·",
+  u: "isé·",
+  m: "laulhá·",
+  f: "akaulhá·",
+  it: "aulhá·",
   uni: "tetniyáhse",
   soni: "teyakniyáhse",
   u2: "tesniyáhse",
@@ -48,6 +48,24 @@ export const PRONOUN_MAP_ONEIDA: Record<Pronoun, string> = {
   yall: "swakwekú",
   ms: "latikwekú",
   fs: "kutikwekú",
+} as const;
+
+export const PRONOUN_MAP_STANDALONE: Record<Pronoun, string> = {
+  i: "í·",
+  u: "isé·",
+  m: "laulhá·",
+  f: "akaulhá·",
+  it: "aulhá·",
+  uni: "uknulhá·",
+  soni: "uknulhá·",
+  u2: "snulhá·",
+  "2m": "lonulhá·",
+  "2f": "onulhá·",
+  us: "ukyulhá·",
+  theyni: "ukyulhá·",
+  yall: "tsyulhá·",
+  ms: "lonulhá·",
+  fs: "onulhá·",
 } as const;
 
 export const PRONOUN_MAP_EN: Record<Pronoun, string | string[]> = {
@@ -174,6 +192,24 @@ export const REFLEXIVE_MAP: Record<Pronoun, string> = {
   yall: "yourselves",
   ms: "themselves",
   fs: "themselves",
+} as const;
+
+export const NEGATION_MAP: Record<Pronoun, string> = {
+  i: "don't",
+  u: "don't",
+  m: "doesn't",
+  f: "doesn't",
+  it: "doesn't",
+  uni: "don't",
+  soni: "don't",
+  u2: "don't",
+  "2m": "don't",
+  "2f": "don't",
+  us: "don't",
+  theyni: "don't",
+  yall: "don't",
+  ms: "don't",
+  fs: "don't",
 } as const;
 
 export const pronounsPurple = [

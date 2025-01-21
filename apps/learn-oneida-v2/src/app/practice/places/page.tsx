@@ -1,6 +1,3 @@
-"use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
@@ -9,15 +6,13 @@ import {
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { arrayify } from "@ukwehuwehneke/language-components";
 import DATA_PLACES_IN_COMMUNITY from "@/data/module04/places-in-the-community";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Places in the community" },
-    {
-      name: "description",
-      content: "Quiz your Oneida knowledge by picking the right translation!",
-    },
-  ];
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Places in the community",
+  description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
 const DATA = DATA_PLACES_IN_COMMUNITY.filter(
@@ -50,7 +45,7 @@ export default function PracticePlaces() {
   }, []);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <Heading level={1} variant="headlineL">
         Practice your knowledge of places in the community
       </Heading>
@@ -59,6 +54,6 @@ export default function PracticePlaces() {
         englishOptions={englishOptions}
         oneidaOptions={oneidaOptions}
       />
-    </Flex>
+    </PageWrapper>
   );
 }

@@ -5,7 +5,7 @@ const data = createParadigmData(
   {
     // audioFolder: "module01/pronominals/light_blue/C",
     translation: "{{pronounPossessive}} house",
-    type: "PLB",
+    type: "PP",
     phrases: [
       {
         breakdown: [["ak"], "núhsoteʔ"],
