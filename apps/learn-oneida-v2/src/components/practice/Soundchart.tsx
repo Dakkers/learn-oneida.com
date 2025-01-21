@@ -1,3 +1,4 @@
+"use client";
 import { cn, Flex, Notice, Text } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "../TableWrapper";
 import {

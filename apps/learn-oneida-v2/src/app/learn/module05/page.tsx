@@ -5,7 +5,12 @@ import dataWillBeHere from "~/data/module04/will-be-here";
 import dataMightBeHere from "~/data/module04/might-be-here";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { ParadigmTable } from "~/components/ParadigmTable";
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
@@ -22,17 +27,16 @@ import { HeightWeightArticle } from "~/components/articles/Weight";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { ParticlesTable } from "~/components/articles/ParticlesTable";
 import { type Module5VerbDatum, createModule5VerbsList } from "~/data/module05";
+import { PageWrapper } from "@/components/PageWrapper";
+import { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Module 5" },
-    { name: "description", content: "Module 5 of the Oneida curriculum" },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Module 5" ,
+//   description: "Module 5 of the Oneida curriculum"};
 
 export default function LearnModule05() {
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Module 5</SectionHeading>
 
       <Box py={4}>
@@ -42,41 +46,41 @@ export default function LearnModule05() {
       </Box>
 
       <TOC>
-        <TOC.Item label="Stative verbs" value="stative-verbs">
-          <TOC.Section>
-            <TOC.Item
+        <TocItem label="Stative verbs" value="stative-verbs">
+          <TocSection>
+            <TocItem
               label="How stative verbs are constructed"
               value="how-stative-verbs-are-constructed"
             />
-            <TOC.Item
+            <TocItem
               label="Stative verb examples"
               value="stative-verb-examples"
             />
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Verbs — Character" value="verbs-character" />
-        <TOC.Item label="Verbs — Mind" value="verbs-mind" />
-        <TOC.Item label="Verbs — Emotions" value="verbs-emotions" />
-        <TOC.Item label="Verbs — Body" value="verbs-body" />
-        <TOC.Item label="Verbs — Physical" value="verbs-physical" />
-        <TOC.Item label="Verbs — Misc" value="verbs-misc" />
+        <TocItem label="Verbs — Character" value="verbs-character" />
+        <TocItem label="Verbs — Mind" value="verbs-mind" />
+        <TocItem label="Verbs — Emotions" value="verbs-emotions" />
+        <TocItem label="Verbs — Body" value="verbs-body" />
+        <TocItem label="Verbs — Physical" value="verbs-physical" />
+        <TocItem label="Verbs — Misc" value="verbs-misc" />
 
-        <TOC.Item label="Other Stative Verbs" value="other-stative-verbs" />
-        <TOC.Item
+        <TocItem label="Other Stative Verbs" value="other-stative-verbs" />
+        <TocItem
           label="Irregular Stative Verbs"
           value="irregular-stative-verbs"
         />
-        <TOC.Item
+        <TocItem
           label="Negating Stative Verbs"
           value="negating-stative-verbs"
         />
 
-        <TOC.Item label="Height and Weight" value="height-weight" />
-        <TOC.Item label="Stative Descriptions" value="stative-descriptions" />
+        <TocItem label="Height and Weight" value="height-weight" />
+        <TocItem label="Stative Descriptions" value="stative-descriptions" />
 
-        <TOC.Item label="Particles" value="particles" />
-        <TOC.Item label="Translation exercises" value="translation-exercises" />
+        <TocItem label="Particles" value="particles" />
+        <TocItem label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <SectionHeading id="stative-verbs" level={2}>
@@ -107,7 +111,7 @@ export default function LearnModule05() {
       </SectionHeading>
       <ParticlesTable group="module05" />
       <TranslationExercisesSection group="module05" />
-    </>
+    </PageWrapper>
   );
 }
 

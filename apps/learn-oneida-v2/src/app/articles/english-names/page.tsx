@@ -1,16 +1,19 @@
 import React from "react";
 import { EnglishNamesArticle } from "~/components/articles/EnglishNames";
 
-const meta: any = () => {
-  return [
-    { title: "English Names" },
-    {
-      name: "description",
-      content: "English names in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "English Names",
+  description: "English names in Oneida",
 };
 
 export default function ArticlesEnglishNames() {
-  return <EnglishNamesArticle />;
+  return (
+    <PageWrapper>
+      <EnglishNamesArticle />
+    </PageWrapper>
+  );
 }

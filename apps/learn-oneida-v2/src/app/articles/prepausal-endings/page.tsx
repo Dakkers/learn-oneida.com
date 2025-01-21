@@ -1,16 +1,19 @@
 import React from "react";
 import { PrepausalEndingsArticle } from "~/components/articles/PrepausalEndings";
 
-const meta: any = () => {
-  return [
-    { title: "Prepausal Endings" },
-    {
-      name: "description",
-      content: "Prepausal vs. medial endings in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Prepausal Endings",
+  description: "Prepausal vs. medial endings in Oneida",
 };
 
 export default function ArticlesPrepausalEndings() {
-  return <PrepausalEndingsArticle />;
+  return (
+    <PageWrapper>
+      <PrepausalEndingsArticle />
+    </PageWrapper>
+  );
 }

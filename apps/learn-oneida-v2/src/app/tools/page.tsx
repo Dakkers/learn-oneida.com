@@ -1,15 +1,15 @@
-"use client";
-
-import { Link, List } from "@ukwehuwehneke/ohutsya";
+import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { Link } from "@/components/Link";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Tools" },
-    { name: "description", content: "Tools provided by this website" },
-  ];
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tools",
+  description: "Tools provided by this website",
 };
 
 export default function Tools() {
@@ -37,7 +37,7 @@ export default function Tools() {
   ];
 
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Tools</SectionHeading>
 
       <Text>Check out some tools:</Text>
@@ -48,6 +48,6 @@ export default function Tools() {
           </List.Item>
         ))}
       </List>
-    </>
+    </PageWrapper>
   );
 }

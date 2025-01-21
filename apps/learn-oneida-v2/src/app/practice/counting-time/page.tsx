@@ -2,7 +2,6 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
-import { Link } from "@ukwehuwehneke/ohutsya";
 import { shuffle } from "lodash";
 import { useMemo, useState } from "react";
 import { z } from "zod";
@@ -10,16 +9,14 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createCountingTimeDataLegacy } from "~/components/articles/CountingTime";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { Link } from "@/components/Link";
+import { PageWrapper } from "@/components/PageWrapper";
+import { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Practice Counting Time" },
-    {
-      name: "description",
-      content: "Test your Oneida knowledge on counting lengths of time!",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Practice Counting Time",
+//   description: "Test your Oneida knowledge on counting lengths of time!",
+// };
 
 export default function PracticeCountingTime() {
   const rows = useMemo(() => {
@@ -55,7 +52,7 @@ export default function PracticeCountingTime() {
   const [hasStarted, setHasStarted] = useState(false);
 
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Practice counting time</SectionHeading>
       <Text>
         Here you can practice the terminology on the{" "}
@@ -65,6 +62,7 @@ export default function PracticeCountingTime() {
 
       {hasStarted ? (
         <TableAsForm
+          bleed={0}
           checkCorrectness={(key, val) =>
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }
@@ -78,6 +76,6 @@ export default function PracticeCountingTime() {
           </Button>
         </Flex>
       )}
-    </>
+    </PageWrapper>
   );
 }

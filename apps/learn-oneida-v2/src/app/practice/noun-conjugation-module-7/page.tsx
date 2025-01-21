@@ -13,19 +13,16 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { createModule7NounsList, getEnglishTranslation } from "@/data/module07";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Noun Conjugation from Module 7" },
-    {
-      name: "description",
-      content:
-        "Practice your knowledge and understanding of noun conjugation from module 7 in the Oneida language.",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Noun Conjugation from Module 7",
+//   description:
+//     "Practice your knowledge and understanding of noun conjugation from module 7 in the Oneida language.",
+// };
 
-export default function PracticeCharacteristicConjugationModule8() {
+export default function PracticeNounConjugationModule7() {
   const [noun, setNoun] = React.useState(createModule7NounsList()[0].key);
   const [hasStarted, setHasStarted] = React.useState(false);
 
@@ -79,7 +76,7 @@ export default function PracticeCharacteristicConjugationModule8() {
   }, [rows]);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>Noun Conjugation for Module 7</SectionHeading>
 
       <Text>
@@ -118,6 +115,6 @@ export default function PracticeCharacteristicConjugationModule8() {
           rows={rows}
         />
       )}
-    </Flex>
+    </PageWrapper>
   );
 }

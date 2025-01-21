@@ -1,20 +1,19 @@
 import React from "react";
 import { RepetitiveFeatureArticle } from "~/components/articles/RepetitiveFeature";
 
-const meta: any = () => {
-  return [
-    { title: "Repetitive Conjugation" },
-    {
-      name: "description",
-      content: "The repetitive conjugation in Oneida",
-    },
-  ];
+import { PageWrapper } from "@/components/PageWrapper";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Repetitive Conjugation",
+  description: "The repetitive conjugation in Oneida",
 };
 
 export default function ArticlesRepetitiveConjugation() {
   return (
-    <div>
+    <PageWrapper>
       <RepetitiveFeatureArticle />
-    </div>
+    </PageWrapper>
   );
 }

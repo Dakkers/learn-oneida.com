@@ -40,7 +40,12 @@ import cousinsJson from "../../data/family/plural/cousins";
 import friendsJson from "../../data/family/plural/friends";
 
 import { Notice, Text } from "@ukwehuwehneke/ohutsya";
-import { TableOfContents as TOC } from "../TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 import { Letter } from "../Letter";
 import {
   SectionHeading,
@@ -465,7 +470,7 @@ export function FamilyTableOfContentItems() {
     ["Cousins"],
     ["Friends"],
   ].map(([label, value], i) => (
-    <TOC.Item
+    <TocItem
       key={i}
       label={label}
       value={`family-${value ?? label.toLowerCase()}`}

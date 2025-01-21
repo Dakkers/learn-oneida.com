@@ -1,3 +1,4 @@
+"use client";
 import { createParadigmData } from "@/utils/paradigm";
 import { pronouns } from "@ukwehuwehneke/language-components";
 import { pluralizeVerbCommon } from "@/utils/translation";

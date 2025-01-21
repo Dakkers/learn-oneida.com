@@ -376,15 +376,30 @@ const data = {
     o: ["sky"],
   },
   yall_m: {
-    default: ["hetsw"],
-    c: ["hetswa"],
+    default: [
+      {
+        excp: "3" as const,
+        breakdown: [["h", "RPL"], "etsw"],
+      },
+    ],
+    c: [
+      {
+        excp: "3" as const,
+        breakdown: [["h", "RPL"], "etswa"],
+      },
+    ],
     i: [
       {
-        excp: "1" as const,
+        excp: ["1", "3"] as const,
         breakdown: ["hetsw", ["ʌ", "OP"]],
       },
     ],
-    o: ["hetsy"],
+    o: [
+      {
+        excp: "3" as const,
+        breakdown: [["h", "RPL"], "etsy"],
+      },
+    ],
   },
 
   ms_them: {

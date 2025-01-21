@@ -7,23 +7,21 @@ import { Divider } from "@ukwehuwehneke/ohutsya";
 import React from "react";
 import { translateNumber } from "~/utils/numbers";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Numbers" },
-    {
-      name: "description",
-      content: "Translate numbers from Oneida to English and vice versa",
-    },
-  ];
-};
+import type { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "Numbers",
+//   description: "Translate numbers from Oneida to English and vice versa",
+// };
 
 export default function ToolsNumbers() {
   const [value, setValue] = React.useState("");
   const [translatedValue, setTranslatedValue] = React.useState("");
 
   return (
-    <div>
+    <PageWrapper>
       <SectionHeading level={1}>Numbers</SectionHeading>
 
       <p className="mt-8 mb-4">
@@ -54,6 +52,6 @@ export default function ToolsNumbers() {
           Translation: <b>{translatedValue}</b>
         </p>
       </Flex>
-    </div>
+    </PageWrapper>
   );
 }

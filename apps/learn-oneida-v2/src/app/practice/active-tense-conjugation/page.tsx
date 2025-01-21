@@ -2,13 +2,13 @@
 import { Flex } from "@ukwehuwehneke/ohutsya";
 
 import React, { useMemo } from "react";
-import { Heading } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Select } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import {
   PRONOUN_MAP_EN,
   PRONOUN_MAP_ONEIDA,
+  SectionHeading,
   type Pronoun,
 } from "@ukwehuwehneke/language-components";
 import { z } from "zod";
@@ -21,17 +21,14 @@ import {
 } from "~/data/module06/activeVerbsList";
 import { TableAsForm } from "~/components/practice/TableAsForm";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Tenses Conjugation for Active Verbs" },
-    {
-      name: "description",
-      content:
-        "Practice your knowledge and understanding of tenses for active verbs in the Oneida language.",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Tenses Conjugation for Active Verbs",
+//   description:
+//     "Practice your knowledge and understanding of tenses for active verbs in the Oneida language.",
+// };
 
 export default function PracticeTenseConjugation() {
   const [word, setWord] = React.useState("answer");
@@ -76,21 +73,17 @@ export default function PracticeTenseConjugation() {
   }, [rows]);
 
   return (
-    <Flex direction="column" gap={4}>
-      <Heading level={1} variant="headlineL">
+    <PageWrapper>
+      <SectionHeading level={1}>
         Tense Conjugation for Active Verbs
-      </Heading>
+      </SectionHeading>
 
       <Text>
         Use this page to practice conjugating the different tenses for a given
         active verb. These words come from <LinkWrapper page={6} />.
       </Text>
 
-      <Flex
-        align={{ sm: "end" }}
-        direction={{ xs: "column", sm: "row" }}
-        gap={2}
-      >
+      <Flex direction="column" gap={2}>
         <Select
           label="Word"
           onChange={(value) => {
@@ -136,6 +129,6 @@ export default function PracticeTenseConjugation() {
           rows={rows}
         />
       )}
-    </Flex>
+    </PageWrapper>
   );
 }

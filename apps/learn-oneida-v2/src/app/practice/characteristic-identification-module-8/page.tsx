@@ -1,6 +1,3 @@
-"use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
@@ -12,15 +9,13 @@ import {
   createModule8CharacteristicsList,
   getEnglishTranslation,
 } from "@/data/module08";
+import { PageWrapper } from "@/components/PageWrapper";
 
-const meta: any = () => {
-  return [
-    { title: "Object characteristics (module 8)" },
-    {
-      name: "description",
-      content: "Quiz your Oneida knowledge by picking the right translation!",
-    },
-  ];
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Object characteristics (module 8)",
+  description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
 export default function PracticeObjectCharacteristicsModule8() {
@@ -57,7 +52,7 @@ export default function PracticeObjectCharacteristicsModule8() {
   }, []);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <Heading level={1} variant="headlineL">
         Practice identifying characteristics from module 8
       </Heading>
@@ -66,6 +61,6 @@ export default function PracticeObjectCharacteristicsModule8() {
         englishOptions={englishOptions}
         oneidaOptions={oneidaOptions}
       />
-    </Flex>
+    </PageWrapper>
   );
 }

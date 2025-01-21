@@ -2,7 +2,7 @@ import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData(
   {
-    translation: "Be have time!",
+    translation: "Have time!",
     type: "PO",
     phrases: [
       {

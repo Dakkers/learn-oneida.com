@@ -1,6 +1,4 @@
 "use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
-
 import React from "react";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import {
@@ -11,20 +9,17 @@ import {
 } from "lucide-react";
 import { DATA_CARDINAL_DIRECTIONS } from "~/components/articles/CardinalDirections";
 import { MatchingGamePage } from "~/components/practice/MatchingGamePage";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Cardinal Directions" },
-    {
-      name: "description",
-      content: "Match the Oneida words with the English words.",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Cardinal Directions",
+//   description: "Match the Oneida words with the English words.",
+// };
 
 export default function PracticeCardinalDirections() {
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <Heading level={1} variant="headlineL">
         Cardinal Directions
       </Heading>
@@ -43,6 +38,6 @@ export default function PracticeCardinalDirections() {
                   : undefined
         }
       />
-    </Flex>
+    </PageWrapper>
   );
 }

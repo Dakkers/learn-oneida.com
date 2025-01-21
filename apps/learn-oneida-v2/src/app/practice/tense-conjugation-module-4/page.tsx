@@ -19,17 +19,14 @@ import {
   translatePhrase,
 } from "@ukwehuwehneke/language-components";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Tenses Conjugation for Verbs from Module 4" },
-    {
-      name: "description",
-      content:
-        "Practice your knowledge and understanding of tenses for verbs from module 4 in the Oneida language.",
-    },
-  ];
-};
+// export const metadata: Metadata = {
+//   title: "Tenses Conjugation for Verbs from Module 4",
+//   description:
+//     "Practice your knowledge and understanding of tenses for verbs from module 4 in the Oneida language.",
+// };
 
 export default function PracticeTenseConjugation() {
   const [word, setWord] = React.useState("here");
@@ -115,7 +112,7 @@ export default function PracticeTenseConjugation() {
   }, [rows]);
 
   return (
-    <Flex direction="column" gap={4}>
+    <PageWrapper>
       <SectionHeading level={1}>Tense Conjugation for Module 4</SectionHeading>
 
       <Text>
@@ -123,7 +120,7 @@ export default function PracticeTenseConjugation() {
         verb from <LinkWrapper page={4} />.
       </Text>
 
-      <Flex align="end" gap={2}>
+      <Flex direction="column" gap={2}>
         <Select
           label="Word"
           onChange={(value) => {
@@ -150,12 +147,14 @@ export default function PracticeTenseConjugation() {
           value={pronoun}
         />
 
-        <Button
-          disabled={!word || hasStarted}
-          onClick={() => setHasStarted(true)}
-        >
-          Start
-        </Button>
+        <Flex.Item>
+          <Button
+            disabled={!word || hasStarted}
+            onClick={() => setHasStarted(true)}
+          >
+            Start
+          </Button>
+        </Flex.Item>
       </Flex>
 
       {hasStarted && (
@@ -168,6 +167,6 @@ export default function PracticeTenseConjugation() {
           rows={rows}
         />
       )}
-    </Flex>
+    </PageWrapper>
   );
 }

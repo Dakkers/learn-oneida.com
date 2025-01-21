@@ -1,6 +1,9 @@
-"use client";
-
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+  TableOfContentsSection as TocSection,
+  TableOfContentsItemPhrase as TocPhrase,
+} from "~/components/TableOfContents";
 import { Accordion, Flex } from "@ukwehuwehneke/ohutsya";
 import {
   convertBreakdownToPlainText,
@@ -24,13 +27,13 @@ import { ParadigmTable } from "~/components/ParadigmTable";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import { Pronominal, type PronominalColor } from "~/components/Pronominal";
 import { Letter } from "~/components/Letter";
-import { Link } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
-import { Bleed } from "@ukwehuwehneke/ohutsya";
 import { TextArray } from "@ukwehuwehneke/ohutsya";
 import { pronouns } from "@ukwehuwehneke/language-components";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
 const TENSE_LIST = ["cmd", "hab", "pfv", "def", "ifut", "fut"] as const;
 
@@ -120,17 +123,15 @@ const verbsWithParadigms = [
   },
 ] as const;
 
-const meta: any = () => {
-  return [
-    { title: "Module 6" },
-    { name: "description", content: "Module 6 of the Oneida curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Module 6",
+  description: "Module 6 of the Oneida curriculum",
 };
 
 export default function LearnModule06() {
   const list = createModule6VerbList();
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Module 6</SectionHeading>
 
       <Box py={4}>
@@ -140,29 +141,29 @@ export default function LearnModule06() {
       </Box>
 
       <TOC>
-        <TOC.Item label="Introduction" value="intro" />
-        <TOC.Item
+        <TocItem label="Introduction" value="intro" />
+        <TocItem
           label="Oneida Terms for Tenses"
           value="oneida-terms-for-tenses"
         />
-        <TOC.Item
+        <TocItem
           label="How Active Verbs Are Constructed"
           value="how-its-constructed"
         />
-        <TOC.Item label="Active Verb Examples" value="examples" />
+        <TocItem label="Active Verb Examples" value="examples" />
 
-        <TOC.Item label="Daily Activities" value="daily-activities">
-          <TOC.Section>
+        <TocItem label="Daily Activities" value="daily-activities">
+          <TocSection>
             {createModule6VerbList().map((v) => (
-              <TOC.Item key={v.key} label={v.en} value={_.kebabCase(v.key)} />
+              <TocItem key={v.key} label={v.en} value={_.kebabCase(v.key)} />
             ))}
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Paradigms for Select Active Verbs" value="paradigms">
-          <TOC.Section>
+        <TocItem label="Paradigms for Select Active Verbs" value="paradigms">
+          <TocSection>
             {verbsWithParadigms.map((v) => (
-              <TOC.Item
+              <TocItem
                 key={v.key}
                 label={v.root}
                 value={formatVerbParadigmSectionId(
@@ -170,10 +171,10 @@ export default function LearnModule06() {
                 )}
               />
             ))}
-          </TOC.Section>
-        </TOC.Item>
+          </TocSection>
+        </TocItem>
 
-        <TOC.Item label="Translation exercises" value="translation-exercises" />
+        <TocItem label="Translation exercises" value="translation-exercises" />
       </TOC>
 
       <StativeVsActiveSection />
@@ -185,7 +186,7 @@ export default function LearnModule06() {
       <VerbsParadigmsSection />
 
       <TranslationExercisesSection group="module06" />
-    </>
+    </PageWrapper>
   );
 }
 
