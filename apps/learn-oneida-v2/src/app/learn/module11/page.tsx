@@ -15,6 +15,7 @@ import {
   createModule11BodyPartNounList,
 } from "@/data/module11";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageWrapper } from "@/components/PageWrapper";
 
 const meta: any = () => {
   return [
@@ -24,14 +25,13 @@ const meta: any = () => {
 };
 
 export default function LearnModule11() {
-  const list = createModule11BodyPartNounList();
   return (
-    <>
+    <PageWrapper>
       <SectionHeading level={1}>Module 11</SectionHeading>
 
       <Box py={4}>
-        <Notice intent="warning">
-          <b>NOTE:</b> This page is still under construction!
+        <Notice intent="negative">
+          <b>Note:</b> This page is still under construction!
         </Notice>
       </Box>
 
@@ -42,12 +42,20 @@ export default function LearnModule11() {
 
       <Introduction />
       <BodyPartsList />
-    </>
+    </PageWrapper>
   );
 }
 
 function Introduction() {
-  return <div>(Intro not yet written)</div>;
+  return (
+    <>
+      <SectionHeading id="intro" level={2}>
+        Introduction
+      </SectionHeading>
+
+      <div>(Intro not yet written)</div>
+    </>
+  );
 }
 
 function BodyPartsList() {
@@ -103,7 +111,7 @@ function DatumTable({ data }: { data: BodyPartNounData[] }) {
                   <Flex direction="column" gap={0}>
                     <TextBreakdown
                       breakdown={obj.one}
-                      typeFallback="PR"
+                      typeFallback="PS"
                       wrap="nowrap"
                     />
                     {obj.en && <Text variant="labelS">{obj.en}</Text>}

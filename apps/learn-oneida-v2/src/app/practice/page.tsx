@@ -1,5 +1,6 @@
 import { Link } from "@/components/Link";
 import { PageWrapper } from "@/components/PageWrapper";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Heading } from "@ukwehuwehneke/ohutsya";
 import { List } from "@ukwehuwehneke/ohutsya";
 import { Text } from "@ukwehuwehneke/ohutsya";
@@ -20,6 +21,10 @@ export default function Practice() {
     //   href: "/cardinal-directions",
     //   label: "Cardinal Directions",
     // },
+    {
+      href: "/body-part-identification",
+      label: "Body Part Identification",
+    },
     {
       href: "/characteristic-conjugation-module-8",
       label: "Characteristic Conjugation (Module 8)",
@@ -104,10 +109,7 @@ export default function Practice() {
 
   return (
     <PageWrapper>
-      <Heading level={1} variant="headlineL">
-        Practice
-      </Heading>
-
+      <SectionHeading level={1}>Practice</SectionHeading>
       <Text>
         Improve your Oneida skills with features provided by this website!
       </Text>

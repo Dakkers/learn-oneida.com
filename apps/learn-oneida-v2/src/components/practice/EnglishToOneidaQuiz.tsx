@@ -21,11 +21,13 @@ import {
 
 export interface EnglishToOneidaQuizProps {
   englishOptions: QuizOption[];
+  hasImages?: boolean;
   oneidaOptions: QuizOption[];
 }
 
 interface Question {
   answer: string;
+  img: string;
   key: string;
   options: QuizOption[];
   text: string;
@@ -34,16 +36,22 @@ interface Question {
 
 export function EnglishToOneidaQuiz({
   englishOptions,
+  hasImages = false,
   oneidaOptions,
 }: EnglishToOneidaQuizProps) {
-  const [languageSetting, setLanguageSetting] = React.useState("both");
-  const [answerSetting, setAnswerSetting] = React.useState("text");
+  const [languageSetting, setLanguageSetting] = React.useState(
+    hasImages ? "en" : "both",
+  );
+  const [answerSetting, setAnswerSetting] = React.useState(
+    hasImages ? "multipleChoice" : "text",
+  );
   const [questionCountSetting, setQuestionCountSetting] = React.useState("5");
 
   return (
     <QuizContainerContext.Provider
       value={{
         answerSetting,
+        hasImages,
         languageSetting,
         questionCountSetting,
         setAnswerSetting,
@@ -86,6 +94,7 @@ function Content({ englishOptions, oneidaOptions }: EnglishToOneidaQuizProps) {
               {questions.map((q) => (
                 <StandardQuestion
                   key={q.key}
+                  img={q.img}
                   options={q.options}
                   questionKey={q.key}
                   text={q.text}
@@ -100,7 +109,10 @@ function Content({ englishOptions, oneidaOptions }: EnglishToOneidaQuizProps) {
         </Quiz>
       ) : (
         <Flex direction="column" gap={4}>
-          <Settings />
+          <Settings
+            enableLanguageSetting={!context.hasImages}
+            enableAnswerTypeSetting={!context.hasImages}
+          />
 
           <Box>
             <Button onClick={() => setHasStarted(true)}>Start</Button>
@@ -117,10 +129,12 @@ interface TypicalOptions {
 }
 
 export function StandardQuestion({
+  img,
   options,
   questionKey,
   text,
 }: {
+  img?: string;
   options: QuizOption[];
   questionKey: string;
   text: string;
@@ -129,7 +143,11 @@ export function StandardQuestion({
   const quizContext = useQuizContext();
   return (
     <Flex align="center" direction="column" gap={8}>
-      <Text variant="headlineS">{text}</Text>
+      {img ? (
+        <img alt={text} className="h-[250px]" src={img} />
+      ) : (
+        <Text variant="headlineS">{text}</Text>
+      )}
 
       <div className="w-[600px]">
         <Flex align="center" direction="column" gap={4}>
@@ -210,6 +228,7 @@ export function useEnglishToOneidaQuestions({
       result[i] = {
         answer: answerDatum?.text ?? "",
         key: questionDatum.key,
+        img: questionDatum.img,
         options: _.shuffle(optionsForQuestion),
         text: questionDatum.text,
         type: langKey === "en" ? "english_to_oneida" : "oneida_to_english",

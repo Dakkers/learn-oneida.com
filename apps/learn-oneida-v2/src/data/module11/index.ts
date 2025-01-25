@@ -14,7 +14,7 @@ export interface BodyPartNounData {
 
 export function createModule11BodyPartNounList(): BodyPartNounData[] {
   const objAnkle: BodyPartNounData = {
-    key: "Ankle",
+    key: "ankle",
     en: ["ankle", "ankles"],
     dict: [404],
     root: ["-hsiniko’t-"],
@@ -22,25 +22,25 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["kh", "PR"], "siniko’tá·ke’"],
+        one: [["kh", "PS"], "siniko’tá·ke’"],
       },
     ],
   };
   const objArm: BodyPartNounData = {
-    key: "Arm",
+    key: "arm",
     en: ["arm", "arms"],
     dict: [580],
     root: ["-nʌtsh-"],
-    standalone: ["onʌtsha’"],
+    standalone: ["onʌ́tsha’"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "nʌtshá·ke’"],
+        one: [["k", "PS"], "nʌtshá·ke’"],
       },
     ],
   };
   const objBack: BodyPartNounData = {
-    key: "Back",
+    key: "back",
     en: ["back"],
     dict: [662],
     root: ["-shw-", "-shwʌ-", "-shu-"],
@@ -48,50 +48,44 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "shwʌ·ne’"],
+        one: [["ke", "PS"], "shwʌ́·ne’"],
       },
       {
-        one: [["ke", "PR"], "shú·ne’"],
-      },
-      {
-        one: [["k", "PR"], "swʌ·ne’"],
-      },
-      {
-        one: [["k", "PR"], "swá·ke’"],
+        one: [["ke", "PS"], "shú·ne’"],
       },
     ],
   };
   const objBeard: BodyPartNounData = {
-    key: "Beard",
-    en: ["beard"],
+    key: "beard",
+    en: ["beard", "moustache"],
     dict: [493, 902],
     root: ["-kustu’lh-"],
     standalone: ["okustú·lha’"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "kustulhá·ke’"],
+        one: [["k", "PS"], "kustulhá·ke’"],
       },
     ],
   };
   const objBelly: BodyPartNounData = {
-    key: "Belly",
+    key: "belly",
     en: ["belly"],
     dict: [592],
     root: ["-nikwʌ’t-"],
-    standalone: ["onikwʌ·ta’"],
+    standalone: ["onikwʌ́·ta’"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "nikwʌ’té·ne"],
+        one: [["k", "PS"], "nikwʌ’té·ne"],
       },
       {
-        one: [["k", "PR"], "nikwʌ’tá·ke’"],
+        one: [["k", "PS"], "nikwʌ’tá·ke’"],
       },
     ],
   };
   const objBellybutton: BodyPartNounData = {
-    key: "Bellybutton",
+    key: "bellybutton",
     en: ["belly button"],
     dict: [905],
     root: ["-nli’tst-"],
@@ -99,12 +93,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "ntli’tstá·ke’"],
+        one: [["ke", "PS"], "n", ["t", "RPL"], "li’tstá·ke’"],
       },
     ],
   };
   const objBirthMark: BodyPartNounData = {
-    key: "BirthMark",
+    key: "birthmark",
     en: ["birth mark"],
     dict: [],
     root: ["-atshistokwale"],
@@ -112,38 +106,38 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["wak", "PB"], "atshistokwale"],
+        one: [["wak", "PO"], "atshistokwale"],
       },
     ],
   };
   const objBladder: BodyPartNounData = {
-    key: "Bladder",
+    key: "bladder",
     en: ["bladder"],
     dict: [585, 504, 909],
     root: ["-nhʌhalakhwa’"],
-    standalone: ["STANDALONE"],
+    standalone: ["yenhʌhalakhwa’"],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "nhʌhalákhwa’"],
+        one: [["ke", "PS"], "nhʌhalákhwa’"],
       },
     ],
   };
   const objBlood: BodyPartNounData = {
-    key: "Blood",
+    key: "blood",
     en: ["blood"],
     dict: [591, 910],
     root: ["-nikwʌhs-"],
-    standalone: ["onikwʌhsa’"],
+    standalone: ["onikwʌ́hsa’"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PLB"], "nikwʌhśa̲"],
+        one: [["ak", "PP"], "nikwʌ́hsa̲"],
       },
     ],
   };
   const objBody: BodyPartNounData = {
-    key: "Body",
+    key: "body",
     en: ["body"],
     dict: [911],
     root: ["-ya’t-"],
@@ -151,12 +145,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "ya’té·ne"],
+        one: [["k", "PS"], "ya’té·ne"],
       },
     ],
   };
   const objBone: BodyPartNounData = {
-    key: "Bone",
+    key: "bone",
     en: ["bone"],
     dict: [912],
     root: ["-styʌ’t-"],
@@ -164,12 +158,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "styʌ’tá·ke’"],
+        one: [["ke", "PS"], "styʌ’tá·ke’"],
       },
     ],
   };
   const objBraid: BodyPartNounData = {
-    key: "Braid",
+    key: "braid",
     en: ["braid"],
     dict: [512, 915],
     root: ["-latskʌ-"],
@@ -177,12 +171,25 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "latskʌtá·ke’"],
+        one: [["k", "PS"], "latskʌtá·ke’"],
+      },
+    ],
+  };
+  const objBrain: BodyPartNounData = {
+    key: "brain",
+    en: ["brain"],
+    dict: [559],
+    root: ["-na’alatsl-"],
+    standalone: ["ona’alátsla’"],
+    onNoun: [
+      {
+        en: "my",
+        one: [["ak", "PP"], "na’alatsla’"],
       },
     ],
   };
   const objBreast: BodyPartNounData = {
-    key: "Breast",
+    key: "breast",
     en: ["breast"],
     dict: [618],
     root: ["-nu’t-"],
@@ -190,12 +197,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "nu’tá·ke’"],
+        one: [["k", "PS"], "nu’tá·ke’"],
       },
     ],
   };
   const objCheek: BodyPartNounData = {
-    key: "Cheek",
+    key: "cheek",
     en: ["cheek"],
     dict: [589],
     root: ["-nho’kw-"],
@@ -203,12 +210,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["ke", "PR"], "nho’kwá·ke’"],
+        one: [["ke", "PS"], "nho’kwá·ke’"],
       },
     ],
   };
   const objButt: BodyPartNounData = {
-    key: "Butt",
+    key: "butt",
     en: ["butt"],
     dict: [386, 926],
     root: ["-hna’tsh-"],
@@ -216,16 +223,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "hna’tshí·ne"],
+        one: [["k", "PS"], "hna’tshí·ne"],
       },
       {
         en: "on my",
-        one: [["k", "PR"], "hna’tshá·ke’"],
+        one: [["k", "PS"], "hna’tshá·ke’"],
       },
     ],
   };
   const objChest: BodyPartNounData = {
-    key: "Chest",
+    key: "chest",
     en: ["chest"],
     dict: [934],
     root: ["-utskwe’n-"],
@@ -233,12 +240,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "utskwe’ná·ke’"],
+        one: [["k", "PS"], "utskwe’ná·ke’"],
       },
     ],
   };
   const objChin: BodyPartNounData = {
-    key: "Chin",
+    key: "chin",
     en: ["chin"],
     dict: [422, 935],
     root: ["-hyo’tsh-"],
@@ -246,16 +253,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "hyo’tshé·ne"],
+        one: [["ke", "PS"], "hyo’tshé·ne"],
       },
       {
         en: "on my",
-        one: [["k", "PR"], "hyo’tshá·ke’"],
+        one: [["k", "PS"], "hyo’tshá·ke’"],
       },
     ],
   };
   const objEar: BodyPartNounData = {
-    key: "Ear",
+    key: "ear",
     en: ["ear", "ears"],
     dict: [977],
     root: ["-ahuht-"],
@@ -263,12 +270,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "ahuhtá·ke’"],
+        one: [["k", "PS"], "ahuhtá·ke’"],
       },
     ],
   };
   const objElbow: BodyPartNounData = {
-    key: "Elbow",
+    key: "elbow",
     en: ["elbow"],
     dict: [980],
     root: ["-hyo’lh-", "-lhyo’lh-", "-whyo’lh-"],
@@ -276,16 +283,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["ke", "PR"], "hyo’lhá·ke’"],
+        one: [["ke", "PS"], "hyo’lhá·ke’"],
       },
       {
         en: "on my",
-        one: [["k", "PR"], "hyo’lhá·ke’"],
+        one: [["ke", "PS"], "lhyo’lhá·ke’"],
       },
     ],
   };
   const objEye: BodyPartNounData = {
-    key: "Eye",
+    key: "eye",
     en: ["eye", "eyes"],
     dict: [985],
     root: ["-kahl-"],
@@ -293,12 +300,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "kahlá·ke’"],
+        one: [["k", "PS"], "kahlá·ke’"],
       },
     ],
   };
   const objEyebrow: BodyPartNounData = {
-    key: "Eyebrow",
+    key: "eyebrow",
     en: ["eyebrow"],
     dict: [985],
     root: ["-na’was-"],
@@ -306,12 +313,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "na’wasé·ne"],
+        one: [["k", "PS"], "na’wasá·ke"],
       },
     ],
   };
   const objEyelash: BodyPartNounData = {
-    key: "Eyelash",
+    key: "eyelash",
     en: ["eyelash", "strawberry top"],
     dict: [985],
     root: ["-’nekʌhtal-"],
@@ -319,12 +326,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "’nekʌhtalá·ke’"],
+        one: [["k", "PS"], "ne’kʌhtalá·ke’"],
       },
     ],
   };
   const objEyelid: BodyPartNounData = {
-    key: "Eyelid",
+    key: "eyelid",
     en: ["eyelid"],
     dict: [1234123412341234],
     root: ["ROOTWORD"],
@@ -332,12 +339,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "ONNOUN"],
+        one: [["k", "PS"], "ONNOUN"],
       },
     ],
   };
   const objFace: BodyPartNounData = {
-    key: "Face",
+    key: "face",
     en: ["face", "mask"],
     dict: [492],
     root: ["-kuhs-", "-kuks-"],
@@ -345,16 +352,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "kúksne"],
+        one: [["k", "PS"], "kukhsá·ke’"],
       },
       {
-        en: "my",
-        one: [["k", "PR"], "kukhsá·ke’"],
+        en: "on my",
+        one: [["k", "PS"], "kúksne"],
       },
     ],
   };
   const objNail: BodyPartNounData = {
-    key: "Nail",
+    key: "nail",
     en: ["fingernail", "toenail", "claw"],
     dict: [995],
     root: ["-tsye’el-"],
@@ -362,12 +369,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "tsye’elá·ke"],
+        one: [["k", "PS"], "tsye’elá·ke"],
       },
     ],
   };
   const objFoot: BodyPartNounData = {
-    key: "Foot",
+    key: "foot",
     en: ["foot", "feet"],
     dict: [71, 1004],
     root: ["-ahsi’t-", "-ahsi-"],
@@ -375,16 +382,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "ahsí·ke"],
+        one: [["k", "PS"], "ahsí·ke"],
       },
       {
         en: "on my",
-        one: [["k", "PR"], "ahsi’tá·ke’"],
+        one: [["k", "PS"], "ahsi’tá·ke’"],
       },
     ],
   };
   const objForehead: BodyPartNounData = {
-    key: "Forehead",
+    key: "forehead",
     en: ["forehead"],
     dict: [495, 1006],
     root: ["-ku’kwal-"],
@@ -392,12 +399,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "ku’kwalá·ke’"],
+        one: [["k", "PS"], "ku’kwalá·ke’"],
       },
     ],
   };
   const objGenitals: BodyPartNounData = {
-    key: "Genitals",
+    key: "genitals",
     en: ["genitals", "vagina", "penis"],
     dict: [850],
     root: ["-’n-"],
@@ -405,12 +412,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "e’ná·ke’"],
+        one: [["k", "PS"], "e’ná·ke’"],
       },
     ],
   };
   const objHair: BodyPartNounData = {
-    key: "Hair",
+    key: "hair",
     en: ["hair"],
     dict: [601, 1029],
     root: ["-nuhkwis-", "-nuhkwisl-"],
@@ -418,12 +425,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PLB"], "núhkwis"],
+        one: [["ak", "PP"], "núhkwis"],
       },
     ],
   };
   const objHand: BodyPartNounData = {
-    key: "Hand",
+    key: "hand",
     en: ["hand", "fingers"],
     dict: [658, 1030],
     root: ["-shnuhs-", "-hsnu-"],
@@ -431,12 +438,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my hand",
-        one: [["ke", "PR"], "shnú·ke’"],
+        one: [["ke", "PS"], "shnú·ke’"],
       },
     ],
   };
   const objHead: BodyPartNounData = {
-    key: "Head",
+    key: "head",
     en: ["head"],
     dict: [615, 1035],
     root: ["-nutsi-", "-nutsist-"],
@@ -444,16 +451,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "nutsí·ne"],
+        one: [["k", "PS"], "nutsí·ne"],
       },
       {
         en: "on my",
-        one: [["k", "PR"], "nutsihstá·ke’"],
+        one: [["k", "PS"], "nutsihstá·ke’"],
       },
     ],
   };
   const objHeart: BodyPartNounData = {
-    key: "Heart",
+    key: "heart",
     en: ["heart"],
     dict: [1037],
     root: ["-el-", "-ely-", "-elyahs-"],
@@ -461,12 +468,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["akw", "PLB"], "elyá·ne"],
+        one: [["akw", "PP"], "elyá·ne"],
       },
     ],
   };
   const objHeel: BodyPartNounData = {
-    key: "Heel",
+    key: "heel",
     en: ["heel"],
     dict: [509, 1038],
     root: ["-lat-"],
@@ -474,16 +481,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "latá·ke’"],
+        one: [["k", "PS"], "latá·ke’"],
       },
       {
         en: "on my",
-        one: [["k", "PR"], "laté·ne"],
+        one: [["k", "PS"], "laté·ne"],
       },
     ],
   };
   const objHip: BodyPartNounData = {
-    key: "Hip",
+    key: "hip",
     en: ["hip"],
     dict: [589, 1041],
     root: ["-nhuskal-"],
@@ -491,12 +498,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "nhuskalá·ke’"],
+        one: [["ke", "PS"], "nhuskalá·ke’"],
       },
     ],
   };
   const objIntestines: BodyPartNounData = {
-    key: "Intestines",
+    key: "intestines",
     en: ["intestines", "guts", "innards"],
     dict: [450],
     root: ["-kahlost-"],
@@ -504,25 +511,25 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PLB"], "kahlósta·ke’"],
+        one: [["ak", "PP"], "kahlostá·ke’"],
       },
     ],
   };
   const objJoint: BodyPartNounData = {
-    key: "Joint",
+    key: "joint",
     en: ["joint"],
-    dict: [],
-    root: [],
-    standalone: [],
+    dict: [671, 1331],
+    root: ["tsi’ te...stutel-", "tsi’ te...stutl-"],
+    standalone: ["ostutla’shúha’"],
     onNoun: [
       {
         en: "my",
-        one: ["tsi’ t", ["wak", "PB"], "estu·tele"],
+        one: ["tsi’ t", ["wak", "PO"], "estu·téle"],
       },
     ],
   };
   const objKnee: BodyPartNounData = {
-    key: "Knee",
+    key: "knee",
     en: ["knee"],
     dict: [760, 1062],
     root: ["-utsh-"],
@@ -530,12 +537,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "utshá·ke’"],
+        one: [["k", "PS"], "utshá·ke’"],
       },
     ],
   };
   const objLeg: BodyPartNounData = {
-    key: "Leg",
+    key: "leg",
     en: ["leg"],
     dict: [403],
     root: ["-hsin-"],
@@ -543,29 +550,29 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "hsiná·ke’"],
+        one: [["k", "PS"], "hsiná·ke’"],
       },
-      {
-        en: "???",
-        one: [["ak", "PLB"], "hsiná·ke’"],
-      },
+      // {
+      //   en: "???",
+      //   one: [["ak", "PP"], "hsiná·ke’"],
+      // },
     ],
   };
   const objLiver: BodyPartNounData = {
-    key: "Liver",
+    key: "liver",
     en: ["liver"],
     dict: [1080],
     root: ["-athwʌhs-"],
-    standalone: ["othwʌhsa’"],
+    standalone: ["othwʌ́hsa’"],
     onNoun: [
       {
         en: "my",
-        one: [["akw", "PR"], "athwʌhsa’"],
+        one: [["akw", "PP"], "athwʌ́hsa’"],
       },
     ],
   };
   const objLung: BodyPartNounData = {
-    key: "Lung",
+    key: "lung",
     en: ["lung"],
     dict: [768, 1088],
     root: ["-wela-"],
@@ -573,12 +580,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PLB"], "welalá·khwa̲"],
+        one: [["ak", "PP"], "welalá·khwa̲’"],
       },
     ],
   };
   const objMouth: BodyPartNounData = {
-    key: "Mouth",
+    key: "mouth",
     en: ["mouth", "opening"],
     dict: [399],
     root: ["-hsakahlute’-"],
@@ -586,29 +593,25 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: ["tsi’", ["k", "PR"], "hsaká·lute’"],
-      },
-      {
-        en: "???",
-        one: [["k", "PR"], "sá·ke’"],
+        one: [["k", "PS"], "sá·ke’"],
       },
     ],
   };
   const objMuscles: BodyPartNounData = {
-    key: "Muscles",
+    key: "muscles",
     en: ["muscles"],
-    dict: [408],
+    dict: [408, 1102],
     root: ["-htil-"],
     standalone: ["ohti·lá·"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PLB"], "htila’"],
+        one: [["ak", "PP"], "hti·lá’"],
       },
     ],
   };
   const objLips: BodyPartNounData = {
-    key: "Lips",
+    key: "lips",
     en: ["lips"],
     dict: [399, 1077],
     root: ["-hs-"],
@@ -616,12 +619,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "sé·ne"],
+        one: [["k", "PS"], "sé·ne"],
       },
     ],
   };
   const objNeck: BodyPartNounData = {
-    key: "Neck",
+    key: "neck",
     en: ["neck"],
     dict: [621, 1105],
     root: ["-nyal-"],
@@ -629,12 +632,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "nyalá·ke’"],
+        one: [["ke", "PS"], "nyalá·ke’"],
       },
     ],
   };
   const objNipple: BodyPartNounData = {
-    key: "Nipple",
+    key: "nipple",
     en: ["nipple"],
     dict: [390, 1107],
     root: ["-hnihsy-"],
@@ -642,12 +645,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "hnihsyá·ke’"],
+        one: [["k", "PS"], "hnihsyá·ke’"],
       },
     ],
   };
   const objNose: BodyPartNounData = {
-    key: "Nose",
+    key: "nose",
     en: ["nose"],
     dict: [866, 1108],
     root: ["-’nyuhs-"],
@@ -655,16 +658,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "’nyú·ke’"],
+        one: [["ke", "PS"], "’nyú·ke’"],
       },
       {
         en: "on my",
-        one: [["ke", "PR"], "’nyuhsá·ke’"],
+        one: [["ke", "PS"], "’nyuhsá·ke’"],
       },
     ],
   };
   const objPalm: BodyPartNounData = {
-    key: "Palm",
+    key: "palm",
     en: ["palm"],
     dict: [83],
     root: ["-ahtsy-"],
@@ -672,12 +675,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["ak", "PLB"], "htsyanake"],
+        one: [["akw", "PP"], "ahtsyaná·ke"],
       },
     ],
   };
   const objRibs: BodyPartNounData = {
-    key: "Ribs",
+    key: "ribs",
     en: ["ribs"],
     dict: [559, 1152],
     root: ["-na’aht-"],
@@ -685,16 +688,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "na’ahtá·ke’"],
+        one: [["k", "PS"], "na’ahtá·ke’"],
       },
       {
         en: "my",
-        one: [["k", "PR"], "na’ahté·ne"],
+        one: [["k", "PS"], "na’ahté·ne"],
       },
     ],
   };
   const objRib: BodyPartNounData = {
-    key: "Rib",
+    key: "rib",
     en: ["rib"],
     dict: [408],
     root: ["-htehkal-"],
@@ -702,12 +705,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "tehkalá·ke’"],
+        one: [["k", "PS"], "tehkalá·ke’"],
       },
     ],
   };
   const objShin: BodyPartNounData = {
-    key: "Shin",
+    key: "shin",
     en: ["shin"],
     dict: [629, 1173],
     root: ["-nyʌt-"],
@@ -715,12 +718,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["ke", "PR"], "nyʌ’tá·ke’"],
+        one: [["ke", "PS"], "nyʌ’tá·ke’"],
       },
     ],
   };
   const objShoulder: BodyPartNounData = {
-    key: "Shoulder",
+    key: "shoulder",
     en: ["shoulder"],
     dict: [389, 1175],
     root: ["-hnʌhs-", "-hnʌks-"],
@@ -728,33 +731,29 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "hnʌksne"],
+        one: [["k", "PS"], "hnʌ́ksne"],
       },
       {
         en: "on my",
-        one: [["k", "PR"], "hnʌhsá·ke’"],
+        one: [["k", "PS"], "hnʌhsá·ke’"],
       },
     ],
   };
   const objSkin: BodyPartNounData = {
-    key: "Skin",
+    key: "skin",
     en: ["skin"],
     dict: [424, 1159],
     root: ["-ihna-", "-hnakwal-"],
     standalone: ["ohna·kwále’"],
     onNoun: [
       {
-        en: "on my",
-        one: [["k", "PR"], "ihná·ke"],
-      },
-      {
-        en: "???",
-        one: [["ak", "PLB"], "ná·kwale’"],
+        en: "my",
+        one: [["ak", "PP"], "hná·kwale’"],
       },
     ],
   };
   const objSkull: BodyPartNounData = {
-    key: "Skull",
+    key: "skull",
     en: ["skull", "head"],
     dict: [559],
     root: ["-na’al-"],
@@ -762,29 +761,29 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "na’alá·ke’"],
+        one: [["k", "PS"], "na’alá·ke’"],
       },
       {
         en: "in my",
-        one: [["k", "PR"], "na’alakú"],
+        one: [["k", "PS"], "na’alakú"],
       },
     ],
   };
   const objSoul: BodyPartNounData = {
-    key: "Soul",
+    key: "soul",
     en: ["soul"],
-    dict: [1234123412341234],
+    dict: [],
     root: ["-atunhetsl-"],
     standalone: ["atunhétsla’"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PLB"], "atunhetsla’"],
+        one: [["akw", "PP"], "atunhetsla’"],
       },
     ],
   };
   const objSpine: BodyPartNounData = {
-    key: "Spine",
+    key: "spine",
     en: ["spine"],
     dict: [541, 1195],
     root: ["-luhkwe’n-"],
@@ -792,25 +791,26 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "luhkwehná·ke’"],
+        one: [["k", "PS"], "luhkwehná·ke’"],
       },
     ],
   };
   const objStomachOrgan: BodyPartNounData = {
-    key: "StomachOrgan",
+    key: "stomachorgan",
     en: ["stomach (organ)"],
     dict: [484, 1206],
     root: ["-khwalakhwa’-"],
-    standalone: ["yekhwalákhwa’"],
+    // standalone: ["yekhwalákhwa’"],
+    standalone: [],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PR"], "khwalákhwa’"],
+        one: [["ke", "PS"], "khwalákhwa’"],
       },
     ],
   };
   const objTesticles: BodyPartNounData = {
-    key: "Testicles",
+    key: "testicles",
     en: ["testicles"],
     dict: [583, 1227],
     root: ["-nʌya’ke-"],
@@ -818,25 +818,25 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "nʌyá·ke’"],
+        one: [["k", "PS"], "nʌyá·ke’"],
       },
     ],
   };
   const objThigh: BodyPartNounData = {
-    key: "Thigh",
+    key: "thigh",
     en: ["thigh"],
     dict: [393, 1228],
     root: ["-hnitsh-"],
     standalone: ["ohnítsha’"],
     onNoun: [
       {
-        en: "my",
-        one: [["k", "PR"], "hnitshá·ke’"],
+        en: "on my",
+        one: [["k", "PS"], "hnitshá·ke’"],
       },
     ],
   };
   const objThroat: BodyPartNounData = {
-    key: "Throat",
+    key: "throat",
     en: ["throat"],
     dict: [411, 1230],
     root: ["-hu’kw-"],
@@ -844,7 +844,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "hu’kwé·ne"],
+        one: [["k", "PS"], "hu’kwé·ne"],
+      },
+      {
+        en: "on my",
+        one: [["k", "PS"], "hu’kwá·ke"],
       },
     ],
   };
@@ -857,12 +861,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
   // onNoun: [
   //   {
   //     en: "my",
-  //     one: [["k", "PR"], "enya’tá·ke"],
+  //     one: [["k", "PS"], "enya’tá·ke"],
   //   },
   // ],
   // };
   const objThumb: BodyPartNounData = {
-    key: "Thumb",
+    key: "thumb",
     en: ["thumb"],
     dict: [771, 1231],
     root: ["-whyuhkal-"],
@@ -870,12 +874,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["ke", "PR"], "whyuhkalá·ke’"],
+        one: [["ke", "PS"], "whyuhkalá·ke’"],
       },
     ],
   };
   const objToe: BodyPartNounData = {
-    key: "Toe",
+    key: "toe",
     en: ["toe"],
     dict: [88, 1235],
     root: ["-ahyakwil-", "-ahyakwi-"],
@@ -883,12 +887,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PR"], "ahyakwí·ke’"],
+        one: [["k", "PS"], "ahyakwí·ke’"],
       },
     ],
   };
   const objTongue: BodyPartNounData = {
-    key: "Tongue",
+    key: "tongue",
     en: ["tongue"],
     dict: [353, 1235],
     root: ["-ʌ’nahs-"],
@@ -896,75 +900,85 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PLB"], "wʌ’náhsa’"],
+        one: [["ak", "PP"], "wʌ’náhsa’"],
+      },
+    ],
+  };
+  const objTeeth: BodyPartNounData = {
+    key: "teeth",
+    en: ["teeth"],
+    dict: [557, 1236],
+    root: ["-nawil-"],
+    standalone: ["onawi·lá·"],
+    onNoun: [
+      {
+        en: "on my teeth",
+        one: [["k", "PS"], "nawilashuha"],
       },
     ],
   };
   const objTooth: BodyPartNounData = {
-    key: "Tooth",
-    en: ["tooth", "teeth"],
+    key: "tooth",
+    en: ["tooth"],
     dict: [557, 1236],
     root: ["-nawil-"],
     standalone: ["onawi·lá·"],
     onNoun: [
       {
         en: "on my tooth",
-        one: [["k", "PR"], "nawilá·ke’"],
-      },
-      {
-        en: "on my teeth",
-        one: [["k", "PR"], "nawilashuha"],
+        one: [["k", "PS"], "nawilá·ke’"],
       },
       {
         en: "my tooth (in my mouth)",
-        one: [["k", "PR"], "nawí·ke’"],
+        one: [["k", "PS"], "nawí·ke’"],
       },
       {
         en: "my tooth (not in my mouth)",
-        one: [["ak", "PLB"], "nawi·lá·"],
+        one: [["ak", "PP"], "nawi·lá·"],
       },
     ],
   };
   const objVein: BodyPartNounData = {
-    key: "Vein",
+    key: "vein",
     en: ["vein"],
-    dict: [1234123412341234],
-    root: ["ROOTWORD"],
-    standalone: ["ostsinuhya’htu"],
+    dict: [],
+    root: [],
+    standalone: ["otsinuhyáhta’"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PLB"], "tsinuhya’hta"],
+        one: [["ak", "PP"], "tsinuhyáhta’"],
       },
     ],
   };
   const objWomb: BodyPartNounData = {
-    key: "Womb",
-    en: ["womb"],
-    dict: [1234123412341234],
-    root: ["ROOTWORD"],
-    standalone: ["kawilalakhwa"],
+    key: "womb",
+    en: ["womb", "uterus"],
+    dict: [],
+    root: [],
+    standalone: ["kawilalákhwa’"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PR"], "wilalakhwa"],
+        one: [["k", "PS"], "wilalakhwa"],
       },
     ],
   };
 
-  return [
+  const result = [
     objAnkle,
     objArm,
     objBack,
     objBeard,
     objBelly,
     objBellybutton,
-    objBirthMark,
-    // objBladder,
+    // objBirthMark,
+    objBladder,
     objBlood,
     objBody,
     objBone,
     objBraid,
+    objBrain,
     objBreast,
     objCheek,
     objButt,
@@ -993,8 +1007,8 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     objLeg,
     objLiver,
     objLung,
-    objMouth,
-    // objMuscles,
+    // objMouth,
+    objMuscles,
     objLips,
     objNeck,
     objNipple,
@@ -1006,7 +1020,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     objShoulder,
     objSkin,
     objSkull,
-    // objSoul,
+    objSoul,
     objSpine,
     objStomachOrgan,
     objTesticles,
@@ -1016,8 +1030,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     objThumb,
     objToe,
     objTongue,
+    // objTeeth,
     objTooth,
-    // objVein,
-    // objWomb,
+    objVein,
+    objWomb,
   ];
+  result.sort((a, b) => a.en[0].localeCompare(b.en[0]));
+  return result;
 }
