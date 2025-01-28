@@ -132,6 +132,16 @@ export default function Attributions() {
           </Link>
         </List.Item>
         <List.Item>
+          Braid - Image by{" "}
+          <Link href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=155656">
+            OpenClipart-Vectors
+          </Link>{" "}
+          from{" "}
+          <Link href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=155656">
+            Pixabay
+          </Link>
+        </List.Item>
+        <List.Item>
           Breast - Image by{" "}
           <Link href="https://pixabay.com/users/basker_dhandapani-5411165/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2840338">
             Basker Dhandapani
@@ -149,13 +159,13 @@ export default function Attributions() {
         </List.Item>
         <List.Item>
           Butt - Image by{" "}
-          <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=145991">
+          <Link href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=145991">
             OpenClipart-Vectors
-          </a>{" "}
+          </Link>{" "}
           from{" "}
-          <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=145991">
+          <Link href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=145991">
             Pixabay
-          </a>
+          </Link>
         </List.Item>
         <List.Item>
           Chest - Image by{" "}
