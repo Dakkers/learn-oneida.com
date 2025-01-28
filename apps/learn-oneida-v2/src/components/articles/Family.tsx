@@ -282,7 +282,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Family
       </SectionHeading>
       <Text>
-        The root word is <b>hwatsil</b> and is a regular noun, so it uses
+        The root word is <b>-hwatsil-</b> and is a regular noun, so it uses
         possessive pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={familyJson} />
@@ -291,7 +291,7 @@ export function FamilyArticle({ level = 1 }: { level: 1 | 2 }) {
         Related
       </SectionHeading>
       <Text>
-        The root word is <b>atatnuhkw</b> and uses subjective pronominals.
+        The root word is <b>-atatnuhkw-</b> and uses subjective pronominals.
       </Text>
       <ParadigmTable columnVisibility={colVisibility} data={relatedJson} />
 

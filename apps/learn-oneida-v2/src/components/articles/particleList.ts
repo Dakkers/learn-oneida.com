@@ -582,7 +582,7 @@ export const particleList: ParticleEntry[] = [
   },
   {
     key: "hows_it_going",
-    translation: "Oh niyotuháti",
+    translation: "oh niyotuháti",
     en: "How is it going?",
     examples: [
       {
@@ -847,7 +847,7 @@ export const particleList: ParticleEntry[] = [
   },
   {
     key: "how_many_things",
-    translation: "Tó· ni·kú̲",
+    translation: "tó· ni·kú̲",
     en: "How many things, objects?",
     examples: [
       {
@@ -858,7 +858,7 @@ export const particleList: ParticleEntry[] = [
   },
   {
     key: "how_many_of_us",
-    translation: "Tó· nitwatí̲",
+    translation: "tó· nitwatí̲",
     en: "How many of us? (all of you & I)",
     examples: [
       {
@@ -869,7 +869,7 @@ export const particleList: ParticleEntry[] = [
   },
   {
     key: "how_many_of_they_and_i",
-    translation: "Tó· niyakwatí̲",
+    translation: "tó· niyakwatí̲",
     en: "How many of us? (they & I, not you)",
     examples: [
       {
@@ -880,7 +880,7 @@ export const particleList: ParticleEntry[] = [
   },
   {
     key: "how_many_of_yall",
-    translation: "Tó· niswatí̲",
+    translation: "tó· niswatí̲",
     en: "How many of you all? (all of you)",
     examples: [
       {
@@ -891,7 +891,7 @@ export const particleList: ParticleEntry[] = [
   },
   {
     key: "how_many_of_them_males",
-    translation: "Tó· nihatí̲",
+    translation: "tó· nihatí̲",
     en: "How many of them? (males, males and females)",
     examples: [
       {
@@ -902,7 +902,7 @@ export const particleList: ParticleEntry[] = [
   },
   {
     key: "how_many_of_them_females",
-    translation: "Tó· nikutí̲",
+    translation: "tó· nikutí̲",
     en: "How many of them? (females)",
     examples: [
       {

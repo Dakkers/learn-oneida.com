@@ -15,10 +15,12 @@ export default function Articles() {
   const articlesLinguistics = [
     ["/glottal-stop", "Glottal Stop"],
     ["/prepausal-endings", "Prepausal Endings"],
-    ["/repetitive-conjugation", "Repetitive Conjugation"],
+    ["/pronominals", "Pronominals"],
+    ["/repetitive-feature", "Repetitive Feature"],
     ["/stress", "Stress and Accents"],
     ["/letter-h", "The Letter H"],
     ["/whispered-endings", "Whispered Endings"],
+    ["/understanding-agents", "Understanding Agents"],
   ];
   const articles = [
     {

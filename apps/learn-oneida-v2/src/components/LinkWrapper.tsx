@@ -21,9 +21,11 @@ export function LinkWrapper({
     | 11
     | 12
     | "coin"
+    | "deriv"
     | "dim"
     | "dual"
     | "intro"
+    | "nom"
     | "prep"
     | "refl"
     | "rep"
@@ -36,9 +38,11 @@ export function LinkWrapper({
       ? `module ${page}`
       : {
           coin: "coincident feature",
+          deriv: "derivational suffix",
           dim: "diminutive feature",
           dual: "dualic feature",
           intro: "the introduction page",
+          nom: "nominalizer",
           prep: "pre-pronominal prefix",
           refl: "reflexive feature",
           rep: "repetitive feature",
@@ -48,11 +52,12 @@ export function LinkWrapper({
 
   const NON_EXISTENT_PAGES = [
     "coin",
+    "deriv",
     "dim",
     "dual",
+    "nom",
     "prep",
     "refl",
-    "rep",
     "semi",
     7,
     8,
@@ -79,10 +84,12 @@ export function LinkWrapper({
     10: "/learn/module10",
     11: "/learn/module11",
     12: "/learn/module12",
-    intro: "/learn/introduction",
     coin: "/articles/coincident-feature",
+    deriv: "/articles/derivational-suffixes",
     dim: "/articles/diminutive-feature",
     dual: "/articles/dualic-feature",
+    intro: "/learn/introduction",
+    nom: "/articles/nominalizer",
     prep: "/articles/prepronominal-prefix",
     refl: "/articles/reflexive-feature",
     rep: "/articles/repetitive-feature",

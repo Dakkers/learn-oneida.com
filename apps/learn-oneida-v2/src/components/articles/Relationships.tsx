@@ -11,6 +11,8 @@ import {
   type SectionHeadingProps,
 } from "@ukwehuwehneke/language-components";
 import type { ArticleProps } from "./utils";
+import { Letter } from "../Letter";
+import { LinkWrapper } from "../LinkWrapper";
 
 export function RelationshipsArticle({ level = 1 }: ArticleProps) {
   return (
@@ -64,9 +66,14 @@ function MarriedTable({ level = 2 }: ArticleProps) {
       >
         Married
       </SectionHeading>
+      <Text>
+        The root word is <Letter>-nyak-</Letter>. The paradigm below is stated
+        in the <b>perfective tense</b> which is discussed in{" "}
+        <LinkWrapper page={6} />.
+      </Text>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={createColumns("PO", { suffix: "hne" }).slice(1)}
+        columns={createColumns("PO").slice(1)}
         data={rows}
       />
     </>
@@ -111,9 +118,13 @@ function InARelationshipTable({ level = 2 }: ArticleProps) {
       >
         In a relationship
       </SectionHeading>
+      <Text>
+        The root word is <Letter>-e-</Letter>. This root word literally means
+        "walk, go, be somewhere" but is also used for dating or being together.
+      </Text>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={createColumns("PS", { suffix: "kwe̲" }).slice(1)}
+        columns={createColumns("PS").slice(1)}
         data={rows}
       />
     </>
@@ -148,6 +159,10 @@ function SeparatedTable({ level = 2 }: ArticleProps) {
       >
         Separated and Reconciled
       </SectionHeading>
+      <Text>
+        The root word is <Letter>te...atekhahsyu-</Letter>. This root word
+        literally means "come apart, come undone, become unravelled, separate".
+      </Text>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
         columns={createColumns("PO", {
@@ -181,9 +196,13 @@ function EngagedTable({ level = 2 }: ArticleProps) {
       >
         Engaged
       </SectionHeading>
+      <Text>
+        The root word is <Letter>-nyak-</Letter> which is the same root word as
+        the word for being married. However, the aspect suffix is different.
+      </Text>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={createColumns("PO", { suffix: "hkwe̲" }).slice(1)}
+        columns={createColumns("PO").slice(1)}
         data={rows}
       />
     </>
@@ -222,9 +241,12 @@ function SingleTable({ level = 2 }: ArticleProps) {
       >
         Single
       </SectionHeading>
+      <Text>
+        The root word is <Letter>-atatwʌniyo-</Letter>.
+      </Text>
       <TableWrapper
         // @ts-expect-error TODO - TableWrapper/Table generics
-        columns={createColumns("PS", { suffix: "hne" }).slice(1)}
+        columns={createColumns("PS").slice(1)}
         data={rows}
       />
     </>
@@ -344,6 +366,17 @@ function BoyfriendGirlfriendTable({ level = 2 }: ArticleProps) {
       >
         Girlfriend / Boyfriend
       </SectionHeading>
+      <Text>
+        The root word for boyfriend is <Letter>-nikʌhtluʔtsl-</Letter> which you
+        may recognize as being very similar to the root word for young man from{" "}
+        <LinkWrapper page={1} />. The <Letter>ʔtsl</Letter> suffix is known as a{" "}
+        <LinkWrapper page="nom" /> which converts a verb to a noun.
+      </Text>
+      <Text>
+        Similarly, the root word for girlfriend is{" "}
+        <Letter>-yaʔtaseʔtsl-</Letter> which is the nominalized form of the root
+        word for young woman.
+      </Text>
       <TableWrapper
         columns={[
           TableWrapper.columnsOneidaPronouns[1],
