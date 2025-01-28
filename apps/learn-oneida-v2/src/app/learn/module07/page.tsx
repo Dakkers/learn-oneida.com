@@ -4,7 +4,7 @@ import {
   TableOfContentsSection as TocSection,
   TableOfContentsItemPhrase as TocPhrase,
 } from "~/components/TableOfContents";
-import { Accordion, Flex } from "@ukwehuwehneke/ohutsya";
+import { Accordion, Flex, Text } from "@ukwehuwehneke/ohutsya";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
@@ -53,19 +53,22 @@ export default function LearnModule07() {
 }
 
 function Introduction() {
-  return <div>(Intro not yet written)</div>;
+  return (
+    <>
+      <SectionHeading level={2}>
+        Introduction
+      </SectionHeading>
+      <Text>
+        (Intro not yet written.)
+      </Text>
+    </>
+  )
 }
 
 function AllNouns() {
   const list = createModule7NounsList();
   return (
-    <Bleed
-      mx={{
-        xs: 0,
-        md: 16,
-        lg: 32,
-      }}
-    >
+    <>
       <Accordion type="multiple">
         {list.map((n) => {
           return (
@@ -75,7 +78,7 @@ function AllNouns() {
           );
         })}
       </Accordion>
-    </Bleed>
+    </>
   );
 }
 
@@ -83,9 +86,9 @@ function NounTable({ nounDatum }: { nounDatum: any }) {
   return (
     <TableWrapper
       columns={[
-        TableWrapper.englishColumn,
         // @ts-expect-error TODO - TableWrapper/Table generics
         TableWrapper.createTextBreakdownColumn("PS"),
+        TableWrapper.englishColumn,
       ]}
       data={[
         ["it is a...", nounDatum.single],
@@ -94,9 +97,9 @@ function NounTable({ nounDatum }: { nounDatum: any }) {
         ["I have many...", nounDatum.havePlural],
         ["it is a good...", nounDatum.good],
         ["they are good...", nounDatum.goodPlural],
-        ["I have good...", nounDatum.haveGood],
+        ["I have a good...", nounDatum.haveGood],
         ["I have many good....", nounDatum.haveGoodPlural],
-        ["I have big...", nounDatum.big],
+        ["I have a big...", nounDatum.big],
         ["I have many big...", nounDatum.bigPlural],
         ["1", nounDatum.count1],
         ["2", nounDatum.count2],

@@ -1,8 +1,30 @@
-export function createModule7NounsList() {
+import { BreakdownArray } from "@ukwehuwehneke/language-components";
+
+export interface Module7Noun {
+  key: string;
+  en: string;
+  dict: number[];
+  root: string[];
+  single: BreakdownArray;
+  plural: BreakdownArray;
+  have: BreakdownArray;
+  havePlural: BreakdownArray;
+  good: BreakdownArray;
+  goodPlural: BreakdownArray;
+  haveGood: BreakdownArray;
+  haveGoodPlural: BreakdownArray;
+  big: BreakdownArray;
+  bigPlural: BreakdownArray;
+  count1: BreakdownArray;
+  count2: BreakdownArray;
+  count3: BreakdownArray;
+}
+
+export function createModule7NounsList(): Module7Noun[] {
   const nounAnimal = {
     key: "Animal",
     en: "Animal",
-    dict: 890,
+    dict: [890],
     root: ["-naskw-", "-nʌskw-"],
     single: [["ka"], "náskwaʔ"],
     plural: [["ka"], "náskwaʔ", ["shúha", "PAST"]],
@@ -21,7 +43,7 @@ export function createModule7NounsList() {
   const nounBaby = {
     key: "Baby",
     en: "Baby",
-    dict: 897,
+    dict: [897],
     root: [],
     single: ["owi·lá·"],
     plural: ["owi·lá·", ["shúha", "PAST"]],
@@ -40,7 +62,7 @@ export function createModule7NounsList() {
   const nounBag = {
     key: "Bag",
     en: "Bag",
-    dict: 899,
+    dict: [899],
     root: [],
     single: [["ka·"], "yáleʔ"],
     plural: [["ka·"], "yál", ["iʔshúha", "PAST"]],
@@ -59,7 +81,7 @@ export function createModule7NounsList() {
   const nounBall = {
     key: "Ball",
     en: "Ball",
-    dict: 899,
+    dict: [899],
     root: [],
     single: ["ahtá·nawʌ̲ʔ"],
     plural: ["ahtá·nawʌʔ", ["shúha", "PAST"]],
@@ -88,7 +110,7 @@ export function createModule7NounsList() {
   const nounBasket = {
     key: "Basket",
     en: "Basket",
-    dict: 901,
+    dict: [901],
     root: [],
     single: ["aʔáhsliʔ"],
     plural: ["aʔáhsliʔ", ["okúha", "PAST"]],
@@ -107,7 +129,7 @@ export function createModule7NounsList() {
   const nounBed = {
     key: "Bed",
     en: "Bed",
-    dict: 904,
+    dict: [904],
     root: [],
     single: [["ka·"], "nákhteʔ"],
     plural: [["ka·"], "nákht", ["aʔshúha", "PAST"]],
@@ -174,7 +196,7 @@ export function createModule7NounsList() {
   const nounBook = {
     key: "Book",
     en: "Book",
-    dict: 1117,
+    dict: [1117],
     root: [],
     single: [["ka"], "hyatúhsliʔ"],
     plural: [["ka"], "hyatúhsliʔ", ["shúha", "PAST"]],
@@ -198,7 +220,7 @@ export function createModule7NounsList() {
   const nounBottle = {
     key: "Bottle",
     en: "Bottle",
-    dict: 913,
+    dict: [913],
     root: [],
     single: [["ká"], "tsheʔ"],
     plural: [["ká"], "tsheʔ", ["okúha", "PAST"]],
@@ -217,7 +239,7 @@ export function createModule7NounsList() {
   const nounBox = {
     key: "Box",
     en: "Box",
-    dict: 914,
+    dict: [914],
     root: [],
     single: [["ka"], "nutó·tsliʔ"],
     plural: [["ka"], "nutó·tsliʔ", ["shúha", "PAST"]],
@@ -241,7 +263,7 @@ export function createModule7NounsList() {
   const nounBusiness = {
     key: "Business",
     en: "Business",
-    dict: 925,
+    dict: [925],
     root: [],
     single: ["olí·waʔ"],
     plural: ["olí·waʔ", ["shúha", "PAST"]],
@@ -260,7 +282,7 @@ export function createModule7NounsList() {
   const nounButton = {
     key: "Button",
     en: "Button",
-    dict: 926,
+    dict: [926],
     root: [],
     single: ["otsíhkwaʔ"],
     plural: ["otsíhkwaʔ", ["shúha", "PAST"]],
@@ -279,7 +301,7 @@ export function createModule7NounsList() {
   const nounCar = {
     key: "Car",
     en: "Car",
-    dict: 1250,
+    dict: [1250],
     root: [],
     single: [["ká·"], "sleht"],
     plural: [["ká·"], "sleht", ["shúha", "PAST"]],
@@ -298,7 +320,7 @@ export function createModule7NounsList() {
   const nounChair = {
     key: "Chair",
     en: "Chair",
-    dict: 931,
+    dict: [931],
     root: [],
     single: ["anitskwahlákhwaʔ"],
     plural: ["anitskwahlákhwaʔ", ["shúha", "PAST"]],
@@ -327,7 +349,7 @@ export function createModule7NounsList() {
   const nounChild = {
     key: "Child",
     en: "Child",
-    dict: 934,
+    dict: [934],
     root: [],
     single: ["oksá·ta"],
     plural: ["oksá·ta", ["shúha", "PAST"]],
@@ -346,7 +368,7 @@ export function createModule7NounsList() {
   const nounClothes = {
     key: "Clothes",
     en: "Clothes",
-    dict: 939,
+    dict: [939],
     root: [],
     single: ["atslunyáhkwaʔ"],
     plural: ["atslunyáhkwaʔ", ["shúha", "PAST"]],
@@ -375,7 +397,7 @@ export function createModule7NounsList() {
   const nounDish = {
     key: "Dish",
     en: "Dish",
-    dict: 965,
+    dict: [965],
     root: [],
     single: [["ka"], "ksa"],
     plural: [["ka"], "ksa", ["shúha", "PAST"]],
@@ -394,7 +416,7 @@ export function createModule7NounsList() {
   const nounFamily = {
     key: "Family",
     en: "Family",
-    dict: 988,
+    dict: [988],
     root: [],
     single: [["ka"], "hwa·tsíleʔ"],
     plural: [["ka"], "hwa·tsíleʔ", ["shúha", "PAST"]],
@@ -432,7 +454,7 @@ export function createModule7NounsList() {
   const nounFork = {
     key: "Fork",
     en: "Fork",
-    dict: 1006,
+    dict: [1006],
     root: [],
     single: [["ka"], "ROOT"],
     plural: [["ka"], "ROOT", ["shúha", "PAST"]],
@@ -451,7 +473,7 @@ export function createModule7NounsList() {
   const nounGlass = {
     key: "Glass",
     en: "Glass",
-    dict: 1051,
+    dict: [1051],
     root: [],
     single: ["o·wíseʔ"],
     plural: ["o·wíseʔ", ["shúha", "PAST"]],
@@ -470,7 +492,7 @@ export function createModule7NounsList() {
   const nounGroup = {
     key: "Group",
     en: "Group",
-    dict: 1027,
+    dict: [1027],
     root: [],
     single: [["k"], "ʌtyóhkwaʔ"],
     plural: [["k"], "ʌtyóhkwaʔ", ["shúha", "PAST"]],
@@ -508,7 +530,7 @@ export function createModule7NounsList() {
   const nounHat = {
     key: "Hat",
     en: "Hat",
-    dict: 102,
+    dict: [102],
     root: [],
     single: ["aná·loleʔ"],
     plural: ["aná·loleʔ", ["shúha", "PAST"]],
@@ -556,7 +578,7 @@ export function createModule7NounsList() {
   const nounJob = {
     key: "Job",
     en: "Job",
-    dict: 838,
+    dict: [838],
     root: [],
     single: [["ka"], "yoʔtʌ́hsliʔ"],
     plural: [["ka"], "yoʔtʌhsla", ["shúha", "PAST"]],
@@ -628,7 +650,7 @@ export function createModule7NounsList() {
   const nounMetal = {
     key: "Metal",
     en: "Metal",
-    dict: 1056,
+    dict: [1056],
     root: [],
     single: [["ka"], "líhstatsiʔ"],
     plural: [["ka"], "líhstatsiʔ", ["shúha", "PAST"]],
@@ -647,7 +669,7 @@ export function createModule7NounsList() {
   const nounMind = {
     key: "Mind",
     en: "Mind",
-    dict: 855,
+    dict: [855],
     root: [],
     single: ["oʔnikú·laʔ"],
     plural: ["oʔnikú·laʔ", ["shúha", "PAST"]],
@@ -762,7 +784,7 @@ export function createModule7NounsList() {
   const nounPen = {
     key: "Pen",
     en: "Pen",
-    dict: 1120,
+    dict: [1120],
     root: [],
     single: [["ye"], "hyatúkhwaʔ"],
     plural: [["ye"], "hyatúkhwaʔ", ["shúha", "PAST"]],
@@ -1088,7 +1110,7 @@ export function createModule7NounsList() {
   const nounTobacco = {
     key: "Tobacco",
     en: "Tobacco",
-    dict: 845,
+    dict: [845],
     root: [],
     single: ["oyú·kwaʔ"],
     plural: ["oyú·kwaʔ", ["shúha", "PAST"]],
@@ -1145,7 +1167,7 @@ export function createModule7NounsList() {
   const nounWood = {
     key: "Wood",
     en: "Wood",
-    dict: 826,
+    dict: [826],
     root: [],
     single: ["o·yʌ́teʔ"],
     plural: ["o·yʌ́teʔ", ["shúha", "PAST"]],
