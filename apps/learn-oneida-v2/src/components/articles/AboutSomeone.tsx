@@ -21,7 +21,7 @@ export function AboutSomeoneArticle({ level = 1 }: ArticleProps) {
       <Text>
         Note: The website author is unsure of the derivation of this word but it
         looks like it is comprised of the root word <Letter>-lihw-</Letter>{" "}
-        which means "issue", a joiner vowel "a", and the suffix{" "}
+        which means "issue", a joiner vowel "a", and the locative suffix{" "}
         <Letter>-ke</Letter> which means "on" (discussed in{" "}
         <LinkWrapper page={10} />
         .)

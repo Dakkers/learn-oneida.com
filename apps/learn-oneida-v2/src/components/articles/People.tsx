@@ -21,8 +21,8 @@ export function PeopleArticle({ level = 1 }: ArticleProps) {
         It is important to understand that the translations for two or more
         people are not literal. <b>tehniská·</b> is not the literal translation
         for &quot;2 boys&quot; — that is <b>tehniyáhse tehniská·</b>. You can
-        learn more about this in the &quot;Counting&quot; article which is part
-        of <LinkWrapper page={3} />.
+        learn more about this in the &quot;Counting People&quot; article which
+        is part of <LinkWrapper page={3} />.
       </Text>
 
       <SectionHeading id="people-article-children" level={sublevel}>

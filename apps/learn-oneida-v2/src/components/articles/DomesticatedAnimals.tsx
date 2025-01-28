@@ -18,7 +18,7 @@ export function DomesticatedAnimalsArticle({ level = 1 }: { level?: 1 | 2 }) {
       <Text>
         A <b>kanáskwaʔ</b>{" "}
         <PlayButton filepath="/audio/module03/animals/animal.mp3" /> is a
-        domesticated animal. The root word is <b>naskw</b>.
+        domesticated animal. The root word is <b>-naskw-</b>.
       </Text>
 
       <TableWrapper

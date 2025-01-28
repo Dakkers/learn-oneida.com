@@ -12,7 +12,6 @@ import {
 import { TableWrapper } from "@/components/TableWrapper";
 import {
   type BreakdownArray,
-  BreakdownType,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
@@ -24,10 +23,7 @@ import { DomesticatedAnimalsArticle } from "~/components/articles/DomesticatedAn
 import { RelationshipsArticle } from "~/components/articles/Relationships";
 import { ClansArticle } from "~/components/articles/Clans";
 import { NationsArticle } from "~/components/articles/Nations";
-import {
-  DialogueTable,
-  type DialogueTableData,
-} from "~/components/DialogueTable";
+import { DialogueTable } from "~/components/DialogueTable";
 import { TranslationExercisesSection } from "~/components/practice/TranslationExercises";
 import { Letter } from "@/components/Letter";
 import { getDialogueModule03 } from "@/data/module03";
@@ -53,10 +49,7 @@ export default function LearnModule03() {
       <TOC>
         <TocItem label="Past Tense" value="past-tense">
           <TocSection>
-            <TocItem
-              label="Introduction to Past Tense"
-              value="past-tense-intro"
-            />
+            <TocItem label="Introduction" value="past-tense-intro" />
             <TocItem label="Something used to be the case" value="used-to-be" />
             <TocItem
               label="When something was the case"
@@ -146,7 +139,6 @@ function PastTenseSection() {
       </Text>
 
       <PastTenseIntroduction />
-      <PastTenseUsedToBe />
       <PastTenseWhen />
     </>
   );
@@ -163,11 +155,11 @@ function PastTenseIntroduction() {
       breakdown: [["k", "PS"], "nú·wehs", ["kwe̲ʔ", "PAST"]],
     },
     {
-      en: "it likes me",
+      en: "It likes me",
       breakdown: [["wak", "PO"], "nú·wehse̲ʔ"],
     },
     {
-      en: "it used to like me",
+      en: "It used to like me",
       breakdown: [["wak", "PO"], "nú·wehs", ["kwe̲ʔ", "PAST"]],
     },
     {
@@ -187,11 +179,11 @@ function PastTenseIntroduction() {
       breakdown: [["k", "PS"], "nolúkhwa", ["hkwe̲ʔ", "PAST"]],
     },
     {
-      en: "it loves me",
+      en: "It loves me",
       breakdown: [["wak", "PO"], "nolúkhwa̲"],
     },
     {
-      en: "it used to love me",
+      en: "It used to love me",
       breakdown: [["wak", "PO"], "nolúkhwa", ["hkwe̲ʔ", "PAST"]],
     },
     {
@@ -211,11 +203,11 @@ function PastTenseIntroduction() {
       breakdown: [["k", "PS"], "yʌteli", ["hné·", "PAST"]],
     },
     {
-      en: "it knows me",
+      en: "It knows me",
       breakdown: [["wak", "PO"], "yʌtelí̲"],
     },
     {
-      en: "it used to know me",
+      en: "It used to know me",
       breakdown: [["wak", "PO"], "yʌteli", ["hné·", "PAST"]],
     },
     {
@@ -259,42 +251,20 @@ function PastTenseIntroduction() {
       en: "I used to know",
       breakdown: [["wak", "PO"], "anúhte", ["hkwe̲ʔ", "PAST"]],
     },
-  ];
-
-  return (
-    <>
-      <SectionHeading id="past-tense-intro" level={3}>
-        Introduction
-      </SectionHeading>
-      <Text>
-        We&lsquo;ll start with common suffixes <Letter>hne</Letter> and{" "}
-        <Letter>kweʔ</Letter>. Note that sometimes the suffix replaces the last
-        syllable, whereas in other cases it is a new syllable added to the end.
-      </Text>
-      <TableWrapper
-        columns={TableWrapper.columnsEnglishBreakdown}
-        data={data}
-      />
-    </>
-  );
-}
-
-function PastTenseUsedToBe() {
-  const data = [
     {
       en: "I am a child",
-      breakdown: [["ke", "PS"], "khsá·"],
+      breakdown: [["ke", "PS"], "ksá·"],
     },
     {
-      en: "I was / used to be a child",
-      breakdown: [["ke", "PS"], "khsa", ["hné·", "PAST"]],
+      en: "I used to be a child",
+      breakdown: [["ke", "PS"], "ksa", ["hné·", "PAST"]],
     },
     {
       en: "I am a young man",
       breakdown: [["k", "PS"], "nikʌ́htluʔ"],
     },
     {
-      en: "I was / used to be a young man",
+      en: "I used to be a young man",
       breakdown: [["k", "PS"], "nikʌhtlu", ["hné·", "PAST"]],
     },
     {
@@ -302,7 +272,7 @@ function PastTenseUsedToBe() {
       breakdown: [["k", "PS"], "yaʔtaséha"],
     },
     {
-      en: "I was / used to be a young woman",
+      en: "I used to be a young woman",
       breakdown: [["k", "PS"], "yaʔtase", ["hné·", "PAST"]],
     },
     {
@@ -310,7 +280,7 @@ function PastTenseUsedToBe() {
       breakdown: [["k", "PS"], "atatwʌni·yó̲·"],
     },
     {
-      en: "I was / used to be free / single",
+      en: "I used to be free / single",
       breakdown: [["k", "PS"], "atatwʌni·yo", ["hné·", "PAST"]],
     },
     {
@@ -322,7 +292,7 @@ function PastTenseUsedToBe() {
       breakdown: [["yukni", "PO"], "nyákheʔ"],
     },
     {
-      en: "I was / used to be engaged (to someone)",
+      en: "I used to be engaged (to someone)",
       breakdown: [["yukni", "PO"], "nyákhe", ["hkwe̲ʔ", "PAST"]],
     },
     {
@@ -330,7 +300,7 @@ function PastTenseUsedToBe() {
       breakdown: [["yákn", "PS"], "ehse̲"],
     },
     {
-      en: "I was / used to be in a relationship (with someone)",
+      en: "I used to be in a relationship (with someone)",
       breakdown: [["yákn", "PS"], "eh", ["skwe̲ʔ", "PAST"]],
     },
     {
@@ -338,7 +308,7 @@ function PastTenseUsedToBe() {
       breakdown: [["wake", "PO"], "nyákuʔ"],
     },
     {
-      en: "I was / used to be married",
+      en: "I used to be married",
       breakdown: [["wake", "PO"], "nyaku", ["hné·", "PAST"]],
     },
     {
@@ -350,15 +320,15 @@ function PastTenseUsedToBe() {
       breakdown: ["te", ["yuky", "PO"], "atekháshyuʔ"],
     },
     {
-      en: "I was / used to be separated (from someone)",
+      en: "I used to be separated (from someone)",
       breakdown: ["te", ["yuky", "PO"], "atekhashyu", ["hné·", "PAST"]],
     },
     {
-      en: "my name is ...",
+      en: "My name is ...",
       breakdown: ["... ní·", ["yúk", "PI"], "yats"],
     },
     {
-      en: "my name was / used to be ...",
+      en: "My name used to be ...",
       breakdown: ["... ní·", ["yúk", "PI"], "yat", ["skwe̲ʔ", "PAST"]],
     },
     {
@@ -390,7 +360,7 @@ function PastTenseUsedToBe() {
       breakdown: ["tewáhsʌ naʔte", ["wak", "PO"], "ohsliyá·ku̲"],
     },
     {
-      en: "I was / used to be 20 years old",
+      en: "I used to be 20 years old",
       breakdown: [
         "tewáhsʌ naʔte",
         ["wak", "PO"],
@@ -399,28 +369,29 @@ function PastTenseUsedToBe() {
       ],
     },
     {
-      en: "I know / am aware",
+      en: "I know",
       breakdown: [["wak", "PO"], "anúhte̲ʔ"],
     },
     {
-      en: "I used to know / be aware (but not now)",
+      en: "I used to know (but not now)",
       breakdown: [["wak", "PO"], "anúhte", ["hkwe̲ʔ", "PAST"]],
     },
     {
-      en: "I didn't used to know / be aware (but I do/am now)",
+      en: "I didn't used to know (but I do now)",
       breakdown: ["yáh teʔ", ["wak", "PO"], "anúhte", ["hkwe̲ʔ", "PAST"]],
     },
   ];
 
   return (
     <>
-      <SectionHeading id="used-to-be" level={3}>
-        Something used to be the case
+      <SectionHeading id="past-tense-intro" level={3}>
+        Introduction
       </SectionHeading>
       <Text>
-        Here are some more examples of when something used to be the case.
+        We&lsquo;ll start with common suffixes <Letter>hne</Letter> and{" "}
+        <Letter>kweʔ</Letter>. Note that sometimes the suffix replaces the last
+        syllable, whereas in other cases it is a new syllable added to the end.
       </Text>
-
       <TableWrapper
         columns={TableWrapper.columnsEnglishBreakdown}
         data={data}
@@ -436,7 +407,7 @@ function PastTenseWhen() {
       breakdown: [["k", "PS"], "ekhsá·"],
     },
     {
-      en: "When I was / used to be a child",
+      en: "When I used to be a child",
       breakdown: ["tshi", ["k", "PS"], "ekhsá·"],
     },
     {
@@ -444,7 +415,7 @@ function PastTenseWhen() {
       breakdown: [["k", "PS"], "nikʌ́htluʔ"],
     },
     {
-      en: "When I was / used to be a young man",
+      en: "When I used to be a young man",
       breakdown: ["tshi", ["k", "PS"], "nikʌh́tluʔ"],
     },
     {
@@ -452,7 +423,7 @@ function PastTenseWhen() {
       breakdown: [["k", "PS"], "yá·taseha̲"],
     },
     {
-      en: "When I was / used to be a young woman",
+      en: "When I used to be a young woman",
       breakdown: ["tshi", ["k", "PS"], "yá·taséha̲"],
     },
     {
@@ -516,7 +487,7 @@ function PastTenseWhen() {
       breakdown: ["tewáhsʌ naʔte", ["wak", "PO"], "ohsliyá·ku̲"],
     },
     {
-      en: "When I was / used to be 20 years old",
+      en: "When I used to be 20 years old",
       breakdown: [
         "tewáhsʌ ",
         ["tshaʔ", "PAST"],
