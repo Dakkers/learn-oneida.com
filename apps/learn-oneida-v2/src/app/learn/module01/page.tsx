@@ -34,6 +34,7 @@ import { createParadigmData } from "@/utils/paradigm";
 import { Link } from "@/components/Link";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
+import { UnderstandingPronominalAgentsArticle } from "@/components/articles/UnderstandingPronominalGroups";
 
 export const metadata: Metadata = {
   title: "Module 1",
@@ -120,6 +121,8 @@ export default function LearnModule01() {
       </Text>
 
       <PronominalsArticle level={2} />
+
+      <UnderstandingPronominalAgentsArticle standalone={false} />
 
       <LeadingVowelPronunciationSection />
 

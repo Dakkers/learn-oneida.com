@@ -133,17 +133,24 @@ export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
   return (
     <Flex direction="column" gap={4}>
       <SectionHeading id="repetitive-s" level={level}>
-        The Repetitive Conjugation
+        The Repetitive Feature
       </SectionHeading>
       <Text>
         In Oneida, a pre-pronominal prefix is used to indicate something
         &quot;being the case again&quot; and also &quot;not being the case
-        anymore&quot;. Below are a number of examples. The prefix that is added
-        is dependent on the letter that it comes before. The rules are:
+        anymore&quot;. This is called the <b>repetitive feature</b>. Below are a
+        number of examples. The prefix that is added is dependent on the letter
+        that it comes before. The rules are:
       </Text>
       <List>
         <List.Item>
-          w, h, l, k: the prefix is <Letter>s</Letter>
+          h, k, l, w: the prefix is <Letter>s</Letter>
+        </List.Item>
+        <List.Item>
+          s: the prefix is <Letter>se</Letter>
+        </List.Item>
+        <List.Item>
+          t: the prefix is <Letter>tsi</Letter>
         </List.Item>
         <List.Item>
           y: the prefix is <Letter>ts</Letter>
@@ -151,9 +158,6 @@ export function RepetitiveFeatureArticle({ level = 1 }: { level?: 1 | 2 }) {
         <List.Item>
           some consonant clusters: the prefix is <Letter>se</Letter> or{" "}
           <Letter>tsi</Letter>
-        </List.Item>
-        <List.Item>
-          t: the prefix is <Letter>tsi</Letter>
         </List.Item>
       </List>
 

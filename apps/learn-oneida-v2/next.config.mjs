@@ -16,6 +16,11 @@ const nextConfig = {
         destination: "/articles/prepausal-endings#prepausal-whispered",
         permanent: false,
       },
+      {
+        source: "/articles/repetitive-conjugation",
+        destination: "/articles/repetitive-feature",
+        permanent: false,
+      },
     ];
   },
   typescript: {

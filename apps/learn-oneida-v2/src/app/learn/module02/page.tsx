@@ -473,8 +473,8 @@ function YoungOldSection() {
         kstʌha — (to be) old
       </SectionHeading>
       <Text>
-        Below is the paradigm table for <b>kstʌha</b>. It is a C-stem root word
-        and uses objective pronominals.
+        Below is the paradigm table for <Letter>-kstʌha-</Letter>. It is a
+        C-stem root word and uses objective pronominals.
       </Text>
       <ParadigmTable
         columnVisibility={{
@@ -488,8 +488,8 @@ function YoungOldSection() {
         kʌʔ nit...yʌha — (to be) young
       </SectionHeading>
       <Text>
-        Below is the paradigm table for <b>kʌʔ nit...yʌha</b>. It is a C-stem
-        root word and uses objective pronominals. It makes use of the{" "}
+        Below is the paradigm table for <Letter>kʌʔ nit...yʌha</Letter>. It is a
+        C-stem root word and uses objective pronominals. It makes use of the{" "}
         <LinkWrapper page="dim" />.
       </Text>
       <ParadigmTable
@@ -677,7 +677,7 @@ function AgeSection() {
         data={ohsliyakuJson}
       />
       <Text>
-        As a more concerete example, the Oneida translation for &quot;I am 35
+        As a more concrete example, the Oneida translation for &quot;I am 35
         years old&quot; is <b>35 naʔ tewakohsliyá·ku̲</b>.
       </Text>
     </>
