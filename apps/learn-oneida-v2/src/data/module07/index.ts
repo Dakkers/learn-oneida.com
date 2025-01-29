@@ -100,7 +100,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Ball",
     en: ["ball"],
     dict: [899],
-    root: ["-ahta’nawʌ’tsl-"],
+    root: ["-ahtaʔnawʌʔtsl-"],
     single: ["ahtá·nawʌ̲ʔ"],
     plural: ["ahtá·nawʌʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "ahtaʔnawʌ́·tsla", "yʌ̲ʔ"],
@@ -119,7 +119,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Basket",
     en: ["basket"],
     dict: [901],
-    root: ["-a’ahsl-"],
+    root: ["-aʔahsl-"],
     single: ["aʔáhsliʔ"],
     plural: ["aʔáhsliʔ", ["okúha̲", "PAST"]],
     have: [["wak", "PO"], "aʔahslá", "yʌ̲ʔ"],
@@ -157,7 +157,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Belt",
     en: ["belt"],
     dict: [289, 906],
-    root: ["-atu’kwanha’tsl-"],
+    root: ["-atuʔkwanhaʔtsl-"],
     single: ["atuʔkwánhaʔ"],
     plural: ["atuʔkwánhaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "atuʔkwanhá·tsla", "yʌ̲ʔ"],
@@ -214,7 +214,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Bottle",
     en: ["bottle", "jar"],
     dict: [719, 913],
-    root: ["-tshe’t-"],
+    root: ["-tsheʔt-"],
     single: [["ká", "PS"], "tsheʔ"],
     plural: [["ká", "PS"], "tsheʔ", ["okúha̲", "PAST"]],
     have: [["wake", "PO"], "tshé·ta", "yʌ̲ʔ"],
@@ -233,7 +233,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Box",
     en: ["box", "crate"],
     dict: [914],
-    root: ["-nuto’tsl-"],
+    root: ["-nutoʔtsl-"],
     single: [["ka", "PS"], "nutó·tsliʔ"],
     plural: [["ka", "PS"], "nutó·tsliʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "nutótsla", "yʌ̲ʔ"],
@@ -300,7 +300,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Car",
     en: ["car", "truck", "jeep"],
     dict: [871, 1250],
-    root: ["-’sleht-"],
+    root: ["-ʔsleht-"],
     single: [["ká·", "PS"], "sleht"],
     plural: [["ká·", "PS"], "sleht", ["okúha̲", "CL"]],
     have: [["wake", "PO"], "ʔsléhta", "yʌ̲ʔ"],
@@ -319,7 +319,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Chair",
     en: ["chair"],
     dict: [931],
-    root: ["-anitskwahla’tsl"],
+    root: ["-anitskwahlaʔtsl"],
     single: ["anitskwahlákhwaʔ"],
     plural: ["anitskwahlákhwaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "anitskwahlá·tsla", "yʌ̲ʔ"],
@@ -338,7 +338,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Child",
     en: ["child (human)"],
     dict: [489, 934],
-    root: ["-ksa’t-", "-ksa’-"],
+    root: ["-ksaʔt-", "-ksaʔ-"],
     single: ["oksá·ta"],
     plural: ["oksá·ta", ["shúha̲", "CL"]],
     have: [["wake", "PO"], "ksá·ta", "yʌ̲ʔ"],
@@ -420,7 +420,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Flower",
     en: ["flower", "blossom"],
     dict: [738],
-    root: ["-tsi’tsy-"],
+    root: ["-tsiʔtsy-"],
     single: ["otsí·tsi"],
     plural: ["otsí·tsyaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "tsí·tsya", "yʌ̲ʔ"],
@@ -439,17 +439,17 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Fork",
     en: ["fork"],
     dict: [119, 1006],
-    root: ["-ahsekwa’l-"],
-    single: ["áshekwe̲’"],
-    plural: ["áshekwe̲’", ["shúha̲", "CL"]],
+    root: ["-ahsekwaʔl-"],
+    single: ["áshekwe̲ʔ"],
+    plural: ["áshekwe̲ʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "ahsé·kwal", "a", "yʌ̲ʔ"],
-    havePlural: [["wak", "PO"], "ahsekwala’tsl", "a", ["káte̲ʔ", "CIS"]],
-    good: [["w", "PS"], "ahsekwa’tsl", "iyó̲"],
-    goodPlural: [["w", "PS"], "ahsekwa’tsl", "iyó", ["se̲ʔ", "EXAS"]],
-    haveGood: [["wak", "PO"], "ahsekwa’tsl", "iyó̲"],
-    haveGoodPlural: [["wak", "PO"], "ahsekwa’tsl", "iyó", ["se̲ʔ", "EXAS"]],
-    big: [["wak", "PO"], "ahsekwa’tsl", "owanʌ̲́"],
-    bigPlural: [["wak", "PO"], "ahsekwa’tsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
+    havePlural: [["wak", "PO"], "ahsekwalaʔtsl", "a", ["káte̲ʔ", "CIS"]],
+    good: [["w", "PS"], "ahsekwaʔtsl", "iyó̲"],
+    goodPlural: [["w", "PS"], "ahsekwaʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
+    haveGood: [["wak", "PO"], "ahsekwaʔtsl", "iyó̲"],
+    haveGoodPlural: [["wak", "PO"], "ahsekwaʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
+    big: [["wak", "PO"], "ahsekwaʔtsl", "owanʌ̲́"],
+    bigPlural: [["wak", "PO"], "ahsekwaʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
     count1: [["s", "REP"], ["w", "PS"], "ahsekwá·tsl", ["a", "JOIN"], "t"],
     count2: [["te", "DUAL"], ["w", "PS"], "ahsekwá·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "ahsekwá·tsl", "ake̲"],
@@ -515,7 +515,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Hat",
     en: ["hat"],
     dict: [102],
-    root: ["-ana’alo’tsl-"],
+    root: ["-anaʔaloʔtsl-"],
     single: ["aná·loleʔ"],
     plural: ["aná·loleʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "anaʔaló·tsla", "yʌ̲ʔ"],
@@ -553,7 +553,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Job",
     en: ["job", "work"],
     dict: [838],
-    root: ["-yo’tʌhsl-"],
+    root: ["-yoʔtʌhsl-"],
     single: [["ka", "PS"], "yoʔtʌ́hsliʔ"],
     plural: [["ka", "PS"], "yoʔtʌhsla", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "yoʔtʌ́·sla", "yʌ̲ʔ"],
@@ -578,7 +578,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Knife",
     en: ["knife"],
     dict: [323],
-    root: ["-a’shal-"],
+    root: ["-aʔshal-"],
     single: ["á·shaleʔ"],
     plural: ["á·shaleʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "aʔsha·lá", "yʌ̲ʔ"],
@@ -597,7 +597,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Medicine",
     en: ["medicine"],
     dict: [600, 1094],
-    root: ["-nuhkwa’t-", "-nuhkwa’tsl"],
+    root: ["-nuhkwaʔt-", "-nuhkwaʔtsl"],
     single: ["onúhkwaʔt"],
     plural: ["onúhkwaʔt", ["hokúha̲", "PAST"]],
     have: [["wak", "PO"], "nuhkwá·tsla", "yʌ̲ʔ"],
@@ -635,7 +635,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Mind",
     en: ["mind"],
     dict: [855],
-    root: ["-’nikuhl-"],
+    root: ["-ʔnikuhl-"],
     single: ["oʔnikú·la̲ʔ"],
     plural: ["oʔnikú·laʔ", ["shúha̲", "CL"]],
     have: [["wake", "PO"], "ʔnikú·l", ["a", "JOIN"], "t"],
@@ -654,7 +654,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Mitts",
     en: ["mitts"],
     dict: [320],
-    root: ["-a’nyanawʌ-", "-a’nyanawʌ’tsl-"],
+    root: ["-aʔnyanawʌ-", "-aʔnyanawʌʔtsl-"],
     single: ["aʔnya·náwʌ̲ʔ"],
     plural: ["aʔnya·náwʌʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "aʔnyanawʌ́·tsla", "yʌ̲ʔ"],
@@ -717,7 +717,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Pants",
     en: ["pants"],
     dict: [318, 1117],
-    root: ["-a’nhuskwa’lh’tsl-"],
+    root: ["-aʔnhuskwaʔlhʔtsl-"],
     single: ["aʔnhuskwá·lhaʔ"],
     plural: ["aʔnhuskwá·lhaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "aʔnhuskwá·lha", "yʌ̲ʔ"],
@@ -736,7 +736,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Pen",
     en: ["pen", "pencil", "marker"],
     dict: [419, 1120],
-    root: ["-hyatukhwa’tsl-"],
+    root: ["-hyatukhwaʔtsl-"],
     single: [["ye", "PS"], "hyatúkhwaʔ"],
     plural: [["ye", "PS"], "hyatúkhwaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "hyatukhwá·tsla", "yʌ̲ʔ"],
@@ -755,7 +755,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Pot",
     en: ["pot", "pail", "bucket", "kettle"],
     dict: [568],
-    root: ["-na’tsy-"],
+    root: ["-naʔtsy-"],
     single: [["ka", "PS"], "ná·tsiʔ"],
     plural: [["ka", "PS"], "ná·tsyaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "ná·tsya", "yʌ̲ʔ"],
@@ -774,7 +774,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Purse",
     en: ["purse"],
     dict: [385],
-    root: ["-hna’tal-", "-hna’tatsl-"],
+    root: ["-hnaʔtal-", "-hnaʔtatsl-"],
     single: [["ka", "PS"], "hná·tal"],
     plural: [["ka", "PS"], "hná·tal", ["okúha̲", "PAST"]],
     have: [["wak", "PO"], "hnaʔtátsla", "yʌ̲ʔ"],
@@ -793,7 +793,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Ring",
     en: ["ring"],
     dict: [104, 1153],
-    root: ["-anishnuhsohlokta’tsl-"],
+    root: ["-anishnuhsohloktaʔtsl-"],
     single: ["anisnuhsohlóktaʔ"],
     plural: ["anisnuhsohlóktaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "anisnuhsohloktá·tsla", "yʌ̲ʔ"],
@@ -823,7 +823,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "SheetOfPaper",
     en: ["sheet of paper"],
     dict: [515],
-    root: ["-la’wist-"],
+    root: ["-laʔwist-"],
     single: ["olá·wisteʔ"],
     plural: ["olá·wisteʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "laʔwista·", "yʌ̲́ʔ"],
@@ -842,7 +842,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Shirt",
     en: ["shirt", "coat", "dress", "jacket", "blouse"],
     dict: [301, 973],
-    root: ["-atya’tawi’t-", "-atya’tawi’tsl-"],
+    root: ["-atyaʔtawiʔt-", "-atyaʔtawiʔtsl-"],
     single: ["atyá·tawiʔt"],
     plural: ["atyá·tawiʔt", ["hokúha̲", "PAST"]],
     have: [["wak", "PO"], "atyaʔtawiʔtslá", "yʌ̲ʔ"],
@@ -880,7 +880,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Skirt",
     en: ["skirt"],
     dict: [317, 1183],
-    root: ["-a’kohs-"],
+    root: ["-aʔkohs-"],
     single: ["oʔkóhsaʔ"],
     plural: ["oʔkóhsaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "aʔkóhsa", "yʌ̲ʔ"],
@@ -918,7 +918,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Spoon",
     en: ["spoon"],
     dict: [255, 1196],
-    root: ["-atokwa’t-", "-atokwa’tsl-"],
+    root: ["-atokwaʔt-", "-atokwaʔtsl-"],
     single: ["atókwaʔt"],
     plural: ["atókwaʔt", ["hokúha̲", "PAST"]],
     have: [["wak", "PO"], "atokwá·tsla", "yʌ̲ʔ"],
@@ -975,7 +975,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "String",
     en: ["string", "thread", "yarn"],
     dict: [73, 405, 1210],
-    root: ["-ahsliye-", "-ahsliye’t-", "-hsliye’t"],
+    root: ["-ahsliye-", "-ahsliyeʔt-", "-hsliyeʔt"],
     single: ["ahsli·yé·"],
     plural: ["ahsli·yé·t", "a", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "ahsliyé·t", "a", "yʌ̲ʔ"],
@@ -1000,7 +1000,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Table",
     en: ["table"],
     dict: [159, 1216],
-    root: ["-atekhwahlakkhw-", "-atekhwahla’tsl-"],
+    root: ["-atekhwahlakkhw-", "-atekhwahlaʔtsl-"],
     single: ["atekhwahlákhwaʔ"],
     plural: ["atekhwahlákhwaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "atekhwahlaʔtsla·", "yʌ̲́·"],
@@ -1019,7 +1019,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Tobacco",
     en: ["tobacco"],
     dict: [845],
-    root: ["-yu’kw-"],
+    root: ["-yuʔkw-"],
     single: ["oyú·kwaʔ"],
     plural: ["oyú·kwaʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "yú·kwa", "yʌ̲ʔ"],
@@ -1038,7 +1038,7 @@ export function createModule7NounsList(): Module7Noun[] {
     key: "Tube",
     en: ["tube", "pipe", "cylinder"],
     dict: [398, 955],
-    root: ["-holo’t-"],
+    root: ["-holoʔt-"],
     single: ["oholó·taʔ"],
     plural: ["oholó·taʔ", ["shúha̲", "CL"]],
     have: [["wak", "PO"], "holó·ta", "yʌ̲ʔ"],
@@ -1175,7 +1175,7 @@ export function createModule7ContainerList() {
     en: ["ammo clip", "ammo magazine", "marble bag"],
     one: [
       {
-        one: [["ye", "PS"], "nʌyalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "nʌyalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1191,7 +1191,7 @@ export function createModule7ContainerList() {
     ],
     one: [
       {
-        one: [["ye", "PS"], "wilalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "wilalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1200,7 +1200,7 @@ export function createModule7ContainerList() {
     en: ["bottle case", "pop", "juice", "alcohol"],
     one: [
       {
-        one: [["ye", "PS"], "tshe’talá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "tsheʔtalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1209,7 +1209,7 @@ export function createModule7ContainerList() {
     en: ["book rack", "magazines", "toilet paper", "napkins"],
     one: [
       {
-        one: [["ye", "PS"], "hyatuhslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "hyatuhslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1218,7 +1218,7 @@ export function createModule7ContainerList() {
     en: ["button jar"],
     one: [
       {
-        one: [["ye", "PS"], "tsihkwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "tsihkwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1227,10 +1227,10 @@ export function createModule7ContainerList() {
     en: ["cigarette case", "tobacco pouch"],
     one: [
       {
-        one: [["ye", "PS"], "hlo’kwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "hloʔkwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
       {
-        one: [["ye", "PS"], "yu’kwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "yuʔkwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1239,7 +1239,7 @@ export function createModule7ContainerList() {
     en: ["cupboard", "dish rack", "china cabinet"],
     one: [
       {
-        one: [["ye", "PS"], "ksalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "ksalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1250,9 +1250,9 @@ export function createModule7ContainerList() {
       {
         one: [
           ["yu", "PS"],
-          "twisutakhwa’tslalá",
+          "twisutakhwaʔtslalá",
           ["khw", "INST2"],
-          ["a̲’", "HAB"],
+          ["a̲ʔ", "HAB"],
         ],
       },
     ],
@@ -1262,7 +1262,7 @@ export function createModule7ContainerList() {
     en: ["feather case"],
     one: [
       {
-        one: [["ye", "PS"], "stoslalakhwa̲’"],
+        one: [["ye", "PS"], "stoslalakhwa̲ʔ"],
       },
     ],
   };
@@ -1271,7 +1271,7 @@ export function createModule7ContainerList() {
     en: ["gun rack"],
     one: [
       {
-        one: [["ye", "PS"], "hulalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "hulalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1280,7 +1280,7 @@ export function createModule7ContainerList() {
     en: ["hat rack", "hat box"],
     one: [
       {
-        one: [["yu", "PS"], "nalotslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["yu", "PS"], "nalotslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1289,7 +1289,7 @@ export function createModule7ContainerList() {
     en: ["hope chest", "blanket box"],
     one: [
       {
-        one: [["ye", "PS"], "kʌhalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "kʌhalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1298,7 +1298,7 @@ export function createModule7ContainerList() {
     en: ["ice cube tray"],
     one: [
       {
-        one: [["ye", "PS"], "wisalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "wisalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
       {
         one: [["ye", "PS"], "wisunyátha"],
@@ -1310,7 +1310,7 @@ export function createModule7ContainerList() {
     en: ["jewelry box"],
     one: [
       {
-        one: [["ye", "PS"], "stalotalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "stalotalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1319,7 +1319,7 @@ export function createModule7ContainerList() {
     en: ["knife drawer", "knife holder", "sheath"],
     one: [
       {
-        one: [["yu", "PS"], "’shalalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["yu", "PS"], "ʔshalalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1328,7 +1328,7 @@ export function createModule7ContainerList() {
     en: ["money clip", "billfold", "wallet"],
     one: [
       {
-        one: [["ye", "PS"], "hwistalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "hwistalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1339,9 +1339,9 @@ export function createModule7ContainerList() {
       {
         one: [
           ["ye", "PS"],
-          "hyatukhwa’tslalá",
+          "hyatukhwaʔtslalá",
           ["khw", "INST2"],
-          ["a̲’", "HAB"],
+          ["a̲ʔ", "HAB"],
         ],
       },
     ],
@@ -1351,7 +1351,7 @@ export function createModule7ContainerList() {
     en: ["pet cage", "holder", "crate"],
     one: [
       {
-        one: [["ye", "PS"], "nahskwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "nahskwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1360,7 +1360,7 @@ export function createModule7ContainerList() {
     en: ["pill bottle", "medicine chest"],
     one: [
       {
-        one: [["ye", "PS"], "nuhkwa’tslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "nuhkwaʔtslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1369,7 +1369,7 @@ export function createModule7ContainerList() {
     en: ["shoe rack"],
     one: [
       {
-        one: [["yu", "PS"], "htahkwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["yu", "PS"], "htahkwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1378,7 +1378,7 @@ export function createModule7ContainerList() {
     en: ["sock drawer"],
     one: [
       {
-        one: [["yu", "PS"], "tlahti’tslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["yu", "PS"], "tlahtiʔtslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1387,7 +1387,7 @@ export function createModule7ContainerList() {
     en: ["sugar bowl", "candy dish"],
     one: [
       {
-        one: [["ye", "PS"], "nu’takli’tslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "nuʔtakliʔtslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1396,7 +1396,7 @@ export function createModule7ContainerList() {
     en: ["vase"],
     one: [
       {
-        one: [["ye", "PS"], "tsi’tsyalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "tsiʔtsyalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1405,7 +1405,7 @@ export function createModule7ContainerList() {
     en: ["wood rack"],
     one: [
       {
-        one: [["ye", "PS"], "yʌtalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+        one: [["ye", "PS"], "yʌtalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
       },
     ],
   };
@@ -1481,7 +1481,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["blue"],
     one: [
       {
-        one: ["olú·ya̲’"],
+        one: ["olú·ya̲ʔ"],
       },
     ],
   };
@@ -1499,7 +1499,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["red"],
     one: [
       {
-        one: ["onikwʌhtala̲’"],
+        one: ["onikwʌ́htala̲ʔ"],
       },
     ],
   };
@@ -1508,7 +1508,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["yellow"],
     one: [
       {
-        one: ["otsí·nkwala̲’"],
+        one: ["otsí·nkwala̲ʔ"],
       },
     ],
   };
@@ -1517,10 +1517,10 @@ export function createColoursData(): Module7Colour[] {
     en: ["light", "white"],
     one: [
       {
-        one: ["owískehla̲’"],
+        one: ["owískehla̲ʔ"],
       },
       {
-        one: ["owískla’"],
+        one: ["owísklaʔ"],
       },
     ],
   };
@@ -1529,7 +1529,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["dark", "black"],
     one: [
       {
-        one: ["o’swʌ́·ta̲’"],
+        one: ["oʔswʌ́·ta̲ʔ"],
       },
     ],
   };
@@ -1538,10 +1538,10 @@ export function createColoursData(): Module7Colour[] {
     en: ["pink"],
     one: [
       {
-        one: [["ka", "PS"], "nikwʌhtalawískela̲’"],
+        one: [["ka", "PS"], "nikwʌhtalawískela̲ʔ"],
       },
       {
-        one: [["ka", "PS"], "nikwʌhtalawískla’"],
+        one: [["ka", "PS"], "nikwʌhtalawísklaʔ"],
       },
     ],
   };
@@ -1550,7 +1550,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["orange"],
     one: [
       {
-        one: [["ka", "PS"], "tsi’nkwalahú·tsi’"],
+        one: [["ka", "PS"], "tsiʔnkwalahú·tsiʔ"],
       },
     ],
   };
@@ -1559,7 +1559,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["brown"],
     one: [
       {
-        one: ["athéhsa̲’"],
+        one: ["athéhsa̲ʔ"],
       },
     ],
   };
@@ -1568,7 +1568,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["gray"],
     one: [
       {
-        one: ["ata’kʌ́·la̲’"],
+        one: ["ataʔkʌ́·la̲ʔ"],
       },
     ],
   };
@@ -1577,7 +1577,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["dark red", "maroon"],
     one: [
       {
-        one: [["ka", "PS"], "nikwʌhtalahú·tsi’"],
+        one: [["ka", "PS"], "nikwʌhtalahú·tsiʔ"],
       },
       {
         one: ["tet", ["yo", "PO"], "nikwʌtalá·kalas"],
@@ -1598,10 +1598,10 @@ export function createColoursData(): Module7Colour[] {
     en: ["light blue"],
     one: [
       {
-        one: ["kaluhyawískela̲’"],
+        one: ["kaluhyawískela̲ʔ"],
       },
       {
-        one: [["ka", "PS"], "luhyawískla’"],
+        one: [["ka", "PS"], "luhyawísklaʔ"],
       },
     ],
   };
@@ -1610,7 +1610,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["purple"],
     one: [
       {
-        one: ["ohalanʌ́·ta̲’"],
+        one: ["ohalanʌ́·ta̲ʔ"],
       },
     ],
   };
@@ -1619,7 +1619,7 @@ export function createColoursData(): Module7Colour[] {
     en: ["jet black", "very dark"],
     one: [
       {
-        one: ["o’swʌ’tóhsku̲"],
+        one: ["oʔswʌʔtóhsku̲"],
       },
     ],
   };
