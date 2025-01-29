@@ -10,6 +10,7 @@ export type BreakdownType =
   | "DER" // derivational
   | "DUAL"
   | "EP"
+  | "EXAS" // expanded aspect suffix
   | "FUT"
   | "HAB"
   | "IFUT"
@@ -128,12 +129,13 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   DER: "text-yellow-500",
   DUAL: "text-lime-500",
   EP: "text-gray-400",
+  EXAS: "text-lime-500",
   FUT: "text-emerald-400",
   HAB: "text-emerald-400",
   IFUT: "text-emerald-400",
   // JOIN: "text-yellow-600",
   JOIN: "text-gray-600",
-  NOUN: "text-orange-500",
+  NOUN: "underline decoration-wavy decoration-black",
   OP: "underline decoration-wavy decoration-black",
   PAST: "text-emerald-400",
   PO: "text-blue-600",
