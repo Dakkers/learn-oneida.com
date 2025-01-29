@@ -138,7 +138,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   INST2: "text-yellow-500",
   // JOIN: "text-yellow-600",
   JOIN: "text-gray-600",
-  NOUN: "underline decoration-wavy decoration-black",
+  NOUN: "underline decoration-dotted decoration-[0.09rem] decoration-black",
   OP: "underline decoration-wavy decoration-black",
   PAST: "text-emerald-400",
   PO: "text-blue-600",

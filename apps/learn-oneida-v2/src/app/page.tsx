@@ -33,6 +33,12 @@ export default function Index() {
     {
       desc: "Active verbs are discussed along with new tenses! A select few of these verbs have their paradigms written out and examples are included so as to when to use which tense.",
     },
+    {
+      desc: "The concept of noun incorporation is introduced in full, along with many new nouns. New verbs are used in conjunction with some of these nouns. Colours are also discussed.",
+    },
+    {
+      desc: "Object characteristics and different tenses are applied to nouns, as well as containers for objects.",
+    },
   ] as const;
 
   return (

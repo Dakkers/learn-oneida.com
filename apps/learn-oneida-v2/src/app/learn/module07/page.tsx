@@ -61,14 +61,13 @@ export default function LearnModule07() {
           </TocSection>
         </TocItem>
 
-        <TocItem label="Container Nouns" value="containers" />
+        <TocItem label="Colours" value="colours" />
 
         {/* <TocItem label="Translation exercises" value="translation-exercises" /> */}
       </TOC>
 
       <Introduction />
       <AllNouns />
-      <ContainerNouns />
       <ColourNouns />
     </PageWrapper>
   );
@@ -104,8 +103,8 @@ function AllNouns() {
         <List.Item>counted</List.Item>
       </List>
       <Text>
-        Some nouns cannot be conjugated in certain ways so you may see missing
-        table rows.
+        Some nouns cannot be conjugated in certain ways so you may see empty
+        table cells.
       </Text>
 
       <Accordion type="multiple">
@@ -165,59 +164,6 @@ function NounEntry({ nounDatum }: { nounDatum: Module7Noun }) {
           [`two ${p}`, nounDatum.count2],
           [`three ${p}`, nounDatum.count3],
         ].map(([en, breakdown]) => ({ en, breakdown }))}
-      />
-    </>
-  );
-}
-
-function ContainerNouns() {
-  return (
-    <>
-      <SectionHeading id="containers" level={2}>
-        Container Nouns
-      </SectionHeading>
-
-      <Text>
-        The word <b>yelákhwaʔ</b> means "container" and the word{" "}
-        <b>yelakhwaʔshúha</b> means "containers". Below is a list of objects
-        that contain other objects.
-      </Text>
-
-      <Text>
-        These words make use of noun incorporation as described in the previous
-        section and also make use of the instrumental suffix{" "}
-        <Letter>-hkw-</Letter>. This suffix means "do with it, use it for".
-        Because it's used in the habitual tense, it ends up appearing as{" "}
-        <Letter>khwaʔ</Letter>.
-      </Text>
-
-      <TableWrapper
-        columns={[
-          TableWrapper.englishColumn,
-          {
-            accessorKey: "one",
-            // @ts-expect-error TODO - TableWrapper/Table generics
-            cell: (value: Module7ContainerNoun["one"]) => {
-              return (
-                <Flex direction="column" gap={4}>
-                  {value.map((obj, i) => (
-                    <Flex direction="column" gap={0} key={i}>
-                      <TextBreakdown
-                        breakdown={obj.one}
-                        typeFallback="PS"
-                        wrap="nowrap"
-                      />
-                      {obj.en && <Text variant="labelS">{obj.en}</Text>}
-                    </Flex>
-                  ))}
-                </Flex>
-              );
-            },
-            header: "Oneida",
-          },
-        ]}
-        // @ts-expect-error TODO - TableWrapper/Table generics
-        data={createModule7ContainerList()}
       />
     </>
   );

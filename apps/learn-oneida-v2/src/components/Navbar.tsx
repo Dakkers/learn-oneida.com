@@ -17,13 +17,12 @@ import Link from "next/link";
 import {
   BookOpenTextIcon,
   InfoIcon,
-  MenuIcon,
   NewspaperIcon,
   PencilIcon,
   WrenchIcon,
 } from "lucide-react";
 
-const moduleNumbers = new Array(6).fill(0).map((_, i) => (i + 1).toString());
+const moduleNumbers = new Array(7).fill(0).map((_, i) => (i + 1).toString());
 
 const toolsItems: { title: string; href: string; description: string }[] = [
   {

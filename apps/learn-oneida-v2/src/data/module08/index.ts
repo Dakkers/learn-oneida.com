@@ -1,9 +1,43 @@
+import { BreakdownArray } from "@ukwehuwehneke/language-components";
+
+export interface ContainerNoun {
+  en: string[];
+  key: string;
+  one: Array<{
+    en?: string;
+    one: BreakdownArray;
+  }>;
+}
+
+export interface ObjectCharacteristicVerb {
+  key: string;
+  en: string[];
+  dict: number[];
+  root: string[];
+  verb: BreakdownArray;
+  verbNegated: BreakdownArray;
+  withNoun: BreakdownArray;
+  haveNoun: BreakdownArray;
+  haveNounPlural: BreakdownArray;
+  verbPast: BreakdownArray;
+  withNounPast: BreakdownArray;
+  haveNounPast: BreakdownArray;
+  haveNounPastPlural: BreakdownArray;
+}
+
+const I_HAD_PAST = [
+  ["wak", "PO"],
+  "yʌ·tá",
+  ["kweʔ", "PAST"],
+  " ",
+] as BreakdownArray;
+
 export function createModule8CharacteristicsList() {
-  const objBig = {
+  const objBig: ObjectCharacteristicVerb = {
     key: "Big",
-    root: "-owanʌ-",
-    en: "big",
-    enLong: ["big", "large"],
+    root: ["-owanʌ-"],
+    en: ["big", "large"],
+    dict: [],
     verb: [["k", "PS"], "wanʌ́"],
     verbNegated: ["yáh te", ["k", "PS"], "wanʌ́"],
     withNoun: [["ka", "PS"], ["yal", "NOUN"], "owanʌ́"],
@@ -13,21 +47,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["ka", "PS"], ["yal", "NOUN"], "owanʌ·", ["hné·", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "owanʌ·", ["hné·", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["ka", "PS"],
       ["yal", "NOUN"],
       "owa·nʌ́·",
       ["seʔ", "CL"],
     ],
   };
-  const objDark = {
+  const objDark: ObjectCharacteristicVerb = {
     key: "Dark",
-    root: "",
-    en: "dark",
-    enLong: ["dark"],
+    root: [""],
+    en: ["dark"],
+    dict: [],
     verb: ["tet", ["yo", "PO"], "hsohkwá·kalas"],
     verbNegated: ["yáh tha", "tet", ["yo", "PO"], "hsohkwá·kalas"],
     withNoun: ["tet", ["yo", "PO"], ["yal", "NOUN"], "á·kalas"],
@@ -55,10 +86,7 @@ export function createModule8CharacteristicsList() {
       ["kweʔ", "PAST"],
     ],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       "tet",
       ["yo", "PO"],
       ["yal", "NOUN"],
@@ -66,54 +94,51 @@ export function createModule8CharacteristicsList() {
       ["shúha", "CL"],
     ],
   };
-  const objDirty = {
+  const objDirty: ObjectCharacteristicVerb = {
     key: "Dirty",
-    root: "",
-    en: "dirty",
-    enLong: ["dirty", "soiled"],
-    verb: ["te", ["yo", "PO"], "nú·yanit"],
-    verbNegated: ["yáh te", "te", ["yo", "PO"], "nú·yanit"],
-    withNoun: ["te", ["yo", "PO"], ["yal", "NOUN"], "nú·yanit"],
-    haveNoun: ["te", ["wak", "PO"], ["yal", "NOUN"], "nú·yanit"],
+    root: [""],
+    en: ["dirty", "soiled"],
+    dict: [],
+    verb: [["te", "DUAL"], ["yo", "PO"], "nú·yanit"],
+    verbNegated: ["yáh tha", ["te", "DUAL"], ["yo", "PO"], "nú·yanit"],
+    withNoun: [["te", "DUAL"], ["yo", "PO"], ["yal", "NOUN"], "nú·yanit"],
+    haveNoun: [["te", "DUAL"], ["wak", "PO"], ["yal", "NOUN"], "nú·yanit"],
     haveNounPlural: [
-      "te",
+      ["te", "DUAL"],
       ["wak", "PO"],
       ["yal", "NOUN"],
       "anuyanith",
       ["okúha", "CL"],
     ],
-    verbPast: ["te", ["yo", "PO"], "anuyanith", ["ú·neʔ", "PAST"]],
+    verbPast: [["te", "DUAL"], ["yo", "PO"], "anuyanith", ["ú·neʔ", "PAST"]],
     withNounPast: [
-      "te",
+      ["te", "DUAL"],
       ["yo", "PO"],
       ["yal", "NOUN"],
       "anuyanith",
       ["ú·neʔ", "PAST"],
     ],
     haveNounPast: [
-      "te",
+      ["te", "DUAL"],
       ["wak", "PO"],
       ["yal", "NOUN"],
       "anuyanith",
       ["ú·neʔ", "PAST"],
     ],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
-      "te",
+      ...I_HAD_PAST,
+      ["te", "DUAL"],
       ["yo", "PO"],
       ["yal", "NOUN"],
       "anuyanith",
       ["okúha", "CL"],
     ],
   };
-  const objDry = {
+  const objDry: ObjectCharacteristicVerb = {
     key: "Dry",
-    root: "",
-    en: "dry",
-    enLong: ["dry"],
+    root: [""],
+    en: ["dry"],
+    dict: [],
     verb: [["yo", "PO"], "hstáthʌ"],
     verbNegated: ["yáh te", ["yo", "PO"], "hstáthʌ"],
     withNoun: [["yo", "PO"], ["yal", "NOUN"], "astáthʌ"],
@@ -128,21 +153,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["yo", "PO"], ["yal", "NOUN"], "astathʌ́", ["·ne·", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "astathʌ́", ["·ne·", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["yo", "PO"],
       ["yal", "NOUN"],
       "astathʌʔ",
       ["shúha", "CL"],
     ],
   };
-  const objExpensive = {
+  const objExpensive: ObjectCharacteristicVerb = {
     key: "Expensive",
-    root: "",
-    en: "expensive",
-    enLong: ["expensive", "rare", "precious"],
+    root: [""],
+    en: ["expensive", "rare", "precious"],
+    dict: [],
     verb: [["ka", "PS"], "no·lú·"],
     verbNegated: ["yáh te", ["ka", "PS"], "no·lú·"],
     withNoun: [["ka", "PS"], ["yal", "NOUN"], "ano·lú·"],
@@ -152,21 +174,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["ka", "PS"], ["yal", "NOUN"], "anolu", ["hné·", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "anolu", ["hné·", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["ka", "PS"],
       ["yal", "NOUN"],
       "ano·lú·",
       ["seʔ", "CL"],
     ],
   };
-  const objHard = {
+  const objHard: ObjectCharacteristicVerb = {
     key: "Hard",
-    root: "",
-    en: "hard",
-    enLong: ["hard"],
+    root: [""],
+    en: ["hard"],
+    dict: [],
     verb: [["yo", "PO"], "hnilú"],
     verbNegated: ["yáh te", ["yo", "PO"], "hnilú"],
     withNoun: [["yo", "PO"], ["yal", "NOUN"], "ahnilú"],
@@ -176,21 +195,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["yo", "PO"], ["yal", "NOUN"], "ahnilu", ["hné·", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "ahnilu", ["hné·", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["yo", "PO"],
       ["yal", "NOUN"],
       "ahniluʔ",
       ["shúha", "CL"],
     ],
   };
-  const objHeavy = {
+  const objHeavy: ObjectCharacteristicVerb = {
     key: "Heavy",
-    root: "",
-    en: "heavy",
-    enLong: ["heavy"],
+    root: [""],
+    en: ["heavy"],
+    dict: [],
     verb: [["yó", "PO"], "ksteʔ"],
     verbNegated: ["yáh te", ["yó", "PO"], "ksteʔ"],
     withNoun: [["yo", "PO"], ["yal", "NOUN"], "áksteʔ"],
@@ -200,21 +216,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["yo", "PO"], ["yal", "NOUN"], "ákste", ["hkweʔ", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "ákste", ["hkweʔ", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["yo", "PO"],
       ["yal", "NOUN"],
       "aksteʔ",
       ["shúha", "CL"],
     ],
   };
-  const objHole = {
+  const objHole: ObjectCharacteristicVerb = {
     key: "Hole",
-    root: "",
-    en: "hole (in something)",
-    enLong: ["hole (in something)"],
+    root: [""],
+    en: ["hole (in something)"],
+    dict: [],
     verb: [["yo", "PO"], "ká·luteʔ"],
     verbNegated: ["yáh te", ["yo", "PO"], "ká·luteʔ"],
     withNoun: [["yo", "PO"], ["yal", "NOUN"], "aká·luteʔ"],
@@ -234,21 +247,18 @@ export function createModule8CharacteristicsList() {
       ["hkweʔ", "PAST"],
     ],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["yo", "PO"],
       ["yal", "NOUN"],
       "akahlu·",
       ["tú·", "CL"],
     ],
   };
-  const objLight = {
+  const objLight: ObjectCharacteristicVerb = {
     key: "Light",
-    root: "",
-    en: "light",
-    enLong: ["light"],
+    root: [""],
+    en: ["light in colour"],
+    dict: [],
     verb: ["owísklaʔ"],
     verbNegated: ["yáh te", ["ka", "PS"], "wískla"],
     withNoun: [["ka", "PS"], ["yal", "NOUN"], "awísklaʔ"],
@@ -271,21 +281,18 @@ export function createModule8CharacteristicsList() {
       ["hkweʔ", "PAST"],
     ],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       "owísklaʔ ka",
       ["yal", "NOUN"],
       "eʔ",
       ["shúha", "CL"],
     ],
   };
-  const objLong = {
+  const objLong: ObjectCharacteristicVerb = {
     key: "Long",
-    root: "",
-    en: "long",
-    enLong: ["long"],
+    root: [""],
+    en: ["long"],
+    dict: [],
     verb: ["i·yús"],
     verbNegated: ["yáh teʔyús"],
     withNoun: [["ka", "PS"], ["ya·l", "NOUN"], "és"],
@@ -295,21 +302,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["ka", "PS"], ["ya·l", "NOUN"], "és", ["kweʔ", "PAST"]],
     haveNounPast: [["wak", "PO"], ["ya·l", "NOUN"], "és", ["kweʔ", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["ka", "PS"],
       ["yal", "NOUN"],
       "e·sú·",
       ["seʔ", "CL"],
     ],
   };
-  const objLotsOf = {
+  const objLotsOf: ObjectCharacteristicVerb = {
     key: "Lots",
-    root: "",
-    en: "lots of",
-    enLong: ["lots of"],
+    root: [""],
+    en: ["lots of"],
+    dict: [],
     verb: [["yo", "PO"], "ká·teʔ"],
     verbNegated: ["yáh teʔ", ["yo", "PO"], "ká·teʔ"],
     withNoun: [["yo", "PO"], ["yal", "NOUN"], "aká·teʔ"],
@@ -324,20 +328,17 @@ export function createModule8CharacteristicsList() {
       ["hkweʔ", "PAST"],
     ],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["yo", "PO"],
       ["yal", "NOUN"],
       "aká·teʔ",
     ],
   };
-  const objNegative = {
+  const objNegative: ObjectCharacteristicVerb = {
     key: "Negative",
-    root: "",
-    en: "bad",
-    enLong: ["negative", "bad"],
+    root: [""],
+    en: ["negative", "bad"],
+    dict: [],
     verb: ["yáh te", ["yo", "PO"], "yántle"],
     verbNegated: [["yo", "PO"], "yántle"],
     withNoun: [["ka", "PS"], ["yal", "NOUN"], "áksʌ"],
@@ -347,21 +348,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["ka", "PS"], ["yal", "NOUN"], "áksʌ", ["hné·", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "áksʌ", ["hné·", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["ka", "PS"],
       ["yal", "NOUN"],
       "áksʌ",
       ["hseʔ", "CL"],
     ],
   };
-  const objNew = {
+  const objNew: ObjectCharacteristicVerb = {
     key: "New",
-    root: "",
-    en: "new",
-    enLong: ["new"],
+    root: [""],
+    en: ["new"],
+    dict: [],
     verb: ["a·sé·"],
     verbNegated: ["yáh te", ["w", "PO"], "a·sé·"],
     withNoun: ["o", ["yál", "NOUN"], "aseʔ"],
@@ -371,21 +369,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: ["o", ["yal", "NOUN"], "asé", ["hkweʔ", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "asé", ["hahkweʔ", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       "o",
       ["yal", "NOUN"],
       "aseʔ",
       ["shúha", "CL"],
     ],
   };
-  const objOld = {
+  const objOld: ObjectCharacteristicVerb = {
     key: "Old",
-    root: "",
-    en: "old",
-    enLong: ["old"],
+    root: [""],
+    en: ["old"],
+    dict: [],
     verb: ["akayú"],
     verbNegated: ["yáh te", ["w", "PS"], "akayú"],
     withNoun: ["o", ["yal", "NOUN"], "akayú"],
@@ -395,21 +390,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: ["o", ["yal", "NOUN"], "akayu", ["hné·", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "akayu", ["hné·", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       "o",
       ["yal", "NOUN"],
       "akayú·",
       ["seʔ", "CL"],
     ],
   };
-  const objPretty = {
+  const objPretty: ObjectCharacteristicVerb = {
     key: "Pretty",
-    root: "",
-    en: "pretty",
-    enLong: ["pretty"],
+    root: [""],
+    en: ["pretty"],
+    dict: [],
     verb: [["yo", "PO"], "yántleʔ"],
     verbNegated: ["yáh te", ["yo", "PO"], "yántleʔ"],
     withNoun: [["ka", "PS"], ["yal", "NOUN"], "iyó"],
@@ -419,21 +411,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["ka", "PS"], ["yal", "NOUN"], "iyo", ["hné·", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "iyo", ["hné·", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["yo", "PO"],
       ["yal", "NOUN"],
       "i·yó·",
       ["seʔ", "CL"],
     ],
   };
-  const objShort = {
+  const objShort: ObjectCharacteristicVerb = {
     key: "Short",
-    root: "",
-    en: "short",
-    enLong: ["short"],
+    root: [""],
+    en: ["short"],
+    dict: [],
     verb: ["kʌʔ niyúsa"],
     verbNegated: ["yáh kʌʔ teyúsa"],
     withNoun: ["kʌʔ ni", ["ka", "PS"], ["yal", "NOUN"], "ésa"],
@@ -461,10 +450,7 @@ export function createModule8CharacteristicsList() {
       ["kweʔ", "PAST"],
     ],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       "kʌʔ ni",
       ["yo", "PO"],
       ["yal", "NOUN"],
@@ -472,11 +458,11 @@ export function createModule8CharacteristicsList() {
       ["seʔ", "CL"],
     ],
   };
-  const objSmall = {
+  const objSmall: ObjectCharacteristicVerb = {
     key: "Small",
-    root: "",
-    en: "small",
-    enLong: ["small"],
+    root: [""],
+    en: ["small"],
+    dict: [],
     verb: ["kʌʔ  ni", ["w", "PS"], "á·"],
     verbNegated: ["yáh kʌʔ te", ["w", "PS"], "á·"],
     withNoun: ["kʌʔ ni", ["ka", "PS"], ["yal", "NOUN"], "á·"],
@@ -504,10 +490,7 @@ export function createModule8CharacteristicsList() {
       ["hkweʔ", "PAST"],
     ],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       "kʌʔ ni",
       ["ka", "PS"],
       ["yal", "NOUN"],
@@ -515,11 +498,11 @@ export function createModule8CharacteristicsList() {
       ["saʔ", "CL"],
     ],
   };
-  const objSmelly = {
+  const objSmelly: ObjectCharacteristicVerb = {
     key: "Smelly",
-    root: "",
-    en: "smelly",
-    enLong: ["smelly"],
+    root: [""],
+    en: ["smelly"],
+    dict: [],
     verb: [["w", "PS"], "áklahseʔ"],
     verbNegated: ["yáh te", ["w", "PS"], "áklahseʔ"],
     withNoun: [["ka", "PS"], ["yal", "NOUN"], "áklahseʔ"],
@@ -534,21 +517,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["ka", "PS"], ["yal", "NOUN"], "akláhs", ["kweʔ", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "akláhs", ["kweʔ", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["ka", "PS"],
       ["yal", "NOUN"],
       "aklaseʔ",
       ["shúha", "CL"],
     ],
   };
-  const objSoft = {
+  const objSoft: ObjectCharacteristicVerb = {
     key: "Soft",
-    root: "",
-    en: "soft",
-    enLong: ["soft"],
+    root: [""],
+    en: ["soft"],
+    dict: [],
     verb: [["yo", "PO"], "ʔnétskʌ"],
     verbNegated: ["yáh te", ["yo", "PO"], "ʔnétskʌ"],
     withNoun: [["yo", "PO"], ["yal", "NOUN"], "ʔnétskʌ"],
@@ -558,21 +538,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["yo", "PO"], ["yal", "NOUN"], "ʔnétskʌ", ["kweʔ", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "ʔnétskʌ", ["kweʔ", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["yo", "PO"],
       ["yal", "NOUN"],
       "ʔnétskʌ",
       ["hseʔ", "CL"],
     ],
   };
-  const objUgly = {
+  const objUgly: ObjectCharacteristicVerb = {
     key: "Ugly",
-    root: "",
-    en: "ugly",
-    enLong: ["ugly"],
+    root: [""],
+    en: ["ugly"],
+    dict: [],
     verb: [["w", "PS"], "ahétkʌʔ"],
     verbNegated: ["yáh te", ["w", "PS"], "ahétkʌʔ"],
     withNoun: [["ka", "PS"], ["yal", "NOUN"], "ahétkʌʔ"],
@@ -582,21 +559,18 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["ka", "PS"], ["yal", "NOUN"], "ahetkʌ", ["hné·", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "ahetkʌ", ["hné·", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["ka", "PS"],
       ["yal", "NOUN"],
       "ahétkʌ",
       ["hseʔ", "CL"],
     ],
   };
-  const objWet = {
+  const objWet: ObjectCharacteristicVerb = {
     key: "Wet",
-    root: "",
-    en: "wet",
-    enLong: ["wet"],
+    root: [""],
+    en: ["wet"],
+    dict: [],
     verb: [["yo", "PO"], "ná·nawʌ"],
     verbNegated: ["yáh te", ["yo", "PO"], "ná·nawʌ"],
     withNoun: [["yo", "PO"], ["yal", "NOUN"], "anawʌ́"],
@@ -606,10 +580,7 @@ export function createModule8CharacteristicsList() {
     withNounPast: [["yo", "PO"], ["yal", "NOUN"], "anawʌ", ["kweʔ", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "anawʌ", ["kweʔ", "PAST"]],
     haveNounPastPlural: [
-      ["wak", "PO"],
-      "yʌ·tá",
-      ["kweʔ"],
-      " ",
+      ...I_HAD_PAST,
       ["yo", "PO"],
       ["yal", "NOUN"],
       "anawʌ́·",
@@ -638,6 +609,274 @@ export function createModule8CharacteristicsList() {
     objSoft,
     objUgly,
     objWet,
+  ];
+}
+
+export function createContainerNounList() {
+  const objAmmoClip: ContainerNoun = {
+    key: "AmmoClip",
+    en: ["ammo clip", "ammo magazine", "marble bag"],
+    one: [
+      {
+        one: [["ye", "PS"], "nʌyalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objBabySling: ContainerNoun = {
+    key: "BabySling",
+    en: [
+      "baby sling",
+      "wrap",
+      "cradleboard",
+      "jolly jumper",
+      "playpen",
+      "stroller",
+    ],
+    one: [
+      {
+        one: [["ye", "PS"], "wilalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objBottleCase: ContainerNoun = {
+    key: "BottleCase",
+    en: ["bottle case", "pop", "juice", "alcohol"],
+    one: [
+      {
+        one: [["ye", "PS"], "tsheʔtalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objBookRack: ContainerNoun = {
+    key: "BookRack",
+    en: ["book rack", "magazines", "toilet paper", "napkins"],
+    one: [
+      {
+        one: [["ye", "PS"], "hyatuhslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objButtonJar: ContainerNoun = {
+    key: "ButtonJar",
+    en: ["button jar"],
+    one: [
+      {
+        one: [["ye", "PS"], "tsihkwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objCigaretteCase: ContainerNoun = {
+    key: "CigaretteCase",
+    en: ["cigarette case", "tobacco pouch"],
+    one: [
+      {
+        one: [["ye", "PS"], "hloʔkwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+      {
+        one: [["ye", "PS"], "yuʔkwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objCupboard: ContainerNoun = {
+    key: "Cupboard",
+    en: ["cupboard", "dish rack", "china cabinet"],
+    one: [
+      {
+        one: [["ye", "PS"], "ksalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objEyeglassCase: ContainerNoun = {
+    key: "EyeglassCase",
+    en: ["eyeglass case"],
+    one: [
+      {
+        one: [
+          ["yu", "PS"],
+          "twisutakhwaʔtslalá",
+          ["khw", "INST2"],
+          ["a̲ʔ", "HAB"],
+        ],
+      },
+    ],
+  };
+  const objFeatherCase: ContainerNoun = {
+    key: "FeatherCase",
+    en: ["feather case"],
+    one: [
+      {
+        one: [["ye", "PS"], "stoslalakhwa̲ʔ"],
+      },
+    ],
+  };
+  const objGunRack: ContainerNoun = {
+    key: "GunRack",
+    en: ["gun rack"],
+    one: [
+      {
+        one: [["ye", "PS"], "hulalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objHatRack: ContainerNoun = {
+    key: "HatRack",
+    en: ["hat rack", "hat box"],
+    one: [
+      {
+        one: [["yu", "PS"], "nalotslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objHopeChest: ContainerNoun = {
+    key: "HopeChest",
+    en: ["hope chest", "blanket box"],
+    one: [
+      {
+        one: [["ye", "PS"], "kʌhalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objIceCubeTray: ContainerNoun = {
+    key: "IceCubeTray",
+    en: ["ice cube tray"],
+    one: [
+      {
+        one: [["ye", "PS"], "wisalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+      {
+        one: [["ye", "PS"], "wisunyátha"],
+      },
+    ],
+  };
+  const objJewelryBox: ContainerNoun = {
+    key: "JewelryBox",
+    en: ["jewelry box"],
+    one: [
+      {
+        one: [["ye", "PS"], "stalotalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objKnifeDrawer: ContainerNoun = {
+    key: "KnifeDrawer",
+    en: ["knife drawer", "knife holder", "sheath"],
+    one: [
+      {
+        one: [["yu", "PS"], "ʔshalalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objMoneyClip: ContainerNoun = {
+    key: "MoneyClip",
+    en: ["money clip", "billfold", "wallet"],
+    one: [
+      {
+        one: [["ye", "PS"], "hwistalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objPencilCase: ContainerNoun = {
+    key: "PencilCase",
+    en: ["pencil case"],
+    one: [
+      {
+        one: [
+          ["ye", "PS"],
+          "hyatukhwaʔtslalá",
+          ["khw", "INST2"],
+          ["a̲ʔ", "HAB"],
+        ],
+      },
+    ],
+  };
+  const objPetCage: ContainerNoun = {
+    key: "PetCage",
+    en: ["pet cage", "holder", "crate"],
+    one: [
+      {
+        one: [["ye", "PS"], "nahskwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objPillBottle: ContainerNoun = {
+    key: "PillBottle",
+    en: ["pill bottle", "medicine chest"],
+    one: [
+      {
+        one: [["ye", "PS"], "nuhkwaʔtslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objShoeRack: ContainerNoun = {
+    key: "ShoeRack",
+    en: ["shoe rack"],
+    one: [
+      {
+        one: [["yu", "PS"], "htahkwalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objSockDrawer: ContainerNoun = {
+    key: "SockDrawer",
+    en: ["sock drawer"],
+    one: [
+      {
+        one: [["yu", "PS"], "tlahtiʔtslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objSugarBowl: ContainerNoun = {
+    key: "SugarBowl",
+    en: ["sugar bowl", "candy dish"],
+    one: [
+      {
+        one: [["ye", "PS"], "nuʔtakliʔtslalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objVase: ContainerNoun = {
+    key: "Vase",
+    en: ["vase"],
+    one: [
+      {
+        one: [["ye", "PS"], "tsiʔtsyalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  const objWoodRack: ContainerNoun = {
+    key: "WoodRack",
+    en: ["wood rack"],
+    one: [
+      {
+        one: [["ye", "PS"], "yʌtalá", ["khw", "INST2"], ["a̲ʔ", "HAB"]],
+      },
+    ],
+  };
+  return [
+    objAmmoClip,
+    objBabySling,
+    objBottleCase,
+    objBookRack,
+    objButtonJar,
+    objCigaretteCase,
+    objCupboard,
+    objEyeglassCase,
+    objFeatherCase,
+    objGunRack,
+    objHatRack,
+    objHopeChest,
+    objIceCubeTray,
+    objJewelryBox,
+    objKnifeDrawer,
+    objMoneyClip,
+    objPencilCase,
+    objPetCage,
+    objPillBottle,
+    objShoeRack,
+    objSockDrawer,
+    objSugarBowl,
+    objVase,
+    objWoodRack,
   ];
 }
 
