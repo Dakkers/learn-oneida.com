@@ -15,12 +15,10 @@ import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import {
-  createModule7ContainerList,
   createModule7NounsList,
   createColoursData,
-  type Module7Colour,
-  type Module7ContainerNoun,
   type Module7Noun,
+  type Module7Colour,
 } from "@/data/module07";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";

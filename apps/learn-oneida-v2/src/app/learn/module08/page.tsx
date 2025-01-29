@@ -14,17 +14,15 @@ import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
-import { Bleed } from "@ukwehuwehneke/ohutsya";
-import { createModule7NounsList } from "@/data/module07";
 import {
+  type ContainerNoun,
   createContainerNounList,
   createModule8CharacteristicsList,
-  ObjectCharacteristicVerb,
+  type ObjectCharacteristicVerb,
 } from "@/data/module08";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 import { Letter } from "@/components/Letter";
-import pluralize from "pluralize";
 import indefinite from "indefinite";
 
 // export const metadata: Metadata = {
@@ -115,6 +113,10 @@ function ObjectCharacteristicEntry({
 
   return (
     <>
+      <Text>
+        The root is <Letter>{datum.root.join("/")}</Letter>.
+      </Text>
+
       <TableWrapper
         columns={[
           TableWrapper.englishColumn,
@@ -164,7 +166,7 @@ function ContainerNouns() {
           {
             accessorKey: "one",
             // @ts-expect-error TODO - TableWrapper/Table generics
-            cell: (value: Module7ContainerNoun["one"]) => {
+            cell: (value: ContainerNoun["one"]) => {
               return (
                 <Flex direction="column" gap={4}>
                   {value.map((obj, i) => (

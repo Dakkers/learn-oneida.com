@@ -43,7 +43,6 @@ export default function PracticeObjectCharacteristicsModule8() {
           continue;
         }
         const key = `${datum.key}-${attr}`;
-        // @ts-expect-error Need better typing on the module 8 list
         resultOn.push({ key, text: convertBreakdownToPlainText(datum[attr]) });
         resultEn.push({ key, text: getEnglishTranslation(datum, attr) });
       }

@@ -1,4 +1,4 @@
-import { BreakdownArray } from "@ukwehuwehneke/language-components";
+import type { BreakdownArray } from "@ukwehuwehneke/language-components";
 
 export interface ContainerNoun {
   en: string[];
@@ -190,7 +190,14 @@ export function createModule8CharacteristicsList() {
     verbNegated: ["yáh te", ["yo", "PO"], "hnilú"],
     withNoun: [["yo", "PO"], ["yal", "NOUN"], "ahnilú"],
     haveNoun: [["wak", "PO"], ["yal", "NOUN"], "ahnilú"],
-    haveNounPlural: null,
+    haveNounPlural: [
+      ["wak", "PO"],
+      "yʌ ",
+      ["yo", "PO"],
+      ["yal", "NOUN"],
+      "ahniluʔ",
+      ["se", "CL"],
+    ],
     verbPast: [["yo", "PO"], "hnilu", ["hné·", "PAST"]],
     withNounPast: [["yo", "PO"], ["yal", "NOUN"], "ahnilu", ["hné·", "PAST"]],
     haveNounPast: [["wak", "PO"], ["yal", "NOUN"], "ahnilu", ["hné·", "PAST"]],
@@ -882,7 +889,7 @@ export function createContainerNounList() {
 
 export function getEnglishTranslation(
   datum: {
-    en: string;
+    en: string[];
   },
   key: string,
 ) {
@@ -907,10 +914,10 @@ export function getEnglishTranslation(
     result = "I used to have {{WORD}} bags";
   }
   return result
-    .replace("{{WORD}}", datum.en)
+    .replace("{{WORD}}", datum.en[0])
     .replace(
       "{{A}}",
-      ["a", "e", "i", "o", "u"].find((vowel) => datum.en.startsWith(vowel))
+      ["a", "e", "i", "o", "u"].find((vowel) => datum.en[0].startsWith(vowel))
         ? "an"
         : "a",
     );
