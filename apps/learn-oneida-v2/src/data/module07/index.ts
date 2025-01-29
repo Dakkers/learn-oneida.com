@@ -1,4 +1,4 @@
-import { BreakdownArray } from "@ukwehuwehneke/language-components";
+import type { BreakdownArray } from "@ukwehuwehneke/language-components";
 import indefinite from "indefinite";
 import pluralize from "pluralize";
 
@@ -22,6 +22,17 @@ export interface Module7Noun {
   count3: BreakdownArray;
 }
 
+export interface Module7ContainerNoun {
+  en: string[];
+  key: string;
+  one: Array<{
+    en?: string;
+    one: BreakdownArray;
+  }>;
+}
+
+export type Module7Colour = Module7ContainerNoun;
+
 export function createModule7NounsList(): Module7Noun[] {
   const nounAnimal: Module7Noun = {
     key: "Animal",
@@ -43,8 +54,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], ["náskw", "NOUN"], "i·yó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], ["násk", "NOUN"], "owa·nʌ̲́"],
     bigPlural: [["wak", "PO"], ["násk", "NOUN"], "owa·nʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "náskw", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "náskw", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "náskw", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "náskw", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "náskw", "ake̲"],
   };
   const nounBaby: Module7Noun = {
@@ -62,8 +73,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "wil", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "wil", "owa·nʌ̲́"],
     bigPlural: [["wak", "PO"], "wil", "owa·nʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "wi·l", "á", "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "wi·l", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "wi·l", "á", "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "wi·l", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "wi·l", ["áke̲", "PAST"]],
   };
   const nounBag: Module7Noun = {
@@ -81,8 +92,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "yal", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "yal", "owa·nʌ̲́"],
     bigPlural: [["wak", "PO"], "yal", "owa·nʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "ya·l", "á", "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "ya·l", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "ya·l", "á", "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "ya·l", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "ya·l", ["áke̲", "PAST"]],
   };
   const nounBall: Module7Noun = {
@@ -100,8 +111,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "ahtanawʌʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "ahtanawʌʔtsl", "owa·nʌ̲́"],
     bigPlural: [["wak", "PO"], "ahtanawʌʔtsl", "owa·nʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "ahtanawʌ́·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "ahtanawʌ́·tsl", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "ahtanawʌ́·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "ahtanawʌ́·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "ahtanawʌ́·tsl", "ake̲"],
   };
   const nounBasket: Module7Noun = {
@@ -119,8 +130,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "aʔahsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "aʔahsl", "owa·nʌ̲́"],
     bigPlural: [["wak", "PO"], "aʔahsl", "owa·nʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "aʔáhsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "aʔáhsl", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "aʔáhsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "aʔáhsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "aʔáhsl", "ake̲"],
   };
   const nounBed: Module7Noun = {
@@ -138,8 +149,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], ["nakt", "NOUN"], "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], ["nakt", "NOUN"], "owa·nʌ̲́"],
     bigPlural: [["wak", "PO"], ["nakt", "NOUN"], "owa·nʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "nakt", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "nakt", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "nakt", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "nakt", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "nakt", ["áke̲", "PAST"]],
   };
   const nounBelt: Module7Noun = {
@@ -157,8 +168,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "atuʔkwanhaʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "atuʔkwanhaʔtsl", "owa·nʌ̲́"],
     bigPlural: [["wak", "PO"], "atuʔkwanhaʔtsl", "owa·nʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "atuʔkwanhá·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "atuʔkwanhá·tsl", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "atuʔkwanhá·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "atuʔkwanhá·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "atuʔkwanhá·tsl", "ake̲"],
   };
   const nounBlanket: Module7Noun = {
@@ -176,8 +187,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "kʌh", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "kʌh", "owa·nʌ̲́"],
     bigPlural: [["wak", "PO"], "kʌh", "owa·nʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "kʌ́h", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "kʌh", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "kʌ́h", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "kʌh", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "kʌh", ["áke̲", "PAST"]],
   };
   const nounBook: Module7Noun = {
@@ -195,8 +206,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "hyatuhsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "hyatuhsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "hyatuhsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "hyatúhsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "hyatúhsl", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "hyatúhsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "hyatúhsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "hyatúhsl", "ake̲"],
   };
   const nounBottle: Module7Noun = {
@@ -214,8 +225,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wake", "PO"], "tsheʔt", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wake", "PO"], "tsheʔt", "owanʌ̲́"],
     bigPlural: [["wake", "PO"], "tsheʔt", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "tshé·t", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "tshé·t", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "tshé·t", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "tshé·t", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "tshé·t", "ake̲"],
   };
   const nounBox: Module7Noun = {
@@ -233,8 +244,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "nutoʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "nutoʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "nutoʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "nutó·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "nutó·tsl", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "nutó·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "nutó·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "nutó·tsl", "ake̲"],
   };
   const nounBusiness: Module7Noun = {
@@ -253,8 +264,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], ["lihw", "NOUN"], "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], ["lih", "NOUN"], "owanʌ̲́"],
     bigPlural: [["wak", "PO"], ["lih", "NOUN"], "owanʌ́", ["se̲ʔ", "EXAS"]],
-    // count1: [["s", "PREP"], ["ka", "PS"], ["lí·w", 'NOUN'], ["a", 'JOIN'], 't'],
-    // count2: [["te", "PREP"], ["ka", "PS"], ["lí·w", 'NOUN'], "ake̲"],
+    // count1: [["s", "REP"], ["ka", "PS"], ["lí·w", 'NOUN'], ["a", 'JOIN'], 't'],
+    // count2: [["te", "DUAL"], ["ka", "PS"], ["lí·w", 'NOUN'], "ake̲"],
     // count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], ["lí·w", 'NOUN'], "ake̲"],
     count1: [
       ["ts", "PREP"],
@@ -263,7 +274,7 @@ export function createModule7NounsList(): Module7Noun[] {
       ["a", "JOIN"],
       "t",
     ],
-    count2: [["te", "PREP"], ["yo", "PO"], ["lí·w", "NOUN"], "ake̲"],
+    count2: [["te", "DUAL"], ["yo", "PO"], ["lí·w", "NOUN"], "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["yo", "PO"], ["lí·w", "NOUN"], "ake̲"],
   };
   const nounButton: Module7Noun = {
@@ -281,8 +292,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "tsihkw", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "tsihk", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "tsihk", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "tsíhkw", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "tsíhkw", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "tsíhkw", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "tsíhkw", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "tsíhkw", "ake̲"],
   };
   const nounCar: Module7Noun = {
@@ -300,8 +311,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wake", "PO"], "ʔsleht", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wake", "PO"], "ʔsleht", "owanʌ̲́"],
     bigPlural: [["wake", "PO"], "ʔsleht", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "ʔsléht", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "ʔsléht", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "ʔsléht", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "ʔsléht", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "ʔsléht", "ake̲"],
   };
   const nounChair: Module7Noun = {
@@ -319,8 +330,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "anitskwahla·tsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "anitskwahlaʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "anitskwahlaʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "anitskwahlá·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "anitskwahlá·tsl", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "anitskwahlá·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "anitskwahlá·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "anitskwahlá·tsl", "ake̲"],
   };
   const nounChild: Module7Noun = {
@@ -338,8 +349,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wake", "PO"], "ksaʔt", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wake", "PO"], "ksaʔt", "owanʌ̲́"],
     bigPlural: [["wake", "PO"], "ksaʔt", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "ksát", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "ksát", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "ksát", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "ksát", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "ksát", "ake̲"],
   };
   const nounClothes: Module7Noun = {
@@ -357,8 +368,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "atslunyahkw", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "atslunyahk", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "atslunyahk", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "atslunyáhkw", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "atslunyáhkw", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "atslunyáhkw", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "atslunyáhkw", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "atslunyáhkw", "ake̲"],
   };
   const nounDish: Module7Noun = {
@@ -376,8 +387,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wake", "PO"], "ks", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wake", "PO"], "ks", "owanʌ̲́"],
     bigPlural: [["wake", "PO"], "ks", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ká", "PS"], "ks", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ká", "PS"], "ks", "ake̲"],
+    count1: [["s", "REP"], ["ká", "PS"], "ks", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ká", "PS"], "ks", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ká", "PS"], "ks", "ake̲"],
   };
   const nounFamily: Module7Noun = {
@@ -395,8 +406,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: null,
     big: [["wak", "PO"], "hwatsil", "owanʌ̲́"],
     bigPlural: null,
-    count1: [["s", "PREP"], ["ka", "PS"], "hwatsi·l", ["át", "PAST"]],
-    count2: [["te", "PREP"], ["ka", "PS"], "hwatsi·l", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "hwatsi·l", ["át", "PAST"]],
+    count2: [["te", "DUAL"], ["ka", "PS"], "hwatsi·l", ["áke̲", "PAST"]],
     count3: [
       "áhsʌ ",
       ["ni", "PREP"],
@@ -420,8 +431,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "tsiʔts", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "tsiʔtsy", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "tsiʔtsy", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "tsí·tsy", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "tsí·tsy", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "tsí·tsy", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "tsí·tsy", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "tsí·tsy", "ake̲"],
   };
   const nounFork: Module7Noun = {
@@ -439,8 +450,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "ahsekwa’tsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "ahsekwa’tsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "ahsekwa’tsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "ahsekwá·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "ahsekwá·tsl", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "ahsekwá·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "ahsekwá·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "ahsekwá·tsl", "ake̲"],
   };
   const nounGlass: Module7Noun = {
@@ -458,8 +469,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "wis", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "wis", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "wis", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "wi·s", ["át", "PAST"]],
-    count2: [["te", "PREP"], ["ka", "PS"], "wi·s", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "wi·s", ["át", "PAST"]],
+    count2: [["te", "DUAL"], ["ka", "PS"], "wi·s", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "wi·s", ["áke̲", "PAST"]],
   };
   const nounGroup: Module7Noun = {
@@ -477,8 +488,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "ityohkw", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "ityohk", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "ityohk", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["kʌ", "PS"], "tyóhkw", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["kʌ", "PS"], "tyóhkw", "ake̲"],
+    count1: [["s", "REP"], ["kʌ", "PS"], "tyóhkw", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["kʌ", "PS"], "tyóhkw", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["kʌ", "PS"], "tyóhkw", "ake̲"],
   };
   const nounGun: Module7Noun = {
@@ -496,8 +507,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "hul", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "hul", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "hul", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "hu·l", ["át", "PAST"]],
-    count2: [["te", "PREP"], ["ka", "PS"], "hu·l", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "hu·l", ["át", "PAST"]],
+    count2: [["te", "DUAL"], ["ka", "PS"], "hu·l", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "hu·l", ["áke̲", "PAST"]],
   };
   const nounHat: Module7Noun = {
@@ -515,8 +526,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "anaʔaloʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "anaʔaloʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "anaʔaloʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "anaʔaló·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "anaʔaló·tsl", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "anaʔaló·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "anaʔaló·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "anaʔaló·tsl", "ake̲"],
   };
   const nounHouse: Module7Noun = {
@@ -534,8 +545,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "nuhs", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "nuhs", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "nuhs", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "núhs", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "núhs", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "núhs", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "núhs", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "núhs", "ake̲"],
   };
   const nounJob: Module7Noun = {
@@ -553,8 +564,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "yoʔtʌhsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "yoʔtʌhsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "yoʔtʌhsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "yoʔtʌ́hsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "yoʔtʌ́hsl", ["ake̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "yoʔtʌ́hsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "yoʔtʌ́hsl", ["ake̲", "PAST"]],
     count3: [
       "áhsʌ ",
       ["ni", "PREP"],
@@ -578,8 +589,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "aʔshal", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "aʔshal", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "aʔshal", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "aʔsha·l", ["át", "PAST"]],
-    count2: [["te", "PREP"], ["w", "PS"], "aʔsha·l", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["w", "PS"], "aʔsha·l", ["át", "PAST"]],
+    count2: [["te", "DUAL"], ["w", "PS"], "aʔsha·l", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "aʔsha·l", ["áke̲", "PAST"]],
   };
   const nounMedicine: Module7Noun = {
@@ -597,8 +608,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "nuhkwaʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "nuhkwaʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "nuhkwaʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "nuhkwá·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "nuhkwá·tsl", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "nuhkwá·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "nuhkwá·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "nuhkwá·tsl", "ake̲"],
   };
   const nounMetal: Module7Noun = {
@@ -616,8 +627,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "lihst", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "lihst", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "lihst", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "líhst", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "líhst", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "líhst", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "líhst", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "líhst", "ake̲"],
   };
   const nounMind: Module7Noun = {
@@ -635,8 +646,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: null,
     big: [["wake", "PO"], "ʔnikuhl", "owanʌ̲́"],
     bigPlural: null,
-    count1: [["s", "PREP"], ["ka", "PS"], "ʔnikú·l", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "ʔnikú·l", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "ʔnikú·l", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "ʔnikú·l", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "ʔnikú·l", "ake̲"],
   };
   const nounMitts: Module7Noun = {
@@ -654,8 +665,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "aʔnyanawʌʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "aʔnyanawʌʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "aʔnyanawʌʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "aʔnyanawʌ́ʔtsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "aʔnyanawʌʔtsl", ["aké", "PAST"]],
+    count1: [["s", "REP"], ["w", "PS"], "aʔnyanawʌ́ʔtsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "aʔnyanawʌʔtsl", ["aké", "PAST"]],
     count3: [
       "áhsʌ ",
       ["ni", "PREP"],
@@ -679,8 +690,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "hwist", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "hwist", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "hwist", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "hwíst", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "hwíst", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "hwíst", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "hwíst", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "hwíst", "ake̲"],
   };
   const nounName: Module7Noun = {
@@ -698,8 +709,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "hsʌn", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "hsʌn", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "hsʌn", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "hsʌ́·n", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "hsʌ́·n", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "hsʌ́·n", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "hsʌ́·n", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "hsʌ́·n", "ake̲"],
   };
   const nounPants: Module7Noun = {
@@ -717,8 +728,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "aʔnhuskwaʔlh", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "aʔnhuskwaʔlh", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "aʔnhuskwaʔlh", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "aʔnhuskwá·lh", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "aʔnhuskwá·lh", "ake"],
+    count1: [["s", "REP"], ["w", "PS"], "aʔnhuskwá·lh", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "aʔnhuskwá·lh", "ake"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "aʔnhuskwá·lh", "ake"],
   };
   const nounPen: Module7Noun = {
@@ -736,8 +747,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "hyatukhwaʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "hyatukhwaʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "hyatukhwaʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "hyatukhwá·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "hyatukhwá·tsl", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "hyatukhwá·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "hyatukhwá·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "hyatukhwá·tsl", "ake̲"],
   };
   const nounPot: Module7Noun = {
@@ -755,8 +766,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "naʔts", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "naʔtsy", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "naʔtsy", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "ná·tsy", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "ná·tsy", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "ná·tsy", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "ná·tsy", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "ná·tsy", "ake̲"],
   };
   const nounPurse: Module7Noun = {
@@ -774,8 +785,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "hnaʔtatsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "hnaʔtatsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "hnaʔtatsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "hnaʔtátsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "hnaʔtátsl", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "hnaʔtátsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "hnaʔtátsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "hnaʔtátsl", "ake̲"],
   };
   const nounRing: Module7Noun = {
@@ -799,13 +810,13 @@ export function createModule7NounsList(): Module7Noun[] {
     big: [["wak", "PO"], "anisnuhsohloktaʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "anisnuhsohloktaʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
     count1: [
-      ["s", "PREP"],
+      ["s", "REP"],
       ["w", "PS"],
       "anisnuhsohloktá·tsl",
       ["a", "JOIN"],
       "t",
     ],
-    count2: [["te", "PREP"], ["w", "PS"], "anisnuhsohloktá·tsl", "ake̲"],
+    count2: [["te", "DUAL"], ["w", "PS"], "anisnuhsohloktá·tsl", "ake̲"],
     count3: ["áhsʌ", ["ni", "PREP"], ["w", "PS"], "anisnuhsohloktá·tsl", "ake̲"],
   };
   const nounSheetOfPaper: Module7Noun = {
@@ -823,8 +834,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "laʔwist", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "laʔwist", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "laʔwist", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "laʔwíst", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "laʔwíst", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "laʔwíst", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "laʔwíst", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "laʔwíst", "ake̲"],
   };
   const nounShirt: Module7Noun = {
@@ -842,8 +853,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "atyaʔtawiʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "atyaʔtawiʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "atyaʔtawiʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "atyaʔtawí·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "atyaʔtawí·tsl", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "atyaʔtawí·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "atyaʔtawí·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "atyaʔtawí·tsl", "ake̲"],
   };
   const nounShoe: Module7Noun = {
@@ -861,8 +872,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "atahkw", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "atahk", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "atahk", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "atáhkw", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "atáhkw", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "atáhkw", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "atáhkw", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "atáhkw", "ake̲"],
   };
   const nounSkirt: Module7Noun = {
@@ -880,8 +891,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "aʔkohs", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "aʔkohs", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "aʔkohs", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "aʔkóhs", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "aʔkóhs", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "aʔkóhs", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "aʔkóhs", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "aʔkóhs", "ake̲"],
   };
   const nounSong: Module7Noun = {
@@ -899,8 +910,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "lʌn", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "lʌn", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "lʌn", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "lʌ·n", ["át", "PAST"]],
-    count2: [["te", "PREP"], ["ka", "PS"], "lʌ·n", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "lʌ·n", ["át", "PAST"]],
+    count2: [["te", "DUAL"], ["ka", "PS"], "lʌ·n", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "lʌ·n", ["áke̲", "PAST"]],
   };
   const nounSpoon: Module7Noun = {
@@ -918,8 +929,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "atokwaʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "atokwaʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "atokwaʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "atokwá·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "atokwá·tsl", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "atokwá·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "atokwá·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "atokwá·tsl", "ake̲"],
   };
   const nounStone: Module7Noun = {
@@ -937,8 +948,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "nʌh", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "nʌy", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "nʌy", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "nʌ·y", ["á", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "nʌ·y", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "nʌ·y", ["á", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "nʌ·y", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "nʌ·y", ["áke̲", "PAST"]],
   };
   const nounStory: Module7Noun = {
@@ -956,8 +967,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "kal", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "kal", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "kal", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "ká·l", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "ká·l", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "ká·l", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "ká·l", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "ká·l", "ake̲"],
   };
   const nounString: Module7Noun = {
@@ -975,8 +986,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "ahsliyeʔt", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "ahsliyeʔt", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "ahsliyeʔt", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "ahsliyé·t", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "ahsliyé·t", ["ake̲", "PAST"]],
+    count1: [["s", "REP"], ["w", "PS"], "ahsliyé·t", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "ahsliyé·t", ["ake̲", "PAST"]],
     count3: [
       "áhsʌ ",
       ["ni", "PREP"],
@@ -1000,8 +1011,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "atekhwahlaʔtsl", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "atekhwahlaʔtsl", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "atekhwahlaʔtsl", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["w", "PS"], "atekhwahlá·tsl", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["w", "PS"], "atekhwahlá·tsl", "ake̲"],
+    count1: [["s", "REP"], ["w", "PS"], "atekhwahlá·tsl", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["w", "PS"], "atekhwahlá·tsl", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["w", "PS"], "atekhwahlá·tsl", "ake̲"],
   };
   const nounTobacco: Module7Noun = {
@@ -1019,8 +1030,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "yuʔkw", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "yuʔk", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "yuʔk", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "yú·kw", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "yú·kw", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "yú·kw", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "yú·kw", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "yú·kw", "ake̲"],
   };
   const nounTube: Module7Noun = {
@@ -1038,8 +1049,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "holoʔt", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "holoʔt", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "holoʔt", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "holó·t", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "holó·t", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "holó·t", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "holó·t", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "holó·t", "ake̲"],
   };
   const nounWire: Module7Noun = {
@@ -1057,13 +1068,13 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "luwal", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "luwal", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "luwal", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "lu·wál", ["a", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "lu·wál", "ake̲"],
+    count1: [["s", "REP"], ["ka", "PS"], "lu·wál", ["a", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "lu·wál", "ake̲"],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "lu·wál", "ake̲"],
   };
   const nounWood: Module7Noun = {
     key: "Wood",
-    en: ["cord of wood"],
+    en: ["wood (cord of)"],
     dict: [826, 1268],
     root: ["-yʌt-"],
     single: ["o·yʌ́teʔ"],
@@ -1076,8 +1087,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "yʌt", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "yʌt", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "yʌt", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "yʌ·t", ["át", "PAST"]],
-    count2: [["te", "PREP"], ["ka", "PS"], "yʌ·t", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "yʌ·t", ["át", "PAST"]],
+    count2: [["te", "DUAL"], ["ka", "PS"], "yʌ·t", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "yʌ·t", ["áke̲", "PAST"]],
   };
   const nounWord: Module7Noun = {
@@ -1095,8 +1106,8 @@ export function createModule7NounsList(): Module7Noun[] {
     haveGoodPlural: [["wak", "PO"], "wʌn", "iyó", ["se̲ʔ", "EXAS"]],
     big: [["wak", "PO"], "wʌn", "owanʌ̲́"],
     bigPlural: [["wak", "PO"], "wʌn", "owanʌ́", ["se̲ʔ", "EXAS"]],
-    count1: [["s", "PREP"], ["ka", "PS"], "wʌ·n", ["á", "JOIN"], "t"],
-    count2: [["te", "PREP"], ["ka", "PS"], "wʌ·n", ["áke̲", "PAST"]],
+    count1: [["s", "REP"], ["ka", "PS"], "wʌ·n", ["á", "JOIN"], "t"],
+    count2: [["te", "DUAL"], ["ka", "PS"], "wʌ·n", ["áke̲", "PAST"]],
     count3: ["áhsʌ ", ["ni", "PREP"], ["ka", "PS"], "wʌ·n", ["áke̲", "PAST"]],
   };
 
@@ -1158,6 +1169,274 @@ export function createModule7NounsList(): Module7Noun[] {
   ];
 }
 
+export function createModule7ContainerList() {
+  const objAmmoClip: Module7ContainerNoun = {
+    key: "AmmoClip",
+    en: ["ammo clip", "ammo magazine", "marble bag"],
+    one: [
+      {
+        one: [["ye", "PS"], "nʌyalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objBabySling: Module7ContainerNoun = {
+    key: "BabySling",
+    en: [
+      "baby sling",
+      "wrap",
+      "cradleboard",
+      "jolly jumper",
+      "playpen",
+      "stroller",
+    ],
+    one: [
+      {
+        one: [["ye", "PS"], "wilalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objBottleCase: Module7ContainerNoun = {
+    key: "BottleCase",
+    en: ["bottle case", "pop", "juice", "alcohol"],
+    one: [
+      {
+        one: [["ye", "PS"], "tshe’talá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objBookRack: Module7ContainerNoun = {
+    key: "BookRack",
+    en: ["book rack", "magazines", "toilet paper", "napkins"],
+    one: [
+      {
+        one: [["ye", "PS"], "hyatuhslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objButtonJar: Module7ContainerNoun = {
+    key: "ButtonJar",
+    en: ["button jar"],
+    one: [
+      {
+        one: [["ye", "PS"], "tsihkwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objCigaretteCase: Module7ContainerNoun = {
+    key: "CigaretteCase",
+    en: ["cigarette case", "tobacco pouch"],
+    one: [
+      {
+        one: [["ye", "PS"], "hlo’kwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+      {
+        one: [["ye", "PS"], "yu’kwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objCupboard: Module7ContainerNoun = {
+    key: "Cupboard",
+    en: ["cupboard", "dish rack", "china cabinet"],
+    one: [
+      {
+        one: [["ye", "PS"], "ksalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objEyeglassCase: Module7ContainerNoun = {
+    key: "EyeglassCase",
+    en: ["eyeglass case"],
+    one: [
+      {
+        one: [
+          ["yu", "PS"],
+          "twisutakhwa’tslalá",
+          ["khw", "INST2"],
+          ["a̲’", "HAB"],
+        ],
+      },
+    ],
+  };
+  const objFeatherCase: Module7ContainerNoun = {
+    key: "FeatherCase",
+    en: ["feather case"],
+    one: [
+      {
+        one: [["ye", "PS"], "stoslalakhwa̲’"],
+      },
+    ],
+  };
+  const objGunRack: Module7ContainerNoun = {
+    key: "GunRack",
+    en: ["gun rack"],
+    one: [
+      {
+        one: [["ye", "PS"], "hulalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objHatRack: Module7ContainerNoun = {
+    key: "HatRack",
+    en: ["hat rack", "hat box"],
+    one: [
+      {
+        one: [["yu", "PS"], "nalotslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objHopeChest: Module7ContainerNoun = {
+    key: "HopeChest",
+    en: ["hope chest", "blanket box"],
+    one: [
+      {
+        one: [["ye", "PS"], "kʌhalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objIceCubeTray: Module7ContainerNoun = {
+    key: "IceCubeTray",
+    en: ["ice cube tray"],
+    one: [
+      {
+        one: [["ye", "PS"], "wisalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+      {
+        one: [["ye", "PS"], "wisunyátha"],
+      },
+    ],
+  };
+  const objJewelryBox: Module7ContainerNoun = {
+    key: "JewelryBox",
+    en: ["jewelry box"],
+    one: [
+      {
+        one: [["ye", "PS"], "stalotalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objKnifeDrawer: Module7ContainerNoun = {
+    key: "KnifeDrawer",
+    en: ["knife drawer", "knife holder", "sheath"],
+    one: [
+      {
+        one: [["yu", "PS"], "’shalalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objMoneyClip: Module7ContainerNoun = {
+    key: "MoneyClip",
+    en: ["money clip", "billfold", "wallet"],
+    one: [
+      {
+        one: [["ye", "PS"], "hwistalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objPencilCase: Module7ContainerNoun = {
+    key: "PencilCase",
+    en: ["pencil case"],
+    one: [
+      {
+        one: [
+          ["ye", "PS"],
+          "hyatukhwa’tslalá",
+          ["khw", "INST2"],
+          ["a̲’", "HAB"],
+        ],
+      },
+    ],
+  };
+  const objPetCage: Module7ContainerNoun = {
+    key: "PetCage",
+    en: ["pet cage", "holder", "crate"],
+    one: [
+      {
+        one: [["ye", "PS"], "nahskwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objPillBottle: Module7ContainerNoun = {
+    key: "PillBottle",
+    en: ["pill bottle", "medicine chest"],
+    one: [
+      {
+        one: [["ye", "PS"], "nuhkwa’tslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objShoeRack: Module7ContainerNoun = {
+    key: "ShoeRack",
+    en: ["shoe rack"],
+    one: [
+      {
+        one: [["yu", "PS"], "htahkwalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objSockDrawer: Module7ContainerNoun = {
+    key: "SockDrawer",
+    en: ["sock drawer"],
+    one: [
+      {
+        one: [["yu", "PS"], "tlahti’tslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objSugarBowl: Module7ContainerNoun = {
+    key: "SugarBowl",
+    en: ["sugar bowl", "candy dish"],
+    one: [
+      {
+        one: [["ye", "PS"], "nu’takli’tslalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objVase: Module7ContainerNoun = {
+    key: "Vase",
+    en: ["vase"],
+    one: [
+      {
+        one: [["ye", "PS"], "tsi’tsyalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  const objWoodRack: Module7ContainerNoun = {
+    key: "WoodRack",
+    en: ["wood rack"],
+    one: [
+      {
+        one: [["ye", "PS"], "yʌtalá", ["khw", "INST2"], ["a̲’", "HAB"]],
+      },
+    ],
+  };
+  return [
+    objAmmoClip,
+    objBabySling,
+    objBottleCase,
+    objBookRack,
+    objButtonJar,
+    objCigaretteCase,
+    objCupboard,
+    objEyeglassCase,
+    objFeatherCase,
+    objGunRack,
+    objHatRack,
+    objHopeChest,
+    objIceCubeTray,
+    objJewelryBox,
+    objKnifeDrawer,
+    objMoneyClip,
+    objPencilCase,
+    objPetCage,
+    objPillBottle,
+    objShoeRack,
+    objSockDrawer,
+    objSugarBowl,
+    objVase,
+    objWoodRack,
+  ];
+}
+
 export function getEnglishTranslation(
   datum: {
     en: string[];
@@ -1194,4 +1473,222 @@ export function getEnglishTranslation(
     return `three ${p}`;
   }
   return "";
+}
+
+export function createColoursData(): Module7Colour[] {
+  const objBlue: Module7Colour = {
+    key: "Blue",
+    en: ["blue"],
+    one: [
+      {
+        one: ["olú·ya̲’"],
+      },
+    ],
+  };
+  const objGreen: Module7Colour = {
+    key: "Green",
+    en: ["green"],
+    one: [
+      {
+        one: ["awʌ·lá̲·"],
+      },
+    ],
+  };
+  const objRed: Module7Colour = {
+    key: "Red",
+    en: ["red"],
+    one: [
+      {
+        one: ["onikwʌhtala̲’"],
+      },
+    ],
+  };
+  const objYellow: Module7Colour = {
+    key: "Yellow",
+    en: ["yellow"],
+    one: [
+      {
+        one: ["otsí·nkwala̲’"],
+      },
+    ],
+  };
+  const objLight: Module7Colour = {
+    key: "Light",
+    en: ["light", "white"],
+    one: [
+      {
+        one: ["owískehla̲’"],
+      },
+      {
+        one: ["owískla’"],
+      },
+    ],
+  };
+  const objDark: Module7Colour = {
+    key: "Dark",
+    en: ["dark", "black"],
+    one: [
+      {
+        one: ["o’swʌ́·ta̲’"],
+      },
+    ],
+  };
+  const objPink: Module7Colour = {
+    key: "Pink",
+    en: ["pink"],
+    one: [
+      {
+        one: [["ka", "PS"], "nikwʌhtalawískela̲’"],
+      },
+      {
+        one: [["ka", "PS"], "nikwʌhtalawískla’"],
+      },
+    ],
+  };
+  const objOrange: Module7Colour = {
+    key: "Orange",
+    en: ["orange"],
+    one: [
+      {
+        one: [["ka", "PS"], "tsi’nkwalahú·tsi’"],
+      },
+    ],
+  };
+  const objBrown: Module7Colour = {
+    key: "Brown",
+    en: ["brown"],
+    one: [
+      {
+        one: ["athéhsa̲’"],
+      },
+    ],
+  };
+  const objGray: Module7Colour = {
+    key: "Gray",
+    en: ["gray"],
+    one: [
+      {
+        one: ["ata’kʌ́·la̲’"],
+      },
+    ],
+  };
+  const objDarkRed: Module7Colour = {
+    key: "DarkRed",
+    en: ["dark red", "maroon"],
+    one: [
+      {
+        one: [["ka", "PS"], "nikwʌhtalahú·tsi’"],
+      },
+      {
+        one: ["tet", ["yo", "PO"], "nikwʌtalá·kalas"],
+      },
+    ],
+  };
+  const objDarkBlue: Module7Colour = {
+    key: "DarkBlue",
+    en: ["dark blue", "navy"],
+    one: [
+      {
+        one: [["ka", "PS"], "luhyahú·tsi"],
+      },
+    ],
+  };
+  const objLightBlue: Module7Colour = {
+    key: "LightBlue",
+    en: ["light blue"],
+    one: [
+      {
+        one: ["kaluhyawískela̲’"],
+      },
+      {
+        one: [["ka", "PS"], "luhyawískla’"],
+      },
+    ],
+  };
+  const objPurple: Module7Colour = {
+    key: "Purple",
+    en: ["purple"],
+    one: [
+      {
+        one: ["ohalanʌ́·ta̲’"],
+      },
+    ],
+  };
+  const objJetBlack: Module7Colour = {
+    key: "JetBlack",
+    en: ["jet black", "very dark"],
+    one: [
+      {
+        one: ["o’swʌ’tóhsku̲"],
+      },
+    ],
+  };
+  const objPureWhite: Module7Colour = {
+    key: "PureWhite",
+    en: ["pure white"],
+    one: [
+      {
+        one: ["owisklóhsku̲"],
+      },
+    ],
+  };
+  const objSilver: Module7Colour = {
+    key: "Silver",
+    en: ["silver"],
+    one: [
+      {
+        one: [["ka", "PS"], "hwistano·lú̲·"],
+      },
+    ],
+  };
+  const objGold: Module7Colour = {
+    key: "Gold",
+    en: ["gold", "copper"],
+    one: [
+      {
+        one: ["ohwistano·lú̲·"],
+      },
+    ],
+  };
+  const objBright: Module7Colour = {
+    key: "Bright",
+    en: ["bright colour"],
+    one: [
+      {
+        one: [["yo", "PO"], "hsóshwatet"],
+      },
+    ],
+  };
+  const objDarkColour: Module7Colour = {
+    key: "DarkColour",
+    en: ["dark colour"],
+    one: [
+      {
+        one: ["tet", ["yo", "PO"], "hsohkwá·kalas"],
+      },
+    ],
+  };
+
+  return [
+    objBlue,
+    objGreen,
+    objRed,
+    objYellow,
+    objLight,
+    objDark,
+    objPink,
+    objOrange,
+    objBrown,
+    objGray,
+    objDarkRed,
+    objDarkBlue,
+    objLightBlue,
+    objPurple,
+    objJetBlack,
+    objPureWhite,
+    objSilver,
+    objGold,
+    objBright,
+    objDarkColour,
+  ];
 }

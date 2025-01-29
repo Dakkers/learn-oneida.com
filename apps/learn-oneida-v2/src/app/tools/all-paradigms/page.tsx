@@ -209,6 +209,7 @@ function Module7NounListLegacy() {
     >
       {data.map((datum) => (
         <div
+          key={datum.key}
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
@@ -219,15 +220,15 @@ function Module7NounListLegacy() {
         >
           <div className="border p-1" style={{ gridArea: "4 / 2 / 5 / 4" }}>
             <Flex gap={2} wrap>
-              {[datum.count1, datum.count2, datum.count3].map((v) => (
-                <TextBreakdown breakdown={v} />
+              {[datum.count1, datum.count2, datum.count3].map((v, i) => (
+                <TextBreakdown breakdown={v} key={i} />
               ))}
             </Flex>
           </div>
           <div className="border p-1" style={{ gridArea: " 1 / 1 / 5 / 2" }}>
             <Flex align="center" direction="column" gap={1} justify="center">
-              {datum.en.map((txt) => (
-                <div>{txt}</div>
+              {datum.en.map((txt, i) => (
+                <div key={i}>{txt}</div>
               ))}
             </Flex>
           </div>

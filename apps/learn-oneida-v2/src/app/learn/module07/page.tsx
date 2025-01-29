@@ -6,7 +6,7 @@ import {
 } from "~/components/TableOfContents";
 import { Accordion, Flex, List, Text } from "@ukwehuwehneke/ohutsya";
 import {
-  BreakdownArray,
+  type BreakdownArray,
   SectionHeading,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
@@ -14,8 +14,14 @@ import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
-import { Bleed } from "@ukwehuwehneke/ohutsya";
-import { createModule7NounsList, Module7Noun } from "@/data/module07";
+import {
+  createModule7ContainerList,
+  createModule7NounsList,
+  createColoursData,
+  type Module7Colour,
+  type Module7ContainerNoun,
+  type Module7Noun,
+} from "@/data/module07";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 import pluralize from "pluralize";
@@ -34,27 +40,36 @@ export default function LearnModule07() {
       <SectionHeading level={1}>Module 7</SectionHeading>
 
       <Box py={4}>
-        <Notice intent="warning">
-          <b>Note:</b> This page is still under construction!
+        <Notice intent="negative">
+          <b>Note:</b> This page is new and is missing lots of content. It is
+          currently a work in progress!
         </Notice>
       </Box>
 
       <TOC>
         <TocItem label="Introduction" value="intro" />
 
-        <TocItem label="Paradigms for Select Active Verbs" value="paradigms">
+        <TocItem label="New Nouns" value="nouns-list">
           <TocSection>
             {list.map((n) => (
-              <TocItem key={n.key} label={n.en} value={n.key.toLowerCase()} />
+              <TocItem
+                key={n.key}
+                label={n.en[0]}
+                value={n.key.toLowerCase()}
+              />
             ))}
           </TocSection>
         </TocItem>
 
-        <TocItem label="Translation exercises" value="translation-exercises" />
+        <TocItem label="Container Nouns" value="containers" />
+
+        {/* <TocItem label="Translation exercises" value="translation-exercises" /> */}
       </TOC>
 
       <Introduction />
       <AllNouns />
+      <ContainerNouns />
+      <ColourNouns />
     </PageWrapper>
   );
 }
@@ -63,7 +78,10 @@ function Introduction() {
   return (
     <>
       <SectionHeading level={2}>Introduction</SectionHeading>
+
       <Text>(Intro not yet written.)</Text>
+
+      <Text>TODO: Mention noun incorporation...</Text>
     </>
   );
 }
@@ -93,7 +111,11 @@ function AllNouns() {
       <Accordion type="multiple">
         {list.map((n) => {
           return (
-            <Accordion.Item id={n.key.toLowerCase()} key={n.key} title={n.en}>
+            <Accordion.Item
+              id={n.key.toLowerCase()}
+              key={n.key}
+              title={n.en[0]}
+            >
               <NounEntry nounDatum={n} />
             </Accordion.Item>
           );
@@ -143,6 +165,100 @@ function NounEntry({ nounDatum }: { nounDatum: Module7Noun }) {
           [`two ${p}`, nounDatum.count2],
           [`three ${p}`, nounDatum.count3],
         ].map(([en, breakdown]) => ({ en, breakdown }))}
+      />
+    </>
+  );
+}
+
+function ContainerNouns() {
+  return (
+    <>
+      <SectionHeading id="containers" level={2}>
+        Container Nouns
+      </SectionHeading>
+
+      <Text>
+        The word <b>yelákhwaʔ</b> means "container" and the word{" "}
+        <b>yelakhwaʔshúha</b> means "containers". Below is a list of objects
+        that contain other objects.
+      </Text>
+
+      <Text>
+        These words make use of noun incorporation as described in the previous
+        section and also make use of the instrumental suffix{" "}
+        <Letter>-hkw-</Letter>. This suffix means "do with it, use it for".
+        Because it's used in the habitual tense, it ends up appearing as{" "}
+        <Letter>khwaʔ</Letter>.
+      </Text>
+
+      <TableWrapper
+        columns={[
+          TableWrapper.englishColumn,
+          {
+            accessorKey: "one",
+            // @ts-expect-error TODO - TableWrapper/Table generics
+            cell: (value: Module7ContainerNoun["one"]) => {
+              return (
+                <Flex direction="column" gap={4}>
+                  {value.map((obj, i) => (
+                    <Flex direction="column" gap={0} key={i}>
+                      <TextBreakdown
+                        breakdown={obj.one}
+                        typeFallback="PS"
+                        wrap="nowrap"
+                      />
+                      {obj.en && <Text variant="labelS">{obj.en}</Text>}
+                    </Flex>
+                  ))}
+                </Flex>
+              );
+            },
+            header: "Oneida",
+          },
+        ]}
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        data={createModule7ContainerList()}
+      />
+    </>
+  );
+}
+
+function ColourNouns() {
+  return (
+    <>
+      <SectionHeading id="colours" level={2}>
+        Colours
+      </SectionHeading>
+
+      <Text>Below is a list of colours.</Text>
+
+      <TableWrapper
+        columns={[
+          TableWrapper.englishColumn,
+          {
+            accessorKey: "one",
+            // @ts-expect-error TODO - TableWrapper/Table generics
+            cell: (value: Module7Colour["one"]) => {
+              return (
+                <Flex direction="column" gap={4}>
+                  {value.map((obj, i) => (
+                    <Flex direction="column" gap={0} key={i}>
+                      <TextBreakdown
+                        breakdown={obj.one}
+                        typeFallback="PS"
+                        wrap="nowrap"
+                      />
+                      {obj.en && <Text variant="labelS">{obj.en}</Text>}
+                    </Flex>
+                  ))}
+                </Flex>
+              );
+            },
+            header: "Oneida",
+          },
+        ]}
+        // @ts-expect-error TODO - TableWrapper/Table generics
+        data={createColoursData()}
       />
     </>
   );

@@ -14,6 +14,7 @@ export type BreakdownType =
   | "FUT"
   | "HAB"
   | "IFUT"
+  | "INST2" // instrumental II
   | "JOIN"
   | "OP"
   | "NOUN"
@@ -53,12 +54,13 @@ export interface TextBreakdownProps {
 export function TextBreakdown({
   as: Tag = "span",
   breakdown: _breakdown,
-  ignored = [],
+  ignored: _ignored = undefined,
   typeFallback,
   whispered: _whispered = false,
   wrap,
 }: TextBreakdownProps) {
   const breakdown = _breakdown;
+  const ignored = _ignored ?? (["HAB", "DERIV"] as BreakdownType[]);
 
   return (
     <Tag>
@@ -125,7 +127,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   ASP: "text-lime-500",
   CIS: "text-lime-500",
   CL: "text-emerald-500",
-  DEF: "text-emerald-400",
+  DEF: "text-lime-500",
   DER: "text-yellow-500",
   DUAL: "text-lime-500",
   EP: "text-gray-400",
@@ -133,6 +135,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   FUT: "text-emerald-400",
   HAB: "text-emerald-400",
   IFUT: "text-emerald-400",
+  INST2: "text-yellow-500",
   // JOIN: "text-yellow-600",
   JOIN: "text-gray-600",
   NOUN: "underline decoration-wavy decoration-black",
@@ -147,7 +150,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   PTV: "text-lime-500",
   RECP: "text-green-700",
   REFL: "text-green-700",
-  REP: "text-yellow-600",
+  REP: "text-lime-500",
   RPL: "text-gray-400",
   SRFL: "text-green-700",
 } as const;
