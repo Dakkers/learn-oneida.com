@@ -56,30 +56,57 @@ export function createModule8CharacteristicsList() {
   };
   const objDark: ObjectCharacteristicVerb = {
     key: "Dark",
-    root: [""],
+    root: ["tet...a’kala-"],
     en: ["dark"],
     dict: [],
-    verb: ["tet", ["yo", "PO"], "hsohkwá·kalas"],
-    verbNegated: ["yáh tha", "tet", ["yo", "PO"], "hsohkwá·kalas"],
-    withNoun: ["tet", ["yo", "PO"], ["yal", "NOUN"], "á·kalas"],
-    haveNoun: ["tet", ["wak", "PO"], ["yal", "NOUN"], "á·kalas"],
+    verb: [["te", "DUAL"], ["t", "CIS"], ["yo", "PO"], "hsohkwá·kalas"],
+    verbNegated: [
+      "yáh tha",
+      ["te", "DUAL"],
+      ["t", "CIS"],
+      ["yo", "PO"],
+      "hsohkwá·kalas",
+    ],
+    withNoun: [
+      ["te", "DUAL"],
+      ["t", "CIS"],
+      ["yo", "PO"],
+      ["yal", "NOUN"],
+      "á·kalas",
+    ],
+    haveNoun: [
+      ["te", "DUAL"],
+      ["t", "CIS"],
+      ["wak", "PO"],
+      ["yal", "NOUN"],
+      "á·kalas",
+    ],
     haveNounPlural: [
-      "tet",
+      ["te", "DUAL"],
+      ["t", "CIS"],
       ["wak", "PO"],
       ["yal", "NOUN"],
       "á·kalah",
       ["seʔ", "CL"],
     ],
-    verbPast: ["tet", ["yo", "PO"], "hsohkwá·kalas", ["kweʔ", "PAST"]],
+    verbPast: [
+      ["te", "DUAL"],
+      ["t", "CIS"],
+      ["yo", "PO"],
+      "hsohkwá·kalas",
+      ["kweʔ", "PAST"],
+    ],
     withNounPast: [
-      "tet",
+      ["te", "DUAL"],
+      ["t", "CIS"],
       ["yo", "PO"],
       ["yal", "NOUN"],
       "á·kalas",
       ["kweʔ", "PAST"],
     ],
     haveNounPast: [
-      "tet",
+      ["te", "DUAL"],
+      ["t", "CIS"],
       ["wak", "PO"],
       ["yal", "NOUN"],
       "á·kalas",
@@ -87,7 +114,8 @@ export function createModule8CharacteristicsList() {
     ],
     haveNounPastPlural: [
       ...I_HAD_PAST,
-      "tet",
+      ["te", "DUAL"],
+      ["t", "CIS"],
       ["yo", "PO"],
       ["yal", "NOUN"],
       "á·kalahseʔ",
@@ -96,7 +124,7 @@ export function createModule8CharacteristicsList() {
   };
   const objDirty: ObjectCharacteristicVerb = {
     key: "Dirty",
-    root: [""],
+    root: ["te...anuhyaniht-"],
     en: ["dirty", "soiled"],
     dict: [],
     verb: [["te", "DUAL"], ["yo", "PO"], "nú·yanit"],
@@ -136,7 +164,7 @@ export function createModule8CharacteristicsList() {
   };
   const objDry: ObjectCharacteristicVerb = {
     key: "Dry",
-    root: [""],
+    root: ["-astathʌ-"],
     en: ["dry"],
     dict: [],
     verb: [["yo", "PO"], "hstáthʌ"],
@@ -162,7 +190,7 @@ export function createModule8CharacteristicsList() {
   };
   const objExpensive: ObjectCharacteristicVerb = {
     key: "Expensive",
-    root: [""],
+    root: ["-nolu-"],
     en: ["expensive", "rare", "precious"],
     dict: [],
     verb: [["ka", "PS"], "no·lú·"],
@@ -183,7 +211,7 @@ export function createModule8CharacteristicsList() {
   };
   const objHard: ObjectCharacteristicVerb = {
     key: "Hard",
-    root: [""],
+    root: ["-hnil-"],
     en: ["hard"],
     dict: [],
     verb: [["yo", "PO"], "hnilú"],
@@ -211,7 +239,7 @@ export function createModule8CharacteristicsList() {
   };
   const objHeavy: ObjectCharacteristicVerb = {
     key: "Heavy",
-    root: [""],
+    root: ["-kste-"],
     en: ["heavy"],
     dict: [],
     verb: [["yó", "PO"], "ksteʔ"],
@@ -232,7 +260,7 @@ export function createModule8CharacteristicsList() {
   };
   const objHole: ObjectCharacteristicVerb = {
     key: "Hole",
-    root: [""],
+    root: ["-kahlut-"],
     en: ["hole (in something)"],
     dict: [],
     verb: [["yo", "PO"], "ká·luteʔ"],
@@ -263,7 +291,7 @@ export function createModule8CharacteristicsList() {
   };
   const objLight: ObjectCharacteristicVerb = {
     key: "Light",
-    root: [""],
+    root: ["-wiskl-"],
     en: ["light in colour"],
     dict: [],
     verb: ["owísklaʔ"],
@@ -297,7 +325,7 @@ export function createModule8CharacteristicsList() {
   };
   const objLong: ObjectCharacteristicVerb = {
     key: "Long",
-    root: [""],
+    root: ["-es-", "-us-"],
     en: ["long"],
     dict: [],
     verb: ["i·yús"],
@@ -318,7 +346,7 @@ export function createModule8CharacteristicsList() {
   };
   const objLotsOf: ObjectCharacteristicVerb = {
     key: "Lots",
-    root: [""],
+    root: ["-ka’te-"],
     en: ["lots of"],
     dict: [],
     verb: [["yo", "PO"], "ká·teʔ"],
@@ -343,7 +371,7 @@ export function createModule8CharacteristicsList() {
   };
   const objNegative: ObjectCharacteristicVerb = {
     key: "Negative",
-    root: [""],
+    root: ["-aksʌ-"],
     en: ["negative", "bad"],
     dict: [],
     verb: ["yáh te", ["yo", "PO"], "yántle"],
@@ -364,7 +392,7 @@ export function createModule8CharacteristicsList() {
   };
   const objNew: ObjectCharacteristicVerb = {
     key: "New",
-    root: [""],
+    root: ["-ase-"],
     en: ["new"],
     dict: [],
     verb: ["a·sé·"],
@@ -385,7 +413,7 @@ export function createModule8CharacteristicsList() {
   };
   const objOld: ObjectCharacteristicVerb = {
     key: "Old",
-    root: [""],
+    root: ["-akayu-"],
     en: ["old"],
     dict: [],
     verb: ["akayú"],
@@ -406,8 +434,8 @@ export function createModule8CharacteristicsList() {
   };
   const objPretty: ObjectCharacteristicVerb = {
     key: "Pretty",
-    root: [""],
-    en: ["pretty"],
+    root: ["-iyo-"],
+    en: ["pretty", "good"],
     dict: [],
     verb: [["yo", "PO"], "yántleʔ"],
     verbNegated: ["yáh te", ["yo", "PO"], "yántleʔ"],
@@ -427,7 +455,7 @@ export function createModule8CharacteristicsList() {
   };
   const objShort: ObjectCharacteristicVerb = {
     key: "Short",
-    root: [""],
+    root: ["kʌ’ n...esha"],
     en: ["short"],
     dict: [],
     verb: ["kʌʔ niyúsa"],
@@ -467,7 +495,7 @@ export function createModule8CharacteristicsList() {
   };
   const objSmall: ObjectCharacteristicVerb = {
     key: "Small",
-    root: [""],
+    root: ["kʌ’ n...a’"],
     en: ["small"],
     dict: [],
     verb: ["kʌʔ  ni", ["w", "PS"], "á·"],
@@ -507,7 +535,7 @@ export function createModule8CharacteristicsList() {
   };
   const objSmelly: ObjectCharacteristicVerb = {
     key: "Smelly",
-    root: [""],
+    root: ["-akla’-"],
     en: ["smelly"],
     dict: [],
     verb: [["w", "PS"], "áklahseʔ"],
@@ -533,7 +561,7 @@ export function createModule8CharacteristicsList() {
   };
   const objSoft: ObjectCharacteristicVerb = {
     key: "Soft",
-    root: [""],
+    root: ["-’netskʌ-"],
     en: ["soft"],
     dict: [],
     verb: [["yo", "PO"], "ʔnétskʌ"],
@@ -554,7 +582,7 @@ export function createModule8CharacteristicsList() {
   };
   const objUgly: ObjectCharacteristicVerb = {
     key: "Ugly",
-    root: [""],
+    root: ["-ahetkʌ-"],
     en: ["ugly"],
     dict: [],
     verb: [["w", "PS"], "ahétkʌʔ"],
@@ -575,7 +603,7 @@ export function createModule8CharacteristicsList() {
   };
   const objWet: ObjectCharacteristicVerb = {
     key: "Wet",
-    root: [""],
+    root: ["-na’nawʌ-"],
     en: ["wet"],
     dict: [],
     verb: [["yo", "PO"], "ná·nawʌ"],
