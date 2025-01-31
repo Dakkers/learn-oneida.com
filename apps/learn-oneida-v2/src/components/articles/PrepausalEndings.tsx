@@ -122,7 +122,7 @@ export function PrepausalEndingsArticle({ level = 1 }: ArticleProps) {
             en: "He is 9 years old.",
           },
           {
-            one: "Tó· naʔteyakohsliyá·ku né· saksotha̲",
+            one: "Tó· naʔteyakaohsliyá·ku né· sahsotha̲",
             en: "How old is your grandmother?",
           },
           {
