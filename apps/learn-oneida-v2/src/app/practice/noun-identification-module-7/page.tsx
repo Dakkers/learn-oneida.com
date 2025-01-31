@@ -25,10 +25,9 @@ export default function PracticeNounIdentificationModule7() {
     const list = createModule7NounsList();
 
     for (const datum of list) {
-      resultEn.push({ key: datum.key, text: datum.en });
+      resultEn.push({ key: datum.key, text: datum.en[0] });
       resultOn.push({
         key: datum.key,
-        // @ts-expect-error Need better typing on the module 7 list
         text: convertBreakdownToPlainText(datum.single),
       });
     }

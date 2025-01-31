@@ -1,5 +1,5 @@
 "use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Bleed, Flex, Text, TextArray } from "@ukwehuwehneke/ohutsya";
 import { Select } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Button } from "@ukwehuwehneke/ohutsya";
@@ -22,6 +22,8 @@ import {
 import { PageWrapper } from "@/components/PageWrapper";
 
 import type { Metadata } from "next";
+import { createModule7NounsList, Module7Noun } from "@/data/module07";
+import { Letter } from "@/components/Letter";
 
 // export const metadata: Metadata = {
 //   title: "All Paradigms",
@@ -29,7 +31,7 @@ import type { Metadata } from "next";
 // };
 
 export default function ToolsAllParadigms() {
-  const [module, setModule] = useState("m6");
+  const [module, setModule] = useState("m7-legacy");
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   return (
@@ -45,6 +47,7 @@ export default function ToolsAllParadigms() {
               { label: "Module 5", value: "m5" },
               { label: "Module 5 (Legacy)", value: "m5-legacy" },
               { label: "Module 6", value: "m6" },
+              { label: "Module 7", value: "m7-legacy" },
             ]}
             value={module}
           />
@@ -59,7 +62,9 @@ export default function ToolsAllParadigms() {
       ) : module === "m5" ? (
         <Module5Paradigms />
       ) : module === "m5-legacy" ? (
-        <Module5ParadigmsAsIs />
+        <Module5ParadigmsLegacy />
+      ) : module === "m7-legacy" ? (
+        <Module7NounListLegacy />
       ) : null}
     </PageWrapper>
   );
@@ -129,7 +134,7 @@ function Module6Paradigms() {
   );
 }
 
-function Module5ParadigmsAsIs() {
+function Module5ParadigmsLegacy() {
   const data = createModule5VerbsList();
 
   return (
@@ -188,5 +193,90 @@ function Module5ParadigmsAsIs() {
       ]}
       data={data}
     />
+  );
+}
+
+function Module7NounListLegacy() {
+  const data = createModule7NounsList();
+
+  return (
+    <Bleed
+      mx={{
+        xs: 0,
+        md: 16,
+        lg: 32,
+      }}
+    >
+      {data.map((datum) => (
+        <div
+          key={datum.key}
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateRows: "repeat(4, 1fr)",
+            gridColumnGap: 0,
+            gridRowGap: 0,
+          }}
+        >
+          <div className="border p-1" style={{ gridArea: "4 / 2 / 5 / 4" }}>
+            <Flex gap={2} wrap>
+              {[datum.count1, datum.count2, datum.count3].map((v, i) => (
+                <TextBreakdown breakdown={v} key={i} />
+              ))}
+            </Flex>
+          </div>
+          <div className="border p-1" style={{ gridArea: " 1 / 1 / 5 / 2" }}>
+            <Flex align="center" direction="column" gap={1} justify="center">
+              {datum.en.map((txt, i) => (
+                <div key={i}>{txt}</div>
+              ))}
+            </Flex>
+          </div>
+          <div className="border p-1" style={{ gridArea: " 1 / 2 / 2 / 3" }}>
+            <TextArray>
+              <TextBreakdown breakdown={datum.single} />
+              {datum.plural && <TextBreakdown breakdown={datum.plural} />}
+            </TextArray>
+          </div>
+          <div className="border p-1" style={{ gridArea: "1 / 3 / 2 / 4" }}>
+            <Letter>{datum.root.join("/")}</Letter>
+            &nbsp;&nbsp;
+            <Text as="span" variant="labelS">
+              {datum.dict.join(", ")}
+            </Text>
+          </div>
+          <div className="border p-1" style={{ gridArea: " 2 / 2 / 3 / 3" }}>
+            <TextArray>
+              <TextBreakdown breakdown={datum.have} />
+              {datum.havePlural && (
+                <TextBreakdown breakdown={datum.havePlural} />
+              )}
+            </TextArray>
+          </div>
+          <div className="border p-1" style={{ gridArea: "2 / 3 / 3 / 4" }}>
+            <TextArray>
+              <TextBreakdown breakdown={datum.good} />
+              {datum.goodPlural && (
+                <TextBreakdown breakdown={datum.goodPlural} />
+              )}
+            </TextArray>
+          </div>
+          <div className="border p-1" style={{ gridArea: "3 / 2 / 4 / 3" }}>
+            <TextArray>
+              <TextBreakdown breakdown={datum.haveGood} />
+              {datum.haveGoodPlural && (
+                <TextBreakdown breakdown={datum.haveGoodPlural} />
+              )}
+            </TextArray>
+          </div>
+          <div className="border p-1" style={{ gridArea: " 3 / 3 / 4 / 4" }}>
+            <TextArray>
+              <TextBreakdown breakdown={datum.big} />
+              {datum.bigPlural && <TextBreakdown breakdown={datum.bigPlural} />}
+            </TextArray>
+          </div>
+        </div>
+      ))}
+    </Bleed>
   );
 }

@@ -62,7 +62,6 @@ export default function PracticeNounConjugationModule7() {
         return {
           en: getEnglishTranslation(charDatum, key),
           key,
-          // @ts-expect-error Need better typing on the module 7 list
           on: convertBreakdownToPlainText(charDatum[key]),
         };
       })
