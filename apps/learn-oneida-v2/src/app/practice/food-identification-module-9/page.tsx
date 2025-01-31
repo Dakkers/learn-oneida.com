@@ -3,7 +3,7 @@ import {
   EnglishToOneidaQuiz,
   type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
-import { createModule9FoodLists } from "@/data/module09";
+import { createModule9FoodsList } from "@/data/module09";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
@@ -20,7 +20,7 @@ export default function PracticeFoodIdentificationModule9() {
   ] = React.useMemo(() => {
     const resultEn = [];
     const resultOn = [];
-    const list = createModule9FoodLists();
+    const list = createModule9FoodsList();
 
     for (const datum of list) {
       const key = datum.key;
