@@ -2,17 +2,17 @@ import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData(
   {
-    translation: "({{pronoun}}) Borrow it!",
+    translation: "({{pronoun}}) Go get it!",
     type: "PS",
     phrases: [
       {
-        breakdown: [["s"], "atʌníha"],
+        breakdown: [["s"], "kó·na"],
       },
       {
-        breakdown: [["tsy"], "atʌníha"],
+        breakdown: [["sni"], "kó·na"],
       },
       {
-        breakdown: [["sw"], "atʌníha"],
+        breakdown: [["swa"], "kó·na"],
       },
     ],
   },

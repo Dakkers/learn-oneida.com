@@ -1,6 +1,56 @@
-import type { BreakdownArray } from "@ukwehuwehneke/language-components";
+import { ParadigmData } from "@/utils/paradigm";
+import type {
+  BreakdownArray,
+  Pronoun,
+} from "@ukwehuwehneke/language-components";
 import indefinite from "indefinite";
 import pluralize from "pluralize";
+
+import borrowCMD from "./borrow-CMD";
+import borrowDEF from "./borrow-DEF";
+import borrowFUT from "./borrow-FUT";
+import borrowHAB from "./borrow-HAB";
+import borrowIFUT from "./borrow-IFUT";
+import borrowPFV from "./borrow-PFV";
+import buyCMD from "./buy-CMD";
+import buyDEF from "./buy-DEF";
+import buyFUT from "./buy-FUT";
+import buyHAB from "./buy-HAB";
+import buyIFUT from "./buy-IFUT";
+import buyPFV from "./buy-PFV";
+import fetchCMD from "./fetch-CMD";
+import fetchDEF from "./fetch-DEF";
+import fetchFUT from "./fetch-FUT";
+import fetchHAB from "./fetch-HAB";
+import fetchIFUT from "./fetch-IFUT";
+import fetchPFV from "./fetch-PFV";
+import sellCMD from "./sell-CMD";
+import sellDEF from "./sell-DEF";
+import sellFUT from "./sell-FUT";
+import sellHAB from "./sell-HAB";
+import sellIFUT from "./sell-IFUT";
+import sellPFV from "./sell-PFV";
+import stealCMD from "./steal-CMD";
+import stealDEF from "./steal-DEF";
+import stealFUT from "./steal-FUT";
+import stealHAB from "./steal-HAB";
+import stealIFUT from "./steal-IFUT";
+import stealPFV from "./steal-PFV";
+
+export type Module7Verb = {
+  cmd: ParadigmData | null;
+  def: ParadigmData;
+  en: string[];
+  enShort?: string;
+  exceptions?: number[];
+  fut: ParadigmData;
+  hab: ParadigmData;
+  ifut: ParadigmData;
+  key: string;
+  pfv: ParadigmData;
+  pronouns?: Pronoun[];
+  root: string[];
+};
 
 export interface Module7Noun {
   key: string;
@@ -1421,4 +1471,63 @@ export function createColoursData(): Module7Colour[] {
     objBright,
     objDarkColour,
   ];
+}
+
+export function createModule7VerbsList() {
+  const objBorrow: Module7Verb = {
+    key: "Borrow",
+    cmd: borrowCMD,
+    def: borrowDEF,
+    en: ["borrow something"],
+    fut: borrowFUT,
+    ifut: borrowIFUT,
+    pfv: borrowPFV,
+    hab: borrowHAB,
+    root: ["-atʌniha-"],
+  };
+  const objBuy: Module7Verb = {
+    key: "Buy",
+    cmd: buyCMD,
+    def: buyDEF,
+    en: ["buy something"],
+    fut: buyFUT,
+    ifut: buyIFUT,
+    pfv: buyPFV,
+    hab: buyHAB,
+    root: ["-hninu-"],
+  };
+  const objFetch: Module7Verb = {
+    key: "Fetch",
+    cmd: fetchCMD,
+    def: fetchDEF,
+    en: ["fetch something", "go get something"],
+    fut: fetchFUT,
+    ifut: fetchIFUT,
+    pfv: fetchPFV,
+    hab: fetchHAB,
+    root: ["-koʔn-"],
+  };
+  const objSell: Module7Verb = {
+    key: "Sell",
+    cmd: sellCMD,
+    def: sellDEF,
+    en: ["sell something"],
+    fut: sellFUT,
+    ifut: sellIFUT,
+    pfv: sellPFV,
+    hab: sellHAB,
+    root: ["-atʌhninu-"],
+  };
+  const objSteal: Module7Verb = {
+    key: "Steal",
+    cmd: stealCMD,
+    def: stealDEF,
+    en: ["steal something"],
+    fut: stealFUT,
+    ifut: stealIFUT,
+    pfv: stealPFV,
+    hab: stealHAB,
+    root: ["-nʌskwa-"],
+  };
+  return [objBorrow, objBuy, objFetch, objSell, objSteal];
 }

@@ -7,6 +7,8 @@ import {
 import { Accordion, Flex, List, Text } from "@ukwehuwehneke/ohutsya";
 import {
   type BreakdownArray,
+  BreakdownType,
+  convertBreakdownToPlainText,
   SectionHeading,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
@@ -19,12 +21,14 @@ import {
   createColoursData,
   type Module7Noun,
   type Module7Colour,
+  createModule7VerbsList,
 } from "@/data/module07";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 import pluralize from "pluralize";
 import indefinite from "indefinite";
 import { Letter } from "@/components/Letter";
+import { MODULE_6_VERB_TENSE_LIST } from "@/data/module06/activeVerbsList";
 
 export const metadata: Metadata = {
   title: "Module 7",
@@ -32,7 +36,8 @@ export const metadata: Metadata = {
 };
 
 export default function LearnModule07() {
-  const list = createModule7NounsList();
+  const nounList = createModule7NounsList();
+  const verbList = createModule7VerbsList();
   return (
     <PageWrapper>
       <SectionHeading level={1}>Module 7</SectionHeading>
@@ -49,11 +54,23 @@ export default function LearnModule07() {
 
         <TocItem label="New Nouns" value="nouns-list">
           <TocSection>
-            {list.map((n) => (
+            {nounList.map((n) => (
               <TocItem
                 key={n.key}
                 label={n.en[0]}
                 value={n.key.toLowerCase()}
+              />
+            ))}
+          </TocSection>
+        </TocItem>
+
+        <TocItem label="New Verbs" value="verbs-list">
+          <TocSection>
+            {verbList.map((n) => (
+              <TocItem
+                key={n.key}
+                label={n.en.join(", ")}
+                value={_.kebabCase(n.en[0])}
               />
             ))}
           </TocSection>
@@ -66,6 +83,7 @@ export default function LearnModule07() {
 
       <Introduction />
       <AllNouns />
+      <AllVerbs />
       <ColourNouns />
     </PageWrapper>
   );
@@ -204,6 +222,59 @@ function ColourNouns() {
         // @ts-expect-error TODO - TableWrapper/Table generics
         data={createColoursData()}
       />
+    </>
+  );
+}
+
+function AllVerbs() {
+  return (
+    <>
+      <SectionHeading id="verbs-list" level={2}>
+        New Verbs
+      </SectionHeading>
+
+      <Accordion type="multiple">
+        {createModule7VerbsList().map((v) => {
+          const data = MODULE_6_VERB_TENSE_LIST.filter(
+            (tense) => !!v[tense],
+          ).map((tense) => ({
+            colour: v[tense]!.type,
+            tense,
+            text: (tense === "cmd"
+              ? v[tense]!.phrases.find((p) => p.pronoun === "u")
+              : (v[tense]!.phrases.find((p) => p.pronoun === "i") ??
+                v[tense]!.phrases.find((p) => p.pronoun === "it")))!.breakdown,
+          }));
+
+          return (
+            <Accordion.Item
+              id={_.kebabCase(v.en[0])}
+              key={v.key}
+              title={v.en.join(", ")}
+            >
+              <TableWrapper
+                columns={[
+                  {
+                    accessorKey: "text",
+                    // @ts-expect-error TODO - TableWrapper/Table generics
+                    cell: (
+                      value: BreakdownArray,
+                      row: { colour: BreakdownType },
+                    ) => (
+                      <TextBreakdown
+                        breakdown={value}
+                        typeFallback={row.colour}
+                      />
+                    ),
+                    header: "",
+                  },
+                ]}
+                data={data}
+              />
+            </Accordion.Item>
+          );
+        })}
+      </Accordion>
     </>
   );
 }

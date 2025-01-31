@@ -16,7 +16,7 @@ export default createParadigmData(
 `
 }
 
-// red C-stem
+// -- red C-stem
 
 function redCStemHabitual () {
   return formatCommon('PS', [
@@ -59,10 +59,11 @@ function redCStemDefinite () {
   ]);
 }
 
+// Technically blue...
 function redCStemPerfective () {
   return formatCommon('PO', [
       [["wak"], "ROOT"],
-      [["s"], "ROOT"],
+      [["sa"], "ROOT"],
       [["lo"], "ROOT"],
       [["yako"], "ROOT"],
       [["yo"], "ROOT"],
@@ -130,7 +131,7 @@ function redCStemCommand () {
   ])
 }
 
-// red A-stem
+// -- red A-stem
 
 function redAStemHabitual () {
   return formatCommon('PS', [

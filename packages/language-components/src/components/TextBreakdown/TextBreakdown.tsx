@@ -26,6 +26,7 @@ export type BreakdownType =
   | "PS"
   | "PREP" // prepronominal
   | "PTV"
+  | "PUNC" // punctual
   | "RECP"
   | "REFL"
   | "REP"
@@ -60,7 +61,7 @@ export function TextBreakdown({
   wrap,
 }: TextBreakdownProps) {
   const breakdown = _breakdown;
-  const ignored = _ignored ?? (["HAB", "DERIV"] as BreakdownType[]);
+  const ignored = _ignored ?? (["HAB", "DERIV", "PUNC"] as BreakdownType[]);
 
   return (
     <Tag>
@@ -81,7 +82,7 @@ export function TextBreakdown({
         const type = Array.isArray(part) ? part[1] : part.type;
 
         const hasLeadingWhitespace = text.trimStart() !== text;
-        const hasTrailingWhitespace = text.trimStart() !== text;
+        const hasTrailingWhitespace = text.trimEnd() !== text;
         const _type = type ?? typeFallback;
         return (
           <InnerText
@@ -148,6 +149,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   PS: "text-red-600",
   PREP: "text-lime-500",
   PTV: "text-lime-500",
+  PUNC: "text-emerald-400",
   RECP: "text-green-700",
   REFL: "text-green-700",
   REP: "text-lime-500",
