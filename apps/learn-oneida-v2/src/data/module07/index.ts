@@ -1,4 +1,4 @@
-import { ParadigmData } from "@/utils/paradigm";
+import type { ParadigmData } from "@/utils/paradigm";
 import type {
   BreakdownArray,
   Pronoun,

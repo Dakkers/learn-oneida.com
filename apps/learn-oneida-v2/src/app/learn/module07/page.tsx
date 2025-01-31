@@ -7,7 +7,7 @@ import {
 import { Accordion, Flex, List, Text } from "@ukwehuwehneke/ohutsya";
 import {
   type BreakdownArray,
-  BreakdownType,
+  type BreakdownType,
   convertBreakdownToPlainText,
   SectionHeading,
   TextBreakdown,
