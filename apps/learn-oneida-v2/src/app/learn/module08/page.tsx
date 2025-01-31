@@ -85,7 +85,7 @@ function ObjectCharacteristicList() {
   return (
     <>
       <SectionHeading id="object-characteristics" level={2}>
-        Container Nouns
+        Object Characteristics
       </SectionHeading>
 
       <Accordion type="multiple">
