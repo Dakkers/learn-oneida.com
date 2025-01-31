@@ -17,13 +17,12 @@ import Link from "next/link";
 import {
   BookOpenTextIcon,
   InfoIcon,
-  MenuIcon,
   NewspaperIcon,
   PencilIcon,
   WrenchIcon,
 } from "lucide-react";
 
-const moduleNumbers = new Array(6).fill(0).map((_, i) => (i + 1).toString());
+const moduleNumbers = new Array(8).fill(0).map((_, i) => (i + 1).toString());
 
 const toolsItems: { title: string; href: string; description: string }[] = [
   {
@@ -197,7 +196,7 @@ const ListItem = React.forwardRef<
         <Link
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-1 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className,
           )}
           {...props}

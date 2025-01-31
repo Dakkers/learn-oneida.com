@@ -30,6 +30,11 @@ export default function About() {
         Her time and commitment to helping us is greatly appreciated!
       </Text>
 
+      <Text>
+        We would also like to thank Dima Boiko for his time and effort. His
+        feedback has greatly improved the user experience of the website.
+      </Text>
+
       <SectionHeading level={2}>The Anowal Software Team</SectionHeading>
 
       <List>

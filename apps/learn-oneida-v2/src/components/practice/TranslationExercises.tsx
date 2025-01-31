@@ -30,7 +30,7 @@ const englishToOneidaModule01 = [
   ["17", "Who else doesn't like this?"],
   ["18", "I don't like the girl that you like."],
   ["19", "Does that old woman like us?"],
-  ["20", "That woman's not Mary, it's Elizabeth."],
+  ["20", "That woman's not Mary, she's Elizabeth."],
   ["21", "Who do you like more, George Jones or Justin Bieber?"],
   ["22", "Who knows the old woman named Elizabeth?"],
   ["23", "This young man doesn't know your name."],

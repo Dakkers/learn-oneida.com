@@ -10,9 +10,11 @@ export type BreakdownType =
   | "DER" // derivational
   | "DUAL"
   | "EP"
+  | "EXAS" // expanded aspect suffix
   | "FUT"
   | "HAB"
   | "IFUT"
+  | "INST2" // instrumental II
   | "JOIN"
   | "OP"
   | "NOUN"
@@ -24,6 +26,7 @@ export type BreakdownType =
   | "PS"
   | "PREP" // prepronominal
   | "PTV"
+  | "PUNC" // punctual
   | "RECP"
   | "REFL"
   | "REP"
@@ -52,12 +55,13 @@ export interface TextBreakdownProps {
 export function TextBreakdown({
   as: Tag = "span",
   breakdown: _breakdown,
-  ignored = [],
+  ignored: _ignored = undefined,
   typeFallback,
   whispered: _whispered = false,
   wrap,
 }: TextBreakdownProps) {
   const breakdown = _breakdown;
+  const ignored = _ignored ?? (["HAB", "DERIV", "PUNC"] as BreakdownType[]);
 
   return (
     <Tag>
@@ -78,7 +82,7 @@ export function TextBreakdown({
         const type = Array.isArray(part) ? part[1] : part.type;
 
         const hasLeadingWhitespace = text.trimStart() !== text;
-        const hasTrailingWhitespace = text.trimStart() !== text;
+        const hasTrailingWhitespace = text.trimEnd() !== text;
         const _type = type ?? typeFallback;
         return (
           <InnerText
@@ -124,16 +128,18 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   ASP: "text-lime-500",
   CIS: "text-lime-500",
   CL: "text-emerald-500",
-  DEF: "text-emerald-400",
+  DEF: "text-lime-500",
   DER: "text-yellow-500",
   DUAL: "text-lime-500",
   EP: "text-gray-400",
+  EXAS: "text-lime-500",
   FUT: "text-emerald-400",
   HAB: "text-emerald-400",
   IFUT: "text-emerald-400",
+  INST2: "text-yellow-500",
   // JOIN: "text-yellow-600",
   JOIN: "text-gray-600",
-  NOUN: "text-orange-500",
+  NOUN: "underline decoration-dotted decoration-[0.09rem] decoration-black",
   OP: "underline decoration-wavy decoration-black",
   PAST: "text-emerald-400",
   PO: "text-blue-600",
@@ -143,9 +149,10 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   PS: "text-red-600",
   PREP: "text-lime-500",
   PTV: "text-lime-500",
+  PUNC: "text-emerald-400",
   RECP: "text-green-700",
   REFL: "text-green-700",
-  REP: "text-yellow-600",
+  REP: "text-lime-500",
   RPL: "text-gray-400",
   SRFL: "text-green-700",
 } as const;

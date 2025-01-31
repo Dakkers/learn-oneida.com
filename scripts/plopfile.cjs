@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const generateParadigm = require('./generate-paradigms.cjs');
 
 const PATH_PARTICLE_LIST = path.join(__dirname, '..', 'app', 'components', 'resources', 'particleList.ts')
 
@@ -42,6 +43,36 @@ module.exports = function (plop) {
       },
     ],
   });
+  plop.setGenerator('paradigm-active', {
+    description: 'Generate paradigms for active verbs',
+
+     prompts: [{
+        type: 'list',
+        name: 'color',
+        message: 'Color',
+        choices: [
+          { value: 'PO', name: 'objective (blue)' },
+          { value: 'PS', name: 'subjective (red)' },
+          { value: 'PI', name: 'interactive (purple)' },
+          { value: 'PP', name: 'possessive (light blue)' },
+        ]
+    }, {
+      type: 'list',
+      name: 'stem',
+      message: 'Stem',
+      choices: ['C','A','E','I','O','U','V','CE']
+    }, {
+      type: 'input',
+      name: 'verb',
+      message: 'Verb',
+    }],
+
+    actions: [
+      function customAction(data) {
+        generateParadigm(data);
+      },
+    ],
+  })
 };
 
 const formatOneida = (x) => x.replaceAll("’", "ʔ");
@@ -117,3 +148,4 @@ function updateParticleListFile (data, examples) {
   },\n${MARKER}`)
   fs.writeFileSync(PATH_PARTICLE_LIST, particleListFileContent)
 }
+
