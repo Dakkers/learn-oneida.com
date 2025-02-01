@@ -1,9 +1,9 @@
 import { flattenVerbDatum, type Module5VerbDatum } from "../module05";
-import eatCmdData from "./stand-CMD";
-import eatPrsData from "./stand-PRS";
-import eatFutData from "./stand-FUT";
-import eatIfutData from "./stand-IFUT";
-import eatPastData from "./stand-PAST";
+import standCmdData from "./stand-CMD";
+import standPrsData from "./stand-PRS";
+import standFutData from "./stand-FUT";
+import standIfutData from "./stand-IFUT";
+import standPastData from "./stand-PAST";
 
 interface EnvironmentNounDatum {
   en: string[];
@@ -387,11 +387,11 @@ export function createModule10VerbList(): Module10VerbDatum[] {
     {
       en: "stand",
       key: "stand",
-      cmd: eatCmdData,
-      prs: eatPrsData,
-      fut: eatFutData,
-      ifut: eatIfutData,
-      past: eatPastData,
+      cmd: standCmdData,
+      prs: standPrsData,
+      fut: standFutData,
+      ifut: standIfutData,
+      past: standPastData,
     },
   ];
 }
