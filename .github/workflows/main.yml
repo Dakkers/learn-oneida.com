@@ -30,4 +30,8 @@ jobs:
 
       - run: pnpm run ci:lint
 
+      - run: pnpm --filter "@ukwehuwehneke/ohutsya" build
+
+      - run: pnpm --filter "@ukwehuwehneke/language-components" build
+
       - run: pnpm run test --filter "learn-oneida-v2"
