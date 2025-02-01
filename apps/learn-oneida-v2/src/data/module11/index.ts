@@ -1,4 +1,4 @@
-import { BreakdownArray } from "@ukwehuwehneke/language-components";
+import type { BreakdownArray } from "@ukwehuwehneke/language-components";
 
 export interface BodyPartNounData {
   en: string[];

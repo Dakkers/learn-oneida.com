@@ -27,7 +27,7 @@ export interface EnglishToOneidaQuizProps {
 
 interface Question {
   answer: string;
-  img: string;
+  img?: string;
   key: string;
   options: QuizOption[];
   text: string;

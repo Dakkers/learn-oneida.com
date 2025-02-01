@@ -11,7 +11,7 @@ import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import {
-  BodyPartNounData,
+  type BodyPartNounData,
   createModule11BodyPartNounList,
 } from "@/data/module11";
 import { LinkWrapper } from "@/components/LinkWrapper";
@@ -31,7 +31,8 @@ export default function LearnModule11() {
 
       <Box py={4}>
         <Notice intent="negative">
-          <b>Note:</b> This page is still under construction!
+          <b>Note:</b> This page is new and is missing lots of content. It is
+          currently a work in progress!
         </Notice>
       </Box>
 
@@ -107,8 +108,8 @@ function DatumTable({ data }: { data: BodyPartNounData[] }) {
           cell: (onNoun: BodyPartNounData["onNoun"]) => {
             return (
               <Flex direction="column" gap={4}>
-                {onNoun.map((obj) => (
-                  <Flex direction="column" gap={0}>
+                {onNoun.map((obj, i) => (
+                  <Flex direction="column" gap={0} key={i}>
                     <TextBreakdown
                       breakdown={obj.one}
                       typeFallback="PS"
@@ -123,6 +124,7 @@ function DatumTable({ data }: { data: BodyPartNounData[] }) {
           header: "Usage",
         },
       ]}
+      // @ts-expect-error TODO - TableWrapper/Table generics
       data={data}
     />
   );
