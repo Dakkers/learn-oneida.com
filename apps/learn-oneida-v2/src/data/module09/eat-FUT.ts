@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["ʌ·", "FUT"], ["k"], "ékeʔ"],
+        breakdown: [["ʌ·", "FUT"], ["k"], "ék", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ́", "FUT"], ["hs"], "ekeʔ"],
+        breakdown: [["ʌ́", "FUT"], ["hs"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ́·", "FUT"], ["h"], "akeʔ"],
+        breakdown: [["ʌ́·", "FUT"], ["h"], "ak", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ·", "FUT"], ["y"], "ékeʔ"],
+        breakdown: [["ʌ·", "FUT"], ["y"], "ék", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ·", "FUT"], ["w"], "ákeʔ"],
+        breakdown: [["ʌ·", "FUT"], ["w"], "ák", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tn"], "ekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["tn"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yákn"], "ekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["yákn"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ́", "FUT"], ["sn"], "ekeʔ"],
+        breakdown: [["ʌ́", "FUT"], ["sn"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ́·", "FUT"], ["n"], "ekeʔ"],
+        breakdown: [["ʌ́·", "FUT"], ["n"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["kn"], "ekeʔ"],
+        breakdown: [["ʌ", "FUT"], ["kn"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ́", "FUT"], ["tw"], "akeʔ"],
+        breakdown: [["ʌ́", "FUT"], ["tw"], "ak", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yákw"], "akeʔ"],
+        breakdown: [["ʌ", "FUT"], ["yákw"], "ak", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ́", "FUT"], ["sw"], "akeʔ"],
+        breakdown: [["ʌ́", "FUT"], ["sw"], "ak", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hʌ·n"], "ékeʔ"],
+        breakdown: [["ʌ", "FUT"], ["hʌ·n"], "ék", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku·n"], "ékeʔ"],
+        breakdown: [["ʌ", "FUT"], ["ku·n"], "ék", ["eʔ", "PUNC"]],
       },
     ],
   },

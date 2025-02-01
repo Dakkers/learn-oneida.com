@@ -19,22 +19,20 @@ import type { Metadata } from "next";
 import pluralize from "pluralize";
 import { Letter } from "@/components/Letter";
 import {
-  createModule9FoodCharacteristics,
-  createModule9FoodsList,
-  type Module9FoodCharacteristicDatum,
-  type Module9FoodDatum,
-} from "@/data/module09";
+  createModule10EnvironmentNounsList,
+  type Module10EnvironmentNounDatum,
+} from "@/data/module10";
 
 export const metadata: Metadata = {
-  title: "Module 9",
-  description: "Module 9 of the Oneida curriculum",
+  title: "Module 10",
+  description: "Module 10 of the Oneida curriculum",
 };
 
-export default function LearnModule09() {
-  const foodList = createModule9FoodsList();
+export default function LearnModule10() {
+  const envNounList = createModule10EnvironmentNounsList();
   return (
     <PageWrapper>
-      <SectionHeading level={1}>Module 9</SectionHeading>
+      <SectionHeading level={1}>Module 10</SectionHeading>
 
       <Box py={4}>
         <Notice intent="negative">
@@ -46,9 +44,9 @@ export default function LearnModule09() {
       <TOC>
         <TocItem label="Introduction" value="intro" />
 
-        <TocItem label="New Nouns" value="foods-list">
+        <TocItem label="New Nouns" value="env-nouns-list">
           <TocSection>
-            {foodList.map((n) => (
+            {envNounList.map((n) => (
               <TocItem
                 key={n.key}
                 label={n.en.join(", ")}
@@ -58,14 +56,11 @@ export default function LearnModule09() {
           </TocSection>
         </TocItem>
 
-        <TocItem label="Food Characteristics" value="characteristics-list" />
-
         {/* <TocItem label="Translation exercises" value="translation-exercises" /> */}
       </TOC>
 
       <Introduction />
-      <FoodNouns />
-      <CharacteristicsList />
+      <EnvironmentNounsList />
     </PageWrapper>
   );
 }
@@ -80,12 +75,12 @@ function Introduction() {
   );
 }
 
-function FoodNouns() {
-  const list = createModule9FoodsList();
+function EnvironmentNounsList() {
+  const list = createModule10EnvironmentNounsList();
   return (
     <>
-      <SectionHeading id="foods-list" level={2}>
-        Foods
+      <SectionHeading id="env-nouns-list" level={2}>
+        Environment Nouns
       </SectionHeading>
 
       <Accordion type="multiple">
@@ -105,9 +100,8 @@ function FoodNouns() {
   );
 }
 
-function NounEntry({ nounDatum }: { nounDatum: Module9FoodDatum }) {
-  const en = nounDatum.en;
-  const p = en.map((v) => pluralize(v));
+function NounEntry({ nounDatum }: { nounDatum: Module10EnvironmentNounDatum }) {
+  const en = nounDatum.en[0];
 
   return (
     <>
@@ -126,14 +120,16 @@ function NounEntry({ nounDatum }: { nounDatum: Module9FoodDatum }) {
           {
             accessorKey: "breakdown",
             // @ts-expect-error Table generics
-            cell: (value: Module9FoodDatum["singular"]) =>
+            cell: (value: Module10EnvironmentNounDatum["onNoun"]) =>
               value ? <CustomCell value={value} /> : "N/A",
             header: "Oneida",
           },
         ]}
         data={[
-          ["(singular)", nounDatum.singular],
-          ["(plural)", nounDatum.plural],
+          [`${en} (standalone)`, nounDatum.standalone],
+          [`on the ${en}`, nounDatum.onNoun],
+          [`in the ${en}`, nounDatum.inNoun],
+          [`where the ${en} is`, nounDatum.whereTheNoun],
         ]
           .filter((pair) => !!pair[1])
           .map(([en, breakdown]) => ({ en, breakdown }))}
@@ -142,60 +138,37 @@ function NounEntry({ nounDatum }: { nounDatum: Module9FoodDatum }) {
   );
 }
 
-function CharacteristicsList() {
-  return (
-    <>
-      <SectionHeading id="characteristics-list" level={2}>
-        Food Characteristics
-      </SectionHeading>
-
-      <TableWrapper
-        columns={[
-          {
-            accessorKey: "en",
-            // @ts-expect-error Table generics
-            cell: (en: string[], row: Module9FoodCharacteristicDatum) => (
-              <Flex direction="column" gap={1}>
-                <Text>{en.join(", ")}</Text>
-                {row.dict.length > 0 && (
-                  <Text variant="labelS">pg. {row.dict.join(", ")}</Text>
-                )}
-              </Flex>
-            ),
-            header: "English",
-          },
-          {
-            accessorKey: "breakdown",
-            // @ts-expect-error Table generics
-            cell: (value: Module9FoodCharacteristicDatum["one"]) => (
-              <CustomCell value={value} />
-            ),
-            header: "Oneida",
-          },
-        ]}
-        data={createModule9FoodCharacteristics().map((datum) => ({
-          en: datum.en,
-          breakdown: datum.one,
-          dict: datum.dict,
-        }))}
-      />
-    </>
-  );
-}
-
 function CustomCell({
   value,
 }: {
-  value: Module9FoodCharacteristicDatum["one"];
+  value:
+    | string
+    | string[]
+    | Array<{
+        one: BreakdownArray;
+        en: string;
+      }>;
 }) {
   return (
     <Flex direction="column" gap={4}>
-      {(value ?? []).map((obj, i) => (
-        <Flex direction="column" gap={0} key={i}>
-          <TextBreakdown breakdown={obj.one} typeFallback="PS" wrap="nowrap" />
-          {obj.en && <Text variant="labelS">{obj.en}</Text>}
-        </Flex>
-      ))}
+      {typeof value === "string"
+        ? value
+        : (value ?? []).map((obj, i) => (
+            <Flex direction="column" gap={0} key={i}>
+              {typeof obj === "string" ? (
+                obj
+              ) : (
+                <>
+                  <TextBreakdown
+                    breakdown={obj.one}
+                    typeFallback="PS"
+                    wrap="nowrap"
+                  />
+                  {obj.en && <Text variant="labelS">{obj.en}</Text>}
+                </>
+              )}
+            </Flex>
+          ))}
     </Flex>
   );
 }

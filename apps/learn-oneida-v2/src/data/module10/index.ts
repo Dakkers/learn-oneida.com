@@ -5,7 +5,7 @@ import standFutData from "./stand-FUT";
 import standIfutData from "./stand-IFUT";
 import standPastData from "./stand-PAST";
 
-interface EnvironmentNounDatum {
+export interface Module10EnvironmentNounDatum {
   en: string[];
   key: string;
   root: string[];
@@ -16,7 +16,7 @@ interface EnvironmentNounDatum {
   whereTheNoun: string[] | null;
 }
 
-export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
+export function createModule10EnvironmentNounsList(): Module10EnvironmentNounDatum[] {
   const objBoat = {
     key: "Boat",
     en: ["boat"],
@@ -30,7 +30,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
   const objBoard = {
     key: "Board",
     en: ["board", "floor"],
-    root: ["-shuʼkal-"],
+    root: ["-shuʔkal-"],
     dict: [661, 910],
     standalone: ["oshú·kaleʔ"],
     onNoun: "oshuʔkalá·ke",
@@ -43,7 +43,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
     root: ["-askw-"],
     dict: [121],
     standalone: ["waskóhu"],
-    onNoun: "askwá·ke",
+    onNoun: null,
     inNoun: null,
     whereTheNoun: ["tsiʔ twahskóhu"],
   };
@@ -60,7 +60,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
   const objCloud = {
     key: "Cloud",
     en: ["cloud"],
-    root: ["-ahtsiʼkl-"],
+    root: ["-ahtsiʔkl-"],
     dict: [939],
     standalone: ["ohtsí·klaʔ"],
     onNoun: "ohtsiʔkla·ke",
@@ -70,7 +70,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
   const objDirt = {
     key: "Dirt",
     en: ["dirt", "dust", "ash", "soil"],
-    root: ["-aʼkʌhl-"],
+    root: ["-aʔkʌhl-"],
     dict: [315],
     standalone: ["oʔkʌ·láʔ"],
     onNoun: null,
@@ -80,9 +80,9 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
   const objDitch = {
     key: "Ditch",
     en: ["ditch"],
-    root: ["-naʼtsl-"],
+    root: ["-naʔtsl-"],
     dict: [568],
-    standalone: ["kaná·tsliʔ"],
+    standalone: ["kaná·tseli̲ʔ", "kaná·tsliʔ"],
     onNoun: null,
     inNoun: "kaná·tslaku",
     whereTheNoun: ["tsiʔ tkana·tsláyʌʔ"],
@@ -100,7 +100,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
   const objFence = {
     key: "Fence",
     en: ["fence"],
-    root: ["-atʌʼʌhl-"],
+    root: ["-atʌʔʌhl-"],
     dict: [991],
     standalone: ["atʌʔʌ́·laʔ"],
     onNoun: "atʌʔʌhlá·ke",
@@ -190,7 +190,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
   const objMud = {
     key: "Mud",
     en: ["mud"],
-    root: ["-nawaʼtst-"],
+    root: ["-nawaʔtst-"],
     dict: [556],
     standalone: ["onawá·tstaʔ"],
     onNoun: null,
@@ -250,7 +250,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
   const objSand = {
     key: "Sand",
     en: ["sand"],
-    root: ["-ʼnehsaluhkw-"],
+    root: ["-ʔnehsaluhkw-"],
     dict: [1162],
     standalone: ["oʔnehsalúhkwaʔ"],
     onNoun: "oʔnehsaluhkwá·ke",
@@ -280,7 +280,7 @@ export function createModule10EnvironmentNounsList(): EnvironmentNounDatum[] {
   const objSnowflake = {
     key: "Snowflake",
     en: ["snowflake"],
-    root: ["-aʼkl-"],
+    root: ["-aʔkl-"],
     dict: [317],
     standalone: ["ó·klaʔ"],
     onNoun: "oʔklá·keʔ",
