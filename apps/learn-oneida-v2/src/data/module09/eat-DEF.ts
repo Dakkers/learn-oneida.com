@@ -7,50 +7,50 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["wá·", "DEF"], ["k"], "ekeʔ"],
+        breakdown: [["wá·", "DEF"], ["k"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wá", "DEF"], ["hs"], "ekeʔ"],
+        breakdown: [["wá", "DEF"], ["hs"], "ek", ["eʔ", "PUNC"]],
       },
       {
         // Correct
-        breakdown: [["wá·", "DEF"], ["l"], "ekeʔ"],
+        breakdown: [["wá·", "DEF"], ["l"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wá·", "DEF"], ["y"], "ekeʔ"],
+        breakdown: [["wá·", "DEF"], ["y"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wá·", "DEF"], ["w"], "ekeʔ"],
+        breakdown: [["wá·", "DEF"], ["w"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wé", "DEF"], ["tn"], "ekeʔ"],
+        breakdown: [["wé", "DEF"], ["tn"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ákn"], "ekeʔ"],
+        breakdown: [["waʔ", "DEF"], ["ákn"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wé", "DEF"], ["sn"], "ekeʔ"],
+        breakdown: [["wé", "DEF"], ["sn"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wá·", "DEF"], ["n"], "ekeʔ"],
+        breakdown: [["wá·", "DEF"], ["n"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wá·", "DEF"], ["kn"], "ekeʔ"],
+        breakdown: [["wá·", "DEF"], ["kn"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wé", "DEF"], ["tw"], "ekeʔ"],
+        breakdown: [["wé", "DEF"], ["tw"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ákw"], "ekeʔ"],
+        breakdown: [["waʔ", "DEF"], ["ákw"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wé", "DEF"], ["sw"], "ekeʔ"],
+        breakdown: [["wé", "DEF"], ["sw"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["wá", "DEF"], ["hʌ·n"], "ekeʔ"],
+        breakdown: [["wá", "DEF"], ["hʌ·n"], "ek", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku·n"], "ekeʔ"],
+        breakdown: [["waʔ", "DEF"], ["ku·n"], "ek", ["eʔ", "PUNC"]],
       },
     ],
   },

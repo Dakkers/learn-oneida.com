@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: ["i·", ["k"], "éks"],
+        breakdown: ["i·", ["k"], "ék", ["s", "HAB"]],
       },
       {
-        breakdown: ["í", ["hs"], "eks"],
+        breakdown: ["í", ["hs"], "ek", ["s", "HAB"]],
       },
       {
-        breakdown: ["í·", ["l"], "aks"],
+        breakdown: ["í·", ["l"], "ak", ["s", "HAB"]],
       },
       {
-        breakdown: ["i·", ["y"], "éks"],
+        breakdown: ["i·", ["y"], "ék", ["s", "HAB"]],
       },
       {
-        breakdown: ["i·", ["w"], "áks"],
+        breakdown: ["i·", ["w"], "ák", ["s", "HAB"]],
       },
       {
-        breakdown: ["í", ["tn"], "eks"],
+        breakdown: ["í", ["tn"], "ek", ["s", "HAB"]],
       },
       {
-        breakdown: [["yákn"], "eks"],
+        breakdown: [["yákn"], "ek", ["s", "HAB"]],
       },
       {
-        breakdown: ["í", ["sn"], "eks"],
+        breakdown: ["í", ["sn"], "ek", ["s", "HAB"]],
       },
       {
-        breakdown: ["í·", ["n"], "eks"],
+        breakdown: ["í·", ["n"], "ek", ["s", "HAB"]],
       },
       {
-        breakdown: ["í", ["kn"], "eks"],
+        breakdown: ["í", ["kn"], "ek", ["s", "HAB"]],
       },
       {
-        breakdown: ["í", ["tw"], "aks"],
+        breakdown: ["í", ["tw"], "ak", ["s", "HAB"]],
       },
       {
-        breakdown: [["yákw"], "aks"],
+        breakdown: [["yákw"], "ak", ["s", "HAB"]],
       },
       {
-        breakdown: ["í", ["sw"], "aks"],
+        breakdown: ["í", ["sw"], "ak", ["s", "HAB"]],
       },
       {
-        breakdown: [["lʌ·n"], "éks"],
+        breakdown: [["lʌ·n"], "ék", ["s", "HAB"]],
       },
       {
-        breakdown: [["ku·n"], "éks"],
+        breakdown: [["ku·n"], "ék", ["s", "HAB"]],
       },
     ],
     whispered: false,

@@ -25,10 +25,15 @@ export interface Module9FoodDatum {
   }> | null;
 }
 
-interface CharacteristicDatum {
+export interface Module9FoodCharacteristicDatum {
+  dict: number[];
+  root: string[];
   en: string[];
   key: string;
-  one: string[];
+  one: Array<{
+    en?: string;
+    one: BreakdownArray;
+  }>;
 }
 
 export function createModule9FoodsList(): Module9FoodDatum[] {
@@ -1359,7 +1364,7 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
         one: ["kashokwalíhtu"],
       },
       {
-        one: ["ohsó·kwaʔ kaselhúniʔ̲"],
+        one: ["ohsó·kwaʔ kaselhúni̲ʔ"],
       },
     ],
     plural: [
@@ -2204,151 +2209,341 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
   return result;
 }
 
-export function createModule9FoodCharacteristics(): CharacteristicDatum[] {
-  const objBaked = {
+export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDatum[] {
+  const objBaked: Module9FoodCharacteristicDatum = {
+    root: ["-ateʔskut-"],
+    dict: [174],
     en: ["baked", "fried", "BBQ", "roasted"],
     key: "Baked",
-    one: ["waté·skuteʔ"],
+    one: [
+      {
+        one: ["waté·skuteʔ"],
+      },
+    ],
   };
-  const objBitter = {
+  const objBitter: Module9FoodCharacteristicDatum = {
+    root: ["te...atskalaʔt-"],
+    dict: [],
     en: ["bitter", "sour"],
     key: "Bitter",
-    one: ["teyotská·laht"],
+    one: [
+      {
+        one: [["te", "DUAL"], ["yo", "PO"], "tská·laht"],
+      },
+    ],
   };
-  const objBoiled = {
+  const objBoiled: Module9FoodCharacteristicDatum = {
+    root: ["-liht-"],
+    dict: [523],
     en: ["boiled"],
     key: "Boiled",
-    one: ["kalihá·tu"],
+    one: [
+      {
+        one: ["kalihá·tu"],
+      },
+    ],
   };
-  const objBurnt = {
+  const objBurnt: Module9FoodCharacteristicDatum = {
+    root: [],
+    dict: [],
     en: ["burnt"],
     key: "Burnt",
-    one: ["yotshaʔáhtu"],
+    one: [
+      {
+        one: [["yo", "PO"], "tshaʔáhtu"],
+      },
+    ],
   };
-  const objClean = {
+  const objClean: Module9FoodCharacteristicDatum = {
+    root: [],
+    dict: [],
     en: ["clean"],
     key: "Clean",
-    one: ["teyohtotálhu"],
+    one: [
+      {
+        one: [["te", "DUAL"], ["yo", "PO"], "htotálhu"],
+      },
+    ],
   };
-  const objCooked = {
-    en: ["cooked"],
+  const objCooked: Module9FoodCharacteristicDatum = {
+    root: ["-li-"],
+    dict: [520],
+    en: ["cooked", "riped"],
     key: "Cooked",
-    one: ["yo·lí"],
+    one: [
+      {
+        one: [["yo", "PO"], "·lí"],
+      },
+    ],
   };
-  const objCool = {
+  const objCool: Module9FoodCharacteristicDatum = {
+    root: ["-wisto-"],
+    dict: [776],
     en: ["cool", "cold"],
     key: "Cool",
-    one: ["yowísto"],
+    one: [
+      {
+        one: [["yo", "PO"], "wísto"],
+      },
+    ],
   };
-  const objDelicious = {
-    en: ["delicious"],
+  const objDelicious: Module9FoodCharacteristicDatum = {
+    root: ["-eku-", "-ekuʔu-", "-ku-", "-kuʔu"],
+    dict: [334],
+    en: ["tasty"],
     key: "Delicious",
-    one: ["yawékuʔ"],
+    one: [
+      {
+        en: "it tastes good",
+        one: [["yaw", "PO"], "ékuʔ"],
+      },
+      {
+        en: "it is delicious",
+        one: ["tsiʔ ni", ["yaw", "PO"], "ékuʔ"],
+      },
+      {
+        en: "it doesn't taste good",
+        one: ["yáh te", ["yaw", "PO"], "ékuʔ"],
+      },
+    ],
   };
-  const objFattening = {
+  const objFattening: Module9FoodCharacteristicDatum = {
+    root: ["-aleʔsʌhsluni-"],
+    dict: [99],
     en: ["fattening"],
     key: "Fattening",
-    one: ["yoleʔsʌhsluní"],
+    one: [
+      {
+        one: [["yo", "PO"], "leʔsʌhsluní"],
+      },
+    ],
   };
-  const objFried = {
+  const objFried: Module9FoodCharacteristicDatum = {
+    root: [],
+    dict: [],
     en: ["fried", "deep-fried"],
     key: "Fried",
-    one: ["kʌ·yé·ke kalíhtu"],
+    one: [
+      {
+        one: ["kʌ·yé·ke kalíhtu"],
+      },
+    ],
   };
-  const objFrozen = {
+  const objFrozen: Module9FoodCharacteristicDatum = {
+    root: ["-wislat-", "-wislatu-"],
+    dict: [775],
     en: ["frozen"],
     key: "Frozen",
-    one: ["yowislatú"],
+    one: [
+      {
+        one: [["yo", "PO"], "wislátuʔ"],
+      },
+    ],
   };
-  const objAppetizing = {
+  const objAppetizing: Module9FoodCharacteristicDatum = {
+    root: [],
+    dict: [],
     en: ["appetizing"],
     key: "Appetizing",
-    one: ["watkathosliyó"],
+    one: [
+      {
+        en: "it looks good",
+        one: ["watkathosliyó"],
+      },
+    ],
   };
-  const objGreasy = {
+  const objGreasy: Module9FoodCharacteristicDatum = {
+    root: ["-yenal-"],
+    dict: [815],
     en: ["greasy"],
     key: "Greasy",
-    one: ["yoye·náleʔ", "yoyenʌ́sku"],
+    one: [
+      {
+        one: [["yo", "PO"], "ye·náleʔ"],
+      },
+      {
+        en: "???",
+        one: [["yo", "PO"], "yenʌ́sku"],
+      },
+    ],
   };
-  const objHot = {
+  const objHot: Module9FoodCharacteristicDatum = {
+    root: [],
+    dict: [],
     en: ["hot"],
     key: "Hot",
-    one: ["yoʔtalíhʌ"],
+    one: [
+      {
+        one: [["yo", "PO"], "ʔtalíhʌ"],
+      },
+    ],
   };
-  const objLeftovers = {
+  const objLeftovers: Module9FoodCharacteristicDatum = {
+    root: ["-atatʌl-", "-at-N-atatʌl-"],
+    dict: [137],
     en: ["leftovers"],
     key: "Leftovers",
-    one: ["yotatʌlú"],
+    one: [
+      {
+        en: "it is leftover",
+        one: [["yo", "PO"], "tatʌlú"],
+      },
+    ],
   };
-  const objMouldy = {
+  const objMouldy: Module9FoodCharacteristicDatum = {
+    root: ["-nuhweʔlhot-"],
+    dict: [608],
     en: ["mouldy"],
     key: "Mouldy",
-    one: ["yonuhwélhoteʔ", "oskʌ́·lha"],
+    one: [
+      {
+        en: "it is covered in fuzz",
+        one: [["yo", "PO"], "nuhwélhoteʔ"],
+      },
+      {
+        one: ["oskʌ́·lha"],
+      },
+    ],
   };
-  const objRaw = {
+  const objRaw: Module9FoodCharacteristicDatum = {
+    root: ["-li-"],
+    dict: [520],
     en: ["raw"],
     key: "Raw",
-    one: ["yáh teʔyolí"],
+    one: [
+      {
+        en: "it is not cooked",
+        one: ["yáh teʔyolí"],
+      },
+    ],
   };
-  const objRoasted = {
-    en: ["roasted", "fried"],
-    key: "Roasted",
-    one: ["waté·skuteʔ"],
-  };
-  const objRotten = {
+  const objRotten: Module9FoodCharacteristicDatum = {
+    root: ["-ahetkʌʔ-"],
+    dict: [61],
     en: ["rotten", "spoiled"],
     key: "Rotten",
-    one: ["yohetkwaʔú", "yáh teʔkakhwiyo"],
+    one: [
+      {
+        one: [["yo", "PO"], "hetkwaʔú"],
+      },
+      {
+        en: "it is not good",
+        one: ["yáh teʔkakhwiyo"],
+      },
+    ],
   };
-  const objSalty = {
+  const objSalty: Module9FoodCharacteristicDatum = {
+    root: ["te...hyoʔtsistal-"],
+    dict: [423],
     en: ["salty"],
     key: "Salty",
-    one: ["teyohyotsístaleʔ"],
+    one: [
+      {
+        one: [["te", "DUAL"], ["yo", "PO"], "hyotsístaleʔ"],
+      },
+    ],
   };
-  const objSmellingBad = {
+  const objSmellingBad: Module9FoodCharacteristicDatum = {
+    root: ["-asl-", "-sl-"],
+    dict: [122],
     en: ["bad-smelling"],
     key: "SmellingBad",
-    one: ["waslákhsʌʔ"],
+    one: [
+      {
+        one: ["waslákhsʌʔ"],
+      },
+    ],
   };
-  const objSmellingGood = {
+  const objSmellingGood: Module9FoodCharacteristicDatum = {
+    root: ["-asl-", "-sl-"],
+    dict: [122],
     en: ["good-smelling"],
     key: "SmellingGood",
-    one: ["wasláku", "wʌsliyó"],
+    one: [
+      {
+        one: ["wasláku"],
+      },
+      {
+        one: ["wʌsliyó"],
+      },
+    ],
   };
-  const objTheWayItSmells = {
+  const objTheWayItSmells: Module9FoodCharacteristicDatum = {
+    root: ["-asl-", "-sl-"],
+    dict: [122],
     en: ["the way it smells"],
     key: "TheWayItSmells",
-    one: ["niwahsló·tʌ"],
+    one: [
+      {
+        one: ["niwahsló·tʌ"],
+      },
+    ],
   };
-  const objSpicy = {
+  const objSpicy: Module9FoodCharacteristicDatum = {
+    root: [],
+    dict: [],
     en: ["spicy"],
     key: "Spicy",
-    one: ["teyothská·lat"],
+    one: [
+      {
+        one: [["te", "DUAL"], ["yo", "PO"], "thská·lat"],
+      },
+    ],
   };
-  const objStrongSmell = {
+  const objStrongSmell: Module9FoodCharacteristicDatum = {
+    root: ["-asl-", "-sl-"],
+    dict: [122],
     en: ["strong smell"],
     key: "StrongSmell",
-    one: ["waslaʔsátsteʔ"],
+    one: [
+      {
+        one: ["waslaʔsátsteʔ"],
+      },
+    ],
   };
-  const objStrongTaste = {
+  const objStrongTaste: Module9FoodCharacteristicDatum = {
+    root: [],
+    dict: [],
     en: ["strong taste"],
     key: "StrongTaste",
-    one: ["kakuʔslaʔsátsteʔ"],
+    one: [
+      {
+        one: ["kakuʔslaʔsátsteʔ"],
+      },
+    ],
   };
-  const objSweet = {
+  const objSweet: Module9FoodCharacteristicDatum = {
+    root: ["te...nutakliʔtslal-"],
+    dict: [613],
     en: ["sweet", "sugary"],
     key: "Sweet",
-    one: ["teyonutaklí·tslaleʔ"],
+    one: [
+      {
+        one: [["te", "DUAL"], ["yo", "PO"], "nutaklí·tslaleʔ"],
+      },
+    ],
   };
-  const objDisgusting = {
+  const objDisgusting: Module9FoodCharacteristicDatum = {
+    root: [],
+    dict: [],
     en: ["disgusting", "unappetizing"],
     key: "Disgusting",
-    one: ["yokwít"],
+    one: [
+      {
+        one: [["yo", "PO"], "kwít"],
+      },
+    ],
   };
-  const objWatery = {
+  const objWatery: Module9FoodCharacteristicDatum = {
+    root: [],
+    dict: [],
     en: ["watery"],
     key: "Watery",
-    one: ["tekahnekayéstu"],
+    one: [
+      {
+        one: [["te", "DUAL"], "kahnekayéstu"],
+      },
+    ],
   };
   return [
     objBaked,
@@ -2368,7 +2563,6 @@ export function createModule9FoodCharacteristics(): CharacteristicDatum[] {
     objLeftovers,
     objMouldy,
     objRaw,
-    objRoasted,
     objRotten,
     objSalty,
     objSmellingBad,
