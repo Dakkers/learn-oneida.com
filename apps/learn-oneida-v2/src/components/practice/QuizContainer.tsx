@@ -10,11 +10,13 @@ import { Select } from "@ukwehuwehneke/ohutsya";
 
 export interface QuizOption {
   key: string;
+  img?: string;
   text: string;
 }
 
 interface QuizContainerContextProps {
   answerSetting: string;
+  hasImages?: boolean;
   languageSetting: string;
   questionCountSetting: string;
   setAnswerSetting: (value: string) => void;
@@ -77,7 +79,7 @@ export function Settings({
         <Select
           label="Number of questions"
           onChange={context.setQuestionCountSetting}
-          options={[1, 2, 5, 10]
+          options={[1, 2, 5, 10, 50]
             .map((value) => value.toString())
             .map((value) => ({ label: value, value }))}
           value={context.questionCountSetting}
