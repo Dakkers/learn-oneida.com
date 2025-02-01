@@ -22,6 +22,7 @@
     "tailwind": "pnpm run tailwind:watch",
     "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css",
     "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css --watch",
+    "test": "vitest run",
     "typecheck": "tsc"
   },
   "dependencies": {
@@ -59,11 +60,13 @@
     "@types/seedrandom": "^3.0.8",
     "autoprefixer": "^10.4.20",
     "husky": "^9.1.7",
+    "jsdom": "^26.0.0",
     "lint-staged": "^15.4.3",
     "postcss": "^8.5.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "vercel": "^39.3.0",
+    "vitest": "^3.0.4",
     "wrangler": "^3.105.1"
   },
   "lint-staged": {
