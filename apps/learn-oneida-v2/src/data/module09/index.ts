@@ -1,4 +1,4 @@
-import { BreakdownArray } from "@ukwehuwehneke/language-components";
+import type { BreakdownArray } from "@ukwehuwehneke/language-components";
 import {
   flattenVerbDatum,
   type Module6VerbDatum,
@@ -93,10 +93,27 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     ],
   };
   const objBean: Module9FoodDatum = {
+    dict: [652, 902],
+    root: ["-saheʔt-"],
+    en: ["dried beans"],
+    key: "Bean",
+    singular: [
+      {
+        one: ["osahé·ta̲ʔ"],
+      },
+    ],
+    plural: [
+      {
+        en: "Variety of beans",
+        one: ["osahé·taʔshúha̲"],
+      },
+    ],
+  };
+  const objGreenBean: Module9FoodDatum = {
     dict: [],
     root: [],
-    en: ["bean"],
-    key: "Bean",
+    en: ["green string bean", "yellow wax bean"],
+    key: "GreenBean",
     singular: [
       {
         one: ["ohyóhtsliʔ"],
@@ -111,7 +128,7 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
   const objBeanYellowEye: Module9FoodDatum = {
     dict: [],
     root: [],
-    en: ["bean yellow eye"],
+    en: ["yellow eye bean"],
     key: "BeanYellowEye",
     singular: [
       {
@@ -141,8 +158,8 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     ],
   };
   const objBeet: Module9FoodDatum = {
-    dict: [],
-    root: [],
+    dict: [904],
+    root: ["-htehl-"],
     en: ["beet"],
     key: "Beet",
     singular: [
@@ -207,6 +224,23 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     plural: [
       {
         one: ["otstokhwiʔshúha̲"],
+      },
+    ],
+  };
+  const objBread: Module9FoodDatum = {
+    dict: [915],
+    root: ["-naʔtal-"],
+    en: ["bread"],
+    key: "Bread",
+    singular: [
+      {
+        one: ["kaná·talok"],
+      },
+    ],
+    plural: [
+      {
+        en: "Variety of breads",
+        one: ["kaná·talokokúha̲"],
       },
     ],
   };
@@ -277,26 +311,29 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
       },
     ],
   };
-  const objBroth: Module9FoodDatum = {
-    dict: [],
-    root: [],
-    en: ["broth", "watery soup"],
-    key: "Broth",
+  const objButter: Module9FoodDatum = {
+    dict: [776],
+    root: ["-wistohsl-"],
+    en: ["butter"],
+    key: "Butter",
     singular: [
       {
-        one: ["ohnekákliʔ"],
+        one: ["owistóhseli̲ʔ"],
+      },
+      {
+        one: ["owistóhsliʔ"],
       },
     ],
     plural: [
       {
-        one: ["ohnekakliʔshúha̲"],
+        one: ["tsyohsó·kwes onuʔusliʔshúha̲"],
       },
     ],
   };
   const objButternutSquash: Module9FoodDatum = {
     dict: [],
     root: [],
-    en: ["butternut", "squash"],
+    en: ["butternut squash"],
     key: "ButternutSquash",
     singular: [
       {
@@ -477,6 +514,72 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
       },
     ],
   };
+  const objEgg: Module9FoodDatum = {
+    dict: [],
+    root: ["-ʔnhuhs-"],
+    en: ["egg"],
+    key: "Egg",
+    singular: [
+      {
+        one: ["oʔnhúhsaʔ"],
+      },
+    ],
+    plural: [
+      {
+        one: ["oʔnhúhsaʔshúha̲"],
+      },
+    ],
+  };
+  const objFish: Module9FoodDatum = {
+    dict: [],
+    root: ["-itsy-"],
+    en: ["fish"],
+    key: "Fish",
+    singular: [
+      {
+        one: ["kʌ́tsiʔ"],
+      },
+    ],
+    plural: [
+      {
+        en: "Variety of fish",
+        one: ["kʌtsyaʔshúha̲"],
+      },
+    ],
+  };
+  const objFood: Module9FoodDatum = {
+    dict: [],
+    root: ["-khw-"],
+    en: ["food (ready to eat)"],
+    key: "Food",
+    singular: [
+      {
+        one: ["kákhwaʔ"],
+      },
+    ],
+    plural: [
+      {
+        en: "Prepared meals",
+        one: ["kákhwaʔshúha"],
+      },
+    ],
+  };
+  const objFruit: Module9FoodDatum = {
+    dict: [],
+    root: [],
+    en: ["fruit", "berries"],
+    key: "Fruit",
+    singular: [
+      {
+        one: ["káhik"],
+      },
+    ],
+    plural: [
+      {
+        one: ["káhikhokúha̲"],
+      },
+    ],
+  };
   const objFruitCore: Module9FoodDatum = {
     dict: [],
     root: [],
@@ -490,6 +593,23 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     plural: [
       {
         one: ["ohataʔokúha̲"],
+      },
+    ],
+  };
+  const objCorn: Module9FoodDatum = {
+    dict: [],
+    root: ["-nʌhst-"],
+    en: ["corn"],
+    key: "Corn",
+    singular: [
+      {
+        one: ["o·nʌ́hste̲ʔ"],
+      },
+    ],
+    plural: [
+      {
+        en: "Variety of corn",
+        one: ["o·nʌ́hste̲ʔshúha̲"],
       },
     ],
   };
@@ -509,11 +629,11 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
       },
     ],
   };
-  const objCorn: Module9FoodDatum = {
+  const objFlintCorn: Module9FoodDatum = {
     dict: [],
     root: [],
-    en: ["corn", "flint corn"],
-    key: "Corn",
+    en: ["flint corn"],
+    key: "FlintCorn",
     singular: [
       {
         one: ["onʌstaʔu·wé·"],
@@ -761,18 +881,6 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
       },
     ],
   };
-  const objFruit: Module9FoodDatum = {
-    dict: [],
-    root: [],
-    en: ["fruit"],
-    key: "Fruit",
-    singular: null,
-    plural: [
-      {
-        one: ["kahikhokúha̲ʔ"],
-      },
-    ],
-  };
   const objFruitJuice: Module9FoodDatum = {
     dict: [],
     root: [],
@@ -810,6 +918,48 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
         one: ["oʔnʌhalhkoʔwátshu"],
       },
     ],
+  };
+  const objGreenVegetable: Module9FoodDatum = {
+    dict: [],
+    root: ["-hut-"],
+    en: ["greens", "vegetables"],
+    key: "GreenVegetable",
+    singular: [
+      {
+        one: ["ohu·tá·"],
+      },
+    ],
+    plural: [
+      {
+        one: ["ohu·tá·shúha̲"],
+      },
+    ],
+  };
+  const objGroceries: Module9FoodDatum = {
+    dict: [],
+    root: ["-atʌnaʔtsl-"],
+    en: ["groceries", "lunch"],
+    key: "Groceries",
+    singular: [
+      {
+        en: "(implied pluralization)",
+        one: ["atʌná·tsliʔ"],
+      },
+    ],
+    plural: null,
+  };
+  const objMeat: Module9FoodDatum = {
+    dict: [],
+    root: ["-ʔwahl-"],
+    en: ["meat"],
+    key: "Meat",
+    singular: [
+      {
+        en: "(implied pluralization)",
+        one: ["oʔwá·luʔ"],
+      },
+    ],
+    plural: null,
   };
   const objGravy: Module9FoodDatum = {
     dict: [],
@@ -1032,6 +1182,23 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     ],
     plural: null,
   };
+  const objMilk: Module9FoodDatum = {
+    dict: [],
+    root: ["-nuʔt-"],
+    en: ["milk"],
+    key: "Milk",
+    singular: [
+      {
+        one: ["onú·ta̲ʔ"],
+      },
+    ],
+    plural: [
+      {
+        en: "lots of milk",
+        one: ["kwah yaʔtekanútake̲ʔ"],
+      },
+    ],
+  };
   const objMushroom: Module9FoodDatum = {
     dict: [],
     root: [],
@@ -1045,6 +1212,22 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     plural: [
       {
         one: ["onláhsaʔshuha̲"],
+      },
+    ],
+  };
+  const objNut: Module9FoodDatum = {
+    dict: [406, 1110],
+    root: [],
+    en: ["nut"],
+    key: "Nut",
+    singular: [
+      {
+        one: ["ohsó·kwaʔ"],
+      },
+    ],
+    plural: [
+      {
+        one: ["ohsó·kwaʔshúha̲"],
       },
     ],
   };
@@ -1217,6 +1400,22 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
       },
     ],
   };
+  const objPepper: Module9FoodDatum = {
+    dict: [],
+    root: ["-nuhkwaʔtsl-"],
+    en: ["pepper", "medicine"],
+    key: "Pepper",
+    singular: [
+      {
+        one: ["onúhkwaʔt"],
+      },
+    ],
+    plural: [
+      {
+        one: ["onúhkwaʔthokúha̲"],
+      },
+    ],
+  };
   const objPickle: Module9FoodDatum = {
     dict: [],
     root: [],
@@ -1278,6 +1477,19 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     plural: [
       {
         one: ["wihsuʔokúha̲"],
+      },
+    ],
+  };
+  const objPotato: Module9FoodDatum = {
+    dict: [],
+    root: ["-hnanaʔt-"],
+    en: ["potato"],
+    key: "Potato",
+    singular: null,
+    plural: [
+      {
+        en: "implied pluralization",
+        one: ["ohnaná·ta̲ʔ"],
       },
     ],
   };
@@ -1385,6 +1597,22 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
       },
       {
         one: ["watnʌʔʌkwáts"],
+      },
+    ],
+  };
+  const objRootVegetable: Module9FoodDatum = {
+    dict: [],
+    root: ["-htehl-"],
+    en: ["root vegetable"],
+    key: "RootVegetable",
+    singular: [
+      {
+        one: ["ohté·la̲ʔ"],
+      },
+    ],
+    plural: [
+      {
+        one: ["ohté·laʔshúha̲"],
       },
     ],
   };
@@ -1560,6 +1788,25 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
       },
     ],
   };
+  const objSoup: Module9FoodDatum = {
+    dict: [388, 921],
+    root: ["-hnekakliʔtsl-"],
+    en: ["soup", "broth"],
+    key: "Soup",
+    singular: [
+      {
+        one: ["ohnekákeli̲ʔ"],
+      },
+      {
+        one: ["ohnekákliʔ"],
+      },
+    ],
+    plural: [
+      {
+        one: ["ohnekaklíʔshúha̲"],
+      },
+    ],
+  };
   const objSpaghetti: Module9FoodDatum = {
     dict: [],
     root: [],
@@ -1601,6 +1848,39 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     plural: [
       {
         one: ["awʌhihthokúha̲"],
+      },
+    ],
+  };
+  const objSquash: Module9FoodDatum = {
+    dict: [],
+    root: ["-nuʔusl-"],
+    en: ["squash"],
+    key: "Squash",
+    singular: [
+      {
+        one: ["onuʔúsliʔ"],
+      },
+    ],
+    plural: [
+      {
+        one: ["onuʔúsliʔshúha̲"],
+      },
+    ],
+  };
+  const objSugar: Module9FoodDatum = {
+    dict: [],
+    root: [],
+    en: ["sugar"],
+    key: "Sugar",
+    singular: null,
+    plural: [
+      {
+        en: "implied pluralization",
+        one: ["onuʔtakehli̲ʔ"],
+      },
+      {
+        en: "implied pluralization",
+        one: ["onuʔtákliʔ"],
       },
     ],
   };
@@ -1756,7 +2036,7 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     ],
   };
   const objWater: Module9FoodDatum = {
-    dict: [],
+    dict: [387],
     root: [],
     en: ["water"],
     key: "Water",
@@ -1791,23 +2071,25 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     ],
   };
 
-  return [
+  const result = [
     objApple,
     objBreakfast,
     objBagel,
     objBanana,
     objBean,
+    objGreenBean,
     objBeanYellowEye,
     objBeanSoup,
     objBeet,
     objBlackberry,
     objBlackRaspberry,
     objBlueberry,
+    objBread,
     objBreadBaked,
     objBreadCrust,
     objBreadFried,
     objBroccoli,
-    objBroth,
+    objButter,
     objButternutSquash,
     objCabbage,
     objCarrot,
@@ -1820,9 +2102,14 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     objChineseFood,
     objCoffee,
     objCookie,
+    objEgg,
+    objFish,
+    objFood,
+    objFruit,
     objFruitCore,
-    objCornSoup,
     objCorn,
+    objCornSoup,
+    objFlintCorn,
     objCornBread,
     objCornDried,
     objCornMeal,
@@ -1837,9 +2124,11 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     objFlour,
     objFriedFood,
     objBakedPotato,
-    objFruit,
     objFruitJuice,
     objGrape,
+    objGreenVegetable,
+    objGroceries,
+    objMeat,
     objGravy,
     objHamburger,
     objHotdog,
@@ -1854,7 +2143,9 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     objLiquor,
     objMacaroni,
     objMapleSyrup,
+    objMilk,
     objMushroom,
+    objNut,
     objOatmeal,
     objOnion,
     objOnionLeek,
@@ -1865,10 +2156,12 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     objPeanutButter,
     objPear,
     objPeeling,
+    objPepper,
     objPickle,
     objPie,
     objPizza,
     objPlum,
+    objPotato,
     objPopcorn,
     objMashedPotato,
     objPumpkin,
@@ -1876,6 +2169,7 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     objRaspberry,
     objRhubarb,
     objRice,
+    objRootVegetable,
     objSaladBean,
     objSaladEgg,
     objSaladFruit,
@@ -1887,9 +2181,12 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     objSandwichEgg,
     objSconedog,
     objSoda,
+    objSoup,
     objSpaghetti,
     objSpice,
     objStrawberry,
+    objSquash,
+    objSugar,
     objSugarSubstitute,
     objSweetTreat,
     objTea,
@@ -1903,6 +2200,8 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     objWater,
     objWine,
   ];
+  result.sort((a, b) => a.en[0].localeCompare(b.en[0]));
+  return result;
 }
 
 export function createModule9FoodCharacteristics(): CharacteristicDatum[] {

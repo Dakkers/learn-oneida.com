@@ -19,7 +19,7 @@ import type { Metadata } from "next";
 import pluralize from "pluralize";
 import indefinite from "indefinite";
 import { Letter } from "@/components/Letter";
-import { createModule9FoodsList, Module9FoodDatum } from "@/data/module09";
+import { createModule9FoodsList, type Module9FoodDatum } from "@/data/module09";
 
 export const metadata: Metadata = {
   title: "Module 9",
@@ -47,8 +47,8 @@ export default function LearnModule09() {
             {foodList.map((n) => (
               <TocItem
                 key={n.key}
-                label={n.en[0]}
-                value={_.kebabCase(n.en[0])}
+                label={n.en.join(", ")}
+                value={_.kebabCase(n.key)}
               />
             ))}
           </TocSection>
@@ -85,9 +85,9 @@ function FoodNouns() {
         {list.map((n) => {
           return (
             <Accordion.Item
-              id={n.key.toLowerCase()}
+              id={_.kebabCase(n.key)}
               key={n.key}
-              title={n.en[0]}
+              title={n.en.join(", ")}
             >
               <NounEntry nounDatum={n} />
             </Accordion.Item>
@@ -100,34 +100,54 @@ function FoodNouns() {
 
 function NounEntry({ nounDatum }: { nounDatum: Module9FoodDatum }) {
   const en = nounDatum.en;
-  const p = en.map((v) => pluralize(v))
+  const p = en.map((v) => pluralize(v));
 
   return (
     <>
-      {nounDatum.root.length && (<Text>
-        The root is <Letter>{nounDatum.root.join("/")}</Letter>.
-      </Text>)}
+      {nounDatum.root.length > 0 && (
+        <Text>
+          The root is <Letter>{nounDatum.root.join("/")}</Letter>.
+        </Text>
+      )}
 
       <TableWrapper
         columns={[
-          TableWrapper.englishColumn,
+          {
+            accessorKey: "en",
+            header: "English",
+          },
           {
             accessorKey: "breakdown",
-            // @ts-expect-error TODO - TableWrapper/Table generics
-            cell: (value: BreakdownArray | null) =>
-              value ? (
-                <TextBreakdown breakdown={value} typeFallback="PS" />
-              ) : (
-                "N/A"
-              ),
+            // @ts-expect-error Table generics
+            cell: (value: Module9FoodDatum["singular"]) =>
+              value ? <CustomCell value={value} /> : "N/A",
             header: "Oneida",
           },
         ]}
         data={[
-          [en.join(', '), nounDatum.singular],
-          [p.join(', '), nounDatum.plural],
-        ].map(([en, breakdown]) => ({ en, breakdown }))}
+          ["(singular)", nounDatum.singular],
+          ["(plural)", nounDatum.plural],
+        ]
+          .filter((pair) => !!pair[1])
+          .map(([en, breakdown]) => ({ en, breakdown }))}
       />
     </>
+  );
+}
+
+function CustomCell({
+  value,
+}: {
+  value: Module9FoodDatum["singular"];
+}) {
+  return (
+    <Flex direction="column" gap={4}>
+      {(value ?? []).map((obj, i) => (
+        <Flex direction="column" gap={0} key={i}>
+          <TextBreakdown breakdown={obj.one} typeFallback="PS" wrap="nowrap" />
+          {obj.en && <Text variant="labelS">{obj.en}</Text>}
+        </Flex>
+      ))}
+    </Flex>
   );
 }

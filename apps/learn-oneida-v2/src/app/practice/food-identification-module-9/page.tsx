@@ -4,7 +4,10 @@ import {
   type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { createModule9FoodsList } from "@/data/module09";
-import { SectionHeading } from "@ukwehuwehneke/language-components";
+import {
+  convertBreakdownToPlainText,
+  SectionHeading,
+} from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 
@@ -25,7 +28,10 @@ export default function PracticeFoodIdentificationModule9() {
     for (const datum of list) {
       const key = datum.key;
       if (datum.singular) {
-        resultOn.push({ key, text: datum.singular[0] });
+        resultOn.push({
+          key,
+          text: convertBreakdownToPlainText(datum.singular[0].one),
+        });
         resultEn.push({ key, text: datum.en[0] });
       }
     }
