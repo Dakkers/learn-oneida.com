@@ -1,53 +1,53 @@
 import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData({
-  translation: "{{pronoun}} VERB",
+  translation: "{{pronoun}} might smell it",
   type: "PS",
   phrases: [
     {
-      breakdown: [["a", "IFUT"], ["k"], "ROOT1"],
+      breakdown: [["a", "IFUT"], ["k"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a", "IFUT"], ["hs"], "ROOT1"],
+      breakdown: [["a", "IFUT"], ["hs"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a", "IFUT"], ["h"], "ROOT1"],
+      breakdown: [["a", "IFUT"], ["h"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a·", "IFUT"], ["yu"], "ROOT2"],
+      breakdown: [["a·", "IFUT"], ["yu"], ["té", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a·", "IFUT"], ["u"], "ROOT2"],
+      breakdown: [["a·", "IFUT"], ["u"], ["té", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a·e", "IFUT"], ["ty"], "ROOT1"],
+      breakdown: [["a·e", "IFUT"], ["ty"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a", "IFUT"], ["yaky"], "ROOT1"],
+      breakdown: [["a", "IFUT"], ["yaky"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a", "IFUT"], ["tsy"], "ROOT1"],
+      breakdown: [["a", "IFUT"], ["tsy"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a", "IFUT"], ["hy"], "ROOT1"],
+      breakdown: [["a", "IFUT"], ["hy"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a", "IFUT"], ["ky"], "ROOT1"],
+      breakdown: [["a", "IFUT"], ["ky"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a·e", "IFUT"], ["tw"], "ROOT1"],
+      breakdown: [["a·e", "IFUT"], ["tw"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a", "IFUT"], ["yakw"], "ROOT1"],
+      breakdown: [["a", "IFUT"], ["yakw"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a·e", "IFUT"], ["sw"], "ROOT1"],
+      breakdown: [["a·e", "IFUT"], ["sw"], ["até", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a", "IFUT"], ["hu"], "ROOT2"],
+      breakdown: [["a", "IFUT"], ["hu"], ["té", "SRFL"], "shwaht", "e’"],
     },
     {
-      breakdown: [["a", "IFUT"], ["ku"], "ROOT2"],
+      breakdown: [["a", "IFUT"], ["ku"], ["té", "SRFL"], "shwaht", "e’"],
     },
   ],
 });

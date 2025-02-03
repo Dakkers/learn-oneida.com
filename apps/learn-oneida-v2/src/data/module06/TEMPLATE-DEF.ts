@@ -19,7 +19,7 @@ export default createParadigmData(
         breakdown: [["waʔ", "DEF"], ["u"], "ROOT"],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["w"], "ROOT"],
+        breakdown: [["u"], "ROOT"],
       },
       {
         breakdown: [["we", "DEF"], ["ty"], "ROOT"],

@@ -4,7 +4,7 @@ import { whisperizeWord } from "../../utils/words";
 
 export type BreakdownType =
   | "ASP" // aspect suffix
-  | "CIS"
+  | "CIS" // cislocative
   | "CL" // clitic
   | "DEF"
   | "DER" // derivational
@@ -31,7 +31,8 @@ export type BreakdownType =
   | "REFL"
   | "REP"
   | "RPL"
-  | "SRFL";
+  | "SRFL"
+  | "TRAN"; // translocative
 
 export type BreakdownArray = Array<
   | string
@@ -155,6 +156,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   REP: "text-lime-500",
   RPL: "text-gray-400",
   SRFL: "text-green-700",
+  TRAN: "text-lime-500",
 } as const;
 
 export function convertBreakdownToPlainText(breakdown: BreakdownArray) {

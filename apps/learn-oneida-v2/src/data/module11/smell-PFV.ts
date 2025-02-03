@@ -1,53 +1,53 @@
 import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData({
-  translation: "{{pronoun}} VERB",
+  translation: "{{pronoun}} {{refVerbPast}} smelled it",
   type: "PO",
   phrases: [
     {
-      breakdown: [["wak"], "ROOT1"],
+      breakdown: [["wak"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["s"], "ROOT1"],
+      breakdown: [["s"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["lo"], "ROOT2"],
+      breakdown: [["lo"], ["te", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["yako"], "ROOT2"],
+      breakdown: [["yako"], ["te", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["yo"], "ROOT2"],
+      breakdown: [["yo"], ["te", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["yuky"], "ROOT1"],
+      breakdown: [["yuky"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["yuky"], "ROOT1"],
+      breakdown: [["yuky"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["tsy"], "ROOT1"],
+      breakdown: [["tsy"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["lon"], "ROOT1"],
+      breakdown: [["lon"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["yon"], "ROOT1"],
+      breakdown: [["yon"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["yukw"], "ROOT1"],
+      breakdown: [["yukw"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["yukw"], "ROOT1"],
+      breakdown: [["yukw"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["sw"], "ROOT1"],
+      breakdown: [["sw"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["lon"], "ROOT1"],
+      breakdown: [["lon"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
     {
-      breakdown: [["yon"], "ROOT1"],
+      breakdown: [["yon"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
   ],
 });

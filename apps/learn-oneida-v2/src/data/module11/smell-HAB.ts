@@ -1,53 +1,53 @@
 import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData({
-  translation: "{{pronoun}} VERB",
+  translation: "{{pronoun}} {{refVerb}} smelling",
   type: "PS",
   phrases: [
     {
-      breakdown: [["k"], "ROOT1"],
+      breakdown: [["k"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["s"], "ROOT1"],
+      breakdown: [["s"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["l"], "ROOT1"],
+      breakdown: [["l"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["yu"], "ROOT2"],
+      breakdown: [["yu"], "teshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["w"], "ROOT1"],
+      breakdown: [["w"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["ty"], "ROOT1"],
+      breakdown: [["ty"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["yaky"], "ROOT1"],
+      breakdown: [["yaky"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["tsy"], "ROOT1"],
+      breakdown: [["tsy"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["y"], "ROOT1"],
+      breakdown: [["y"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["ky"], "ROOT1"],
+      breakdown: [["ky"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["tw"], "ROOT1"],
+      breakdown: [["tw"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["yakw"], "ROOT1"],
+      breakdown: [["yakw"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["sw"], "ROOT1"],
+      breakdown: [["sw"], "ateshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["lu"], "ROOT2"],
+      breakdown: [["lu"], "teshwát", ["ha’", "HAB"]],
     },
     {
-      breakdown: [["ku"], "ROOT2"],
+      breakdown: [["ku"], "teshwát", ["ha’", "HAB"]],
     },
   ],
 });

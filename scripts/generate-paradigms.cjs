@@ -159,7 +159,7 @@ function redAStemDefinite () {
       [["wa", "DEF"], ["hs"], "ROOT1"],
       [["wa", "DEF"], ["h"], "ROOT1"],
       [["waʔ", "DEF"], ["u"], "ROOT2"],
-      [["waʔ", "DEF"], ["w"], "ROOT1"],
+      [['u'], "ROOT1"],
       [["we", "DEF"], ["ty"], "ROOT1"],
       [["waʔ", "DEF"], ["aky"], "ROOT1"],
       [["we", "DEF"], ["tsy"], "ROOT1"],

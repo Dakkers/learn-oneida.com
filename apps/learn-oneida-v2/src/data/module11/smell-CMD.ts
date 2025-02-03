@@ -1,17 +1,18 @@
 import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData({
-  translation: "({{pronoun}}) VERB!",
+  translation: "({{pronoun}}) Smell it!",
   type: "PS",
   phrases: [
     {
-      breakdown: [["s"], "ROOT1"],
+      breakdown: [["s"], "atéshwaht"],
     },
     {
-      breakdown: [["tsy"], "ROOT1"],
+      breakdown: [["tsy"], "atéshwaht"],
     },
     {
-      breakdown: [["sw"], "ROOT1"],
+      breakdown: [["sw"], "atéshwaht"],
     },
   ],
+  whispered: false,
 });
