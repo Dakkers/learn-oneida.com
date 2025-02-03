@@ -3,10 +3,9 @@ import { Noto_Sans } from "next/font/google";
 import "./../learn-oneida.css";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
-import { cn } from "@ukwehuwehneke/ohutsya";
 import { Navbar } from "@/components/Navbar";
 
-const notoSansFont = Noto_Sans({ subsets: ["latin"] });
+const notoSansFont = Noto_Sans({ subsets: ["latin"], weight: ["400", "500"] });
 
 export const metadata: Metadata = {
   title: {

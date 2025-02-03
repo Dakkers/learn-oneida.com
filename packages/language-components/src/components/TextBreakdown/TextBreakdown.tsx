@@ -64,7 +64,7 @@ export function TextBreakdown({
   const ignored = _ignored ?? (["HAB", "DERIV", "PUNC"] as BreakdownType[]);
 
   return (
-    <Tag>
+    <Tag className="text-xsBodyM md:text-mdBodyM">
       {breakdown.map((part, i) => {
         const innerTextProps = { wrap };
         const isLastPart = i === breakdown.length - 1;
@@ -115,7 +115,7 @@ function InnerText({
         arrayify(type ?? []).map((t: BreakdownType) =>
           t ? BREAKDOWN_TYPE_MAP[t] : undefined,
         ),
-        "font-bold",
+        "font-medium",
         wrap === "nowrap" && "text-nowrap",
       )}
     >
