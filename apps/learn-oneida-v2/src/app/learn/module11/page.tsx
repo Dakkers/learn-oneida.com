@@ -3,6 +3,7 @@
 import { TableOfContents as TOC } from "~/components/TableOfContents";
 import { Flex, Text, TextArray } from "@ukwehuwehneke/ohutsya";
 import {
+  type BreakdownArray,
   SectionHeading,
   TextBreakdown,
 } from "@ukwehuwehneke/language-components";
@@ -12,7 +13,9 @@ import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import {
   type BodyPartNounData,
+  createModule11BodyAilmentsList,
   createModule11BodyPartNounList,
+  type Module11AilmentEntry,
 } from "@/data/module11";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
@@ -39,10 +42,12 @@ export default function LearnModule11() {
       <TOC>
         <TOC.Item label="Introduction" value="intro" />
         <TOC.Item label="Body Parts" value="body-parts" />
+        <TOC.Item label="Ailments" value="ailments" />
       </TOC>
 
       <Introduction />
       <BodyPartsList />
+      <AilmentsList />
     </PageWrapper>
   );
 }
@@ -70,12 +75,12 @@ function BodyPartsList() {
         Many of these words have tricky consonant clusters. Make sure to check
         out the <LinkWrapper page="soundchart" /> if you need a refresher!
       </Text>
-      <DatumTable data={list} />
+      <BodyPartTable data={list} />
     </>
   );
 }
 
-function DatumTable({ data }: { data: BodyPartNounData[] }) {
+function BodyPartTable({ data }: { data: BodyPartNounData[] }) {
   return (
     <TableWrapper
       columns={[
@@ -106,20 +111,7 @@ function DatumTable({ data }: { data: BodyPartNounData[] }) {
           accessorKey: "onNoun",
           // @ts-expect-error TODO - TableWrapper/Table generics
           cell: (onNoun: BodyPartNounData["onNoun"]) => {
-            return (
-              <Flex direction="column" gap={4}>
-                {onNoun.map((obj, i) => (
-                  <Flex direction="column" gap={0} key={i}>
-                    <TextBreakdown
-                      breakdown={obj.one}
-                      typeFallback="PS"
-                      wrap="nowrap"
-                    />
-                    {obj.en && <Text variant="labelS">{obj.en}</Text>}
-                  </Flex>
-                ))}
-              </Flex>
-            );
+            return <CustomCell value={onNoun} />;
           },
           header: "Usage",
         },
@@ -127,5 +119,79 @@ function DatumTable({ data }: { data: BodyPartNounData[] }) {
       // @ts-expect-error TODO - TableWrapper/Table generics
       data={data}
     />
+  );
+}
+
+function AilmentsList() {
+  return (
+    <>
+      <SectionHeading id="ailments" level={2}>
+        Ailments
+      </SectionHeading>
+
+      <TableWrapper
+        columns={[
+          {
+            accessorKey: "en",
+            // @ts-expect-error Table generics
+            cell: (en: string[], row: Module11AilmentEntry) => (
+              <Flex direction="column" gap={1}>
+                <Text>{en.join(", ")}</Text>
+                {row.dict.length > 0 && (
+                  <Text variant="labelS">pg. {row.dict.join(", ")}</Text>
+                )}
+              </Flex>
+            ),
+            header: "English",
+          },
+          {
+            accessorKey: "usage",
+            // @ts-expect-error Table generics
+            cell: (value: Module11AilmentEntry) => <CustomCell value={value} />,
+            header: "Oneida",
+          },
+        ]}
+        data={createModule11BodyAilmentsList().map((datum) => ({
+          en: datum.en,
+          usage: datum.usage,
+          dict: datum.dict,
+        }))}
+      />
+    </>
+  );
+}
+
+function CustomCell({
+  value,
+}: {
+  value:
+    | string
+    | string[]
+    | Array<{
+        one: BreakdownArray;
+        en?: string;
+      }>;
+}) {
+  return (
+    <Flex direction="column" gap={4}>
+      {typeof value === "string"
+        ? value
+        : (value ?? []).map((obj, i) => (
+            <Flex direction="column" gap={0} key={i}>
+              {typeof obj === "string" ? (
+                obj
+              ) : (
+                <>
+                  <TextBreakdown
+                    breakdown={obj.one}
+                    typeFallback="PS"
+                    wrap="nowrap"
+                  />
+                  {obj.en && <Text variant="labelS">{obj.en}</Text>}
+                </>
+              )}
+            </Flex>
+          ))}
+    </Flex>
   );
 }

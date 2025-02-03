@@ -1,15 +1,24 @@
 import type { BreakdownArray } from "@ukwehuwehneke/language-components";
 
-export interface BodyPartNounData {
+type ListOfBreakdowns = Array<{
+  en?: string;
+  one: BreakdownArray;
+}>;
+
+interface ModernEntry {
   en: string[];
   key: string;
   root: string[];
   dict: number[];
+}
+
+export interface BodyPartNounData extends ModernEntry {
   standalone: string[];
-  onNoun: Array<{
-    en?: string;
-    one: BreakdownArray;
-  }>;
+  onNoun: ListOfBreakdowns;
+}
+
+export interface Module11AilmentEntry extends ModernEntry {
+  usage: ListOfBreakdowns;
 }
 
 export function createModule11BodyPartNounList(): BodyPartNounData[] {
@@ -17,12 +26,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "ankle",
     en: ["ankle", "ankles"],
     dict: [404],
-    root: ["-hsiniko’t-"],
-    standalone: ["ohsinikó·ta’"],
+    root: ["-hsinikoʔt-"],
+    standalone: ["ohsinikó·taʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["kh", "PS"], "siniko’tá·ke’"],
+        one: [["kh", "PS"], "sinikoʔtá·keʔ"],
       },
     ],
   };
@@ -31,11 +40,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["arm", "arms"],
     dict: [580],
     root: ["-nʌtsh-"],
-    standalone: ["onʌ́tsha’"],
+    standalone: ["onʌ́tshaʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "nʌtshá·ke’"],
+        one: [["k", "PS"], "nʌtshá·keʔ"],
       },
     ],
   };
@@ -44,14 +53,14 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["back"],
     dict: [662],
     root: ["-shw-", "-shwʌ-", "-shu-"],
-    standalone: ["óshwa’"],
+    standalone: ["óshwaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PS"], "shwʌ́·ne’"],
+        one: [["ke", "PS"], "shwʌ́·neʔ"],
       },
       {
-        one: [["ke", "PS"], "shú·ne’"],
+        one: [["ke", "PS"], "shú·neʔ"],
       },
     ],
   };
@@ -59,12 +68,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "beard",
     en: ["beard", "moustache"],
     dict: [493, 902],
-    root: ["-kustu’lh-"],
-    standalone: ["okustú·lha’"],
+    root: ["-kustuʔlh-"],
+    standalone: ["okustú·lhaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "kustulhá·ke’"],
+        one: [["k", "PS"], "kustulhá·keʔ"],
       },
     ],
   };
@@ -72,15 +81,15 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "belly",
     en: ["belly"],
     dict: [592],
-    root: ["-nikwʌ’t-"],
-    standalone: ["onikwʌ́·ta’"],
+    root: ["-nikwʌʔt-"],
+    standalone: ["onikwʌ́·taʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "nikwʌ’té·ne"],
+        one: [["k", "PS"], "nikwʌʔté·ne"],
       },
       {
-        one: [["k", "PS"], "nikwʌ’tá·ke’"],
+        one: [["k", "PS"], "nikwʌʔtá·keʔ"],
       },
     ],
   };
@@ -88,12 +97,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "bellybutton",
     en: ["belly button"],
     dict: [905],
-    root: ["-nli’tst-"],
-    standalone: ["onlí·tsta’", "ontlí·tsta’"],
+    root: ["-nliʔtst-"],
+    standalone: ["onlí·tstaʔ", "ontlí·tstaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PS"], "n", ["t", "RPL"], "li’tstá·ke’"],
+        one: [["ke", "PS"], "n", ["t", "RPL"], "liʔtstá·keʔ"],
       },
     ],
   };
@@ -114,12 +123,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "bladder",
     en: ["bladder"],
     dict: [585, 504, 909],
-    root: ["-nhʌhalakhwa’"],
-    standalone: ["yenhʌhalakhwa’"],
+    root: ["-nhʌhalakhwaʔ"],
+    standalone: ["yenhʌhalakhwaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PS"], "nhʌhalákhwa’"],
+        one: [["ke", "PS"], "nhʌhalákhwaʔ"],
       },
     ],
   };
@@ -128,7 +137,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["blood"],
     dict: [591, 910],
     root: ["-nikwʌhs-"],
-    standalone: ["onikwʌ́hsa’"],
+    standalone: ["onikwʌ́hsaʔ"],
     onNoun: [
       {
         en: "my",
@@ -140,12 +149,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "body",
     en: ["body"],
     dict: [911],
-    root: ["-ya’t-"],
-    standalone: ["oyá·ta’"],
+    root: ["-yaʔt-"],
+    standalone: ["oyá·taʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "ya’té·ne"],
+        one: [["k", "PS"], "yaʔté·ne"],
       },
     ],
   };
@@ -153,12 +162,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "bone",
     en: ["bone"],
     dict: [912],
-    root: ["-styʌ’t-"],
-    standalone: ["óstyʌ’"],
+    root: ["-styʌʔt-"],
+    standalone: ["óstyʌʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PS"], "styʌ’tá·ke’"],
+        one: [["ke", "PS"], "styʌʔtá·keʔ"],
       },
     ],
   };
@@ -167,11 +176,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["braid"],
     dict: [512, 915],
     root: ["-latskʌ-"],
-    standalone: ["olátskʌ’", "olátskʌ’·ta"],
+    standalone: ["olátskʌʔ", "olátskʌʔ·ta"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "latskʌtá·ke’"],
+        one: [["k", "PS"], "latskʌtá·keʔ"],
       },
     ],
   };
@@ -179,12 +188,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "brain",
     en: ["brain"],
     dict: [559],
-    root: ["-na’alatsl-"],
-    standalone: ["ona’alátsla’"],
+    root: ["-naʔalatsl-"],
+    standalone: ["onaʔalátslaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PP"], "na’alatsla’"],
+        one: [["ak", "PP"], "naʔalatslaʔ"],
       },
     ],
   };
@@ -192,12 +201,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "breast",
     en: ["breast"],
     dict: [618],
-    root: ["-nu’t-"],
-    standalone: ["onú·ta’"],
+    root: ["-nuʔt-"],
+    standalone: ["onú·taʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "nu’tá·ke’"],
+        one: [["k", "PS"], "nuʔtá·keʔ"],
       },
     ],
   };
@@ -205,12 +214,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "cheek",
     en: ["cheek"],
     dict: [589],
-    root: ["-nho’kw-"],
-    standalone: ["onhó·kwa’"],
+    root: ["-nhoʔkw-"],
+    standalone: ["onhó·kwaʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["ke", "PS"], "nho’kwá·ke’"],
+        one: [["ke", "PS"], "nhoʔkwá·keʔ"],
       },
     ],
   };
@@ -218,16 +227,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "butt",
     en: ["butt"],
     dict: [386, 926],
-    root: ["-hna’tsh-"],
-    standalone: ["ohná·tsha’", "ohtnusa"],
+    root: ["-hnaʔtsh-"],
+    standalone: ["ohná·tshaʔ", "ohtnusa"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "hna’tshí·ne"],
+        one: [["k", "PS"], "hnaʔtshí·ne"],
       },
       {
         en: "on my",
-        one: [["k", "PS"], "hna’tshá·ke’"],
+        one: [["k", "PS"], "hnaʔtshá·keʔ"],
       },
     ],
   };
@@ -235,12 +244,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "chest",
     en: ["chest"],
     dict: [934],
-    root: ["-utskwe’n-"],
-    standalone: ["utskwé·na’"],
+    root: ["-utskweʔn-"],
+    standalone: ["utskwé·naʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "utskwe’ná·ke’"],
+        one: [["k", "PS"], "utskweʔná·keʔ"],
       },
     ],
   };
@@ -248,16 +257,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "chin",
     en: ["chin"],
     dict: [422, 935],
-    root: ["-hyo’tsh-"],
-    standalone: ["ohyó·tsha’"],
+    root: ["-hyoʔtsh-"],
+    standalone: ["ohyó·tshaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PS"], "hyo’tshé·ne"],
+        one: [["ke", "PS"], "hyoʔtshé·ne"],
       },
       {
         en: "on my",
-        one: [["k", "PS"], "hyo’tshá·ke’"],
+        one: [["k", "PS"], "hyoʔtshá·keʔ"],
       },
     ],
   };
@@ -266,11 +275,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["ear", "ears"],
     dict: [977],
     root: ["-ahuht-"],
-    standalone: ["ohúhta’"],
+    standalone: ["ohúhtaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "ahuhtá·ke’"],
+        one: [["k", "PS"], "ahuhtá·keʔ"],
       },
     ],
   };
@@ -278,16 +287,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "elbow",
     en: ["elbow"],
     dict: [980],
-    root: ["-hyo’lh-", "-lhyo’lh-", "-whyo’lh-"],
-    standalone: ["ohyó·lha’"],
+    root: ["-hyoʔlh-", "-lhyoʔlh-", "-whyoʔlh-"],
+    standalone: ["ohyó·lhaʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["ke", "PS"], "hyo’lhá·ke’"],
+        one: [["ke", "PS"], "hyoʔlhá·keʔ"],
       },
       {
         en: "on my",
-        one: [["ke", "PS"], "lhyo’lhá·ke’"],
+        one: [["ke", "PS"], "lhyoʔlhá·keʔ"],
       },
     ],
   };
@@ -296,11 +305,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["eye", "eyes"],
     dict: [985],
     root: ["-kahl-"],
-    standalone: ["oká·la’"],
+    standalone: ["oká·laʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "kahlá·ke’"],
+        one: [["k", "PS"], "kahlá·keʔ"],
       },
     ],
   };
@@ -308,12 +317,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "eyebrow",
     en: ["eyebrow"],
     dict: [985],
-    root: ["-na’was-"],
-    standalone: ["ona’wa·sé·"],
+    root: ["-naʔwas-"],
+    standalone: ["onaʔwa·sé·"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "na’wasá·ke"],
+        one: [["k", "PS"], "naʔwasá·ke"],
       },
     ],
   };
@@ -321,12 +330,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "eyelash",
     en: ["eyelash", "strawberry top"],
     dict: [985],
-    root: ["-’nekʌhtal-"],
-    standalone: ["o’nekʌhtala’"],
+    root: ["-ʔnekʌhtal-"],
+    standalone: ["oʔnekʌhtalaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "ne’kʌhtalá·ke’"],
+        one: [["k", "PS"], "neʔkʌhtalá·keʔ"],
       },
     ],
   };
@@ -335,7 +344,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["eyelid"],
     dict: [1234123412341234],
     root: ["ROOTWORD"],
-    standalone: ["okahkwilo’ókta’"],
+    standalone: ["okahkwiloʔóktaʔ"],
     onNoun: [
       {
         en: "my",
@@ -348,11 +357,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["face", "mask"],
     dict: [492],
     root: ["-kuhs-", "-kuks-"],
-    standalone: ["okúhsa’"],
+    standalone: ["okúhsaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "kukhsá·ke’"],
+        one: [["k", "PS"], "kukhsá·keʔ"],
       },
       {
         en: "on my",
@@ -364,12 +373,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "nail",
     en: ["fingernail", "toenail", "claw"],
     dict: [995],
-    root: ["-tsye’el-"],
-    standalone: ["otsye’e·lá·"],
+    root: ["-tsyeʔel-"],
+    standalone: ["otsyeʔe·lá·"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "tsye’elá·ke"],
+        one: [["k", "PS"], "tsyeʔelá·ke"],
       },
     ],
   };
@@ -377,8 +386,8 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "foot",
     en: ["foot", "feet"],
     dict: [71, 1004],
-    root: ["-ahsi’t-", "-ahsi-"],
-    standalone: ["ohsí·ta’"],
+    root: ["-ahsiʔt-", "-ahsi-"],
+    standalone: ["ohsí·taʔ"],
     onNoun: [
       {
         en: "on my",
@@ -386,7 +395,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
       },
       {
         en: "on my",
-        one: [["k", "PS"], "ahsi’tá·ke’"],
+        one: [["k", "PS"], "ahsiʔtá·keʔ"],
       },
     ],
   };
@@ -394,12 +403,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "forehead",
     en: ["forehead"],
     dict: [495, 1006],
-    root: ["-ku’kwal-"],
-    standalone: ["okú·kwala’"],
+    root: ["-kuʔkwal-"],
+    standalone: ["okú·kwalaʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "ku’kwalá·ke’"],
+        one: [["k", "PS"], "kuʔkwalá·keʔ"],
       },
     ],
   };
@@ -407,12 +416,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "genitals",
     en: ["genitals", "vagina", "penis"],
     dict: [850],
-    root: ["-’n-"],
-    standalone: ["ó·na’"],
+    root: ["-ʔn-"],
+    standalone: ["ó·naʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "e’ná·ke’"],
+        one: [["k", "PS"], "eʔná·keʔ"],
       },
     ],
   };
@@ -434,11 +443,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["hand", "fingers"],
     dict: [658, 1030],
     root: ["-shnuhs-", "-hsnu-"],
-    standalone: ["oshnúhsa’"],
+    standalone: ["oshnúhsaʔ"],
     onNoun: [
       {
         en: "my hand",
-        one: [["ke", "PS"], "shnú·ke’"],
+        one: [["ke", "PS"], "shnú·keʔ"],
       },
     ],
   };
@@ -455,7 +464,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
       },
       {
         en: "on my",
-        one: [["k", "PS"], "nutsihstá·ke’"],
+        one: [["k", "PS"], "nutsihstá·keʔ"],
       },
     ],
   };
@@ -464,7 +473,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["heart"],
     dict: [1037],
     root: ["-el-", "-ely-", "-elyahs-"],
-    standalone: ["awe·lá·", "awelyáhsa’"],
+    standalone: ["awe·lá·", "awelyáhsaʔ"],
     onNoun: [
       {
         en: "my",
@@ -481,7 +490,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "latá·ke’"],
+        one: [["k", "PS"], "latá·keʔ"],
       },
       {
         en: "on my",
@@ -494,11 +503,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["hip"],
     dict: [589, 1041],
     root: ["-nhuskal-"],
-    standalone: ["onhúskala’"],
+    standalone: ["onhúskalaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PS"], "nhuskalá·ke’"],
+        one: [["ke", "PS"], "nhuskalá·keʔ"],
       },
     ],
   };
@@ -507,11 +516,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["intestines", "guts", "innards"],
     dict: [450],
     root: ["-kahlost-"],
-    standalone: ["okahlósta’"],
+    standalone: ["okahlóstaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PP"], "kahlostá·ke’"],
+        one: [["ak", "PP"], "kahlostá·keʔ"],
       },
     ],
   };
@@ -519,12 +528,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "joint",
     en: ["joint"],
     dict: [671, 1331],
-    root: ["tsi’ te...stutel-", "tsi’ te...stutl-"],
-    standalone: ["ostutla’shúha’"],
+    root: ["tsiʔ te...stutel-", "tsiʔ te...stutl-"],
+    standalone: ["ostutlaʔshúhaʔ"],
     onNoun: [
       {
         en: "my",
-        one: ["tsi’ t", ["wak", "PO"], "estu·téle"],
+        one: ["tsiʔ t", ["wak", "PO"], "estu·téle"],
       },
     ],
   };
@@ -533,11 +542,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["knee"],
     dict: [760, 1062],
     root: ["-utsh-"],
-    standalone: ["útsha’"],
+    standalone: ["útshaʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "utshá·ke’"],
+        one: [["k", "PS"], "utshá·keʔ"],
       },
     ],
   };
@@ -550,11 +559,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "hsiná·ke’"],
+        one: [["k", "PS"], "hsiná·keʔ"],
       },
       // {
       //   en: "???",
-      //   one: [["ak", "PP"], "hsiná·ke’"],
+      //   one: [["ak", "PP"], "hsiná·keʔ"],
       // },
     ],
   };
@@ -563,11 +572,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["liver"],
     dict: [1080],
     root: ["-athwʌhs-"],
-    standalone: ["othwʌ́hsa’"],
+    standalone: ["othwʌ́hsaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["akw", "PP"], "athwʌ́hsa’"],
+        one: [["akw", "PP"], "athwʌ́hsaʔ"],
       },
     ],
   };
@@ -576,11 +585,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["lung"],
     dict: [768, 1088],
     root: ["-wela-"],
-    standalone: ["yewelalákhwa’"],
+    standalone: ["yewelalákhwaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PP"], "welalá·khwa̲’"],
+        one: [["ak", "PP"], "welalá·khwa̲ʔ"],
       },
     ],
   };
@@ -588,12 +597,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "mouth",
     en: ["mouth", "opening"],
     dict: [399],
-    root: ["-hsakahlute’-"],
+    root: ["-hsakahluteʔ-"],
     standalone: ["ohsaká·la"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "sá·ke’"],
+        one: [["k", "PS"], "sá·keʔ"],
       },
     ],
   };
@@ -606,7 +615,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PP"], "hti·lá’"],
+        one: [["ak", "PP"], "hti·láʔ"],
       },
     ],
   };
@@ -632,7 +641,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PS"], "nyalá·ke’"],
+        one: [["ke", "PS"], "nyalá·keʔ"],
       },
     ],
   };
@@ -641,11 +650,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["nipple"],
     dict: [390, 1107],
     root: ["-hnihsy-"],
-    standalone: ["ohníhsya’"],
+    standalone: ["ohníhsyaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "hnihsyá·ke’"],
+        one: [["k", "PS"], "hnihsyá·keʔ"],
       },
     ],
   };
@@ -653,16 +662,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "nose",
     en: ["nose"],
     dict: [866, 1108],
-    root: ["-’nyuhs-"],
-    standalone: ["o’nyúhsa’"],
+    root: ["-ʔnyuhs-"],
+    standalone: ["oʔnyúhsaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PS"], "’nyú·ke’"],
+        one: [["ke", "PS"], "ʔnyú·keʔ"],
       },
       {
         en: "on my",
-        one: [["ke", "PS"], "’nyuhsá·ke’"],
+        one: [["ke", "PS"], "ʔnyuhsá·keʔ"],
       },
     ],
   };
@@ -683,16 +692,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "ribs",
     en: ["ribs"],
     dict: [559, 1152],
-    root: ["-na’aht-"],
-    standalone: ["ona’áhta’"],
+    root: ["-naʔaht-"],
+    standalone: ["onaʔáhtaʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "na’ahtá·ke’"],
+        one: [["k", "PS"], "naʔahtá·keʔ"],
       },
       {
         en: "my",
-        one: [["k", "PS"], "na’ahté·ne"],
+        one: [["k", "PS"], "naʔahté·ne"],
       },
     ],
   };
@@ -701,11 +710,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["rib"],
     dict: [408],
     root: ["-htehkal-"],
-    standalone: ["ohtéhkala’"],
+    standalone: ["ohtéhkalaʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "tehkalá·ke’"],
+        one: [["k", "PS"], "tehkalá·keʔ"],
       },
     ],
   };
@@ -718,7 +727,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["ke", "PS"], "nyʌ’tá·ke’"],
+        one: [["ke", "PS"], "nyʌʔtá·keʔ"],
       },
     ],
   };
@@ -727,7 +736,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["shoulder"],
     dict: [389, 1175],
     root: ["-hnʌhs-", "-hnʌks-"],
-    standalone: ["ohnʌ́hsa’"],
+    standalone: ["ohnʌ́hsaʔ"],
     onNoun: [
       {
         en: "my",
@@ -735,7 +744,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
       },
       {
         en: "on my",
-        one: [["k", "PS"], "hnʌhsá·ke’"],
+        one: [["k", "PS"], "hnʌhsá·keʔ"],
       },
     ],
   };
@@ -744,11 +753,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["skin"],
     dict: [424, 1159],
     root: ["-ihna-", "-hnakwal-"],
-    standalone: ["ohna·kwále’"],
+    standalone: ["ohna·kwáleʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PP"], "hná·kwale’"],
+        one: [["ak", "PP"], "hná·kwaleʔ"],
       },
     ],
   };
@@ -756,16 +765,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "skull",
     en: ["skull", "head"],
     dict: [559],
-    root: ["-na’al-"],
-    standalone: ["ona’a·lá·"],
+    root: ["-naʔal-"],
+    standalone: ["onaʔa·lá·"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "na’alá·ke’"],
+        one: [["k", "PS"], "naʔalá·keʔ"],
       },
       {
         en: "in my",
-        one: [["k", "PS"], "na’alakú"],
+        one: [["k", "PS"], "naʔalakú"],
       },
     ],
   };
@@ -774,11 +783,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["soul"],
     dict: [],
     root: ["-atunhetsl-"],
-    standalone: ["atunhétsla’"],
+    standalone: ["atunhétslaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["akw", "PP"], "atunhetsla’"],
+        one: [["akw", "PP"], "atunhetslaʔ"],
       },
     ],
   };
@@ -786,12 +795,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "spine",
     en: ["spine"],
     dict: [541, 1195],
-    root: ["-luhkwe’n-"],
-    standalone: ["oluhkwé·na’"],
+    root: ["-luhkweʔn-"],
+    standalone: ["oluhkwé·naʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "luhkwehná·ke’"],
+        one: [["k", "PS"], "luhkwehná·keʔ"],
       },
     ],
   };
@@ -799,13 +808,13 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "stomachorgan",
     en: ["stomach (organ)"],
     dict: [484, 1206],
-    root: ["-khwalakhwa’-"],
-    // standalone: ["yekhwalákhwa’"],
+    root: ["-khwalakhwaʔ-"],
+    // standalone: ["yekhwalákhwaʔ"],
     standalone: [],
     onNoun: [
       {
         en: "my",
-        one: [["ke", "PS"], "khwalákhwa’"],
+        one: [["ke", "PS"], "khwalákhwaʔ"],
       },
     ],
   };
@@ -813,12 +822,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "testicles",
     en: ["testicles"],
     dict: [583, 1227],
-    root: ["-nʌya’ke-"],
+    root: ["-nʌyaʔke-"],
     standalone: ["onʌ·yá·"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "nʌyá·ke’"],
+        one: [["k", "PS"], "nʌyá·keʔ"],
       },
     ],
   };
@@ -827,11 +836,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["thigh"],
     dict: [393, 1228],
     root: ["-hnitsh-"],
-    standalone: ["ohnítsha’"],
+    standalone: ["ohnítshaʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "hnitshá·ke’"],
+        one: [["k", "PS"], "hnitshá·keʔ"],
       },
     ],
   };
@@ -839,16 +848,16 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "throat",
     en: ["throat"],
     dict: [411, 1230],
-    root: ["-hu’kw-"],
-    standalone: ["ohú·kwa’"],
+    root: ["-huʔkw-"],
+    standalone: ["ohú·kwaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["k", "PS"], "hu’kwé·ne"],
+        one: [["k", "PS"], "huʔkwé·ne"],
       },
       {
         en: "on my",
-        one: [["k", "PS"], "hu’kwá·ke"],
+        one: [["k", "PS"], "huʔkwá·ke"],
       },
     ],
   };
@@ -856,12 +865,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
   //   key: "KEY",
   //   en: ["key"],
   //   dict: [384],
-  //   root: ["-nya’t-"],
-  //   standalone: ["onyá·ta’", 'onyáhta̲'],
+  //   root: ["-nyaʔt-"],
+  //   standalone: ["onyá·taʔ", 'onyáhta̲'],
   // onNoun: [
   //   {
   //     en: "my",
-  //     one: [["k", "PS"], "enya’tá·ke"],
+  //     one: [["k", "PS"], "enyaʔtá·ke"],
   //   },
   // ],
   // };
@@ -870,11 +879,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["thumb"],
     dict: [771, 1231],
     root: ["-whyuhkal-"],
-    standalone: ["owhyúhkala’"],
+    standalone: ["owhyúhkalaʔ"],
     onNoun: [
       {
         en: "on my",
-        one: [["ke", "PS"], "whyuhkalá·ke’"],
+        one: [["ke", "PS"], "whyuhkalá·keʔ"],
       },
     ],
   };
@@ -887,7 +896,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my",
-        one: [["k", "PS"], "ahyakwí·ke’"],
+        one: [["k", "PS"], "ahyakwí·keʔ"],
       },
     ],
   };
@@ -895,12 +904,12 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     key: "tongue",
     en: ["tongue"],
     dict: [353, 1235],
-    root: ["-ʌ’nahs-"],
-    standalone: ["awʌ’náhsa’"],
+    root: ["-ʌʔnahs-"],
+    standalone: ["awʌʔnáhsaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PP"], "wʌ’náhsa’"],
+        one: [["ak", "PP"], "wʌʔnáhsaʔ"],
       },
     ],
   };
@@ -926,11 +935,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     onNoun: [
       {
         en: "on my tooth",
-        one: [["k", "PS"], "nawilá·ke’"],
+        one: [["k", "PS"], "nawilá·keʔ"],
       },
       {
         en: "my tooth (in my mouth)",
-        one: [["k", "PS"], "nawí·ke’"],
+        one: [["k", "PS"], "nawí·keʔ"],
       },
       {
         en: "my tooth (not in my mouth)",
@@ -943,11 +952,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["vein"],
     dict: [],
     root: [],
-    standalone: ["otsinuhyáhta’"],
+    standalone: ["otsinuhyáhtaʔ"],
     onNoun: [
       {
         en: "my",
-        one: [["ak", "PP"], "tsinuhyáhta’"],
+        one: [["ak", "PP"], "tsinuhyáhtaʔ"],
       },
     ],
   };
@@ -956,7 +965,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     en: ["womb", "uterus"],
     dict: [],
     root: [],
-    standalone: ["kawilalákhwa’"],
+    standalone: ["kawilalákhwaʔ"],
     onNoun: [
       {
         en: "my",
@@ -1037,4 +1046,403 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
   ];
   result.sort((a, b) => a.en[0].localeCompare(b.en[0]));
   return result;
+}
+export function createModule11BodyAilmentsList(): Module11AilmentEntry[] {
+  const objAgony: Module11AilmentEntry = {
+    key: "agony",
+    en: ["agony", "suffering", "hardship"],
+    dict: [542],
+    root: ["-luhyakʌ-"],
+    usage: [
+      {
+        en: "I'm suffering",
+        one: [["wak", "PO"], "luhyakʌ̲́"],
+      },
+    ],
+  };
+  const objBellyache: Module11AilmentEntry = {
+    key: "bellyache",
+    en: ["bellyache"],
+    dict: [72, 905],
+    root: ["-N-nuhwak-", "-yaʔtanuhwak-"],
+    usage: [
+      {
+        en: "my belly hurts",
+        one: [["wak", "PO"], ["nikwʌʔt", "NOUN"], "anú·waks"],
+      },
+    ],
+  };
+  const objBleeding: Module11AilmentEntry = {
+    key: "bleeding",
+    en: ["bleeding"],
+    dict: [575, 909],
+    root: ["-nekhwa-"],
+    usage: [
+      {
+        en: "it is bleeding",
+        one: [["yo", "PO"], "nekhwʌ·u"],
+      },
+      {
+        en: "it is bleeding",
+        one: [["yo", "PO"], "nekhwá·u"],
+      },
+      {
+        en: "my knee is bleeding",
+        one: ["t", ["yo", "PO"], "nekwʌ·u ", ["k", "PS"], "utshá·ke"],
+      },
+    ],
+  };
+  const objBlind: Module11AilmentEntry = {
+    key: "blind",
+    en: ["blind"],
+    dict: [909],
+    root: ["ROOT"],
+    usage: [
+      {
+        en: "I am blind",
+        one: [["te", "DUAL"], ["k", "PS"], "akahkwekú̲"],
+      },
+    ],
+  };
+  const objBreak: Module11AilmentEntry = {
+    key: "break",
+    en: ["break"],
+    dict: [916],
+    root: ["te...atyaʔk-"],
+    usage: [
+      {
+        en: "it is broken",
+        one: [["te", "DUAL"], ["yo", "PO"], "tyá·ku"],
+      },
+      {
+        en: "I have a broken arm",
+        one: [["te", "DUAL"], ["wak", "PO"], "atnʌtshyá·ku"],
+      },
+      {
+        en: "I have a broken arm",
+        one: [["te", "DUAL"], ["yo", "PO"], "atnutshyá·ku"],
+      },
+    ],
+  };
+  const objBruise: Module11AilmentEntry = {
+    key: "bruise",
+    en: ["bruise"],
+    dict: [921],
+    root: ["te...atahsatu-"],
+    usage: [
+      {
+        en: "I have a bruise",
+        one: [["te", "DUAL"], ["wak", "PO"], "atahsa·tó·"],
+      },
+      {
+        en: "I have a bruise",
+        one: [["te", "DUAL"], ["wak", "PO"], "atahsa·tú·"],
+      },
+    ],
+  };
+  const objCancer: Module11AilmentEntry = {
+    key: "cancer",
+    en: ["cancer"],
+    dict: [],
+    root: [],
+    usage: [
+      {
+        one: [["ka", "PS"], "ʔwaláks"],
+      },
+    ],
+  };
+  const objHave: Module11AilmentEntry = {
+    key: "have",
+    en: ["have a cold"],
+    dict: [940],
+    root: ["-atholyahsluʔse-", "-atholyahsluʔs-"],
+    usage: [
+      {
+        en: "I have a cold",
+        one: [["wak", "PO"], "atholyahslú·se"],
+      },
+    ],
+  };
+  const objCough: Module11AilmentEntry = {
+    key: "cough",
+    en: ["cough"],
+    dict: [948],
+    root: ["-ahsaʔk-"],
+    usage: [
+      {
+        en: "I'm coughing",
+        one: [["k", "PS"], "ahsá·khaʔ"],
+      },
+    ],
+  };
+  const objDeaf: Module11AilmentEntry = {
+    key: "deaf",
+    en: ["deaf"],
+    dict: [958],
+    root: ["te...ahuhtakwek-"],
+    usage: [
+      {
+        en: "ENGLISH2",
+        one: [["te", "DUAL"], ["k", "PS"], "ahuhtakwekú̲"],
+      },
+    ],
+  };
+  const objDiabetes: Module11AilmentEntry = {
+    key: "diabetes",
+    en: ["diabetes"],
+    dict: [612],
+    root: ["te...nutakli'tslal-"],
+    usage: [
+      {
+        en: "I am diabetic (lit. I have sugar, I am sweet)",
+        one: [["te", "DUAL"], ["wak", "PO"], ["nutaklí", "NOUN"], "·tslaleʔ"],
+      },
+    ],
+  };
+  const objDiarrhea: Module11AilmentEntry = {
+    key: "diarrhea",
+    en: ["diarrhea"],
+    dict: [961],
+    root: ["te...atya?tukoht-"],
+    usage: [
+      {
+        en: "I have diarrhea (lit. it's going through me)",
+        one: [["te", "DUAL"], ["wak", "PO"], "atyaʔtukóthaʔ"],
+      },
+    ],
+  };
+  const objDisease: Module11AilmentEntry = {
+    key: "disease",
+    en: ["disease"],
+    dict: [585],
+    root: ["-nhlayʌ-"],
+    usage: [
+      {
+        en: "I have a disease",
+        one: [["wak", "PO"], "énhlayʌʔ"],
+      },
+    ],
+  };
+  const objDizzy: Module11AilmentEntry = {
+    key: "dizzy",
+    en: ["dizzy"],
+    dict: [729, 967],
+    root: ["-tsihalateny-"],
+    usage: [
+      {
+        en: "I am dizzy",
+        one: [["wak", "PO"], "tsiʔhalatenyé·sé̲ʔ"],
+      },
+      {
+        en: "I am dizzy",
+        one: [["wak", "PO"], "tsihalatényehseʔ"],
+      },
+    ],
+  };
+  const objEarache: Module11AilmentEntry = {
+    key: "earache",
+    en: ["earache"],
+    dict: [977],
+    root: ["-N-nuhwak-", "-yaʔtanuhwak-"],
+    usage: [
+      {
+        en: "I have an earache",
+        one: [["wak", "PO"], ["ahuht", "NOUN"], "anú·waks"],
+      },
+    ],
+  };
+  const objFever: Module11AilmentEntry = {
+    key: "fever",
+    en: ["fever"],
+    dict: [799, 992],
+    root: ["-yaʔtatalihaʔt-"],
+    usage: [
+      {
+        en: "I have a fever (lit. my body is heating up)",
+        one: [["wak", "PO"], ["yaʔt", "NOUN"], "atalihá·tu"],
+      },
+    ],
+  };
+  const objHurt: Module11AilmentEntry = {
+    key: "hurt",
+    en: ["hurt", "pain"],
+    dict: [607],
+    root: ["nuhwakt(e)-"],
+    usage: [
+      {
+        en: "it hurts",
+        one: [["yo", "PO"], "nuhwákteʔ"],
+      },
+    ],
+  };
+  const objHurtInjured: Module11AilmentEntry = {
+    key: "injured",
+    en: ["hurt", "injured"],
+    dict: [601],
+    root: ["-nuhlyaʔk-"],
+    usage: [
+      {
+        en: "I am injured, I am in pain",
+        one: [["wak", "PO"], "nu·lyá·ku"],
+      },
+    ],
+  };
+  const objItchy: Module11AilmentEntry = {
+    key: "itchy",
+    en: ["itchy"],
+    dict: [1057],
+    root: ["-luhkwani-"],
+    usage: [
+      {
+        en: "I am itchy",
+        one: [["wak", "PO"], "lúhkwanihé̲ʔ"],
+      },
+    ],
+  };
+  const objNaked: Module11AilmentEntry = {
+    key: "naked",
+    en: ["naked"],
+    dict: [1103],
+    root: ["-hetkwal-"],
+    usage: [
+      {
+        en: "I am naked",
+        one: [["wak", "PO"], "hétkwaleʔ"],
+      },
+    ],
+  };
+  const objScar: Module11AilmentEntry = {
+    key: "scar",
+    en: ["scar"],
+    dict: [771, 1163],
+    root: ["-wihlal-"],
+    usage: [
+      {
+        en: "I have a scar",
+        one: [["wak", "PO"], "wí·laleʔ"],
+      },
+      {
+        en: "I have a scar",
+        one: [["wak", "PO"], ["at", "SRFL"], "wi·lale"],
+      },
+    ],
+  };
+  const objSneeze: Module11AilmentEntry = {
+    key: "sneeze",
+    en: ["sneeze"],
+    dict: [445, 1189],
+    root: ["te...i'tsyuhkw-"],
+    usage: [
+      {
+        en: "I sneezed",
+        one: [["waʔ", "DEF"], ["t", "DUAL"], ["wak", "PO"], "í·tsyuhkweʔ"],
+      },
+      {
+        en: "he will sneeze",
+        one: [["t", "DUAL"], ["ʌ", "FUT"], ["hó", "PO"], "·tsyuhkweʔ"],
+      },
+    ],
+  };
+  const objSnotty: Module11AilmentEntry = {
+    key: "snotty",
+    en: ["snotty"],
+    dict: [1189],
+    root: ["-tsi’nyuhklot-"],
+    usage: [
+      {
+        en: "I have a snotty nose",
+        one: [["wak", "PO"], "tsi’nyúhklote’"],
+      },
+    ],
+  };
+  const objStuffy: Module11AilmentEntry = {
+    key: "stuffy",
+    en: ["stuffy nose"],
+    dict: [867],
+    root: ["te...’nyukwek-"],
+    usage: [
+      {
+        en: "My nose is stuffed up",
+        one: [["te", "DUAL"], ["ke", "PO"], "’nyukwekú"],
+      },
+    ],
+  };
+  const objSuffering: Module11AilmentEntry = {
+    key: "suffering",
+    en: ["suffering"],
+    dict: [1212],
+    root: ["te...atunhukaly-"],
+    usage: [
+      {
+        en: "I am suffering",
+        one: [["te", "DUAL"], ["wak", "PO"], ["at", "SRFL"], "unhukáli"],
+      },
+    ],
+  };
+  const objSweating: Module11AilmentEntry = {
+    key: "sweating",
+    en: ["sweating"],
+    dict: [1214],
+    root: ["te...ate’tukhwal-"],
+    usage: [
+      {
+        en: "I am sweating",
+        one: [["te", "DUAL"], ["wak", "PO"], "ate’túkhwale’"],
+      },
+    ],
+  };
+  const objToothache: Module11AilmentEntry = {
+    key: "toothache",
+    en: ["toothache"],
+    dict: [557],
+    root: ["-N-nuhwak-", "-yaʔtanuhwak-"],
+    usage: [
+      {
+        en: "I have a toothache",
+        one: [["wak", "PO"], ["nawil", "NOUN"], "anú·waks"],
+      },
+    ],
+  };
+  const objVomit: Module11AilmentEntry = {
+    key: "vomit",
+    en: ["vomit"],
+    dict: [270],
+    root: ["-atstik-"],
+    usage: [
+      {
+        en: "I am vomiting",
+        one: [["k", "PS"], "atsti·kús"],
+      },
+    ],
+  };
+  return [
+    objAgony,
+    objBellyache,
+    objBleeding,
+    objBlind,
+    objBreak,
+    objBruise,
+    objCancer,
+    objHave,
+    objCough,
+    objDeaf,
+    objDiabetes,
+    objDiarrhea,
+    objDisease,
+    objDizzy,
+    objEarache,
+    objFever,
+    objHurt,
+    objHurtInjured,
+    objItchy,
+    objNaked,
+    objScar,
+    objSneeze,
+    objSnotty,
+    objStuffy,
+    objSuffering,
+    objSweating,
+    objToothache,
+    objVomit,
+  ];
 }
