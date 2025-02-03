@@ -5,49 +5,49 @@ export default createParadigmData({
   type: "PS",
   phrases: [
     {
-      breakdown: [["k"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["k"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["s"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["s"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["l"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["l"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["yu"], "teshwát", ["ha’", "HAB"]],
+      breakdown: [["yu"], "teshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["w"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["w"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["ty"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["ty"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["yaky"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["yaky"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["tsy"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["tsy"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["y"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["y"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["ky"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["ky"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["tw"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["tw"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["yakw"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["yakw"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["sw"], "ateshwát", ["ha’", "HAB"]],
+      breakdown: [["sw"], "ateshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["lu"], "teshwát", ["ha’", "HAB"]],
+      breakdown: [["lu"], "teshwát", ["haʔ", "HAB"]],
     },
     {
-      breakdown: [["ku"], "teshwát", ["ha’", "HAB"]],
+      breakdown: [["ku"], "teshwát", ["haʔ", "HAB"]],
     },
   ],
 });

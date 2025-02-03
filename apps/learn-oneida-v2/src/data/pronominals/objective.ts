@@ -57,7 +57,7 @@ const data: PronominalRules = {
     ],
   },
   u: {
-    default: ["s"],
+    default: [["s", "HAB"]],
     c: ["sa"],
     i: [
       {

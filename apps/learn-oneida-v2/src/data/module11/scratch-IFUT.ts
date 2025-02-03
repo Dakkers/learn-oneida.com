@@ -5,49 +5,73 @@ export default createParadigmData({
   type: "PS",
   phrases: [
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["k"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["k"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["hse"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["hse"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["ha"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["ha"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["ye"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["ye"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["ka"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["ka"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["tni"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["tni"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["yakni"], "ket", "e’"],
+      breakdown: [
+        ["t", "DUAL"],
+        ["á", "IFUT"],
+        ["yakni"],
+        "ket",
+        ["eʔ", "PUNC"],
+      ],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["sni"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["sni"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["hni"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["hni"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["kni"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["kni"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["twa"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["twa"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["yakwa"], "ket", "e’"],
+      breakdown: [
+        ["t", "DUAL"],
+        ["á", "IFUT"],
+        ["yakwa"],
+        "ket",
+        ["eʔ", "PUNC"],
+      ],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["swa"], "ket", "e’"],
+      breakdown: [["t", "DUAL"], ["á", "IFUT"], ["swa"], "ket", ["eʔ", "PUNC"]],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["hati"], "ket", "e’"],
+      breakdown: [
+        ["t", "DUAL"],
+        ["á", "IFUT"],
+        ["hati"],
+        "ket",
+        ["eʔ", "PUNC"],
+      ],
     },
     {
-      breakdown: [['t', 'DUAL'], ["á", "IFUT"], ["kuti"], "ket", "e’"],
+      breakdown: [
+        ["t", "DUAL"],
+        ["á", "IFUT"],
+        ["kuti"],
+        "ket",
+        ["eʔ", "PUNC"],
+      ],
     },
   ],
 });

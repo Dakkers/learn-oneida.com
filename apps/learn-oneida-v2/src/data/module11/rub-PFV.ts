@@ -1,54 +1,54 @@
 import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData({
-  translation: "{{pronoun}} VERB",
+  translation: "{{pronoun}} {{refVerb}} rubbing it",
   type: "PO",
   phrases: [
     {
-      breakdown: [["wak"], "lányu’"],
+      breakdown: [["wak"], "lányuʔ"],
     },
     {
-      breakdown: [["sa"], "lányu’"],
+      breakdown: [["sa"], "lányuʔ"],
     },
     {
-      breakdown: [["lo"], "lányu’"],
+      breakdown: [["lo"], "lányuʔ"],
     },
     {
-      breakdown: [["yako"], "lányu’"],
+      breakdown: [["yako"], "lányuʔ"],
     },
     {
-      breakdown: [["yo"], "lányu’"],
+      breakdown: [["yo"], "lányuʔ"],
     },
     {
-      breakdown: [["yukni"], "lányu’"],
+      breakdown: [["yukni"], "lányuʔ"],
     },
     {
-      breakdown: [["yukni"], "lányu’"],
+      breakdown: [["yukni"], "lányuʔ"],
     },
     {
-      breakdown: [["sni"], "lányu’"],
+      breakdown: [["sni"], "lányuʔ"],
     },
     {
-      breakdown: [["loti"], "lányu’"],
+      breakdown: [["loti"], "lányuʔ"],
     },
     {
-      breakdown: [["yoti"], "lányu’"],
+      breakdown: [["yoti"], "lányuʔ"],
     },
     {
-      breakdown: [["yukwa"], "lányu’"],
+      breakdown: [["yukwa"], "lányuʔ"],
     },
     {
-      breakdown: [["yukwa"], "lányu’"],
+      breakdown: [["yukwa"], "lányuʔ"],
     },
     {
-      breakdown: [["swa"], "lányu’"],
+      breakdown: [["swa"], "lányuʔ"],
     },
     {
-      breakdown: [["loti"], "lányu’"],
+      breakdown: [["loti"], "lányuʔ"],
     },
     {
-      breakdown: [["yoti"], "lányu’"],
+      breakdown: [["yoti"], "lányuʔ"],
     },
   ],
-  whispered:false,
+  whispered: false,
 });

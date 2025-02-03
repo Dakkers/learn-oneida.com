@@ -6,7 +6,7 @@ export default createParadigmData({
   phrases: [
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["ʌhʌ́", "FUT"],
@@ -16,7 +16,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["ʌ", "FUT"],
@@ -26,7 +26,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["ʌ", "FUT"],

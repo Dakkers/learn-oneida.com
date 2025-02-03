@@ -19,7 +19,10 @@ const data: PronominalRules = {
     default: [
       {
         excp: "3",
-        breakdown: [["h", "RPL"], "s"],
+        breakdown: [
+          ["h", "RPL"],
+          ["s", "HAB"],
+        ],
       },
     ],
     c: [
@@ -41,7 +44,10 @@ const data: PronominalRules = {
       "ts",
       {
         excp: "3",
-        breakdown: [["h", "RPL"], "s"],
+        breakdown: [
+          ["h", "RPL"],
+          ["s", "HAB"],
+        ],
       },
     ],
   },

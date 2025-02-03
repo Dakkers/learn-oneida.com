@@ -1,18 +1,18 @@
 import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData({
-  translation: "({{pronoun}}) VERB!",
+  translation: "({{pronoun}}) Rub it!",
   type: "PS",
   phrases: [
     {
-      breakdown: [["s"], "láni’"],
+      breakdown: [["s"], "lániʔ"],
     },
     {
-      breakdown: [["sni"], "láni’"],
+      breakdown: [["sni"], "lániʔ"],
     },
     {
-      breakdown: [["swa"], "láni’"],
+      breakdown: [["swa"], "lániʔ"],
     },
   ],
-  whispered:false,
+  whispered: false,
 });

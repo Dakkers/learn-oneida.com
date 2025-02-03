@@ -1,7 +1,7 @@
 import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData({
-  translation: "{{pronoun}} VERB",
+  translation: "{{pronoun}} am hitting it",
   type: "PO",
   phrases: [
     {

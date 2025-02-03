@@ -41,7 +41,7 @@ const data: PronominalRules = {
     o: ["ak"],
   },
   u: {
-    default: ["s"],
+    default: [["s", "HAB"]],
     c: ["sa"],
     i: [
       {

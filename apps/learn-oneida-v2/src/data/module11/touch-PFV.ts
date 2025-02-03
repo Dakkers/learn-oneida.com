@@ -1,12 +1,12 @@
 import { createParadigmData } from "@/utils/paradigm";
 
 export default createParadigmData({
-  translation: "{{pronoun}} {{refVerb}} touching it",
+  translation: "{{pronoun}} {{refVerbPast}} touched it",
   type: "PO",
   phrases: [
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -17,7 +17,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -28,7 +28,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -39,7 +39,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -50,7 +50,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -61,7 +61,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -72,7 +72,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -83,7 +83,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -94,7 +94,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -105,7 +105,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -116,7 +116,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -127,7 +127,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -138,7 +138,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -149,7 +149,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],
@@ -160,7 +160,7 @@ export default createParadigmData({
     },
     {
       breakdown: [
-        "kʌ’ ",
+        "kʌʔ ",
         ["n", "PTV"],
         ["y", "TRAN"],
         ["e", "EP"],

@@ -5,13 +5,13 @@ export default createParadigmData({
   type: "PS",
   phrases: [
     {
-      breakdown: [['ta', 'RPL'], ["ts"], "ye·ná"],
+      breakdown: [["ta", "RPL"], ["ts"], "ye·ná"],
     },
     {
-      breakdown: [['ta', 'RPL'], ["sni"], "ye·ná"],
+      breakdown: [["ta", "RPL"], ["sni"], "ye·ná"],
     },
     {
-      breakdown: [['ta', 'RPL'], ["swa"], "ye·ná"],
+      breakdown: [["ta", "RPL"], ["swa"], "ye·ná"],
     },
   ],
 });
