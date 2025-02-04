@@ -50,4 +50,5 @@ export default createParadigmData({
       breakdown: [["yon"], "atekhwákw", ["ʌ", "PFV"]],
     },
   ],
+  whispered: false,
 });

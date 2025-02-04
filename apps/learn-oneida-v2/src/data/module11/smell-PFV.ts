@@ -50,4 +50,5 @@ export default createParadigmData({
       breakdown: [["yon"], ["ate", "SRFL"], "shwaht", ["ú", "PFV"]],
     },
   ],
+  whispered: false,
 });

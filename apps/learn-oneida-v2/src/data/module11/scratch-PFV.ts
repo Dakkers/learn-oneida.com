@@ -50,4 +50,5 @@ export default createParadigmData({
       breakdown: [["te", "DUAL"], ["yoti"], "ketú"],
     },
   ],
+  whispered: false,
 });

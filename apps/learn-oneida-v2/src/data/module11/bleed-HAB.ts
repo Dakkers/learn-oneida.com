@@ -50,4 +50,5 @@ export default createParadigmData({
       breakdown: [["kuti"], "nekhwá", ["s", "HAB"]],
     },
   ],
+  whispered: false,
 });

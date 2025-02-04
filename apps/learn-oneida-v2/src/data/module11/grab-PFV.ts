@@ -50,4 +50,5 @@ export default createParadigmData({
       breakdown: [["yoti"], "yen", ["ʌ́", "PFV"]],
     },
   ],
+  whispered: false,
 });
