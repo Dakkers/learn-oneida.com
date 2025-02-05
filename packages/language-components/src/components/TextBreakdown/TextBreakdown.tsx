@@ -4,7 +4,7 @@ import { whisperizeWord } from "../../utils/words";
 
 export type BreakdownType =
   | "ASP" // aspect suffix
-  | "CIS"
+  | "CIS" // cislocative
   | "CL" // clitic
   | "DEF"
   | "DER" // derivational
@@ -31,7 +31,8 @@ export type BreakdownType =
   | "REFL"
   | "REP"
   | "RPL"
-  | "SRFL";
+  | "SRFL"
+  | "TRAN"; // translocative
 
 export type BreakdownArray = Array<
   | string
@@ -64,7 +65,7 @@ export function TextBreakdown({
   const ignored = _ignored ?? (["HAB", "DERIV", "PUNC"] as BreakdownType[]);
 
   return (
-    <Tag>
+    <Tag className="text-xsBodyM md:text-mdBodyM">
       {breakdown.map((part, i) => {
         const innerTextProps = { wrap };
         const isLastPart = i === breakdown.length - 1;
@@ -115,7 +116,7 @@ function InnerText({
         arrayify(type ?? []).map((t: BreakdownType) =>
           t ? BREAKDOWN_TYPE_MAP[t] : undefined,
         ),
-        "font-bold",
+        "font-medium",
         wrap === "nowrap" && "text-nowrap",
       )}
     >
@@ -155,6 +156,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   REP: "text-lime-500",
   RPL: "text-gray-400",
   SRFL: "text-green-700",
+  TRAN: "text-lime-500",
 } as const;
 
 export function convertBreakdownToPlainText(breakdown: BreakdownArray) {

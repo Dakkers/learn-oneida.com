@@ -1,0 +1,53 @@
+import { createParadigmData } from "@/utils/paradigm";
+
+export default createParadigmData({
+  translation: "{{pronoun}} took a bite",
+  type: "PS",
+  phrases: [
+    {
+      breakdown: [["waʔ", "DEF"], ["k"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["wa", "DEF"], ["hs"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["wa", "DEF"], ["h"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["waʔ", "DEF"], ["u"], "tekhwa·kó·"],
+    },
+    {
+      breakdown: [["u"], "tekhwa·kó·"],
+    },
+    {
+      breakdown: [["we", "DEF"], ["ty"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["waʔ", "DEF"], ["aky"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["we", "DEF"], ["tsy"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["wa", "DEF"], ["hy"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["waʔ", "DEF"], ["ky"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["we", "DEF"], ["tw"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["waʔ", "DEF"], ["akw"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["we", "DEF"], ["sw"], "atekhwa·kó·"],
+    },
+    {
+      breakdown: [["wa", "DEF"], ["hu"], "tekhwa·kó·"],
+    },
+    {
+      breakdown: [["waʔ", "DEF"], ["ku"], "tekhwa·kó·"],
+    },
+  ],
+});

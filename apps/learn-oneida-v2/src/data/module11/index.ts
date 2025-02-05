@@ -21,6 +21,10 @@ export interface Module11AilmentEntry extends ModernEntry {
   usage: ListOfBreakdowns;
 }
 
+export interface Module11BodilyFluidEntry extends ModernEntry {
+  breakdown: BreakdownArray;
+}
+
 export function createModule11BodyPartNounList(): BodyPartNounData[] {
   const objAnkle: BodyPartNounData = {
     key: "ankle",
@@ -1047,6 +1051,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
   result.sort((a, b) => a.en[0].localeCompare(b.en[0]));
   return result;
 }
+
 export function createModule11BodyAilmentsList(): Module11AilmentEntry[] {
   const objAgony: Module11AilmentEntry = {
     key: "agony",
@@ -1203,7 +1208,7 @@ export function createModule11BodyAilmentsList(): Module11AilmentEntry[] {
     key: "diarrhea",
     en: ["diarrhea"],
     dict: [961],
-    root: ["te...atya?tukoht-"],
+    root: ["te...atyaʔtukoht-"],
     usage: [
       {
         en: "I have diarrhea (lit. it's going through me)",
@@ -1347,11 +1352,11 @@ export function createModule11BodyAilmentsList(): Module11AilmentEntry[] {
     key: "snotty",
     en: ["snotty"],
     dict: [1189],
-    root: ["-tsi’nyuhklot-"],
+    root: ["-tsiʔnyuhklot-"],
     usage: [
       {
         en: "I have a snotty nose",
-        one: [["wak", "PO"], "tsi’nyúhklote’"],
+        one: [["wak", "PO"], "tsiʔnyúhkloteʔ"],
       },
     ],
   };
@@ -1359,11 +1364,11 @@ export function createModule11BodyAilmentsList(): Module11AilmentEntry[] {
     key: "stuffy",
     en: ["stuffy nose"],
     dict: [867],
-    root: ["te...’nyukwek-"],
+    root: ["te...ʔnyukwek-"],
     usage: [
       {
         en: "My nose is stuffed up",
-        one: [["te", "DUAL"], ["ke", "PO"], "’nyukwekú"],
+        one: [["te", "DUAL"], ["ke", "PO"], "ʔnyukwekú"],
       },
     ],
   };
@@ -1383,11 +1388,11 @@ export function createModule11BodyAilmentsList(): Module11AilmentEntry[] {
     key: "sweating",
     en: ["sweating"],
     dict: [1214],
-    root: ["te...ate’tukhwal-"],
+    root: ["te...ateʔtukhwal-"],
     usage: [
       {
         en: "I am sweating",
-        one: [["te", "DUAL"], ["wak", "PO"], "ate’túkhwale’"],
+        one: [["te", "DUAL"], ["wak", "PO"], "ateʔtúkhwaleʔ"],
       },
     ],
   };
@@ -1445,4 +1450,114 @@ export function createModule11BodyAilmentsList(): Module11AilmentEntry[] {
     objToothache,
     objVomit,
   ];
+}
+
+export function createModule11BodilyFluidsList(): Module11BodilyFluidEntry[] {
+  const objBlood: Module11BodilyFluidEntry = {
+    key: "Blood",
+    en: ["blood"],
+    dict: [910],
+    root: ["-nikwʌhs-"],
+    breakdown: ["onikwʌ́hsaʔ"],
+  };
+  const objEarwax: Module11BodilyFluidEntry = {
+    key: "Earwax",
+    en: ["earwax"],
+    dict: [1215],
+    root: ["-shes-"],
+    breakdown: ["ohsé·s"],
+  };
+  const objFart: Module11BodilyFluidEntry = {
+    key: "Fart",
+    en: ["fart"],
+    dict: [989],
+    root: ["-aniʔteny-"],
+    breakdown: ["aniʔté·n"],
+  };
+  const objExcrement: Module11BodilyFluidEntry = {
+    key: "Excrement",
+    en: ["excrement", "feces"],
+    dict: [984],
+    root: ["-iʔt-"],
+    breakdown: ["ó·taʔ"],
+  };
+  const objBreast: Module11BodilyFluidEntry = {
+    key: "Breast",
+    en: ["breast milk"],
+    dict: [1096],
+    root: ["-nuʔt-"],
+    breakdown: ["onú·taʔ"],
+  };
+  const objPus: Module11BodilyFluidEntry = {
+    key: "Pus",
+    en: ["pus"],
+    dict: [217],
+    root: ["-atkʌ-"],
+    breakdown: ["yotkʌ·ú"],
+  };
+  const objSemen: Module11BodilyFluidEntry = {
+    key: "Semen",
+    en: ["semen"],
+    dict: [576],
+    root: ["-nʌh-"],
+    breakdown: ["onʌ́haʔ"],
+  };
+  const objSnot: Module11BodilyFluidEntry = {
+    key: "Snot",
+    en: ["snot"],
+    dict: [1189],
+    root: ["-tsiʔnyuhkl-"],
+    breakdown: ["otsiʔnyúhkliʔ"],
+  };
+  const objSpit: Module11BodilyFluidEntry = {
+    key: "Spit",
+    en: ["spit", "saliva"],
+    dict: [1195],
+    root: ["-itskl-"],
+    breakdown: ["ótsklaʔ"],
+  };
+  const objSweat: Module11BodilyFluidEntry = {
+    key: "Sweat",
+    en: ["sweat"],
+    dict: [178],
+    root: ["-ateʔtukhwal-"],
+    breakdown: ["oʔtukhwá·laʔ"],
+  };
+  const objTears: Module11BodilyFluidEntry = {
+    key: "Tears",
+    en: ["tears"],
+    dict: [1224],
+    root: ["-kahsl-"],
+    breakdown: ["okáhslaʔ"],
+  };
+  const objUrine: Module11BodilyFluidEntry = {
+    key: "Urine",
+    en: ["urine"],
+    dict: [1249],
+    root: ["-nhʌh-"],
+    breakdown: ["onhʌ́haʔ"],
+  };
+  const objVomit: Module11BodilyFluidEntry = {
+    key: "Vomit",
+    en: ["vomit"],
+    dict: [1253],
+    root: ["-atstik-"],
+    breakdown: ["otstikáhtslaʔ"],
+  };
+  const result = [
+    objBlood,
+    objEarwax,
+    objFart,
+    objExcrement,
+    objBreast,
+    objPus,
+    objSemen,
+    objSnot,
+    objSpit,
+    objSweat,
+    objTears,
+    objUrine,
+    objVomit,
+  ];
+  return result;
 }

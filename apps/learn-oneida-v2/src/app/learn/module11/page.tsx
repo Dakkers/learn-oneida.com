@@ -1,6 +1,7 @@
-"use client";
-
-import { TableOfContents as TOC } from "~/components/TableOfContents";
+import {
+  TableOfContents as TOC,
+  TableOfContentsItem as TocItem,
+} from "~/components/TableOfContents";
 import { Flex, Text, TextArray } from "@ukwehuwehneke/ohutsya";
 import {
   type BreakdownArray,
@@ -13,18 +14,18 @@ import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import {
   type BodyPartNounData,
+  createModule11BodilyFluidsList,
   createModule11BodyAilmentsList,
   createModule11BodyPartNounList,
   type Module11AilmentEntry,
 } from "@/data/module11";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
+import type { Metadata } from "next";
 
-const meta: any = () => {
-  return [
-    { title: "Module 11" },
-    { name: "description", content: "Module 11 of the Oneida curriculum" },
-  ];
+export const metadata: Metadata = {
+  title: "Module 11",
+  description: "Module 11 of the Oneida curriculum.",
 };
 
 export default function LearnModule11() {
@@ -40,13 +41,15 @@ export default function LearnModule11() {
       </Box>
 
       <TOC>
-        <TOC.Item label="Introduction" value="intro" />
-        <TOC.Item label="Body Parts" value="body-parts" />
-        <TOC.Item label="Ailments" value="ailments" />
+        <TocItem label="Introduction" value="intro" />
+        <TocItem label="Body Parts" value="body-parts" />
+        <TocItem label="Bodily Fluids" value="bodily-fluids" />
+        <TocItem label="Ailments" value="ailments" />
       </TOC>
 
       <Introduction />
       <BodyPartsList />
+      <FluidsList />
       <AilmentsList />
     </PageWrapper>
   );
@@ -155,6 +158,35 @@ function AilmentsList() {
           en: datum.en,
           usage: datum.usage,
           dict: datum.dict,
+        }))}
+      />
+    </>
+  );
+}
+
+function FluidsList() {
+  return (
+    <>
+      <SectionHeading id="bodily-fluids" level={2}>
+        Bodily Fluids
+      </SectionHeading>
+
+      <TableWrapper
+        columns={[
+          TableWrapper.englishColumn,
+          {
+            accessorKey: "root",
+            cell: TableWrapper.textArrayCell,
+            header: "Root",
+          },
+          // @ts-expect-error TODO - TableWrapper/Table generics
+          TableWrapper.createTextBreakdownColumn("PO"),
+        ]}
+        data={createModule11BodilyFluidsList().map((datum) => ({
+          en: datum.en,
+          breakdown: datum.breakdown,
+          dict: datum.dict,
+          root: datum.root,
         }))}
       />
     </>
