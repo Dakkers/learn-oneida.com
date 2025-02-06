@@ -31,19 +31,19 @@ export default createParadigmData(
         breakdown: ["yáh thó thyé", ["sn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé·", ["n"], "ehse", ["kweʔ", "PAST"]],
+        breakdown: ["yáh thó thyé·", ["n"], "ehs", ["kweʔ", "PAST"]],
       },
       {
         breakdown: ["yáh thó thyé", ["kn"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé", ["tw"], "eʔse", ["kweʔ", "PAST"]],
+        breakdown: ["yáh thó thyé", ["tw"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thye", ["yákw"], "eʔse", ["kweʔ", "PAST"]],
+        breakdown: ["yáh thó thye", ["yákw"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
-        breakdown: ["yáh thó thyé", ["sw"], "eʔse", ["kweʔ", "PAST"]],
+        breakdown: ["yáh thó thyé", ["sw"], "eʔs", ["kweʔ", "PAST"]],
       },
       {
         breakdown: ["yáh thó thye", ["hʌ·n"], "é·s", ["kweʔ", "PAST"]],

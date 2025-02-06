@@ -22,19 +22,6 @@ export default function About() {
         Indigenous-owned, and always maintained with community input in mind.
       </Text>
 
-      <SectionHeading level={2}>Contributors</SectionHeading>
-
-      <Text>
-        The audio on this website has been painstakingly recorded by faithkeeper
-        and second-language speaker Kaʼshatstʌhslahawi from Oneida-Wisconsin.
-        Her time and commitment to helping us is greatly appreciated!
-      </Text>
-
-      <Text>
-        We would also like to thank Dima Boiko for his time and effort. His
-        feedback has greatly improved the user experience of the website.
-      </Text>
-
       <SectionHeading level={2}>The Anowal Software Team</SectionHeading>
 
       <List>

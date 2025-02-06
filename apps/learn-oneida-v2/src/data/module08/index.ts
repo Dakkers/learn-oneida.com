@@ -57,7 +57,7 @@ export function createModule8CharacteristicsList() {
   const objDark: ObjectCharacteristicVerb = {
     key: "Dark",
     root: ["tet...aʔkala-"],
-    en: ["dark"],
+    en: ["dark-coloured"],
     dict: [],
     verb: [["te", "DUAL"], ["t", "CIS"], ["yo", "PO"], "hsohkwá·kalas"],
     verbNegated: [
@@ -292,7 +292,7 @@ export function createModule8CharacteristicsList() {
   const objLight: ObjectCharacteristicVerb = {
     key: "Light",
     root: ["-wiskl-"],
-    en: ["light in colour"],
+    en: ["light-coloured"],
     dict: [],
     verb: ["owísklaʔ"],
     verbNegated: ["yáh te", ["ka", "PS"], "wískla"],
