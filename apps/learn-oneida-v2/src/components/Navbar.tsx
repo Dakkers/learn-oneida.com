@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 
 import {
@@ -52,6 +50,21 @@ const toolsItems: { title: string; href: string; description: string }[] = [
   },
 ];
 
+const aboutItems: { title: string; href: string }[] = [
+  {
+    title: "About Learn-Oneida",
+    href: "",
+  },
+  {
+    title: "Acknowledgements",
+    href: "/acknowledgements",
+  },
+  {
+    title: "Attributions",
+    href: "/attributions",
+  },
+];
+
 export function Navbar() {
   return (
     <div className="print:hidden">
@@ -66,8 +79,6 @@ export function Navbar() {
 }
 
 function NavbarMobile() {
-  const [isOpen, setIsOpen] = React.useState(false);
-
   const items = [
     {
       href: "/learn",
@@ -123,12 +134,18 @@ function NavbarDesktop() {
     <NavigationMenu className="bg-gray-100">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuLink
-            className={navigationMenuTriggerStyle()}
-            href="/about"
-          >
-            About
-          </NavigationMenuLink>
+          <NavigationMenuTrigger>About</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="flex flex-col w-[240px] gap-3 p-4 ">
+              {aboutItems.map((item, i) => (
+                <ListItem
+                  href={`/about${item.href}`}
+                  key={i}
+                  title={item.title}
+                />
+              ))}
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
