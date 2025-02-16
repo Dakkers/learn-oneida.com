@@ -24,7 +24,7 @@ export function getDialogueModule02() {
     },
     {
       one: [
-        "Táh. Yáh thaʔtetsyakyatyelʌ̲̲́",
+        "Táh. Yáh thaʔtetsyakyatyelʌ̲́",
         "Íhsi nú· wisk niwáhsʌ niyohslaké sʌ́haʔ lokstʌ́haʔ tsiʔ ni·yót niʔí·",
       ],
     },

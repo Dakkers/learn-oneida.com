@@ -9,7 +9,7 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
   const vowels = ["a", "e", "i", "o", "u", "ʌ"];
   const vowelsAccented = ["á", "é", "í", "ó", "ú", "ʌ́"];
   const vowelsWhispered = ["a̲", "e̲", "i̲", "o̲", "u̲", "ʌ̲"];
-  const vowelsWhisperedAccented = ["á̲", "é̲", "í̲", "ó̲", "ú̲", "ʌ̲̲́"];
+  const vowelsWhisperedAccented = ["á̲", "é̲", "í̲", "ó̲", "ú̲", "ʌ̲́"];
   const reversedIndex = word
     .split("")
     .reverse()

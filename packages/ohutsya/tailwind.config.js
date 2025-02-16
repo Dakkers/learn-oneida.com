@@ -39,13 +39,13 @@ export default {
     fontSize: {
       // XS screen sizes
       xsLabelS: ['0.625rem', {
-        fontWeight: '600'
+        fontWeight: '500'
       }],
       xsLabelM: ['0.75rem', {
-        fontWeight: '600'
+        fontWeight: '500'
       }],
       xsLabelL: ['0.875rem', {
-        fontWeight: '600'
+        fontWeight: '500'
       }],
       xsBodyS: ['0.75rem', {
         fontWeight: '400'
@@ -76,13 +76,13 @@ export default {
       }],
       // MD screen sizes
       mdLabelS: ['0.75rem', {
-        fontWeight: '600'
+        fontWeight: '500'
       }],
       mdLabelM: ['0.875rem', {
-        fontWeight: '600'
+        fontWeight: '500'
       }],
       mdLabelL: ['1rem', {
-        fontWeight: '600'
+        fontWeight: '500'
       }],
       mdBodyS: ['0.875rem', {
         fontWeight: '400'

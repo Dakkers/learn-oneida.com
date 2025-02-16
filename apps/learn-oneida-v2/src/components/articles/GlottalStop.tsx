@@ -10,7 +10,7 @@ export function GlottalStopArticle({ level = 1 }: ArticleProps) {
   const list1 = [
     "oʔwá·lu̲ʔ",
     "oʔsluniʔkéha̲",
-    "otsiʔnowʌ̲̲́",
+    "otsiʔnowʌ̲́",
     "kátsheʔ",
     "otsí·tsyaʔ",
   ];

@@ -21,12 +21,14 @@ import {
 
 export interface EnglishToOneidaQuizProps {
   englishOptions: QuizOption[];
+  hasAudio?: boolean;
   hasImages?: boolean;
   oneidaOptions: QuizOption[];
 }
 
 interface Question {
   answer: string;
+  audioFile?: string;
   img?: string;
   key: string;
   options: QuizOption[];
@@ -36,6 +38,7 @@ interface Question {
 
 export function EnglishToOneidaQuiz({
   englishOptions,
+  hasAudio = false,
   hasImages = false,
   oneidaOptions,
 }: EnglishToOneidaQuizProps) {
