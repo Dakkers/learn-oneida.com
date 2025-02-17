@@ -1,4 +1,13 @@
-import type { BreakdownArray } from "@ukwehuwehneke/language-components";
+import {
+  formatFileWithSuffix,
+  getIndexSuffixforFile,
+  standardizeAudioFileName,
+} from "@/utils/misc";
+import {
+  convertBreakdownToPlainText,
+  isWordWhispered,
+  type BreakdownArray,
+} from "@ukwehuwehneke/language-components";
 
 type ListOfBreakdowns = Array<{
   en?: string;
@@ -12,14 +21,18 @@ interface ModernEntry {
   dict: number[];
 }
 
+type AnimalDatumType = "m" | "i" | "b"; // mammal...
+
 export interface Module12AnimalDatum extends ModernEntry {
   singular: ListOfBreakdowns;
   plural: ListOfBreakdowns;
+  type: AnimalDatumType;
 }
 
 export function createModule12MammalsList(): Module12AnimalDatum[] {
   const objBat: Module12AnimalDatum = {
     key: "bat",
+    type: "m",
     en: ["bat"],
     dict: [736, 901],
     root: [],
@@ -32,6 +45,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objBear: Module12AnimalDatum = {
     key: "bear",
+    type: "m",
     en: ["bear"],
     dict: [],
     root: [],
@@ -44,6 +58,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objBeaver: Module12AnimalDatum = {
     key: "beaver",
+    type: "m",
     en: ["beaver"],
     dict: [],
     root: [],
@@ -59,6 +74,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objBison: Module12AnimalDatum = {
     key: "bison",
+    type: "m",
     en: ["bison"],
     dict: [921, 1281],
     root: [],
@@ -74,6 +90,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objBuffalo: Module12AnimalDatum = {
     key: "buffalo",
+    type: "m",
     en: ["buffalo"],
     dict: [],
     root: [],
@@ -86,6 +103,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objChipmunk: Module12AnimalDatum = {
     key: "chipmunk",
+    type: "m",
     en: ["chipmunk"],
     dict: [],
     root: [],
@@ -98,6 +116,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objCoyote: Module12AnimalDatum = {
     key: "coyote",
+    type: "m",
     en: ["coyote"],
     dict: [328],
     root: [],
@@ -111,6 +130,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objDeer: Module12AnimalDatum = {
     key: "deer",
+    type: "m",
     en: ["deer"],
     dict: [],
     root: [],
@@ -126,6 +146,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objFox: Module12AnimalDatum = {
     key: "fox",
+    type: "m",
     en: ["fox"],
     dict: [],
     root: [],
@@ -138,6 +159,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objGroundhog: Module12AnimalDatum = {
     key: "groundhog",
+    type: "m",
     en: ["groundhog"],
     dict: [1027],
     root: [],
@@ -150,6 +172,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objLynx: Module12AnimalDatum = {
     key: "lynx",
+    type: "m",
     en: ["lynx", "cougar", "lion"],
     dict: [930],
     root: [],
@@ -162,6 +185,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objMink: Module12AnimalDatum = {
     key: "mink",
+    type: "m",
     en: ["mink"],
     dict: [438],
     root: [],
@@ -174,6 +198,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objMole: Module12AnimalDatum = {
     key: "mole",
+    type: "m",
     en: ["mole"],
     dict: [1282],
     root: [],
@@ -186,6 +211,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objMoose: Module12AnimalDatum = {
     key: "moose",
+    type: "m",
     en: ["moose"],
     dict: [],
     root: [],
@@ -198,6 +224,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objMouse: Module12AnimalDatum = {
     key: "mouse",
+    type: "m",
     en: ["mouse"],
     dict: [],
     root: [],
@@ -210,6 +237,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objMuskrat: Module12AnimalDatum = {
     key: "muskrat",
+    type: "m",
     en: ["muskrat"],
     dict: [],
     root: [],
@@ -222,6 +250,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objOpposum: Module12AnimalDatum = {
     key: "opposum",
+    type: "m",
     en: ["opposum"],
     dict: [],
     root: [],
@@ -234,6 +263,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objOtter: Module12AnimalDatum = {
     key: "otter",
+    type: "m",
     en: ["otter"],
     dict: [],
     root: [],
@@ -246,6 +276,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objPorcupine: Module12AnimalDatum = {
     key: "porcupine",
+    type: "m",
     en: ["porcupine"],
     dict: [1129],
     root: [],
@@ -258,6 +289,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objRabbit: Module12AnimalDatum = {
     key: "rabbit",
+    type: "m",
     en: ["rabbit"],
     dict: [],
     root: [],
@@ -270,6 +302,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objJackrabbit: Module12AnimalDatum = {
     key: "jackrabbit",
+    type: "m",
     en: ["jackrabbit"],
     dict: [],
     root: [],
@@ -282,6 +315,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objRaccoon: Module12AnimalDatum = {
     key: "raccoon",
+    type: "m",
     en: ["raccoon"],
     dict: [],
     root: [],
@@ -294,6 +328,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objRat: Module12AnimalDatum = {
     key: "rat",
+    type: "m",
     en: ["rat"],
     dict: [],
     root: [],
@@ -306,6 +341,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objSkunk: Module12AnimalDatum = {
     key: "skunk",
+    type: "m",
     en: ["skunk"],
     dict: [],
     root: [],
@@ -318,6 +354,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objSquirrel: Module12AnimalDatum = {
     key: "squirrel",
+    type: "m",
     en: ["black squirrel", "grey squirrel"],
     dict: [],
     root: [],
@@ -333,6 +370,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objFlyingSquirrel: Module12AnimalDatum = {
     key: "flyingSquirrel",
+    type: "m",
     en: ["flying squirrel"],
     dict: [],
     root: [],
@@ -345,6 +383,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objRedSquirrel: Module12AnimalDatum = {
     key: "redSquirrel",
+    type: "m",
     en: ["red squirrel"],
     dict: [],
     root: [],
@@ -360,6 +399,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objWeasel: Module12AnimalDatum = {
     key: "weasel",
+    type: "m",
     en: ["weasel"],
     dict: [],
     root: [],
@@ -372,6 +412,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
   };
   const objWolf: Module12AnimalDatum = {
     key: "wolf",
+    type: "m",
     en: ["wolf"],
     dict: [],
     root: [],
@@ -420,4 +461,41 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
 
 export function createModule12AnimalsList(): Module12AnimalDatum[] {
   return [...createModule12MammalsList()];
+}
+
+export function getAudioFiles(
+  datum: Module12AnimalDatum,
+  key: "singular" | "plural",
+  index = 0,
+) {
+  const t =
+    datum.type === "b"
+      ? "birds"
+      : datum.type === "i"
+        ? "insects"
+        : datum.type === "m"
+          ? "mammals"
+          : "";
+
+  const base = standardizeAudioFileName(`module12/${t}/${key}/${datum.key}`);
+
+  const wordList = datum[key];
+  const word = wordList[index];
+  const oneidaTxt =
+    typeof word.one === "string"
+      ? word.one
+      : convertBreakdownToPlainText(word.one);
+
+  const result = [formatFileWithSuffix(`${base}.mp3`, wordList, index)];
+
+  if (isWordWhispered(oneidaTxt)) {
+    result.unshift(
+      standardizeAudioFileName(
+        base +
+          getIndexSuffixforFile(`${base}.mp3`, wordList, index) +
+          "_pp.mp3",
+      ),
+    );
+  }
+  return result;
 }

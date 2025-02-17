@@ -4,7 +4,7 @@ import type {
 } from "@ukwehuwehneke/language-components";
 import _ from "lodash";
 
-export function formatFileWithSuffix(
+export function getIndexSuffixforFile(
   filepath: string,
   items: unknown,
   index = 0,
@@ -14,13 +14,25 @@ export function formatFileWithSuffix(
     items.length === 1 ||
     filepath.match(/_[0-9]+$/)
   ) {
+    return "";
+  }
+  return `_${index + 1}`;
+}
+
+export function formatFileWithSuffix(
+  filepath: string,
+  items: unknown,
+  index = 0,
+) {
+  const indexSuffix = getIndexSuffixforFile(filepath, items, index);
+  if (!indexSuffix) {
     return filepath;
   }
   const fileSplit = filepath.split("/");
   const filenameFull = fileSplit[fileSplit.length - 1];
   const [filename, ...extensions] = filenameFull.split(".");
   const ext = extensions.join(".");
-  return `${fileSplit.slice(0, fileSplit.length - 1).join("/")}/${filename}_${index + 1}.${ext}`;
+  return `${fileSplit.slice(0, fileSplit.length - 1).join("/")}/${filename}${indexSuffix}.${ext}`;
 }
 
 export function formatAudioFileWithSuffix(

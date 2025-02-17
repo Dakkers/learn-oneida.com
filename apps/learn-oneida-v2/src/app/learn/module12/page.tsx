@@ -1,8 +1,15 @@
+"use client";
 import {
   TableOfContents as TOC,
   TableOfContentsItem as TocItem,
 } from "~/components/TableOfContents";
-import { Flex, Text, TextArray } from "@ukwehuwehneke/ohutsya";
+import {
+  Flex,
+  PlayButton,
+  PlayButtonProps,
+  Text,
+  TextArray,
+} from "@ukwehuwehneke/ohutsya";
 import {
   type BreakdownArray,
   SectionHeading,
@@ -15,15 +22,17 @@ import _ from "lodash";
 import {
   type Module12AnimalDatum,
   createModule12MammalsList,
+  getAudioFiles,
 } from "@/data/module12";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
+import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "Module 12",
-  description: "Module 12 of the Oneida curriculum.",
-};
+// export const metadata: Metadata = {
+//   title: "Module 12",
+//   description: "Module 12 of the Oneida curriculum.",
+// };
 
 export default function LearnModule12() {
   return (
@@ -96,8 +105,11 @@ function AnimalTable({ data }: { data: Module12AnimalDatum[] }) {
         {
           accessorKey: "singular",
           // @ts-expect-error TODO - TableWrapper/Table generics
-          cell: (singular: Module12AnimalDatum["singular"]) => {
-            return <CustomCell value={singular} />;
+          cell: (
+            singular: Module12AnimalDatum["singular"],
+            row: Module12AnimalDatum,
+          ) => {
+            return <CustomCell blah="singular" row={row} value={singular} />;
           },
           header: "Single",
         },
@@ -117,8 +129,12 @@ function AnimalTable({ data }: { data: Module12AnimalDatum[] }) {
 }
 
 function CustomCell({
+  blah,
+  row,
   value,
 }: {
+  blah: "singular" | "plural";
+  row: Module12AnimalDatum;
   value:
     | string
     | string[]
@@ -129,28 +145,54 @@ function CustomCell({
 }) {
   return (
     <Flex direction="column" gap={4}>
-      {typeof value === "string"
-        ? value
-        : (value ?? []).map((obj, i) => (
+      {typeof value === "string" ? (
+        <TextWithAudio filepath={getAudioFiles(row, blah)[0]}>
+          {value}
+        </TextWithAudio>
+      ) : (
+        (value ?? []).map((obj, i) => {
+          const fs = getAudioFiles(row, blah, i);
+          console.log(fs);
+
+          return (
             <Flex direction="column" gap={0} key={i}>
               {typeof obj === "string" ? (
-                obj
+                <TextWithAudio filepath={fs}>{obj}</TextWithAudio>
               ) : (
                 <>
                   {typeof obj.one === "string" ? (
-                    <Text>{obj.one}</Text>
+                    <TextWithAudio filepath={fs}>{obj.one}</TextWithAudio>
                   ) : (
-                    <TextBreakdown
-                      breakdown={obj.one}
-                      typeFallback="PS"
-                      wrap="nowrap"
-                    />
+                    <TextWithAudio filepath={fs}>
+                      <TextBreakdown
+                        breakdown={obj.one}
+                        typeFallback="PS"
+                        wrap="nowrap"
+                      />
+                    </TextWithAudio>
                   )}
                   {obj.en && <Text variant="labelS">{obj.en}</Text>}
                 </>
               )}
             </Flex>
-          ))}
+          );
+        })
+      )}
+    </Flex>
+  );
+}
+
+function TextWithAudio({
+  children,
+  filepath,
+}: {
+  children: ReactNode;
+  filepath: string | string[];
+}) {
+  return (
+    <Flex gap={2}>
+      <PlayButton filepath={filepath} />
+      {children}
     </Flex>
   );
 }

@@ -8,4 +8,5 @@ export * from "./primitives/input";
 // export * from "./primitives/link";
 export * from "./primitives/navigation-menu";
 export * from "./primitives/table";
+export * from "./utils/misc";
 export * from "./utils/tailwind";
