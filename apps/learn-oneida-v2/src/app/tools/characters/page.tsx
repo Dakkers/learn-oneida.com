@@ -99,6 +99,7 @@ function CustomCell({ val }: { val: string }) {
     <button
       className="border p-2 border-2"
       onClick={() => copyTextToClipboard(val)}
+      type="button"
     >
       <Text variant="headlineM">{val}</Text>
     </button>
@@ -107,10 +108,10 @@ function CustomCell({ val }: { val: string }) {
 
 function copyTextToClipboard(text: string) {
   navigator.clipboard.writeText(text.trim()).then(
-    function () {
+    () => {
       // Meh
     },
-    function () {
+    () => {
       // Meh
     },
   );

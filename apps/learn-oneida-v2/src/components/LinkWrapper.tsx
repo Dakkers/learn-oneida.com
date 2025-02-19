@@ -63,7 +63,6 @@ export function LinkWrapper({
     8,
     9,
     10,
-    12,
   ];
 
   if (NON_EXISTENT_PAGES.includes(page)) {

@@ -1,5 +1,5 @@
 "use client";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { arrayify, Flex } from "@ukwehuwehneke/ohutsya";
 import {
   AnswerMultipleChoiceButtons,
   QuizContainerContext,
@@ -10,7 +10,7 @@ import {
 } from "./QuizContainer";
 import { Quiz, useQuizContext } from "./Quiz";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
@@ -18,6 +18,8 @@ import {
   sanitizeIrregularCharacters,
   standardizeCharacters,
 } from "@ukwehuwehneke/language-components";
+import { AudioTrack, AudioTrackProps } from "../AudioTrack";
+import WaveSurfer from "wavesurfer.js";
 
 export interface EnglishToOneidaQuizProps {
   englishOptions: QuizOption[];
@@ -43,10 +45,10 @@ export function EnglishToOneidaQuiz({
   oneidaOptions,
 }: EnglishToOneidaQuizProps) {
   const [languageSetting, setLanguageSetting] = React.useState(
-    hasImages ? "en" : "both",
+    hasImages || hasAudio ? "en" : "both",
   );
   const [answerSetting, setAnswerSetting] = React.useState(
-    hasImages ? "multipleChoice" : "text",
+    hasImages || hasAudio ? "multipleChoice" : "text",
   );
   const [questionCountSetting, setQuestionCountSetting] = React.useState("5");
 
@@ -54,6 +56,7 @@ export function EnglishToOneidaQuiz({
     <QuizContainerContext.Provider
       value={{
         answerSetting,
+        hasAudio,
         hasImages,
         languageSetting,
         questionCountSetting,
@@ -113,8 +116,8 @@ function Content({ englishOptions, oneidaOptions }: EnglishToOneidaQuizProps) {
       ) : (
         <Flex direction="column" gap={4}>
           <Settings
-            enableLanguageSetting={!context.hasImages}
-            enableAnswerTypeSetting={!context.hasImages}
+            enableLanguageSetting={!context.hasImages && !context.hasAudio}
+            enableAnswerTypeSetting={!context.hasImages && !context.hasAudio}
           />
 
           <Box>
@@ -132,11 +135,13 @@ interface TypicalOptions {
 }
 
 export function StandardQuestion({
+  audioFile,
   img,
   options,
   questionKey,
   text,
 }: {
+  audioFile?: AudioTrackProps["audioFile"];
   img?: string;
   options: QuizOption[];
   questionKey: string;
@@ -146,7 +151,9 @@ export function StandardQuestion({
   const quizContext = useQuizContext();
   return (
     <Flex align="center" direction="column" gap={8}>
-      {img ? (
+      {audioFile ? (
+        <AudioTrackWrapper audioFile={audioFile} />
+      ) : img ? (
         <img alt={text} className="h-[250px]" src={img} />
       ) : (
         <Text variant="headlineS">{text}</Text>
@@ -290,4 +297,29 @@ function determineLangKey(languageSetting: string): "en" | "on" {
     return languageSetting;
   }
   return Math.random() < 0.5 ? "en" : "on";
+}
+
+function AudioTrackWrapper({
+  audioFile,
+}: {
+  audioFile: string | string[]
+}) {
+  const files = arrayify(audioFile)
+  const [prev, setPrev] = useState(null);
+  const [src, setSrc] = useState(audioFile);
+
+  if (prev !== audioFile) {
+    setPrev(audioFile);
+    if (files.length > 1) {
+
+    } else {
+      setSrc()
+    }
+  }
+
+  return (
+    <>
+      <audio src="" />
+    </>
+  );
 }

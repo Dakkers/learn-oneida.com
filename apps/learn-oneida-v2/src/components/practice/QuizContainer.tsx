@@ -16,6 +16,7 @@ export interface QuizOption {
 
 interface QuizContainerContextProps {
   answerSetting: string;
+  hasAudio?: boolean;
   hasImages?: boolean;
   languageSetting: string;
   questionCountSetting: string;

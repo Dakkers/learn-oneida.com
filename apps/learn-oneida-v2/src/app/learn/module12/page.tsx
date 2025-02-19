@@ -27,7 +27,7 @@ import {
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 // export const metadata: Metadata = {
 //   title: "Module 12",

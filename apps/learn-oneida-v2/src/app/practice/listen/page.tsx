@@ -1,16 +1,9 @@
 "use client";
-import React, {
-  type RefObject,
-  useCallback,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import React, { useMemo, useRef, useState } from "react";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box, Button, Card, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import type WaveSurfer from "wavesurfer.js";
-import WavesurferPlayer from "@wavesurfer/react";
 import { arrayify } from "@ukwehuwehneke/language-components";
 import {
   getClanAnimalList,
@@ -42,6 +35,7 @@ import {
 import { createTimesOfDayData } from "@/data/module04";
 import { PageWrapper } from "@/components/PageWrapper";
 import { Metadata } from "next";
+import { AudioTrack } from "@/components/AudioTrack";
 
 // export const metadata: Metadata = {
 //   title: "Listening Practice",
@@ -329,7 +323,7 @@ export default function PracticeListening() {
             </Text>
 
             <Box pt={4}>
-              <Player
+              <AudioTrack
                 audioFile={audioFileFormatted}
                 autoplay
                 onPlay={setIsPlaying}
@@ -379,86 +373,4 @@ export default function PracticeListening() {
       )}
     </PageWrapper>
   );
-}
-
-function Player({
-  audioFile,
-  autoplay = false,
-  onPlay,
-  wavesurferRef,
-}: {
-  audioFile: string;
-  autoplay?: boolean;
-  onPlay: (value: boolean) => void;
-  wavesurferRef?: RefObject<{ value: WaveSurfer | null }>;
-}) {
-  const [duration, setDuration] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [hasFinishedPlayback, setHasFinishedPlayback] = useState(false);
-  const [prevAudioFile, setPrevAudioFile] = useState(audioFile);
-
-  if (audioFile !== prevAudioFile) {
-    setCurrentTime(0);
-    setPrevAudioFile(audioFile);
-    setHasFinishedPlayback(false);
-  }
-
-  // biome-ignore lint/correctness/useExhaustiveDependencies: not sure if this is easy to fix
-  const onReady = useCallback(
-    (ws: WaveSurfer, audioDuration: number) => {
-      if (wavesurferRef?.current) {
-        wavesurferRef.current.value = ws;
-      }
-      onPlay(false);
-      setDuration(audioDuration);
-      if (autoplay) {
-        ws.playPause();
-      }
-    },
-    [autoplay],
-  );
-
-  const durationFormatted = useMemo(() => {
-    if (duration === 0) {
-      return "0:01";
-    }
-    return formatSecondsAsTime(duration);
-  }, [duration]);
-
-  const currentTimeFormatted = useMemo(
-    () => formatSecondsAsTime(currentTime),
-    [currentTime],
-  );
-
-  return (
-    <>
-      <WavesurferPlayer
-        height={100}
-        onReady={onReady}
-        onClick={() => wavesurferRef?.current.value?.play()}
-        onPlay={() => onPlay(true)}
-        onPause={() => onPlay(false)}
-        onFinish={() => setHasFinishedPlayback(true)}
-        onTimeupdate={(ws, time) => {
-          setCurrentTime(time);
-          setHasFinishedPlayback(false);
-        }}
-        url={audioFile}
-        waveColor="#F3F4F6"
-      />
-
-      <Flex justify="between">
-        <Text>
-          {hasFinishedPlayback ? durationFormatted : currentTimeFormatted}
-        </Text>
-        <Text>{durationFormatted}</Text>
-      </Flex>
-    </>
-  );
-}
-
-function formatSecondsAsTime(value: number) {
-  const seconds = Math.floor(value) % 60;
-  const minutes = Math.floor(value / 60);
-  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 }

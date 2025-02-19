@@ -1,7 +1,7 @@
 "use client";
 import { PlayIcon } from "lucide-react";
-import Crunker from "crunker";
 import { arrayify } from "~/utils";
+import { concatAudio } from "~/utils/audio";
 
 export interface PlayButtonProps {
   "aria-label"?: string;
@@ -22,20 +22,9 @@ export function PlayButton({
       className="border border-gray-500 rounded w-[24px] h-[24px] flex justify-center items-center shrink-0 inline-flex"
       onClick={() => {
         if (filepath.length > 1) {
-          const crunker = new Crunker();
-
-          crunker
-            .fetchAudio(...filepath)
-            .then((buffers) =>
-              crunker.mergeAudio(
-                buffers.map((buffer, i) =>
-                  i === 0 ? buffer : crunker.padAudio(buffer, 0, 1.8),
-                ),
-              ),
-            )
-            .then((merged) => {
-              crunker.play(merged);
-            });
+          concatAudio(filepath).then(([result, instance]) => {
+            instance.play(result);
+          });
         } else {
           new Audio(filepath[0]).play();
         }

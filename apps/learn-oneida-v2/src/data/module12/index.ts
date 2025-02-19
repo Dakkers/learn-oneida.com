@@ -369,7 +369,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     plural: [],
   };
   const objFlyingSquirrel: Module12AnimalDatum = {
-    key: "flyingSquirrel",
+    key: "flying_squirrel",
     type: "m",
     en: ["flying squirrel"],
     dict: [],
@@ -382,7 +382,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     plural: [],
   };
   const objRedSquirrel: Module12AnimalDatum = {
-    key: "redSquirrel",
+    key: "red_squirrel",
     type: "m",
     en: ["red squirrel"],
     dict: [],
@@ -489,13 +489,8 @@ export function getAudioFiles(
   const result = [formatFileWithSuffix(`${base}.mp3`, wordList, index)];
 
   if (isWordWhispered(oneidaTxt)) {
-    result.unshift(
-      standardizeAudioFileName(
-        base +
-          getIndexSuffixforFile(`${base}.mp3`, wordList, index) +
-          "_pp.mp3",
-      ),
-    );
+    const suffix = getIndexSuffixforFile(`${base}.mp3`, wordList, index);
+    result.unshift(standardizeAudioFileName(`${base}${suffix}_pp.mp3`));
   }
   return result;
 }
