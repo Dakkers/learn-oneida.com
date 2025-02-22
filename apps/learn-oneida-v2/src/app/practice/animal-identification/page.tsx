@@ -23,7 +23,7 @@ import { QuizResults } from "@/components/QuizResults";
 
 export default function PracticeAnimalIdentification() {
   const englishOptions = useMemo(() => {
-    const result = [];
+    const result: AudioQuizProps["englishOptions"] = [];
     const list = createModule12AnimalsList();
     for (const datum of list) {
       const key = datum.key;
@@ -39,7 +39,7 @@ export default function PracticeAnimalIdentification() {
   }, []);
 
   const oneidaPhrases = useMemo(() => {
-    const result = [];
+    const result: AudioQuizProps["oneidaPhrases"] = [];
     const list = createModule12AnimalsList();
     for (const datum of list) {
       const key = datum.key;
@@ -77,10 +77,7 @@ export default function PracticeAnimalIdentification() {
   );
 }
 
-function AudioQuiz({
-  englishOptions,
-  oneidaPhrases,
-}: {
+interface AudioQuizProps {
   englishOptions: {
     key: string;
     text: string;
@@ -90,7 +87,9 @@ function AudioQuiz({
     audioFile: string;
     text: string;
   }[];
-}) {
+}
+
+function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
   const theList = useMemo(() => {
     const result = [];
     for (const p of oneidaPhrases) {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { type Meta, type StoryFn, StoryObj } from "@storybook/react";
-import { QuizButton, QuizButtonProps } from "./QuizButton";
+import type { Meta, StoryFn } from "@storybook/react";
+import { QuizButton } from "./QuizButton";
 import { Box, Flex } from "@ukwehuwehneke/ohutsya";
 
 const meta = {
@@ -14,7 +14,7 @@ const meta = {
 
 export default meta;
 
-export const Default: StoryFn<typeof meta> = (args) => (
+export const Basic: StoryFn<typeof meta> = (args) => (
   <Flex direction="column">
     <QuizButton {...args} onClick={() => window.alert("Clicked!")}>
       bat

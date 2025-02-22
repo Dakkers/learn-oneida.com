@@ -27,7 +27,6 @@ export interface EnglishToOneidaQuizProps {
 
 interface Question {
   answer: string;
-  audioFile?: string | string[];
   img?: string;
   key: string;
   options: QuizOption[];
@@ -229,7 +228,6 @@ export function useEnglishToOneidaQuestions({
       result[i] = {
         answer: answerDatum?.text ?? "",
         key: questionDatum.key,
-        audioFile: questionDatum.audioFile,
         img: questionDatum.img,
         options: _.shuffle(optionsForQuestion),
         text: questionDatum.text,

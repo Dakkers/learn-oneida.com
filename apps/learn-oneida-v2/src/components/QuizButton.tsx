@@ -104,12 +104,10 @@ export function useControlStyles({
   disabled = false,
   emphasis = "outline",
   intent = "secondary",
-  size = "md",
 }: {
   disabled?: boolean;
   emphasis?: Emphasis;
   intent?: Intent;
-  size?: Size;
 } = {}) {
   return {
     baseStyle: cn(
