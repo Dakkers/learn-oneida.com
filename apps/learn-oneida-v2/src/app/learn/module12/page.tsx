@@ -22,7 +22,7 @@ import _ from "lodash";
 import {
   type Module12AnimalDatum,
   createModule12MammalsList,
-  getAudioFiles,
+  getAudioFilesForModule12AnimalDatum,
 } from "@/data/module12";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
@@ -146,12 +146,14 @@ function CustomCell({
   return (
     <Flex direction="column" gap={4}>
       {typeof value === "string" ? (
-        <TextWithAudio filepath={getAudioFiles(row, blah)[0]}>
+        <TextWithAudio
+          filepath={getAudioFilesForModule12AnimalDatum(row, blah)[0]}
+        >
           {value}
         </TextWithAudio>
       ) : (
         (value ?? []).map((obj, i) => {
-          const fs = getAudioFiles(row, blah, i);
+          const fs = getAudioFilesForModule12AnimalDatum(row, blah, i);
           console.log(fs);
 
           return (

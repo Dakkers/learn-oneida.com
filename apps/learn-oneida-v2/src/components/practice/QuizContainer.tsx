@@ -11,6 +11,7 @@ import { Select } from "@ukwehuwehneke/ohutsya";
 export interface QuizOption {
   key: string;
   img?: string;
+  audioFile?: string | string[];
   text: string;
 }
 

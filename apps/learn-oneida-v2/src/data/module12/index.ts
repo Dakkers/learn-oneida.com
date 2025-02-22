@@ -243,7 +243,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        one: ["anó·ki̲ʔ"],
+        one: ["anó·kiʔ"],
       },
     ],
     plural: [],
@@ -463,7 +463,7 @@ export function createModule12AnimalsList(): Module12AnimalDatum[] {
   return [...createModule12MammalsList()];
 }
 
-export function getAudioFiles(
+export function getAudioFilesForModule12AnimalDatum(
   datum: Module12AnimalDatum,
   key: "singular" | "plural",
   index = 0,

@@ -159,7 +159,13 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   TRAN: "text-lime-500",
 } as const;
 
-export function convertBreakdownToPlainText(breakdown: BreakdownArray) {
+export function convertBreakdownToPlainText(
+  breakdown: BreakdownArray | string,
+) {
+  if (typeof breakdown === "string") {
+    return breakdown;
+  }
+
   const breakdownDuplicate = breakdown;
 
   return breakdownDuplicate

@@ -29,8 +29,12 @@ export function AudioTrack({
 
   const loadMultipleFiles = (filepaths: string[]) => {
     return fuckOff(filepaths).then((result) => {
-      return wavesurferRef.current?.load(result.url, result.peaks, result.duration);
-    })
+      return wavesurferRef.current?.load(
+        result.url,
+        result.peaks,
+        result.duration,
+      );
+    });
 
     // return concatAudio(filepaths)
     //   .then(([result, crunker]) => crunker.export(result, 'audio/mp3'))
@@ -54,7 +58,7 @@ export function AudioTrack({
     //   .catch((err) => {
     //     console.error(err);
     //   });
-  }
+  };
 
   if (audioFile !== prevAudioFile) {
     setCurrentTime(0);
@@ -64,9 +68,9 @@ export function AudioTrack({
     if (audioFiles.length > 1) {
       loadMultipleFiles(audioFiles).then(() => {
         if (autoplay) {
-          wavesurferRef?.current?.playPause()
+          wavesurferRef?.current?.playPause();
         }
-      })
+      });
 
       // concatAudio(audioFiles).then(([result]) => {
       //   console.log(result)
@@ -82,15 +86,12 @@ export function AudioTrack({
   }
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: not sure if this is easy to fix
-  const onReady = useCallback(
-    (ws: WaveSurfer, audioDuration: number) => {
-      console.log('onReady()', audioDuration)
-      wavesurferRef.current = ws;
-      onPlay(false);
-      setDuration(audioDuration);
-    },
-    [],
-  );
+  const onReady = useCallback((ws: WaveSurfer, audioDuration: number) => {
+    console.log("onReady()", audioDuration);
+    wavesurferRef.current = ws;
+    onPlay(false);
+    setDuration(audioDuration);
+  }, []);
 
   const durationFormatted = useMemo(() => {
     if (duration === 0) {
@@ -112,7 +113,7 @@ export function AudioTrack({
         onClick={() => wavesurferRef.current?.play()}
         onInit={(ws) => {
           wavesurferRef.current = ws;
-          loadMultipleFiles(audioFiles)
+          loadMultipleFiles(audioFiles);
         }}
         onPlay={() => onPlay(true)}
         onPause={() => onPlay(false)}
@@ -143,10 +144,10 @@ function formatSecondsAsTime(value: number) {
 
 async function fuckOff(filepaths: string[]) {
   const [buffer, crunker] = await concatAudio(filepaths);
-  const audioExport = await crunker.export(buffer, 'audio/mp3')
+  const audioExport = await crunker.export(buffer, "audio/mp3");
 
   const peaks = [buffer.getChannelData(0)];
   const duration = buffer.duration;
 
-  return { peaks, duration, url: audioExport.url }
+  return { peaks, duration, url: audioExport.url };
 }

@@ -23,7 +23,9 @@
     "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css",
     "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css --watch",
     "test": "vitest run",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -50,8 +52,16 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@chromatic-com/storybook": "^3.2.4",
     "@cloudflare/next-on-pages": "^1.13.7",
     "@cloudflare/workers-types": "^4.20250124.3",
+    "@storybook/addon-essentials": "^8.5.8",
+    "@storybook/addon-interactions": "^8.5.8",
+    "@storybook/addon-onboarding": "^8.5.8",
+    "@storybook/blocks": "^8.5.8",
+    "@storybook/nextjs": "^8.5.8",
+    "@storybook/react": "^8.5.8",
+    "@storybook/test": "^8.5.8",
     "@types/indefinite": "^2.3.4",
     "@types/lodash": "^4.17.14",
     "@types/node": "^20",
@@ -64,6 +74,7 @@
     "jsdom": "^26.0.0",
     "lint-staged": "^15.4.3",
     "postcss": "^8.5.1",
+    "storybook": "^8.5.8",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "vercel": "^39.3.0",

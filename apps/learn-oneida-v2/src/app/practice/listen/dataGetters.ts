@@ -48,6 +48,10 @@ import {
   getNationsList,
 } from "@/data/module03";
 import type { ParadigmData } from "@/utils/paradigm";
+import {
+  createModule12AnimalsList,
+  getAudioFilesForModule12AnimalDatum,
+} from "@/data/module12";
 
 export type ModuleNumber =
   | "module01"
@@ -55,7 +59,8 @@ export type ModuleNumber =
   | "module03"
   | "module04"
   | "module05"
-  | "module06";
+  | "module06"
+  | "module12";
 
 export type AudioFriendly = {
   audioFile: string;
@@ -198,6 +203,7 @@ export function formatDialogueAudioFiles(module: ModuleNumber) {
     module04: null,
     module05: null,
     module06: null,
+    module12: null,
   }[module];
 
   const data = fn?.() ?? {};
@@ -265,6 +271,23 @@ export function formatCountingTimeAudioFiles(): AudioFriendlyData {
   return createCountingTimeData();
 }
 
+export function formatAllAnimalsListAudioFiles(): AudioFriendlyData {
+  return _.flattenDeep(
+    createModule12AnimalsList().map((v) => [
+      v.singular.map((entry, i) =>
+        getAudioFilesForModule12AnimalDatum(v, "singular", i).map(
+          (audioFile) => ({
+            audioFile,
+            en: v.en,
+            translation: convertBreakdownToPlainText(entry.one),
+          }),
+        ),
+      ),
+      // TODO plural
+    ]),
+  );
+}
+
 export function getParadigmAudioForModule(
   module: ModuleNumber,
 ): AudioFriendlyData {
@@ -275,6 +298,7 @@ export function getParadigmAudioForModule(
     module04: getAllModule04Paradigms,
     module05: null,
     module06: null,
+    module12: null,
   }[module];
   if (!fn) {
     return [];
@@ -326,6 +350,8 @@ export function getSingleWordsForModule(
     result.push(...formatMonthsAudioFiles());
     result.push(...formatCountingPeopleFiles());
     result.push(...formatTimesOfDayAudioFiles());
+  } else if (module === "module12") {
+    result.push(...formatAllAnimalsListAudioFiles());
   }
   return result;
 }

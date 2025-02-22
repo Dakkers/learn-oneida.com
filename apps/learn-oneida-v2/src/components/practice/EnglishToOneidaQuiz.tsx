@@ -1,5 +1,5 @@
 "use client";
-import { arrayify, Flex } from "@ukwehuwehneke/ohutsya";
+import { arrayify, concatAudio, Flex } from "@ukwehuwehneke/ohutsya";
 import {
   AnswerMultipleChoiceButtons,
   QuizContainerContext,
@@ -18,19 +18,16 @@ import {
   sanitizeIrregularCharacters,
   standardizeCharacters,
 } from "@ukwehuwehneke/language-components";
-import { AudioTrack, AudioTrackProps } from "../AudioTrack";
-import WaveSurfer from "wavesurfer.js";
 
 export interface EnglishToOneidaQuizProps {
   englishOptions: QuizOption[];
-  hasAudio?: boolean;
   hasImages?: boolean;
   oneidaOptions: QuizOption[];
 }
 
 interface Question {
   answer: string;
-  audioFile?: string;
+  audioFile?: string | string[];
   img?: string;
   key: string;
   options: QuizOption[];
@@ -40,15 +37,14 @@ interface Question {
 
 export function EnglishToOneidaQuiz({
   englishOptions,
-  hasAudio = false,
   hasImages = false,
   oneidaOptions,
 }: EnglishToOneidaQuizProps) {
   const [languageSetting, setLanguageSetting] = React.useState(
-    hasImages || hasAudio ? "en" : "both",
+    hasImages ? "en" : "both",
   );
   const [answerSetting, setAnswerSetting] = React.useState(
-    hasImages || hasAudio ? "multipleChoice" : "text",
+    hasImages ? "multipleChoice" : "text",
   );
   const [questionCountSetting, setQuestionCountSetting] = React.useState("5");
 
@@ -56,7 +52,6 @@ export function EnglishToOneidaQuiz({
     <QuizContainerContext.Provider
       value={{
         answerSetting,
-        hasAudio,
         hasImages,
         languageSetting,
         questionCountSetting,
@@ -135,13 +130,11 @@ interface TypicalOptions {
 }
 
 export function StandardQuestion({
-  audioFile,
   img,
   options,
   questionKey,
   text,
 }: {
-  audioFile?: AudioTrackProps["audioFile"];
   img?: string;
   options: QuizOption[];
   questionKey: string;
@@ -151,9 +144,7 @@ export function StandardQuestion({
   const quizContext = useQuizContext();
   return (
     <Flex align="center" direction="column" gap={8}>
-      {audioFile ? (
-        <AudioTrackWrapper audioFile={audioFile} />
-      ) : img ? (
+      {img ? (
         <img alt={text} className="h-[250px]" src={img} />
       ) : (
         <Text variant="headlineS">{text}</Text>
@@ -238,6 +229,7 @@ export function useEnglishToOneidaQuestions({
       result[i] = {
         answer: answerDatum?.text ?? "",
         key: questionDatum.key,
+        audioFile: questionDatum.audioFile,
         img: questionDatum.img,
         options: _.shuffle(optionsForQuestion),
         text: questionDatum.text,
@@ -297,29 +289,4 @@ function determineLangKey(languageSetting: string): "en" | "on" {
     return languageSetting;
   }
   return Math.random() < 0.5 ? "en" : "on";
-}
-
-function AudioTrackWrapper({
-  audioFile,
-}: {
-  audioFile: string | string[]
-}) {
-  const files = arrayify(audioFile)
-  const [prev, setPrev] = useState(null);
-  const [src, setSrc] = useState(audioFile);
-
-  if (prev !== audioFile) {
-    setPrev(audioFile);
-    if (files.length > 1) {
-
-    } else {
-      setSrc()
-    }
-  }
-
-  return (
-    <>
-      <audio src="" />
-    </>
-  );
 }

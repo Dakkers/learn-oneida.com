@@ -29,6 +29,7 @@ import {
   getParadigmAudioForModule,
   getSentencesForModule,
   getSingleWordsForModule,
+  formatAllAnimalsListAudioFiles,
   type ModuleNumber,
   setupModule4Data,
 } from "./dataGetters";
@@ -49,6 +50,7 @@ const MODULES_LIST: Array<{ label: string; value: ModuleNumber }> = [
   { label: "Module 4", value: "module04" },
   { label: "Module 5", value: "module05" },
   { label: "Module 6", value: "module06" },
+  { label: "Module 12", value: "module12" },
 ];
 
 export default function PracticeListening() {
@@ -246,6 +248,17 @@ export default function PracticeListening() {
         { label: "Translation exercises", value: "translationExercises" },
       ],
       value: "module06",
+    },
+    {
+      getData: getDataWrapper("module12", {
+        animals: (m: ModuleNumber) => formatAllAnimalsListAudioFiles(),
+      }),
+      label: "Module 12",
+      sub: [
+        // ...commonThings,
+        { label: "Animals", value: "animals" },
+      ],
+      value: "module12",
     },
   ];
 

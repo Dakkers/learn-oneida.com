@@ -1,7 +1,7 @@
 "use client";
 import { PlayIcon } from "lucide-react";
-import { arrayify } from "~/utils";
-import { concatAudio } from "~/utils/audio";
+import { arrayify } from "../../utils";
+import { concatAudio } from "../../utils/audio";
 
 export interface PlayButtonProps {
   "aria-label"?: string;
