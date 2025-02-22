@@ -1,5 +1,5 @@
 "use client";
-import { arrayify, concatAudio, Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex } from "@ukwehuwehneke/ohutsya";
 import {
   AnswerMultipleChoiceButtons,
   QuizContainerContext,
@@ -10,7 +10,7 @@ import {
 } from "./QuizContainer";
 import { Quiz, useQuizContext } from "./Quiz";
 import { Text } from "@ukwehuwehneke/ohutsya";
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
@@ -111,8 +111,8 @@ function Content({ englishOptions, oneidaOptions }: EnglishToOneidaQuizProps) {
       ) : (
         <Flex direction="column" gap={4}>
           <Settings
-            enableLanguageSetting={!context.hasImages && !context.hasAudio}
-            enableAnswerTypeSetting={!context.hasImages && !context.hasAudio}
+            enableLanguageSetting={!context.hasImages}
+            enableAnswerTypeSetting={!context.hasImages}
           />
 
           <Box>

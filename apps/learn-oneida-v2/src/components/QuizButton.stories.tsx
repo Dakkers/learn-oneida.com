@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Meta, StoryFn, StoryObj } from "@storybook/react";
+import { type Meta, type StoryFn, StoryObj } from "@storybook/react";
 import { QuizButton, QuizButtonProps } from "./QuizButton";
 import { Box, Flex } from "@ukwehuwehneke/ohutsya";
 
