@@ -4,6 +4,7 @@ import "./../learn-oneida.css";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
+import { Scripts } from "@/utils/Scripts";
 
 const notoSansFont = Noto_Sans({ subsets: ["latin"], weight: ["400", "500"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={notoSansFont.className}>
+        <Scripts />
         <TitleBar />
         <div className="bg-gray-100">
           <Navbar />

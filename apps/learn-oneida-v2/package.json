@@ -25,7 +25,8 @@
     "test": "vitest run",
     "typecheck": "tsc",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "wrangler:dev": "npx wrangler pages dev . --binding=MIXPANEL_API_TOKEN=2112 --binding=NODE_ENV=dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
