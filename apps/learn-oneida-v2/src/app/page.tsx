@@ -5,8 +5,6 @@ import { Box, Card, Flex, Text } from "@ukwehuwehneke/ohutsya";
 
 export const runtime = "edge";
 
-export const runtime = "edge";
-
 export default function Index() {
   const modules: {
     href?: string;
