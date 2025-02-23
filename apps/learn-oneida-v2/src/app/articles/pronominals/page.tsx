@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Pronominals in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesPronominals() {
   return (
     <PageWrapper>

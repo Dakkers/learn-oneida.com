@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Domesticated animals in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesDomesticatedAnimals() {
   return (
     <PageWrapper>

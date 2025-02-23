@@ -3,6 +3,8 @@ import { PageWrapper } from "@/components/PageWrapper";
 import { List, Text } from "@ukwehuwehneke/ohutsya";
 import { Link } from "@/components/Link";
 
+export const runtime = "edge";
+
 export default function Acknowledgements() {
   return (
     <PageWrapper>

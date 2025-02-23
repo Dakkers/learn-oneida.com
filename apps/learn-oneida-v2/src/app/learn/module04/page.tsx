@@ -72,6 +72,8 @@ const columnVisibility = {
   pronounOneida: false,
 };
 
+export const runtime = "edge";
+
 export default function LearnModule04() {
   return (
     <PageWrapper>

@@ -34,6 +34,8 @@ import { Metadata } from "next";
 //   title: "Module 5" ,
 //   description: "Module 5 of the Oneida curriculum"};
 
+export const runtime = "edge";
+
 export default function LearnModule05() {
   return (
     <PageWrapper>

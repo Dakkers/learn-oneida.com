@@ -30,6 +30,8 @@ import indefinite from "indefinite";
 //   description: "Module 8 of the Oneida curriculum",
 // };
 
+export const runtime = "edge";
+
 export default function LearnModule08() {
   const list = createModule8CharacteristicsList();
   return (

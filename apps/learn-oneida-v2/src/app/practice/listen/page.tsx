@@ -59,6 +59,8 @@ const MODULES_LIST: Array<{ label: string; value: ModuleNumber }> = [
   { label: "Module 12", value: "module12" },
 ];
 
+export const runtime = "edge";
+
 export default function PracticeListening() {
   const commonThings = [
     { label: "All audio", value: "all_audio" },

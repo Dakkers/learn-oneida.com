@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "At someone's place in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesAtSomeonesPlace() {
   return (
     <PageWrapper>

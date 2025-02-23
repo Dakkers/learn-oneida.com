@@ -35,6 +35,8 @@ export const metadata: Metadata = {
   description: "Module 7 of the Oneida curriculum",
 };
 
+export const runtime = "edge";
+
 export default function LearnModule07() {
   const nounList = createModule7NounsList();
   const verbList = createModule7VerbsList();

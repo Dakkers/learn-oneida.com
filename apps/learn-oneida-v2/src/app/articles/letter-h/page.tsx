@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "The letter H in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesLetterH() {
   return (
     <PageWrapper>

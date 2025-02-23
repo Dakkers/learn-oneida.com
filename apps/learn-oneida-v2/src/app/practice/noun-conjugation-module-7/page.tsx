@@ -22,6 +22,8 @@ import type { Metadata } from "next";
 //     "Practice your knowledge and understanding of noun conjugation from module 7 in the Oneida language.",
 // };
 
+export const runtime = "edge";
+
 export default function PracticeNounConjugationModule7() {
   const [noun, setNoun] = React.useState(createModule7NounsList()[0].key);
   const [hasStarted, setHasStarted] = React.useState(false);

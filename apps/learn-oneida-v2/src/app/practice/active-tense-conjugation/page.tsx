@@ -30,6 +30,8 @@ import type { Metadata } from "next";
 //     "Practice your knowledge and understanding of tenses for active verbs in the Oneida language.",
 // };
 
+export const runtime = "edge";
+
 export default function PracticeTenseConjugation() {
   const [word, setWord] = React.useState("answer");
   const [pronoun, setPronoun] = React.useState("i");

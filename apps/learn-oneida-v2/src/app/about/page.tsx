@@ -4,6 +4,8 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Link } from "@/components/Link";
 import { PageWrapper } from "@/components/PageWrapper";
 
+export const runtime = "edge";
+
 export default function About() {
   return (
     <PageWrapper>

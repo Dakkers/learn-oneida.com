@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Roads in the Oneida of the Thames community",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesRoads() {
   return (
     <PageWrapper>

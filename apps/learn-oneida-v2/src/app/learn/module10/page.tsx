@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   description: "Module 10 of the Oneida curriculum",
 };
 
+export const runtime = "edge";
+
 export default function LearnModule10() {
   const envNounList = createModule10EnvironmentNounsList();
   return (

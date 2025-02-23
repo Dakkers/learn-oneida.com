@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "English names in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesEnglishNames() {
   return (
     <PageWrapper>

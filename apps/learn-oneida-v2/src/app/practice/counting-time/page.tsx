@@ -18,6 +18,8 @@ import { Metadata } from "next";
 //   description: "Test your Oneida knowledge on counting lengths of time!",
 // };
 
+export const runtime = "edge";
+
 export default function PracticeCountingTime() {
   const rows = useMemo(() => {
     const [firstTable, secondTable] = createCountingTimeDataLegacy();

@@ -11,6 +11,8 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 //   description: "Match the Oneida words with the English words.",
 // };
 
+export const runtime = "edge";
+
 export default function PracticeDaysOfTheWeek() {
   return (
     <PageWrapper>

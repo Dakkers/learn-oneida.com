@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Glottal stops in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesGlottalStop() {
   return (
     <PageWrapper>

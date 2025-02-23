@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Seasons in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesSeasons() {
   return (
     <PageWrapper>

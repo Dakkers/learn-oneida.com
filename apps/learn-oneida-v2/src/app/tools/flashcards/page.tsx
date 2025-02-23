@@ -19,6 +19,8 @@ interface Item {
   on: string;
 }
 
+export const runtime = "edge";
+
 export default function ToolsFlashcards() {
   const [index, setIndex] = useState(-1);
   const [data, setData] = useState<Item[]>([]);

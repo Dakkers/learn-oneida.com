@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
+export const runtime = "edge";
+
 export default function PracticeFoodIdentificationModule9() {
   const [englishOptions, oneidaOptions]: [
     EnglishToOneidaQuizProps["englishOptions"],

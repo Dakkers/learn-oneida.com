@@ -42,6 +42,8 @@ export const metadata: Metadata = {
   description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
+export const runtime = "edge";
+
 export default function PracticeBeingSomewhere() {
   const [englishOptions, oneidaOptions] = React.useMemo(() => {
     const resultEn = [];

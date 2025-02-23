@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Days of the week in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesDaysOfTheWeek() {
   return (
     <PageWrapper>

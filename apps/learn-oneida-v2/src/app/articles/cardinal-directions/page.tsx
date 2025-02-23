@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "Cardinal directions in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesCardinalDirections() {
   return (
     <PageWrapper>

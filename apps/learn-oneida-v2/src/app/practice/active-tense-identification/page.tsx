@@ -36,6 +36,8 @@ interface Q {
   type: "given_word";
 }
 
+export const runtime = "edge";
+
 export default function PracticeTenseIdentification() {
   const [hasStarted, setHasStarted] = React.useState(false);
   const [languageSetting, setLanguageSetting] = React.useState("both");

@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Clans in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesClans() {
   return (
     <PageWrapper>

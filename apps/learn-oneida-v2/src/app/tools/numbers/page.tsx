@@ -16,6 +16,8 @@ import type { Metadata } from "next";
 //   description: "Translate numbers from Oneida to English and vice versa",
 // };
 
+export const runtime = "edge";
+
 export default function ToolsNumbers() {
   const [value, setValue] = React.useState("");
   const [translatedValue, setTranslatedValue] = React.useState("");

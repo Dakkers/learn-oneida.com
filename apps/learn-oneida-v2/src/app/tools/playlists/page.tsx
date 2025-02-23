@@ -23,6 +23,8 @@ import type { Metadata } from "next";
 //   description: "Listen to lists of Oneida words uninterrupted.",
 // };
 
+export const runtime = "edge";
+
 export default function ToolsPlaylist() {
   const audioClipRef = useRef<HTMLAudioElement | null>(null);
   const speechSynthRef = useRef<SpeechSynthesisUtterance | null>(null);

@@ -36,6 +36,8 @@ import type { ReactNode } from "react";
 //   description: "Module 12 of the Oneida curriculum.",
 // };
 
+export const runtime = "edge";
+
 export default function LearnModule12() {
   return (
     <PageWrapper>

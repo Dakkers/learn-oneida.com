@@ -281,6 +281,8 @@ function ToolsParadigmInner() {
   );
 }
 
+export const runtime = "edge";
+
 export default function ToolsParadigm() {
   return (
     <Suspense>

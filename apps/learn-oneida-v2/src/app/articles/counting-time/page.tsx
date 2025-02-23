@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Counting lengths of time in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesCountingTime() {
   return (
     <PageWrapper>

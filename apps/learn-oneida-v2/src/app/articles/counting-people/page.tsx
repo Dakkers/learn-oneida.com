@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Counting people in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesCountingPeople() {
   return (
     <PageWrapper>

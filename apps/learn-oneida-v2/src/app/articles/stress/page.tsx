@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Stress and accents in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesStress() {
   return (
     <PageWrapper>

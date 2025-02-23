@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Examples of dialogue involving phone numbers in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesPhoneNumbers() {
   return (
     <PageWrapper>

@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Whispered endings in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesWhisperedEndings() {
   return (
     <PageWrapper>

@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: "Articles provided by this website",
 };
 
+export const runtime = "edge";
+
 export default function Articles() {
   const articlesLinguistics = [
     ["/glottal-stop", "Glottal Stop"],

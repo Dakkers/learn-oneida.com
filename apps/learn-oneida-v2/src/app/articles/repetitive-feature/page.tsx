@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "The repetitive conjugation in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesRepetitiveConjugation() {
   return (
     <PageWrapper>

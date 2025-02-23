@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "Cities in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesCities() {
   return (
     <PageWrapper>

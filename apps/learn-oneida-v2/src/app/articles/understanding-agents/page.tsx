@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     "Learn how agents in Oneida work with simple diagrams and concrete explanations.",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesPronominalAgents() {
   return (
     <PageWrapper>

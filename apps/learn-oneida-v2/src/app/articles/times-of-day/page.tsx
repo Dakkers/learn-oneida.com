@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Times of day in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesTimesOfDay() {
   return (
     <PageWrapper>

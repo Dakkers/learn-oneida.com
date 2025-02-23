@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Good people and bad people conjugation in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticleGoodPeopleBadPeople() {
   return (
     <PageWrapper>

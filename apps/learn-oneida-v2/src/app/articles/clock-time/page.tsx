@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Clock time in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesClockTime() {
   return (
     <PageWrapper>

@@ -30,6 +30,8 @@ import { Letter } from "@/components/Letter";
 //   description: "All paradigms for each module",
 // };
 
+export const runtime = "edge";
+
 export default function ToolsAllParadigms() {
   const [module, setModule] = useState("m7-legacy");
   const [hasSubmitted, setHasSubmitted] = useState(false);

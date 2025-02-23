@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Prepausal vs. medial endings in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesPrepausalEndings() {
   return (
     <PageWrapper>

@@ -29,6 +29,8 @@ import type { Metadata } from "next";
 //     "Practice your knowledge and understanding of tenses for stative verbs in the Oneida language.",
 // };
 
+export const runtime = "edge";
+
 export default function PracticeTenseConjugation() {
   const [word, setWord] = React.useState("goodPerson");
   const [hasStarted, setHasStarted] = React.useState(false);

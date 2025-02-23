@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     "Introduction to the Oneida curriculum. This page will teach you about the Oneida orthography, root words, pronominal prefixes, and stems.",
 };
 
+export const runtime = "edge";
+
 export default function LearnIntroduction() {
   return (
     <PageWrapper>

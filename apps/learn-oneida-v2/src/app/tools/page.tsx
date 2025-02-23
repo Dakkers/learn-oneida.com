@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: "Tools provided by this website",
 };
 
+export const runtime = "edge";
+
 export default function Tools() {
   const tools = [
     {

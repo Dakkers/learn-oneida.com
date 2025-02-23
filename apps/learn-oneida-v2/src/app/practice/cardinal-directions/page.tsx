@@ -17,6 +17,8 @@ import type { Metadata } from "next";
 //   description: "Match the Oneida words with the English words.",
 // };
 
+export const runtime = "edge";
+
 export default function PracticeCardinalDirections() {
   return (
     <PageWrapper>

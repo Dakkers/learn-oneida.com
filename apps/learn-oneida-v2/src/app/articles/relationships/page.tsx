@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Relationships in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesRelationships() {
   return (
     <PageWrapper>

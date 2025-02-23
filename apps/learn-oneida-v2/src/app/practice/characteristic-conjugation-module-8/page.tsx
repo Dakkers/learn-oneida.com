@@ -25,6 +25,8 @@ import type { Metadata } from "next";
 //     "Practice your knowledge and understanding of object characteristics from module 8 in the Oneida language.",
 // };
 
+export const runtime = "edge";
+
 export default function PracticeCharacteristicConjugationModule8() {
   const [char, setChar] = React.useState(
     createModule8CharacteristicsList()[0].key,

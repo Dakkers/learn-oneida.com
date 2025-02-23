@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "Master the sounds of the Oneida language with our comprehensive pronunciation guide, including audio examples and helpful tips.",
 };
 
+export const runtime = "edge";
+
 export default function PracticeSoundchart() {
   return (
     <PageWrapper>

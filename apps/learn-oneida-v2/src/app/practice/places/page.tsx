@@ -29,6 +29,8 @@ const DATA = DATA_PLACES_IN_COMMUNITY.filter(
     ].includes(datum.key),
 );
 
+export const runtime = "edge";
+
 export default function PracticePlaces() {
   const [englishOptions, oneidaOptions]: [
     EnglishToOneidaQuizProps["englishOptions"],

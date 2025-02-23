@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: "Places in the community in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesPlacesInTheCommunity() {
   return (
     <PageWrapper>

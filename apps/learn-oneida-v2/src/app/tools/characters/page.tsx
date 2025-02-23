@@ -12,6 +12,8 @@ import type { Metadata } from "next";
 //   description: "This is just a page that has special characters useful for writing text in Oneida.",
 // };
 
+export const runtime = "edge";
+
 export default function SpecialCharactersPage() {
   return (
     <PageWrapper>

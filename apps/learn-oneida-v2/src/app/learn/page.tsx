@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Learn using a structured curriculum",
 };
 
+export const runtime = "edge";
+
 export default function Learn() {
   const modules = ["intro", 1, 2, 3, 4, 5, 6] as const;
 

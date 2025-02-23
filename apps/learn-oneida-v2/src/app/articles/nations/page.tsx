@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Nations in Oneida",
 };
 
+export const runtime = "edge";
+
 export default function ArticlesNations() {
   return (
     <PageWrapper>

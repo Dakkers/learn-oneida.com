@@ -18,6 +18,8 @@ import type { Metadata } from "next";
 //   description: "Translate clock time into Oneida",
 // };
 
+export const runtime = "edge";
+
 export default function ToolsClock() {
   const [hour, setHour] = React.useState<string>("12");
   const [minute, setMinute] = React.useState<string>("00");

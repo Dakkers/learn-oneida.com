@@ -1,6 +1,8 @@
 import { PageWrapper } from "@/components/PageWrapper";
 import React from "react";
 
+export const runtime = "edge";
+
 export default function ArticleKanuhwelatuksla() {
   return (
     <PageWrapper width="l">

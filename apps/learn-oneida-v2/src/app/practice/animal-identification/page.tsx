@@ -21,6 +21,8 @@ import { QuizResults } from "@/components/QuizResults";
 //   description: "Quiz your Oneida knowledge by picking the right translation!",
 // };
 
+export const runtime = "edge";
+
 export default function PracticeAnimalIdentification() {
   const englishOptions = useMemo(() => {
     const result: AudioQuizProps["englishOptions"] = [];

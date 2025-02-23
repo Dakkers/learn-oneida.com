@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: "Improve your Oneida skills with tools provided by this website",
 };
 
+export const runtime = "edge";
+
 export default function Practice() {
   const items = [
     // {

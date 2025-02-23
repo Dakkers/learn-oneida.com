@@ -48,6 +48,8 @@ const tenseMap: Record<Module5VerbTense | Module6VerbTense, string> = {
   ...module6VerbTenseMap,
 } as const;
 
+export const runtime = "edge";
+
 export default function PracticeTenseConjugation() {
   const [selectedVerbList, setSelectedVerbList] = React.useState("m6");
   const [selectedPronoun, setSelectedPronoun] = React.useState<Pronoun>("i");

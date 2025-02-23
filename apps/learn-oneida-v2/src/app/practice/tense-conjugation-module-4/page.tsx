@@ -28,6 +28,8 @@ import type { Metadata } from "next";
 //     "Practice your knowledge and understanding of tenses for verbs from module 4 in the Oneida language.",
 // };
 
+export const runtime = "edge";
+
 export default function PracticeTenseConjugation() {
   const [word, setWord] = React.useState("here");
   const [pronoun, setPronoun] = React.useState("i");

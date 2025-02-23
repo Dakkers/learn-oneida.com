@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   description: "Quiz your Oneida knowledge by picking the right translation!",
 };
 
+export const runtime = "edge";
+
 export default function PracticeBodyPartIdentification() {
   const imgMap: Record<string, string> = {
     belly: "jpg",
