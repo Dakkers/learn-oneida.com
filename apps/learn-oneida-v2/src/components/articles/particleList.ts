@@ -103,7 +103,7 @@ export const particleList: ParticleEntry[] = [
   },
   {
     key: "this",
-    translation: "kaʔi·kʌ̲̲́·",
+    translation: "kaʔi·kʌ̲́·",
     en: "this",
     examples: [
       {
@@ -243,7 +243,7 @@ export const particleList: ParticleEntry[] = [
         en: "Who is that man?",
       },
       {
-        translation: "Sanúhteʔ kʌ́ úhkaʔ náhteʔ thikʌ̲̲́",
+        translation: "Sanúhteʔ kʌ́ úhkaʔ náhteʔ thikʌ̲́",
         en: "Do you know who that is?",
       },
     ],
@@ -298,7 +298,7 @@ export const particleList: ParticleEntry[] = [
     en: "more",
     examples: [
       {
-        translation: "Sʌ́haʔ kʌ́ yenú·wehseʔ né· kaʔi·kʌ̲̲́",
+        translation: "Sʌ́haʔ kʌ́ yenú·wehseʔ né· kaʔi·kʌ̲́",
         en: "Does she like this more?",
       },
     ],
@@ -338,11 +338,11 @@ export const particleList: ParticleEntry[] = [
   },
   {
     key: "that",
-    translation: "thikʌ̲̲́",
+    translation: "thikʌ̲́",
     en: "that, that one, that thing",
     examples: [
       {
-        translation: "Swanú·wehseʔ kʌ́ thikʌ̲̲́",
+        translation: "Swanú·wehseʔ kʌ́ thikʌ̲́",
         en: "Do you all like that?",
       },
     ],
@@ -851,7 +851,7 @@ export const particleList: ParticleEntry[] = [
     en: "How many things, objects?",
     examples: [
       {
-        translation: "Tó· ni·kú snú·wehseʔ thi·kʌ̲̲́",
+        translation: "Tó· ni·kú snú·wehseʔ thi·kʌ̲́",
         en: "How many of those do you like?",
       },
     ],
@@ -1053,7 +1053,7 @@ export const particleList: ParticleEntry[] = [
     en: "it is the same, they are the same",
     examples: [
       {
-        translation: "Né· kʌ́ tshá·kat kaʔi·kʌ̲̲́",
+        translation: "Né· kʌ́ tshá·kat kaʔi·kʌ̲́",
         en: "Are these (things) the same?",
       },
     ],
@@ -1075,7 +1075,7 @@ export const particleList: ParticleEntry[] = [
     en: "both, either, neither",
     examples: [
       {
-        translation: "Tetsyalú ni· knú·wehseʔ kaʔi·kʌ̲̲́",
+        translation: "Tetsyalú ni· knú·wehseʔ kaʔi·kʌ̲́",
         en: "I like both of these.",
       },
     ],

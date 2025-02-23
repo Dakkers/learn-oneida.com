@@ -45,7 +45,7 @@ export function getDialogueModule03() {
     {
       one: [
         "Táh, lotinyákhehkwe ne Brad, neʔ thó·neʔ ihnéhskweʔ neʔn Ben Affleck neʔ thó·neʔ oyé·li niyohslaké tsiʔ náheʔ lotinyakú·neʔ né· Chris Martin",
-        "Tehniyáhse tehotiwila·yʌ̲̲́·",
+        "Tehniyáhse tehotiwila·yʌ̲́·",
         "Shayá·tat né·n Moses luwa·yáts kháleʔ tsyeyá·tat né·n Apple yutátyats",
         "Tehonatekháhsyu nuʔú·waʔ kháleʔ ihnehseʔ né· shayá·tat neʔn Brad Falchuk luwa·yáts",
       ],
@@ -82,7 +82,7 @@ export function getDialogueModule03() {
         "Kháleʔ kaló· tsiʔ niyo·lé· lotinyakú·neʔ né· Billy Bob, yáh ki tsyohslaké tsiʔ náheʔ iknéhskweʔ ne tsyeyá·tat yakú·kwe̲ʔ",
       ],
     },
-    { one: "Yáh náhteʔ teʔwakanúhtehkweʔ thikʌ̲̲́" },
+    { one: "Yáh náhteʔ teʔwakanúhtehkweʔ thikʌ̲́" },
     { one: "Nʌ ki né· sanúhte̲ʔ" },
   ].map(mapper);
 

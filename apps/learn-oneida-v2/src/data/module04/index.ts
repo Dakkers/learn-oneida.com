@@ -544,8 +544,8 @@ export function createTimesOfDayData() {
   ].map(mapUtil);
 
   const yesterdayPhrases = [
-    { en: "yesterday", translation: "the·tʌ̲̲́·" },
-    { en: "the day before yesterday", translation: "oyá tshithe·tʌ̲̲́" },
+    { en: "yesterday", translation: "the·tʌ̲́·" },
+    { en: "the day before yesterday", translation: "oyá tshithe·tʌ̲́" },
   ].map(mapUtil);
 
   const afternoonPhrases = [
@@ -560,7 +560,7 @@ export function createTimesOfDayData() {
     { en: "never", translation: "yáh newʌtú" },
     { en: ["now", "today"], translation: ["nuʔú·wa̲ʔ", "nʌʔú·wa̲ʔ"] },
     { en: "often", translation: "yotká·teʔ" },
-    { en: "sometimes", translation: "swatye·lʌ̲̲́" },
+    { en: "sometimes", translation: "swatye·lʌ̲́" },
   ].map(mapUtil);
 
   const result = {

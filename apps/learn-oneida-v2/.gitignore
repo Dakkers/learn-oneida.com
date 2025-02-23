@@ -40,3 +40,5 @@ next-env.d.ts
 .dev.vars
 
 src/learn-oneida.css
+
+*storybook.log

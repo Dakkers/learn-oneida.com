@@ -78,7 +78,7 @@ const textColorMap: Record<Contrast, Record<Intent, string>> = {
     negative: "text-red-700",
     positive: "text-green-700",
     primary: "text-blue-700",
-    secondary: "text-gray-700",
+    secondary: "text-gray-800",
     warning: "text-amber-700",
   },
   mid: {

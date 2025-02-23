@@ -22,6 +22,10 @@ export default function Practice() {
     //   label: "Cardinal Directions",
     // },
     {
+      href: "/animal-identification",
+      label: "Animal Identification",
+    },
+    {
       href: "/body-part-identification",
       label: "Body Part Identification",
     },

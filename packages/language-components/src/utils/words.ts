@@ -1,5 +1,7 @@
 const WHISPER_CHAR = "̲";
 const WHISPER_REGEX = new RegExp(WHISPER_CHAR, "g");
+const VOWELS_WHISPERED = ["a̲", "e̲", "i̲", "o̲", "u̲", "ʌ̲"];
+const VOWELS_WHISPERED_ACCENTED = ["á̲", "é̲", "í̲", "ó̲", "ú̲", "ʌ̲́"];
 
 export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
   if (!word) {
@@ -8,8 +10,6 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
 
   const vowels = ["a", "e", "i", "o", "u", "ʌ"];
   const vowelsAccented = ["á", "é", "í", "ó", "ú", "ʌ́"];
-  const vowelsWhispered = ["a̲", "e̲", "i̲", "o̲", "u̲", "ʌ̲"];
-  const vowelsWhisperedAccented = ["á̲", "é̲", "í̲", "ó̲", "ú̲", "ʌ̲̲́"];
   const reversedIndex = word
     .split("")
     .reverse()
@@ -24,8 +24,8 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
 
   if (shouldWhisper) {
     if (
-      vowelsWhispered.includes(char) ||
-      vowelsWhisperedAccented.includes(char) ||
+      VOWELS_WHISPERED.includes(char) ||
+      VOWELS_WHISPERED_ACCENTED.includes(char) ||
       char === WHISPER_CHAR
     ) {
       return word;
@@ -36,8 +36,8 @@ export function whisperizeWord(word: string | undefined, shouldWhisper = true) {
     const result = word.split("");
     result[index] =
       index1 >= 0
-        ? vowelsWhispered[lookupIndex]
-        : vowelsWhisperedAccented[lookupIndex];
+        ? VOWELS_WHISPERED[lookupIndex]
+        : VOWELS_WHISPERED_ACCENTED[lookupIndex];
 
     return result.join("");
   } else {
@@ -81,7 +81,7 @@ export function sanitizeIrregularCharacters(value: string) {
   );
 }
 
-function replaceForCaret(value: string) {
+export function replaceForCaret(value: string) {
   let result = value;
   for (const char of ["v", "^"]) {
     result = result.replaceAll(char, "ʌ");
@@ -89,7 +89,7 @@ function replaceForCaret(value: string) {
   return result;
 }
 
-function replaceForGlottal(value: string) {
+export function replaceForGlottal(value: string) {
   let result = value;
   for (const char of ["ʼ", "'", "’"]) {
     result = result.replaceAll(char, "ʔ");
@@ -101,5 +101,12 @@ export function standardizeCharacters(value: string) {
   return [replaceForCaret, replaceForGlottal].reduce(
     (result, fn) => fn(result),
     value.toLowerCase(),
+  );
+}
+
+export function isWordWhispered(value: string) {
+  return (
+    !!VOWELS_WHISPERED.find((vowel) => value.indexOf(vowel) >= 0) ||
+    !!VOWELS_WHISPERED_ACCENTED.find((vowel) => value.indexOf(vowel) >= 0)
   );
 }

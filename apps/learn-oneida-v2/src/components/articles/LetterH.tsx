@@ -8,7 +8,7 @@ import { List } from "@ukwehuwehneke/ohutsya";
 import { ListOfWords } from "../ListOfWords";
 
 export function LetterHArticle({ level = 1 }: ArticleProps) {
-  const list1 = ["khenú·wehse̲ʔ", "thikʌ̲̲́"];
+  const list1 = ["khenú·wehse̲ʔ", "thikʌ̲́"];
 
   return (
     <Flex direction="column" gap={4}>

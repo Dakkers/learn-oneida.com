@@ -156,7 +156,7 @@ const englishToOneidaModule03 = [
 const oneidaToEnglishModule05 = [
   ["1", "Teyukwaʔnikú·lhaleʔ né· tsiʔ shekú yáh teʔyakoyé·u"],
   ["2", "Sʌ́haʔ aukyeshúhakeʔ tá·t a·ukwatlaʔswiyóhakeʔ"],
-  ["3", "Yáh teʔyohste·líst tsiʔ nihoti·wʌ̲̲́"],
+  ["3", "Yáh teʔyohste·líst tsiʔ nihoti·wʌ̲́"],
   ["4", "Yáh tewakatshanuní tá·t yáh teʔsatekhu·nihe̲ʔ"],
   ["5", "Yonaʔkunyáht né· tsiʔ oʔslu·ní· ok tho thotiyo·té·"],
   ["6", "Yakonyaʔtáthʌs ne tsiʔ só·tsiʔ wahu·níseʔ yakóthale̲ʔ"],

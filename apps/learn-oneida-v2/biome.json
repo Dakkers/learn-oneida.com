@@ -32,6 +32,9 @@
   "linter": {
     "enabled": true,
     "rules": {
+      "a11y": {
+        "useMediaCaption": "off"
+      },
       "recommended": true,
       "style": {
         "noNonNullAssertion": "off",

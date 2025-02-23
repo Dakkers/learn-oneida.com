@@ -10,7 +10,6 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box, Button, Card, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import type WaveSurfer from "wavesurfer.js";
-import WavesurferPlayer from "@wavesurfer/react";
 import { arrayify } from "@ukwehuwehneke/language-components";
 import {
   getClanAnimalList,
@@ -36,12 +35,14 @@ import {
   getParadigmAudioForModule,
   getSentencesForModule,
   getSingleWordsForModule,
+  formatAllAnimalsListAudioFiles,
   type ModuleNumber,
   setupModule4Data,
 } from "./dataGetters";
 import { createTimesOfDayData } from "@/data/module04";
 import { PageWrapper } from "@/components/PageWrapper";
 import { Metadata } from "next";
+import WavesurferPlayer from "@wavesurfer/react";
 
 // export const metadata: Metadata = {
 //   title: "Listening Practice",
@@ -55,6 +56,7 @@ const MODULES_LIST: Array<{ label: string; value: ModuleNumber }> = [
   { label: "Module 4", value: "module04" },
   { label: "Module 5", value: "module05" },
   { label: "Module 6", value: "module06" },
+  { label: "Module 12", value: "module12" },
 ];
 
 export default function PracticeListening() {
@@ -252,6 +254,17 @@ export default function PracticeListening() {
         { label: "Translation exercises", value: "translationExercises" },
       ],
       value: "module06",
+    },
+    {
+      getData: getDataWrapper("module12", {
+        animals: (m: ModuleNumber) => formatAllAnimalsListAudioFiles(),
+      }),
+      label: "Module 12",
+      sub: [
+        // ...commonThings,
+        { label: "Animals", value: "animals" },
+      ],
+      value: "module12",
     },
   ];
 
