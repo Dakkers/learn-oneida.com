@@ -1,5 +1,5 @@
 import { TableWrapper } from "@ukwehuwehneke/language-components";
-import { Box, Button, Flex, Text } from "@ukwehuwehneke/ohutsya";
+import { Box, Button, Flex, PlayButton, Text } from "@ukwehuwehneke/ohutsya";
 import { CheckCircle2Icon, XCircleIcon } from "lucide-react";
 
 interface Result {
@@ -35,14 +35,10 @@ export function QuizResults({
             cell: (question: Result["question"], row: Result) => (
               <Flex direction="column" gap={2}>
                 {row.audioFile && (
-                  <Flex.Item>
-                    <Flex direction="column" align="center" gap={1}>
-                      <audio controls src={row.audioFile} />
-                      <Text variant="bodyS">
-                        <i>{question}</i>
-                      </Text>
-                    </Flex>
-                  </Flex.Item>
+                  <Flex gap={1}>
+                    <PlayButton filepath={row.audioFile} />
+                    <Text>{question}</Text>
+                  </Flex>
                 )}
 
                 {!row.audioFile && question}

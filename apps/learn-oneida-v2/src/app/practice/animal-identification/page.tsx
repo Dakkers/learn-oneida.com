@@ -6,7 +6,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import { Button, cn, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
+import { Button, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import {
   createModule12AnimalsList,
