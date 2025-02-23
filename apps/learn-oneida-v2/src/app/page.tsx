@@ -3,6 +3,8 @@ import { PageWrapper } from "@/components/PageWrapper";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box, Card, Flex, Text } from "@ukwehuwehneke/ohutsya";
 
+export const runtime = "edge";
+
 export default function Index() {
   const modules: {
     href?: string;

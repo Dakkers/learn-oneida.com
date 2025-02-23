@@ -1,7 +1,10 @@
-"use client";
-import { useEffect } from "react";
+import { getRequestContext } from "@cloudflare/next-on-pages";
 
-export function Scripts() {
+export const runtime = "edge";
+
+export async function Scripts() {
+  console.log(getRequestContext());
+
   // useEffect(() => {
   //   fetch('/env_vars')
   //     .then(response => response.json())
