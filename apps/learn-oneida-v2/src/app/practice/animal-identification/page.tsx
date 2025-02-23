@@ -15,7 +15,7 @@ import {
 import _ from "lodash";
 import { QuizButton } from "@/components/QuizButton";
 import { QuizResults } from "@/components/QuizResults";
-import mixpanel from "mixpanel-browser";
+import { trackEvent } from "@/utils/trackEvent";
 
 // export const metadata: Metadata = {
 //   title: "Animal identification",
@@ -163,7 +163,7 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
         <Flex>
           <Button onClick={() => {
             setHasStarted(true)
-            mixpanel.track('Started Audio Quiz', {
+            trackEvent('Started Audio Quiz', {
               category: 'Animals',
               numQuestions: questionCountSetting,
             })
@@ -220,7 +220,7 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
           onClick={() => {
             if (answers.length === quizQuestionSubset.length) {
               setHasFinished(true);
-              mixpanel.track('Finished Audio Quiz', {
+              trackEvent('Finished Audio Quiz', {
                 category: 'Animals',
                 numCorrectAnswers: quizResults.filter((r) => r.isCorrect).length,
                 numQuestions: questionCountSetting,
