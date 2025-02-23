@@ -36,11 +36,16 @@ export function QuizResults({
               <Flex direction="column" gap={2}>
                 {row.audioFile && (
                   <Flex.Item>
-                    <audio controls src={row.audioFile} />
+                    <Flex direction="column" align="center" gap={1}>
+                      <audio controls src={row.audioFile} />
+                      <Text variant="bodyS">
+                        <i>{question}</i>
+                      </Text>
+                    </Flex>
                   </Flex.Item>
                 )}
 
-                {question}
+                {!row.audioFile && question}
               </Flex>
             ),
             header: "Question",

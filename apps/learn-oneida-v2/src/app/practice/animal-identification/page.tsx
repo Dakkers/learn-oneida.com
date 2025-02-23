@@ -6,7 +6,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import { Button, cn, Flex, Text } from "@ukwehuwehneke/ohutsya";
+import { Button, cn, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import {
   createModule12AnimalsList,
@@ -90,7 +90,7 @@ interface AudioQuizProps {
 }
 
 function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
-  const theList = useMemo(() => {
+  const allQuizQuestions = useMemo(() => {
     const result = [];
     for (const p of oneidaPhrases) {
       const potentialAnswers = englishOptions.filter(
@@ -127,10 +127,30 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
   const [hasStarted, setHasStarted] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
   const [answers, setAnswers] = useState<string[]>([]);
+  const [questionCountSetting, setQuestionCountSetting] =
+    useState<string>("10");
+
+  const quizQuestionSubset = allQuizQuestions.slice(
+    0,
+    questionCountSetting === "All"
+      ? allQuizQuestions.length
+      : Number(questionCountSetting),
+  );
 
   if (!hasStarted) {
     return (
       <>
+        <Flex>
+          <Select
+            label="Number of questions"
+            onChange={setQuestionCountSetting}
+            options={[1, 2, 5, 10, 50, "All"]
+              .map((value) => value.toString())
+              .map((value) => ({ label: value, value }))}
+            value={questionCountSetting}
+          />
+        </Flex>
+
         <Flex>
           <Button onClick={() => setHasStarted(true)}>Start</Button>
         </Flex>
@@ -147,10 +167,10 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
             setHasFinished(false);
           }}
           results={answers.map((t, i) => ({
-            audioFile: theList[i].audioFile,
-            correctAnswer: theList[i].answer,
-            isCorrect: t === theList[i].answer,
-            question: theList[i].oneidaText,
+            audioFile: quizQuestionSubset[i].audioFile,
+            correctAnswer: quizQuestionSubset[i].answer,
+            isCorrect: t === quizQuestionSubset[i].answer,
+            question: quizQuestionSubset[i].oneidaText,
             selectedAnswer: t,
           }))}
         />
@@ -158,7 +178,7 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
     );
   }
 
-  const item = theList[index];
+  const item = quizQuestionSubset[index];
   const hasAnswered = answers.length === index + 1;
 
   return (
@@ -189,7 +209,7 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
         <Button
           disabled={!hasAnswered}
           onClick={() => {
-            if (answers.length === theList.length) {
+            if (answers.length === quizQuestionSubset.length) {
               setHasFinished(true);
             } else {
               setIndex(index + 1);

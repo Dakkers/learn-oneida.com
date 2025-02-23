@@ -21,6 +21,8 @@ import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import {
   type Module12AnimalDatum,
+  createModule12BirdsList,
+  createModule12InsectsList,
   createModule12MammalsList,
   getAudioFilesForModule12AnimalDatum,
 } from "@/data/module12";
@@ -55,6 +57,8 @@ export default function LearnModule12() {
 
       <Introduction />
       <MammalsList />
+      <BirdsList />
+      <InsectsList />
     </PageWrapper>
   );
 }
@@ -77,6 +81,30 @@ function MammalsList() {
     <>
       <SectionHeading id="mammals" level={2}>
         Mammals
+      </SectionHeading>
+      <AnimalTable data={list} />
+    </>
+  );
+}
+
+function BirdsList() {
+  const list = createModule12BirdsList();
+  return (
+    <>
+      <SectionHeading id="birds" level={2}>
+        Birds
+      </SectionHeading>
+      <AnimalTable data={list} />
+    </>
+  );
+}
+
+function InsectsList() {
+  const list = createModule12InsectsList();
+  return (
+    <>
+      <SectionHeading id="insects" level={2}>
+        Insects
       </SectionHeading>
       <AnimalTable data={list} />
     </>
@@ -154,7 +182,6 @@ function CustomCell({
       ) : (
         (value ?? []).map((obj, i) => {
           const fs = getAudioFilesForModule12AnimalDatum(row, blah, i);
-          console.log(fs);
 
           return (
             <Flex direction="column" gap={0} key={i}>

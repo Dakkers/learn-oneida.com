@@ -47,6 +47,7 @@ export default function ToolsPlaylist() {
       module02: () => getSingleWordsForModule("module02"),
       module03: () => getSingleWordsForModule("module03"),
       module04: () => getSingleWordsForModule("module04"),
+      module12: () => getSingleWordsForModule("module12"),
     };
 
     const fn =
@@ -145,6 +146,7 @@ export default function ToolsPlaylist() {
             ["Module 2", "module02"],
             ["Module 3", "module03"],
             ["Module 4", "module04"],
+            ["Module 12", "module12"],
           ].map(([label, value]) => ({ label, value }))}
           onChange={(newVal) => {
             setCategory(newVal);

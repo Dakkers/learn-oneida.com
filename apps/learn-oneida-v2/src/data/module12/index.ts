@@ -29,10 +29,11 @@ export interface Module12AnimalDatum extends ModernEntry {
   type: AnimalDatumType;
 }
 
+type DatumNoType = Omit<Module12AnimalDatum, "type">;
+
 export function createModule12MammalsList(): Module12AnimalDatum[] {
-  const objBat: Module12AnimalDatum = {
+  const objBat: DatumNoType = {
     key: "bat",
-    type: "m",
     en: ["bat"],
     dict: [736, 901],
     root: [],
@@ -43,9 +44,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objBear: Module12AnimalDatum = {
+  const objBear: DatumNoType = {
     key: "bear",
-    type: "m",
     en: ["bear"],
     dict: [],
     root: [],
@@ -56,9 +56,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objBeaver: Module12AnimalDatum = {
+  const objBeaver: DatumNoType = {
     key: "beaver",
-    type: "m",
     en: ["beaver"],
     dict: [],
     root: [],
@@ -72,9 +71,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objBison: Module12AnimalDatum = {
+  const objBison: DatumNoType = {
     key: "bison",
-    type: "m",
     en: ["bison"],
     dict: [921, 1281],
     root: [],
@@ -88,9 +86,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objBuffalo: Module12AnimalDatum = {
+  const objBuffalo: DatumNoType = {
     key: "buffalo",
-    type: "m",
     en: ["buffalo"],
     dict: [],
     root: [],
@@ -101,9 +98,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objChipmunk: Module12AnimalDatum = {
+  const objChipmunk: DatumNoType = {
     key: "chipmunk",
-    type: "m",
     en: ["chipmunk"],
     dict: [],
     root: [],
@@ -114,9 +110,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objCoyote: Module12AnimalDatum = {
+  const objCoyote: DatumNoType = {
     key: "coyote",
-    type: "m",
     en: ["coyote"],
     dict: [328],
     root: [],
@@ -128,9 +123,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objDeer: Module12AnimalDatum = {
+  const objDeer: DatumNoType = {
     key: "deer",
-    type: "m",
     en: ["deer"],
     dict: [],
     root: [],
@@ -144,9 +138,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objFox: Module12AnimalDatum = {
+  const objFox: DatumNoType = {
     key: "fox",
-    type: "m",
     en: ["fox"],
     dict: [],
     root: [],
@@ -157,9 +150,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objGroundhog: Module12AnimalDatum = {
+  const objGroundhog: DatumNoType = {
     key: "groundhog",
-    type: "m",
     en: ["groundhog"],
     dict: [1027],
     root: [],
@@ -170,9 +162,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objLynx: Module12AnimalDatum = {
+  const objLynx: DatumNoType = {
     key: "lynx",
-    type: "m",
     en: ["lynx", "cougar", "lion"],
     dict: [930],
     root: [],
@@ -183,9 +174,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objMink: Module12AnimalDatum = {
+  const objMink: DatumNoType = {
     key: "mink",
-    type: "m",
     en: ["mink"],
     dict: [438],
     root: [],
@@ -196,9 +186,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objMole: Module12AnimalDatum = {
+  const objMole: DatumNoType = {
     key: "mole",
-    type: "m",
     en: ["mole"],
     dict: [1282],
     root: [],
@@ -209,9 +198,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objMoose: Module12AnimalDatum = {
+  const objMoose: DatumNoType = {
     key: "moose",
-    type: "m",
     en: ["moose"],
     dict: [],
     root: [],
@@ -222,9 +210,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objMouse: Module12AnimalDatum = {
+  const objMouse: DatumNoType = {
     key: "mouse",
-    type: "m",
     en: ["mouse"],
     dict: [],
     root: [],
@@ -235,9 +222,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objMuskrat: Module12AnimalDatum = {
+  const objMuskrat: DatumNoType = {
     key: "muskrat",
-    type: "m",
     en: ["muskrat"],
     dict: [],
     root: [],
@@ -248,9 +234,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objOpposum: Module12AnimalDatum = {
+  const objOpposum: DatumNoType = {
     key: "opposum",
-    type: "m",
     en: ["opposum"],
     dict: [],
     root: [],
@@ -261,9 +246,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objOtter: Module12AnimalDatum = {
+  const objOtter: DatumNoType = {
     key: "otter",
-    type: "m",
     en: ["otter"],
     dict: [],
     root: [],
@@ -274,9 +258,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objPorcupine: Module12AnimalDatum = {
+  const objPorcupine: DatumNoType = {
     key: "porcupine",
-    type: "m",
     en: ["porcupine"],
     dict: [1129],
     root: [],
@@ -287,9 +270,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objRabbit: Module12AnimalDatum = {
+  const objRabbit: DatumNoType = {
     key: "rabbit",
-    type: "m",
     en: ["rabbit"],
     dict: [],
     root: [],
@@ -300,9 +282,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objJackrabbit: Module12AnimalDatum = {
+  const objJackrabbit: DatumNoType = {
     key: "jackrabbit",
-    type: "m",
     en: ["jackrabbit"],
     dict: [],
     root: [],
@@ -313,9 +294,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objRaccoon: Module12AnimalDatum = {
+  const objRaccoon: DatumNoType = {
     key: "raccoon",
-    type: "m",
     en: ["raccoon"],
     dict: [],
     root: [],
@@ -326,9 +306,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objRat: Module12AnimalDatum = {
+  const objRat: DatumNoType = {
     key: "rat",
-    type: "m",
     en: ["rat"],
     dict: [],
     root: [],
@@ -339,9 +318,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objSkunk: Module12AnimalDatum = {
+  const objSkunk: Omit<Module12AnimalDatum, "type"> = {
     key: "skunk",
-    type: "m",
     en: ["skunk"],
     dict: [],
     root: [],
@@ -352,9 +330,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objSquirrel: Module12AnimalDatum = {
+  const objSquirrel: Omit<Module12AnimalDatum, "type"> = {
     key: "squirrel",
-    type: "m",
     en: ["black squirrel", "grey squirrel"],
     dict: [],
     root: [],
@@ -368,9 +345,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objFlyingSquirrel: Module12AnimalDatum = {
+  const objFlyingSquirrel: Omit<Module12AnimalDatum, "type"> = {
     key: "flying_squirrel",
-    type: "m",
     en: ["flying squirrel"],
     dict: [],
     root: [],
@@ -381,9 +357,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objRedSquirrel: Module12AnimalDatum = {
+  const objRedSquirrel: Omit<Module12AnimalDatum, "type"> = {
     key: "red_squirrel",
-    type: "m",
     en: ["red squirrel"],
     dict: [],
     root: [],
@@ -397,9 +372,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objWeasel: Module12AnimalDatum = {
+  const objWeasel: Omit<Module12AnimalDatum, "type"> = {
     key: "weasel",
-    type: "m",
     en: ["weasel"],
     dict: [],
     root: [],
@@ -410,9 +384,8 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objWolf: Module12AnimalDatum = {
+  const objWolf: Omit<Module12AnimalDatum, "type"> = {
     key: "wolf",
-    type: "m",
     en: ["wolf"],
     dict: [],
     root: [],
@@ -454,13 +427,761 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     objRedSquirrel,
     objWeasel,
     objWolf,
-  ];
+  ].map((datum) => ({
+    ...datum,
+    type: "m" as const,
+  }));
+  result.sort((a, b) => a.en[0].localeCompare(b.en[0]));
+  return result;
+}
+
+export function createModule12BirdsList(): Module12AnimalDatum[] {
+  const objBluejay: DatumNoType = {
+    key: "bluejay",
+    en: ["bluejay"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["klíkli"],
+      },
+    ],
+    plural: [],
+  };
+  const objCardinal: DatumNoType = {
+    key: "cardinal",
+    en: ["cardinal"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["onikwʌhtala·kó·"],
+      },
+      {
+        one: ["tsyotaku·kó·"],
+      },
+    ],
+    plural: [],
+  };
+  const objChickadee: DatumNoType = {
+    key: "chickadee",
+    en: ["chickadee"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsiktsile·lé̲·"],
+      },
+    ],
+    plural: [],
+  };
+  const objCrane: DatumNoType = {
+    key: "crane",
+    en: ["crane"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["te", ["ka", "PS"], "hsineskó·"],
+      },
+    ],
+    plural: [],
+  };
+  const objCrow: DatumNoType = {
+    key: "crow",
+    en: ["crow"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["ká·kaʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objDuck: DatumNoType = {
+    key: "duck",
+    en: ["duck"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["talʌʔkó·"],
+      },
+      {
+        one: ["taluʔkó·"],
+      },
+    ],
+    plural: [],
+  };
+  const objEagle: DatumNoType = {
+    key: "eagle",
+    en: ["eagle"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["atú·nyote̲ʔ"],
+      },
+      // {
+      //   one: ["atú·nyute̲ʔ"],
+      // },
+    ],
+    plural: [],
+  };
+  const objGoldfinch: DatumNoType = {
+    key: "goldfinch",
+    en: ["goldfinch"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["otsiʔnkwalá·"],
+      },
+    ],
+    plural: [],
+  };
+  const objWildGoose: DatumNoType = {
+    key: "wild_goose",
+    en: ["wild goose"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["káhuk"],
+      },
+    ],
+    plural: [],
+  };
+  const objGrouse: DatumNoType = {
+    key: "grouse",
+    en: ["grouse", "partridge"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["ohkwe·sʌ̲́·"],
+      },
+    ],
+    plural: [],
+  };
+  const objHawk: DatumNoType = {
+    key: "hawk",
+    en: ["hawk"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["kalhakúha̲"],
+      },
+    ],
+    plural: [],
+  };
+  const objHeron: DatumNoType = {
+    key: "heron",
+    en: ["heron"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["ohakwalute̲"],
+      },
+    ],
+    plural: [],
+  };
+  const objHummingbird: DatumNoType = {
+    key: "hummingbird",
+    en: ["hummingbird"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["lauláu"],
+      },
+    ],
+    plural: [],
+  };
+  const objKilldeer: DatumNoType = {
+    key: "killdeer",
+    en: ["killdeer", "sandpiper"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tawístawiʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objLoon: DatumNoType = {
+    key: "loon",
+    en: ["loon"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["ʌhó·wʌ"],
+      },
+    ],
+    plural: [],
+  };
+  const objOwl: DatumNoType = {
+    key: "owl",
+    en: ["owl"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["kwalo·lʌ̲́·"],
+      },
+    ],
+    plural: [],
+  };
+  const objParrot: DatumNoType = {
+    key: "parrot",
+    en: ["parrot"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["te", ["ka", "PS"], "styaʔks"],
+      },
+    ],
+    plural: [],
+  };
+  const objPelican: DatumNoType = {
+    key: "pelican",
+    en: ["pelican"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["te", ["ka", "PS"], "nehkakhwa"],
+      },
+    ],
+    plural: [],
+  };
+  const objPigeon: DatumNoType = {
+    key: "pigeon",
+    en: ["pigeon, dove"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["oli·té̲·"],
+      },
+    ],
+    plural: [],
+  };
+  const objRobin: DatumNoType = {
+    key: "robin",
+    en: ["robin"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsiskó·koʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objRooster: DatumNoType = {
+    key: "rooster",
+    en: ["rooster"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["kitkit lá·tsin"],
+      },
+    ],
+    plural: [],
+  };
+  const objSeagull: DatumNoType = {
+    key: "seagull",
+    en: ["seagull"],
+    dict: [333],
+    root: [],
+    singular: [
+      {
+        one: ["tsyohwʌ·tstakawe̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objSparrow: DatumNoType = {
+    key: "sparrow",
+    en: ["sparrow"],
+    dict: [554],
+    root: [],
+    singular: [
+      {
+        one: ["kanataʔkékhá̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objStork: DatumNoType = {
+    key: "stork",
+    en: ["stork"],
+    dict: [542],
+    root: [],
+    singular: [
+      {
+        one: ["te", ["ka", "PS"], "luhyakahnélaʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objBarnSwallow: DatumNoType = {
+    key: "barn_swallow",
+    en: ["barn swallow"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["onawaʔstohále̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objSwan: DatumNoType = {
+    key: "swan",
+    en: ["swan"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: [["ka", "PS"], "nyales"],
+      },
+    ],
+    plural: [],
+  };
+  const objTurkey: DatumNoType = {
+    key: "turkey",
+    en: ["turkey"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["skawilo·wáne̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objTurkeyVulture: DatumNoType = {
+    key: "turkey_vulture",
+    en: ["turkey vulture"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: [["ka", "PS"], "hé·yʌ·taks"],
+      },
+      {
+        one: [["ka", "PS"], "kalyʌtaks"],
+      },
+    ],
+    plural: [],
+  };
+  const objWoodpecker: DatumNoType = {
+    key: "woodpecker",
+    en: ["woodpecker"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: [["la", "PS"], "lutastoʔokshá̲·"],
+      },
+    ],
+    plural: [],
+  };
+
+  const result = [
+    objBluejay,
+    objCardinal,
+    objChickadee,
+    objCrane,
+    objCrow,
+    objDuck,
+    objEagle,
+    objGoldfinch,
+    objWildGoose,
+    objGrouse,
+    objHawk,
+    objHeron,
+    objHummingbird,
+    objKilldeer,
+    objLoon,
+    objOwl,
+    objParrot,
+    objPelican,
+    objPigeon,
+    objRobin,
+    objRooster,
+    objSeagull,
+    objSparrow,
+    objStork,
+    objBarnSwallow,
+    objSwan,
+    objTurkey,
+    objTurkeyVulture,
+    objWoodpecker,
+  ].map((datum) => ({
+    ...datum,
+    type: "b" as const,
+  }));
+  result.sort((a, b) => a.en[0].localeCompare(b.en[0]));
+  return result;
+}
+
+export function createModule12InsectsList(): Module12AnimalDatum[] {
+  const objAnt: DatumNoType = {
+    key: "ant",
+    en: ["ant"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsiʔnhutstókhwiʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objBee: DatumNoType = {
+    key: "bee",
+    en: ["bee"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsinuhnehklis"],
+      },
+      {
+        one: ["tsyonuhnéhklis"],
+      },
+    ],
+    plural: [],
+  };
+  const objBedbug: DatumNoType = {
+    key: "bedbug",
+    en: ["bedbug"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: [["ka", "PS"], "sehtáklahse̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objLeech: DatumNoType = {
+    key: "leech",
+    en: ["leech", "bloodsucker"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["te", ["ka", "PS"], "yaʔtakwʌhtʌ̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objButterfly: DatumNoType = {
+    key: "butterfly",
+    en: ["butterfly", "moth"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["kana·wʌ̲́·"],
+      },
+    ],
+    plural: [],
+  };
+  const objCaterpillar: DatumNoType = {
+    key: "caterpillar",
+    en: ["caterpillar"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["onhwalá·ne̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objCicada: DatumNoType = {
+    key: "cicada",
+    en: ["cicada"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["onʌstókli"],
+      },
+    ],
+    plural: [],
+  };
+  const objCricket: DatumNoType = {
+    key: "cricket",
+    en: ["cricket"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["slíkslik"],
+      },
+    ],
+    plural: [],
+  };
+  const objFirefly: DatumNoType = {
+    key: "firefly",
+    en: ["firefly"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsistalak"],
+      },
+    ],
+    plural: [],
+  };
+  const objLice: DatumNoType = {
+    key: "lice",
+    en: ["flea", "lice"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["otawé·tsla"],
+      },
+    ],
+    plural: [],
+  };
+  const objFly: DatumNoType = {
+    key: "fly",
+    en: ["fly"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsí·ks"],
+      },
+    ],
+    plural: [],
+  };
+  const objHorsefly: DatumNoType = {
+    key: "horsefly",
+    en: ["horsefly"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["yakohsa·tʌs tsí·ksko"],
+      },
+    ],
+    plural: [],
+  };
+  const objGrasshopper: DatumNoType = {
+    key: "grasshopper",
+    en: ["grasshopper"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsistálak"],
+      },
+    ],
+    plural: [],
+  };
+  const objLadybug: DatumNoType = {
+    key: "ladybug",
+    en: ["ladybug"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["oʔno·wá̲·"],
+      },
+    ],
+    plural: [],
+  };
+  const objMosquito: DatumNoType = {
+    key: "mosquito",
+    en: ["mosquito"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["okalyahtá·ne̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objNits: DatumNoType = {
+    key: "nits",
+    en: ["nits"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["otsiʔnehtalaʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objGnat: DatumNoType = {
+    key: "gnat",
+    en: ["gnat"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: [["lati", "PS"], "slanú·wehse̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objPrayingMantis: DatumNoType = {
+    key: "praying_mantis",
+    en: ["praying mantis"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: [["wa", "PS"], "tlʌ·náyʌhe̲ʔ"],
+      },
+      {
+        one: [["la", "PS"], "hwistu·níhe̲"],
+      },
+    ],
+    plural: [],
+  };
+  const objSnail: DatumNoType = {
+    key: "snail",
+    en: ["snail", "slug"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsyonisklo·lú̲·"],
+      },
+    ],
+    plural: [],
+  };
+  const objSpider: DatumNoType = {
+    key: "spider",
+    en: ["spider"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsinaʔtsyakéhtu̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objDaddyLonglegs: DatumNoType = {
+    key: "daddy_long_legs",
+    en: ["daddy longlegs"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["te", ["ha", "PS"], "sinehsú·se̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objTarantula: DatumNoType = {
+    key: "tarantula",
+    en: ["tarantula"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["tsinaʔtsyakéhtu·kó·"],
+      },
+    ],
+    plural: [],
+  };
+  const objWasp: DatumNoType = {
+    key: "wasp",
+    en: ["wasp", "hornet"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["te", ["ha", "PS"], "lutaweʔésta̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objWoodtick: DatumNoType = {
+    key: "woodtick",
+    en: ["woodtick"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["oséhtu̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const objEarthworm: DatumNoType = {
+    key: "earthworm",
+    en: ["earthworm"],
+    dict: [],
+    root: [],
+    singular: [
+      {
+        one: ["otsiʔnuwahé·ta̲ʔ"],
+      },
+    ],
+    plural: [],
+  };
+  const result = [
+    objAnt,
+    objBee,
+    objBedbug,
+    objLeech,
+    objButterfly,
+    objCaterpillar,
+    objCicada,
+    objCricket,
+    objFirefly,
+    objLice,
+    objFly,
+    objHorsefly,
+    objGrasshopper,
+    objLadybug,
+    objMosquito,
+    objNits,
+    objGnat,
+    objPrayingMantis,
+    objSnail,
+    objSpider,
+    objDaddyLonglegs,
+    objTarantula,
+    objWasp,
+    objWoodtick,
+    objEarthworm,
+  ].map((datum) => ({
+    ...datum,
+    type: "i" as const,
+  }));
   result.sort((a, b) => a.en[0].localeCompare(b.en[0]));
   return result;
 }
 
 export function createModule12AnimalsList(): Module12AnimalDatum[] {
-  return [...createModule12MammalsList()];
+  return [
+    ...createModule12MammalsList(),
+    ...createModule12BirdsList(),
+    ...createModule12InsectsList(),
+  ];
 }
 
 export function getAudioFilesForModule12AnimalDatum(
