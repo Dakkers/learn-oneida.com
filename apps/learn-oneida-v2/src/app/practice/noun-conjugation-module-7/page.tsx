@@ -109,6 +109,10 @@ export default function PracticeNounConjugationModule7() {
             // @ts-expect-error Need better typing on the module 7 list
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }
+          eventCategory="Module 7 Conjugation"
+          eventData={{
+            word: noun,
+          }}
           formSchema={formSchema}
           // @ts-expect-error Need better typing on the module 7 list
           rows={rows}

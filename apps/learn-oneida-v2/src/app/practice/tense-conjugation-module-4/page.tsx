@@ -163,6 +163,11 @@ export default function PracticeTenseConjugation() {
           checkCorrectness={(key, val) =>
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }
+          eventCategory="Module 4 Tense Conjugation"
+          eventData={{
+            pronoun,
+            word,
+          }}
           formSchema={formSchema}
           rows={rows}
         />

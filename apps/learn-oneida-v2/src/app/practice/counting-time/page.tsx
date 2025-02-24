@@ -66,6 +66,7 @@ export default function PracticeCountingTime() {
           checkCorrectness={(key, val) =>
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }
+          eventCategory="Counting Time"
           formSchema={formSchema}
           rows={rows}
         />

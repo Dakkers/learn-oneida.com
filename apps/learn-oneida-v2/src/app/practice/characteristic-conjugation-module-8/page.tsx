@@ -112,6 +112,10 @@ export default function PracticeCharacteristicConjugationModule8() {
             // @ts-expect-error Improve type safety
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }
+          eventCategory="Module 8 Characteristic Paradigm"
+          eventData={{
+            word: char,
+          }}
           formSchema={formSchema}
           // @ts-expect-error Improve type safety
           rows={rows}

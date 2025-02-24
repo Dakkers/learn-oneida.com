@@ -20,6 +20,7 @@ import {
   sanitizeIrregularCharacters,
   standardizeCharacters,
 } from "@ukwehuwehneke/language-components";
+import { trackEvent } from "@/utils/trackEvent";
 
 type FormRow = Record<string, unknown> & {
   en: string | string[];
@@ -34,11 +35,15 @@ export function TableAsForm({
     lg: 32,
   },
   checkCorrectness,
+  eventData,
+  eventCategory,
   formSchema,
   rows,
 }: {
   bleed?: BleedProps["mx"];
   checkCorrectness: (key: string, val: string) => string | null | undefined;
+  eventData?: Record<string, unknown>;
+  eventCategory?: string;
   formSchema: AnyZodObject;
   rows: Array<FormRow>;
 }) {
@@ -67,6 +72,17 @@ export function TableAsForm({
     }
     setIsCorrect(!hasErrors);
     setCorrectness(correctnessResult);
+
+    if (eventCategory) {
+      trackEvent("Submitted Written Test", {
+        ...(eventData ?? {}),
+        category: eventCategory,
+        numCorrect: Object.values(correctnessResult).filter(
+          (isCorrect) => !!isCorrect,
+        ).length,
+        numQuestions: Object.keys(correctnessResult).length,
+      });
+    }
   };
 
   return (

@@ -197,6 +197,12 @@ export default function PracticeTenseConjugation() {
           checkCorrectness={(key, val) =>
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }
+          eventCategory="Verb List"
+          eventData={{
+            pronoun: selectedPronoun,
+            tense: selectedTense,
+            verbList: selectedVerbList,
+          }}
           formSchema={formSchema}
           rows={rows}
         />

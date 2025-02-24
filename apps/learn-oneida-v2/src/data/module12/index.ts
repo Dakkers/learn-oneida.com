@@ -855,7 +855,7 @@ export function createModule12InsectsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        one: ["tsinuhnehklis"],
+        one: ["tsinuhnéhklis"],
       },
       {
         one: ["tsyonuhnéhklis"],
@@ -942,7 +942,7 @@ export function createModule12InsectsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        one: ["tsistalak"],
+        one: ["tsistálak"],
       },
     ],
     plural: [],
@@ -990,7 +990,7 @@ export function createModule12InsectsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        one: ["tsistálak"],
+        one: ["tsístalak"],
       },
     ],
     plural: [],
@@ -1026,7 +1026,7 @@ export function createModule12InsectsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        one: ["otsiʔnehtalaʔ"],
+        one: ["otsiʔnéhtalaʔ"],
       },
     ],
     plural: [],
