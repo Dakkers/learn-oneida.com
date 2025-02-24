@@ -50,7 +50,7 @@ import {
 import type { ParadigmData } from "@/utils/paradigm";
 import {
   createModule12AnimalsList,
-  getAudioFilesForModule12AnimalDatum,
+  getAudioFileForModule12AnimalDatum,
 } from "@/data/module12";
 
 export type ModuleNumber =
@@ -274,15 +274,11 @@ export function formatCountingTimeAudioFiles(): AudioFriendlyData {
 export function formatAllAnimalsListAudioFiles(): AudioFriendlyData {
   return _.flattenDeep(
     createModule12AnimalsList().map((v) => [
-      v.singular.map((entry, i) =>
-        getAudioFilesForModule12AnimalDatum(v, "singular", i).map(
-          (audioFile) => ({
-            audioFile,
-            en: v.en,
-            translation: convertBreakdownToPlainText(entry.one),
-          }),
-        ),
-      ),
+      v.singular.map((entry, i) => ({
+        audioFile: getAudioFileForModule12AnimalDatum(v, "singular", i),
+        en: v.en,
+        translation: convertBreakdownToPlainText(entry.one),
+      })),
       // TODO plural
     ]),
   );

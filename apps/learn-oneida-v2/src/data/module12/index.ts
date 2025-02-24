@@ -1184,11 +1184,11 @@ export function createModule12AnimalsList(): Module12AnimalDatum[] {
   ];
 }
 
-export function getAudioFilesForModule12AnimalDatum(
+export function getAudioFileForModule12AnimalDatum(
   datum: Module12AnimalDatum,
   key: "singular" | "plural",
   index = 0,
-) {
+): string {
   const t =
     datum.type === "b"
       ? "birds"
@@ -1199,19 +1199,12 @@ export function getAudioFilesForModule12AnimalDatum(
           : "";
 
   const base = standardizeAudioFileName(`module12/${t}/${key}/${datum.key}`);
-
   const wordList = datum[key];
-  const word = wordList[index];
-  const oneidaTxt =
-    typeof word.one === "string"
-      ? word.one
-      : convertBreakdownToPlainText(word.one);
-
-  const result = [formatFileWithSuffix(`${base}.mp3`, wordList, index)];
+  const oneidaTxt = convertBreakdownToPlainText(wordList[index].one);
 
   if (isWordWhispered(oneidaTxt)) {
-    const suffix = getIndexSuffixforFile(`${base}.mp3`, wordList, index);
-    result.unshift(standardizeAudioFileName(`${base}${suffix}_pp.mp3`));
+    return formatFileWithSuffix(`${base}_merged.mp3`, wordList, index);
+  } else {
+    return formatFileWithSuffix(`${base}.mp3`, wordList, index);
   }
-  return result;
 }
