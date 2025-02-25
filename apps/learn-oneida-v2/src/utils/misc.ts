@@ -32,7 +32,9 @@ export function formatFileWithSuffix(
   const filenameFull = fileSplit[fileSplit.length - 1];
   const [filename, ...extensions] = filenameFull.split(".");
   const ext = extensions.join(".");
-  return `${fileSplit.slice(0, fileSplit.length - 1).join("/")}/${filename}${indexSuffix}.${ext}`;
+  const mergedSuffix = filename.endsWith("_merged") ? "_merged" : "";
+  const filenameNoMerge = filename.replace("_merged", "");
+  return `${fileSplit.slice(0, fileSplit.length - 1).join("/")}/${filenameNoMerge}${indexSuffix}${mergedSuffix}.${ext}`;
 }
 
 export function formatAudioFileWithSuffix(

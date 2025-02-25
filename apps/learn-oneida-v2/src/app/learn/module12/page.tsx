@@ -24,7 +24,7 @@ import {
   createModule12BirdsList,
   createModule12InsectsList,
   createModule12MammalsList,
-  getAudioFilesForModule12AnimalDatum,
+  getAudioFileForModule12AnimalDatum,
 } from "@/data/module12";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
@@ -137,7 +137,7 @@ function AnimalTable({ data }: { data: Module12AnimalDatum[] }) {
             singular: Module12AnimalDatum["singular"],
             row: Module12AnimalDatum,
           ) => {
-            return <CustomCell blah="singular" row={row} value={singular} />;
+            return <CustomCell group="singular" row={row} value={singular} />;
           },
           header: "Single",
         },
@@ -157,11 +157,11 @@ function AnimalTable({ data }: { data: Module12AnimalDatum[] }) {
 }
 
 function CustomCell({
-  blah,
+  group,
   row,
   value,
 }: {
-  blah: "singular" | "plural";
+  group: "singular" | "plural";
   row: Module12AnimalDatum;
   value:
     | string
@@ -175,13 +175,13 @@ function CustomCell({
     <Flex direction="column" gap={4}>
       {typeof value === "string" ? (
         <TextWithAudio
-          filepath={getAudioFilesForModule12AnimalDatum(row, blah)[0]}
+          filepath={getAudioFileForModule12AnimalDatum(row, group)[0]}
         >
           {value}
         </TextWithAudio>
       ) : (
         (value ?? []).map((obj, i) => {
-          const fs = getAudioFilesForModule12AnimalDatum(row, blah, i);
+          const fs = getAudioFileForModule12AnimalDatum(row, group, i);
 
           return (
             <Flex direction="column" gap={0} key={i}>
@@ -216,7 +216,7 @@ function TextWithAudio({
   filepath,
 }: {
   children: ReactNode;
-  filepath: string | string[];
+  filepath: string;
 }) {
   return (
     <Flex gap={2}>
