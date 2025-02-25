@@ -10,7 +10,7 @@ export function initMixpanel(onLoad?: () => void) {
   }
 
   const MIXPANEL_TOKEN = window.location.href.startsWith(
-    "https://learn-oneida.com/",
+    "https://learn-oneida.com",
   )
     ? "661b4d0d446a07e851d624902689053b"
     : "24b35db3ef3c0be139967517d422fb4f";
@@ -37,7 +37,7 @@ export function Mixpanel() {
 
   useEffect(() => {
     if (hasInitialized) {
-      trackEvent("Viewed Page");
+      trackEvent("Viewed Page", { pathname });
     }
   }, [pathname, hasInitialized]);
 
