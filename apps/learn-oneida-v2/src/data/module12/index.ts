@@ -306,18 +306,18 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objRat: DatumNoType = {
-    key: "rat",
-    en: ["rat"],
-    dict: [],
-    root: [],
-    singular: [
-      {
-        one: ["otsiʔnowʌhkó·"],
-      },
-    ],
-    plural: [],
-  };
+  // const objRat: DatumNoType = {
+  //   key: "rat",
+  //   en: ["rat"],
+  //   dict: [],
+  //   root: [],
+  //   singular: [
+  //     {
+  //       one: ["otsiʔnowʌhkó·"],
+  //     },
+  //   ],
+  //   plural: [],
+  // };
   const objSkunk: Omit<Module12AnimalDatum, "type"> = {
     key: "skunk",
     en: ["skunk"],
@@ -420,7 +420,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     objRabbit,
     objJackrabbit,
     objRaccoon,
-    objRat,
+    // objRat,
     objSkunk,
     objSquirrel,
     objFlyingSquirrel,

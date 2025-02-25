@@ -44,18 +44,16 @@ export default function PracticeAnimalIdentification() {
     for (const datum of list) {
       const key = datum.key;
       datum.singular.forEach((element, i) => {
-        const audioFiles = getAudioFileForModule12AnimalDatum(
+        const audioFile = getAudioFileForModule12AnimalDatum(
           datum,
           "singular",
           i,
         );
-        for (const audioFile of audioFiles) {
-          result.push({
-            audioFile,
-            answerKey: `${key}_singular`,
-            text: convertBreakdownToPlainText(element.one),
-          });
-        }
+        result.push({
+          audioFile,
+          answerKey: `${key}_singular`,
+          text: convertBreakdownToPlainText(element.one),
+        });
       });
     }
     return result;
