@@ -103,9 +103,6 @@ importers:
       '@wavesurfer/react':
         specifier: ^1.0.8
         version: 1.0.8(react@19.0.0)(wavesurfer.js@7.9.0)
-      crunker:
-        specifier: ^2.4.0
-        version: 2.4.0
       indefinite:
         specifier: ^2.5.1
         version: 2.5.1
@@ -372,9 +369,6 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      crunker:
-        specifier: ^2.4.0
-        version: 2.4.0
       lucide-react:
         specifier: ^0.474.0
         version: 0.474.0(react@19.0.0)
@@ -8939,10 +8933,6 @@ packages:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
-
-  /crunker@2.4.0:
-    resolution: {integrity: sha512-3J0aBgLaB8jpGh6o+bisjYzOEkJLYxhnisHXogjY4fxYewh1aVCptWAz7RSTYPncCyxdfA+UaWAM1BrQiZvZgQ==}
-    dev: false
 
   /crypto-browserify@3.12.1:
     resolution: {integrity: sha512-r4ESw/IlusD17lgQi1O20Fa3qNnsckR126TdUuBgAu7GBYSIPvdNyONd3Zrxh0xCwA4+6w/TDArBPsMvhur+KQ==}

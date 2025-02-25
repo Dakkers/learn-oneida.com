@@ -63,7 +63,6 @@
     "@radix-ui/react-slot": "^1.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "crunker": "^2.4.0",
     "lucide-react": "^0.474.0",
     "react-hook-form": "^7.54.2",
     "tailwind-merge": "^2.6.0",

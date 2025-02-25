@@ -10,7 +10,7 @@ import { Button, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import {
   createModule12AnimalsList,
-  getAudioFilesForModule12AnimalDatum,
+  getAudioFileForModule12AnimalDatum,
 } from "@/data/module12";
 import _ from "lodash";
 import { QuizButton } from "@/components/QuizButton";
@@ -45,18 +45,16 @@ export default function PracticeAnimalIdentification() {
     for (const datum of list) {
       const key = datum.key;
       datum.singular.forEach((element, i) => {
-        const audioFiles = getAudioFilesForModule12AnimalDatum(
+        const audioFile = getAudioFileForModule12AnimalDatum(
           datum,
           "singular",
           i,
         );
-        for (const audioFile of audioFiles) {
-          result.push({
-            audioFile,
-            answerKey: `${key}_singular`,
-            text: convertBreakdownToPlainText(element.one),
-          });
-        }
+        result.push({
+          audioFile,
+          answerKey: `${key}_singular`,
+          text: convertBreakdownToPlainText(element.one),
+        });
       });
     }
     return result;
