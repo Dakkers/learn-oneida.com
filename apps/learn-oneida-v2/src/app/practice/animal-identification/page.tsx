@@ -15,6 +15,7 @@ import {
 import _ from "lodash";
 import { QuizButton } from "@/components/QuizButton";
 import { QuizResults } from "@/components/QuizResults";
+import { trackEvent } from "@/utils/trackEvent";
 
 // export const metadata: Metadata = {
 //   title: "Animal identification",
@@ -135,6 +136,14 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
       : Number(questionCountSetting),
   );
 
+  const quizResults = answers.map((t, i) => ({
+    audioFile: quizQuestionSubset[i].audioFile,
+    correctAnswer: quizQuestionSubset[i].answer,
+    isCorrect: t === quizQuestionSubset[i].answer,
+    question: quizQuestionSubset[i].oneidaText,
+    selectedAnswer: t,
+  }));
+
   if (!hasStarted) {
     return (
       <>
@@ -150,7 +159,17 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
         </Flex>
 
         <Flex>
-          <Button onClick={() => setHasStarted(true)}>Start</Button>
+          <Button
+            onClick={() => {
+              setHasStarted(true);
+              trackEvent("Started Audio Quiz", {
+                category: "Animals",
+                numQuestions: questionCountSetting,
+              });
+            }}
+          >
+            Start
+          </Button>
         </Flex>
       </>
     );
@@ -164,13 +183,7 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
             setHasStarted(false);
             setHasFinished(false);
           }}
-          results={answers.map((t, i) => ({
-            audioFile: quizQuestionSubset[i].audioFile,
-            correctAnswer: quizQuestionSubset[i].answer,
-            isCorrect: t === quizQuestionSubset[i].answer,
-            question: quizQuestionSubset[i].oneidaText,
-            selectedAnswer: t,
-          }))}
+          results={quizResults}
         />
       </>
     );
@@ -209,6 +222,12 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
           onClick={() => {
             if (answers.length === quizQuestionSubset.length) {
               setHasFinished(true);
+              trackEvent("Finished Audio Quiz", {
+                category: "Animals",
+                numCorrectAnswers: quizResults.filter((r) => r.isCorrect)
+                  .length,
+                numQuestions: questionCountSetting,
+              });
             } else {
               setIndex(index + 1);
             }

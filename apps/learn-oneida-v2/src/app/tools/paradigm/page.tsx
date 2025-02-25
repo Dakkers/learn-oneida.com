@@ -273,6 +273,11 @@ function ToolsParadigmInner() {
           checkCorrectness={(key, val) =>
             TableAsForm.defaultCheckCorrectness({ key, val, rows })
           }
+          eventCategory="Paradigm"
+          eventData={{
+            pronominals: allowedPronominals,
+            word,
+          }}
           formSchema={formSchema}
           rows={rows}
         />

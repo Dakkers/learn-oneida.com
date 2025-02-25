@@ -72,7 +72,6 @@ NODE_VERSION = "18.19.0"
 ######## PREVIEW environment config ########
 
 # [env.preview.vars]
-# API_KEY = "xyz789"
 
 # [[env.preview.kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
@@ -81,7 +80,6 @@ NODE_VERSION = "18.19.0"
 ######## PRODUCTION environment config ########
 
 # [env.production.vars]
-# API_KEY = "abc123"
 
 # [[env.production.kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
