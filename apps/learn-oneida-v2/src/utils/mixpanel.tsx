@@ -1,36 +1,45 @@
 "use client";
 import mixpanel from "mixpanel-browser";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { trackEvent } from "./trackEvent";
 import { usePathname } from "next/navigation";
 
-const MIXPANEL_TOKEN = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
-
-export function initMixpanel() {
-  if (!MIXPANEL_TOKEN) {
-    console.warn("Mixpanel token is missing! Check your .env file.");
+export function initMixpanel(onLoad?: () => void) {
+  if (!window?.location?.href) {
     return;
   }
+
+  const MIXPANEL_TOKEN = window.location.href.startsWith(
+    "https://learn-oneida.com/",
+  )
+    ? "661b4d0d446a07e851d624902689053b"
+    : "24b35db3ef3c0be139967517d422fb4f";
 
   mixpanel.init(MIXPANEL_TOKEN, {
     autotrack: false,
     loaded: (instance) => {
       console.info("Loaded MixPanel");
       instance.identify();
+      onLoad?.();
     },
   });
 }
 
 export function Mixpanel() {
   const pathname = usePathname();
+  const [hasInitialized, setHasInitialized] = useState(false);
 
   useEffect(() => {
-    initMixpanel();
+    initMixpanel(() => {
+      setHasInitialized(true);
+    });
   }, []);
 
   useEffect(() => {
-    trackEvent("Viewed Page");
-  }, [pathname]);
+    if (hasInitialized) {
+      trackEvent("Viewed Page");
+    }
+  }, [pathname, hasInitialized]);
 
   return null;
 }
