@@ -144,7 +144,7 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
     isCorrect: t === quizQuestionSubset[i].answer,
     question: quizQuestionSubset[i].oneidaText,
     selectedAnswer: t,
-  }))
+  }));
 
   if (!hasStarted) {
     return (
@@ -161,13 +161,17 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
         </Flex>
 
         <Flex>
-          <Button onClick={() => {
-            setHasStarted(true)
-            trackEvent('Started Audio Quiz', {
-              category: 'Animals',
-              numQuestions: questionCountSetting,
-            })
-          }}>Start</Button>
+          <Button
+            onClick={() => {
+              setHasStarted(true);
+              trackEvent("Started Audio Quiz", {
+                category: "Animals",
+                numQuestions: questionCountSetting,
+              });
+            }}
+          >
+            Start
+          </Button>
         </Flex>
       </>
     );
@@ -220,11 +224,12 @@ function AudioQuiz({ englishOptions, oneidaPhrases }: AudioQuizProps) {
           onClick={() => {
             if (answers.length === quizQuestionSubset.length) {
               setHasFinished(true);
-              trackEvent('Finished Audio Quiz', {
-                category: 'Animals',
-                numCorrectAnswers: quizResults.filter((r) => r.isCorrect).length,
+              trackEvent("Finished Audio Quiz", {
+                category: "Animals",
+                numCorrectAnswers: quizResults.filter((r) => r.isCorrect)
+                  .length,
                 numQuestions: questionCountSetting,
-              })
+              });
             } else {
               setIndex(index + 1);
             }
