@@ -4,7 +4,7 @@ import "./../learn-oneida.css";
 import { Text } from "@ukwehuwehneke/ohutsya";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
-import { initMixpanel, Mixpanel } from "@/utils/mixpanel";
+import { Mixpanel } from "@/utils/mixpanel";
 
 const notoSansFont = Noto_Sans({ subsets: ["latin"], weight: ["400", "500"] });
 

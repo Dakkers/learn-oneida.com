@@ -1,5 +1,5 @@
 "use client";
-import { cn, Flex, Notice, Text } from "@ukwehuwehneke/ohutsya";
+import { cn, Flex, Notice, Text, trackEvent } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "../TableWrapper";
 import {
   SectionHeading,
@@ -276,6 +276,9 @@ function TheCell({ text }: { text?: string }) {
           : () => {
               const music = new Audio(`/audio/soundchart/${filename}.mp3`);
               music.play();
+              trackEvent("Played Soundchart", {
+                text,
+              });
             }
       }
       type="button"

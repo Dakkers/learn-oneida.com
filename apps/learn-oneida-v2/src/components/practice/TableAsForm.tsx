@@ -1,6 +1,6 @@
 "use client";
 import type { BleedProps } from "@ukwehuwehneke/ohutsya";
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, trackEvent } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import { Button } from "@ukwehuwehneke/ohutsya";
@@ -20,7 +20,6 @@ import {
   sanitizeIrregularCharacters,
   standardizeCharacters,
 } from "@ukwehuwehneke/language-components";
-import { trackEvent } from "@/utils/trackEvent";
 
 type FormRow = Record<string, unknown> & {
   en: string | string[];
@@ -100,7 +99,7 @@ export function TableAsForm({
               {
                 accessorKey: "key",
                 // @ts-expect-error TODO - TableWrapper/Table generics
-                cell: (key: string, row: Row) => (
+                cell: (key: string, row: FormRow) => (
                   <FormField
                     control={form.control}
                     name={key}
