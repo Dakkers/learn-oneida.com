@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build-storybook": "storybook build",
     "build": "next build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "cf:deploy": "pnpm run ci:tailwind:deps && pnpm run ci:build:deps && pnpm run ci:tailwind && npx @cloudflare/next-on-pages@1",
@@ -12,20 +13,19 @@
     "ci:tailwind": "pnpm run tailwind:build",
     "dev": "next dev --turbopack",
     "format:write": "pnpm biome format --write",
-    "lint": "pnpm biome lint",
     "lint:fix": "pnpm biome lint --write",
+    "lint": "pnpm biome lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "pages:deploy": "pnpm run pages:build && wrangler pages deploy",
     "prepare": "husky install",
     "preview": "pnpm run pages:build && wrangler pages dev",
     "start": "next start",
-    "tailwind": "pnpm run tailwind:watch",
+    "storybook": "storybook dev -p 6006",
     "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css",
     "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/learn-oneida.css --watch",
+    "tailwind": "pnpm run tailwind:watch",
     "test": "vitest run",
-    "typecheck": "tsc",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

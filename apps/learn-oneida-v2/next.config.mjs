@@ -1,15 +1,17 @@
 import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
 
+const IS_DEV = process.env.NODE_ENV === "development";
+
 // Here we use the @cloudflare/next-on-pages next-dev module to allow us to use bindings during local development
 // (when running the application with `next dev`), for more information see:
 // https://github.com/cloudflare/next-on-pages/blob/5712c57ea7/internal-packages/next-dev/README.md
-if (process.env.NODE_ENV === "development") {
+if (IS_DEV) {
   await setupDevPlatform();
 }
 
 const cspHeader = `
     default-src 'self';
-    connect-src 'self' *.mixpanel.com;
+    connect-src 'self' *.mixpanel.com ${IS_DEV ? "localhost localhost: localhost:*" : ""};
     script-src 'self' 'unsafe-eval' 'unsafe-inline';
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;
