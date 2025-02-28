@@ -1,31 +1,21 @@
 import {
+  StandardEntry,
+} from "@/components/StandardEntryDisplay";
+import {
   formatFileWithSuffix,
-  getIndexSuffixforFile,
   standardizeAudioFileName,
 } from "@/utils/misc";
+import { ModernEntry } from "@/utils/types";
 import {
   convertBreakdownToPlainText,
   isWordWhispered,
-  type BreakdownArray,
 } from "@ukwehuwehneke/language-components";
 
-type ListOfBreakdowns = Array<{
-  en?: string;
-  one: BreakdownArray | string;
-}>;
-
-interface ModernEntry {
-  en: string[];
-  key: string;
-  root: string[];
-  dict: number[];
-}
-
-type AnimalDatumType = "m" | "i" | "b"; // mammal...
+type AnimalDatumType = "m" | "i" | "b"; // mammal, insect, bird
 
 export interface Module12AnimalDatum extends ModernEntry {
-  singular: ListOfBreakdowns;
-  plural: ListOfBreakdowns;
+  singular: StandardEntry;
+  plural: StandardEntry;
   type: AnimalDatumType;
 }
 
@@ -37,11 +27,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     en: ["bat"],
     dict: [736, 901],
     root: [],
-    singular: [
-      {
-        one: ["tsiʔklaʔwístal"],
-      },
-    ],
+    singular: ["tsiʔklaʔwístal"],
     plural: [],
   };
   const objBear: DatumNoType = {
@@ -49,11 +35,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     en: ["bear"],
     dict: [],
     root: [],
-    singular: [
-      {
-        one: ["ohkwa·lí̲"],
-      },
-    ],
+    singular: "ohkwa·lí̲",
     plural: [],
   };
   const objBeaver: DatumNoType = {
@@ -61,14 +43,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     en: ["beaver"],
     dict: [],
     root: [],
-    singular: [
-      {
-        one: ["tsyoní·tu̲ʔ"],
-      },
-      {
-        one: ["tsyoní·to̲ʔ"],
-      },
-    ],
+    singular: ["tsyoní·tu̲ʔ", "tsyoní·to̲ʔ"],
     plural: [],
   };
   const objBison: DatumNoType = {
@@ -91,11 +66,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     en: ["buffalo"],
     dict: [],
     root: [],
-    singular: [
-      {
-        one: ["tsyotanekliyá·ku"],
-      },
-    ],
+    singular: "tsyotanekliyá·ku",
     plural: [],
   };
   const objChipmunk: DatumNoType = {
@@ -117,7 +88,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        en: "the dog is wandering around",
+        lit: "the dog is just roaming around",
         one: ["kwáh ok thi", ["w", "PS"], "eseʔ é·lhal"],
       },
     ],
@@ -217,7 +188,7 @@ export function createModule12MammalsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        one: ["otsiʔno·wʌ̲́"],
+        one: "otsiʔno·wʌ̲́",
       },
     ],
     plural: [],
@@ -482,6 +453,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
+        lit: 'it has long legs',
         one: ["te", ["ka", "PS"], "hsineskó·"],
       },
     ],
@@ -728,6 +700,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
+        lit: 'it sees the sky',
         one: ["te", ["ka", "PS"], "luhyakahnélaʔ"],
       },
     ],
@@ -740,6 +713,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
+        lit: 'it\'s all muddy',
         one: ["onawaʔstohále̲ʔ"],
       },
     ],
@@ -752,6 +726,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
+        lit: 'it has a long neck',
         one: [["ka", "PS"], "nyales"],
       },
     ],
@@ -779,6 +754,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
         one: [["ka", "PS"], "hé·yʌ·taks"],
       },
       {
+        lit: 'it eats rotten carcass',
         one: [["ka", "PS"], "kalyʌtaks"],
       },
     ],
@@ -1189,6 +1165,21 @@ export function getAudioFileForModule12AnimalDatum(
   key: "singular" | "plural",
   index = 0,
 ): string {
+  const base = getAudioFileBaseForModule12AnimalDatum(datum, key);
+  const wordList = datum[key];
+  const oneidaTxt = convertBreakdownToPlainText(wordList[index].one);
+
+  if (isWordWhispered(oneidaTxt)) {
+    return formatFileWithSuffix(`${base}_merged.mp3`, wordList, index);
+  } else {
+    return formatFileWithSuffix(`${base}.mp3`, wordList, index);
+  }
+}
+
+export function getAudioFileBaseForModule12AnimalDatum(
+  datum: Module12AnimalDatum,
+  key: "singular" | "plural",
+): string {
   const t =
     datum.type === "b"
       ? "birds"
@@ -1198,13 +1189,17 @@ export function getAudioFileForModule12AnimalDatum(
           ? "mammals"
           : "";
 
-  const base = standardizeAudioFileName(`module12/${t}/${key}/${datum.key}`);
-  const wordList = datum[key];
-  const oneidaTxt = convertBreakdownToPlainText(wordList[index].one);
+  const base = standardizeAudioFileName(
+    `module12/${t}/${key}/${datum.key}.mp3`,
+  );
+  return base;
+  // const wordList = datum[key];
+  // const oneidaTxt = convertBreakdownToPlainText(wordList[index].one);
 
-  if (isWordWhispered(oneidaTxt)) {
-    return formatFileWithSuffix(`${base}_merged.mp3`, wordList, index);
-  } else {
-    return formatFileWithSuffix(`${base}.mp3`, wordList, index);
-  }
+  // if (isWordWhispered(oneidaTxt)) {
+  //   return formatFileWithSuffix(`${base}_merged.mp3`, wordList, index);
+  // } else {
+  //   return formatFileWithSuffix(`${base}.mp3`, wordList, index);
+  // }
+  return "";
 }

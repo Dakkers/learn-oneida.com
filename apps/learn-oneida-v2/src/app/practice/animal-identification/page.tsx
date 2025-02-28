@@ -6,7 +6,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import { Button, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
+import { arrayify, Button, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import {
   createModule12AnimalsList,
@@ -44,7 +44,7 @@ export default function PracticeAnimalIdentification() {
     const list = createModule12AnimalsList();
     for (const datum of list) {
       const key = datum.key;
-      datum.singular.forEach((element, i) => {
+      arrayify(datum.singular).forEach((element, i) => {
         const audioFile = getAudioFileForModule12AnimalDatum(
           datum,
           "singular",

@@ -22,6 +22,7 @@ import {
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
+import { StandardEntryDisplay } from "@/components/StandardEntryDisplay";
 
 export const metadata: Metadata = {
   title: "Module 11",
@@ -114,7 +115,7 @@ function BodyPartTable({ data }: { data: BodyPartNounData[] }) {
           accessorKey: "onNoun",
           // @ts-expect-error TODO - TableWrapper/Table generics
           cell: (onNoun: BodyPartNounData["onNoun"]) => {
-            return <CustomCell value={onNoun} />;
+            return <StandardEntryDisplay value={onNoun} />;
           },
           header: "Usage",
         },
@@ -150,7 +151,7 @@ function AilmentsList() {
           {
             accessorKey: "usage",
             // @ts-expect-error Table generics
-            cell: (value: Module11AilmentEntry) => <CustomCell value={value} />,
+            cell: (value: Module11AilmentEntry['usage']) => <StandardEntryDisplay value={value} />,
             header: "Oneida",
           },
         ]}
@@ -190,40 +191,5 @@ function FluidsList() {
         }))}
       />
     </>
-  );
-}
-
-function CustomCell({
-  value,
-}: {
-  value:
-    | string
-    | string[]
-    | Array<{
-        one: BreakdownArray;
-        en?: string;
-      }>;
-}) {
-  return (
-    <Flex direction="column" gap={4}>
-      {typeof value === "string"
-        ? value
-        : (value ?? []).map((obj, i) => (
-            <Flex direction="column" gap={0} key={i}>
-              {typeof obj === "string" ? (
-                obj
-              ) : (
-                <>
-                  <TextBreakdown
-                    breakdown={obj.one}
-                    typeFallback="PS"
-                    wrap="nowrap"
-                  />
-                  {obj.en && <Text variant="labelS">{obj.en}</Text>}
-                </>
-              )}
-            </Flex>
-          ))}
-    </Flex>
   );
 }

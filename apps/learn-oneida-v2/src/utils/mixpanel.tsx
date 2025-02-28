@@ -41,5 +41,5 @@ export function Mixpanel() {
     }
   }, [pathname, hasInitialized]);
 
-  return <div className="hidden">&nbsp;</div>;
+  return null;
 }
