@@ -1,6 +1,6 @@
 "use client";
 import { PlayIcon } from "lucide-react";
-import { trackEvent } from "~/utils/trackEvent";
+import { trackEvent } from "../../utils/trackEvent";
 
 export interface PlayButtonProps {
   "aria-label"?: string;
