@@ -49,6 +49,26 @@ const nextConfig = {
         destination: "/articles/repetitive-feature",
         permanent: false,
       },
+      {
+        source: "/helloworld",
+        destination:
+          "https://mixpanel-workaround.learn-oneida-com-v2.pages.dev/helloworld",
+      },
+      {
+        source: "/holaworld",
+        destination:
+          "https://mixpanel-workaround.learn-oneida-com-v2.pages.dev/holaworld",
+      },
+      {
+        source: "/testworld",
+        destination:
+          "https://mixpanel-workaround.learn-oneida-com-v2.pages.dev/testworld",
+      },
+      {
+        source: "/howdyworld",
+        destination:
+          "https://mixpanel-workaround.learn-oneida-com-v2.pages.dev/howdyworld",
+      },
     ];
   },
   typescript: {
