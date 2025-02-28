@@ -8,6 +8,7 @@ import {
   Select,
   Text,
   TextArray,
+  trackEvent,
 } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import {
@@ -188,6 +189,9 @@ export default function ToolsPlaylist() {
             onClick={() => {
               setHasStarted(true);
               setIndex(0);
+              trackEvent("Started Audio Playlist", {
+                category,
+              });
             }}
           >
             Start

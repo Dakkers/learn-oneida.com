@@ -6,7 +6,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import { Button, Flex, Select, Text } from "@ukwehuwehneke/ohutsya";
+import { Button, Flex, Select, Text, trackEvent } from "@ukwehuwehneke/ohutsya";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import {
   createModule12AnimalsList,
@@ -15,7 +15,6 @@ import {
 import _ from "lodash";
 import { QuizButton } from "@/components/QuizButton";
 import { QuizResults } from "@/components/QuizResults";
-import { trackEvent } from "@/utils/trackEvent";
 
 // export const metadata: Metadata = {
 //   title: "Animal identification",

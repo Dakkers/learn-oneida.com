@@ -1,5 +1,6 @@
 "use client";
 import { PlayIcon } from "lucide-react";
+import { trackEvent } from "~/utils/trackEvent";
 
 export interface PlayButtonProps {
   "aria-label"?: string;
@@ -19,6 +20,9 @@ export function PlayButton({
       onClick={() => {
         new Audio(filepath).play();
         onClick?.();
+        trackEvent("Played Audio", {
+          filepath,
+        });
       }}
       type="button"
     >
