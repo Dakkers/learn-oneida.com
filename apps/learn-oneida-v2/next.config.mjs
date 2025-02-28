@@ -50,21 +50,25 @@ const nextConfig = {
         permanent: false,
       },
       {
+        permanent: false,
         source: "/helloworld",
         destination:
           "https://mixpanel-workaround.learn-oneida-com-v2.pages.dev/helloworld",
       },
       {
+        permanent: false,
         source: "/holaworld",
         destination:
           "https://mixpanel-workaround.learn-oneida-com-v2.pages.dev/holaworld",
       },
       {
+        permanent: false,
         source: "/testworld",
         destination:
           "https://mixpanel-workaround.learn-oneida-com-v2.pages.dev/testworld",
       },
       {
+        permanent: false,
         source: "/howdyworld",
         destination:
           "https://mixpanel-workaround.learn-oneida-com-v2.pages.dev/howdyworld",
