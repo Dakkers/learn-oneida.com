@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["k"], "wístohseʔ"],
+        breakdown: [["k"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["s"], "wístohseʔ"],
+        breakdown: [["s"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["la"], "wístohseʔ"],
+        breakdown: [["la"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["ye"], "wístohseʔ"],
+        breakdown: [["ye"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["ka"], "wístohseʔ"],
+        breakdown: [["ka"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["tni"], "wístohseʔ"],
+        breakdown: [["tni"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["yakni"], "wístohseʔ"],
+        breakdown: [["yakni"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["sni"], "wístohseʔ"],
+        breakdown: [["sni"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["ni"], "wístohseʔ"],
+        breakdown: [["ni"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["kni"], "wístohseʔ"],
+        breakdown: [["kni"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["twa"], "wístohseʔ"],
+        breakdown: [["twa"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["yakwa"], "wístohseʔ"],
+        breakdown: [["yakwa"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["swa"], "wístohseʔ"],
+        breakdown: [["swa"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["lati"], "wístohseʔ"],
+        breakdown: [["lati"], "wísto", ["hseʔ", "HAB"]],
       },
       {
-        breakdown: [["kuti"], "wístohseʔ"],
+        breakdown: [["kuti"], "wísto", ["hseʔ", "HAB"]],
       },
     ],
   },

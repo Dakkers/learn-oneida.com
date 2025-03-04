@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "aní·tayʌʔ"],
+        breakdown: [["waʔ", "DEF"], ["k"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["hs"], "aní·tayʌʔ"],
+        breakdown: [["wa", "DEF"], ["hs"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["h"], "aní·tayʌʔ"],
+        breakdown: [["wa", "DEF"], ["h"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["u"], "ní·tayʌʔ"],
+        breakdown: [["waʔ", "DEF"], ["u"], "ní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["u"], "ní·tayʌʔ"],
+        breakdown: [["u"], "ní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["ty"], "aní·tayʌʔ"],
+        breakdown: [["we", "DEF"], ["ty"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["aky"], "aní·tayʌʔ"],
+        breakdown: [["waʔ", "DEF"], ["aky"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["tsy"], "aní·tayʌʔ"],
+        breakdown: [["we", "DEF"], ["tsy"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["hy"], "aní·tayʌʔ"],
+        breakdown: [["wa", "DEF"], ["hy"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "aní·tayʌʔ"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["tw"], "aní·tayʌʔ"],
+        breakdown: [["we", "DEF"], ["tw"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["akw"], "aní·tayʌʔ"],
+        breakdown: [["waʔ", "DEF"], ["akw"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["sw"], "aní·tayʌʔ"],
+        breakdown: [["we", "DEF"], ["sw"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["hu"], "ní·tayʌʔ"],
+        breakdown: [["wa", "DEF"], ["hu"], "ní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "ní·tayʌʔ"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "ní·tayʌ", ["ʔ", "PUNC"]],
       },
     ],
   },

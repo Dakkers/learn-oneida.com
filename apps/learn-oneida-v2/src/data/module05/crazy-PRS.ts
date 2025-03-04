@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["te", "DUAL"], ["k"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["k"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["hs"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["hs"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["h"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["h"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["yak"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["yu"], "nahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["y"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["w"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["tn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["ty"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["yakn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["yaky"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["sn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["tsy"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["hn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["hy"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["kn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["ky"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["ty"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["tw"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["yaky"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["yakw"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["tsy"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["sw"], "anahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["hʌn"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["hu"], "nahalawʌ́lye", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["te", "DUAL"], ["kun"], "anahalawʌlyé"],
+        breakdown: [["te", "DUAL"], ["ku"], "nahalawʌ́lye", ["heʔ", "HAB"]],
       },
     ],
   },

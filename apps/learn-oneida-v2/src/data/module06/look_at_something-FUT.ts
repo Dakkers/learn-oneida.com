@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["h"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "tkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "tkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "atkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hu"], "tkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["hu"], "tkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "tkáthoʔ"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "tkátho", ["ʔ", "PUNC"]],
       },
     ],
   },

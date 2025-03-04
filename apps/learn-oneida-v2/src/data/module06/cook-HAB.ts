@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["ke"], "khu·níheʔ"],
+        breakdown: [["ke"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["h", "RPL"], ["se"], "khu·níheʔ"],
+        breakdown: [["h", "RPL"], ["se"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["la"], "khu·níheʔ"],
+        breakdown: [["la"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["ye"], "khu·níheʔ"],
+        breakdown: [["ye"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["ka"], "khu·níheʔ"],
+        breakdown: [["ka"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["tni"], "khu·níheʔ"],
+        breakdown: [["tni"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["yakni"], "khu·níheʔ"],
+        breakdown: [["yakni"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["sni"], "khu·níheʔ"],
+        breakdown: [["sni"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["h", "RPL"], ["ni"], "khu·níheʔ"],
+        breakdown: [["h", "RPL"], ["ni"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["kni"], "khu·níheʔ"],
+        breakdown: [["kni"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["twa"], "khu·níheʔ"],
+        breakdown: [["twa"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["yakwa"], "khu·níheʔ"],
+        breakdown: [["yakwa"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["swa"], "khu·níheʔ"],
+        breakdown: [["swa"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["lati"], "khu·níheʔ"],
+        breakdown: [["lati"], "khu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["kuti"], "khu·níheʔ"],
+        breakdown: [["kuti"], "khu·ní", ["heʔ", "HAB"]],
       },
     ],
   },

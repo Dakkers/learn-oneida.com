@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PO",
     phrases: [
       {
-        breakdown: [["wak"], "itá·u"],
+        breakdown: [["wak"], "itá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["sʌ"], "tá·u"],
+        breakdown: [["sʌ"], "tá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["lo"], "tá·u"],
+        breakdown: [["lo"], "tá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yako"], "tá·u"],
+        breakdown: [["yako"], "tá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yo"], "tá·u"],
+        breakdown: [["yo"], "tá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yukn"], "itá·u"],
+        breakdown: [["yukn"], "itá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yukn"], "itá·u"],
+        breakdown: [["yukn"], "itá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["sn"], "itá·u"],
+        breakdown: [["sn"], "itá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["lot"], "itá·u"],
+        breakdown: [["lot"], "itá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yot"], "itá·u"],
+        breakdown: [["yot"], "itá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yukwʌ"], "tá·u"],
+        breakdown: [["yukwʌ"], "tá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yukwʌ"], "tá·u"],
+        breakdown: [["yukwʌ"], "tá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["swʌ"], "tá·u"],
+        breakdown: [["swʌ"], "tá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["lot"], "itá·u"],
+        breakdown: [["lot"], "itá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yot"], "itá·u"],
+        breakdown: [["yot"], "itá·", ["u", "PFV"]],
       },
     ],
     whispered: false,

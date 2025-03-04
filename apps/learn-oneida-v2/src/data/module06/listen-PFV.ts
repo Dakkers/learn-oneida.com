@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PO",
     phrases: [
       {
-        breakdown: [["wak"], "atahuhsatatú"],
+        breakdown: [["wak"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["s"], "atahuhsatatú"],
+        breakdown: [["s"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["lo"], "tahuhsatatú"],
+        breakdown: [["lo"], "tahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["yako"], "tahuhsatatú"],
+        breakdown: [["yako"], "tahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["yo"], "tahuhsatatú"],
+        breakdown: [["yo"], "tahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["yuky"], "atahuhsatatú"],
+        breakdown: [["yuky"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["yuky"], "atahuhsatatú"],
+        breakdown: [["yuky"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["tsy"], "atahuhsatatú"],
+        breakdown: [["tsy"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["lon"], "atahuhsatatú"],
+        breakdown: [["lon"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["yon"], "atahuhsatatú"],
+        breakdown: [["yon"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["yukw"], "atahuhsatatú"],
+        breakdown: [["yukw"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["yukw"], "atahuhsatatú"],
+        breakdown: [["yukw"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["sw"], "atahuhsatatú"],
+        breakdown: [["sw"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["lon"], "atahuhsatatú"],
+        breakdown: [["lon"], "atahuhsatat", ["ú", "PFV"]],
       },
       {
-        breakdown: [["yon"], "atahuhsatatú"],
+        breakdown: [["yon"], "atahuhsatat", ["ú", "PFV"]],
       },
     ],
     whispered: false,

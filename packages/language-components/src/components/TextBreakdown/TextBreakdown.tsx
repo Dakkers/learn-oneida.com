@@ -15,6 +15,7 @@ export type BreakdownType =
   | "HAB"
   | "IFUT"
   | "INST2" // instrumental II
+  | "INT" // intentive
   | "JOIN"
   | "OP"
   | "NOUN"
@@ -138,6 +139,7 @@ const BREAKDOWN_TYPE_MAP: Record<BreakdownType, string> = {
   HAB: "text-emerald-400",
   IFUT: "text-emerald-400",
   INST2: "text-yellow-500",
+  INT: "text-emerald-400",
   // JOIN: "text-yellow-600",
   JOIN: "text-gray-600",
   NOUN: "underline decoration-dotted decoration-[0.09rem] decoration-black",

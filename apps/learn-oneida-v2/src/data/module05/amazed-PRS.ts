@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PO",
     phrases: [
       {
-        breakdown: [["wak"], "nehlákwas"],
+        breakdown: [["wak"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["sa"], "nehlákwas"],
+        breakdown: [["sa"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["lo"], "nehlákwas"],
+        breakdown: [["lo"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yako"], "nehlákwas"],
+        breakdown: [["yako"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yo"], "nehlákwas"],
+        breakdown: [["yo"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yukni"], "nehlákwas"],
+        breakdown: [["yukni"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yukni"], "nehlákwas"],
+        breakdown: [["yukni"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["sni"], "nehlákwas"],
+        breakdown: [["sni"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["loti"], "nehlákwas"],
+        breakdown: [["loti"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yoti"], "nehlákwas"],
+        breakdown: [["yoti"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yukwa"], "nehlákwas"],
+        breakdown: [["yukwa"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yukwa"], "nehlákwas"],
+        breakdown: [["yukwa"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["swa"], "nehlákwas"],
+        breakdown: [["swa"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["loti"], "nehlákwas"],
+        breakdown: [["loti"], "nehlákw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yoti"], "nehlákwas"],
+        breakdown: [["yoti"], "nehlákw", ["as", "HAB"]],
       },
     ],
   },

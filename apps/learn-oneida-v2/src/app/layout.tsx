@@ -40,7 +40,7 @@ export default function RootLayout({
 
 function TitleBar() {
   return (
-    <div className="text-white bg-purple-950 text-center text-4xl py-4">
+    <div className="text-white bg-purple-950 text-center text-4xl py-4 print:hidden">
       <Text as="span" variant="headlineS">
         <Link href="/">
           <span className="text-white">Learn Oneida</span>
