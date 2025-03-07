@@ -11,17 +11,11 @@ const meta = {
 export default meta;
 
 export const Basic: StoryFn<typeof meta> = (args) => (
-  <EnglishDisplay
-    {...args}
-    value="English text"
-  />
+  <EnglishDisplay {...args} value="English text" />
 );
 
 export const Multiple: StoryFn<typeof meta> = (args) => (
-  <EnglishDisplay
-    {...args}
-    value={["English text 1", "English text 2"]}
-  />
+  <EnglishDisplay {...args} value={["English text 1", "English text 2"]} />
 );
 
 export const WithDictionary: StoryFn<typeof meta> = (args) => (

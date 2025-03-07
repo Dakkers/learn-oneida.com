@@ -151,7 +151,9 @@ function AilmentsList() {
           {
             accessorKey: "usage",
             // @ts-expect-error Table generics
-            cell: (value: Module11AilmentEntry['usage']) => <StandardEntryDisplay value={value} />,
+            cell: (value: Module11AilmentEntry["usage"]) => (
+              <StandardEntryDisplay value={value} />
+            ),
             header: "Oneida",
           },
         ]}

@@ -1,2 +1,2 @@
-export * from './EnglishDisplay'
-export * from './StandardEntryDisplay'
+export * from "./EnglishDisplay";
+export * from "./StandardEntryDisplay";

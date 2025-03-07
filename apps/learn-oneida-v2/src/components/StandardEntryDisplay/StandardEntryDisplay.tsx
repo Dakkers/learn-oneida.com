@@ -1,7 +1,7 @@
 import { Flex, Text } from "@ukwehuwehneke/ohutsya";
 import { TextWithAudio } from "../TextWithAudio";
 import {
-  BreakdownArray,
+  type BreakdownArray,
   convertBreakdownToPlainText,
   isWordWhispered,
   TextBreakdown,
@@ -29,7 +29,11 @@ export function StandardEntryDisplay({
   value,
 }: StandardEntryDisplayProps) {
   const getName = (val: string) =>
-    !audioFile ? undefined : disableAudioMerge ? audioFile :  getAudioFileName(audioFile, val);
+    !audioFile
+      ? undefined
+      : disableAudioMerge
+        ? audioFile
+        : getAudioFileName(audioFile, val);
 
   return (
     <Flex direction="column" gap={4}>
@@ -95,4 +99,16 @@ function getAudioFileName(audioFileBase: string, text: string) {
   } else {
     return `${base}.mp3`;
   }
+}
+
+export function getPlainTextFromStandardEntryItem(
+  item: string | StandardEntryItem,
+) {
+  if (typeof item === "string") {
+    return item;
+  }
+  if (typeof item.one === "string") {
+    return item.one;
+  }
+  return convertBreakdownToPlainText(item.one);
 }

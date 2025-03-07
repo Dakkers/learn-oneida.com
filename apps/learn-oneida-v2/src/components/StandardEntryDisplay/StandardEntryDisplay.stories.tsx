@@ -50,11 +50,11 @@ export const MultipleObjects: StoryFn<typeof meta> = (args) => (
     audioFile="http://localhost:3000/audio/module12/mammals/singular/beaver.mp3"
     value={[
       {
-        en: 'beaver',
+        en: "beaver",
         one: ["tsyoní·tu̲ʔ"],
       },
       {
-        en: 'beaver (alternate)',
+        en: "beaver (alternate)",
         one: ["tsyoní·to̲ʔ"],
       },
     ]}

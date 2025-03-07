@@ -1,5 +1,5 @@
-import { StandardEntry } from "@/components/StandardEntryDisplay";
-import { ModernEntry } from "@/utils/types";
+import type { StandardEntry } from "@/components/StandardEntryDisplay";
+import type { ModernEntry } from "@/utils/types";
 import type { BreakdownArray } from "@ukwehuwehneke/language-components";
 
 export interface BodyPartNounData extends ModernEntry {

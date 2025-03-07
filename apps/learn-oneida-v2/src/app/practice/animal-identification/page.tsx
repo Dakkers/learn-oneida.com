@@ -6,7 +6,14 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import { arrayify, Button, Flex, Select, Text, trackEvent } from "@ukwehuwehneke/ohutsya";
+import {
+  arrayify,
+  Button,
+  Flex,
+  Select,
+  Text,
+  trackEvent,
+} from "@ukwehuwehneke/ohutsya";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import {
   createModule12AnimalsList,
@@ -52,7 +59,9 @@ export default function PracticeAnimalIdentification() {
         result.push({
           audioFile,
           answerKey: `${key}_singular`,
-          text: convertBreakdownToPlainText(element.one),
+          text: convertBreakdownToPlainText(
+            _.isString(element) ? element : element.one,
+          ),
         });
       });
     }

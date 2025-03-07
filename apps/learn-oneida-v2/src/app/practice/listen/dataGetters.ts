@@ -52,6 +52,7 @@ import {
   createModule12AnimalsList,
   getAudioFileForModule12AnimalDatum,
 } from "@/data/module12";
+import { getPlainTextFromStandardEntryItem } from "@/components";
 
 export type ModuleNumber =
   | "module01"
@@ -274,10 +275,10 @@ export function formatCountingTimeAudioFiles(): AudioFriendlyData {
 export function formatAllAnimalsListAudioFiles(): AudioFriendlyData {
   return _.flattenDeep(
     createModule12AnimalsList().map((v) => [
-      v.singular.map((entry, i) => ({
+      arrayify(v.singular).map((item, i) => ({
         audioFile: getAudioFileForModule12AnimalDatum(v, "singular", i),
         en: v.en,
-        translation: convertBreakdownToPlainText(entry.one),
+        translation: getPlainTextFromStandardEntryItem(item),
       })),
       // TODO plural
     ]),

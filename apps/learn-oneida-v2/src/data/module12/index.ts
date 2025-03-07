@@ -1,11 +1,9 @@
 import {
-  StandardEntry,
+  getPlainTextFromStandardEntryItem,
+  type StandardEntry,
 } from "@/components/StandardEntryDisplay";
-import {
-  formatFileWithSuffix,
-  standardizeAudioFileName,
-} from "@/utils/misc";
-import { ModernEntry } from "@/utils/types";
+import { formatFileWithSuffix, standardizeAudioFileName } from "@/utils/misc";
+import type { ModernEntry } from "@/utils/types";
 import {
   convertBreakdownToPlainText,
   isWordWhispered,
@@ -453,7 +451,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        lit: 'it has long legs',
+        lit: "it has long legs",
         one: ["te", ["ka", "PS"], "hsineskó·"],
       },
     ],
@@ -700,7 +698,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        lit: 'it sees the sky',
+        lit: "it sees the sky",
         one: ["te", ["ka", "PS"], "luhyakahnélaʔ"],
       },
     ],
@@ -713,7 +711,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        lit: 'it\'s all muddy',
+        lit: "it's all muddy",
         one: ["onawaʔstohále̲ʔ"],
       },
     ],
@@ -726,7 +724,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     root: [],
     singular: [
       {
-        lit: 'it has a long neck',
+        lit: "it has a long neck",
         one: [["ka", "PS"], "nyales"],
       },
     ],
@@ -754,7 +752,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
         one: [["ka", "PS"], "hé·yʌ·taks"],
       },
       {
-        lit: 'it eats rotten carcass',
+        lit: "it eats rotten carcass",
         one: [["ka", "PS"], "kalyʌtaks"],
       },
     ],
@@ -1167,7 +1165,7 @@ export function getAudioFileForModule12AnimalDatum(
 ): string {
   const base = getAudioFileBaseForModule12AnimalDatum(datum, key);
   const wordList = datum[key];
-  const oneidaTxt = convertBreakdownToPlainText(wordList[index].one);
+  const oneidaTxt = getPlainTextFromStandardEntryItem(wordList[index]);
 
   if (isWordWhispered(oneidaTxt)) {
     return formatFileWithSuffix(`${base}_merged.mp3`, wordList, index);
@@ -1193,13 +1191,4 @@ export function getAudioFileBaseForModule12AnimalDatum(
     `module12/${t}/${key}/${datum.key}.mp3`,
   );
   return base;
-  // const wordList = datum[key];
-  // const oneidaTxt = convertBreakdownToPlainText(wordList[index].one);
-
-  // if (isWordWhispered(oneidaTxt)) {
-  //   return formatFileWithSuffix(`${base}_merged.mp3`, wordList, index);
-  // } else {
-  //   return formatFileWithSuffix(`${base}.mp3`, wordList, index);
-  // }
-  return "";
 }

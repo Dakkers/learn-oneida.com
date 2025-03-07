@@ -1,5 +1,5 @@
-import { Flex, PlayButton, Text, TextProps } from "@ukwehuwehneke/ohutsya";
-import { ReactNode } from "react";
+import { Flex, PlayButton, Text, type TextProps } from "@ukwehuwehneke/ohutsya";
+import type { ReactNode } from "react";
 
 export interface TextWithAudioProps {
   children: ReactNode;
