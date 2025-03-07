@@ -1,24 +1,14 @@
+import type { StandardEntry } from "@/components/StandardEntryDisplay";
+import type { ModernEntry } from "@/utils/types";
 import type { BreakdownArray } from "@ukwehuwehneke/language-components";
-
-type ListOfBreakdowns = Array<{
-  en?: string;
-  one: BreakdownArray;
-}>;
-
-interface ModernEntry {
-  en: string[];
-  key: string;
-  root: string[];
-  dict: number[];
-}
 
 export interface BodyPartNounData extends ModernEntry {
   standalone: string[];
-  onNoun: ListOfBreakdowns;
+  onNoun: StandardEntry;
 }
 
 export interface Module11AilmentEntry extends ModernEntry {
-  usage: ListOfBreakdowns;
+  usage: StandardEntry;
 }
 
 export interface Module11BodilyFluidEntry extends ModernEntry {
@@ -34,7 +24,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohsinikó·taʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my ankle",
         one: [["kh", "PS"], "sinikoʔtá·keʔ"],
       },
     ],
@@ -47,7 +37,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onʌ́tshaʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my arm",
         one: [["k", "PS"], "nʌtshá·keʔ"],
       },
     ],
@@ -60,10 +50,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["óshwaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my back",
         one: [["ke", "PS"], "shwʌ́·neʔ"],
       },
       {
+        en: "my back",
         one: [["ke", "PS"], "shú·neʔ"],
       },
     ],
@@ -76,7 +67,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["okustú·lhaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my beard",
         one: [["k", "PS"], "kustulhá·keʔ"],
       },
     ],
@@ -89,7 +80,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onikwʌ́·taʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my belly",
         one: [["k", "PS"], "nikwʌʔté·ne"],
       },
       {
@@ -105,7 +96,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onlí·tstaʔ", "ontlí·tstaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my belly button",
         one: [["ke", "PS"], "n", ["t", "RPL"], "liʔtstá·keʔ"],
       },
     ],
@@ -118,7 +109,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["atshistokwale"],
     onNoun: [
       {
-        en: "my",
+        en: "my birthmark",
         one: [["wak", "PO"], "atshistokwale"],
       },
     ],
@@ -131,7 +122,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["yenhʌhalakhwaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my bladder",
         one: [["ke", "PS"], "nhʌhalákhwaʔ"],
       },
     ],
@@ -144,7 +135,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onikwʌ́hsaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my blood",
         one: [["ak", "PP"], "nikwʌ́hsa̲"],
       },
     ],
@@ -157,7 +148,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["oyá·taʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my body",
         one: [["k", "PS"], "yaʔté·ne"],
       },
     ],
@@ -170,7 +161,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["óstyʌʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my bone",
         one: [["ke", "PS"], "styʌʔtá·keʔ"],
       },
     ],
@@ -183,7 +174,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["olátskʌʔ", "olátskʌʔ·ta"],
     onNoun: [
       {
-        en: "my",
+        en: "my braid",
         one: [["k", "PS"], "latskʌtá·keʔ"],
       },
     ],
@@ -196,7 +187,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onaʔalátslaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my brain",
         one: [["ak", "PP"], "naʔalatslaʔ"],
       },
     ],
@@ -209,7 +200,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onú·taʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my breast",
         one: [["k", "PS"], "nuʔtá·keʔ"],
       },
     ],
@@ -222,7 +213,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onhó·kwaʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my cheek",
         one: [["ke", "PS"], "nhoʔkwá·keʔ"],
       },
     ],
@@ -235,11 +226,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohná·tshaʔ", "ohtnusa"],
     onNoun: [
       {
-        en: "my",
+        en: "my butt",
         one: [["k", "PS"], "hnaʔtshí·ne"],
       },
       {
-        en: "on my",
+        en: "on my butt",
         one: [["k", "PS"], "hnaʔtshá·keʔ"],
       },
     ],
@@ -252,7 +243,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["utskwé·naʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my chest",
         one: [["k", "PS"], "utskweʔná·keʔ"],
       },
     ],
@@ -265,11 +256,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohyó·tshaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my chin",
         one: [["ke", "PS"], "hyoʔtshé·ne"],
       },
       {
-        en: "on my",
+        en: "on my chin",
         one: [["k", "PS"], "hyoʔtshá·keʔ"],
       },
     ],
@@ -282,7 +273,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohúhtaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my ear",
         one: [["k", "PS"], "ahuhtá·keʔ"],
       },
     ],
@@ -295,11 +286,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohyó·lhaʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my elbow",
         one: [["ke", "PS"], "hyoʔlhá·keʔ"],
       },
       {
-        en: "on my",
+        en: "on my elbow",
         one: [["ke", "PS"], "lhyoʔlhá·keʔ"],
       },
     ],
@@ -312,7 +303,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["oká·laʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my eye",
         one: [["k", "PS"], "kahlá·keʔ"],
       },
     ],
@@ -325,7 +316,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onaʔwa·sé·"],
     onNoun: [
       {
-        en: "my",
+        en: "my eyebrow",
         one: [["k", "PS"], "naʔwasá·ke"],
       },
     ],
@@ -338,7 +329,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["oʔnekʌhtalaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my eyelash",
         one: [["k", "PS"], "neʔkʌhtalá·keʔ"],
       },
     ],
@@ -351,7 +342,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["okahkwiloʔóktaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my eyelid",
         one: [["k", "PS"], "ONNOUN"],
       },
     ],
@@ -364,11 +355,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["okúhsaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my face",
         one: [["k", "PS"], "kukhsá·keʔ"],
       },
       {
-        en: "on my",
+        en: "on my face",
         one: [["k", "PS"], "kúksne"],
       },
     ],
@@ -381,7 +372,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["otsyeʔe·lá·"],
     onNoun: [
       {
-        en: "my",
+        en: "my fingernail",
         one: [["k", "PS"], "tsyeʔelá·ke"],
       },
     ],
@@ -394,11 +385,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohsí·taʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my foot",
         one: [["k", "PS"], "ahsí·ke"],
       },
       {
-        en: "on my",
+        en: "on my foot",
         one: [["k", "PS"], "ahsiʔtá·keʔ"],
       },
     ],
@@ -411,7 +402,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["okú·kwalaʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my forehead",
         one: [["k", "PS"], "kuʔkwalá·keʔ"],
       },
     ],
@@ -424,7 +415,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ó·naʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my genitals",
         one: [["k", "PS"], "eʔná·keʔ"],
       },
     ],
@@ -437,7 +428,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onúhkwis"],
     onNoun: [
       {
-        en: "my",
+        en: "my hair",
         one: [["ak", "PP"], "núhkwis"],
       },
     ],
@@ -463,11 +454,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onutsí"],
     onNoun: [
       {
-        en: "my",
+        en: "my head",
         one: [["k", "PS"], "nutsí·ne"],
       },
       {
-        en: "on my",
+        en: "on my head",
         one: [["k", "PS"], "nutsihstá·keʔ"],
       },
     ],
@@ -480,7 +471,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["awe·lá·", "awelyáhsaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my heart",
         one: [["akw", "PP"], "elyá·ne"],
       },
     ],
@@ -493,11 +484,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ola·tá·"],
     onNoun: [
       {
-        en: "my",
+        en: "my heel",
         one: [["k", "PS"], "latá·keʔ"],
       },
       {
-        en: "on my",
+        en: "on my heel",
         one: [["k", "PS"], "laté·ne"],
       },
     ],
@@ -510,7 +501,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onhúskalaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my hip",
         one: [["ke", "PS"], "nhuskalá·keʔ"],
       },
     ],
@@ -523,7 +514,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["okahlóstaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my intestines",
         one: [["ak", "PP"], "kahlostá·keʔ"],
       },
     ],
@@ -536,7 +527,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ostutlaʔshúhaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my joint",
         one: ["tsiʔ t", ["wak", "PO"], "estu·téle"],
       },
     ],
@@ -549,7 +540,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["útshaʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my knee",
         one: [["k", "PS"], "utshá·keʔ"],
       },
     ],
@@ -562,7 +553,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohsi·ná·"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my leg",
         one: [["k", "PS"], "hsiná·keʔ"],
       },
       // {
@@ -579,7 +570,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["othwʌ́hsaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my liver",
         one: [["akw", "PP"], "athwʌ́hsaʔ"],
       },
     ],
@@ -592,7 +583,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["yewelalákhwaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my lung",
         one: [["ak", "PP"], "welalá·khwa̲ʔ"],
       },
     ],
@@ -605,7 +596,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohsaká·la"],
     onNoun: [
       {
-        en: "my",
+        en: "my mouth",
         one: [["k", "PS"], "sá·keʔ"],
       },
     ],
@@ -618,7 +609,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohti·lá·"],
     onNoun: [
       {
-        en: "my",
+        en: "my muscles",
         one: [["ak", "PP"], "hti·láʔ"],
       },
     ],
@@ -631,7 +622,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohsé·ne"],
     onNoun: [
       {
-        en: "my",
+        en: "my lips",
         one: [["k", "PS"], "sé·ne"],
       },
     ],
@@ -644,7 +635,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onya·lá·"],
     onNoun: [
       {
-        en: "my",
+        en: "my neck",
         one: [["ke", "PS"], "nyalá·keʔ"],
       },
     ],
@@ -657,7 +648,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohníhsyaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my nipple",
         one: [["k", "PS"], "hnihsyá·keʔ"],
       },
     ],
@@ -670,11 +661,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["oʔnyúhsaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my nose",
         one: [["ke", "PS"], "ʔnyú·keʔ"],
       },
       {
-        en: "on my",
+        en: "on my nose",
         one: [["ke", "PS"], "ʔnyuhsá·keʔ"],
       },
     ],
@@ -687,7 +678,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["óhtsyana"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my palm",
         one: [["akw", "PP"], "ahtsyaná·ke"],
       },
     ],
@@ -700,11 +691,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onaʔáhtaʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my ribs",
         one: [["k", "PS"], "naʔahtá·keʔ"],
       },
       {
-        en: "my",
+        en: "my ribs",
         one: [["k", "PS"], "naʔahté·ne"],
       },
     ],
@@ -717,7 +708,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohtéhkalaʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my rib",
         one: [["k", "PS"], "tehkalá·keʔ"],
       },
     ],
@@ -730,7 +721,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onyʌ·tá·"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my shin",
         one: [["ke", "PS"], "nyʌʔtá·keʔ"],
       },
     ],
@@ -743,11 +734,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohnʌ́hsaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my shoulder",
         one: [["k", "PS"], "hnʌ́ksne"],
       },
       {
-        en: "on my",
+        en: "on my shoulder",
         one: [["k", "PS"], "hnʌhsá·keʔ"],
       },
     ],
@@ -760,7 +751,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohna·kwáleʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my skin",
         one: [["ak", "PP"], "hná·kwaleʔ"],
       },
     ],
@@ -773,11 +764,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onaʔa·lá·"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my skull",
         one: [["k", "PS"], "naʔalá·keʔ"],
       },
       {
-        en: "in my",
+        en: "in my skull",
         one: [["k", "PS"], "naʔalakú"],
       },
     ],
@@ -790,7 +781,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["atunhétslaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my soul",
         one: [["akw", "PP"], "atunhetslaʔ"],
       },
     ],
@@ -803,7 +794,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["oluhkwé·naʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my spine",
         one: [["k", "PS"], "luhkwehná·keʔ"],
       },
     ],
@@ -817,7 +808,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: [],
     onNoun: [
       {
-        en: "my",
+        en: "my stomach",
         one: [["ke", "PS"], "khwalákhwaʔ"],
       },
     ],
@@ -830,7 +821,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["onʌ·yá·"],
     onNoun: [
       {
-        en: "my",
+        en: "my testicles",
         one: [["k", "PS"], "nʌyá·keʔ"],
       },
     ],
@@ -843,7 +834,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohnítshaʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my thigh",
         one: [["k", "PS"], "hnitshá·keʔ"],
       },
     ],
@@ -856,11 +847,11 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohú·kwaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my throat",
         one: [["k", "PS"], "huʔkwé·ne"],
       },
       {
-        en: "on my",
+        en: "on my throat",
         one: [["k", "PS"], "huʔkwá·ke"],
       },
     ],
@@ -886,7 +877,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["owhyúhkalaʔ"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my thumb",
         one: [["ke", "PS"], "whyuhkalá·keʔ"],
       },
     ],
@@ -899,7 +890,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["ohyakwi·lá·"],
     onNoun: [
       {
-        en: "on my",
+        en: "on my toe",
         one: [["k", "PS"], "ahyakwí·keʔ"],
       },
     ],
@@ -912,7 +903,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["awʌʔnáhsaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my tongue",
         one: [["ak", "PP"], "wʌʔnáhsaʔ"],
       },
     ],
@@ -959,7 +950,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["otsinuhyáhtaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my vein",
         one: [["ak", "PP"], "tsinuhyáhtaʔ"],
       },
     ],
@@ -972,7 +963,7 @@ export function createModule11BodyPartNounList(): BodyPartNounData[] {
     standalone: ["kawilalákhwaʔ"],
     onNoun: [
       {
-        en: "my",
+        en: "my womb",
         one: [["k", "PS"], "wilalakhwa"],
       },
     ],

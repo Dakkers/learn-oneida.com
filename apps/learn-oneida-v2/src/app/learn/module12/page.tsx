@@ -24,12 +24,14 @@ import {
   createModule12BirdsList,
   createModule12InsectsList,
   createModule12MammalsList,
+  getAudioFileBaseForModule12AnimalDatum,
   getAudioFileForModule12AnimalDatum,
 } from "@/data/module12";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { StandardEntryDisplay } from "@/components/StandardEntryDisplay";
 
 // export const metadata: Metadata = {
 //   title: "Module 12",
@@ -119,7 +121,7 @@ function AnimalTable({ data }: { data: Module12AnimalDatum[] }) {
           accessorKey: "en",
           // @ts-expect-error TODO - TableWrapper/Table generics
           cell: (en: string[], row: Module12AnimalDatum) => (
-            <Flex direction="column" gap={1}>
+            <Flex direction="column" gap={0}>
               <Text>{en.join(", ")}</Text>
               {row.dict.length > 0 && (
                 <Text contrast="mid" variant="labelS">
@@ -137,7 +139,15 @@ function AnimalTable({ data }: { data: Module12AnimalDatum[] }) {
             singular: Module12AnimalDatum["singular"],
             row: Module12AnimalDatum,
           ) => {
-            return <CustomCell group="singular" row={row} value={singular} />;
+            return (
+              <StandardEntryDisplay
+                audioFile={getAudioFileBaseForModule12AnimalDatum(
+                  row,
+                  "singular",
+                )}
+                value={singular}
+              />
+            );
           },
           header: "Single",
         },
@@ -153,75 +163,5 @@ function AnimalTable({ data }: { data: Module12AnimalDatum[] }) {
       // @ts-expect-error TODO - TableWrapper/Table generics
       data={data}
     />
-  );
-}
-
-function CustomCell({
-  group,
-  row,
-  value,
-}: {
-  group: "singular" | "plural";
-  row: Module12AnimalDatum;
-  value:
-    | string
-    | string[]
-    | Array<{
-        one: BreakdownArray | string;
-        en?: string;
-      }>;
-}) {
-  return (
-    <Flex direction="column" gap={4}>
-      {typeof value === "string" ? (
-        <TextWithAudio
-          filepath={getAudioFileForModule12AnimalDatum(row, group)[0]}
-        >
-          {value}
-        </TextWithAudio>
-      ) : (
-        (value ?? []).map((obj, i) => {
-          const fs = getAudioFileForModule12AnimalDatum(row, group, i);
-
-          return (
-            <Flex direction="column" gap={0} key={i}>
-              {typeof obj === "string" ? (
-                <TextWithAudio filepath={fs}>{obj}</TextWithAudio>
-              ) : (
-                <>
-                  {typeof obj.one === "string" ? (
-                    <TextWithAudio filepath={fs}>{obj.one}</TextWithAudio>
-                  ) : (
-                    <TextWithAudio filepath={fs}>
-                      <TextBreakdown
-                        breakdown={obj.one}
-                        typeFallback="PS"
-                        wrap="nowrap"
-                      />
-                    </TextWithAudio>
-                  )}
-                  {obj.en && <Text variant="labelS">{obj.en}</Text>}
-                </>
-              )}
-            </Flex>
-          );
-        })
-      )}
-    </Flex>
-  );
-}
-
-function TextWithAudio({
-  children,
-  filepath,
-}: {
-  children: ReactNode;
-  filepath: string;
-}) {
-  return (
-    <Flex gap={2}>
-      <PlayButton filepath={filepath} />
-      {children}
-    </Flex>
   );
 }
