@@ -1,6 +1,6 @@
 "use client";
 
-import { Flex } from "@ukwehuwehneke/ohutsya";
+import { Flex, trackEvent } from "@ukwehuwehneke/ohutsya";
 import { Button } from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import React, { useCallback, useEffect, useState } from "react";
@@ -71,6 +71,11 @@ export default function ToolsFlashcards() {
     setData(data);
     setHasStarted(true);
     processItem(0, data);
+    trackEvent("Started Audio Playlist", {
+      audioSetting,
+      autoAdvanceSetting,
+      category: selectedModule,
+    });
   };
 
   const processItem = useCallback(
