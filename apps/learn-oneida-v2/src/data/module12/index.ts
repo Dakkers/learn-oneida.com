@@ -9,12 +9,12 @@ import {
   type BreakdownArray,
 } from "@ukwehuwehneke/language-components";
 
-type ListOfBreakdowns = Array<{
+export type ListOfBreakdowns = Array<{
   en?: string;
   one: BreakdownArray | string;
 }>;
 
-interface ModernEntry {
+export interface ModernEntry {
   en: string[];
   key: string;
   root: string[];
