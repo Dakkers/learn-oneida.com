@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "atyaʔtóhaleʔ"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["hs"], "atyaʔtóhaleʔ"],
+        breakdown: [["wa", "DEF"], ["hs"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["h"], "atyaʔtóhaleʔ"],
+        breakdown: [["wa", "DEF"], ["h"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["u"], "tyaʔtóhaleʔ"],
+        breakdown: [["waʔ", "DEF"], ["u"], "tyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["u"], "tyaʔtóhaleʔ"],
+        breakdown: [["u"], "tyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["ty"], "atyaʔtóhaleʔ"],
+        breakdown: [["we", "DEF"], ["ty"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["aky"], "atyaʔtóhaleʔ"],
+        breakdown: [["waʔ", "DEF"], ["aky"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["tsy"], "atyaʔtóhaleʔ"],
+        breakdown: [["we", "DEF"], ["tsy"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["hy"], "atyaʔtóhaleʔ"],
+        breakdown: [["wa", "DEF"], ["hy"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "atyaʔtóhaleʔ"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["tw"], "atyaʔtóhaleʔ"],
+        breakdown: [["we", "DEF"], ["tw"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["akw"], "atyaʔtóhaleʔ"],
+        breakdown: [["waʔ", "DEF"], ["akw"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["sw"], "atyaʔtóhaleʔ"],
+        breakdown: [["we", "DEF"], ["sw"], "atyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["hu"], "tyaʔtóhaleʔ"],
+        breakdown: [["wa", "DEF"], ["hu"], "tyaʔtóhale", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "tyaʔtóhaleʔ"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "tyaʔtóhale", ["ʔ", "PUNC"]],
       },
     ],
   },

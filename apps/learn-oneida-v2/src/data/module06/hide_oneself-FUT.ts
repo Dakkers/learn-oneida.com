@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["k"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["h"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "táhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "táhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["w"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "atáhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hu"], "táhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["hu"], "táhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "táhsehteʔ"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "táhseht", ["eʔ", "PUNC"]],
       },
     ],
   },

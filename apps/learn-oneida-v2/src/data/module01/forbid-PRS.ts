@@ -9,46 +9,46 @@ const data = createInteractiveParadigmData({
   type: "PI",
   phrases: [
     {
-      breakdown: [["kuy"], "ahlístaʔ"],
+      breakdown: [["kuy"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["liy"], "ahlístaʔ"],
+      breakdown: [["liy"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["khey"], "ahlístaʔ"],
+      breakdown: [["khey"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["skw"], "ahlístaʔ"],
+      breakdown: [["skw"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["h", "RPL"], ["etsh"], "ahlístaʔ"],
+      breakdown: [["h", "RPL"], ["etsh"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["shey"], "ahlístaʔ"],
+      breakdown: [["shey"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["lakw"], "ahlístaʔ"],
+      breakdown: [["lakw"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["h", "RPL"], ["y"], "ahlístaʔ"],
+      breakdown: [["h", "RPL"], ["y"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["lo"], "hlístaʔ"],
+      breakdown: [["lo"], "hlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["shako"], "hlístaʔ"],
+      breakdown: [["shako"], "hlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["yukw"], "ahlístaʔ"],
+      breakdown: [["yukw"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["yes"], "ahlístaʔ"],
+      breakdown: [["yes"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["luw"], "ahlístaʔ"],
+      breakdown: [["luw"], "ahlíst", ["aʔ", "HAB"]],
     },
     {
-      breakdown: [["yutat"], "ahlístaʔ"],
+      breakdown: [["yutat"], "ahlíst", ["aʔ", "HAB"]],
     },
   ],
 });

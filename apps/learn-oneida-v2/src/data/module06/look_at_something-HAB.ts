@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["k"], "atkáthos"],
+        breakdown: [["k"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["s"], "atkáthos"],
+        breakdown: [["s"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["l"], "atkáthos"],
+        breakdown: [["l"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["yu"], "tkáthos"],
+        breakdown: [["yu"], "tkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["w"], "atkáthos"],
+        breakdown: [["w"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["ty"], "atkáthos"],
+        breakdown: [["ty"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["yaky"], "atkáthos"],
+        breakdown: [["yaky"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["tsy"], "atkáthos"],
+        breakdown: [["tsy"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["y"], "atkáthos"],
+        breakdown: [["y"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["ky"], "atkáthos"],
+        breakdown: [["ky"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["tw"], "atkáthos"],
+        breakdown: [["tw"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["yakw"], "atkáthos"],
+        breakdown: [["yakw"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["sw"], "atkáthos"],
+        breakdown: [["sw"], "atkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["lu"], "tkáthos"],
+        breakdown: [["lu"], "tkátho", ["s", "HAB"]],
       },
       {
-        breakdown: [["ku"], "tkáthos"],
+        breakdown: [["ku"], "tkátho", ["s", "HAB"]],
       },
     ],
     whispered: false,

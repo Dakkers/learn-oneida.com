@@ -5,46 +5,46 @@ const data = createInteractiveParadigmData({
   type: "PI",
   phrases: [
     {
-      breakdown: [["kuy"], "atló·loks"],
+      breakdown: [["kuy"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["liy"], "atló·loks"],
+      breakdown: [["liy"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["khey"], "atló·loks"],
+      breakdown: [["khey"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["skw"], "atló·loks"],
+      breakdown: [["skw"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["h", "RPL"], ["etsh"], "atló·loks"],
+      breakdown: [["h", "RPL"], ["etsh"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["shey"], "atló·loks"],
+      breakdown: [["shey"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["lakw"], "atló·loks"],
+      breakdown: [["lakw"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["h", "RPL"], ["y"], "atló·loks"],
+      breakdown: [["h", "RPL"], ["y"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["lo"], "tló·loks"],
+      breakdown: [["lo"], "tló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["shako"], "tló·loks"],
+      breakdown: [["shako"], "tló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["yukw"], "atló·loks"],
+      breakdown: [["yukw"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["yes"], "atló·loks"],
+      breakdown: [["yes"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["luw"], "atló·loks"],
+      breakdown: [["luw"], "atló·lok", ["s", "HAB"]],
     },
     {
-      breakdown: [["yutat"], "atló·loks"],
+      breakdown: [["yutat"], "atló·lok", ["s", "HAB"]],
     },
   ],
   whispered: false,

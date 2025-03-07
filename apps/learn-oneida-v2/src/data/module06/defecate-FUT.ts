@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["ʌ", "FUT"], ["k"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["k"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hs"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["hs"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["h"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["h"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yu"], "ní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["yu"], "ní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["w"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["w"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ty"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["ty"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yaky"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["yaky"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tsy"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["tsy"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hy"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["hy"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ky"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["ky"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["tw"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["tw"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["yakw"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["yakw"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["sw"], "aní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["sw"], "aní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["hu"], "ní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["hu"], "ní·tayʌ", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["ʌ", "FUT"], ["ku"], "ní·tayʌʔ"],
+        breakdown: [["ʌ", "FUT"], ["ku"], "ní·tayʌ", ["ʔ", "PUNC"]],
       },
     ],
   },
