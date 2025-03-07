@@ -5,7 +5,7 @@ import {
 } from "@/components/TableWrapper";
 import React from "react";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
-import { Flex, PlayButton } from "@ukwehuwehneke/ohutsya";
+import { TextWithAudio } from "../TextWithAudio";
 
 const oneidaToEnglishModule01 = [
   ["1", "Né· lokstʌ́ha lanú·wehseʔ uní né· kháleʔ akokstʌ́ha yenú·wehse̲ʔ"],
@@ -246,15 +246,15 @@ function TranslationExerciseTable({
               num: string;
             },
           ) => (
-            <Flex gap={4}>
-              <span>{value}</span>
-
-              {row.hasAudio && (
-                <PlayButton
-                  filepath={`/audio/translation_exercises/module${row.module}/ex_${row.num}.mp3`}
-                />
-              )}
-            </Flex>
+            <TextWithAudio
+              filepath={
+                row.hasAudio
+                  ? `/audio/translation_exercises/module${row.module}/ex_${row.num}.mp3`
+                  : undefined
+              }
+            >
+              {value}
+            </TextWithAudio>
           ),
           header: "",
         },
