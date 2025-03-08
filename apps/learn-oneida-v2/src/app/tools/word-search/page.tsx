@@ -103,7 +103,7 @@ function WordSearch({
 
   const dataSubset = useMemo(() => {
     const cleaned = _.flattenDeep(rawData).filter((val) => !val.includes(' ') && !!val)
-    const subset = _.shuffle(cleaned);
+    const subset = _.sampleSize(_.shuffle(cleaned), 30);
     return subset.map((val) => replaceForGlottal(unwhisperWord(val)).replaceAll("·", ""));
   }, [rawData])
 
