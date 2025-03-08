@@ -5,39 +5,37 @@ import { generateWordsearch } from "../../../utils/wordsearch";
 
 export default function PlaygroundPage() {
   const result = generateWordsearch(
-    ['cat', 'mouse', 'moose', 'snake', 'cobra'],
+    ["cat", "mouse", "moose", "snake", "cobra"],
     {
       characterSet: [
-        'a',
-        'e',
-        'i',
-        'o',
-        'u',
-        'ʌ',
-        'á',
-        'é',
-        'í',
-        'ó',
-        'ú',
-        'ʌ́',
-        'h',
-        'k',
-        'l',
-        'n',
-        's',
-        't',
-        'w',
-        'y',
-        'ʔ',
-      ]
-    }
-  )
+        "a",
+        "e",
+        "i",
+        "o",
+        "u",
+        "ʌ",
+        "á",
+        "é",
+        "í",
+        "ó",
+        "ú",
+        "ʌ́",
+        "h",
+        "k",
+        "l",
+        "n",
+        "s",
+        "t",
+        "w",
+        "y",
+        "ʔ",
+      ],
+    },
+  );
 
-  console.log(result.grid)
-  const lol = _.chunk(result.grid, 10)
-  console.log(
-    lol
-  )
+  console.log(result.grid);
+  const lol = _.chunk(result.grid, 10);
+  console.log(lol);
 
   return (
     <PageWrapper>
@@ -45,9 +43,7 @@ export default function PlaygroundPage() {
 
       <div className="grid grid-cols-10 gap-2 font-mono text-3xl text-5xl text-4xl">
         {result.grid.map((char, j) => (
-          <span key={j}>
-            {char}
-          </span>
+          <span key={j}>{char}</span>
         ))}
       </div>
 
@@ -55,9 +51,7 @@ export default function PlaygroundPage() {
         {lol.map((row, i) => (
           <div key={i}>
             {row.map((char, j) => (
-              <span key={j}>
-                {char}
-              </span>
+              <span key={j}>{char}</span>
             ))}
           </div>
         ))}

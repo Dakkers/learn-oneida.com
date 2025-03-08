@@ -6,40 +6,38 @@ interface Options {
   size?: number;
 }
 
-class WordSearch {
-  readonly width: number;
-  readonly height: number;
-  readonly grid: string[];
-  readonly words: string[];
-
-  constructor(width: number, height: number, grid: string[], words: string[]) {
-    this.width = width;
-    this.height = height;
-    this.grid = grid;
-    this.words = words;
-  }
-
-  get(x: number, y: number) {
-    return this.grid[y * this.width + x];
-  }
-
-  toString() {
-    let result = "";
-    for (let y = 0; y < this.height; y++) {
-      for (let x = 0; x < this.width; x++) {
-        result += this.get(x, y) + " ";
-      }
-      result += "\n";
-    }
-    return result;
-  }
-}
-
 const effort = 10000;
 
-export function generateWordsearch(words: string[], options?: Options): {
-  grid: string[]
-  used: string[]
+export const ONEIDA_CHAR_SET = [
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "ʌ",
+  "á",
+  "é",
+  "í",
+  "ó",
+  "ú",
+  "ʌ́",
+  "h",
+  "k",
+  "l",
+  "n",
+  "s",
+  "t",
+  "w",
+  "y",
+  "ʔ",
+];
+
+export function generateWordsearch(
+  words: string[],
+  options?: Options,
+): {
+  grid: string[];
+  used: string[];
 } {
   const opts = options ?? {};
   const allowDiagonals = opts.diagonals ?? false;
@@ -47,14 +45,10 @@ export function generateWordsearch(words: string[], options?: Options): {
   const maxLength = opts.maxLength ?? 10;
   const size = opts.size ?? 10;
 
-  const allowedWords = words
-    .filter((w) => w.length >= minLength && w.length <= maxLength)
-  // console.info(`${words.length} words`);
-  // console.info(`size: ${options.width} x ${options.height}`);
-  // console.info(`diagonals: ${options.diagonals}`);
-  // console.info(`minimum word length: ${options.minLength}`);
-  // console.info(`maximum word length: ${options.maxLength}`);
-  // console.info(`effort: ${effort}`);
+  const allowedWords = words.filter((w) => {
+    const len = splitUtf8(w).length;
+    return len >= minLength && len <= maxLength;
+  });
 
   const grid: string[] = [];
   const used: string[] = [];
@@ -64,25 +58,31 @@ export function generateWordsearch(words: string[], options?: Options): {
   }
 
   const dxs = allowDiagonals ? [0, 1, 1, 1, 0, -1, -1, -1] : [0, 1, 0, -1];
-  const dys = allowDiagonals ?  [-1, -1, 0, 1, 1, 1, 0, -1] : [-1, 0, 1, 0];
+  const dys = allowDiagonals ? [-1, -1, 0, 1, 1, 1, 0, -1] : [-1, 0, 1, 0];
 
   const rand = (max: number) => {
     return Math.floor(Math.random() * max);
-  }
+  };
 
   const get = (x: number, y: number) => {
     return grid[y * size + x];
-  }
+  };
 
   const set = (x: number, y: number, letter: string) => {
     grid[y * size + x] = letter;
-  }
+  };
 
-  const tryword = (x: number, y: number, dx: number, dy: number, word: string) => {
+  const tryword = (
+    x: number,
+    y: number,
+    dx: number,
+    dy: number,
+    word: string,
+  ) => {
     let ok = false;
-    for (let i = 0; i < word.length; i++) {
-      // const l = word[i].toUpperCase();
-      const l = word[i];
+    const chars = splitUtf8(word);
+    for (let i = 0; i < chars.length; i++) {
+      const l = chars[i];
       if (x < 0 || y < 0 || x >= size || y >= size) {
         return false;
       }
@@ -99,11 +99,18 @@ export function generateWordsearch(words: string[], options?: Options): {
       y += dy;
     }
     return ok;
-  }
+  };
 
-  const putword = (x: number, y: number, dx: number, dy: number, word: string) => {
-    for (let i = 0; i < word.length; i++) {
-      const l = word[i];
+  const putword = (
+    x: number,
+    y: number,
+    dx: number,
+    dy: number,
+    word: string,
+  ) => {
+    const chars = splitUtf8(word);
+    for (let i = 0; i < chars.length; i++) {
+      const l = chars[i];
       // const l = word[i].toUpperCase();
       set(x, y, l);
       x += dx;
@@ -111,7 +118,7 @@ export function generateWordsearch(words: string[], options?: Options): {
     }
     used.push(word);
     usedMap[word] = true;
-  }
+  };
 
   for (let i = 0; i < size * size * effort; i++) {
     if (used.length == allowedWords.length) {
@@ -133,9 +140,9 @@ export function generateWordsearch(words: string[], options?: Options): {
     }
   }
 
-  //const fillage = grid.reduce((t, c) => t + (c == ' ' ? 0 : 1), 0);
-
-  const characterSet = opts.characterSet ? opts.characterSet : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const characterSet = opts.characterSet
+    ? opts.characterSet
+    : "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   for (let i = 0; i < grid.length; i++) {
     if (grid[i] == " ") {
@@ -145,13 +152,15 @@ export function generateWordsearch(words: string[], options?: Options): {
 
   used.sort();
 
-  //console.info(`${used.length} words`);
-  //console.info(`${fillage}/${width * height} filled (${(fillage*100/width/height).toFixed(1)}%)`);
-  //print();
-  //console.info(used.join(','));
-
   return {
     grid,
     used,
-  }
+  };
+}
+
+function splitUtf8(str: string) {
+  const itr = new Intl.Segmenter("en", { granularity: "grapheme" }).segment(
+    str,
+  );
+  return Array.from(itr, ({ segment }) => segment);
 }

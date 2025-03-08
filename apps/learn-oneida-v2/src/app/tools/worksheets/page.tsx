@@ -1,10 +1,9 @@
 "use client";
-import { convertBreakdownToPlainText, replaceForGlottal, sanitizeIrregularCharacters, SectionHeading, unwhisperWord } from "@ukwehuwehneke/language-components";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import _ from "lodash";
 import { PageWrapper } from "@/components/PageWrapper";
 import {
   Box,
-  Button,
   Divider,
   Flex,
   Notice,
@@ -17,18 +16,30 @@ import { getAllModule01Paradigms } from "@/data/module01";
 import { getAllModule02Paradigms } from "@/data/module02";
 import { getAllModule03Paradigms } from "@/data/module03";
 import { getAllModule04Paradigms } from "@/data/module04";
-import { createModule12AnimalsList, ListOfBreakdowns, ModernEntry } from "@/data/module12";
-import { generateWordsearch } from "@/utils/wordsearch";
 
 export default function WorksheetsPage() {
-  const [category, setCategory] = useState("module12");
+  const [category, setCategory] = useState("food");
   const [worksheetType, setWorksheetType] = useState("wordsearch");
   const [id, setId] = useState(0);
 
-  const generate = () => {
-    if (worksheetType === "roots") {
+  const categoryOptions = useMemo(() => {
+    if (worksheetType === "wordsearch") {
+      return [
+        { label: "Environment", value: "environment" },
+        { label: "Food", value: "food" },
+        { label: "Body Parts", value: "bodyparts" },
+        { label: "Animals", value: "animals" },
+      ].toSorted((a, b) => a.label.localeCompare(b.label));
     }
-  };
+    return [
+      // ["All", "all"],
+      ["Module 1", "module01"],
+      ["Module 2", "module02"],
+      // ["Module 3", "module03"],
+      ["Module 4", "module04"],
+      ["Module 12", "module12"],
+    ].map(([label, value]) => ({ label, value }));
+  }, [worksheetType]);
 
   return (
     <PageWrapper>
@@ -55,17 +66,10 @@ export default function WorksheetsPage() {
               }}
               value={worksheetType}
             />
-            {["roots", "pronominals", 'wordsearch'].includes(worksheetType) && (
+            {["roots", "pronominals", "wordsearch"].includes(worksheetType) && (
               <Select
                 label="Category"
-                options={[
-                  // ["All", "all"],
-                  ["Module 1", "module01"],
-                  ["Module 2", "module02"],
-                  // ["Module 3", "module03"],
-                  ["Module 4", "module04"],
-                  ["Module 12", "module12"],
-                ].map(([label, value]) => ({ label, value }))}
+                options={categoryOptions}
                 onChange={(newVal) => {
                   setCategory(newVal);
                 }}
@@ -83,7 +87,7 @@ export default function WorksheetsPage() {
         <FindTheRootWord id={id.toString()} module={category} />
       )}
       {worksheetType === "wordsearch" && (
-        <WordSearch id={id.toString()} module={category} />
+        <WordSearch id={id.toString()} category={category} />
       )}
     </PageWrapper>
   );
@@ -236,93 +240,6 @@ function FindThePronominal({
   );
 }
 
-function WordSearch({
-  id: forceRerender,
-  module,
-  numItems = 10,
-}: {
-  id: string;
-  module: string;
-  numItems?: number;
-}) {
-  const data = useMemo(() => {
-    const list = module === 'module12' ? _.flattenDeep(createModule12AnimalsList().map((item) => [
-      formatModernEntryThing(item.singular),
-      // TODO: plural
-      // item.plural
-    ])) : [];
-
-    return _.sampleSize(_.shuffle(list).filter((val) => !val.includes(' ')), numItems).map((val) => (
-      replaceForGlottal(unwhisperWord(val)).replaceAll('·', '')
-    ));
-  }, [forceRerender, module, numItems]);
-
-  const size = _.max(data.map((s) => s.length))
-
-  const wordsearchGrid = generateWordsearch(
-    data,
-    {
-      characterSet: [
-        'a',
-        'e',
-        'i',
-        'o',
-        'u',
-        'ʌ',
-        'á',
-        'é',
-        'í',
-        'ó',
-        'ú',
-        'ʌ́',
-        'h',
-        'k',
-        'l',
-        'n',
-        's',
-        't',
-        'w',
-        'y',
-        'ʔ',
-      ],
-      maxLength: size,
-      size,
-    }
-  )
-
-  console.log(wordsearchGrid)
-
-  return (
-    <>
-      <div className="print:hidden">
-        <Box py={8}>
-          <Divider />
-        </Box>
-      </div>
-
-      <SectionHeading level={2}>Word Search</SectionHeading>
-
-      <div className={`grid grid-cols-${size} gap-2 font-mono text-3xl text-5xl text-4xl`}>
-        {wordsearchGrid.grid.map((char, j) => (
-          <span key={j}>
-            {char}
-          </span>
-        ))}
-      </div>
-
-      <Notice emphasis="outline">
-        <div className="grid grid-cols-2">
-          {wordsearchGrid.used.map((w, i) => (
-            <Text key={i}>
-              {w}
-            </Text>
-          ))}
-        </div>
-      </Notice>
-    </>
-  );
-}
-
 function Highlight({
   children,
 }: {
@@ -347,11 +264,4 @@ function ExampleText({
       </Text>
     </Flex>
   );
-}
-
-function formatModernEntryThing(item: string | string[] | ListOfBreakdowns) {
-  if (_.isString(item)) {
-    return [item];
-  }
-  return item.map((val) => _.isString(val) ? val : convertBreakdownToPlainText(val.one))
 }
