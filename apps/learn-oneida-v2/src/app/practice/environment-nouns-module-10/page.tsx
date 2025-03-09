@@ -7,6 +7,7 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule10EnvironmentNounsList } from "@/data/module10";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
+import { getPlainTextFromStandardEntryItem } from "@/components";
 
 export const metadata: Metadata = {
   title: "Environment noun identification (module 10)",
@@ -28,7 +29,7 @@ export default function PracticeEnvironmentNounIdentificationModule10() {
       resultOn.push({ key: `${key}-root`, text: datum.root[0] });
       resultEn.push({ key: `${key}-root`, text: `${text} (root)` });
 
-      resultOn.push({ key, text: datum.standalone[0] });
+      resultOn.push({ key, text: getPlainTextFromStandardEntryItem(datum.standalone) });
       resultEn.push({ key, text });
 
       if (datum.onNoun) {

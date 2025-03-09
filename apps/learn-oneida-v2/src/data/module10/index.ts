@@ -4,16 +4,14 @@ import standPrsData from "./stand-PRS";
 import standFutData from "./stand-FUT";
 import standIfutData from "./stand-IFUT";
 import standPastData from "./stand-PAST";
+import { ModernEntry } from "@/utils/types";
+import { StandardEntry } from "@/components";
 
-export interface Module10EnvironmentNounDatum {
-  en: string[];
-  key: string;
-  root: string[];
-  dict: number[];
-  standalone: string[];
-  onNoun: string | null;
-  inNoun: string | null;
-  whereTheNoun: string[] | null;
+export interface Module10EnvironmentNounDatum extends ModernEntry {
+  standalone: StandardEntry
+  onNoun: StandardEntry | null;
+  inNoun: StandardEntry | null;
+  whereTheNoun: StandardEntry | null;
 }
 
 export function createModule10EnvironmentNounsList(): Module10EnvironmentNounDatum[] {

@@ -5,7 +5,6 @@ import {
 import { formatFileWithSuffix, standardizeAudioFileName } from "@/utils/misc";
 import type { ModernEntry } from "@/utils/types";
 import {
-  convertBreakdownToPlainText,
   isWordWhispered,
 } from "@ukwehuwehneke/language-components";
 
