@@ -4,12 +4,10 @@ import {
   type EnglishToOneidaQuizProps,
 } from "~/components/practice/EnglishToOneidaQuiz";
 import { createModule9FoodsList } from "@/data/module09";
-import {
-  convertBreakdownToPlainText,
-  SectionHeading,
-} from "@ukwehuwehneke/language-components";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
+import { getPlainTextsFromStandardEntry } from "@/components";
 
 export const metadata: Metadata = {
   title: "Food identification (module 9)",
@@ -30,7 +28,7 @@ export default function PracticeFoodIdentificationModule9() {
       if (datum.singular) {
         resultOn.push({
           key,
-          text: convertBreakdownToPlainText(datum.singular[0].one),
+          text: getPlainTextsFromStandardEntry(datum.singular)[0],
         });
         resultEn.push({ key, text: datum.en[0] });
       }

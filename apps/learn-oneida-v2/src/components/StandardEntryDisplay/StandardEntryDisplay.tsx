@@ -112,3 +112,10 @@ export function getPlainTextFromStandardEntryItem(
   }
   return convertBreakdownToPlainText(item.one);
 }
+
+export function getPlainTextsFromStandardEntry(entry: StandardEntry) {
+  if (typeof entry === "string") {
+    return [entry];
+  }
+  return entry.map(getPlainTextFromStandardEntryItem);
+}

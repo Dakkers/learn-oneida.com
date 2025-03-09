@@ -2,21 +2,15 @@ import {
   TableOfContents as TOC,
   TableOfContentsItem as TocItem,
   TableOfContentsSection as TocSection,
-  TableOfContentsItemPhrase as TocPhrase,
 } from "~/components/TableOfContents";
-import { Accordion, Flex, List, Text } from "@ukwehuwehneke/ohutsya";
-import {
-  type BreakdownArray,
-  SectionHeading,
-  TextBreakdown,
-} from "@ukwehuwehneke/language-components";
+import { Accordion, Flex, Text } from "@ukwehuwehneke/ohutsya";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import pluralize from "pluralize";
 import { Letter } from "@/components/Letter";
 import {
   createModule9FoodCharacteristics,
@@ -24,6 +18,7 @@ import {
   type Module9FoodCharacteristicDatum,
   type Module9FoodDatum,
 } from "@/data/module09";
+import { EnglishDisplay, StandardEntryDisplay } from "@/components";
 
 export const metadata: Metadata = {
   title: "Module 9",
@@ -106,9 +101,6 @@ function FoodNouns() {
 }
 
 function NounEntry({ nounDatum }: { nounDatum: Module9FoodDatum }) {
-  const en = nounDatum.en;
-  const p = en.map((v) => pluralize(v));
-
   return (
     <>
       {nounDatum.root.length > 0 && (
@@ -127,7 +119,7 @@ function NounEntry({ nounDatum }: { nounDatum: Module9FoodDatum }) {
             accessorKey: "breakdown",
             // @ts-expect-error Table generics
             cell: (value: Module9FoodDatum["singular"]) =>
-              value ? <CustomCell value={value} /> : "N/A",
+              value ? <StandardEntryDisplay value={value} /> : "N/A",
             header: "Oneida",
           },
         ]}
@@ -155,47 +147,25 @@ function CharacteristicsList() {
             accessorKey: "en",
             // @ts-expect-error Table generics
             cell: (en: string[], row: Module9FoodCharacteristicDatum) => (
-              <Flex direction="column" gap={1}>
-                <Text>{en.join(", ")}</Text>
-                {row.dict.length > 0 && (
-                  <Text variant="labelS">pg. {row.dict.join(", ")}</Text>
-                )}
-              </Flex>
+              <EnglishDisplay value={{ dict: row.dict, en }} />
             ),
             header: "English",
           },
           {
             accessorKey: "breakdown",
             // @ts-expect-error Table generics
-            cell: (value: Module9FoodCharacteristicDatum["one"]) => (
-              <CustomCell value={value} />
+            cell: (value: Module9FoodCharacteristicDatum["usage"]) => (
+              <StandardEntryDisplay value={value} />
             ),
             header: "Oneida",
           },
         ]}
         data={createModule9FoodCharacteristics().map((datum) => ({
           en: datum.en,
-          breakdown: datum.one,
+          breakdown: datum.usage,
           dict: datum.dict,
         }))}
       />
     </>
-  );
-}
-
-function CustomCell({
-  value,
-}: {
-  value: Module9FoodCharacteristicDatum["one"];
-}) {
-  return (
-    <Flex direction="column" gap={4}>
-      {(value ?? []).map((obj, i) => (
-        <Flex direction="column" gap={0} key={i}>
-          <TextBreakdown breakdown={obj.one} typeFallback="PS" wrap="nowrap" />
-          {obj.en && <Text variant="labelS">{obj.en}</Text>}
-        </Flex>
-      ))}
-    </Flex>
   );
 }

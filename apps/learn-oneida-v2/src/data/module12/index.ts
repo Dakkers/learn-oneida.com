@@ -4,10 +4,7 @@ import {
 } from "@/components/StandardEntryDisplay";
 import { formatFileWithSuffix, standardizeAudioFileName } from "@/utils/misc";
 import type { ModernEntry } from "@/utils/types";
-import {
-  convertBreakdownToPlainText,
-  isWordWhispered,
-} from "@ukwehuwehneke/language-components";
+import { isWordWhispered } from "@ukwehuwehneke/language-components";
 
 type AnimalDatumType = "m" | "i" | "b"; // mammal, insect, bird
 

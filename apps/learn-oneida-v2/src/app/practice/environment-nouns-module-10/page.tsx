@@ -7,6 +7,7 @@ import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { createModule10EnvironmentNounsList } from "@/data/module10";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
+import { getPlainTextsFromStandardEntry } from "@/components";
 
 export const metadata: Metadata = {
   title: "Environment noun identification (module 10)",
@@ -28,16 +29,25 @@ export default function PracticeEnvironmentNounIdentificationModule10() {
       resultOn.push({ key: `${key}-root`, text: datum.root[0] });
       resultEn.push({ key: `${key}-root`, text: `${text} (root)` });
 
-      resultOn.push({ key, text: datum.standalone[0] });
+      resultOn.push({
+        key,
+        text: getPlainTextsFromStandardEntry(datum.standalone)[0],
+      });
       resultEn.push({ key, text });
 
       if (datum.onNoun) {
-        resultOn.push({ key: `${key}-on`, text: datum.onNoun });
+        resultOn.push({
+          key: `${key}-on`,
+          text: getPlainTextsFromStandardEntry(datum.onNoun)[0],
+        });
         resultEn.push({ key: `${key}-on`, text: `on the ${text}` });
       }
 
       if (datum.inNoun) {
-        resultOn.push({ key: `${key}-in`, text: datum.inNoun });
+        resultOn.push({
+          key: `${key}-in`,
+          text: getPlainTextsFromStandardEntry(datum.inNoun)[0],
+        });
         resultEn.push({ key: `${key}-in`, text: `in the ${text}` });
       }
     }

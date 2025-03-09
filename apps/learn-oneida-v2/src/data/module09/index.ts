@@ -9,31 +9,16 @@ import eatFutData from "./eat-FUT";
 import eatHabData from "./eat-HAB";
 import eatIfutData from "./eat-IFUT";
 import eatPfvData from "./eat-PFV";
+import type { StandardEntry } from "@/components";
+import type { ModernEntry } from "@/utils/types";
 
-export interface Module9FoodDatum {
-  dict: number[];
-  en: string[];
-  key: string;
-  root: string[];
-  singular: Array<{
-    en?: string;
-    one: BreakdownArray;
-  }> | null;
-  plural: Array<{
-    en?: string;
-    one: BreakdownArray;
-  }> | null;
+export interface Module9FoodDatum extends ModernEntry {
+  singular: StandardEntry | null;
+  plural: StandardEntry | null;
 }
 
-export interface Module9FoodCharacteristicDatum {
-  dict: number[];
-  root: string[];
-  en: string[];
-  key: string;
-  one: Array<{
-    en?: string;
-    one: BreakdownArray;
-  }>;
+export interface Module9FoodCharacteristicDatum extends ModernEntry {
+  usage: StandardEntry;
 }
 
 export function createModule9FoodsList(): Module9FoodDatum[] {
@@ -2215,7 +2200,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [174],
     en: ["baked", "fried", "BBQ", "roasted"],
     key: "Baked",
-    one: [
+    usage: [
       {
         one: ["waté·skuteʔ"],
       },
@@ -2226,7 +2211,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["bitter", "sour"],
     key: "Bitter",
-    one: [
+    usage: [
       {
         one: [["te", "DUAL"], ["yo", "PO"], "tská·laht"],
       },
@@ -2237,7 +2222,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [523],
     en: ["boiled"],
     key: "Boiled",
-    one: [
+    usage: [
       {
         one: ["kalihá·tu"],
       },
@@ -2248,7 +2233,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["burnt"],
     key: "Burnt",
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "tshaʔáhtu"],
       },
@@ -2259,7 +2244,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["clean"],
     key: "Clean",
-    one: [
+    usage: [
       {
         one: [["te", "DUAL"], ["yo", "PO"], "htotálhu"],
       },
@@ -2270,7 +2255,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [520],
     en: ["cooked", "riped"],
     key: "Cooked",
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "·lí"],
       },
@@ -2281,7 +2266,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [776],
     en: ["cool", "cold"],
     key: "Cool",
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "wísto"],
       },
@@ -2292,7 +2277,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [334],
     en: ["tasty"],
     key: "Delicious",
-    one: [
+    usage: [
       {
         en: "it tastes good",
         one: [["yaw", "PO"], "ékuʔ"],
@@ -2312,7 +2297,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [99],
     en: ["fattening"],
     key: "Fattening",
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "leʔsʌhsluní"],
       },
@@ -2323,7 +2308,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["fried", "deep-fried"],
     key: "Fried",
-    one: [
+    usage: [
       {
         one: ["kʌ·yé·ke kalíhtu"],
       },
@@ -2334,7 +2319,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [775],
     en: ["frozen"],
     key: "Frozen",
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "wislátuʔ"],
       },
@@ -2345,7 +2330,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["appetizing"],
     key: "Appetizing",
-    one: [
+    usage: [
       {
         en: "it looks good",
         one: ["watkathosliyó"],
@@ -2357,7 +2342,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [815],
     en: ["greasy"],
     key: "Greasy",
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "ye·náleʔ"],
       },
@@ -2372,7 +2357,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["hot"],
     key: "Hot",
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "ʔtalíhʌ"],
       },
@@ -2383,7 +2368,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [137],
     en: ["leftovers"],
     key: "Leftovers",
-    one: [
+    usage: [
       {
         en: "it is leftover",
         one: [["yo", "PO"], "tatʌlú"],
@@ -2395,7 +2380,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [608],
     en: ["mouldy"],
     key: "Mouldy",
-    one: [
+    usage: [
       {
         en: "it is covered in fuzz",
         one: [["yo", "PO"], "nuhwélhoteʔ"],
@@ -2410,7 +2395,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [520],
     en: ["raw"],
     key: "Raw",
-    one: [
+    usage: [
       {
         en: "it is not cooked",
         one: ["yáh teʔyolí"],
@@ -2422,7 +2407,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [61],
     en: ["rotten", "spoiled"],
     key: "Rotten",
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "hetkwaʔú"],
       },
@@ -2437,7 +2422,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [423],
     en: ["salty"],
     key: "Salty",
-    one: [
+    usage: [
       {
         one: [["te", "DUAL"], ["yo", "PO"], "hyotsístaleʔ"],
       },
@@ -2448,7 +2433,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [122],
     en: ["bad-smelling"],
     key: "SmellingBad",
-    one: [
+    usage: [
       {
         one: ["waslákhsʌʔ"],
       },
@@ -2459,7 +2444,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [122],
     en: ["good-smelling"],
     key: "SmellingGood",
-    one: [
+    usage: [
       {
         one: ["wasláku"],
       },
@@ -2473,7 +2458,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [122],
     en: ["the way it smells"],
     key: "TheWayItSmells",
-    one: [
+    usage: [
       {
         one: ["niwahsló·tʌ"],
       },
@@ -2484,7 +2469,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["spicy"],
     key: "Spicy",
-    one: [
+    usage: [
       {
         one: [["te", "DUAL"], ["yo", "PO"], "thská·lat"],
       },
@@ -2495,7 +2480,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [122],
     en: ["strong smell"],
     key: "StrongSmell",
-    one: [
+    usage: [
       {
         one: ["waslaʔsátsteʔ"],
       },
@@ -2506,7 +2491,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["strong taste"],
     key: "StrongTaste",
-    one: [
+    usage: [
       {
         one: ["kakuʔslaʔsátsteʔ"],
       },
@@ -2517,7 +2502,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [613],
     en: ["sweet", "sugary"],
     key: "Sweet",
-    one: [
+    usage: [
       {
         one: [["te", "DUAL"], ["yo", "PO"], "nutaklí·tslaleʔ"],
       },
@@ -2528,7 +2513,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["disgusting", "unappetizing"],
     key: "Disgusting",
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "kwít"],
       },
@@ -2539,7 +2524,7 @@ export function createModule9FoodCharacteristics(): Module9FoodCharacteristicDat
     dict: [],
     en: ["watery"],
     key: "Watery",
-    one: [
+    usage: [
       {
         one: [["te", "DUAL"], "kahnekayéstu"],
       },
