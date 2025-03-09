@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "atewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["k"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "atewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["hs"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["h"], "atewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["h"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·", "IFUT"], ["yu"], "tewyʌ́·tuʔ"],
+        breakdown: [["a·", "IFUT"], ["yu"], "tewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·", "IFUT"], ["u"], "tewyʌ́·tuʔ"],
+        breakdown: [["a·", "IFUT"], ["u"], "tewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·e", "IFUT"], ["ty"], "atewyʌ́·tuʔ"],
+        breakdown: [["a·e", "IFUT"], ["ty"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yaky"], "atewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["yaky"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "atewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["tsy"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "atewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["hy"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "atewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["ky"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·e", "IFUT"], ["tw"], "atewyʌ́·tuʔ"],
+        breakdown: [["a·e", "IFUT"], ["tw"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "atewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["yakw"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·e", "IFUT"], ["sw"], "atewyʌ́·tuʔ"],
+        breakdown: [["a·e", "IFUT"], ["sw"], "atewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hu"], "tewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["hu"], "tewyʌ́·tu", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "tewyʌ́·tuʔ"],
+        breakdown: [["a", "IFUT"], ["ku"], "tewyʌ́·tu", ["ʔ", "PUNC"]],
       },
     ],
     whispered: false,

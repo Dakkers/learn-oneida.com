@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PO",
     phrases: [
       {
-        breakdown: [["wak"], "nahalahtú·u"],
+        breakdown: [["wak"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["sa"], "nahalahtú·u"],
+        breakdown: [["sa"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["lo"], "nahalahtú·u"],
+        breakdown: [["lo"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yako"], "nahalahtú·u"],
+        breakdown: [["yako"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yo"], "nahalahtú·u"],
+        breakdown: [["yo"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yukni"], "nahalahtú·u"],
+        breakdown: [["yukni"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yukni"], "nahalahtú·u"],
+        breakdown: [["yukni"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["sni"], "nahalahtú·u"],
+        breakdown: [["sni"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["loti"], "nahalahtú·u"],
+        breakdown: [["loti"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yoti"], "nahalahtú·u"],
+        breakdown: [["yoti"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yukwa"], "nahalahtú·u"],
+        breakdown: [["yukwa"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yukwa"], "nahalahtú·u"],
+        breakdown: [["yukwa"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["swa"], "nahalahtú·u"],
+        breakdown: [["swa"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["loti"], "nahalahtú·u"],
+        breakdown: [["loti"], "nahalahtú", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yoti"], "nahalahtú·u"],
+        breakdown: [["yoti"], "nahalahtú", ["·u", "PFV"]],
       },
     ],
   },

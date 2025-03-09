@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["k"], "únheʔ"],
+        breakdown: [["k"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["hs"], "únheʔ"],
+        breakdown: [["hs"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["l"], "únheʔ"],
+        breakdown: [["l"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["yak"], "únheʔ"],
+        breakdown: [["yak"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["y"], "únheʔ"],
+        breakdown: [["y"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["tn"], "únheʔ"],
+        breakdown: [["tn"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["yakn"], "únheʔ"],
+        breakdown: [["yakn"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["sn"], "únheʔ"],
+        breakdown: [["sn"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["hn"], "únheʔ"],
+        breakdown: [["hn"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["kn"], "únheʔ"],
+        breakdown: [["kn"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["ty"], "únheʔ"],
+        breakdown: [["ty"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["yaky"], "únheʔ"],
+        breakdown: [["yaky"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["tsy"], "únheʔ"],
+        breakdown: [["tsy"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["hʌn"], "únheʔ"],
+        breakdown: [["hʌn"], "únhe", ["ʔ", "HAB"]],
       },
       {
-        breakdown: [["kun"], "únheʔ"],
+        breakdown: [["kun"], "únhe", ["ʔ", "HAB"]],
       },
     ],
   },

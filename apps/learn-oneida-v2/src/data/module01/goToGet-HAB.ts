@@ -5,46 +5,46 @@ const data = createInteractiveParadigmData({
   type: "PI",
   phrases: [
     {
-      breakdown: [["ku"], "hnúkseʔ"],
+      breakdown: [["ku"], "hnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["l"], "ihnúkseʔ"],
+      breakdown: [["l"], "ihnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["khe"], "hnúkseʔ"],
+      breakdown: [["khe"], "hnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["sk"], "ihnúkseʔ"],
+      breakdown: [["sk"], "ihnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["h", "RPL"], ["etsh"], "ihnúkseʔ"],
+      breakdown: [["h", "RPL"], ["etsh"], "ihnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["she"], "hnúkseʔ"],
+      breakdown: [["she"], "hnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["lak"], "ihnúkseʔ"],
+      breakdown: [["lak"], "ihnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["h", "RPL"], ["yʌ"], "hnúkseʔ"],
+      breakdown: [["h", "RPL"], ["yʌ"], "hnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["lo"], "hnúkseʔ"],
+      breakdown: [["lo"], "hnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["shako"], "hnúkseʔ"],
+      breakdown: [["shako"], "hnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["yuk"], "ihnúkseʔ"],
+      breakdown: [["yuk"], "ihnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["yesʌ"], "hnúkseʔ"],
+      breakdown: [["yesʌ"], "hnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["luwʌ"], "hnúkseʔ"],
+      breakdown: [["luwʌ"], "hnúks", ["eʔ", "INT"]],
     },
     {
-      breakdown: [["yutat"], "ihnúkseʔ"],
+      breakdown: [["yutat"], "ihnúks", ["eʔ", "INT"]],
     },
   ],
 });

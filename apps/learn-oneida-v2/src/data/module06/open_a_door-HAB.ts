@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["ke"], "nhotúkwas"],
+        breakdown: [["ke"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["se"], "nhotúkwas"],
+        breakdown: [["se"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["la"], "nhotúkwas"],
+        breakdown: [["la"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["ye"], "nhotúkwas"],
+        breakdown: [["ye"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["ka"], "nhotúkwas"],
+        breakdown: [["ka"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["tni"], "nhotúkwas"],
+        breakdown: [["tni"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yakni"], "nhotúkwas"],
+        breakdown: [["yakni"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["sni"], "nhotúkwas"],
+        breakdown: [["sni"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["h", "RPL"], ["ni"], "nhotúkwas"],
+        breakdown: [["h", "RPL"], ["ni"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["kni"], "nhotúkwas"],
+        breakdown: [["kni"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["twa"], "nhotúkwas"],
+        breakdown: [["twa"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["yakwa"], "nhotúkwas"],
+        breakdown: [["yakwa"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["swa"], "nhotúkwas"],
+        breakdown: [["swa"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["lati"], "nhotúkwas"],
+        breakdown: [["lati"], "nhotúkw", ["as", "HAB"]],
       },
       {
-        breakdown: [["kuti"], "nhotúkwas"],
+        breakdown: [["kuti"], "nhotúkw", ["as", "HAB"]],
       },
     ],
     whispered: false,
