@@ -10,6 +10,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
+import { getPlainTextsFromStandardEntry } from "@/components";
 
 export const metadata: Metadata = {
   title: "Food characteristics (module 9)",
@@ -29,7 +30,7 @@ export default function PracticeFoodIdentificationModule9() {
       const key = datum.key;
       resultOn.push({
         key,
-        text: convertBreakdownToPlainText(datum.one[0].one),
+        text: getPlainTextsFromStandardEntry(datum.usage)[0],
       });
       resultEn.push({ key, text: datum.en[0] });
     }

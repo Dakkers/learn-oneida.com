@@ -36,6 +36,8 @@ import stealFUT from "./steal-FUT";
 import stealHAB from "./steal-HAB";
 import stealIFUT from "./steal-IFUT";
 import stealPFV from "./steal-PFV";
+import type { ModernEntry } from "@/utils/types";
+import type { StandardEntry } from "@/components";
 
 export type Module7Verb = {
   cmd: ParadigmData | null;
@@ -52,11 +54,7 @@ export type Module7Verb = {
   root: string[];
 };
 
-export interface Module7Noun {
-  key: string;
-  en: string[];
-  dict: number[];
-  root: string[];
+export interface Module7Noun extends ModernEntry {
   single: BreakdownArray;
   plural: BreakdownArray | null;
   have: BreakdownArray;
@@ -72,13 +70,8 @@ export interface Module7Noun {
   count3: BreakdownArray;
 }
 
-export interface Module7Colour {
-  en: string[];
-  key: string;
-  one: Array<{
-    en?: string;
-    one: BreakdownArray;
-  }>;
+export interface Module7Colour extends Omit<ModernEntry, "dict" | "root"> {
+  usage: StandardEntry;
 }
 
 export function createModule7NounsList(): Module7Noun[] {
@@ -1259,7 +1252,7 @@ export function createColoursData(): Module7Colour[] {
   const objBlue: Module7Colour = {
     key: "Blue",
     en: ["blue"],
-    one: [
+    usage: [
       {
         one: ["olú·ya̲ʔ"],
       },
@@ -1268,7 +1261,7 @@ export function createColoursData(): Module7Colour[] {
   const objGreen: Module7Colour = {
     key: "Green",
     en: ["green"],
-    one: [
+    usage: [
       {
         one: ["awʌ·lá̲·"],
       },
@@ -1277,7 +1270,7 @@ export function createColoursData(): Module7Colour[] {
   const objRed: Module7Colour = {
     key: "Red",
     en: ["red"],
-    one: [
+    usage: [
       {
         one: ["onikwʌ́htala̲ʔ"],
       },
@@ -1286,7 +1279,7 @@ export function createColoursData(): Module7Colour[] {
   const objYellow: Module7Colour = {
     key: "Yellow",
     en: ["yellow"],
-    one: [
+    usage: [
       {
         one: ["otsí·nkwala̲ʔ"],
       },
@@ -1295,7 +1288,7 @@ export function createColoursData(): Module7Colour[] {
   const objLight: Module7Colour = {
     key: "Light",
     en: ["light", "white"],
-    one: [
+    usage: [
       {
         one: ["owískehla̲ʔ"],
       },
@@ -1307,7 +1300,7 @@ export function createColoursData(): Module7Colour[] {
   const objDark: Module7Colour = {
     key: "Dark",
     en: ["dark", "black"],
-    one: [
+    usage: [
       {
         one: ["oʔswʌ́·ta̲ʔ"],
       },
@@ -1316,7 +1309,7 @@ export function createColoursData(): Module7Colour[] {
   const objPink: Module7Colour = {
     key: "Pink",
     en: ["pink"],
-    one: [
+    usage: [
       {
         one: [["ka", "PS"], "nikwʌhtalawískela̲ʔ"],
       },
@@ -1328,7 +1321,7 @@ export function createColoursData(): Module7Colour[] {
   const objOrange: Module7Colour = {
     key: "Orange",
     en: ["orange"],
-    one: [
+    usage: [
       {
         one: [["ka", "PS"], "tsiʔnkwalahú·tsiʔ"],
       },
@@ -1337,7 +1330,7 @@ export function createColoursData(): Module7Colour[] {
   const objBrown: Module7Colour = {
     key: "Brown",
     en: ["brown"],
-    one: [
+    usage: [
       {
         one: ["athéhsa̲ʔ"],
       },
@@ -1346,7 +1339,7 @@ export function createColoursData(): Module7Colour[] {
   const objGray: Module7Colour = {
     key: "Gray",
     en: ["gray"],
-    one: [
+    usage: [
       {
         one: ["ataʔkʌ́·la̲ʔ"],
       },
@@ -1355,7 +1348,7 @@ export function createColoursData(): Module7Colour[] {
   const objDarkRed: Module7Colour = {
     key: "DarkRed",
     en: ["dark red", "maroon"],
-    one: [
+    usage: [
       {
         one: [["ka", "PS"], "nikwʌhtalahú·tsiʔ"],
       },
@@ -1367,7 +1360,7 @@ export function createColoursData(): Module7Colour[] {
   const objDarkBlue: Module7Colour = {
     key: "DarkBlue",
     en: ["dark blue", "navy"],
-    one: [
+    usage: [
       {
         one: [["ka", "PS"], "luhyahú·tsi"],
       },
@@ -1376,7 +1369,7 @@ export function createColoursData(): Module7Colour[] {
   const objLightBlue: Module7Colour = {
     key: "LightBlue",
     en: ["light blue"],
-    one: [
+    usage: [
       {
         one: ["kaluhyawískela̲ʔ"],
       },
@@ -1388,7 +1381,7 @@ export function createColoursData(): Module7Colour[] {
   const objPurple: Module7Colour = {
     key: "Purple",
     en: ["purple"],
-    one: [
+    usage: [
       {
         one: ["ohalanʌ́·ta̲ʔ"],
       },
@@ -1397,7 +1390,7 @@ export function createColoursData(): Module7Colour[] {
   const objJetBlack: Module7Colour = {
     key: "JetBlack",
     en: ["jet black", "very dark"],
-    one: [
+    usage: [
       {
         one: ["oʔswʌʔtóhsku̲"],
       },
@@ -1406,7 +1399,7 @@ export function createColoursData(): Module7Colour[] {
   const objPureWhite: Module7Colour = {
     key: "PureWhite",
     en: ["pure white"],
-    one: [
+    usage: [
       {
         one: ["owisklóhsku̲"],
       },
@@ -1415,7 +1408,7 @@ export function createColoursData(): Module7Colour[] {
   const objSilver: Module7Colour = {
     key: "Silver",
     en: ["silver"],
-    one: [
+    usage: [
       {
         one: [["ka", "PS"], "hwistano·lú̲·"],
       },
@@ -1424,7 +1417,7 @@ export function createColoursData(): Module7Colour[] {
   const objGold: Module7Colour = {
     key: "Gold",
     en: ["gold", "copper"],
-    one: [
+    usage: [
       {
         one: ["ohwistano·lú̲·"],
       },
@@ -1433,7 +1426,7 @@ export function createColoursData(): Module7Colour[] {
   const objBright: Module7Colour = {
     key: "Bright",
     en: ["bright colour"],
-    one: [
+    usage: [
       {
         one: [["yo", "PO"], "hsóshwatet"],
       },
@@ -1442,7 +1435,7 @@ export function createColoursData(): Module7Colour[] {
   const objDarkColour: Module7Colour = {
     key: "DarkColour",
     en: ["dark colour"],
-    one: [
+    usage: [
       {
         one: ["tet", ["yo", "PO"], "hsohkwá·kalas"],
       },

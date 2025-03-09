@@ -4,24 +4,20 @@ import {
   TableOfContentsSection as TocSection,
   TableOfContentsItemPhrase as TocPhrase,
 } from "~/components/TableOfContents";
-import { Accordion, Flex, List, Text } from "@ukwehuwehneke/ohutsya";
-import {
-  type BreakdownArray,
-  SectionHeading,
-  TextBreakdown,
-} from "@ukwehuwehneke/language-components";
+import { Accordion, Text } from "@ukwehuwehneke/ohutsya";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
 import _ from "lodash";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import pluralize from "pluralize";
 import { Letter } from "@/components/Letter";
 import {
   createModule10EnvironmentNounsList,
   type Module10EnvironmentNounDatum,
 } from "@/data/module10";
+import { StandardEntryDisplay } from "@/components";
 
 export const metadata: Metadata = {
   title: "Module 10",
@@ -121,7 +117,7 @@ function NounEntry({ nounDatum }: { nounDatum: Module10EnvironmentNounDatum }) {
             accessorKey: "breakdown",
             // @ts-expect-error Table generics
             cell: (value: Module10EnvironmentNounDatum["onNoun"]) =>
-              value ? <CustomCell value={value} /> : "N/A",
+              value ? <StandardEntryDisplay value={value} /> : "N/A",
             header: "Oneida",
           },
         ]}
@@ -135,40 +131,5 @@ function NounEntry({ nounDatum }: { nounDatum: Module10EnvironmentNounDatum }) {
           .map(([en, breakdown]) => ({ en, breakdown }))}
       />
     </>
-  );
-}
-
-function CustomCell({
-  value,
-}: {
-  value:
-    | string
-    | string[]
-    | Array<{
-        one: BreakdownArray;
-        en: string;
-      }>;
-}) {
-  return (
-    <Flex direction="column" gap={4}>
-      {typeof value === "string"
-        ? value
-        : (value ?? []).map((obj, i) => (
-            <Flex direction="column" gap={0} key={i}>
-              {typeof obj === "string" ? (
-                obj
-              ) : (
-                <>
-                  <TextBreakdown
-                    breakdown={obj.one}
-                    typeFallback="PS"
-                    wrap="nowrap"
-                  />
-                  {obj.en && <Text variant="labelS">{obj.en}</Text>}
-                </>
-              )}
-            </Flex>
-          ))}
-    </Flex>
   );
 }
