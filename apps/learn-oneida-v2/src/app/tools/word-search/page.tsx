@@ -1,5 +1,6 @@
 "use client";
 import {
+  convertBreakdownToPlainText,
   replaceForGlottal,
   SectionHeading,
   unwhisperWord,
@@ -22,19 +23,21 @@ import { getPlainTextsFromStandardEntry } from "@/components";
 import { createModule11BodyPartNounList } from "@/data/module11";
 import { createModule10EnvironmentNounsList } from "@/data/module10";
 import { createModule9FoodsList } from "@/data/module09";
-import { createColoursData } from "@/data/module07";
+import { createColoursData, createModule7NounsList } from "@/data/module07";
+import { createModule8CharacteristicsList } from "@/data/module08";
 
 export default function WordSearchPage() {
-  const [category, setCategory] = useState("food");
+  const [category, setCategory] = useState("characteristics");
   const [size, setSize] = useState("md");
 
   const categoryOptions = useMemo(() => {
     return [
       { label: "Environment", value: "environment" },
-      // { label: "Colours", value: "colours" },
+      { label: "Colours", value: "colours" },
       { label: "Food", value: "food" },
       { label: "Body Parts", value: "bodyparts" },
       { label: "Animals", value: "animals" },
+      { label: "Characteristics", value: "characteristics" },
     ].toSorted((a, b) => a.label.localeCompare(b.label));
   }, []);
 
@@ -76,36 +79,48 @@ function WordSearch({
   category: string;
   size: string;
 }) {
-  const length = size === "xl" ? 20 : size === 'lg' ? 16 : 12;
+  const length = size === "xl" ? 20 : size === "lg" ? 16 : 12;
 
   const rawData = useMemo(() => {
-    if (category === 'environment') {
+    if (category === "environment") {
       return createModule10EnvironmentNounsList().map((item) => [
         getPlainTextsFromStandardEntry(item.standalone),
-        item.onNoun ? getPlainTextsFromStandardEntry(item.onNoun) : '',
-        item.inNoun ? getPlainTextsFromStandardEntry(item.inNoun) : '',
+        item.onNoun ? getPlainTextsFromStandardEntry(item.onNoun) : "",
+        item.inNoun ? getPlainTextsFromStandardEntry(item.inNoun) : "",
       ]);
-    } else if (category === 'food') {
+    } else if (category === "food") {
       return createModule9FoodsList().map((item) => [
-        item.singular ? getPlainTextsFromStandardEntry(item.singular) : ''
-      ])
-    } else if (category === 'bodyparts') {
+        item.singular ? getPlainTextsFromStandardEntry(item.singular) : "",
+      ]);
+    } else if (category === "bodyparts") {
       return createModule11BodyPartNounList().map((item) => [
         getPlainTextsFromStandardEntry(item.onNoun),
-      ])
-    } else if (category === 'animals') {
+      ]);
+    } else if (category === "animals") {
       return createModule12AnimalsList().map((item) => [
         getPlainTextsFromStandardEntry(item.singular),
-      ])
+      ]);
+    } else if (category === "colours") {
+      return createColoursData().map((item) => [
+        getPlainTextsFromStandardEntry(item.usage)[0],
+      ]);
+    } else if (category === "characteristics") {
+      return createModule8CharacteristicsList().map((item) => [
+        convertBreakdownToPlainText(item.verb),
+      ]);
     }
     return [];
   }, [category]);
 
   const dataSubset = useMemo(() => {
-    const cleaned = _.flattenDeep(rawData).filter((val) => !val.includes(' ') && !!val)
+    const cleaned = _.flattenDeep(rawData).filter(
+      (val) => !val.includes(" ") && !!val,
+    );
     const subset = _.sampleSize(_.shuffle(cleaned), 30);
-    return subset.map((val) => replaceForGlottal(unwhisperWord(val)).replaceAll("·", ""));
-  }, [rawData])
+    return subset.map((val) =>
+      replaceForGlottal(unwhisperWord(val)).replaceAll("·", ""),
+    );
+  }, [rawData]);
 
   const wordsearchGrid = generateWordsearch(dataSubset, {
     characterSet: ONEIDA_CHAR_SET,
