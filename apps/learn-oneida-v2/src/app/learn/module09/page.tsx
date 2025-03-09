@@ -4,11 +4,7 @@ import {
   TableOfContentsSection as TocSection,
 } from "~/components/TableOfContents";
 import { Accordion, Flex, Text } from "@ukwehuwehneke/ohutsya";
-import {
-  type BreakdownArray,
-  SectionHeading,
-  TextBreakdown,
-} from "@ukwehuwehneke/language-components";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
@@ -123,7 +119,7 @@ function NounEntry({ nounDatum }: { nounDatum: Module9FoodDatum }) {
             accessorKey: "breakdown",
             // @ts-expect-error Table generics
             cell: (value: Module9FoodDatum["singular"]) =>
-              value ? <CustomCell value={value} /> : "N/A",
+              value ? <StandardEntryDisplay value={value} /> : "N/A",
             header: "Oneida",
           },
         ]}
@@ -151,7 +147,7 @@ function CharacteristicsList() {
             accessorKey: "en",
             // @ts-expect-error Table generics
             cell: (en: string[], row: Module9FoodCharacteristicDatum) => (
-              <EnglishDisplay value={{dict: row.dict,en}} />
+              <EnglishDisplay value={{ dict: row.dict, en }} />
             ),
             header: "English",
           },
@@ -159,9 +155,7 @@ function CharacteristicsList() {
             accessorKey: "breakdown",
             // @ts-expect-error Table generics
             cell: (value: Module9FoodCharacteristicDatum["usage"]) => (
-              <StandardEntryDisplay
-                value={value}
-              />
+              <StandardEntryDisplay value={value} />
             ),
             header: "Oneida",
           },
@@ -173,22 +167,5 @@ function CharacteristicsList() {
         }))}
       />
     </>
-  );
-}
-
-function CustomCell({
-  value,
-}: {
-  value: Module9FoodCharacteristicDatum["usage"];
-}) {
-  return (
-    <Flex direction="column" gap={4}>
-      {(value ?? []).map((obj, i) => (
-        <Flex direction="column" gap={0} key={i}>
-          <TextBreakdown breakdown={obj.one} typeFallback="PS" wrap="nowrap" />
-          {obj.en && <Text variant="labelS">{obj.en}</Text>}
-        </Flex>
-      ))}
-    </Flex>
   );
 }

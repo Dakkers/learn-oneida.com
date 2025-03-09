@@ -9,8 +9,8 @@ import eatFutData from "./eat-FUT";
 import eatHabData from "./eat-HAB";
 import eatIfutData from "./eat-IFUT";
 import eatPfvData from "./eat-PFV";
-import { StandardEntry } from "@/components";
-import { ModernEntry } from "@/utils/types";
+import type { StandardEntry } from "@/components";
+import type { ModernEntry } from "@/utils/types";
 
 export interface Module9FoodDatum extends ModernEntry {
   singular: StandardEntry | null;

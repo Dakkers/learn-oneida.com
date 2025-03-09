@@ -4,11 +4,11 @@ import standPrsData from "./stand-PRS";
 import standFutData from "./stand-FUT";
 import standIfutData from "./stand-IFUT";
 import standPastData from "./stand-PAST";
-import { ModernEntry } from "@/utils/types";
-import { StandardEntry } from "@/components";
+import type { ModernEntry } from "@/utils/types";
+import type { StandardEntry } from "@/components";
 
 export interface Module10EnvironmentNounDatum extends ModernEntry {
-  standalone: StandardEntry
+  standalone: StandardEntry;
   onNoun: StandardEntry | null;
   inNoun: StandardEntry | null;
   whereTheNoun: StandardEntry | null;

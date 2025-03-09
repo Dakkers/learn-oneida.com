@@ -29,6 +29,7 @@ import pluralize from "pluralize";
 import indefinite from "indefinite";
 import { Letter } from "@/components/Letter";
 import { MODULE_6_VERB_TENSE_LIST } from "@/data/module06/activeVerbsList";
+import { StandardEntryDisplay } from "@/components";
 
 export const metadata: Metadata = {
   title: "Module 7",
@@ -141,8 +142,9 @@ function AllNouns() {
 }
 
 function NounEntry({ nounDatum }: { nounDatum: Module7Noun }) {
-  const p = pluralize(nounDatum.en[0]);
-  const indef = indefinite(nounDatum.en[0]);
+  const en = nounDatum.en[0];
+  const p = pluralize(en);
+  const indef = indefinite(en);
 
   return (
     <>
@@ -170,16 +172,18 @@ function NounEntry({ nounDatum }: { nounDatum: Module7Noun }) {
           [`they are ${p}`, nounDatum.plural],
           [`I have ${indef}`, nounDatum.have],
           [`I have many ${p}`, nounDatum.havePlural],
-          [`it is a good ${nounDatum.en}`, nounDatum.good],
+          [`it is a good ${en}`, nounDatum.good],
           [`they are good ${p}`, nounDatum.goodPlural],
-          [`I have a good ${nounDatum.en}`, nounDatum.haveGood],
+          [`I have a good ${en}`, nounDatum.haveGood],
           [`I have many good ${p}`, nounDatum.haveGoodPlural],
-          [`I have a big ${nounDatum.en}`, nounDatum.big],
+          [`I have a big ${en}`, nounDatum.big],
           [`I have many big ${p}`, nounDatum.bigPlural],
-          [`one ${nounDatum.en}`, nounDatum.count1],
+          [`one ${en}`, nounDatum.count1],
           [`two ${p}`, nounDatum.count2],
           [`three ${p}`, nounDatum.count3],
-        ].map(([en, breakdown]) => ({ en, breakdown }))}
+        ]
+          .filter((pair) => !!pair[1])
+          .map(([en, breakdown]) => ({ en, breakdown }))}
       />
     </>
   );
@@ -198,23 +202,10 @@ function ColourNouns() {
         columns={[
           TableWrapper.englishColumn,
           {
-            accessorKey: "one",
+            accessorKey: "usage",
             // @ts-expect-error TODO - TableWrapper/Table generics
-            cell: (value: Module7Colour["one"]) => {
-              return (
-                <Flex direction="column" gap={4}>
-                  {value.map((obj, i) => (
-                    <Flex direction="column" gap={0} key={i}>
-                      <TextBreakdown
-                        breakdown={obj.one}
-                        typeFallback="PS"
-                        wrap="nowrap"
-                      />
-                      {obj.en && <Text variant="labelS">{obj.en}</Text>}
-                    </Flex>
-                  ))}
-                </Flex>
-              );
+            cell: (value: Module7Colour["usage"]) => {
+              return <StandardEntryDisplay value={value} />;
             },
             header: "Oneida",
           },
