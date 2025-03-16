@@ -3,18 +3,8 @@ import {
   TableOfContents as TOC,
   TableOfContentsItem as TocItem,
 } from "~/components/TableOfContents";
-import {
-  Flex,
-  PlayButton,
-  PlayButtonProps,
-  Text,
-  TextArray,
-} from "@ukwehuwehneke/ohutsya";
-import {
-  type BreakdownArray,
-  SectionHeading,
-  TextBreakdown,
-} from "@ukwehuwehneke/language-components";
+import { Flex, Text } from "@ukwehuwehneke/ohutsya";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
@@ -25,12 +15,10 @@ import {
   createModule12InsectsList,
   createModule12MammalsList,
   getAudioFileBaseForModule12AnimalDatum,
-  getAudioFileForModule12AnimalDatum,
 } from "@/data/module12";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import { StandardEntryDisplay } from "@/components/StandardEntryDisplay";
 
 // export const metadata: Metadata = {
