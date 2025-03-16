@@ -3,13 +3,8 @@ import {
   TableOfContents as TOC,
   TableOfContentsItem as TocItem,
 } from "~/components/TableOfContents";
-import {
-  Flex,
-  Text,
-} from "@ukwehuwehneke/ohutsya";
-import {
-  SectionHeading,
-} from "@ukwehuwehneke/language-components";
+import { Flex, Text } from "@ukwehuwehneke/ohutsya";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Box } from "@ukwehuwehneke/ohutsya";
 import { Notice } from "@ukwehuwehneke/ohutsya";
 import { TableWrapper } from "@/components/TableWrapper";
