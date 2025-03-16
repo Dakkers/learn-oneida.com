@@ -59,10 +59,6 @@ export function LinkWrapper({
     "prep",
     "refl",
     "semi",
-    7,
-    8,
-    9,
-    10,
   ];
 
   if (NON_EXISTENT_PAGES.includes(page)) {

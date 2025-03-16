@@ -1473,7 +1473,7 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
   const objPotato: Module9FoodDatum = {
     dict: [],
     root: ["-hnanaʔt-"],
-    en: ["potato"],
+    en: ["potatoes"],
     key: "Potato",
     singular: null,
     plural: [
