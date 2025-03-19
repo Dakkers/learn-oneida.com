@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["waʔ", "DEF"], ["k"], "atkáthoʔ"],
+        breakdown: [["waʔ", "DEF"], ["k"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["hs"], "atkáthoʔ"],
+        breakdown: [["wa", "DEF"], ["hs"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["h"], "atkáthoʔ"],
+        breakdown: [["wa", "DEF"], ["h"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["u"], "tkáthoʔ"],
+        breakdown: [["waʔ", "DEF"], ["u"], "tkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["u"], "tkáthoʔ"],
+        breakdown: [["u"], "tkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["ty"], "atkáthoʔ"],
+        breakdown: [["we", "DEF"], ["ty"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["aky"], "atkáthoʔ"],
+        breakdown: [["waʔ", "DEF"], ["aky"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["tsy"], "atkáthoʔ"],
+        breakdown: [["we", "DEF"], ["tsy"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["hy"], "atkáthoʔ"],
+        breakdown: [["wa", "DEF"], ["hy"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ky"], "atkáthoʔ"],
+        breakdown: [["waʔ", "DEF"], ["ky"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["tw"], "atkáthoʔ"],
+        breakdown: [["we", "DEF"], ["tw"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["akw"], "atkáthoʔ"],
+        breakdown: [["waʔ", "DEF"], ["akw"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["we", "DEF"], ["sw"], "atkáthoʔ"],
+        breakdown: [["we", "DEF"], ["sw"], "atkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["wa", "DEF"], ["hu"], "tkáthoʔ"],
+        breakdown: [["wa", "DEF"], ["hu"], "tkátho", ["ʔ", "PUNC"]],
       },
       {
-        breakdown: [["waʔ", "DEF"], ["ku"], "tkáthoʔ"],
+        breakdown: [["waʔ", "DEF"], ["ku"], "tkátho", ["ʔ", "PUNC"]],
       },
     ],
   },

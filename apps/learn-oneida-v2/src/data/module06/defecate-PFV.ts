@@ -9,49 +9,49 @@ export default createParadigmData(
     type: "PO",
     phrases: [
       {
-        breakdown: [["wak"], "aní·tayʌʔ"],
+        breakdown: [["wak"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["s"], "aní·tayʌʔ"],
+        breakdown: [["s"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["lo"], "ní·tayʌʔ"],
+        breakdown: [["lo"], "ní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["yako"], "ní·tayʌʔ"],
+        breakdown: [["yako"], "ní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["yo"], "ní·tayʌʔ"],
+        breakdown: [["yo"], "ní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["yuky"], "aní·tayʌʔ"],
+        breakdown: [["yuky"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["yuky"], "aní·tayʌʔ"],
+        breakdown: [["yuky"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["tsy"], "aní·tayʌʔ"],
+        breakdown: [["tsy"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["lon"], "aní·tayʌʔ"],
+        breakdown: [["lon"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["yon"], "aní·tayʌʔ"],
+        breakdown: [["yon"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["yukw"], "aní·tayʌʔ"],
+        breakdown: [["yukw"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["yukw"], "aní·tayʌʔ"],
+        breakdown: [["yukw"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["sw"], "aní·tayʌʔ"],
+        breakdown: [["sw"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["lon"], "aní·tayʌʔ"],
+        breakdown: [["lon"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
       {
-        breakdown: [["yon"], "aní·tayʌʔ"],
+        breakdown: [["yon"], "aní·tayʌ", ["ʔ", "PFV"]],
       },
     ],
     whispered: false,

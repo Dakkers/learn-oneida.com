@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PO",
     phrases: [
       {
-        breakdown: [["wak"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["wak"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["s"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["s"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["lo"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["lo"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yako"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["yako"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yo"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["yo"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yuky"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["yuky"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yuky"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["yuky"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["tsy"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["tsy"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["lon"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["lon"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yon"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["yon"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yukw"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["yukw"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yukw"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["yukw"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["sw"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["sw"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["lon"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["lon"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
       {
-        breakdown: [["yon"], ["atat", "REFL"], "ewyʌnʌtá·u"],
+        breakdown: [["yon"], ["atat", "REFL"], "ewyʌnʌtá·", ["u", "PFV"]],
       },
     ],
     whispered: false,

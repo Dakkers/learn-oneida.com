@@ -10,49 +10,49 @@ const data = createParadigmData({
   type: "PO",
   phrases: [
     {
-      breakdown: [["wak"], "anúhte̲ʔ"],
+      breakdown: [["wak"], "anúhteʔ"],
     },
     {
-      breakdown: [["s"], "anúhte̲ʔ"],
+      breakdown: [["s"], "anúhteʔ"],
     },
     {
-      breakdown: [["lo"], "núhte̲ʔ"],
+      breakdown: [["lo"], "núhteʔ"],
     },
     {
-      breakdown: [["yako"], "núhte̲ʔ"],
+      breakdown: [["yako"], "núhteʔ"],
     },
     {
-      breakdown: [["yo"], "núhte̲ʔ"],
+      breakdown: [["yo"], "núhteʔ"],
     },
     {
-      breakdown: [["yuky"], "anúhte̲ʔ"],
+      breakdown: [["yuky"], "anúhteʔ"],
     },
     {
-      breakdown: [["yuky"], "anúhte̲ʔ"],
+      breakdown: [["yuky"], "anúhteʔ"],
     },
     {
-      breakdown: [["tsy"], "anúhte̲ʔ"],
+      breakdown: [["tsy"], "anúhteʔ"],
     },
     {
-      breakdown: [["lon"], "anúhte̲ʔ"],
+      breakdown: [["lon"], "anúhteʔ"],
     },
     {
-      breakdown: [["yon"], "anúhte̲ʔ"],
+      breakdown: [["yon"], "anúhteʔ"],
     },
     {
-      breakdown: [["yukw"], "anúhte̲ʔ"],
+      breakdown: [["yukw"], "anúhteʔ"],
     },
     {
-      breakdown: [["yukw"], "anúhte̲ʔ"],
+      breakdown: [["yukw"], "anúhteʔ"],
     },
     {
-      breakdown: [["sw"], "anúhte̲ʔ"],
+      breakdown: [["sw"], "anúhteʔ"],
     },
     {
-      breakdown: [["lon"], "anúhte̲ʔ"],
+      breakdown: [["lon"], "anúhteʔ"],
     },
     {
-      breakdown: [["yon"], "anúhte̲ʔ"],
+      breakdown: [["yon"], "anúhteʔ"],
     },
   ],
 });

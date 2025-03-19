@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["a", "IFUT"], ["k"], "atáhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["k"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hs"], "atáhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["hs"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["h"], "atáhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["h"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·", "IFUT"], ["yu"], "táhsehteʔ"],
+        breakdown: [["a·", "IFUT"], ["yu"], "táhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·", "IFUT"], ["u"], "táhsehteʔ"],
+        breakdown: [["a·", "IFUT"], ["u"], "táhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·e", "IFUT"], ["ty"], "atáhsehteʔ"],
+        breakdown: [["a·e", "IFUT"], ["ty"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yaky"], "atáhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["yaky"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["tsy"], "atáhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["tsy"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hy"], "atáhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["hy"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ky"], "atáhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["ky"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·e", "IFUT"], ["tw"], "atáhsehteʔ"],
+        breakdown: [["a·e", "IFUT"], ["tw"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["yakw"], "atáhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["yakw"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a·e", "IFUT"], ["sw"], "atáhsehteʔ"],
+        breakdown: [["a·e", "IFUT"], ["sw"], "atáhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["hu"], "táhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["hu"], "táhseht", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["a", "IFUT"], ["ku"], "táhsehteʔ"],
+        breakdown: [["a", "IFUT"], ["ku"], "táhseht", ["eʔ", "PUNC"]],
       },
     ],
   },

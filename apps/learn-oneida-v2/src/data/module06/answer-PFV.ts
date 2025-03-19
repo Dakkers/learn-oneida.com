@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PO",
     phrases: [
       {
-        breakdown: [["t", "CIS"], ["wak"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["wak"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["te", "CIS"], ["s"], "lihwaʔslákwʌ"],
+        breakdown: [["te", "CIS"], ["s"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["ho"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["ho"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yako"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yako"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yo"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yo"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yukni"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yukni"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yukni"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yukni"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["te", "CIS"], ["sni"], "lihwaʔslákwʌ"],
+        breakdown: [["te", "CIS"], ["sni"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["hoti"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["hoti"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yoti"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yoti"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yukwa"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yukwa"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yukwa"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yukwa"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["te", "CIS"], ["swa"], "lihwaʔslákwʌ"],
+        breakdown: [["te", "CIS"], ["swa"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["hoti"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["hoti"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
       {
-        breakdown: [["t", "CIS"], ["yoti"], "lihwaʔslákwʌ"],
+        breakdown: [["t", "CIS"], ["yoti"], "lihwaʔslákw", ["ʌ", "HAB"]],
       },
     ],
     whispered: false,

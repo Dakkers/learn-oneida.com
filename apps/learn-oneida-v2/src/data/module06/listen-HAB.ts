@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["k"], "atahúhsatats"],
+        breakdown: [["k"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["s"], "atahúhsatats"],
+        breakdown: [["s"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["l"], "atahúhsatats"],
+        breakdown: [["l"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["yu"], "tahúhsatats"],
+        breakdown: [["yu"], "tahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["w"], "atahúhsatats"],
+        breakdown: [["w"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["ty"], "atahúhsatats"],
+        breakdown: [["ty"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["yaky"], "atahúhsatats"],
+        breakdown: [["yaky"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["tsy"], "atahúhsatats"],
+        breakdown: [["tsy"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["y"], "atahúhsatats"],
+        breakdown: [["y"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["ky"], "atahúhsatats"],
+        breakdown: [["ky"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["tw"], "atahúhsatats"],
+        breakdown: [["tw"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["yakw"], "atahúhsatats"],
+        breakdown: [["yakw"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["sw"], "atahúhsatats"],
+        breakdown: [["sw"], "atahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["lu"], "tahúhsatats"],
+        breakdown: [["lu"], "tahúhsatat", ["s", "HAB"]],
       },
       {
-        breakdown: [["ku"], "tahúhsatats"],
+        breakdown: [["ku"], "tahúhsatat", ["s", "HAB"]],
       },
     ],
     whispered: false,

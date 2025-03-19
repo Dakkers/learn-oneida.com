@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["k"], "atslu·níheʔ"],
+        breakdown: [["k"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["s"], "atslu·níheʔ"],
+        breakdown: [["s"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["l"], "atslu·níheʔ"],
+        breakdown: [["l"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["yu"], "tslu·níheʔ"],
+        breakdown: [["yu"], "tslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["w"], "atslu·níheʔ"],
+        breakdown: [["w"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["ty"], "atslu·níheʔ"],
+        breakdown: [["ty"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["yaky"], "atslu·níheʔ"],
+        breakdown: [["yaky"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["tsy"], "atslu·níheʔ"],
+        breakdown: [["tsy"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["y"], "atslu·níheʔ"],
+        breakdown: [["y"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["ky"], "atslu·níheʔ"],
+        breakdown: [["ky"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["tw"], "atslu·níheʔ"],
+        breakdown: [["tw"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["yakw"], "atslu·níheʔ"],
+        breakdown: [["yakw"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["sw"], "atslu·níheʔ"],
+        breakdown: [["sw"], "atslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["lu"], "tslu·níheʔ"],
+        breakdown: [["lu"], "tslu·ní", ["heʔ", "HAB"]],
       },
       {
-        breakdown: [["ku"], "tslu·níheʔ"],
+        breakdown: [["ku"], "tslu·ní", ["heʔ", "HAB"]],
       },
     ],
   },
