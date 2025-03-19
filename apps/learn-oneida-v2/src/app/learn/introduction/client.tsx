@@ -43,21 +43,21 @@ export function ParadigmsSection() {
   );
 }
 
-export function GoToNextPageSection () {
-  const searchParams = useSearchParams()
-  const param = (searchParams.get('nextPage'))
+export function GoToNextPageSection() {
+  const searchParams = useSearchParams();
+  const param = searchParams.get("nextPage");
 
-  if (param === 'new-intro') {
+  if (param === "new-intro") {
     return (
       <Text>
-        Click <Link href='/new-intro'>here</Link> to continue learning!
+        Click <Link href="/new-intro">here</Link> to continue learning!
       </Text>
-    )
+    );
   }
 
   return (
     <Text>
       Click <LinkWrapper page={1}>here</LinkWrapper> to continue to module 1!
     </Text>
-  )
+  );
 }

@@ -32,7 +32,7 @@ export function LinkWrapper({
     | "rep"
     | "semi"
     | "soundchart";
-  query?: Record<string,string>
+  query?: Record<string, string>;
 }) {
   const children = _children
     ? _children
@@ -52,7 +52,7 @@ export function LinkWrapper({
           soundchart: "sound chart",
         }[page];
 
-  const NON_EXISTENT_PAGES = [
+  const NON_EXISTENT_PAGES: Array<string | number> = [
     "coin",
     "deriv",
     "dim",
@@ -94,8 +94,8 @@ export function LinkWrapper({
   } as const;
 
   const queryParams = new URLSearchParams(query ?? {});
-  const queryString = queryParams.size > 0 ? `?${queryParams.toString()}` : '';
-  const href = `${hrefMap[page]}${queryString}`
+  const queryString = queryParams.size > 0 ? `?${queryParams.toString()}` : "";
+  const href = `${hrefMap[page]}${queryString}`;
 
   return <Link href={href}>{children}</Link>;
 }

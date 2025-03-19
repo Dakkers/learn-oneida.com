@@ -1,7 +1,7 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import {
-  Pronoun,
+  type Pronoun,
   SectionHeading,
   TableWrapper,
 } from "@ukwehuwehneke/language-components";
@@ -29,7 +29,7 @@ import {
 } from "@/data/module04";
 import { formatFileWithSuffix } from "@/utils/misc";
 import { EnglishDisplay, StandardEntryDisplay } from "@/components";
-import { createModule9FoodsList, Module9FoodDatum } from "@/data/module09";
+import { createModule9FoodsList, type Module9FoodDatum } from "@/data/module09";
 import eatAMealDEF from "@/data/module06/eatAMeal-DEF";
 import cookDEF from "@/data/module06/cook-DEF";
 
@@ -90,7 +90,7 @@ export default function NewIntroPage() {
       <Text>
         This module assumes a knowledge of the terms "pronominal", "root word",
         "stem", and "paradigm", all of which are discussed on the{" "}
-        <LinkWrapper page="intro" query={{ nextPage: 'new-intro' }} />.
+        <LinkWrapper page="intro" query={{ nextPage: "new-intro" }} />.
       </Text>
 
       <SectionHeading id="first-verbs" level={2}>
@@ -126,6 +126,7 @@ export default function NewIntroPage() {
       </Text>
 
       <TableWrapper
+        // @ts-expect-error TODO
         columns={columns}
         data={[
           timesOfDayData.dayPhrases.find((obj) => obj.en.includes("every day")),
@@ -183,6 +184,7 @@ export default function NewIntroPage() {
                   //   row,
                   //   "singular",
                   // )}
+                  // @ts-expect-error TODO
                   value={val}
                 />
               );
@@ -233,9 +235,9 @@ export default function NewIntroPage() {
             ].includes(val.key),
           )
           .map((val) => ({
-            en: val.key === 'Egg' ? 'eggs' : val.en,
+            en: val.key === "Egg" ? "eggs" : val.en,
             one: [
-              'Egg',
+              "Egg",
               "GreenVegetable",
               "Macaroni",
               "MashedPotato",
@@ -276,7 +278,8 @@ export default function NewIntroPage() {
         columns={[
           {
             accessorKey: "sentence",
-            cell: (value) => (
+            // @ts-expect-error Table generics
+            cell: (value: { one: string; en: string }) => (
               <Flex direction="column" gap={2}>
                 <TextWithAudio>{value.one}</TextWithAudio>
 
@@ -413,7 +416,8 @@ export default function NewIntroPage() {
         columns={[
           {
             accessorKey: "sentence",
-            cell: (value) => (
+            // @ts-expect-error Table generics
+            cell: (value: { one: string; en: string }) => (
               <Flex direction="column" gap={2}>
                 <TextWithAudio>{value.one}</TextWithAudio>
 
@@ -519,8 +523,8 @@ export default function NewIntroPage() {
       </SectionHeading>
 
       <Text>
-        The indefinite future tense is a bit trickier. It is used when
-        events might, should, could, or would occur, but may not necessarily happen.
+        The indefinite future tense is a bit trickier. It is used when events
+        might, should, could, or would occur, but may not necessarily happen.
       </Text>
 
       <ParadigmTable
@@ -540,6 +544,7 @@ export default function NewIntroPage() {
       </SectionHeading>
 
       <TableWrapper
+        // @ts-expect-error Table generics
         columns={columns}
         data={[
           timesOfDayData.tomorrowPhrases.find((obj) =>
