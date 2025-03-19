@@ -18,7 +18,7 @@ import { Letter } from "~/components/Letter";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Link } from "@/components/Link";
 import { LinkWrapper } from "@/components/LinkWrapper";
-import { ParadigmsSection } from "./client";
+import { GoToNextPageSection, ParadigmsSection } from "./client";
 import { PageWrapper } from "@/components/PageWrapper";
 
 export const metadata: Metadata = {
@@ -168,9 +168,7 @@ export default function LearnIntroduction() {
         <ListItem>How to identify the stem of a root word</ListItem>
       </List>
 
-      <Text>
-        Click <LinkWrapper page={1}>here</LinkWrapper> to continue to module 1!
-      </Text>
+      <GoToNextPageSection />
     </PageWrapper>
   );
 }
