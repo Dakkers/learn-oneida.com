@@ -1,6 +1,7 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import {
+  Pronoun,
   SectionHeading,
   TableWrapper,
 } from "@ukwehuwehneke/language-components";
@@ -16,24 +17,21 @@ import { ParadigmTable } from "@/components/ParadigmTable";
 import eatAMealHAB from "@/data/module06/eatAMeal-HAB";
 import eatAMealIFUT from "@/data/module06/eatAMeal-IFUT";
 import eatAMealFUT from "@/data/module06/eatAMeal-FUT";
-import eatAMealDEF from "@/data/module06/eatAMeal-HAB";
 
 import cookHAB from "@/data/module06/cook-HAB";
 import cookIFUT from "@/data/module06/cook-IFUT";
 import cookFUT from "@/data/module06/cook-FUT";
-import cookDEF from "@/data/module06/cook-HAB";
+
 import { TextWithAudio } from "@/components/TextWithAudio";
 import {
   createTimesOfDayData,
   determineTimesOfDayAudioFileName,
 } from "@/data/module04";
 import { formatFileWithSuffix } from "@/utils/misc";
-import {
-  getAudioFileBaseForModule12AnimalDatum,
-  Module12AnimalDatum,
-} from "@/data/module12";
 import { EnglishDisplay, StandardEntryDisplay } from "@/components";
 import { createModule9FoodsList, Module9FoodDatum } from "@/data/module09";
+import eatAMealDEF from "@/data/module06/eatAMeal-DEF";
+import cookDEF from "@/data/module06/cook-DEF";
 
 // export const metadata: Metadata = {
 //   title: "Animal identification",
@@ -46,6 +44,7 @@ export default function NewIntroPage() {
     pronounEnglish: false,
   };
   const timesOfDayData = createTimesOfDayData();
+  const allowedPronouns: Pronoun[] = ["i", "u", "m", "f"];
 
   return (
     <PageWrapper>
@@ -91,7 +90,7 @@ export default function NewIntroPage() {
       <Text>
         This module assumes a knowledge of the terms "pronominal", "root word",
         "stem", and "paradigm", all of which are discussed on the{" "}
-        <LinkWrapper page="intro" />.
+        <LinkWrapper page="intro" query={{ nextPage: 'new-intro' }} />.
       </Text>
 
       <SectionHeading id="first-verbs" level={2}>
@@ -106,13 +105,13 @@ export default function NewIntroPage() {
       </Text>
 
       <ParadigmTable
-        allowedPronouns={["i", "u", "m", "f"]}
+        allowedPronouns={allowedPronouns}
         columnVisibility={defaultColVisibility}
         data={eatAMealHAB}
       />
 
       <ParadigmTable
-        allowedPronouns={["i", "u", "m", "f"]}
+        allowedPronouns={allowedPronouns}
         columnVisibility={defaultColVisibility}
         data={cookHAB}
       />
@@ -142,7 +141,7 @@ export default function NewIntroPage() {
           timesOfDayData.otherPhrases.find((obj) =>
             obj.en.includes("sometimes"),
           ),
-          timesOfDayData.otherPhrases.find((obj) => obj.en.includes("never")),
+          // timesOfDayData.otherPhrases.find((obj) => obj.en.includes("never")),
         ].map((obj) => ({
           ...obj,
           audioFile: arrayify(obj?.translation).map((item, i) =>
@@ -198,8 +197,8 @@ export default function NewIntroPage() {
               "Banana",
               "BeanSoup",
               "Bread",
-              "Butter",
-              "Cheese",
+              // "Butter",
+              // "Cheese",
               "ChickenMeat",
               "Coffee",
               "Corn",
@@ -234,14 +233,16 @@ export default function NewIntroPage() {
             ].includes(val.key),
           )
           .map((val) => ({
-            en: val.en,
+            en: val.key === 'Egg' ? 'eggs' : val.en,
             one: [
+              'Egg',
               "GreenVegetable",
               "Macaroni",
               "MashedPotato",
               "Popcorn",
               "Potato",
               "Spaghetti",
+              "Strawberry",
               "Sugar",
               "Tea",
               "Tomato",
@@ -253,7 +254,7 @@ export default function NewIntroPage() {
       />
 
       <SectionHeading id="basic-sentences" level={2}>
-        Basic Sentences
+        Basic sentences
       </SectionHeading>
 
       <Text>
@@ -266,10 +267,9 @@ export default function NewIntroPage() {
 
       <Text>
         In the table below, both the Oneida text and English text are hidden by
-        default.
-        <b>I heartily recommend</b> trying to figure out what is being said by
-        only listening to the audio. Listen to the audio dozens of times if you
-        need to!
+        default. <b>I heartily recommend</b> trying to figure out what is being
+        said by only listening to the audio. Listen to the audio dozens of times
+        if you need to!
       </Text>
 
       <TableWrapper
@@ -295,9 +295,13 @@ export default function NewIntroPage() {
             one: "TBD",
             en: "I drink tea every night.",
           },
+          // {
+          //   one: "TBD",
+          //   en: "I never eat vegetables.",
+          // },
           {
             one: "TBD",
-            en: "I never eat vegetables.",
+            en: "I always eat vegetables.",
           },
           {
             one: "TBD",
@@ -309,11 +313,39 @@ export default function NewIntroPage() {
           },
           {
             one: "TBD",
+            en: "I often eat fish.",
+          },
+          {
+            one: "TBD",
+            en: "I eat an apple every day.",
+          },
+          {
+            one: "TBD",
+            en: "I eat bread every day.",
+          },
+          {
+            one: "TBD",
             en: "You often drink coffee.",
           },
           {
             one: "TBD",
             en: "You always eat popcorn.",
+          },
+          {
+            one: "TBD",
+            en: "You often eat fish.",
+          },
+          // {
+          //   one: "TBD",
+          //   en: "You never cook spaghetti.",
+          // },
+          {
+            one: "TBD",
+            en: "You cook spaghetti every week.",
+          },
+          {
+            one: "TBD",
+            en: "You eat a banana every day.",
           },
           {
             one: "TBD",
@@ -333,6 +365,10 @@ export default function NewIntroPage() {
           },
           {
             one: "TBD",
+            en: "He often cooks fish.",
+          },
+          {
+            one: "TBD",
             en: "He sometimes cooks pizza.",
           },
           {
@@ -347,6 +383,14 @@ export default function NewIntroPage() {
             one: "TBD",
             en: "She sometimes cooks macaroni.",
           },
+          {
+            one: "TBD",
+            en: "She eats corn soup every week.",
+          },
+          {
+            one: "TBD",
+            en: "She eats corn every day.",
+          },
         ].map((val) => ({ sentence: val }))}
       />
 
@@ -354,10 +398,10 @@ export default function NewIntroPage() {
         Particles
       </SectionHeading>
 
-      <Text>TODO - "and", "or", "but"</Text>
+      <Text>TODO - "and", "or"</Text>
 
       <SectionHeading id="basic-sentences-2" level={2}>
-        More Basic Sentences
+        More basic sentences
       </SectionHeading>
 
       <Text>
@@ -384,15 +428,111 @@ export default function NewIntroPage() {
             one: "TBD",
             en: "I often eat toast and eggs.",
           },
+          // {
+          //   one: "TBD",
+          //   en: "I never eat junk food or ice cream.",
+          // },
           {
             one: "TBD",
-            en: "I never eat junk food or ice cream.",
+            en: "I always eat junk food and ice cream.",
+          },
+          {
+            one: "TBD",
+            en: "I eat a banana and an apple every day.",
+          },
+          {
+            one: "TBD",
+            en: "I cook fish and vegetables every week.",
+          },
+          {
+            one: "TBD",
+            en: "You cook fish and vegetables every week.",
+          },
+          {
+            one: "TBD",
+            en: "You often cook soup and vegetables.",
+          },
+          {
+            one: "TBD",
+            en: "He cooks a sconedog and bean soup every day.",
+          },
+          {
+            one: "TBD",
+            en: "He eats fruit and greens every day.",
+          },
+          {
+            one: "TBD",
+            en: "She often cooks macaroni and mashed potatoes.",
           },
           {
             one: "TBD",
             en: "She sometimes cooks spaghetti and ground meat.",
           },
         ].map((val) => ({ sentence: val }))}
+      />
+
+      <SectionHeading id="definite-tense" level={2}>
+        The definite tense
+      </SectionHeading>
+
+      <Text>
+        At the introductory level, the definite tense can be thought of as a
+        past tense where the event in question occurred somewhat recently. For
+        example, yesterday, last week, the other day, etc.
+      </Text>
+
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={eatAMealDEF}
+      />
+
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={cookDEF}
+      />
+
+      <SectionHeading id="definite-tense" level={2}>
+        The future tense
+      </SectionHeading>
+
+      <Text>
+        The future tense is what it sounds like: it refers to events that{" "}
+        <i>will</i> occur in the future.
+      </Text>
+
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={eatAMealFUT}
+      />
+
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={cookFUT}
+      />
+
+      <SectionHeading id="definite-tense" level={2}>
+        The indefinite future tense
+      </SectionHeading>
+
+      <Text>
+        The indefinite future tense is a bit trickier. It is used when
+        events might, should, could, or would occur, but may not necessarily happen.
+      </Text>
+
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={eatAMealIFUT}
+      />
+
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={cookIFUT}
       />
 
       <SectionHeading id="more-time-words" level={2}>
@@ -411,8 +551,14 @@ export default function NewIntroPage() {
           timesOfDayData.weekendPhrases.find((obj) =>
             obj.en.includes("this past weekend"),
           ),
+          timesOfDayData.weekendPhrases.find((obj) =>
+            obj.en.includes("this (coming) weekend"),
+          ),
           timesOfDayData.yesterdayPhrases.find((obj) =>
             obj.en.includes("yesterday"),
+          ),
+          timesOfDayData.weekPhrases.find((obj) =>
+            obj.en.includes("next week"),
           ),
         ].map((obj) => ({
           ...obj,

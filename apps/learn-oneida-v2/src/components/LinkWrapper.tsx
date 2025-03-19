@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 export function LinkWrapper({
   children: _children,
   page,
+  query,
 }: {
   children?: ReactNode;
   page:
@@ -31,6 +32,7 @@ export function LinkWrapper({
     | "rep"
     | "semi"
     | "soundchart";
+  query?: Record<string,string>
 }) {
   const children = _children
     ? _children
@@ -91,5 +93,9 @@ export function LinkWrapper({
     soundchart: "/practice/soundchart",
   } as const;
 
-  return <Link href={hrefMap[page]}>{children}</Link>;
+  const queryParams = new URLSearchParams(query ?? {});
+  const queryString = queryParams.size > 0 ? `?${queryParams.toString()}` : '';
+  const href = `${hrefMap[page]}${queryString}`
+
+  return <Link href={href}>{children}</Link>;
 }
