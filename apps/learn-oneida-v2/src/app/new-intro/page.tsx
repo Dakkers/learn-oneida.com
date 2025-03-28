@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { type ReactNode, useMemo, useState } from "react";
 import {
   type Pronoun,
   SectionHeading,
@@ -7,7 +7,7 @@ import {
 } from "@ukwehuwehneke/language-components";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
-import { arrayify, Flex, Notice, Text } from "@ukwehuwehneke/ohutsya";
+import { arrayify, Flex, List, Notice, Text } from "@ukwehuwehneke/ohutsya";
 import { LinkWrapper } from "@/components/LinkWrapper";
 
 import _ from "lodash";
@@ -17,10 +17,17 @@ import { ParadigmTable } from "@/components/ParadigmTable";
 import eatAMealHAB from "@/data/module06/eatAMeal-HAB";
 import eatAMealIFUT from "@/data/module06/eatAMeal-IFUT";
 import eatAMealFUT from "@/data/module06/eatAMeal-FUT";
+import eatAMealDEF from "@/data/module06/eatAMeal-DEF";
 
 import cookHAB from "@/data/module06/cook-HAB";
 import cookIFUT from "@/data/module06/cook-IFUT";
 import cookFUT from "@/data/module06/cook-FUT";
+import cookDEF from "@/data/module06/cook-DEF";
+
+import drinkHAB from "@/data/module06/drink-HAB";
+import drinkIFUT from "@/data/module06/drink-IFUT";
+import drinkFUT from "@/data/module06/drink-FUT";
+import drinkDEF from "@/data/module06/drink-DEF";
 
 import { TextWithAudio } from "@/components/TextWithAudio";
 import {
@@ -30,8 +37,6 @@ import {
 import { formatFileWithSuffix } from "@/utils/misc";
 import { EnglishDisplay, StandardEntryDisplay } from "@/components";
 import { createModule9FoodsList, type Module9FoodDatum } from "@/data/module09";
-import eatAMealDEF from "@/data/module06/eatAMeal-DEF";
-import cookDEF from "@/data/module06/cook-DEF";
 
 // export const metadata: Metadata = {
 //   title: "Animal identification",
@@ -115,6 +120,30 @@ export default function NewIntroPage() {
         columnVisibility={defaultColVisibility}
         data={cookHAB}
       />
+
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={drinkHAB}
+      />
+
+      <Notice emphasis="outline" intent="primary">
+        You probably noticed that each of these words are spoken twice but
+        slightly differently. The first utterance is the "prepausal" ending and
+        the second is the "medial" ending. This will be discussed in detail
+        later, but to summarize the difference:
+        <br />
+        <br />
+        <List>
+          <List.Item>
+            The prepausal form of a word is spoken if the word is the last word
+            in a sentence, or if it's the only word in a sentence
+          </List.Item>
+          <List.Item>The medial form of a word is spoken otherwise</List.Item>
+        </List>
+        <br />
+        If you only hear one utterance, that word only has a medial form.
+      </Notice>
 
       <SectionHeading id="time-words" level={2}>
         Time words
@@ -201,6 +230,7 @@ export default function NewIntroPage() {
               "Bread",
               // "Butter",
               // "Cheese",
+              "ChineseFood",
               "ChickenMeat",
               "Coffee",
               "Corn",
@@ -208,7 +238,8 @@ export default function NewIntroPage() {
               "Egg",
               "Fish",
               "Fruit",
-              "Frybread",
+              "BreadFried",
+              "Lasagna",
               "GreenVegetable",
               "Hamburger",
               "Hotdog",
@@ -217,19 +248,20 @@ export default function NewIntroPage() {
               "Macaroni",
               "MashedPotato",
               "Pizza",
+              "Pie",
               "Popcorn",
-              "Potato",
+              // "Potato",
               "Sandwich",
               "Sconedog",
               "Soda",
               "Soup",
               "Spaghetti",
               "Strawberry",
-              "Sugar",
+              // "Sugar",
               "Tea",
               "Toast",
               // "Tomato",
-              // "TurkeyMeat",
+              "Turkey",
               "Vegetables",
               "Water",
             ].includes(val.key),
@@ -274,21 +306,7 @@ export default function NewIntroPage() {
         if you need to!
       </Text>
 
-      <TableWrapper
-        columns={[
-          {
-            accessorKey: "sentence",
-            // @ts-expect-error Table generics
-            cell: (value: { one: string; en: string }) => (
-              <Flex direction="column" gap={2}>
-                <TextWithAudio>{value.one}</TextWithAudio>
-
-                <Text variant="bodyS">{value.en}</Text>
-              </Flex>
-            ),
-            header: "",
-          },
-        ]}
+      <TestingTable
         data={[
           {
             one: "TBD",
@@ -394,39 +412,44 @@ export default function NewIntroPage() {
             one: "TBD",
             en: "She eats corn every day.",
           },
-        ].map((val) => ({ sentence: val }))}
+        ]}
       />
 
       <SectionHeading id="particles" level={2}>
         Particles
       </SectionHeading>
 
-      <Text>TODO - "and", "or"</Text>
+      <Text>
+        Many words we've seen so far are conjugated in some capacity. In
+        linguistics, conjugation is the act of modifying a word to make it fit
+        different tenses or who is speaking. In English, for example, you would
+        conjugate the word "drink" to be "drank" for the past tense. As
+        mentioned in the <LinkWrapper page="intro" />, Oneida is a language that
+        conjugates quite a bit.
+      </Text>
+
+      <Text>
+        Particles are an exception of sorts. These are words that are not
+        conjugatable, that is, they only ever appear in one form. (There are
+        particles that become contractions, which will be discussed separately.)
+      </Text>
+
+      <Text>
+        The first particle we will learn is the word ókhaleʔ, which is very
+        often spoken as simply <b>kháleʔ</b>, which means "and". We will use
+        this word in new basic sentences below.
+      </Text>
 
       <SectionHeading id="basic-sentences-2" level={2}>
         More basic sentences
       </SectionHeading>
 
       <Text>
-        The sentences below make use of the same food words and time words but
-        include usage of the particles described above.
+        The sentences below make use of the same food words and the same time
+        words, but introduce the usage of the word <b>kháleʔ</b>.
       </Text>
 
-      <TableWrapper
-        columns={[
-          {
-            accessorKey: "sentence",
-            // @ts-expect-error Table generics
-            cell: (value: { one: string; en: string }) => (
-              <Flex direction="column" gap={2}>
-                <TextWithAudio>{value.one}</TextWithAudio>
-
-                <Text variant="bodyS">{value.en}</Text>
-              </Flex>
-            ),
-            header: "",
-          },
-        ]}
+      <TestingTable
         data={[
           {
             one: "TBD",
@@ -472,7 +495,7 @@ export default function NewIntroPage() {
             one: "TBD",
             en: "She sometimes cooks spaghetti and ground meat.",
           },
-        ].map((val) => ({ sentence: val }))}
+        ]}
       />
 
       <SectionHeading id="definite-tense" level={2}>
@@ -497,7 +520,13 @@ export default function NewIntroPage() {
         data={cookDEF}
       />
 
-      <SectionHeading id="definite-tense" level={2}>
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={drinkDEF}
+      />
+
+      <SectionHeading id="future-tense" level={2}>
         The future tense
       </SectionHeading>
 
@@ -518,7 +547,13 @@ export default function NewIntroPage() {
         data={cookFUT}
       />
 
-      <SectionHeading id="definite-tense" level={2}>
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={drinkFUT}
+      />
+
+      <SectionHeading id="indefinite-tense" level={2}>
         The indefinite future tense
       </SectionHeading>
 
@@ -537,6 +572,12 @@ export default function NewIntroPage() {
         allowedPronouns={allowedPronouns}
         columnVisibility={defaultColVisibility}
         data={cookIFUT}
+      />
+
+      <ParadigmTable
+        allowedPronouns={allowedPronouns}
+        columnVisibility={defaultColVisibility}
+        data={drinkIFUT}
       />
 
       <SectionHeading id="more-time-words" level={2}>
@@ -576,6 +617,360 @@ export default function NewIntroPage() {
           ),
         }))}
       />
+
+      <SectionHeading id="asking-questions" level={2}>
+        Asking questions
+      </SectionHeading>
+
+      <Text>
+        In Oneida, you can ask a "yes or no" question by adding the word{" "}
+        <b>kʌ́</b> to your sentence. This word almost always shows up as the
+        second word in a sentence, though there are exceptions.
+      </Text>
+
+      <Text>
+        This is a particle with no English equivalent. Unlike English, the tone
+        of your voice should not change when asking a question.
+      </Text>
+
+      <SectionHeading id="sentences-new-tenses" level={2}>
+        Sentences with new tenses
+      </SectionHeading>
+
+      <Text>
+        The sentences below use the definite (past), indefinite future, and
+        future tenses, as well as the new time words above. Some of them are
+        questions, so listen for the word <b>kʌ́</b>!
+      </Text>
+
+      <TestingTable
+        data={[
+          {
+            one: "TBD",
+            en: "I will cook spaghetti and ground meat next week.",
+          },
+          {
+            one: "TBD",
+            en: "I will cook fish and corn soup tonight.",
+          },
+          {
+            one: "TBD",
+            en: "I will cook corn tomorrow.",
+          },
+          {
+            one: "TBD",
+            en: "I will cook macaroni this weekend.",
+          },
+          {
+            one: "TBD",
+            en: "I might cook macaroni and mashed potato next week.",
+          },
+          {
+            one: "TBD",
+            en: "I might cook sconedog and greens tonight.",
+          },
+          {
+            one: "TBD",
+            en: "I might cook frybread tomorrow.",
+          },
+          {
+            one: "TBD",
+            en: "I might cook turkey (meat) this weekend.",
+          },
+          {
+            one: "TBD",
+            en: "I cooked bean soup yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "I cooked corn soup this past weekend.",
+          },
+          {
+            one: "TBD",
+            en: "I will eat junk food and ice cream tonight.",
+          },
+          {
+            one: "TBD",
+            en: "I will eat corn and fish tomorrow.",
+          },
+          {
+            one: "TBD",
+            en: "I will eat pizza this weekend.",
+          },
+          {
+            one: "TBD",
+            en: "I might eat popcorn tonight.",
+          },
+          {
+            one: "TBD",
+            en: "I might eat a sconedog tomorrow.",
+          },
+          {
+            one: "TBD",
+            en: "I might eat Chinese food this weekend.",
+          },
+          {
+            one: "TBD",
+            en: "I ate a strawberry.",
+          },
+          {
+            one: "TBD",
+            en: "I ate eggs.",
+          },
+          {
+            one: "TBD",
+            en: "I ate pizza yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "I ate lasagna yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "I ate pie this past weekend.",
+          },
+          {
+            one: "TBD",
+            en: "I ate an apple and a banana yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "I drank coffee yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "I will drink tea tonight.",
+          },
+          {
+            one: "TBD",
+            en: "Will you cook turkey (meat) next week?",
+          },
+          {
+            one: "TBD",
+            en: "You will cook bean soup tonight.",
+          },
+          {
+            one: "TBD",
+            en: "Will you cook fish tomorrow?",
+          },
+          {
+            one: "TBD",
+            en: "Will you cook a sconedog this weekend?",
+          },
+          {
+            one: "TBD",
+            en: "Would you cook frybread and greens tonight?",
+          },
+          {
+            one: "TBD",
+            en: "You might cook lasagna tomorrow.",
+          },
+          {
+            one: "TBD",
+            en: "You cooked spaghetti yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "Did you cook macaroni yesterday?",
+          },
+          {
+            one: "TBD",
+            en: "You cooked fish this past weekend.",
+          },
+          {
+            one: "TBD",
+            en: "Did you cook mashed potato yesterday?",
+          },
+          {
+            one: "TBD",
+            en: "Will you eat pizza tonight?",
+          },
+          {
+            one: "TBD",
+            en: "Will you eat Chinese food this weekend?",
+          },
+          {
+            one: "TBD",
+            en: "Did you eat an apple?",
+          },
+          {
+            one: "TBD",
+            en: "Did you eat a sandwich?",
+          },
+          {
+            one: "TBD",
+            en: "Did you eat a hotdog yesterday?",
+          },
+          {
+            one: "TBD",
+            en: "Did you eat ice cream this past weekend?",
+          },
+          {
+            one: "TBD",
+            en: "Did you drink water?",
+          },
+          {
+            one: "TBD",
+            en: "He will cook lasagna next week.",
+          },
+          {
+            one: "TBD",
+            en: "Will he cook tonight?",
+          },
+          {
+            one: "TBD",
+            en: "He will cook frybread and sconedog tomorrow.",
+          },
+          {
+            one: "TBD",
+            en: "He will cook turkey this weekend.",
+          },
+          {
+            one: "TBD",
+            en: "He might cook fish next week.",
+          },
+          {
+            one: "TBD",
+            en: "Could he cook tonight?",
+          },
+          {
+            one: "TBD",
+            en: "He might cook greens tomorrow.",
+          },
+          {
+            one: "TBD",
+            en: "He might cook hamburger this weekend.",
+          },
+          {
+            one: "TBD",
+            en: "He cooked soup yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "Did he cook macaroni yesterday?",
+          },
+          {
+            one: "TBD",
+            en: "He cooked spaghetti this past weekend.",
+          },
+          {
+            one: "TBD",
+            en: "Did he cook fish this past weekend?",
+          },
+          {
+            one: "TBD",
+            en: "He ate a pie.",
+          },
+          {
+            one: "TBD",
+            en: "He ate a sandwich.",
+          },
+          {
+            one: "TBD",
+            en: "He ate hamburger yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "Did he eat lasagna yesterday?",
+          },
+          {
+            one: "TBD",
+            en: "He ate fish this past weekend.",
+          },
+          {
+            one: "TBD",
+            en: "Did he drink water?",
+          },
+          {
+            one: "TBD",
+            en: "He drank pop yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "He will drink coffee tonight.",
+          },
+          {
+            one: "TBD",
+            en: "She will cook pizza next week.",
+          },
+          {
+            one: "TBD",
+            en: "Will she cook tonight?",
+          },
+          {
+            one: "TBD",
+            en: "She will cook fish and vegetables tomorrow.",
+          },
+          {
+            one: "TBD",
+            en: "She will cook hamburger this weekend.",
+          },
+          {
+            one: "TBD",
+            en: "She might cook spaghetti next week.",
+          },
+          {
+            one: "TBD",
+            en: "She might cook tonight.",
+          },
+          {
+            one: "TBD",
+            en: "She might cook corn and bean soup tomorrow.",
+          },
+          {
+            one: "TBD",
+            en: "She might cook frybread this weekend.",
+          },
+          {
+            one: "TBD",
+            en: "She cooked mashed potato yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "Did she cook spaghetti yesterday?",
+          },
+          {
+            one: "TBD",
+            en: "She cooked macaroni this past weekend.",
+          },
+          {
+            one: "TBD",
+            en: "Did she cook soup this past weekend?",
+          },
+          {
+            one: "TBD",
+            en: "She ate a banana.",
+          },
+          {
+            one: "TBD",
+            en: "She ate a sconedog.",
+          },
+          {
+            one: "TBD",
+            en: "She ate eggs yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "Did she eat lasagna yesterday?",
+          },
+          {
+            one: "TBD",
+            en: "She ate chicken this past weekend.",
+          },
+          {
+            one: "TBD",
+            en: "Did she drink pop?",
+          },
+          {
+            one: "TBD",
+            en: "She drank water yesterday.",
+          },
+          {
+            one: "TBD",
+            en: "She will drink tea tonight.",
+          },
+        ]}
+      />
     </PageWrapper>
   );
 }
@@ -600,3 +995,95 @@ const columns = [
     ),
   },
 ];
+
+function TestingTable({
+  data,
+}: {
+  data: Array<{ one: string; en: string }>;
+}) {
+  return (
+    <TableWrapper
+      columns={[
+        {
+          accessorKey: "sentence",
+          // @ts-expect-error Table generics
+          cell: (value: { one: string; en: string }) => (
+            <TestingCell value={value} />
+          ),
+          header: "",
+        },
+      ]}
+      data={_.shuffle(data.map((val) => ({ sentence: val })))}
+    />
+  );
+}
+
+function TestingCell({
+  value,
+}: {
+  value: { one: string; en: string };
+}) {
+  const [isEnglishShowing, setIsEnglishShowing] = useState(false);
+  const [isOneidaShowing, setIsOneidaShowing] = useState(false);
+
+  return (
+    <Flex direction="column" gap={2}>
+      <TextWithAudio>
+        <HideableText
+          hiddenStyle="blur"
+          isShowing={isOneidaShowing}
+          onClick={setIsOneidaShowing}
+        >
+          {value.one}
+        </HideableText>
+      </TextWithAudio>
+
+      <HideableText isShowing={isEnglishShowing} onClick={setIsEnglishShowing}>
+        <Text variant="bodyS">{value.en}</Text>
+      </HideableText>
+    </Flex>
+  );
+}
+
+function HideableText({
+  children,
+  hiddenStyle,
+  isShowing = false,
+  onClick,
+}: {
+  children: ReactNode;
+  hiddenStyle?: "blur" | "blackedout";
+  isShowing?: boolean;
+  onClick: (value: boolean) => void;
+}) {
+  return (
+    <div>
+      {isShowing ? (
+        children
+      ) : (
+        <button
+          className={hiddenStyle === "blur" ? "" : "bg-slate-900"}
+          onClick={() => onClick(true)}
+          style={
+            hiddenStyle === "blur"
+              ? {
+                  // color: 'transparent',
+                  // textShadow: '0 0 5px rgba(0,0,0,0.5)'
+                  filter: "blur(4px)",
+                }
+              : {}
+          }
+          type="button"
+        >
+          <span
+            aria-hidden
+            className={hiddenStyle === "blackedout" ? "invisible" : ""}
+          >
+            {children}
+          </span>
+          <span className="sr-only">Click to reveal</span>
+        </button>
+      )}
+    </div>
+  );
+}
