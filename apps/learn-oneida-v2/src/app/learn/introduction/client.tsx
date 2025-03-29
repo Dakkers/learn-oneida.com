@@ -1,8 +1,11 @@
 "use client";
 import { Letter } from "@/components/Letter";
+import { Link } from "@/components/Link";
+import { LinkWrapper } from "@/components/LinkWrapper";
 import { ParadigmTable } from "@/components/ParadigmTable";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
 import { Text } from "@ukwehuwehneke/ohutsya";
+import { useSearchParams } from "next/navigation";
 import dataLikeRedJson from "~/data/nuwehse-red";
 
 export function ParadigmsSection() {
@@ -37,5 +40,24 @@ export function ParadigmsSection() {
         characters may get shifted around or replaced.
       </Text>
     </>
+  );
+}
+
+export function GoToNextPageSection() {
+  const searchParams = useSearchParams();
+  const param = searchParams.get("nextPage");
+
+  if (param === "new-intro") {
+    return (
+      <Text>
+        Click <Link href="/new-intro">here</Link> to continue learning!
+      </Text>
+    );
+  }
+
+  return (
+    <Text>
+      Click <LinkWrapper page={1}>here</LinkWrapper> to continue to module 1!
+    </Text>
   );
 }

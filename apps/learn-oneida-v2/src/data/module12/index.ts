@@ -727,7 +727,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     ],
     plural: [],
   };
-  const objTurkey: DatumNoType = {
+  const objTurkeyMeat: DatumNoType = {
     key: "turkey",
     en: ["turkey"],
     dict: [],
@@ -795,7 +795,7 @@ export function createModule12BirdsList(): Module12AnimalDatum[] {
     objStork,
     objBarnSwallow,
     objSwan,
-    objTurkey,
+    objTurkeyMeat,
     objTurkeyVulture,
     objWoodpecker,
   ].map((datum) => ({

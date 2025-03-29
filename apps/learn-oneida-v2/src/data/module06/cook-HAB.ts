@@ -1,9 +1,13 @@
+"use client";
 import { createParadigmData } from "@/utils/paradigm";
+import { pluralizeVerbCommon } from "@/utils/translation";
 import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
     translation: "{{pronoun}} {{refVerb}} cooking",
+    // translationFn: (pronoun) =>
+    //   `{{pronoun}} ${pluralizeVerbCommon(pronoun, "cook")}`,
     type: "PS",
     phrases: [
       {

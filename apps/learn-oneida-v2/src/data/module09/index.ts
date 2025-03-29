@@ -1473,7 +1473,7 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
   const objPotato: Module9FoodDatum = {
     dict: [],
     root: ["-hnanaʔt-"],
-    en: ["potato"],
+    en: ["potatoes"],
     key: "Potato",
     singular: null,
     plural: [
@@ -1952,11 +1952,23 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
   const objTurkey: Module9FoodDatum = {
     dict: [],
     root: [],
-    en: ["turkey meat"],
+    en: ["turkey"],
     key: "Turkey",
     singular: [
       {
-        one: ["skawilo·wáneʔ oʔwalu"],
+        one: ["skawilo·wáneʔ"],
+      },
+    ],
+    plural: null,
+  };
+  const objTurkeyMeat: Module9FoodDatum = {
+    dict: [],
+    root: [],
+    en: ["turkey meat"],
+    key: "TurkeyMeat",
+    singular: [
+      {
+        one: ["skawilo·wáneʔ oʔwálu̲ʔ"],
       },
     ],
     plural: [
@@ -2183,6 +2195,7 @@ export function createModule9FoodsList(): Module9FoodDatum[] {
     objToast,
     objTomato,
     objTurkey,
+    objTurkeyMeat,
     objTurnip,
     objVegetables,
     objVinegar,
