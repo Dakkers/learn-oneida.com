@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import {
   TableOfContents as TOC,
   TableOfContentsItem as TocItem,
