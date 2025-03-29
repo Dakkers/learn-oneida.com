@@ -1,3 +1,4 @@
+'use client'
 import {
   TableOfContents as TOC,
   TableOfContentsItem as TocItem,
@@ -123,10 +124,10 @@ const verbsWithParadigms = [
   },
 ] as const;
 
-export const metadata: Metadata = {
-  title: "Module 6",
-  description: "Module 6 of the Oneida curriculum",
-};
+// export const metadata: Metadata = {
+//   title: "Module 6",
+//   description: "Module 6 of the Oneida curriculum",
+// };
 
 export default function LearnModule06() {
   const list = createModule6VerbList();
