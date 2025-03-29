@@ -104,8 +104,9 @@ export default function NewIntroPage() {
 
       <Text>
         The first verbs we'll cover are for eating, cooking, and drinking in the
-        habitual tense. The habitual tense can be used for both the present tense (right now)
-        and also for something that occurs regularly (daily, weekly, etc).
+        habitual tense. The habitual tense can be used for both the present
+        tense (right now) and also for something that occurs regularly (daily,
+        weekly, etc).
       </Text>
 
       <ParadigmTable
@@ -267,7 +268,12 @@ export default function NewIntroPage() {
             ].includes(val.key),
           )
           .map((val) => ({
-            en: val.key === "Egg" ? "eggs" : val.key === "Strawberry" ? "strawberries" : val.en,
+            en:
+              val.key === "Egg"
+                ? "eggs"
+                : val.key === "Strawberry"
+                  ? "strawberries"
+                  : val.en,
             one: [
               // "Chicken",
               "Egg",
@@ -660,8 +666,14 @@ export default function NewIntroPage() {
 
       <Text>
         In Oneida, you can ask a "yes or no" question by adding the word{" "}
-        <TextWithAudio filepath="particles/module01/question_indicator.mp3" inline><b>kʌ́</b></TextWithAudio> to your sentence. This word almost always shows up as the
-        second word in a sentence, though there are exceptions.
+        <TextWithAudio
+          filepath="particles/module01/question_indicator.mp3"
+          inline
+        >
+          <b>kʌ́</b>
+        </TextWithAudio>{" "}
+        to your sentence. This word almost always shows up as the second word in
+        a sentence, though there are exceptions.
       </Text>
 
       <Text>
@@ -1094,7 +1106,7 @@ function HideableText({
 }) {
   return (
     <div>
-      {true ? (
+      {isShowing ? (
         children
       ) : (
         <button

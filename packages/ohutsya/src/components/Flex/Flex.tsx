@@ -66,7 +66,7 @@ export function Flex({
         height === "fill" ? "h-full" : undefined,
         justify && justifyContentMap[justify],
         wrap && "flex-wrap",
-        inline && 'inline-flex',
+        inline && "inline-flex",
         padding,
       )}
     >
