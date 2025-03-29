@@ -4,9 +4,9 @@ import { pronouns } from "@ukwehuwehneke/language-components";
 
 export default createParadigmData(
   {
-    translation: "{{pronoun}} drink",
-    translationFn: (pronoun) =>
-      `{{pronoun}} ${pluralizeVerbCommon(pronoun, "drink")}`,
+    translation: "{{pronoun}} {{refVerb}} drinking",
+    // translationFn: (pronoun) =>
+    //   `{{pronoun}} ${pluralizeVerbCommon(pronoun, "drink")}`,
     type: "PS",
     phrases: [
       {

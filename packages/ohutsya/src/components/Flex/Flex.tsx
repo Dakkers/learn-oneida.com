@@ -28,6 +28,7 @@ export interface FlexProps extends PaddingProps {
   direction?: Direction | Responsive<Direction>;
   gap?: Gap | Responsive<Gap>;
   height?: "fill";
+  inline?: boolean;
   justify?: JustifyContent;
   wrap?: boolean;
 }
@@ -39,6 +40,7 @@ export function Flex({
   direction = "row",
   gap,
   height,
+  inline = false,
   justify,
   wrap = false,
   p,
@@ -64,6 +66,7 @@ export function Flex({
         height === "fill" ? "h-full" : undefined,
         justify && justifyContentMap[justify],
         wrap && "flex-wrap",
+        inline && 'inline-flex',
         padding,
       )}
     >

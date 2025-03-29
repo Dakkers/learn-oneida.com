@@ -8,7 +8,7 @@ import {
 } from "@ukwehuwehneke/ohutsya";
 import type { Metadata } from "next";
 import Image from "next/image";
-import React from "react";
+import React, { Suspense } from "react";
 import {
   TableOfContents as TOC,
   TableOfContentsItem as TocItem,
@@ -168,7 +168,9 @@ export default function LearnIntroduction() {
         <ListItem>How to identify the stem of a root word</ListItem>
       </List>
 
-      <GoToNextPageSection />
+      <Suspense>
+        <GoToNextPageSection />
+      </Suspense>
     </PageWrapper>
   );
 }
