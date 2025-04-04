@@ -11,7 +11,7 @@ const cspHeader = `
     default-src 'self';
     connect-src 'self' *.mixpanel.com;
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://unpkg.com;
-    style-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com;
     img-src 'self' blob: data:;
     font-src 'self';
     media-src 'self' blob: data:;
