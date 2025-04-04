@@ -23,7 +23,7 @@ export default function Practice() {
     // },
     {
       href: "/animal-identification",
-      label: "Animal Identification",
+      label: "Animal Identification (Audio)",
     },
     {
       href: "/body-part-identification",
