@@ -12,6 +12,25 @@ export const metadata: Metadata = {
 };
 
 export default function Practice() {
+  const audioItems = [
+    {
+      href: "/animals",
+      label: "Animals (Quiz)",
+    },
+    {
+      href: "/counting-time",
+      label: "Counting Time Words (Quiz)",
+    },
+    {
+      href: "/nations",
+      label: "Nations (Quiz)",
+    },
+    {
+      href: "/times-of-day",
+      label: "Times of Day (Quiz)",
+    },
+  ];
+
   const items = [
     // {
     //   href: "/being-somewhere",
@@ -21,10 +40,6 @@ export default function Practice() {
     //   href: "/cardinal-directions",
     //   label: "Cardinal Directions",
     // },
-    {
-      href: "/animal-identification",
-      label: "Animal Identification (Audio)",
-    },
     {
       href: "/body-part-identification",
       label: "Body Part Identification",
@@ -117,6 +132,22 @@ export default function Practice() {
       <Text>
         Improve your Oneida skills with features provided by this website!
       </Text>
+
+      <SectionHeading level={2}>Listening</SectionHeading>
+      <Text>
+        These links below are audio-first and will test your comprehension
+        skills.
+      </Text>
+      <List>
+        {audioItems.map((t, i) => (
+          <List.Item key={i}>
+            <Link href={`/practice/listening${t.href}`}>{t.label}</Link>
+          </List.Item>
+        ))}
+      </List>
+
+      <SectionHeading level={2}>Written</SectionHeading>
+      <Text>These links will test your reading and spelling skills.</Text>
       <List>
         {items.map((t, i) => (
           <List.Item key={i}>
