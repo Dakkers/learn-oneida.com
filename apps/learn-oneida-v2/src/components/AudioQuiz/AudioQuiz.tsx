@@ -1,18 +1,25 @@
 "use client";
-import { Button, Flex, Select, trackEvent } from "@ukwehuwehneke/ohutsya";
+import {
+  arrayify,
+  Button,
+  Flex,
+  Select,
+  trackEvent,
+} from "@ukwehuwehneke/ohutsya";
 import _ from "lodash";
 import { useMemo, useState } from "react";
 import { QuizResults } from "../QuizResults";
 import { QuizButton } from "../QuizButton";
+import { standardizeAudioFileName } from "@/utils/misc";
 
 export interface AudioQuizProps {
   eventCategory: string;
   englishOptions: {
-    key: string;
+    key: string | number;
     text: string;
   }[];
   oneidaPhrases: {
-    answerKey: string;
+    answerKey: string | number;
     audioFile: string;
     text: string;
   }[];
@@ -128,7 +135,7 @@ export function AudioQuiz({
 
   return (
     <div>
-      <audio autoPlay controls src={item.audioFile} />
+      <audio autoPlay controls src={standardizeAudioFileName(item.audioFile)} />
 
       <Flex direction="column" py={8}>
         {item.options.map((t, i) => {

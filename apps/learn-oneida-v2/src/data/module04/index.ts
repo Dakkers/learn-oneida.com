@@ -422,9 +422,10 @@ export function createCountingTimeData() {
     ["1 year", "tsyóhslat"],
     ["2 years", "teyóhslake̲ʔ"],
     ["3 years", "áhsʌ niyóhslaké̲"],
-  ].map(([en, translation]) => ({
+  ].map(([en, translation], i) => ({
     audioFile: `module04/counting_time/${en.replaceAll(" ", "_")}.mp3`,
     en: arrayify(en),
+    key: i,
     translation,
   }));
 }
@@ -440,6 +441,7 @@ export function createTimesOfDayData() {
     ...obj,
     en: arrayify(obj.en),
     audioFile: determineTimesOfDayAudioFileName(obj.en),
+    key: index,
     translation: obj.translation,
   });
 
