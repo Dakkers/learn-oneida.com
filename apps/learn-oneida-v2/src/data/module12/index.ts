@@ -1160,7 +1160,10 @@ export function getAudioFileForModule12AnimalDatum(
   key: "singular" | "plural",
   index = 0,
 ): string {
-  const base = getAudioFileBaseForModule12AnimalDatum(datum, key);
+  const base = getAudioFileBaseForModule12AnimalDatum(datum, key).replace(
+    ".mp3",
+    "",
+  );
   const wordList = datum[key];
   const oneidaTxt = getPlainTextFromStandardEntryItem(wordList[index]);
 
