@@ -1,5 +1,8 @@
 "use client";
-import { SectionHeading } from "@ukwehuwehneke/language-components";
+import {
+  convertBreakdownToPlainText,
+  SectionHeading,
+} from "@ukwehuwehneke/language-components";
 import _ from "lodash";
 import { PageWrapper } from "@/components/PageWrapper";
 import {
@@ -16,21 +19,15 @@ import { getAllModule01Paradigms } from "@/data/module01";
 import { getAllModule02Paradigms } from "@/data/module02";
 import { getAllModule03Paradigms } from "@/data/module03";
 import { getAllModule04Paradigms } from "@/data/module04";
+import { createModule5VerbsListFlat } from "@/data/module05";
+import { createModule6VerbListFlat } from "@/data/module06/activeVerbsList";
 
 export default function WorksheetsPage() {
   const [category, setCategory] = useState("food");
-  const [worksheetType, setWorksheetType] = useState("wordsearch");
+  const [worksheetType, setWorksheetType] = useState("stative-tenses");
   const [id, setId] = useState(0);
 
   const categoryOptions = useMemo(() => {
-    if (worksheetType === "wordsearch") {
-      return [
-        { label: "Environment", value: "environment" },
-        { label: "Food", value: "food" },
-        { label: "Body Parts", value: "bodyparts" },
-        { label: "Animals", value: "animals" },
-      ].toSorted((a, b) => a.label.localeCompare(b.label));
-    }
     return [
       // ["All", "all"],
       ["Module 1", "module01"],
@@ -39,7 +36,7 @@ export default function WorksheetsPage() {
       ["Module 4", "module04"],
       ["Module 12", "module12"],
     ].map(([label, value]) => ({ label, value }));
-  }, [worksheetType]);
+  }, []);
 
   return (
     <PageWrapper>
@@ -59,14 +56,16 @@ export default function WorksheetsPage() {
                 ["(Select)", ""],
                 ["Pronominals", "pronominals"],
                 ["Root Words", "roots"],
-                ["Word Search", "wordsearch"],
+                ["Stative Tenses", "stative-tenses"],
+                ["Active Tenses", "active-tenses"],
               ].map(([label, value]) => ({ label, value }))}
               onChange={(newVal) => {
                 setWorksheetType(newVal);
+                setId((prev) => prev + 1);
               }}
               value={worksheetType}
             />
-            {["roots", "pronominals", "wordsearch"].includes(worksheetType) && (
+            {["roots", "pronominals"].includes(worksheetType) && (
               <Select
                 label="Category"
                 options={categoryOptions}
@@ -86,8 +85,8 @@ export default function WorksheetsPage() {
       {worksheetType === "roots" && (
         <FindTheRootWord id={id.toString()} module={category} />
       )}
-      {worksheetType === "wordsearch" && (
-        <WordSearch id={id.toString()} category={category} />
+      {["stative-tenses", "active-tenses"].includes(worksheetType) && (
+        <FindTheTense id={id.toString()} worksheetType={worksheetType} />
       )}
     </PageWrapper>
   );
@@ -121,7 +120,7 @@ function FindTheRootWord({
       result.push(_.sample(pd?.phrases ?? [])?.phrase || "");
     }
     return result;
-  }, [forceRerender, module]);
+  }, [module, numItems]);
 
   return (
     <>
@@ -157,8 +156,8 @@ function FindTheRootWord({
       </Notice>
 
       <div className="grid grid-cols-2 gap-8 mt-4">
-        {data.map((txt) => (
-          <Flex justify="center">
+        {data.map((txt, i) => (
+          <Flex justify="center" key={`${forceRerender}-${i}`}>
             <Text variant="headlineM">{txt}</Text>
           </Flex>
         ))}
@@ -195,7 +194,7 @@ function FindThePronominal({
       result.push(_.sample(pd?.phrases ?? [])?.phrase || "");
     }
     return result;
-  }, [forceRerender, module]);
+  }, [module, numItems]);
 
   return (
     <>
@@ -230,8 +229,8 @@ function FindThePronominal({
       </Notice>
 
       <div className="grid grid-cols-2 gap-8 mt-4">
-        {data.map((txt) => (
-          <Flex justify="center">
+        {data.map((txt, i) => (
+          <Flex justify="center" key={`${forceRerender}-${i}`}>
             <Text variant="headlineM">{txt}</Text>
           </Flex>
         ))}
@@ -240,15 +239,83 @@ function FindThePronominal({
   );
 }
 
-function Highlight({
-  children,
+function FindTheTense({
+  id: forceRerender,
+  numItems = 10,
+  worksheetType,
 }: {
-  children: ReactNode;
+  id: string;
+  numItems?: number;
+  worksheetType: string;
 }) {
+  const isStative = worksheetType === "stative-tenses";
+
+  const data = useMemo(() => {
+    if (worksheetType === "stative-tenses") {
+      return _.sampleSize(
+        _.flattenDeep(
+          createModule5VerbsListFlat()
+            .filter((datum) => datum.tense !== "cmd" && datum.tense !== "prs")
+            .map((datum) => datum.phrases ?? []),
+        ),
+        numItems,
+      );
+    } else if (worksheetType === "active-tenses") {
+      return _.sampleSize(
+        _.flattenDeep(
+          createModule6VerbListFlat()
+            .filter((datum) => datum.tense !== "cmd" && datum.tense !== "hab")
+            .map((datum) => datum.phrases ?? []),
+        ),
+        numItems,
+      );
+    }
+    return [];
+  }, [numItems, worksheetType]);
+
   return (
-    <span className="border border-black border-2 border-dashed">
-      {children}
-    </span>
+    <>
+      <div className="print:hidden">
+        <Box py={8}>
+          <Divider />
+        </Box>
+      </div>
+
+      <SectionHeading level={2}>Identify the Tense</SectionHeading>
+
+      <Notice emphasis="outline">
+        <Flex direction="column" gap={4}>
+          <Text>
+            On this page is a list of words. Your goal is to identify the tense.
+            As an example, consider this word:
+          </Text>
+
+          <ExampleText>
+            {isStative ? (
+              <>
+                tewakaʔnikuhlyaʔkú<Highlight>neʔ</Highlight>
+              </>
+            ) : (
+              <>
+                <Highlight>ʌ</Highlight>katyaʔtóhaleʔ
+              </>
+            )}
+          </ExampleText>
+
+          <Text>The tense has been highlighted.</Text>
+        </Flex>
+      </Notice>
+
+      <div className="grid grid-cols-1 gap-8 mt-4">
+        {data.map((datum, i) => (
+          <Flex justify="center" key={`${forceRerender}-${i}`}>
+            <Text variant="headlineM">
+              {convertBreakdownToPlainText(datum.breakdown)}
+            </Text>
+          </Flex>
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -263,5 +330,17 @@ function ExampleText({
         <b>{children}</b>
       </Text>
     </Flex>
+  );
+}
+
+function Highlight({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  return (
+    <span className="border border-black border-2 border-dashed">
+      {children}
+    </span>
   );
 }

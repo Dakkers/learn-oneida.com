@@ -79,24 +79,27 @@ export function generateWordsearch(
     dy: number,
     word: string,
   ) => {
+    let xIter = x;
+    let yIter = y;
+
     let ok = false;
     const chars = splitUtf8(word);
     for (let i = 0; i < chars.length; i++) {
       const l = chars[i];
-      if (x < 0 || y < 0 || x >= size || y >= size) {
+      if (xIter < 0 || yIter < 0 || xIter >= size || yIter >= size) {
         return false;
       }
 
-      const cur = get(x, y);
-      if (cur != " " && cur != l) {
+      const cur = get(xIter, yIter);
+      if (cur !== " " && cur !== l) {
         return false;
       }
-      if (cur == " ") {
+      if (cur === " ") {
         ok = true;
       }
 
-      x += dx;
-      y += dy;
+      xIter += dx;
+      yIter += dy;
     }
     return ok;
   };
@@ -108,20 +111,22 @@ export function generateWordsearch(
     dy: number,
     word: string,
   ) => {
+    let xIter = x;
+    let yIter = y;
+
     const chars = splitUtf8(word);
     for (let i = 0; i < chars.length; i++) {
       const l = chars[i];
-      // const l = word[i].toUpperCase();
-      set(x, y, l);
-      x += dx;
-      y += dy;
+      set(xIter, yIter, l);
+      xIter += dx;
+      yIter += dy;
     }
     used.push(word);
     usedMap[word] = true;
   };
 
   for (let i = 0; i < size * size * effort; i++) {
-    if (used.length == allowedWords.length) {
+    if (used.length === allowedWords.length) {
       break;
     }
 
@@ -145,7 +150,7 @@ export function generateWordsearch(
     : "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   for (let i = 0; i < grid.length; i++) {
-    if (grid[i] == " ") {
+    if (grid[i] === " ") {
       grid[i] = characterSet[rand(characterSet.length)];
     }
   }
