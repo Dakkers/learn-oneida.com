@@ -6,7 +6,6 @@ import {
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 import { arrayify, Text } from "@ukwehuwehneke/ohutsya";
-import { LinkWrapper } from "@/components/LinkWrapper";
 import {
   createModule12AnimalsList,
   getAudioFileForModule12AnimalDatum,
@@ -16,6 +15,7 @@ import {
   AudioQuiz,
   type AudioQuizProps,
 } from "@/components/AudioQuiz/AudioQuiz";
+import { Link } from "@/components/Link";
 
 export const metadata: Metadata = {
   title: "Animal identification",
@@ -67,7 +67,10 @@ export default function PracticeAnimalIdentification() {
       <SectionHeading level={1}>Practice identifying animals</SectionHeading>
 
       <Text>
-        These words come from <LinkWrapper page={12} />.
+        You can learn these words from the{" "}
+        <Link href="/articles/mammals">mammals article</Link>,{" "}
+        <Link href="/articles/birds">birds article</Link>, and the{" "}
+        <Link href="/articles/insects">insects article</Link>.
       </Text>
 
       <AudioQuiz
