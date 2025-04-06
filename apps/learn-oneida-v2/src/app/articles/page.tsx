@@ -5,6 +5,7 @@ import { Text } from "@ukwehuwehneke/ohutsya";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 import { Link } from "@/components/Link";
+import { SectionHeading } from "@ukwehuwehneke/language-components";
 
 export const metadata: Metadata = {
   title: "Articles",
@@ -12,135 +13,111 @@ export const metadata: Metadata = {
 };
 
 export default function Articles() {
-  const articlesLinguistics = [
-    ["/glottal-stop", "Glottal Stop"],
-    ["/prepausal-endings", "Prepausal Endings"],
-    ["/pronominals", "Pronominals"],
-    ["/repetitive-feature", "Repetitive Feature"],
-    ["/stress", "Stress and Accents"],
-    ["/letter-h", "The Letter H"],
-    ["/whispered-endings", "Whispered Endings"],
-    ["/understanding-agents", "Understanding Agents"],
-  ];
-  const articles = [
-    {
-      href: "/around-the-house",
-      label: "Around the house",
-    },
-    {
-      href: "/at-someones-place",
-      label: "At someone's place",
-    },
-    {
-      href: "/cardinal-directions",
-      label: "Cardinal directions",
-    },
-    {
-      href: "/cities",
-      label: "Cities",
-    },
-    {
-      href: "/clans",
-      label: "Clans",
-    },
-    {
-      href: "/clock-time",
-      label: "Clock time",
-    },
-    {
-      href: "/counting-time",
-      label: "Counting lengths of time",
-    },
-    {
-      href: "/counting-people",
-      label: "Counting people",
-    },
-    {
-      href: "/countries",
-      label: "Countries",
-    },
-    {
-      href: "/days-of-the-week",
-      label: "Days of the week",
-    },
-    {
-      href: "/domesticated-animals",
-      label: "Domesticated animals",
-    },
-    {
-      href: "/english-names",
-      label: "English names",
-    },
-    {
-      href: "/good-people-bad-people",
-      label: "Good people and bad people",
-    },
-    {
-      href: "/months",
-      label: "Months of the year",
-    },
-    {
-      href: "/nations",
-      label: "Nations",
-    },
-    {
-      href: "/places-in-the-community",
-      label: "Places in the community",
-    },
-    {
-      href: "/phone-numbers",
-      label: "Phone numbers",
-    },
-    {
-      href: "/relationships",
-      label: "Relationships",
-    },
-    {
-      href: "/roads",
-      label: "Roads",
-    },
-    {
-      href: "/seasons",
-      label: "Seasons",
-    },
-    {
-      href: "/kanuhwelatuksla",
-      label: "Thanksgiving Address",
-    },
-    {
-      href: "/times-of-day",
-      label: "Times of day",
-    },
-  ];
-
   return (
     <PageWrapper>
-      <Heading level={1} variant="headlineL">
-        Articles
-      </Heading>
+      <SectionHeading level={1}>Articles</SectionHeading>
 
-      <Text>Articles regarding the linguistics side of things:</Text>
-      <LinksList links={articlesLinguistics} />
+      <SectionHeading level={2}>Animals</SectionHeading>
+      <LinksList
+        links={[
+          ["/birds", "Birds"],
+          ["/insects", "Insects"],
+          ["/mammals", "Mammals"],
+          ["/domesticated-animals", "Domesticated animals"],
+        ]}
+      />
 
-      <Text>Other articles:</Text>
-      <LinksList links={articles} />
+      <SectionHeading level={2}>Environment</SectionHeading>
+      <LinksList
+        links={[
+          ["/cardinal-directions", "Cardinal directions"],
+          ["/seasons", "Seasons"],
+        ]}
+      />
+
+      <SectionHeading level={2}>Household</SectionHeading>
+      <LinksList
+        links={[
+          ["/around-the-house", "Around the house"],
+          ["/at-someones-place", "At someone's place"],
+        ]}
+      />
+
+      <SectionHeading level={2}>Locations</SectionHeading>
+      <LinksList
+        links={[
+          ["/roads", "Roads"],
+          ["/places-in-the-community", "Places in the community"],
+          ["/cities", "Cities"],
+          ["/countries", "Countries"],
+        ]}
+      />
+
+      <SectionHeading level={2}>Time</SectionHeading>
+      <LinksList
+        links={[
+          ["/clock-time", "Clock time"],
+          ["/counting-time", "Counting lengths of time"],
+          ["/days-of-the-week", "Days of the week"],
+          ["/months", "Months of the year"],
+          ["/times-of-day", "Times of day"],
+        ]}
+      />
+
+      <SectionHeading level={2}>Ukwehuwehné·ke</SectionHeading>
+      <LinksList
+        links={[
+          ["/clans", "Clans"],
+          ["/nations", "Nations"],
+          ["/kanuhwelatuksla", "Thanksgiving Address"],
+        ]}
+      />
+
+      <SectionHeading level={2}>Linguistics</SectionHeading>
+      <Text>
+        Nerds rejoice: these articles cover the linguistics of the Oneida
+        language.
+      </Text>
+      <LinksList
+        links={[
+          ["/glottal-stop", "Glottal Stop"],
+          ["/prepausal-endings", "Prepausal Endings"],
+          ["/pronominals", "Pronominals"],
+          ["/repetitive-feature", "Repetitive Feature"],
+          ["/stress", "Stress and Accents"],
+          ["/letter-h", "The Letter H"],
+          ["/whispered-endings", "Whispered Endings"],
+          ["/understanding-agents", "Understanding Agents"],
+        ]}
+      />
+
+      <SectionHeading level={2}>Uncategorized</SectionHeading>
+      <LinksList
+        links={[
+          ["/english-names", "English names"],
+          ["/good-people-bad-people", "Good people and bad people"],
+          ["/counting-people", "Counting people"],
+          ["/phone-numbers", "Phone numbers"],
+          ["/relationships", "Relationships"],
+        ]}
+      />
     </PageWrapper>
   );
 }
 
 function LinksList({
-  links,
+  links: _links,
 }: {
-  links: Array<string[]> | Array<{ href: string; label: string }>;
+  links: Array<[string, string]>;
 }) {
+  const links = _links.toSorted((a, b) => a[1].localeCompare(b[1]));
+
   return (
     <List>
       {links.map((t, i) => {
-        const href = Array.isArray(t) ? t[0] : t.href;
-        const label = Array.isArray(t) ? t[1] : t.label;
         return (
           <List.Item key={i}>
-            <Link href={`/articles${href}`}>{label}</Link>
+            <Link href={`/articles${t[0]}`}>{t[1]}</Link>
           </List.Item>
         );
       })}

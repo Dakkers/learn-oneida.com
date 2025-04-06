@@ -20,6 +20,7 @@ import { LinkWrapper } from "@/components/LinkWrapper";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 import { StandardEntryDisplay } from "@/components/StandardEntryDisplay";
+import { AnimalsTable } from "@/components/AnimalsTable";
 
 // export const metadata: Metadata = {
 //   title: "Module 12",
@@ -72,7 +73,7 @@ function MammalsList() {
       <SectionHeading id="mammals" level={2}>
         Mammals
       </SectionHeading>
-      <AnimalTable data={list} />
+      <AnimalsTable data={list} />
     </>
   );
 }
@@ -84,7 +85,7 @@ function BirdsList() {
       <SectionHeading id="birds" level={2}>
         Birds
       </SectionHeading>
-      <AnimalTable data={list} />
+      <AnimalsTable data={list} />
     </>
   );
 }
@@ -96,60 +97,7 @@ function InsectsList() {
       <SectionHeading id="insects" level={2}>
         Insects
       </SectionHeading>
-      <AnimalTable data={list} />
+      <AnimalsTable data={list} />
     </>
-  );
-}
-
-function AnimalTable({ data }: { data: Module12AnimalDatum[] }) {
-  return (
-    <TableWrapper
-      columns={[
-        {
-          accessorKey: "en",
-          // @ts-expect-error TODO - TableWrapper/Table generics
-          cell: (en: string[], row: Module12AnimalDatum) => (
-            <Flex direction="column" gap={0}>
-              <Text>{en.join(", ")}</Text>
-              {row.dict.length > 0 && (
-                <Text contrast="mid" variant="labelS">
-                  pg. {row.dict.join(", ")}
-                </Text>
-              )}
-            </Flex>
-          ),
-          header: "English",
-        },
-        {
-          accessorKey: "singular",
-          // @ts-expect-error TODO - TableWrapper/Table generics
-          cell: (
-            singular: Module12AnimalDatum["singular"],
-            row: Module12AnimalDatum,
-          ) => {
-            return (
-              <StandardEntryDisplay
-                audioFile={getAudioFileBaseForModule12AnimalDatum(
-                  row,
-                  "singular",
-                )}
-                value={singular}
-              />
-            );
-          },
-          header: "Single",
-        },
-        // {
-        //   accessorKey: "plural",
-        //   // @ts-expect-error TODO - TableWrapper/Table generics
-        //   cell: (plural: Module12AnimalDatum["plural"]) => {
-        //     return <CustomCell value={plural} />;
-        //   },
-        //   header: "Plural",
-        // },
-      ]}
-      // @ts-expect-error TODO - TableWrapper/Table generics
-      data={data}
-    />
   );
 }
