@@ -23,7 +23,7 @@ import { createModule5VerbsListFlat } from "@/data/module05";
 import { createModule6VerbListFlat } from "@/data/module06/activeVerbsList";
 
 export default function WorksheetsPage() {
-  const [category, setCategory] = useState("food");
+  const [category, setCategory] = useState("module01");
   const [worksheetType, setWorksheetType] = useState("stative-tenses");
   const [id, setId] = useState(0);
 
@@ -169,7 +169,7 @@ function FindTheRootWord({
 function FindThePronominal({
   id: forceRerender,
   module,
-  numItems = 10,
+  numItems = 9,
 }: {
   id: string;
   module: string;
@@ -228,7 +228,7 @@ function FindThePronominal({
         </Flex>
       </Notice>
 
-      <div className="grid grid-cols-2 gap-8 mt-4">
+      <div className="grid grid-cols-1 gap-8 mt-2">
         {data.map((txt, i) => (
           <Flex justify="center" key={`${forceRerender}-${i}`}>
             <Text variant="headlineM">{txt}</Text>

@@ -25,9 +25,10 @@ import { createModule10EnvironmentNounsList } from "@/data/module10";
 import { createModule9FoodsList } from "@/data/module09";
 import { createColoursData, createModule7NounsList } from "@/data/module07";
 import { createModule8CharacteristicsList } from "@/data/module08";
+import { getClanAnimalList, getNationsList } from "@/data/module03";
 
 export default function WordSearchPage() {
-  const [category, setCategory] = useState("characteristics");
+  const [category, setCategory] = useState("nations");
   const [size, setSize] = useState("md");
 
   const categoryOptions = useMemo(() => {
@@ -38,6 +39,8 @@ export default function WordSearchPage() {
       { label: "Body Parts", value: "bodyparts" },
       { label: "Animals", value: "animals" },
       { label: "Characteristics", value: "characteristics" },
+      { label: "Clans", value: "clans" },
+      { label: "Nations", value: "nations" },
     ].toSorted((a, b) => a.label.localeCompare(b.label));
   }, []);
 
@@ -107,6 +110,14 @@ function WordSearch({
     } else if (category === "characteristics") {
       return createModule8CharacteristicsList().map((item) => [
         convertBreakdownToPlainText(item.verb),
+      ]);
+    } else if (category === "nations") {
+      return getNationsList().map((item) => [
+        convertBreakdownToPlainText(item.translation.toLowerCase()),
+      ]);
+    } else if (category === "clans") {
+      return getClanAnimalList().map((item) => [
+        convertBreakdownToPlainText(item.translation),
       ]);
     }
     return [];
