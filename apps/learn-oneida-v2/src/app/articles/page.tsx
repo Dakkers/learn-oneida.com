@@ -6,6 +6,7 @@ import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
 import { Link } from "@/components/Link";
 import { SectionHeading } from "@ukwehuwehneke/language-components";
+import { useMemo } from "react";
 
 export const metadata: Metadata = {
   title: "Articles",
@@ -110,7 +111,11 @@ function LinksList({
 }: {
   links: Array<[string, string]>;
 }) {
-  const links = _links.toSorted((a, b) => a[1].localeCompare(b[1]));
+  const links = useMemo(() => {
+    const copy = _links.slice();
+    copy.sort((a, b) => a[1].localeCompare(b[1]));
+    return copy;
+  }, [_links]);
 
   return (
     <List>
