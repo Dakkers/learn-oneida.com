@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PO",
     phrases: [
       {
-        breakdown: [["wak"], "atkétskwʌ"],
+        breakdown: [["wak"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["s"], "atkétskwʌ"],
+        breakdown: [["s"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["lo"], "tkétskwʌ"],
+        breakdown: [["lo"], "tkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["yako"], "tkétskwʌ"],
+        breakdown: [["yako"], "tkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["yo"], "tkétskwʌ"],
+        breakdown: [["yo"], "tkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["yuky"], "atkétskwʌ"],
+        breakdown: [["yuky"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["yuky"], "atkétskwʌ"],
+        breakdown: [["yuky"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["tsy"], "atkétskwʌ"],
+        breakdown: [["tsy"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["lon"], "atkétskwʌ"],
+        breakdown: [["lon"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["yon"], "atkétskwʌ"],
+        breakdown: [["yon"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["yukw"], "atkétskwʌ"],
+        breakdown: [["yukw"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["yukw"], "atkétskwʌ"],
+        breakdown: [["yukw"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["sw"], "atkétskwʌ"],
+        breakdown: [["sw"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["lon"], "atkétskwʌ"],
+        breakdown: [["lon"], "atkétskw", ["ʌ", "PFV"]],
       },
       {
-        breakdown: [["yon"], "atkétskwʌ"],
+        breakdown: [["yon"], "atkétskw", ["ʌ", "PFV"]],
       },
     ],
   },

@@ -7,49 +7,49 @@ export default createParadigmData(
     type: "PO",
     phrases: [
       {
-        breakdown: [["wak"], "atatewyʌnʌtá·u"],
+        breakdown: [["wak"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["s"], "atatewyʌnʌtá·u"],
+        breakdown: [["s"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["lo"], "tatewyʌnʌtá·u"],
+        breakdown: [["lo"], "tatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yako"], "tatewyʌnʌtá·u"],
+        breakdown: [["yako"], "tatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yo"], "tatewyʌnʌtá·u"],
+        breakdown: [["yo"], "tatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yuky"], "atatewyʌnʌtá·u"],
+        breakdown: [["yuky"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yuky"], "atatewyʌnʌtá·u"],
+        breakdown: [["yuky"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["tsy"], "atatewyʌnʌtá·u"],
+        breakdown: [["tsy"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["lon"], "atatewyʌnʌtá·u"],
+        breakdown: [["lon"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yon"], "atatewyʌnʌtá·u"],
+        breakdown: [["yon"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yukw"], "atatewyʌnʌtá·u"],
+        breakdown: [["yukw"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yukw"], "atatewyʌnʌtá·u"],
+        breakdown: [["yukw"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["sw"], "atatewyʌnʌtá·u"],
+        breakdown: [["sw"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["lon"], "atatewyʌnʌtá·u"],
+        breakdown: [["lon"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
       {
-        breakdown: [["yon"], "atatewyʌnʌtá·u"],
+        breakdown: [["yon"], "atatewyʌnʌtá", ["·u", "PFV"]],
       },
     ],
   },

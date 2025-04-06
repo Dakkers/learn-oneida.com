@@ -620,7 +620,7 @@ export function createModule6VerbList() {
 
 export function createModule6VerbListFlat() {
   const resultingList = createModule6VerbList();
-  const flattenedResult = [];
+  const flattenedResult: ReturnType<typeof flattenVerbDatum> = [];
   for (const v of resultingList) {
     flattenedResult.push(...flattenVerbDatum(v));
   }

@@ -5,46 +5,46 @@ const data = createInteractiveParadigmData({
   type: "PI",
   phrases: [
     {
-      breakdown: [["kuy"], "ʌ́·niheʔ"],
+      breakdown: [["kuy"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["liy"], "ʌ́·niheʔ"],
+      breakdown: [["liy"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["khey"], "ʌ́·niheʔ"],
+      breakdown: [["khey"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["sk"], "ʌ́·niheʔ"],
+      breakdown: [["sk"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["h", "RPL"], ["etsh"], "ʌ́·niheʔ"],
+      breakdown: [["h", "RPL"], ["etsh"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["shey"], "ʌ́·niheʔ"],
+      breakdown: [["shey"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["lakw"], "ʌ́·niheʔ"],
+      breakdown: [["lakw"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["h", "RPL"], ["yay"], "ʌ́·niheʔ"],
+      breakdown: [["h", "RPL"], ["yay"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["law"], "ʌ́·niheʔ"],
+      breakdown: [["law"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["shakaw"], "ʌ́·niheʔ"],
+      breakdown: [["shakaw"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["yukw"], "ʌ́·niheʔ"],
+      breakdown: [["yukw"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["yes"], "ʌ́·niheʔ"],
+      breakdown: [["yes"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["luw"], "ʌ́·niheʔ"],
+      breakdown: [["luw"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
     {
-      breakdown: [["yutat"], "ʌ́·niheʔ"],
+      breakdown: [["yutat"], "ʌ́·ni", ["heʔ", "HAB"]],
     },
   ],
 });

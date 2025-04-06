@@ -10,6 +10,29 @@ import {
 import _ from "lodash";
 
 export interface ParadigmData {
+  aspectClass?:
+    | "A1"
+    | "A2"
+    | "A3"
+    | "B1"
+    | "B2"
+    | "B3"
+    | "C1"
+    | "C2"
+    | "C3"
+    | "D1"
+    | "D2"
+    | "D3"
+    | "E1"
+    | "E2"
+    | "E3"
+    | "E4"
+    | "E5"
+    | "E6"
+    | "F"
+    | "G1"
+    | "G2"
+    | "H";
   audioFolder?: string;
   categories?: Array<"kinship">;
   phrases: ParadigmTableRow[];
@@ -29,6 +52,7 @@ export interface ParadigmTableRow {
 function createParadigmDataUtil(
   data: Pick<
     ParadigmData,
+    | "aspectClass"
     | "audioFolder"
     | "categories"
     | "translation"

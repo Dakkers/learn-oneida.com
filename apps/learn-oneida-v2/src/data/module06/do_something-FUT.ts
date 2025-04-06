@@ -7,49 +7,103 @@ export default createParadigmData(
     type: "PS",
     phrases: [
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["k"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["k"], "átyel", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["hs"], "átyeleʔ"],
+        breakdown: [
+          ["n", "PTV"],
+          ["ʌ", "FUT"],
+          ["hs"],
+          "átyel",
+          ["eʔ", "PUNC"],
+        ],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["h"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["h"], "átyel", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["yú"], "tyeleʔ"],
+        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["yú"], "tyel", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["w"], "átyeleʔ"],
+        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["w"], "átyel", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["ty"], "átyeleʔ"],
+        breakdown: [
+          ["n", "PTV"],
+          ["ʌ", "FUT"],
+          ["ty"],
+          "átyel",
+          ["eʔ", "PUNC"],
+        ],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["yaky"], "átyeleʔ"],
+        breakdown: [
+          ["n", "PTV"],
+          ["ʌ", "FUT"],
+          ["yaky"],
+          "átyel",
+          ["eʔ", "PUNC"],
+        ],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["tsy"], "átyeleʔ"],
+        breakdown: [
+          ["n", "PTV"],
+          ["ʌ", "FUT"],
+          ["tsy"],
+          "átyel",
+          ["eʔ", "PUNC"],
+        ],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["hy"], "átyeleʔ"],
+        breakdown: [
+          ["n", "PTV"],
+          ["ʌ", "FUT"],
+          ["hy"],
+          "átyel",
+          ["eʔ", "PUNC"],
+        ],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["ky"], "átyeleʔ"],
+        breakdown: [
+          ["n", "PTV"],
+          ["ʌ", "FUT"],
+          ["ky"],
+          "átyel",
+          ["eʔ", "PUNC"],
+        ],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["tw"], "átyeleʔ"],
+        breakdown: [
+          ["n", "PTV"],
+          ["ʌ", "FUT"],
+          ["tw"],
+          "átyel",
+          ["eʔ", "PUNC"],
+        ],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["yakw"], "átyeleʔ"],
+        breakdown: [
+          ["n", "PTV"],
+          ["ʌ", "FUT"],
+          ["yakw"],
+          "átyel",
+          ["eʔ", "PUNC"],
+        ],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["sw"], "átyeleʔ"],
+        breakdown: [
+          ["n", "PTV"],
+          ["ʌ", "FUT"],
+          ["sw"],
+          "átyel",
+          ["eʔ", "PUNC"],
+        ],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["hú"], "tyeleʔ"],
+        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["hú"], "tyel", ["eʔ", "PUNC"]],
       },
       {
-        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["kú"], "tyeleʔ"],
+        breakdown: [["n", "PTV"], ["ʌ", "FUT"], ["kú"], "tyel", ["eʔ", "PUNC"]],
       },
     ],
   },

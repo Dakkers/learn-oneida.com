@@ -7,49 +7,49 @@ const data = createParadigmData({
   type: "PO",
   phrases: [
     {
-      breakdown: ["yáh teʔ", ["wak"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["wak"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["s"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["s"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh te", ["ho"], "núhte̲ʔ"],
+      breakdown: ["yáh te", ["ho"], "núhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["yako"], "núhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["yako"], "núhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["yo"], "núhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["yo"], "núhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["yuky"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["yuky"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["yuky"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["yuky"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["tsy"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["tsy"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh te", ["hon"], "anúhte̲ʔ"],
+      breakdown: ["yáh te", ["hon"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["yon"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["yon"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["yukw"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["yukw"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["yukw"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["yukw"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["sw"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["sw"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh te", ["hon"], "anúhte̲ʔ"],
+      breakdown: ["yáh te", ["hon"], "anúhteʔ"],
     },
     {
-      breakdown: ["yáh teʔ", ["yon"], "anúhte̲ʔ"],
+      breakdown: ["yáh teʔ", ["yon"], "anúhteʔ"],
     },
   ],
 });
