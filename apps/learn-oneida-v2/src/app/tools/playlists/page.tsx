@@ -18,6 +18,8 @@ import {
 import { standardizeAudioFileName } from "@/utils/misc";
 import { PageWrapper } from "@/components/PageWrapper";
 import type { Metadata } from "next";
+import { useWakeLock } from "@/utils/hooks/useWakeLock";
+import { Timer } from "@/utils/timer";
 
 // export const metadata: Metadata = {
 //   title: "Playlists",
@@ -37,7 +39,7 @@ export default function ToolsPlaylist() {
   const [index, setIndex] = useState(-1);
   const [prevIndex, setPrevIndex] = useState(index);
 
-  const wakelock = useWakeLock();
+  useWakeLock();
 
   const data = useMemo(() => {
     if (!category) {
@@ -63,6 +65,7 @@ export default function ToolsPlaylist() {
     }
     return _.shuffle(fn().filter((d) => !!d.en));
   }, [category]);
+
   const currentDatum = data[index];
 
   useEffect(() => {
@@ -74,12 +77,6 @@ export default function ToolsPlaylist() {
       audioClipTimerRef.current?.cleanup();
     };
   }, []);
-
-  useEffect(() => {
-    return () => {
-      wakelock?.release();
-    };
-  }, [wakelock]);
 
   if (index !== prevIndex) {
     const audioClip = new Audio(
@@ -219,78 +216,4 @@ function AnswerCard({
       </Flex>
     </Card>
   );
-}
-
-function useWakeLock() {
-  const [wakeLock, setWakeLock] = useState<WakeLockSentinel | null>(null);
-  useEffect(() => {
-    createWakeLock().then((w) => {
-      if (w) {
-        setWakeLock(w);
-      }
-    });
-  }, []);
-  return wakeLock;
-}
-
-async function createWakeLock() {
-  let wakeLock = null;
-  try {
-    wakeLock = await navigator.wakeLock.request("screen");
-  } catch (err) {
-    console.error(err);
-  }
-  return wakeLock;
-}
-
-class Timer {
-  time = 0;
-  remainingTime = 0;
-  callback: () => void;
-  timeoutObj: ReturnType<typeof setTimeout> | null = null;
-
-  now: number = new Date().getTime();
-
-  constructor(time: number, callback: () => void, autoRun = true) {
-    this.time = time;
-    this.remainingTime = time;
-    this.callback = callback;
-
-    if (autoRun) {
-      this.run();
-    }
-  }
-
-  reset(autoRun = true) {
-    this.remainingTime = this.time;
-    if (autoRun) {
-      this.run();
-    }
-  }
-
-  run() {
-    if (this.remainingTime <= 0) {
-      return;
-    }
-
-    this.now = new Date().getTime();
-
-    this.timeoutObj = setTimeout(() => {
-      this.callback();
-      this.remainingTime = 0;
-      this.timeoutObj = null;
-    }, this.remainingTime);
-  }
-
-  pause() {
-    const duration = new Date().getTime() - this.now;
-    this.remainingTime = this.remainingTime - duration;
-    this.cleanup();
-  }
-
-  cleanup() {
-    if (this.timeoutObj) {
-      clearTimeout(this.timeoutObj);
-    }
-  }
 }
