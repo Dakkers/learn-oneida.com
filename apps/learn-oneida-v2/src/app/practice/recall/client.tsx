@@ -7,7 +7,7 @@ import { PageWrapper } from "@/components/PageWrapper";
 import { useWakeLock } from "@/utils/hooks/useWakeLock";
 import { useSingleWordsData } from "@/utils/hooks/useSingleWordsData";
 import { AnswerCard } from "@/components/AnswerCard";
-import { useSuperMagicThing } from "@/utils/hooks/useMagicAudioThing";
+import { useSuperMagicThing } from "@/utils/hooks/usePlayAudioClips";
 
 export function PracticeRecallClient() {
   const [category, setCategory] = useState("all");
@@ -22,9 +22,17 @@ export function PracticeRecallClient() {
 
   const currentDatum = data[index];
 
-  const { canPause, doTheThing, pauseTimers, runTimers } = useSuperMagicThing({
+  const [canPause, setCanPause] = useState(true);
+
+  const { playAudioClips, pauseTimers, runTimers } = useSuperMagicThing({
     audioTimerDuration: 1000,
     speechSynthTimerDuration: 4500,
+    onAudioEnd: () => {
+      setCanPause(false);
+    },
+    onSpeechEnd: () => {
+      setCanPause(true);
+    },
     onAudioTimerEnd: () => {
       setIndex(index + 1);
     },
@@ -34,8 +42,9 @@ export function PracticeRecallClient() {
   });
 
   if (index !== prevIndex) {
-    const { speechSynth } = doTheThing(currentDatum);
+    const { speechSynth } = playAudioClips(currentDatum);
 
+    setCanPause(false);
     setPrevIndex(index);
 
     window.speechSynthesis.speak?.(speechSynth);

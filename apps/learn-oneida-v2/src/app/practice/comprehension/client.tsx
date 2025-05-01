@@ -7,7 +7,7 @@ import { PageWrapper } from "@/components/PageWrapper";
 import { useWakeLock } from "@/utils/hooks/useWakeLock";
 import { useSingleWordsData } from "@/utils/hooks/useSingleWordsData";
 import { AnswerCard } from "@/components/AnswerCard";
-import { useSuperMagicThing } from "@/utils/hooks/useMagicAudioThing";
+import { useSuperMagicThing } from "@/utils/hooks/usePlayAudioClips";
 
 export function PracticeComprehensionClient() {
   const [category, setCategory] = useState("all");
@@ -21,10 +21,17 @@ export function PracticeComprehensionClient() {
   const data = useSingleWordsData(category);
 
   const currentDatum = data[index];
+  const [canPause, setCanPause] = useState(true);
 
-  const { canPause, doTheThing, pauseTimers, runTimers } = useSuperMagicThing({
+  const { playAudioClips, pauseTimers, runTimers } = useSuperMagicThing({
     audioTimerDuration: 4500,
     speechSynthTimerDuration: 1000,
+    onAudioEnd: () => {
+      setCanPause(true);
+    },
+    onSpeechEnd: () => {
+      setCanPause(false);
+    },
     onAudioTimerEnd: ({ speechSynth }) => {
       window.speechSynthesis.speak?.(speechSynth);
     },
@@ -34,8 +41,9 @@ export function PracticeComprehensionClient() {
   });
 
   if (index !== prevIndex) {
-    const { audioClip } = doTheThing(currentDatum);
+    const { audioClip } = playAudioClips(currentDatum);
 
+    setCanPause(false);
     setPrevIndex(index);
 
     audioClip.play();

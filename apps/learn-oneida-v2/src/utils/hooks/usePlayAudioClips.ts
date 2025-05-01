@@ -12,10 +12,14 @@ interface Arg {
 export function useSuperMagicThing({
   audioTimerDuration,
   speechSynthTimerDuration,
+  onSpeechEnd,
   onSpeechTimerEnd,
   onAudioTimerEnd,
+  onAudioEnd,
 }: {
   audioTimerDuration: number;
+  onAudioEnd?: () => void;
+  onSpeechEnd?: () => void;
   onSpeechTimerEnd: (arg: Arg) => void;
   onAudioTimerEnd: (arg: Arg) => void;
   speechSynthTimerDuration: number;
@@ -25,25 +29,25 @@ export function useSuperMagicThing({
   const audioClipTimerRef = useRef<Timer | null>(null);
   const speechSynthTimerRef = useRef<Timer | null>(null);
 
-  const [canPause, setCanPause] = useState(false);
-
-  const doTheThing = (datum: AudioFriendly) => {
+  const playAudioClips = (datum: AudioFriendly) => {
     const audioClip = new Audio(standardizeAudioFileName(datum.audioFile));
     const speechSynth = createSpeechSynthesis(datum.en ?? []);
 
     audioClip.addEventListener("ended", () => {
+      onAudioEnd?.();
+
       audioClipTimerRef.current = new Timer(audioTimerDuration, () => {
-        setCanPause(false);
         onAudioTimerEnd?.({
           audioClip,
           speechSynth,
         });
         audioClipTimerRef.current = null;
       });
-      setCanPause(true);
     });
 
     speechSynth.addEventListener("end", () => {
+      onSpeechEnd?.();
+
       speechSynthTimerRef.current = new Timer(speechSynthTimerDuration, () => {
         speechSynthTimerRef.current = null;
         onSpeechTimerEnd?.({
@@ -73,8 +77,7 @@ export function useSuperMagicThing({
   }, []);
 
   return {
-    canPause,
-    doTheThing,
+    playAudioClips,
     runTimers: () => {
       audioClipTimerRef.current?.run();
       speechSynthTimerRef.current?.run();
